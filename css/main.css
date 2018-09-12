@@ -1,0 +1,191 @@
+#screenreader {
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+}
+#header {
+	position: absolute;
+	height: 30px;
+	top: 4px;
+	left: 4px;
+	right: 4px;
+}
+#titleCanvas {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+	background: #fff;
+}
+#container {
+	position: absolute;
+	top: 38px;
+	bottom: 4px;
+	left: 4px;
+	right: 4px;
+}
+#notationAreaCanvas {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 70%;
+	top: 0;
+	right: 0;
+	left: 0;
+	/*bottom: 60%;*/
+	background: #fff;
+}
+#controlCanvas {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 30%;
+	top: 70%;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: #fff;
+}
+#debug {
+	background: #CCC;
+	display: none;
+}
+#fileUpload {
+	visibility: hidden;
+}
+/*
+#dialogField {
+	position: absolute;
+	visibility: hidden;
+}
+*/
+#clipboard {
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+}
+@font-face {
+	/* Bravura by Steinberg: www.smufl.org/fonts/ */
+	font-family: 'Bravura';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../font/bravura/Bravura.eot');
+	src: url('../font/bravura/Bravura.eot?#iefix') format('embedded-opentype'), local('Bravura'), url('../font/bravura/Bravura.woff') format('woff'), url('../font/bravura/Bravura.otf') format('opentype');
+}
+body {
+	font-family: sans-serif;
+	font-size: 12pt;
+	line-height: 16pt;
+	color: #000;
+	/*margin-left: 150px;
+	margin-top: 100px;
+	margin-right: 150px;*/
+	margin-left: 10%;
+	margin-top: 50px;
+	margin-right: 10%;
+
+}
+a {
+	font-weight: bold;
+	text-decoration: none;
+	color: #000;
+}
+h2 {
+	font-size: 11pt;
+	line-height: 13pt;
+	font-weight: 100;
+	color: #999;
+}
+article {
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
+	
+	-webkit-column-rule: 1px solid #666;
+	-moz-column-rule: 1px solid #666;
+	column-rule: 1px solid #666;
+	
+	-webkit-column-gap: 50px;
+	-moz-column-gap: 50px;
+	column-gap: 50px;
+	
+	
+}
+
+/* based on blue pill by Chad Mazzola (http://hellohappy.org/css3-buttons/)
+*******************************************************************************/
+
+.linkarea {
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+#notatorlink {
+	background-color: #a5b8da;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a5b8da), color-stop(100%, #7089b3));
+	background-image: -webkit-linear-gradient(top, #a5b8da, #7089b3);
+	background-image: -moz-linear-gradient(top, #a5b8da, #7089b3);
+	background-image: -ms-linear-gradient(top, #a5b8da, #7089b3);
+	background-image: -o-linear-gradient(top, #a5b8da, #7089b3);
+	background-image: linear-gradient(top, #a5b8da, #7089b3);
+	border-top: 1px solid #758fba;
+	border-right: 1px solid #6c84ab;
+	border-bottom: 1px solid #5c6f91;
+	border-left: 1px solid #6c84ab;
+	border-radius: 18px;
+	-webkit-box-shadow: inset 0 1px 0 0 #aec3e5;
+	box-shadow: inset 0 1px 0 0 #aec3e5;
+	color: #fff;
+	font: bold 22px/1 sans-serif;
+	padding: 14px;
+	text-align: center;
+	text-shadow: 0 -1px 1px #64799e;
+	display: inline-block;
+}
+  
+#notatorlink:hover {
+    background-color: #9badcc;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9badcc), color-stop(100%, #687fa6));
+    background-image: -webkit-linear-gradient(top, #9badcc, #687fa6);
+    background-image: -moz-linear-gradient(top, #9badcc, #687fa6);
+    background-image: -ms-linear-gradient(top, #9badcc, #687fa6);
+    background-image: -o-linear-gradient(top, #9badcc, #687fa6);
+    background-image: linear-gradient(top, #9badcc, #687fa6);
+    border-top: 1px solid #6d86ad;
+    border-right: 1px solid #647a9e;
+    border-bottom: 1px solid #546685;
+    border-left: 1px solid #647a9e;
+    -webkit-box-shadow: inset 0 1px 0 0 #a5b9d9;
+    box-shadow: inset 0 1px 0 0 #a5b9d9;
+    cursor: pointer; }
+	
+#notatorlink:active {
+    border: 1px solid #546685;
+    -webkit-box-shadow: inset 0 0 8px 2px #7e8da6, 0 1px 0 0 #eeeeee;
+    box-shadow: inset 0 0 8px 2px #7e8da6, 0 1px 0 0 #eeeeee; }
+
+/*******************************************************************************/
+
+h3 {
+	background-color: #9badcc;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9badcc), color-stop(100%, #687fa6));
+	background-image: -webkit-linear-gradient(top, #9badcc, #687fa6);
+	background-image: -moz-linear-gradient(top, #9badcc, #687fa6);
+	background-image: -ms-linear-gradient(top, #9badcc, #687fa6);
+	background-image: -o-linear-gradient(top, #9badcc, #687fa6);
+	background-image: linear-gradient(top, #9badcc, #687fa6);
+	width: 100%;
+	padding: 8px;
+	color: #FFF;
+}
+.userguide {
+	margin-right: 25%;
+}
+.unimplemented {
+	color: #69F;
+}
+
+.example {
+	text-align: center;
+	padding-bottom: 20px;
+	}

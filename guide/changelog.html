@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Braille Music Notator by Toby W. Rush</title>
+<link href="../css/main.css" rel="stylesheet" type="text/css" />
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58111924-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+<h1>Braille Music Notator</h1>
+<h2>version 0.9.0b · 18 February 2016</h2>
+<h2>Toby W. Rush<br />
+  Assistant Professor of Music Theory and Technology<br />
+  University of Dayton</h2>
+<div class="linkarea"><a href="../notator.html" id="notatorlink">Click here to open Braille Music Notator</a></div>
+<h1>Change Log</h1>
+<div class="userguide">
+<h3>Version 0.9.1 (beta) · 15 June 2017</h3>
+<ul>
+  <li>Fixed error that prevented screenreader from working properly</li>
+  <li>Braille Music Viewer: added screenreader compatibility:
+    <ul>
+      <li>added dynamic creation of tabular presentation of score</li>
+      <li>added Control/Command-U keyboard command to switch between presentation styles</li>
+    </ul>
+  </li>
+  <li>Added chord symbol characters:
+    <ul>
+      <li>plus</li>
+      <li>diminished</li>
+      <li>half-diminished</li>
+      <li>major</li>
+    </ul>
+  </li>
+  <li>Lightened borders of key caps for text keys</li>
+  <li>Cleaned up code site-wide</li>
+</ul>
+<h3>Version 0.9.0 (beta) · 18 February 2016</h3>
+<ul>
+  <li>Added parsing of imported files</li>
+  <li>Added new symbols:
+    <ul>
+      <li>braille music comma</li>
+      <li>braille music hyphen</li>
+      <li>text dynamics (cresc., decresc., dim.)</li>
+      <li>up bow, down bow</li>
+      <li>fingerings</li>
+      <li>note value signs</li>
+      <li>capitalize word symbol</li>
+      <li>multi-measure rests</li>
+      <li>metronome marking equals sign</li>
+      <li>trill</li>
+      <li>grace notes</li>
+      <li>in-accord symbols</li>
+    </ul>
+  </li>
+  <li>Refined placement of clef key caps</li>
+  <li>improved contextual help</li>
+  <li>added setting to send current line to refreshable braille display (still very glitchy!)</li>
+  <li>fixed error that caused dot-3 braille symbol to sometimes be hidden</li>
+  <li>fixed icons in online help for tuplets</li>
+  <li>fixed error that prevented notation and control areas from resizing when the window is resized</li>
+  <li>Braille Music Viewer: added new symbols to sync with Braille Music Notator</li>
+  <li>Braille Music Viewer: fixed error which caused tie character to not display</li>
+  <li>updated project to beta status!</li>
+</ul>
+<h3>Version 0.8.9 (alpha) · 9 January 2015</h3>
+  <ul>
+    <li>Fixed bug which prevented gradual dynamic changes from displaying correctly</li>
+  <li>Enabled Help button</li>
+  <li>Added clef symbols</li>
+</ul>
+<h3>Version 0.8.8 (alpha)</h3>
+  <ul>
+    <li>Added music and text prefixes, crescendos and diminuendos, articulations, measure repeats and slurs</li>
+  <li>Changed symbol to better delineate ties and slurs</li>
+  <li>Fixed bug which caused empty cells to be filled with a null braille character when pasting</li>
+  <li>Added default and mouseover help for control area keyboard</li>
+  <li>Added capability to automatically translate Unicode braille when pasted into score</li>
+  <li>Changed print repeats to braille &quot;segno&quot; style repeats</li>
+  <li>Fixed incorrect braille character assignment for closing tuplet symbol</li>
+  <li>Added command/control-A keyboard shortcut for selecting entire score</li>
+  <li>Changed export file function to automatically omit any characters in the right margin when &quot;Show Page Boundaries&quot; is selected</li>
+  <li>Changed return key functionality to move to the beginning of the next line</li>
+  <li>Added shift-return key functionality to move to the cell beneath the first character on the previous line</li>
+  <li>Wrote Users Guide</li>
+</ul>
+<h3>Version 0.8.7 (alpha)</h3>
+  <ul>
+    <li>Added capability to scroll to extend selection beyond the current view of notation area with mouse</li>
+  <li>Changed notation area to automatically scroll to cursor when edited</li>
+  <li>Added capability to insert a row (Ctrl-down arrow)</li>
+  <li>Added capability to delete a row (Ctrl-up arrow)</li>
+  <li>Fixed bug where using shift-arrow keys to change selection after shift-clicking to extend selection would act erratically</li>
+</ul>
+<h3>Version 0.8.6 (alpha)</h3>
+  <ul>
+    <li>Split into separate production and development versions</li>
+  <li>Changed Time Signature icons to be more clear</li>
+  <li>Changed Paste function to Paste as Text when the text keyboard is selected</li>
+  <li>Enabled scroll wheel functionality for notation area</li>
+  <li>Added page numbers in right margin when &quot;Show Page Boundaries&quot; is selected</li>
+  <li>Changed title to &quot;Braille Music Notator&quot; and began version numbering</li>
+  <li>Added automatic autosave to local storage (score state and previous 5 undos will be restored if utility is closed and reopened)</li>
+  <li>Added Rotate Character (Ctrl-R) which cycles through various meanings of the selected braille character(s)</li>
+  <li>Added Change to Text (Ctrl-T) which converts braille characters to their braille text meanings</li>
+  <li>Fixed an issue where various selection-dependent functions (like copy/paste, rotate character or convert to text) would behave unpredictably</li>
+  <li>Converts lower-case braille ASCII to upper-case in imported files</li>
+</ul>
+<h3>Version 0.8.5 (alpha)</h3>
+<ul>
+  <li>Moved buttons from keyboard area into File and Options dialogs, accessible from the File and Options buttons in upper right (Help button is nonfunctional at this point)</li>
+  <li>Added score magnification control (available in Options dialog)</li>
+  <li>Added ability to set page size and show right margin and page breaks (available in Options dialog)</li>
+  <li>Changed grid numbering to start with 1 (instead of 0)</li>
+  <li>Made controls area resizable (drag divider between score and controls)</li>
+  <li>Fixed bug where scores containing blank lines would not save or export</li>
+  <li>Added support for screenreading software</li>
+  <li>Added missing key for &quot;interval +4th&quot;</li>
+  <li>Added textual braille keyboard</li>
+</ul>
+<h3>Version 0.8.4 (alpha)</h3>
+<ul>
+  <li>Fixed bug which caused &quot;null&quot; braille characters to sometimes appear when extending the selected area</li>
+  <li>Fixed bug which caused notation area to scroll to far vertically</li>
+  <li>Fixed bug (I hope!) which caused unpredictable behavior with various key presses across different browsers</li>
+  <li>Fixed bug (untested) which caused insert key to not work correctly</li>
+  <li>Fixed bug which prevented saving and exporting files in Firefox and Opera</li>
+</ul>
+<h3>Version 0.8.3 (alpha)</h3>
+<ul>
+  <li>Added cut (ctrl/cmd-X), copy (ctrl/cmd-C), and paste (ctrl/cmd-V) [I know this works with the Mac shortcuts. Let me know if the Windows ones work as well)</li>
+  <li>Added insert functionality: characters entered while shift key is held will cause existing characters to move to the right</li>
+  <li>Enabled delete key: selected characters will be deleted and characters to the right will move left to fill in</li>
+  <li>Enabled insert key: should add a blank space and move existing characters to the right [Mac OS doesn't have an insert key, so I haven't tested this.]</li>
+  <li>Changed keyboard switching to space and shift-space</li>
+  <li>Added capability to select multiple cells:<br />
+     - hold shift key with arrow keys to extend selection<br />
+     - drag with mouse to select multiple cells<br />
+     - shift-click to extend selection to clicked cell</li>
+  <li>fixed issue with double and final barlines being switched (again)</li>
+  <li>changed cell numbers to appear above character icons</li>
+</ul>
+<h3>Version 0.8.2 (alpha)</h3>
+<ul>
+  <li>fixed (I think) issue where music font is not loaded into memory soon enough</li>
+  <li>implemented unlimited Undo (ctrl-Z, cmd-Z) and Redo (ctrl-Y, cmd-Y)</li>
+  <li>added &quot;Load File&quot; button</li>
+  <li>changed previous keyboard/next keyboard shortcuts to shift and option (this will be changed again soon)</li>
+  <li>fixed issue where imported data was not placed in upper left corner of score</li>
+  <li>fixed issue where imported data included blank characters</li>
+  <li>fixed issue where backspace key worked unreliably</li>
+  <li>fixed issue where final barline and double barline keys were swapped</li>
+</ul>
+<h3>Version 0.8.1 (alpha)</h3>
+<ul>
+  <li>Added key signature prefix, key signature naturals, and removed 1x, 2x and 3x</li>
+  <li>Added rests</li>
+  <li>Added triplet sign and other tuplet symbols</li>
+  <li>Added forward and backward repeat</li>
+  <li>Added fourth keyboard and rearranged symbols to make room for new additions</li>
+  <li>Made on-screen keyboard clickable</li>
+  <li>Set Backspace key to clear symbol (if over a character), or clear character to left and move cursor one cell left (if over a blank space) I haven't gotten the Delete key working; when I do, I'll may revise this</li>
+  <li>Disabled apostrophe as keyboard switcher</li>
+  <li>Enabled shift key as keyboard switcher</li>
+  <li>Fixed error which caused strange characters to appear in exported file</li>
+</ul>
+<h3>Version 0.8.0 (alpha)</h3>
+<ul>
+  <li>initial development version.</li>
+  </ul>
+</div>
+</body>
+</html>
