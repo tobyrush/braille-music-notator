@@ -1543,7 +1543,7 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		} else if (val==544 && checkPreviousCell(col,row,544)) {
 			// leave it blank
 		} else if (!(letterIsPartOfSymbol(col,row,val)) || doNotCheckContiguousCells) {
-			chars=['TßHE','','#','ED','SH','AND',"'",'OF','WITH','CH','ING','capital sign','-','.','ST','',',',';',':','.','EN','!','(','?','IN','WH','text sign','GH','FOR','AR','TH'];
+			chars=['THE','','#','ED','SH','AND',"'",'OF','WITH','CH','ING','capital sign','-','.','ST','',',',';',':','.','EN','!','(','?','IN','WH','text sign','GH','FOR','AR','TH'];
 			drawCellASCII(ctx,x,y,chars[val-533],(val % 100));
 		}
 	
