@@ -144,11 +144,24 @@ function doRedo() {
 }
 
 function updateCookie() { // save last five undos to cookie
-	var j=0;
-	for (var i=Math.max(undoCursor-5,0); i<undoStack.length; i++) {
-		createCookie("bmn"+j,convertScoreToString(undoStack[i]),7);
-		j++;
-	}
+	// delete old cookies
+    removeAllCookies(); // this needs to be added
+
+    // write
+    var i=undoCursor;
+    var j=0;
+    var totalLength=0;
+    var s;
+    do {
+        s=convertScoreToString(undoStack[i]);
+        totalLength=totalLength+s.length;
+        if (totalLength<4097) {
+            createCookie("bmn"+j,s,7);
+        }
+        j++;
+        i--;
+    }
+    while (i>0 && totalLength<4097);
 }
 
 function loadCookie() {
