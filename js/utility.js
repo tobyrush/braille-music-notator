@@ -236,9 +236,10 @@ function eraseAllCookies(searchRegex = /.*?/) {
     for (var i = 0; i < cookies.length; i++) {
         var cookie = cookies[i];
         var eqPos = cookie.indexOf("=");
-        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        var name = eqPos > -1 ? cookie.substr(0, eqPos).trim() : cookie;
         if (searchRegex.test(name)) {
-            document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+            createCookie(name,"",-1);
+//            document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
         }
     }
 }
@@ -338,4 +339,12 @@ function isLowASCII(str) {
 		}
 	}
 	return !highASCIIFound;
+}
+
+function padLeft(num, digits) {
+    var r = num + '';
+    while (r.length < digits) {
+        r = '0' + r;
+    }
+    return r;
 }
