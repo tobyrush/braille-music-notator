@@ -229,6 +229,20 @@ function eraseCookie(name) { // from http://www.quirksmode.org/js/cookies.html
 	createCookie(name,"",-1);
 }
 
+function eraseAllCookies(searchRegex = /.*?/) {
+    // adapted from https://stackoverflow.com/questions/179355/clearing-all-cookies-with-javascript?noredirect=1&lq=1
+    var cookies = document.cookie.split(";");
+
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var eqPos = cookie.indexOf("=");
+        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        if (searchRegex.test(name)) {
+            document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        }
+    }
+}
+
 function clearClipboard() {
 	clipboardArea.value = "";
 	clipboardArea.blur();

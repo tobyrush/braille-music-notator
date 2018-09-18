@@ -1,4 +1,4 @@
-/* global FileReader, importData, arrayHasOwnIndex, drawNotation, createCookie, readCookie, convertScoreToString, convertStringToScore: true */
+/* global FileReader, importData, arrayHasOwnIndex, drawNotation, createCookie, readCookie, convertScoreToString, convertStringToScore, eraseAllCookies: true */
 
 // global variables
 
@@ -145,7 +145,7 @@ function doRedo() {
 
 function updateCookie() { // save last five undos to cookie
 	// delete old cookies
-    removeAllCookies(); // this needs to be added
+    eraseAllCookies(/bmn[\d]+/);
 
     // write
     var i=undoCursor;
