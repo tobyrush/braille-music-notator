@@ -145,6 +145,20 @@ function interpretKeyCode(keyCode) {
 				cursor.x = 0;
 			}
 			break;
+		case 33: // page up
+			hScroll=0;
+			vScroll=Math.max(vScroll-(pageHeight*gridHeight), 0);
+			dontScroll=true;
+			adv=0;
+			readerMessage = "_";
+			break;
+		case 34: // page down
+			hScroll=0;
+			vScroll=vScroll+(pageHeight*gridHeight);
+			dontScroll=true;
+			adv=0;
+			readerMessage = "_";
+			break;
 		case 36: // home
 			cursor.x=0;
 			cursor.y=0;
@@ -968,16 +982,16 @@ function interpretKeyCode(keyCode) {
 			break;
 		case 188: // ,
 			if (k==1) {
-				setScore(x,y,46);
-			} else if (k==2) {
-				setScore(x,y,157);
-			} else if (k==3) {
-				setScore(x,y,269);
-			} else if (k==5) {
-				setScore(x,y,335);
-			} else if (k==6) {
-				setScore(x,y,549);
-			}
+                setScore(x,y,46);
+            } else if (k==2) {
+                setScore(x,y,157);
+            } else if (k==3) {
+                setScore(x,y,269);
+            } else if (k==5) {
+                setScore(x,y,335);
+            } else if (k==6) {
+                setScore(x,y,549);
+            }
 			break;
 		case 189: // -
 			if (metaKeyDown) { // decrease magnification by 10
@@ -1010,16 +1024,16 @@ function interpretKeyCode(keyCode) {
 			break;
 		case 190: // .
 			if (k==1) {
-				setScore(x,y,64);
-			} else if (k==2) {
-				setScore(x,y,364); setScore(x+1,y,367); adv=2; readerMessage = "Tie";
-			} else if (k==3) {
-				setScore(x,y,270);
-			} else if (k==5) {
-				setScore(x,y,234);
-			} else if (k==6) {
-				setScore(x,y,552);
-			}
+                setScore(x,y,64);
+            } else if (k==2) {
+                setScore(x,y,364); setScore(x+1,y,367); adv=2; readerMessage = "Tie";
+            } else if (k==3) {
+                setScore(x,y,270);
+            } else if (k==5) {
+                setScore(x,y,234);
+            } else if (k==6) {
+                setScore(x,y,552);
+            }
 			break;
 		case 191: // /
 			if (k==1) {
