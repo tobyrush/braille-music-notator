@@ -1,4 +1,4 @@
-/* global FileReader, importData, arrayHasOwnIndex, drawNotation, createCookie, readCookie, convertScoreToString, convertStringToScore: true */
+/* global FileReader, importData, arrayHasOwnIndex, drawNotation, createCookie, readCookie, convertScoreToString, convertStringToScore, eraseAllCookies, padLeft, document: true */
 
 // global variables
 
@@ -144,25 +144,54 @@ function doRedo() {
 }
 
 function updateCookie() { // save last five undos to cookie
-	var j=0;
-	for (var i=Math.max(undoCursor-5,0); i<undoStack.length; i++) {
-		createCookie("bmn"+j,convertScoreToString(undoStack[i]),7);
-		j++;
-	}
+	// delete old cookies
+    eraseAllCookies(/bmn[\d]+/);
+
+    // write
+    var i=undoCursor;
+    var j=0;
+    var totalLength=0;
+    var s;
+    do {
+        s=convertScoreToString(undoStack[i]);
+        totalLength=totalLength+s.length;
+        if (totalLength<4097) {
+            createCookie("bmn"+padLeft(j,4),s,7);
+        }
+        j++;
+        i--;
+    }
+    while (i>0 && totalLength<4097);
 }
 
 function loadCookie() {
-	for (var i=0; i<6; i++) {
-		var data = readCookie("bmn"+i);
-		if ((data !== null) && (data != "undefined")) {
-			undoStack[i] = convertStringToScore(data);
-		}
-	}
-	undoCursor = undoStack.length-1;
+	var storedUndos = getCookieArray();
+    var len = storedUndos.length;
+    for (var i=0; i<len; i++) {
+        undoStack[(len-1)-i] = convertStringToScore(storedUndos[i]);
+    }
+
+    undoCursor = undoStack.length-1;
 	if (undoCursor>-1) {
 		score = undoStack[undoCursor].clone();
 		drawNotation();
 	}
+}
+
+function getCookieArray() {
+    var cookies = document.cookie.split(";");
+    var result = [];
+
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var eqPos = cookie.indexOf("=");
+        var name = eqPos > -1 ? cookie.substr(0, eqPos).trim() : cookie;
+        if (/bmn[\d]+/.test(name)) {
+            result[name.substr(3)*1] = cookie.substr(eqPos+1);
+        }
+    }
+
+    return result;
 }
 
 function scoreWidth() { // returns the length of the longest line in the score
