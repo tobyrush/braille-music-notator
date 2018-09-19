@@ -110,11 +110,8 @@ function interpretKeyCode(keyCode) {
 			readerMessage = "*";
 			break;
 		case 17: // control
-			if (!isMacOS()) {
-				metaKeyDown = true;
-				focusClipboard();
-				//populateClipboard();
-			}
+            metaKeyDown = true;
+            focusClipboard();
 			adv=0;
 			dontScroll=true;
 			readerMessage = "*";
@@ -429,7 +426,7 @@ function interpretKeyCode(keyCode) {
 			}
 			break;
 		case 68: // D
-			if (metaKeyDown) { // toggle braille translation
+			if (metaKeyDown) { // toggle small braille dots
 				adv=0;
 				if (drawAllDots) {
 					drawAllDots=false;
@@ -778,7 +775,7 @@ function interpretKeyCode(keyCode) {
 			}
 			break;
 		case 84: // T
-			if (metaKeyDown) { // rotate symbols (cycle through symbol meanings)
+			if (metaKeyDown) { // convert selection to text
 				adv=0;
 				convertSelectionToText();
 				passThrough=false;
@@ -799,7 +796,7 @@ function interpretKeyCode(keyCode) {
 			}
 			break;
 		case 85: // U
-			if (metaKeyDown) { // toggle braille translation
+			if (metaKeyDown) { // toggle reader mode
 				adv=0;
 				if (useBrailleDisplay) {
 					useBrailleDisplay=false;
@@ -825,7 +822,7 @@ function interpretKeyCode(keyCode) {
 			}
 			break;
 		case 86: // V
-			if (metaKeyDown) {
+			if (metaKeyDown) { // paste
 				adv=0;
 				passThrough = true;
 			} else {
@@ -863,7 +860,7 @@ function interpretKeyCode(keyCode) {
 			}
 			break;
 		case 88: // X
-			if (metaKeyDown) {
+			if (metaKeyDown) { // cut
 				adv=0;
 				passThrough = true;
 			} else {
@@ -883,7 +880,7 @@ function interpretKeyCode(keyCode) {
 			}
 			break;
 		case 89: // Y
-			if (metaKeyDown) {
+			if (metaKeyDown) { // redo
 				doRedo();
 				dontScroll=true;
 				adv=0;
@@ -905,7 +902,7 @@ function interpretKeyCode(keyCode) {
 			}
 			break;
 		case 90: // Z
-			if (metaKeyDown) {
+			if (metaKeyDown) { // undo
 				doUndo();
 				dontScroll=true;
 				adv=0;
