@@ -1679,7 +1679,7 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		
 	} else if (val>=750 && val<=757) { // punctuation and contractions
 		chars=['BE','CON','DIS','ENOUGH','TO','WERE','HIS','WAS'];
-		drawCellASCII(ctx,x,y,chars[val-685],(val % 100));
+		drawCellASCII(ctx,x,y,chars[val-750],(val % 100));
 
 	} else if (val==760) { // bowing (first character)
 		if (checkContiguousCells(col,row,[760,66])) {
