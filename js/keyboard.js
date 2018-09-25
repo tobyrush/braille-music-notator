@@ -711,7 +711,7 @@ function interpretKeyCode(keyCode) {
 				} else if (k==3) {
 					setScore(x,y,48); // WHY DO YOU HATE AMERICA
 				} else if (k==4) {
-					setScore(x,y,662); setScore(x+1,y,747); setScore(x+2,y,676); adv=3; readerMessage = "Treble clef";
+					setScore(x,y,662); setScore(x+1,y,747); setScore(x+2,y,376); adv=3; readerMessage = "Treble clef";
 				} else if (k==6) {
 					setScore(x,y,580);
 				}
@@ -1064,7 +1064,7 @@ function interpretKeyCode(keyCode) {
 			} else if (k==3) {
 				setScore(x,y,160);
 			} else if (k==4) {
-				setScore(x,y,662); setScore(x+1,y,643); setScore(x+2,y,676); adv=3; readerMessage = "Alto clef";
+				setScore(x,y,662); setScore(x+1,y,643); setScore(x+2,y,376); adv=3; readerMessage = "Alto clef";
 			} else if (k==6) {
 				setScore(x,y,555);
 			}
@@ -1085,7 +1085,7 @@ function interpretKeyCode(keyCode) {
 			} else if (k==3) {
 				setScore(x,y,142);
 			} else if (k==4) {
-				setScore(x,y,662); setScore(x+1,y,635); setScore(x+2,y,676); adv=3; readerMessage = "Bass clef";
+				setScore(x,y,662); setScore(x+1,y,635); setScore(x+2,y,376); adv=3; readerMessage = "Bass clef";
 			} else if (k==6) {
 				setScore(x,y,551);
 			}
@@ -1106,7 +1106,7 @@ function interpretKeyCode(keyCode) {
 			} else if (k==3) {
 				setScore(x,y,137);
 			} else if (k==4) {
-				setScore(x,y,662); setScore(x+1,y,643); setScore(x+2,y,634); setScore(x+3,y,676); adv=4; readerMessage = "Tenor clef";
+				setScore(x,y,662); setScore(x+1,y,643); setScore(x+2,y,634); setScore(x+3,y,376); adv=4; readerMessage = "Tenor clef";
 			} else if (k==6) {
 				setScore(x,y,655);
 			}
