@@ -110,11 +110,9 @@ function interpretKeyCode(keyCode) {
 			readerMessage = "*";
 			break;
 		case 17: // control
-			if (!isMacOS()) {
-				metaKeyDown = true;
-				focusClipboard();
-				//populateClipboard();
-			}
+            metaKeyDown = true;
+            focusClipboard();
+            //populateClipboard();
 			adv=0;
 			dontScroll=true;
 			readerMessage = "*";
@@ -549,7 +547,7 @@ function interpretKeyCode(keyCode) {
 					setScore(x,y,56);
 					currentBeatUnit = 8; // if you're writing x/128 then you are a bad person and you should feel bad
 				} else if (k==5) {
-					setScore(x,y,646); setScore(x+1,y,675); adv=2; readerMessage = "In-accord measure division";
+					setScore(x,y,646); setScore(x+1,y,375); adv=2; readerMessage = "In-accord measure division";
 				} else if (k==6) {
 					setScore(x,y,573);
 				}

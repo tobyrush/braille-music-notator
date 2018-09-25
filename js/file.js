@@ -224,7 +224,7 @@ function parseData(fileData) {
 	fileData = fileData.replace(/[^#].([8])/g, convertStaccato); // staccato
 	fileData = fileData.replace(/[\s]*([_\.][>][']?)/g, convertHandPrefix); // right/left hand
 	fileData = fileData.replace(/[<][>]/g, String.fromCharCode(860,762)); // in-accord
-	fileData = fileData.replace(/[.][K]/g, String.fromCharCode(646,675)); // in-accord measure division
+	fileData = fileData.replace(/[.][K]/g, String.fromCharCode(646,375)); // in-accord measure division
 	fileData = fileData.replace(/["][1]/g, String.fromCharCode(334,749)); // partial measure in-accord
 	fileData = fileData.replace(/[^A-Ja-j]([7])/g, convertRepeatSymbols); // convert any remaining repeat symbols
 	
