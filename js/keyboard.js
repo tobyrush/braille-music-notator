@@ -110,9 +110,8 @@ function interpretKeyCode(keyCode) {
 			readerMessage = "*";
 			break;
 		case 17: // control
-            metaKeyDown = true;
-            focusClipboard();
-            //populateClipboard();
+      metaKeyDown = true;
+      focusClipboard();
 			adv=0;
 			dontScroll=true;
 			readerMessage = "*";
@@ -145,6 +144,20 @@ function interpretKeyCode(keyCode) {
 			} else {
 				cursor.x = 0;
 			}
+			break;
+		case 33: // page up
+			hScroll=0;
+			vScroll=Math.max(vScroll-(pageHeight*gridHeight), 0);
+			dontScroll=true;
+			adv=0;
+			readerMessage = "_";
+			break;
+		case 34: // page down
+			hScroll=0;
+			vScroll=vScroll+(pageHeight*gridHeight);
+			dontScroll=true;
+			adv=0;
+			readerMessage = "_";
 			break;
 		case 36: // home
 			cursor.x=0;
@@ -427,7 +440,7 @@ function interpretKeyCode(keyCode) {
 			}
 			break;
 		case 68: // D
-			if (metaKeyDown) { // toggle braille translation
+			if (metaKeyDown) { // toggle small braille dots
 				adv=0;
 				if (drawAllDots) {
 					drawAllDots=false;
@@ -776,7 +789,7 @@ function interpretKeyCode(keyCode) {
 			}
 			break;
 		case 84: // T
-			if (metaKeyDown) { // rotate symbols (cycle through symbol meanings)
+			if (metaKeyDown) { // convert selection to text
 				adv=0;
 				convertSelectionToText();
 				passThrough=false;
@@ -797,7 +810,7 @@ function interpretKeyCode(keyCode) {
 			}
 			break;
 		case 85: // U
-			if (metaKeyDown) { // toggle braille translation
+			if (metaKeyDown) { // toggle reader mode
 				adv=0;
 				if (useBrailleDisplay) {
 					useBrailleDisplay=false;
@@ -823,7 +836,7 @@ function interpretKeyCode(keyCode) {
 			}
 			break;
 		case 86: // V
-			if (metaKeyDown) {
+			if (metaKeyDown) { // paste
 				adv=0;
 				passThrough = true;
 			} else {
@@ -861,7 +874,7 @@ function interpretKeyCode(keyCode) {
 			}
 			break;
 		case 88: // X
-			if (metaKeyDown) {
+			if (metaKeyDown) { // cut
 				adv=0;
 				passThrough = true;
 			} else {
@@ -881,7 +894,7 @@ function interpretKeyCode(keyCode) {
 			}
 			break;
 		case 89: // Y
-			if (metaKeyDown) {
+			if (metaKeyDown) { // redo
 				doRedo();
 				dontScroll=true;
 				adv=0;
@@ -903,7 +916,7 @@ function interpretKeyCode(keyCode) {
 			}
 			break;
 		case 90: // Z
-			if (metaKeyDown) {
+			if (metaKeyDown) { // undo
 				doUndo();
 				dontScroll=true;
 				adv=0;
@@ -969,16 +982,16 @@ function interpretKeyCode(keyCode) {
 			break;
 		case 188: // ,
 			if (k==1) {
-				setScore(x,y,46);
-			} else if (k==2) {
-				setScore(x,y,157);
-			} else if (k==3) {
-				setScore(x,y,269);
-			} else if (k==5) {
-				setScore(x,y,335);
-			} else if (k==6) {
-				setScore(x,y,549);
-			}
+                setScore(x,y,46);
+            } else if (k==2) {
+                setScore(x,y,157);
+            } else if (k==3) {
+                setScore(x,y,269);
+            } else if (k==5) {
+                setScore(x,y,335);
+            } else if (k==6) {
+                setScore(x,y,549);
+            }
 			break;
 		case 189: // -
 			if (metaKeyDown) { // decrease magnification by 10
@@ -1011,16 +1024,16 @@ function interpretKeyCode(keyCode) {
 			break;
 		case 190: // .
 			if (k==1) {
-				setScore(x,y,64);
-			} else if (k==2) {
-				setScore(x,y,364); setScore(x+1,y,367); adv=2; readerMessage = "Tie";
-			} else if (k==3) {
-				setScore(x,y,270);
-			} else if (k==5) {
-				setScore(x,y,234);
-			} else if (k==6) {
-				setScore(x,y,552);
-			}
+                setScore(x,y,64);
+            } else if (k==2) {
+                setScore(x,y,364); setScore(x+1,y,367); adv=2; readerMessage = "Tie";
+            } else if (k==3) {
+                setScore(x,y,270);
+            } else if (k==5) {
+                setScore(x,y,234);
+            } else if (k==6) {
+                setScore(x,y,552);
+            }
 			break;
 		case 191: // /
 			if (k==1) {
