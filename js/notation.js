@@ -1,4 +1,4 @@
-/* global notationArea, gridHeight, gridWidth, notationGridHeight, notationGridWidth, notationCellWidth, notationCellHeight, ctx, showPageBreaks, pageWidth, pageHeight, hScrollUnits, vScrollUnits, hScrollOffset, vScrollOffset, hScroll, vScroll, gh, gw, score, arrayHasOwnIndex, interpretBraille, cursor, devMode, getScore, dropzone, optionsDialogOpen, fileDialogOpen, drawOptionsDialog, drawFileDialog, doNotCheckContiguousCells, brailleDots, drawAllDots, cellIsEmpty, setScore, saveToUndo: true */
+/* global notationArea, gridHeight, gridWidth, notationGridHeight, notationGridWidth, notationCellWidth, notationCellHeight, ctx, showPageBreaks, pageWidth, pageHeight, hScrollUnits, vScrollUnits, hScrollOffset, vScrollOffset, hScroll, vScroll, gh, gw, score, arrayHasOwnIndex, interpretBraille, cursor, devMode, getScore, dropzone, optionsDialogOpen, fileDialogOpen, drawOptionsDialog, drawFileDialog, doNotCheckContiguousCells, brailleDots, drawAllDots, cellIsEmpty, setScore, saveToUndo, blankCells, longContractions: true */
 /* jshint -W020 */
 
 function initializeNotation() {
@@ -72,7 +72,9 @@ function drawNotation() {
 	ctx.closePath();
 	
 	// draw braille symbols
-	for (var y in score) {
+	blankCells = [[]]; // clear blanks
+
+    for (var y in score) {
 		if (arrayHasOwnIndex(score,y)) {
 			for (var x in score[y]) {
 				if (arrayHasOwnIndex(score[y],x)) {
@@ -80,7 +82,7 @@ function drawNotation() {
 						drawInterpretedBrailleSymbol(ctx,score[y][x],(gridWidth*(x-hScrollUnits))-hScrollOffset,(gridHeight*(y-vScrollUnits))-vScrollOffset,x,y);
 					} else {
 						if (score[y][x] !== null) {
-							drawLiteralBrailleSymbol(ctx,score[y][x],(gridWidth*(x-hScrollUnits))-hScrollOffset,(gridHeight*(y-vScrollUnits))-vScrollOffset);
+							drawLiteralBrailleSymbol(ctx,score[y][x],(gridWidth*(x-hScrollUnits))-hScrollOffset,(gridHeight*(y-vScrollUnits))-vScrollOffset,x,y);
 						}
 					}
 				}
@@ -188,9 +190,10 @@ function drawCellBackground(ctx,x,y,color) {
 	ctx.fillRect(x+gw(0.05),y+gw(0.05),gridWidth-gw(0.1),gridHeight-gw(0.1));
 }
 
-function drawMultiCellBackground(ctx,x,y,color,cells) {
+function drawMultiCellBackground(ctx,x,y,col,row,color,cells) {
 	ctx.fillStyle=color;
 	ctx.fillRect(x+gw(0.05),y+gw(0.05),(gridWidth*cells)-gw(0.1),gridHeight-gw(0.1));
+    setBlankCells(col,row,cells); // doing this here because all multi-cell symbols call this
 }
 
 function drawCellNote(ctx,x,y,char) {
@@ -223,58 +226,60 @@ function drawCellChordSymbol(ctx,x,y,char) {
     }
 }
 
-function drawCellASCII(ctx,x,y,char,ascii) {
-	ctx.fillStyle = "#000"; // black
-	if (char.length==1) {
-		ctx.font = "normal "+gh(0.5)+"px sans-serif";
-		ctx.textAlign = "center";
-		ctx.textBaseline = "middle";
-		ctx.fillText(char,x+gw(0.5),y+gh(0.5));
-	} else if (char.length>1 && char.length<=4) {
-		ctx.save();
-		ctx.translate(x,y+gridHeight);
-		ctx.rotate(-Math.PI/2);
-		ctx.textAlign="center";
-		ctx.textBaseline="middle";
-		ctx.font = "normal "+gh(0.3)+"px sans-serif";
-		ctx.fillText(char,gridHeight/2,gw(0.5));
-		ctx.restore();
-	} else if (char=="capital sign") {
-		ctx.save();
-		ctx.translate(x,y+gridHeight);
-		ctx.rotate(-Math.PI/2);
-		ctx.textAlign="center";
-		ctx.textBaseline="middle";
-		ctx.font = "normal "+gh(0.2)+"px sans-serif";
-		ctx.fillText("CAPITAL",gh(0.5),gw(0.3));
-		ctx.fillText("LETTER",gh(0.5),gw(0.7));
-		ctx.restore();
-	} else if (char=="text sign") {
-		ctx.save();
-		ctx.translate(x,y+gridHeight);
-		ctx.rotate(-Math.PI/2);
-		ctx.textAlign="center";
-		ctx.textBaseline="middle";
-		ctx.font = "normal "+gh(0.2)+"px sans-serif";
-		ctx.fillText("BRAILLE",gh(0.5),gw(0.3));
-		ctx.fillText("TEXT",gh(0.5),gw(0.7));
-		ctx.restore();
-	} else if (char.length>4) {
-		ctx.save();
-		ctx.translate(x,y+gridHeight);
-		ctx.rotate(-Math.PI/2);
-		ctx.textAlign="center";
-		ctx.textBaseline="middle";
-		ctx.font = "normal "+gh(0.3)+"px sans-serif";
-		ctx.fillText(char,gridHeight/2,gw(0.5));
-		ctx.restore();
-	} else {
-		drawLiteralBrailleSymbol(ctx,ascii,x,y);
-	}
+function drawCellASCII(ctx,x,y,col,row,char,ascii) {
+	if (!(isBlank(col,row))) {
+        ctx.fillStyle = "#000"; // black
+        if (char.length==1) {
+            ctx.font = "normal "+gh(0.5)+"px sans-serif";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.fillText(char,x+gw(0.5),y+gh(0.5));
+        } else if (char.length>1 && char.length<=4) {
+            ctx.save();
+            ctx.translate(x,y+gridHeight);
+            ctx.rotate(-Math.PI/2);
+            ctx.textAlign="center";
+            ctx.textBaseline="middle";
+            ctx.font = "normal "+gh(0.3)+"px sans-serif";
+            ctx.fillText(char,gridHeight/2,gw(0.5));
+            ctx.restore();
+        } else if (char=="capital sign") {
+            ctx.save();
+            ctx.translate(x,y+gridHeight);
+            ctx.rotate(-Math.PI/2);
+            ctx.textAlign="center";
+            ctx.textBaseline="middle";
+            ctx.font = "normal "+gh(0.2)+"px sans-serif";
+            ctx.fillText("CAPITAL",gh(0.5),gw(0.3));
+            ctx.fillText("LETTER",gh(0.5),gw(0.7));
+            ctx.restore();
+        } else if (char=="text sign") {
+            ctx.save();
+            ctx.translate(x,y+gridHeight);
+            ctx.rotate(-Math.PI/2);
+            ctx.textAlign="center";
+            ctx.textBaseline="middle";
+            ctx.font = "normal "+gh(0.2)+"px sans-serif";
+            ctx.fillText("BRAILLE",gh(0.5),gw(0.3));
+            ctx.fillText("TEXT",gh(0.5),gw(0.7));
+            ctx.restore();
+        } else if (char.length>4) {
+            ctx.save();
+            ctx.translate(x,y+gridHeight);
+            ctx.rotate(-Math.PI/2);
+            ctx.textAlign="center";
+            ctx.textBaseline="middle";
+            ctx.font = "normal "+gh(0.3)+"px sans-serif";
+            ctx.fillText(char,gridHeight/2,gw(0.5));
+            ctx.restore();
+        } else {
+            drawLiteralBrailleSymbol(ctx,ascii,x,y,col,row);
+        }
+    }
 }
 
-function drawMultiCellASCII(ctx,x,y,cellCount,char,ascii) {
-	drawMultiCellBackground(ctx,x,y,"#fff",cellCount);
+function drawMultiCellASCII(ctx,x,y,col,row,cellCount,char,ascii) {
+	drawMultiCellBackground(ctx,x,y,col,row,"#fff",cellCount);
     ctx.fillStyle = "#000"; // black
     ctx.font = "normal "+gh(0.3)+"px sans-serif";
     ctx.textAlign = "center";
@@ -319,11 +324,11 @@ function drawCellTimeSignatureNumber(ctx,x,y,val,isTop) {
 	}
 }
 
-function drawCellArticulation(ctx,x,y,val) {
+function drawCellArticulation(ctx,x,y,col,row,val) {
 	if (val==1 || val==7 || val > 9) {
 		drawCellBackground(ctx,x,y,"#7f462c"); // mocha
 	} else {
-		drawMultiCellBackground(ctx,x,y,"#7f462c",2); // mocha
+		drawMultiCellBackground(ctx,x,y,col,row,"#7f462c",2); // mocha
 	}
 	ctx.fillStyle="#FFF"; // white
 	ctx.textBaseline = "middle";
@@ -392,7 +397,7 @@ function drawCellArticulation(ctx,x,y,val) {
 	}
 }
 
-function drawCellSimpleDynamic(ctx,x,y,val) {
+function drawCellSimpleDynamic(ctx,x,y,col,row,val) {
 	var char, size;
     switch (val) {
 		case 1: // ff
@@ -421,7 +426,7 @@ function drawCellSimpleDynamic(ctx,x,y,val) {
 			break;
 	}
 	if (val>6) { size = size + 1; }
-	drawMultiCellBackground(ctx,x,y,"#0FF",size); // cyan
+	drawMultiCellBackground(ctx,x,y,col,row,"#0FF",size); // cyan
 	
 	ctx.fillStyle="#000"; // black
 	ctx.textBaseline = "middle";
@@ -430,12 +435,12 @@ function drawCellSimpleDynamic(ctx,x,y,val) {
 	ctx.fillText(char,x+gw(size/2),y+gh(0.6));
 }
 
-function drawCellHairpinDynamic(ctx,x,y,val) {
+function drawCellHairpinDynamic(ctx,x,y,col,row,val) {
 	var text, cresc;
     if (val<5) {
-		drawMultiCellBackground(ctx,x,y,"#0FF",2); // cyan
+		drawMultiCellBackground(ctx,x,y,col,row,"#0FF",2); // cyan
 	} else {
-		drawMultiCellBackground(ctx,x,y,"#0FF",3); // cyan
+		drawMultiCellBackground(ctx,x,y,col,row,"#0FF",3); // cyan
 	}
 	switch (val) {
 		case 1: // begin cresc
@@ -495,7 +500,7 @@ function drawCellHairpinDynamic(ctx,x,y,val) {
 	}
 }
 
-function drawCellTextDynamic(ctx,x,y,val) {
+function drawCellTextDynamic(ctx,x,y,col,row,val) {
 	var char, size;
     switch (val) {
 		case 1: // cresc.
@@ -508,7 +513,7 @@ function drawCellTextDynamic(ctx,x,y,val) {
 			char="dim."; size=5;
 			break;
 	}
-	drawMultiCellBackground(ctx,x,y,"#0FF",size); // cyan
+	drawMultiCellBackground(ctx,x,y,col,row,"#0FF",size); // cyan
 	
 	ctx.fillStyle="#000"; // black
 	ctx.textBaseline = "middle";
@@ -517,8 +522,8 @@ function drawCellTextDynamic(ctx,x,y,val) {
 	ctx.fillText(char,x+gw(size/2),y+gh(0.5));
 }
 
-function drawMetronomeMarkingEquals(ctx,x,y) {
-	drawMultiCellBackground(ctx,x,y,"#000",2); // 2 cells black
+function drawMetronomeMarkingEquals(ctx,x,y,col,row) {
+	drawMultiCellBackground(ctx,x,y,col,row,"#000",2); // 2 cells black
 	ctx.fillStyle = "#FFF"; // white
 	ctx.textAlign="center";
 	ctx.textBaseline="middle";
@@ -528,8 +533,8 @@ function drawMetronomeMarkingEquals(ctx,x,y) {
 	ctx.fillText("=",x+gw(1),y+gh(0.55));
 }
 
-function drawInAccord(ctx,x,y,val) {
-	drawMultiCellBackground(ctx,x,y,"#000",2); // black
+function drawInAccord(ctx,x,y,col,row,val) {
+	drawMultiCellBackground(ctx,x,y,col,row,"#000",2); // black
 	
 	ctx.fillStyle="#FFF"; // black
 	ctx.textBaseline = "middle";
@@ -594,7 +599,7 @@ function drawCellKeySigMultiplier(ctx,x,y,val) {
 	ctx.fillText(val + "×",x+gw(0.5),y+gh(0.5));
 }
 
-function drawCellClef(ctx,x,y,val) {
+function drawCellClef(ctx,x,y,col,row,val) {
 	var char, size, clefHeight;
     switch (val) {
 		case 1: // treble
@@ -610,7 +615,7 @@ function drawCellClef(ctx,x,y,val) {
 			char="\ue061"; size=3; clefHeight=3;
 			break;
 	}
-	drawMultiCellBackground(ctx,x,y,"#0F0",size); // lt green
+	drawMultiCellBackground(ctx,x,y,col,row,"#0F0",size); // lt green
 	
 	ctx.fillStyle="#000"; // black
 	ctx.textBaseline = "middle";
@@ -632,9 +637,9 @@ function drawCellInterval(ctx,x,y,val) {
 	ctx.fillText("+",x+gw(0.5),y+gh(0.1));
 }
 
-function drawCellTextLabel(ctx,x,y,firstLine,secondLine,fillColor,textColor,size) {
+function drawCellTextLabel(ctx,x,y,col,row,firstLine,secondLine,fillColor,textColor,size) {
 	if (size>1) {
-		drawMultiCellBackground(ctx,x,y,fillColor,size);
+		drawMultiCellBackground(ctx,x,y,col,row,fillColor,size);
 		ctx.fillStyle=textColor;
 		ctx.textAlign="center";
 		ctx.textBaseline="middle";
@@ -656,6 +661,26 @@ function drawCellTextLabel(ctx,x,y,firstLine,secondLine,fillColor,textColor,size
 	}
 }
 
+function setBlankCells(col,row,cells) {
+    for (var i=1; i<cells; i++) {
+        if (!(arrayHasOwnIndex(blankCells,row)) || blankCells[row]===null) {
+			blankCells[row] = [];
+		}
+		blankCells[row][+col+i] = true;
+    }
+}
+
+function isBlank(col,row) {
+	if ((col === null) ||
+        (row === null) ||
+        (typeof blankCells[row]==='undefined') ||
+        (typeof blankCells[row][col]==='undefined')) {
+		return 0;
+	} else {
+		return blankCells[row][col];
+	}
+}
+
 function checkContiguousCells(col,row,cells) {
 	if (doNotCheckContiguousCells) {
 		return true;
@@ -663,7 +688,11 @@ function checkContiguousCells(col,row,cells) {
 		var len = cells.length;
 		var matches = true;
 		for (var i=0; i<len; i++) {
-			if ((row>=score.length) || (+col+i>=score[row].length) || (score[row][+col+i]!=cells[i])) {
+			if ((row>=score.length) ||
+                (+col+i>=score[row].length) ||
+                ((score[row][+col+i]!=cells[i]) &&
+                 !((typeof score[row][+col+i] == 'undefined') &&
+                  (cells[i] === 0)))) {
 				matches=false;
 			}
 		}
@@ -672,10 +701,10 @@ function checkContiguousCells(col,row,cells) {
 }
 
 function checkPreviousCell(col,row,cell) {
-	return (score[row][+col-1] == cell);
+	return ((score[row][+col-1] == cell) || ((typeof score[row][+col-1] == 'undefined') && (cell === 0)));
 }
 
-function drawLiteralBrailleSymbol(ctx,val,x,y) {
+function drawLiteralBrailleSymbol(ctx,val,x,y,col,row) {
 
 	var code = brailleDots[(val % 100)-32];
 	var col1 = x+gw(0.333);
@@ -686,66 +715,68 @@ function drawLiteralBrailleSymbol(ctx,val,x,y) {
 	var largeDotRadius = gh(0.066);
 	var smallDotRadius = gh(0.033);
 	
-	ctx.fillStyle = "#000";
-	ctx.beginPath();
-		if (code & 1) { // dot 1
-			ctx.arc(col1,row1,largeDotRadius,0,2*Math.PI,false);
-			ctx.fill();
-		} else if (drawAllDots) {
-			ctx.arc(col1,row1,smallDotRadius,0,2*Math.PI,false);
-			ctx.fill();
-		}
-	ctx.closePath();
-	
-	ctx.beginPath();
-		if (code & 2) { // dot 2
-			ctx.arc(col1,row2,largeDotRadius,0,2*Math.PI,false);
-			ctx.fill();
-		} else if (drawAllDots) {
-			ctx.arc(col1,row2,smallDotRadius,0,2*Math.PI,false);
-			ctx.fill();
-		}
-	ctx.closePath();
-	
-	ctx.beginPath();
-		if (code & 4) { // dot 3
-			ctx.arc(col1,row3,largeDotRadius,0,2*Math.PI,false);
-			ctx.fill();
-		} else if (drawAllDots) {
-			ctx.arc(col1,row3,smallDotRadius,0,2*Math.PI,false);
-			ctx.fill();
-		}
-	ctx.closePath();
-	
-	ctx.beginPath();
-		if (code & 8) { // dot 4
-			ctx.arc(col2,row1,largeDotRadius,0,2*Math.PI,false);
-			ctx.fill();
-		} else if (drawAllDots) {
-			ctx.arc(col2,row1,smallDotRadius,0,2*Math.PI,false);
-			ctx.fill();
-		}
-	ctx.closePath();
-	
-	ctx.beginPath();
-		if (code & 16) { // dot 5
-			ctx.arc(col2,row2,largeDotRadius,0,2*Math.PI,false);
-			ctx.fill();
-		} else if (drawAllDots) {
-			ctx.arc(col2,row2,smallDotRadius,0,2*Math.PI,false);
-			ctx.fill();
-		}
-	ctx.closePath();
-	
-	ctx.beginPath();
-		if (code & 32) { // dot 6
-			ctx.arc(col2,row3,largeDotRadius,0,2*Math.PI,false);
-			ctx.fill();
-		} else if (drawAllDots) {
-			ctx.arc(col2,row3,smallDotRadius,0,2*Math.PI,false);
-			ctx.fill();
-		}
-	ctx.closePath();
+	if (!interpretBraille || !isBlank(col,row)) {
+        ctx.fillStyle = "#000";
+        ctx.beginPath();
+            if (code & 1) { // dot 1
+                ctx.arc(col1,row1,largeDotRadius,0,2*Math.PI,false);
+                ctx.fill();
+            } else if (drawAllDots) {
+                ctx.arc(col1,row1,smallDotRadius,0,2*Math.PI,false);
+                ctx.fill();
+            }
+        ctx.closePath();
+
+        ctx.beginPath();
+            if (code & 2) { // dot 2
+                ctx.arc(col1,row2,largeDotRadius,0,2*Math.PI,false);
+                ctx.fill();
+            } else if (drawAllDots) {
+                ctx.arc(col1,row2,smallDotRadius,0,2*Math.PI,false);
+                ctx.fill();
+            }
+        ctx.closePath();
+
+        ctx.beginPath();
+            if (code & 4) { // dot 3
+                ctx.arc(col1,row3,largeDotRadius,0,2*Math.PI,false);
+                ctx.fill();
+            } else if (drawAllDots) {
+                ctx.arc(col1,row3,smallDotRadius,0,2*Math.PI,false);
+                ctx.fill();
+            }
+        ctx.closePath();
+
+        ctx.beginPath();
+            if (code & 8) { // dot 4
+                ctx.arc(col2,row1,largeDotRadius,0,2*Math.PI,false);
+                ctx.fill();
+            } else if (drawAllDots) {
+                ctx.arc(col2,row1,smallDotRadius,0,2*Math.PI,false);
+                ctx.fill();
+            }
+        ctx.closePath();
+
+        ctx.beginPath();
+            if (code & 16) { // dot 5
+                ctx.arc(col2,row2,largeDotRadius,0,2*Math.PI,false);
+                ctx.fill();
+            } else if (drawAllDots) {
+                ctx.arc(col2,row2,smallDotRadius,0,2*Math.PI,false);
+                ctx.fill();
+            }
+        ctx.closePath();
+
+        ctx.beginPath();
+            if (code & 32) { // dot 6
+                ctx.arc(col2,row3,largeDotRadius,0,2*Math.PI,false);
+                ctx.fill();
+            } else if (drawAllDots) {
+                ctx.arc(col2,row3,smallDotRadius,0,2*Math.PI,false);
+                ctx.fill();
+            }
+        ctx.closePath();
+    }
 	
 }
 
@@ -766,7 +797,7 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		drawCellOctaveRange(ctx,x,y,"4");
 		
 	} else if (val==35) { // time sig prefix
-		drawCellTextLabel(ctx,x,y,"METER","PREFIX","#070","#FFF",1);
+		drawCellTextLabel(ctx,x,y,col,row,"METER","PREFIX","#070","#FFF",1);
 	
 	} else if (val==36) { // E quarter note
 		drawCellBackground(ctx,x,y,"#F00");
@@ -775,7 +806,7 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		
 	} else if (val==37) { // sharp
 		if (checkContiguousCells(col,row,[37,337])) {
-			drawMultiCellBackground(ctx,x,y,"#F80",2); // 2 cells orange
+			drawMultiCellBackground(ctx,x,y,col,row,"#F80",2); // 2 cells orange
 			ctx.fillStyle="#000"; // black
 			ctx.font = "normal "+gh(0.8)+"px Bravura";
 			ctx.textBaseline = "alphabetic";
@@ -823,7 +854,7 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		
 	} else if (val==44) { // octave 7
 		if (checkContiguousCells(col,row,[44,144])) { // octave 8
-			drawMultiCellBackground(ctx,x,y,"#929",2); // 2 cells purple
+			drawMultiCellBackground(ctx,x,y,col,row,"#929",2); // 2 cells purple
 			drawCellOctaveRange(ctx,x+gw(0.5),y,"8");
 		} else if (checkPreviousCell(col,row,144) === false) {
 			drawCellOctaveRange(ctx,x,y,"7");
@@ -854,7 +885,7 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		
 	} else if (val==60) { // flat
 		if (checkContiguousCells(col,row,[60,360])) {
-			drawMultiCellBackground(ctx,x,y,"#F80",2); // 2 cells orange
+			drawMultiCellBackground(ctx,x,y,col,row,"#F80",2); // 2 cells orange
 			ctx.fillStyle="#000"; // black
 			ctx.font = "normal "+gh(0.8)+"px Bravura";
 			ctx.textBaseline = "alphabetic";
@@ -873,7 +904,7 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		drawCellNoteName(ctx,x,y,"F");
 		
 	} else if (val==62) { // text prefix
-		drawCellTextLabel(ctx,x,y,"WORD","PREFIX","#000","#FFF",1);
+		drawCellTextLabel(ctx,x,y,col,row,"WORD","PREFIX","#000","#FFF",1);
 		
 		
 	} else if (val==63) { // C quarter note
@@ -883,17 +914,12 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		
 	} else if (val==64) { // octave 1
 		if (checkContiguousCells(col,row,[64,164])) { // octave 0
-			drawMultiCellBackground(ctx,x,y,"#929",2); // 2 cells purple
+			drawMultiCellBackground(ctx,x,y,col,row,"#929",2); // 2 cells purple
 			drawCellOctaveRange(ctx,x+gw(0.5),y,"0");
 		} else {
 			drawCellOctaveRange(ctx,x,y,"1");
 		}
-		
-	} else if (val==66) { // down bow (second symbol)
-		if (checkPreviousCell(col,row,760) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
+
 	} else if (val==67) { // short slur
 		if (checkPreviousCell(col,row,259) === false) {
 			drawCellBackground(ctx,x,y,"#FF0"); // yellow
@@ -997,9 +1023,9 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		
 	} else if (val==134) { // play section #
 		if (checkContiguousCells(col,row,[134,243])) {
-			drawCellTextLabel(ctx,x,y,"PLAY","SECTION #","#000","#FFF",2); // white on black
+			drawCellTextLabel(ctx,x,y,col,row,"PLAY","SECTION #","#000","#FFF",2); // white on black
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 		
 	} else if (val==135) { // interval 4th
@@ -1021,12 +1047,7 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		drawCellBackground(ctx,x,y,"#F00");
 		drawCellNote(ctx,x,y,"\ue1d9");
 		drawCellNoteName(ctx,x,y,"E");
-		
-	} else if (val==139) { // final/double barline (second symbol)
-		if (checkPreviousCell(col,row,175) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
+
 	} else if (val==140) { // G 16th note
 		drawCellBackground(ctx,x,y,"#F00");
 		drawCellNote(ctx,x,y,"\ue1d9");
@@ -1050,31 +1071,21 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		ctx.textBaseline = "alphabetic";
 		ctx.fillStyle = "#FFF"; // white
 		ctx.fillText("\ue040",x+gw(0.5),y+gh(0.8));
-		
-	} else if (val==144) { // octave 8
-		if (checkPreviousCell(col,row,44) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
+
 	} else if (val==146) { // common time
 		if (checkContiguousCells(col,row,[146,467])) {
-			drawMultiCellBackground(ctx,x,y,"#070",2); // 2 cells green
+			drawMultiCellBackground(ctx,x,y,col,row,"#070",2); // 2 cells green
 			ctx.fillStyle="#FFF"; // black
 			ctx.font = "normal "+gh(0.8)+"px Bravura";
 			ctx.textBaseline = "alphabetic";
 			ctx.fillText("\ue08a",x+gw(1.05),y+gh(0.5));
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 		
 	} else if (val==148) { // interval 6th
 		drawCellInterval(ctx,x,y,6);
-		
-	} else if (val==149) { // pause (second symbol)
-		if (checkPreviousCell(col,row,362) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
+
 	} else if (val==150) { // triplet
 		drawCellTupletNumber(ctx,x,y,-3);
 		
@@ -1083,10 +1094,8 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		
 	} else if (val==153) { // grace note
 		drawCellBackground(ctx,x,y,"#F00");
-		//ctx.font = "normal "+gh(0.47)+"px Bravura";
 		ctx.textBaseline = "alphabetic";
 		ctx.fillStyle = "#FFF"; // white
-		//ctx.fillText("\ue1d6",x+gw(0.60),y+gh(0.43));
 		ctx.font = "normal "+gh(0.47)+"px Bravura";
 		ctx.fillText("\ue560",x+gw(0.5),y+gh(0.55));
 			
@@ -1099,12 +1108,7 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		ctx.textBaseline = "alphabetic";
 		ctx.fillStyle = "#FFF"; // white
 		ctx.fillText("\ue500",x+gw(0.5),y+gh(0.5));
-		
-	} else if (val==156) { // tenuto, accent, marcato (second symbol)
-		if (checkPreviousCell(col,row,159)===false && checkPreviousCell(col,row,346)===false && checkPreviousCell(col,row,395)===false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
+
 	} else if (val==157) { // interval 5th
 		drawCellInterval(ctx,x,y,5);
 		
@@ -1117,7 +1121,7 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		if (checkContiguousCells(col,row,[159,156])) {
 			drawCellArticulation(ctx,x,y,4);
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 		
 	} else if (val==160) { // key signature flat
@@ -1134,51 +1138,36 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		
 	} else if (val==162) { // hairpin dynamic
 		if (checkContiguousCells(col,row,[162,551,239])) {
-			drawCellHairpinDynamic(ctx,x,y,6);
+			drawCellHairpinDynamic(ctx,x,y,col,row,6);
 		} else if (checkContiguousCells(col,row,[162,552,239])) {
-			drawCellHairpinDynamic(ctx,x,y,8);
+			drawCellHairpinDynamic(ctx,x,y,col,row,8);
 		} else if (checkContiguousCells(col,row,[162,567,239])) {
-			drawCellHairpinDynamic(ctx,x,y,5);
+			drawCellHairpinDynamic(ctx,x,y,col,row,5);
 		} else if (checkContiguousCells(col,row,[162,568,239])) {
-			drawCellHairpinDynamic(ctx,x,y,7);
+			drawCellHairpinDynamic(ctx,x,y,col,row,7);
 		} else if (checkContiguousCells(col,row,[162,551])) {
-			drawCellHairpinDynamic(ctx,x,y,2);
+			drawCellHairpinDynamic(ctx,x,y,col,row,2);
 		} else if (checkContiguousCells(col,row,[162,552])) {
-			drawCellHairpinDynamic(ctx,x,y,4);
+			drawCellHairpinDynamic(ctx,x,y,col,row,4);
 		} else if (checkContiguousCells(col,row,[162,567])) {
-			drawCellHairpinDynamic(ctx,x,y,1);
+			drawCellHairpinDynamic(ctx,x,y,col,row,1);
 		} else if (checkContiguousCells(col,row,[162,568])) {
-			drawCellHairpinDynamic(ctx,x,y,3);
+			drawCellHairpinDynamic(ctx,x,y,col,row,3);
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 	
 	} else if (val==163) { // C 64th note
 		drawCellBackground(ctx,x,y,"#F00");
 		drawCellNote(ctx,x,y,"\ue1dd");
 		drawCellNoteName(ctx,x,y,"C");
-		
-	} else if (val==164) { // octave 0
-		if (checkPreviousCell(col,row,64) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
+
 	} else if (val>=165 && val<=173) { // time signature top numbers 1-9
 		drawCellTimeSignatureNumber(ctx,x,y,val-164,true);
 		
 	} else if (val==174) { // time signature top 0
 		drawCellTimeSignatureNumber(ctx,x,y,0,true);
-		
-	} else if (val==175) { // part of barline symbol
-		if (checkPreviousCell(col,row,260) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
-	} else if (val==176) { // fermata (second symbol)
-		if (checkPreviousCell(col,row,460) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
+
 	} else if (val==177) { // 16th rest
 		drawCellBackground(ctx,x,y,"#F00");
 		ctx.font = "normal "+gh(0.6)+"px Bravura";
@@ -1241,46 +1230,36 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		
 	} else if (val==194) { // prefer larger note values
 		if (checkContiguousCells(col,row,[194,660,349])) {
-			drawCellTextLabel(ctx,x,y,"READ AS","LARGER VALUES","#000","#FFF",3);
+			drawCellTextLabel(ctx,x,y,col,row,"READ AS","LARGER VALUES","#000","#FFF",3);
 		}
 		
 	} else if (val==195) { // cut time
 		if (checkContiguousCells(col,row,[195,467])) {
-			drawMultiCellBackground(ctx,x,y,"#070",2); // 2 cells green
+			drawMultiCellBackground(ctx,x,y,col,row,"#070",2); // 2 cells green
 			ctx.fillStyle="#FFF"; // black
 			ctx.font = "normal "+gh(0.8)+"px Bravura";
 			ctx.textBaseline = "alphabetic";
 			ctx.fillText("\ue08b",x+gw(1.05),y+gh(0.5));
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 		
 	} else if (val==234) { // braille music hyphen
-		drawCellTextLabel(ctx,x,y,"MUSIC","HYPHEN","#000","#FFF",1);
+		drawCellTextLabel(ctx,x,y,col,row,"MUSIC","HYPHEN","#000","#FFF",1);
 		
 	} else if (val==235) { // key sig prefix
-		drawCellTextLabel(ctx,x,y,"KEY","PREFIX","#00F","#FFF",1); // white on blue
-	
-	} else if (val==239) { // hairpin dynamic (third symbol) or text dynamic (last symbol) or hand sign (last symbol)
-		if (letterIsPartOfSymbol(col,row,239) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
+		drawCellTextLabel(ctx,x,y,col,row,"KEY","PREFIX","#00F","#FFF",1); // white on blue
+
 	} else if (val==242) { // end repeated section
 		drawCellBackground(ctx,x,y,"#000"); // black
 		ctx.font = "normal "+gridHeight*0.55+"px Bravura";
 		ctx.textBaseline = "alphabetic";
 		ctx.fillStyle = "#FFF"; // white
 		ctx.fillText("\ue041",x+gw(0.5),y+gh(0.8));
-		
-	} else if (val==243) { // play section # (second symbol)
-		if (checkPreviousCell(col,row,134) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
+
 	} else if (val==244) { // prefer smaller note values
 		if (checkContiguousCells(col,row,[244,660,349])) {
-			drawCellTextLabel(ctx,x,y,"READ AS","SMALLER VALUES","#000","#FFF",3);
+			drawCellTextLabel(ctx,x,y,col,row,"READ AS","SMALLER VALUES","#000","#FFF",3);
 		}
 		
 	} else if (val==248) { // tuplet 0
@@ -1291,7 +1270,7 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		
 	} else if (val==259) { // grace note slur
 		if (checkContiguousCells(col,row,[259,67])) {
-			drawMultiCellBackground(ctx,x,y,"#FF0",2); // 2 cells yellow
+			drawMultiCellBackground(ctx,x,y,col,row,"#FF0",2); // 2 cells yellow
 			ctx.fillStyle = "#000"; // black
 			ctx.textAlign="center";
 			ctx.textBaseline="middle";
@@ -1300,29 +1279,24 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 			ctx.font = "normal "+gw(0.4)+"px sans-serif";
 			ctx.fillText("SLUR",x+gw(1),y+gh(0.65));
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 		
 	} else if (val==260) { // final or double barline
 		ctx.font = "normal "+gridHeight*0.6+"px Bravura";
 		ctx.textBaseline = "alphabetic";
 		if (checkContiguousCells(col,row,[260,175,139])) { // double barline
-			drawMultiCellBackground(ctx,x,y,"#000",3); // 3 cells black
+			drawMultiCellBackground(ctx,x,y,col,row,"#000",3); // 3 cells black
 			ctx.fillStyle = "#FFF"; // white
 			ctx.fillText("\ue031",x+gw(1.5),y+gh(0.8));
 		} else if (checkContiguousCells(col,row,[260,175])) { // final barline
-			drawMultiCellBackground(ctx,x,y,"#000",2); // 2 cells black
+			drawMultiCellBackground(ctx,x,y,col,row,"#000",2); // 2 cells black
 			ctx.fillStyle = "#FFF"; // white
 			ctx.fillText("\ue032",x+gw(1),y+gh(0.8));
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
-	
-	} else if (val==262) { // right hand / left hand (second symbol)
-		if ((checkPreviousCell(col,row,446) === false) && (checkPreviousCell(col,row,495) === false)) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
+
 	} else if (val>=265 && val<=271) { // key signature accidental multipliers
 		drawCellKeySigMultiplier(ctx,x,y,val-264);
 	
@@ -1331,45 +1305,25 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		
 	} else if (val==334) { // partial measure in-accord (first character)
 		if (checkContiguousCells(col,row,[334,749])) {
-			drawInAccord(ctx,x,y,3);
+			drawInAccord(ctx,x,y,col,row,3);
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 		
 	} else if (val==335) { // number of measures to repeat
-		drawCellTextLabel(ctx,x,y,"NO. OF","MEAS.","#000","#FFF",1);
-	
-	} else if (val==337) { // double sharp
-		if (checkPreviousCell(col,row,37) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
-	} else if (val==339) { // music prefix (second symbol)
-		if (checkPreviousCell(col,row,344) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
+		drawCellTextLabel(ctx,x,y,col,row,"NO. OF","MEAS.","#000","#FFF",1);
+
 	} else if (val==343) { // plus
 		drawCellChordSymbol(ctx,x,y,1);
 	
 	} else if (val==344) { // music prefix
-		drawCellTextLabel(ctx,x,y,"MUSIC","PREFIX","#000","#FFF",2);
+		drawCellTextLabel(ctx,x,y,col,row,"MUSIC","PREFIX","#000","#FFF",2);
 		
 	} else if (val==346) { // accent
 		if (checkContiguousCells(col,row,[346,156])) {
 			drawCellArticulation(ctx,x,y,3);
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
-	} else if (val==349) { // braille music comma (second symbol)
-		if (checkPreviousCell(col,row,660) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
-	} else if (val==350) { // end bracket slur (second symbol)
-		if (checkPreviousCell(col,row,394) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 		
 	} else if (val==356) { // staccato
@@ -1378,26 +1332,21 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		
 	} else if (val==359) { // begin bracket slur
 		if (checkContiguousCells(col,row,[359,366])) {
-			drawCellTextLabel(ctx,x,y,"BEGIN","SLUR","#FF0","#000",2);
+			drawCellTextLabel(ctx,x,y,col,row,"BEGIN","SLUR","#FF0","#000",2);
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
-	} else if (val==360) { // double flat
-		if (checkPreviousCell(col,row,60) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 		
 	} else if (val==362) { // pause
 		if (checkContiguousCells(col,row,[362,149])) {
 			drawCellArticulation(ctx,x,y,6);
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 		
 	} else if (val==364) { // tie
 		if (checkContiguousCells(col,row,[364,367])) {
-			drawMultiCellBackground(ctx,x,y,"#FF0",2); // 2 cells yellow
+			drawMultiCellBackground(ctx,x,y,col,row,"#FF0",2); // 2 cells yellow
 			ctx.beginPath();
 			ctx.arc(x+gw(1),y+gh(0.9),gh(0.5),1.25*Math.PI,1.75*Math.PI,false);
 			ctx.lineWidth=gh(0.033);
@@ -1410,17 +1359,7 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 			ctx.font = "normal "+gw(0.3)+"px sans-serif";
 			ctx.fillText("TIE",x+gw(1),y+gh(0.7));
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
-	} else if (val==366) { // begin bracket slur (second symbol)
-		if (checkPreviousCell(col,row,359) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
-	} else if (val==367) { // tie (second symbol)
-		if (checkPreviousCell(col,row,364) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 		
 	} else if (val>=368 && val<=374) { // 128th notes
@@ -1428,15 +1367,10 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		drawCellNote(ctx,x,y,"\ue1df");
 		chars=['C','D','E','F','G','A','B'];
 		drawCellNoteName(ctx,x,y,chars[val-368]);
-	
-	} else if (val==375) { // in-accord measure division (second symbol)
-		if (checkPreviousCell(col,row,646) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
 
 	} else if (val==376) { // clef (last symbol)
 		if ((checkPreviousCell(col,row,447) === false) && (checkPreviousCell(col,row,643) === false) && (checkPreviousCell(col,row,634) === false) && (checkPreviousCell(col,row,635) === false)) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 
 	} else if (val==377) { // right H-bar rest
@@ -1448,21 +1382,16 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		
 	} else if (val==394) { // end bracket slur
 		if (checkContiguousCells(col,row,[394,350])) {
-			drawCellTextLabel(ctx,x,y,"END","SLUR","#FF0","#000",2);
+			drawCellTextLabel(ctx,x,y,col,row,"END","SLUR","#FF0","#000",2);
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 		
 	} else if (val==395) { // tenuto
 		if (checkContiguousCells(col,row,[395,156])) {
 			drawCellArticulation(ctx,x,y,2);
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
-	} else if (val==435) { // metronome marking equals (second symbol)
-		if (checkPreviousCell(col,row,455) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 		
 	} else if (val==439) { // tuplet suffix
@@ -1470,16 +1399,11 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		
 	} else if (val==446) { // right hand (first symbol)
 		if (checkContiguousCells(col,row,[446,262,239])) {
-			drawCellTextLabel(ctx,x,y,"RIGHT","HAND","#000","#FFF",3);
+			drawCellTextLabel(ctx,x,y,col,row,"RIGHT","HAND","#000","#FFF",3);
 		} else if (checkContiguousCells(col,row,[446,262])) {
-			drawCellTextLabel(ctx,x,y,"RIGHT","HAND","#000","#FFF",2);
+			drawCellTextLabel(ctx,x,y,col,row,"RIGHT","HAND","#000","#FFF",2);
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
-	} else if (val==447) { // treble clef (second symbol)
-		if (checkPreviousCell(col,row,662) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 
 	} else if (val==448) { // triangle
@@ -1497,51 +1421,51 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 	
 	} else if (val==455) { // metronome marking equals (first character)
 		if (checkContiguousCells(col,row,[455,435])) {
-			drawMetronomeMarkingEquals(ctx,x,y);
+			drawMetronomeMarkingEquals(ctx,x,y,col,row);
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 		
 	} else if (val==460) { // fermata
 		if (checkContiguousCells(col,row,[460,176])) {
 			drawCellArticulation(ctx,x,y,5);
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 		
 	} else if (val==462) { // simple dynamic
 		if (checkContiguousCells(col,row,[462,570,570,239])) {
-			drawCellSimpleDynamic(ctx,x,y,7);
+			drawCellSimpleDynamic(ctx,x,y,col,row,7);
 		} else if (checkContiguousCells(col,row,[462,570,239])) {
-			drawCellSimpleDynamic(ctx,x,y,8);
+			drawCellSimpleDynamic(ctx,x,y,col,row,8);
 		} else if (checkContiguousCells(col,row,[462,577,570,239])) {
-			drawCellSimpleDynamic(ctx,x,y,9);
+			drawCellSimpleDynamic(ctx,x,y,col,row,9);
 		} else if (checkContiguousCells(col,row,[462,577,580,239])) {
-			drawCellSimpleDynamic(ctx,x,y,10);
+			drawCellSimpleDynamic(ctx,x,y,col,row,10);
 		} else if (checkContiguousCells(col,row,[462,580,580,239])) {
-			drawCellSimpleDynamic(ctx,x,y,12);
+			drawCellSimpleDynamic(ctx,x,y,col,row,12);
 		} else if (checkContiguousCells(col,row,[462,580,239])) {
-			drawCellSimpleDynamic(ctx,x,y,11);
+			drawCellSimpleDynamic(ctx,x,y,col,row,11);
 		} else if (checkContiguousCells(col,row,[462,570,570])) {
-			drawCellSimpleDynamic(ctx,x,y,1);
+			drawCellSimpleDynamic(ctx,x,y,col,row,1);
 		} else if (checkContiguousCells(col,row,[462,570])) {
-			drawCellSimpleDynamic(ctx,x,y,2);
+			drawCellSimpleDynamic(ctx,x,y,col,row,2);
 		} else if (checkContiguousCells(col,row,[462,577,570])) {
-			drawCellSimpleDynamic(ctx,x,y,3);
+			drawCellSimpleDynamic(ctx,x,y,col,row,3);
 		} else if (checkContiguousCells(col,row,[462,577,580])) {
-			drawCellSimpleDynamic(ctx,x,y,4);
+			drawCellSimpleDynamic(ctx,x,y,col,row,4);
 		} else if (checkContiguousCells(col,row,[462,580,580])) {
-			drawCellSimpleDynamic(ctx,x,y,6);
+			drawCellSimpleDynamic(ctx,x,y,col,row,6);
 		} else if (checkContiguousCells(col,row,[462,580])) {
-			drawCellSimpleDynamic(ctx,x,y,5);
+			drawCellSimpleDynamic(ctx,x,y,col,row,5);
 		} else if (checkContiguousCells(col,row,[462,567,582,239])) {
-			drawCellTextDynamic(ctx,x,y,1);
+			drawCellTextDynamic(ctx,x,y,col,row,1);
 		} else if (checkContiguousCells(col,row,[462,568,569,567,582,239])) {
-			drawCellTextDynamic(ctx,x,y,2);
+			drawCellTextDynamic(ctx,x,y,col,row,2);
 		} else if (checkContiguousCells(col,row,[462,568,573,577,239])) {
-			drawCellTextDynamic(ctx,x,y,3);
+			drawCellTextDynamic(ctx,x,y,col,row,3);
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 	
 	} else if (val==465) { // fingering 1
@@ -1549,12 +1473,7 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		
 	} else if (val==466) { // fingering 2
 		drawCellArticulation(ctx,x,y,12);
-		
-	} else if (val==467) { // common time/cut time (second symbol)
-		if ((checkPreviousCell(col,row,146) === false) && (checkPreviousCell(col,row,195) === false)) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
+
 	} else if (val==475) { // fingering 5
 		drawCellArticulation(ctx,x,y,15);
 		
@@ -1563,287 +1482,205 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		
 	} else if (val==495) { // left hand (first symbol)
 		if (checkContiguousCells(col,row,[495,262,239])) {
-			drawCellTextLabel(ctx,x,y,"LEFT","HAND","#000","#FFF",3);
+			drawCellTextLabel(ctx,x,y,col,row,"LEFT","HAND","#000","#FFF",3);
 		} else if (checkContiguousCells(col,row,[495,262])) {
-			drawCellTextLabel(ctx,x,y,"LEFT","HAND","#000","#FFF",2);
+			drawCellTextLabel(ctx,x,y,col,row,"LEFT","HAND","#000","#FFF",2);
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 		
 	} else if (val>=533 && val<=563) { // punctuation and contractions
 		if (val==544 && checkContiguousCells(col,row,[544,544])) {
-			drawCellTextLabel(ctx,x,y,"CAPITALIZE","WORD","#FFF","#000",2);
+			drawCellTextLabel(ctx,x,y,col,row,"CAPITALIZE","WORD","#FFF","#000",2);
         } else if (val==534 && checkContiguousCells(col,row,[534,633])) { // there
-			drawMultiCellASCII(ctx,x,y,2,'THERE',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'THERE',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,638])) { // some
-			drawMultiCellASCII(ctx,x,y,2,'SOME',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'SOME',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,675])) { // know
-			drawMultiCellASCII(ctx,x,y,2,'KNOW',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'KNOW',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,676])) { // lord
-			drawMultiCellASCII(ctx,x,y,2,'LORD',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'LORD',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,677])) { // mother
-			drawMultiCellASCII(ctx,x,y,2,'MOTHER',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'MOTHER',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,678])) { // name
-			drawMultiCellASCII(ctx,x,y,2,'NAME',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'NAME',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,679])) { // one
-			drawMultiCellASCII(ctx,x,y,2,'ONE',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'ONE',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,680])) { // part
-			drawMultiCellASCII(ctx,x,y,2,'PART',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'PART',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,681])) { // question
-			drawMultiCellASCII(ctx,x,y,2,'QUESTION',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'QUESTION',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,682])) { // right
-			drawMultiCellASCII(ctx,x,y,2,'RIGHT',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'RIGHT',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,684])) { // time
-			drawMultiCellASCII(ctx,x,y,2,'TIME',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'TIME',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,742])) { // character
-			drawMultiCellASCII(ctx,x,y,2,'CHARACTER',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'CHARACTER',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,758])) { // where
-			drawMultiCellASCII(ctx,x,y,2,'WHERE',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'WHERE',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,763])) { // through
-			drawMultiCellASCII(ctx,x,y,2,'THROUGH',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'THROUGH',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,768])) { // day
-			drawMultiCellASCII(ctx,x,y,2,'DAY',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'DAY',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,769])) { // ever
-			drawMultiCellASCII(ctx,x,y,2,'EVER',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'EVER',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,772])) { // here
-			drawMultiCellASCII(ctx,x,y,2,'HERE',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'HERE',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,785])) { // under
-			drawMultiCellASCII(ctx,x,y,2,'UNDER',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'UNDER',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,787])) { // work
-			drawMultiCellASCII(ctx,x,y,2,'WORK',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'WORK',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,789])) { // young
-			drawMultiCellASCII(ctx,x,y,2,'YOUNG',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'YOUNG',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,792])) { // ought
-			drawMultiCellASCII(ctx,x,y,2,'OUGHT',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'OUGHT',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,854])) {
-			drawCellASCII(ctx,x,y,'+',(val % 100));
+			drawCellASCII(ctx,x,y,col,row,'+',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,855])) {
-			drawCellASCII(ctx,x,y,'=',(val % 100));
+			drawCellASCII(ctx,x,y,col,row,'=',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,970])) { // father
-			drawMultiCellASCII(ctx,x,y,2,'FATHER',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'FATHER',(val % 100));
+		} else if (val==545 && checkContiguousCells(col,row,[545,545,545])) { // em dash
+			drawMultiCellASCII(ctx,x,y,col,row,3,'—',(val % 100));
+		} else if (val==545 && checkContiguousCells(col,row,[545,545])) { // en dash
+			drawMultiCellASCII(ctx,x,y,col,row,2,'–',(val % 100));
+		} else if (val==545 && checkPreviousCell(col,row,545)) { // em/en dash (second symbol)
+			//leave it blank
 		} else if (val==544 && checkPreviousCell(col,row,544)) {
 			// leave it blank
 		} else if (!(letterIsPartOfSymbol(col,row,val)) || doNotCheckContiguousCells) {
 			chars=['THE','','#','ED','SH','AND',"'",'OF','WITH','CH','ING','capital sign','-','.','ST','',',',';',':','.','EN','!','()','?','IN','WH','text sign','GH','FOR','AR','TH'];
-			drawCellASCII(ctx,x,y,chars[val-533],(val % 100));
+			drawCellASCII(ctx,x,y,col,row,chars[val-533],(val % 100));
 		}
 	
 	} else if (val>=565 && val<=590) { // text letters
-		if (!(letterIsPartOfSymbol(col,row,val)) || doNotCheckContiguousCells) {
-			drawCellASCII(ctx,x,y,String.fromCharCode(val-500),(val % 100));
+		if (!(drawLongTextContraction(ctx,x,y,col,row,val)) &&
+            (!(letterIsPartOfSymbol(col,row,val)) ||
+            doNotCheckContiguousCells)) {
+			drawCellASCII(ctx,x,y,col,row,String.fromCharCode(val-500),(val % 100));
 		}
 		
 	} else if (val>=591 && val<=593) { // contractions
 		chars=['OW','OU','ER'];
-		drawCellASCII(ctx,x,y,chars[val-591],(val % 100));
+		drawCellASCII(ctx,x,y,col,row,chars[val-591],(val % 100));
 	
 	} else if (val==594) { // contractions
 		if (checkContiguousCells(col,row,[594,633])) { // these
-			drawMultiCellASCII(ctx,x,y,2,'THESE',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'THESE',(val % 100));
 		} else if (checkContiguousCells(col,row,[594,758])) { // whose
-			drawMultiCellASCII(ctx,x,y,2,'WHOSE',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'WHOSE',(val % 100));
 		} else if (checkContiguousCells(col,row,[594,763])) { // those
-			drawMultiCellASCII(ctx,x,y,2,'THOSE',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'THOSE',(val % 100));
 		} else if (checkContiguousCells(col,row,[594,785])) { // upon
-			drawMultiCellASCII(ctx,x,y,2,'UPON',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'UPON',(val % 100));
 		} else if (checkContiguousCells(col,row,[594,787])) { // word
-			drawMultiCellASCII(ctx,x,y,2,'WORD',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'WORD',(val % 100));
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 
 	} else if (val==595) { // contractions
 		if (checkContiguousCells(col,row,[595,633])) { // their
-			drawMultiCellASCII(ctx,x,y,2,'THEIR',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'THEIR',(val % 100));
 		} else if (checkContiguousCells(col,row,[595,638])) { // spirit
-			drawMultiCellASCII(ctx,x,y,2,'SPIRIT',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'SPIRIT',(val % 100));
 		} else if (checkContiguousCells(col,row,[595,677])) { // many
-			drawMultiCellASCII(ctx,x,y,2,'MANY',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'MANY',(val % 100));
 		} else if (checkContiguousCells(col,row,[595,772])) { // had
-			drawMultiCellASCII(ctx,x,y,2,'HAD',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'HAD',(val % 100));
 		} else if (checkContiguousCells(col,row,[595,787])) { // world
-			drawMultiCellASCII(ctx,x,y,2,'WORLD',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'WORLD',(val % 100));
 		} else if (checkContiguousCells(col,row,[595,967])) { // cannot
-			drawMultiCellASCII(ctx,x,y,2,'CANNOT',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'CANNOT',(val % 100));
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 
-	} else if (val==633) { // there/these/their contraction (second symbol)
-		if (checkPreviousCell(col,row,534)===false &&
-            checkPreviousCell(col,row,594)===false &&
-            checkPreviousCell(col,row,595)===false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-
-	} else if (val==634) { // tenor clef (third symbol)
-		if (checkPreviousCell(col,row,643) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
-	} else if (val==635) { // bass clef (second symbol)
-		if (checkPreviousCell(col,row,662) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
 	} else if (val==637) { // contractions
-		drawCellASCII(ctx,x,y,'SHALL',(val % 100));
+		drawCellASCII(ctx,x,y,col,row,'SHALL',(val % 100));
 
-	} else if (val==638) { // some/spirit contraction (second symbol)
-		if (checkPreviousCell(col,row,534)===false &&
-            checkPreviousCell(col,row,595)===false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-
-	} else if (val==639) { // up bow (second symbol)
-		if (checkPreviousCell(col,row,760) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
 	} else if (val==642) { // contractions
-		drawCellASCII(ctx,x,y,'CHILD',(val % 100));
+		drawCellASCII(ctx,x,y,col,row,'CHILD',(val % 100));
 
-	} else if (val==643) { // alto/tenor clef (second symbol)
-		if (checkPreviousCell(col,row,662) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
 	} else if (val==644) { // contractions
 		if (checkContiguousCells(col,row,[644,789])) { // ally
-			drawMultiCellASCII(ctx,x,y,2,'ALLY',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'ALLY',(val % 100));
 		} else if (checkContiguousCells(col,row,[644,678])) { // ation
-			drawMultiCellASCII(ctx,x,y,2,'ATION',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'ATION',(val % 100));
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 
 	} else if (val==645) { // contractions
-		drawCellASCII(ctx,x,y,'COM',(val % 100));
+		drawCellASCII(ctx,x,y,col,row,'COM',(val % 100));
 
 	} else if (val==646) { // in-accord measure division (first character)
 		if (checkContiguousCells(col,row,[646,375])) {
-			drawInAccord(ctx,x,y,2);
+			drawInAccord(ctx,x,y,col,row,2);
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 		
-	} else if (val>=647 && val<=651) { // punctuation and contractions
+	} else if (val>=647 && val<=657) { // punctuation and contractions
 		chars=['/','”','EA','BB','CC','DD','','FF','GG','“','BY'];
-		drawCellASCII(ctx,x,y,chars[val-647],(val % 100));
+		drawCellASCII(ctx,x,y,col,row,chars[val-647],(val % 100));
 	
 	} else if (val==658) { // contractions
-		drawCellASCII(ctx,x,y,'WHICH',(val % 100));
+		drawCellASCII(ctx,x,y,col,row,'WHICH',(val % 100));
 	
 	} else if (val==659) { // contractions
 		if (checkContiguousCells(col,row,[659,771])) { // ong
-			drawMultiCellASCII(ctx,x,y,2,'ONG',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'ONG',(val % 100));
 		} else if (checkContiguousCells(col,row,[659,676])) { // ful
-			drawMultiCellASCII(ctx,x,y,2,'FUL',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'FUL',(val % 100));
 		} else if (checkContiguousCells(col,row,[659,684])) { // ment
-			drawMultiCellASCII(ctx,x,y,2,'MENT',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'MENT',(val % 100));
 		} else if (checkContiguousCells(col,row,[659,769])) { // ence
-			drawMultiCellASCII(ctx,x,y,2,'ENCE',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'ENCE',(val % 100));
 		} else if (checkContiguousCells(col,row,[659,683])) { // ness
-			drawMultiCellASCII(ctx,x,y,2,'NESS',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'NESS',(val % 100));
 		} else if (checkContiguousCells(col,row,[659,678])) { // tion
-			drawMultiCellASCII(ctx,x,y,2,'TION',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'TION',(val % 100));
 		} else if (checkContiguousCells(col,row,[659,789])) { // ity
-			drawMultiCellASCII(ctx,x,y,2,'ITY',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'ITY',(val % 100));
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 
 	} else if (val==660) { // braille music comma (first symbol)
 		if ((checkPreviousCell(col,row,194) === false) && (checkPreviousCell(col,row,244) === false)) {
 			if (checkContiguousCells(col,row,[660,349])) {
-				drawCellTextLabel(ctx,x,y,"MUSIC","COMMA","#000","#FFF",2);
+				drawCellTextLabel(ctx,x,y,col,row,"MUSIC","COMMA","#000","#FFF",2);
 			} else {
-				drawLiteralBrailleSymbol(ctx,val,x,y);
+				drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 			}
 		}
 		
 	} else if (val==662) { // clefs
 		if (checkContiguousCells(col,row,[662,447,676])) { // treble clef
-			drawCellClef(ctx,x,y,1);
+			drawCellClef(ctx,x,y,col,row,1);
 		} else if (checkContiguousCells(col,row,[662,643,676])) { // alto clef
-			drawCellClef(ctx,x,y,2);
+			drawCellClef(ctx,x,y,col,row,2);
 		} else if (checkContiguousCells(col,row,[662,643,634,676])) { // tenor clef
-			drawCellClef(ctx,x,y,3);
+			drawCellClef(ctx,x,y,col,row,3);
 		} else if (checkContiguousCells(col,row,[662,635,676])) { // bass clef
-			drawCellClef(ctx,x,y,4);
+			drawCellClef(ctx,x,y,col,row,4);
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 	
 	} else if (val==663) { // contractions
-		drawCellASCII(ctx,x,y,'THIS',(val % 100));
+		drawCellASCII(ctx,x,y,col,row,'THIS',(val % 100));
 
 	} else if (val>=665 && val<=673) { // numbers 1-9
-		drawCellASCII(ctx,x,y,String.fromCharCode(val-616),(val % 100));
+		drawCellASCII(ctx,x,y,col,row,String.fromCharCode(val-616),(val % 100));
 	
 	} else if (val==674) { // numbers 0
-		drawCellASCII(ctx,x,y,"0",(val % 100));
-	
-	} else if (val==675) { // know contraction (second symbol)
-		if (checkPreviousCell(col,row,534) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
+		drawCellASCII(ctx,x,y,col,row,"0",(val % 100));
 
-	} else if (val==676) { // -ful/lord contraction (second symbol)
-		if (checkPreviousCell(col,row,659)===false &&
-            checkPreviousCell(col,row,534)===false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-
-	} else if (val==677) { // mother/many contraction (second symbol)
-		if (checkPreviousCell(col,row,534)===false &&
-            checkPreviousCell(col,row,595)===false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-
-	} else if (val==678) { // -sion/-tion/-ation/name contraction (second symbol)
-		if (checkPreviousCell(col,row,644)===false &&
-            checkPreviousCell(col,row,659)===false &&
-            checkPreviousCell(col,row,746)===false &&
-            checkPreviousCell(col,row,534)===false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-
-	} else if (val==679) { // one contraction (second symbol)
-		if (checkPreviousCell(col,row,534) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-
-	} else if (val==680) { // part contraction (second symbol)
-		if (checkPreviousCell(col,row,534) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-
-	} else if (val==681) { // question contraction (second symbol)
-		if (checkPreviousCell(col,row,534) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-
-	} else if (val==682) { // right contraction (second symbol)
-		if (checkPreviousCell(col,row,534) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-
-	} else if (val==683) { // -less/-ness (second symbol)
-		if (checkPreviousCell(col,row,659)===false && checkPreviousCell(col,row,746)===false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-
-	} else if (val==684) { // -ount/-ment/time contraction (second symbol)
-		if (checkPreviousCell(col,row,659)===false &&
-            checkPreviousCell(col,row,746)===false &&
-            checkPreviousCell(col,row,534)===false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
 	} else if (val>=685 && val<=692) { // punctuation and contractions
 		chars=['US','VERY','WILL','IT','YOU','AS','','OUT'];
-		drawCellASCII(ctx,x,y,chars[val-685],(val % 100));
+		drawCellASCII(ctx,x,y,col,row,chars[val-685],(val % 100));
 
 	} else if (val==735) { // left H-bar rest
 		drawCellBackground(ctx,x,y,"#F00");
@@ -1851,155 +1688,64 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		ctx.textBaseline = "alphabetic";
 		ctx.fillStyle = "#FFF"; // white
 		ctx.fillText("\ue4ef",x+gw(0.5),y+gh(0.5));
-		
-	} else if (val==742) { // character contraction (second symbol)
-		if (checkPreviousCell(col,row,534) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
 
 	} else if (val==746) { // contractions
 		if (checkContiguousCells(col,row,[746,768])) { // ound
-			drawMultiCellASCII(ctx,x,y,2,'OUND',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'OUND',(val % 100));
 		} else if (checkContiguousCells(col,row,[746,684])) { // ount
-			drawMultiCellASCII(ctx,x,y,2,'OUNT',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'OUNT',(val % 100));
 		} else if (checkContiguousCells(col,row,[746,769])) { // ance
-			drawMultiCellASCII(ctx,x,y,2,'ANCE',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'ANCE',(val % 100));
 		} else if (checkContiguousCells(col,row,[746,683])) { // less
-			drawMultiCellASCII(ctx,x,y,2,'LESS',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'LESS',(val % 100));
 		} else if (checkContiguousCells(col,row,[746,678])) { // sion
-			drawMultiCellASCII(ctx,x,y,2,'SION',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'SION',(val % 100));
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 
 	} else if (val==747) { // contractions
-		drawCellASCII(ctx,x,y,'STILL',(val % 100));
+		drawCellASCII(ctx,x,y,col,row,'STILL',(val % 100));
 
-	} else if (val==749) { // partial measure in-accord (second symbol)
-		if (checkPreviousCell(col,row,334) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
 	} else if (val>=750 && val<=757) { // punctuation and contractions
 		chars=['BE','CON','DIS','ENOUGH','TO','WERE','HIS','WAS'];
-		drawCellASCII(ctx,x,y,chars[val-750],(val % 100));
-
-	} else if (val==758) { // where/whose contraction (second symbol)
-		if (checkPreviousCell(col,row,534)===false &&
-            checkPreviousCell(col,row,594)===false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
+		drawCellASCII(ctx,x,y,col,row,chars[val-750],(val % 100));
 
 	} else if (val==760) { // bowing (first character)
 		if (checkContiguousCells(col,row,[760,66])) {
-			drawCellArticulation(ctx,x,y,9);
+			drawCellArticulation(ctx,x,y,col,row,9);
 		} else if (checkContiguousCells(col,row,[760,639])) {
-			drawCellArticulation(ctx,x,y,8);
+			drawCellArticulation(ctx,x,y,col,row,8);
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
-	} else if (val==762) { // in-accord (second symbol)
-		if (checkPreviousCell(col,row,860) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
-	} else if (val==763) { // through/those contraction (second symbol)
-		if (checkPreviousCell(col,row,534)===false &&
-            checkPreviousCell(col,row,594)===false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 
 	} else if (val==767) { // change fingers
-		drawCellArticulation(ctx,x,y,10);
-		
-	} else if (val==768) { // -ound/day contraction (second symbol)
-		if (checkPreviousCell(col,row,746)===false &&
-            checkPreviousCell(col,row,534)===false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-
-	} else if (val==769) { // -ance/-ence/ever contraction (second symbol)
-		if (checkPreviousCell(col,row,659)===false &&
-            checkPreviousCell(col,row,746)===false &&
-            checkPreviousCell(col,row,534)===false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
+		drawCellArticulation(ctx,x,y,col,row,10);
 
 	} else if (val==770) { // contractions
-		drawCellASCII(ctx,x,y,'FROM',(val % 100));
-
-	} else if (val==771) { // -ong contraction (second symbol)
-		if (checkPreviousCell(col,row,659) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-
-	} else if (val==772) { // here/had contraction (second symbol)
-		if (checkPreviousCell(col,row,534)===false &&
-            checkPreviousCell(col,row,595)===false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
+		drawCellASCII(ctx,x,y,col,row,'FROM',(val % 100));
 
 	} else if (val>=775 && val<=784) { // contractions
 		chars=['KNOWLEDGE','LIKE','MORE','NOT','','PEOPLE','QUITE','RATHER','SO','THAT'];
-		drawCellASCII(ctx,x,y,chars[val-775],(val % 100));
-
-	} else if (val==785) { // upon contraction (second symbol)
-		if (checkPreviousCell(col,row,534)===false &&
-            checkPreviousCell(col,row,594)===false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-
-	} else if (val==787) { // work/word/world contraction (second symbol)
-		if (checkPreviousCell(col,row,534)===false &&
-            checkPreviousCell(col,row,594)===false &&
-            checkPreviousCell(col,row,595)===false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-
-	} else if (val==789) { // -ity/-ally/young contraction (second symbol)
-		if (checkPreviousCell(col,row,659)===false &&
-            checkPreviousCell(col,row,644)===false &&
-            checkPreviousCell(col,row,534)===false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-
-	} else if (val==792) { // ought contraction (second symbol)
-		if (checkPreviousCell(col,row,534) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
+		drawCellASCII(ctx,x,y,col,row,chars[val-775],(val % 100));
 
 	} else if (val==835) { // contractions
-		drawCellASCII(ctx,x,y,'BLE',(val % 100));
+		drawCellASCII(ctx,x,y,col,row,'BLE',(val % 100));
 
-	} else if (val==849) { // half diminished (second symbol)
-		if (checkPreviousCell(col,row,452) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-		
 	} else if (val==860) { // in-accord (first character)
 		if (checkContiguousCells(col,row,[860,762])) {
-			drawInAccord(ctx,x,y,1);
+			drawInAccord(ctx,x,y,col,row,1);
 		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 		
 	} else if (val>=866 && val<=874) { // contractions
 		chars=['BUT','CAN','DO','EVERY','SELF','GO','HAVE','','JUST'];
-		drawCellASCII(ctx,x,y,chars[val-866],(val % 100));
-
-	} else if (val==967) { // cannot contraction (second symbol)
-		if (checkPreviousCell(col,row,595) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
-
-	} else if (val==970) { // father contraction (second symbol)
-		if (checkPreviousCell(col,row,534) === false) {
-			drawLiteralBrailleSymbol(ctx,val,x,y);
-		}
+		drawCellASCII(ctx,x,y,col,row,chars[val-866],(val % 100));
 
 	} else if ((val !== null) && ((val%100) !== 0)) {
-		drawLiteralBrailleSymbol(ctx,val,x,y);
+		drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 	}
 }
 
@@ -2051,6 +1797,22 @@ function letterIsPartOfSymbol(col,row,val) {
 	
 	return result;
 	
+}
+
+function drawLongTextContraction(ctx,x,y,col,row,val) {
+    var foundIt = false;
+    longContractions.some(function(contraction) {
+        var codes = contraction[0].slice();
+        codes.push(0);
+        if (val == contraction[0][0] &&
+            checkContiguousCells(col,row,codes) &&
+            checkPreviousCell(col,row,0)) {
+            drawMultiCellASCII(ctx,x,y,col,row,contraction[0].length,contraction[1],(val % 100));
+            foundIt = true;
+            return foundIt;
+        }
+    });
+    return foundIt;
 }
 
 function setCellHeight(val) {
