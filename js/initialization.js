@@ -3,7 +3,7 @@
 
 function initialize() {
 	versionString = "0.9.1b";
-	devMode = true;
+	devMode = false;
 	
 	container = document.getElementById("container");
 	notationArea = document.getElementById("notationAreaCanvas");
