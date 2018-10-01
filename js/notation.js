@@ -75,9 +75,9 @@ function drawNotation() {
 	blankCells = [[]]; // clear blanks
 
     for (var y in score) {
-		if (arrayHasOwnIndex(score,y)) {
+		if ((y>vScrollUnits-1) && (y<vScrollUnits+(notationCellHeight+1)) && arrayHasOwnIndex(score,y)) {
 			for (var x in score[y]) {
-				if (arrayHasOwnIndex(score[y],x)) {
+				if ((x>hScrollUnits-1) && (x<hScrollUnits+(notationCellWidth+1)) && arrayHasOwnIndex(score[y],x)) {
 					if (interpretBraille) {
 						drawInterpretedBrailleSymbol(ctx,score[y][x],(gridWidth*(x-hScrollUnits))-hScrollOffset,(gridHeight*(y-vScrollUnits))-vScrollOffset,x,y);
 					} else {
@@ -137,7 +137,8 @@ function drawNotation() {
 		ctx.textAlign="left";
 		ctx.textBaseline="top";
 		ctx.font="normal "+gh(0.25)+"px sans-serif";
-		ctx.fillText(getScore(cursor.x,cursor.y),4,4);
+		//ctx.fillText(getScore(cursor.x,cursor.y),4,4);
+        ctx.fillText("vScroll: " + vScroll + "; vScrollUnits: " + vScrollUnits + "; vScrollOffset: " + vScrollOffset + "; notationCellHeight: " + notationCellHeight,4,4);
 		
 	}
 	
