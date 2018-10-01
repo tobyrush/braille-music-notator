@@ -682,6 +682,18 @@ function isBlank(col,row) {
 	}
 }
 
+function compareCell(scoreVal,testVal) {
+    // does a basic compare, but testVal=-1 means includes non-letter characters like parens
+    if (testVal>-1) {
+        return (scoreVal==testVal);
+    } else {
+        return (typeof scoreVal == 'undefined' ||
+                scoreVal === 0 ||
+                scoreVal == 555 ||
+                scoreVal == 544);
+    }
+}
+
 function checkContiguousCells(col,row,cells) {
 	if (doNotCheckContiguousCells) {
 		return true;
@@ -691,7 +703,8 @@ function checkContiguousCells(col,row,cells) {
 		for (var i=0; i<len; i++) {
 			if ((row>=score.length) ||
                 (+col+i>=score[row].length) ||
-                ((score[row][+col+i]!=cells[i]) &&
+                // ((score[row][+col+i]!=cells[i]) &&
+                (!(compareCell(score[row][+col+i],cells[i])) &&
                  !((typeof score[row][+col+i] == 'undefined') &&
                   (cells[i] === 0)))) {
 				matches=false;
@@ -702,7 +715,8 @@ function checkContiguousCells(col,row,cells) {
 }
 
 function checkPreviousCell(col,row,cell) {
-	return ((score[row][+col-1] == cell) || ((typeof score[row][+col-1] == 'undefined') && (cell === 0)));
+	// return ((score[row][+col-1] == cell) || ((typeof score[row][+col-1] == 'undefined') && (cell === 0)));
+    return ((compareCell(score[row][+col-1],cell)) || ((typeof score[row][+col-1] == 'undefined') && (cell === 0)));
 }
 
 function drawLiteralBrailleSymbol(ctx,val,x,y,col,row) {
@@ -1549,7 +1563,9 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 			//leave it blank
 		} else if (val==544 && checkPreviousCell(col,row,544)) {
 			// leave it blank
-		} else if (!(letterIsPartOfSymbol(col,row,val)) || doNotCheckContiguousCells) {
+		} else if (!(drawLongTextContraction(ctx,x,y,col,row,val)) &&
+            (!(letterIsPartOfSymbol(col,row,val)) ||
+            doNotCheckContiguousCells)) {
 			chars=['THE','','#','ED','SH','AND',"'",'OF','WITH','CH','ING','capital sign','-','.','ST','',',',';',':','.','EN','!','()','?','IN','WH','text sign','GH','FOR','AR','TH'];
 			drawCellASCII(ctx,x,y,col,row,chars[val-533],(val % 100));
 		}
@@ -1562,8 +1578,12 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		}
 		
 	} else if (val>=591 && val<=593) { // contractions
-		chars=['OW','OU','ER'];
-		drawCellASCII(ctx,x,y,col,row,chars[val-591],(val % 100));
+		if (!(drawLongTextContraction(ctx,x,y,col,row,val)) &&
+            (!(letterIsPartOfSymbol(col,row,val)) ||
+            doNotCheckContiguousCells)) {
+            chars=['OW','OU','ER'];
+            drawCellASCII(ctx,x,y,col,row,chars[val-591],(val % 100));
+        }
 	
 	} else if (val==594) { // contractions
 		if (checkContiguousCells(col,row,[594,633])) { // these
@@ -1709,8 +1729,12 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		drawCellASCII(ctx,x,y,col,row,'STILL',(val % 100));
 
 	} else if (val>=750 && val<=757) { // punctuation and contractions
-		chars=['BE','CON','DIS','ENOUGH','TO','WERE','HIS','WAS'];
-		drawCellASCII(ctx,x,y,col,row,chars[val-750],(val % 100));
+		if (!(drawLongTextContraction(ctx,x,y,col,row,val)) &&
+            (!(letterIsPartOfSymbol(col,row,val)) ||
+            doNotCheckContiguousCells)) {
+            chars=['BE','CON','DIS','ENOUGH','TO','WERE','HIS','WAS'];
+            drawCellASCII(ctx,x,y,col,row,chars[val-750],(val % 100));
+        }
 
 	} else if (val==760) { // bowing (first character)
 		if (checkContiguousCells(col,row,[760,66])) {
@@ -1804,10 +1828,10 @@ function drawLongTextContraction(ctx,x,y,col,row,val) {
     var foundIt = false;
     longContractions.some(function(contraction) {
         var codes = contraction[0].slice();
-        codes.push(0);
+        codes.push(-1);
         if (val == contraction[0][0] &&
             checkContiguousCells(col,row,codes) &&
-            checkPreviousCell(col,row,0)) {
+            checkPreviousCell(col,row,-1)) {
             drawMultiCellASCII(ctx,x,y,col,row,contraction[0].length,contraction[1],(val % 100));
             foundIt = true;
             return foundIt;
