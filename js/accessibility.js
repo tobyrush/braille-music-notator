@@ -420,6 +420,9 @@ function characterName(val,x,y) {
 		chars=['C','D','E','F','G','A','B'];
 		s=chars[val-368]+" one hundred twenty-eighth note";
 	
+	} else if (val==375) { // in-accord measure division (second symbol)
+		s="second character of measure division for in-accord";
+
 	} else if (val==377) { // multi-meaure rest suffix
 		s="multi-measure rest suffix";
 		
@@ -519,10 +522,7 @@ function characterName(val,x,y) {
 	
 	} else if (val==674) { // numbers 0
 		s="text 0";
-	
-	} else if (val==675) { // in-accord measure division (second symbol)
-		s="second character of measure division for in-accord";
-		
+
 	} else if (val==676) { // clef (last symbol)
 		s="last character of clef symbol";
 		
