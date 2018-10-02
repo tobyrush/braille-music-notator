@@ -235,15 +235,16 @@ function drawCellASCII(ctx,x,y,col,row,char,ascii) {
             ctx.textAlign = "center";
             ctx.textBaseline = "middle";
             ctx.fillText(char,x+gw(0.5),y+gh(0.5));
-        } else if (char.length>1 && char.length<=4) {
-            ctx.save();
-            ctx.translate(x,y+gridHeight);
-            ctx.rotate(-Math.PI/2);
+        } else if (char.length>1 && char.length<=3) {
+//            ctx.save();
+//            ctx.translate(x,y+gridHeight);
+//            ctx.rotate(-Math.PI/2);
             ctx.textAlign="center";
             ctx.textBaseline="middle";
             ctx.font = "normal "+gh(0.3)+"px sans-serif";
-            ctx.fillText(char,gridHeight/2,gw(0.5));
-            ctx.restore();
+            ctx.fillText(char,x+gw(0.5),y+gh(0.5));
+            //ctx.fillText(char,gridHeight/2,gw(0.5));
+//            ctx.restore();
         } else if (char=="capital sign") {
             ctx.save();
             ctx.translate(x,y+gridHeight);
@@ -264,7 +265,7 @@ function drawCellASCII(ctx,x,y,col,row,char,ascii) {
             ctx.fillText("BRAILLE",gh(0.5),gw(0.3));
             ctx.fillText("TEXT",gh(0.5),gw(0.7));
             ctx.restore();
-        } else if (char.length>4) {
+        } else if (char.length>3) {
             ctx.save();
             ctx.translate(x,y+gridHeight);
             ctx.rotate(-Math.PI/2);
@@ -687,23 +688,25 @@ function compareCell(scoreVal,testVal) {
     if (testVal>-1) {
         return (scoreVal==testVal);
     } else {
-        return (typeof scoreVal == 'undefined' ||
-                scoreVal === 0 ||
-                scoreVal == 555 ||
-                scoreVal == 544);
+        return (typeof scoreVal == 'undefined' || scoreVal === null ||
+                scoreVal === 0 || scoreVal == 549 || scoreVal == 550 || scoreVal == 554 ||
+                scoreVal == 555 || scoreVal == 551 || scoreVal == 552 || scoreVal == 648 ||
+                scoreVal == 544 || scoreVal == 556 || scoreVal == 656);
     }
 }
 
 function checkContiguousCells(col,row,cells) {
-	if (doNotCheckContiguousCells) {
+	if (cells[0]==555) {
+        var x=0;
+    }
+    if (doNotCheckContiguousCells) {
 		return true;
 	} else {
 		var len = cells.length;
 		var matches = true;
 		for (var i=0; i<len; i++) {
 			if ((row>=score.length) ||
-                (+col+i>=score[row].length) ||
-                // ((score[row][+col+i]!=cells[i]) &&
+                (+col+i>=score[row].length && cells[i]!=-1) ||
                 (!(compareCell(score[row][+col+i],cells[i])) &&
                  !((typeof score[row][+col+i] == 'undefined') &&
                   (cells[i] === 0)))) {
@@ -1509,7 +1512,7 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 			drawCellTextLabel(ctx,x,y,col,row,"CAPITALIZE","WORD","#FFF","#000",2);
         } else if (val==534 && checkContiguousCells(col,row,[534,633])) { // there
 			drawMultiCellASCII(ctx,x,y,col,row,2,'THERE',(val % 100));
-		} else if (val==534 && checkContiguousCells(col,row,[534,638])) { // some
+		} else if (val==534 && checkContiguousCells(col,row,[534,683])) { // some
 			drawMultiCellASCII(ctx,x,y,col,row,2,'SOME',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,675])) { // know
 			drawMultiCellASCII(ctx,x,y,col,row,2,'KNOW',(val % 100));
@@ -1550,23 +1553,23 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		} else if (val==534 && checkContiguousCells(col,row,[534,792])) { // ought
 			drawMultiCellASCII(ctx,x,y,col,row,2,'OUGHT',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,854])) {
-			drawCellASCII(ctx,x,y,col,row,'+',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'+',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,855])) {
-			drawCellASCII(ctx,x,y,col,row,'=',(val % 100));
+			drawMultiCellASCII(ctx,x,y,col,row,2,'=',(val % 100));
 		} else if (val==534 && checkContiguousCells(col,row,[534,970])) { // father
 			drawMultiCellASCII(ctx,x,y,col,row,2,'FATHER',(val % 100));
 		} else if (val==545 && checkContiguousCells(col,row,[545,545,545])) { // em dash
 			drawMultiCellASCII(ctx,x,y,col,row,3,'—',(val % 100));
 		} else if (val==545 && checkContiguousCells(col,row,[545,545])) { // en dash
 			drawMultiCellASCII(ctx,x,y,col,row,2,'–',(val % 100));
-		} else if (val==545 && checkPreviousCell(col,row,545)) { // em/en dash (second symbol)
-			//leave it blank
-		} else if (val==544 && checkPreviousCell(col,row,544)) {
-			// leave it blank
+		} else if (val==555 && checkPreviousCell(col,row,-1)) {
+			drawCellASCII(ctx,x,y,col,row,'(',(val % 100));
+		} else if (val==555 && checkContiguousCells(col,row,[555,-1])) {
+			drawCellASCII(ctx,x,y,col,row,')',(val % 100));
 		} else if (!(drawLongTextContraction(ctx,x,y,col,row,val)) &&
             (!(letterIsPartOfSymbol(col,row,val)) ||
             doNotCheckContiguousCells)) {
-			chars=['THE','','#','ED','SH','AND',"'",'OF','WITH','CH','ING','capital sign','-','.','ST','',',',';',':','.','EN','!','()','?','IN','WH','text sign','GH','FOR','AR','TH'];
+			chars=['THE','','#','ED','SH','AND',"'",'OF','WITH','CH','ING','capital sign','-','.','ST','',',',';',':','.','EN','!','(…)','?','IN','WH','text sign','GH','FOR','AR','TH'];
 			drawCellASCII(ctx,x,y,col,row,chars[val-533],(val % 100));
 		}
 	
