@@ -1,4 +1,4 @@
-/* global notationArea, gridHeight, gridWidth, notationGridHeight, notationGridWidth, notationCellWidth, notationCellHeight, ctx, showPageBreaks, pageWidth, pageHeight, hScrollUnits, vScrollUnits, hScrollOffset, vScrollOffset, hScroll, vScroll, gh, gw, score, arrayHasOwnIndex, interpretBraille, cursor, devMode, getScore, dropzone, optionsDialogOpen, fileDialogOpen, drawOptionsDialog, drawFileDialog, doNotCheckContiguousCells, brailleDots, drawAllDots, cellIsEmpty, setScore, saveToUndo, blankCells, longContractions: true */
+/* global notationArea, gridHeight, gridWidth, notationGridHeight, notationGridWidth, notationCellWidth, notationCellHeight, ctx, showPageBreaks, pageWidth, pageHeight, hScrollUnits, vScrollUnits, hScrollOffset, vScrollOffset, hScroll, vScroll, gh, gw, score, arrayHasOwnIndex, interpretBraille, cursor, devMode, getScore, dropzone, optionsDialogOpen, fileDialogOpen, drawOptionsDialog, drawFileDialog, doNotCheckContiguousCells, brailleDots, drawAllDots, cellIsEmpty, setScore, saveToUndo, blankCells, longContractions, console: true */
 /* jshint -W020 */
 
 function initializeNotation() {
@@ -209,6 +209,15 @@ function drawCellNoteName(ctx,x,y,char) {
 	ctx.font = "normal "+gh(0.3)+"px sans-serif";
 	ctx.textAlign = "left";
 	ctx.fillText(char,x+gw(0.15),y+gh(0.333));
+}
+
+function drawMultiCellNote(ctx,x,y,char,cells) {
+	ctx.font = "normal "+gh(0.5)+"px Bravura";
+	ctx.fillStyle="#FFF"; // white
+	ctx.textBaseline = "alphabetic";
+	ctx.textAlign = "right";
+	ctx.fillText(char,x+gw(0.8+(cells-1)/2),y+gridHeight-gh(0.2)); // draw note
+
 }
 
 function drawCellChordSymbol(ctx,x,y,char) {
@@ -807,9 +816,15 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 	ctx.textBaseline="middle";
 	
 	if (val==33) { // A whole note
-		drawCellBackground(ctx,x,y,"#F00");
-		drawCellNote(ctx,x,y,"\ue1d2");
-		drawCellNoteName(ctx,x,y,"A");
+		if (checkContiguousCells(col,row,[val,75])) {
+            drawMultiCellBackground(ctx,x,y,col,row,"#F00",2); // 2 cells red
+            drawMultiCellNote(ctx,x,y,"\ue1d0",2);
+            drawCellNoteName(ctx,x,y,"A");
+        } else {
+			drawCellBackground(ctx,x,y,"#F00");
+            drawCellNote(ctx,x,y,"\ue1d2");
+            drawCellNoteName(ctx,x,y,"A");
+        }
 		
 	} else if (val==34) { // octave 4
 		drawCellOctaveRange(ctx,x,y,"4");
@@ -838,9 +853,15 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		}
 
 	} else if (val==38) { // E whole note
-		drawCellBackground(ctx,x,y,"#F00");
-		drawCellNote(ctx,x,y,"\ue1d2");
-		drawCellNoteName(ctx,x,y,"E");
+		if (checkContiguousCells(col,row,[val,75])) {
+            drawMultiCellBackground(ctx,x,y,col,row,"#F00",2); // 2 cells red
+            drawMultiCellNote(ctx,x,y,"\ue1d0",2);
+            drawCellNoteName(ctx,x,y,"E");
+        } else {
+            drawCellBackground(ctx,x,y,"#F00");
+            drawCellNote(ctx,x,y,"\ue1d2");
+            drawCellNoteName(ctx,x,y,"E");
+        }
 		
 	} else if (val==39) { // augmentation dot
 		drawCellBackground(ctx,x,y,"#F00");
@@ -851,14 +872,26 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		ctx.fillText("\ue1e7",x+gw(0.55),y+gh(0.533)); // draw note
 		
 	} else if (val==40) { // G whole note
-		drawCellBackground(ctx,x,y,"#F00");
-		drawCellNote(ctx,x,y,"\ue1d2");
-		drawCellNoteName(ctx,x,y,"G");
+		if (checkContiguousCells(col,row,[val,75])) {
+            drawMultiCellBackground(ctx,x,y,col,row,"#F00",2); // 2 cells red
+            drawMultiCellNote(ctx,x,y,"\ue1d0",2);
+            drawCellNoteName(ctx,x,y,"G");
+        } else {
+			drawCellBackground(ctx,x,y,"#F00");
+            drawCellNote(ctx,x,y,"\ue1d2");
+            drawCellNoteName(ctx,x,y,"G");
+        }
 		
 	} else if (val==41) { // B whole note
-		drawCellBackground(ctx,x,y,"#F00");
-		drawCellNote(ctx,x,y,"\ue1d2");
-		drawCellNoteName(ctx,x,y,"B");
+		if (checkContiguousCells(col,row,[val,75])) {
+            drawMultiCellBackground(ctx,x,y,col,row,"#F00",2); // 2 cells red
+            drawMultiCellNote(ctx,x,y,"\ue1d0",2);
+            drawCellNoteName(ctx,x,y,"B");
+        } else {
+			drawCellBackground(ctx,x,y,"#F00");
+            drawCellNote(ctx,x,y,"\ue1d2");
+            drawCellNoteName(ctx,x,y,"B");
+        }
 		
 	} else if (val==42) { // natural
 		drawCellBackground(ctx,x,y,"#F80"); //orange
@@ -917,9 +950,15 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		}
 		
 	} else if (val==61) { // F whole note
-		drawCellBackground(ctx,x,y,"#F00");
-		drawCellNote(ctx,x,y,"\ue1d2");
-		drawCellNoteName(ctx,x,y,"F");
+		if (checkContiguousCells(col,row,[val,75])) {
+            drawMultiCellBackground(ctx,x,y,col,row,"#F00",2); // 2 cells red
+            drawMultiCellNote(ctx,x,y,"\ue1d0",2);
+            drawCellNoteName(ctx,x,y,"F");
+        } else {
+			drawCellBackground(ctx,x,y,"#F00");
+            drawCellNote(ctx,x,y,"\ue1d2");
+            drawCellNoteName(ctx,x,y,"F");
+        }
 		
 	} else if (val==62) { // text prefix
 		drawCellTextLabel(ctx,x,y,col,row,"WORD","PREFIX","#000","#FFF",1);
@@ -969,11 +1008,16 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		ctx.fillText("\ue030",x+gw(0.5),y+gh(0.8));
 		
 	} else if (val==77) { // whole rest
-		drawCellBackground(ctx,x,y,"#F00");
 		ctx.font = "normal "+gh(0.6)+"px Bravura";
-		ctx.textBaseline = "alphabetic";
-		ctx.fillStyle = "#FFF"; // white
-		ctx.fillText("\ue4f4",x+gw(0.5),y+gh(0.5));
+        ctx.textBaseline = "alphabetic";
+        ctx.fillStyle = "#FFF"; // white
+        if (checkContiguousCells(col,row,[val,75])) {
+            drawMultiCellBackground(ctx,x,y,col,row,"#F00",2); // 2 cells red
+            ctx.fillText("\ue4f3",x+gw(1),y+gh(0.5));
+        } else {
+			drawCellBackground(ctx,x,y,"#F00");
+            ctx.fillText("\ue4f4",x+gw(0.5),y+gh(0.5));
+        }
 		
 	} else if (val>=78 && val<=84) { // half notes
 		drawCellBackground(ctx,x,y,"#F00");
@@ -1008,10 +1052,16 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		ctx.fillText("\ue4e6",x+gw(0.5),y+gh(0.5));
 		
 	} else if (val>=89 && val<=90) { // C and D whole notes
-		drawCellBackground(ctx,x,y,"#F00");
-		drawCellNote(ctx,x,y,"\ue1d2");
 		chars=['C','D'];
-		drawCellNoteName(ctx,x,y,chars[val-89]);
+        if (checkContiguousCells(col,row,[val,75])) {
+            drawMultiCellBackground(ctx,x,y,col,row,"#F00",2); // 2 cells red
+            drawMultiCellNote(ctx,x,y,"\ue1d0",2);
+            drawCellNoteName(ctx,x,y,chars[val-89]);
+        } else {
+			drawCellBackground(ctx,x,y,"#F00");
+            drawCellNote(ctx,x,y,"\ue1d2");
+            drawCellNoteName(ctx,x,y,chars[val-89]);
+        }
 		
 	} else if (val==91) { // A quarter note
 		drawCellBackground(ctx,x,y,"#F00");
