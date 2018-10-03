@@ -563,7 +563,11 @@ function drawKeyCap(cctx,kbu,x,y,noteDescriptor,key) {
 			cctx.font = "normal "+kbu*0.45+"px sans-serif";
 			cctx.textAlign="center";
 			cctx.textBaseline="middle";
-			cctx.fillText(String.fromCharCode(noteDescriptor[1]),x+(kbu*0.48),y+(kbu*0.48));
+            var letterText = String.fromCharCode(noteDescriptor[1]);
+            if (noteDescriptor[1] == 40) {
+                letterText = "( )";
+            }
+            cctx.fillText(letterText,x+(kbu*0.48),y+(kbu*0.48));
 			
 			// don't draw small key cap
 			drawSmallKeyCap=false;

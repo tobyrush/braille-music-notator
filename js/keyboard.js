@@ -1119,7 +1119,11 @@ function interpretKeyCode(keyCode) {
 			} else if (k==4) {
 				setScore(x,y,662); setScore(x+1,y,643); setScore(x+2,y,634); setScore(x+3,y,376); adv=4; readerMessage = "Tenor clef";
 			} else if (k==6) {
-				setScore(x,y,655);
+				if (x===0 || getScore(x-1,y)===0) {
+                    setScore(x,y,656);
+                } else {
+                    setScore(x,y,648);
+                }
 			}
 			break;
 		case 222: // '
