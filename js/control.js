@@ -1,11 +1,11 @@
-/* global titleArea, tctx, versionString, helpDialogOpen, roundRect, optionsDialogOpen, fileDialogOpen, controlArea, cctx, whichKeyboard, keyboardCoordinates, keymap, keycaps, displayControlHelp, cursor, hScroll, vScroll, controlsHeight, controlsWidth, chu, resizeBarHeight, keyboardOriginX, keyboardOriginY, kbu, controlHelpOriginX, controlHelpOriginY: true */
+/* global titleArea, tctx, versionString, helpDialogOpen, roundRect, optionsDialogOpen, fileDialogOpen, controlArea, cctx, whichKeyboard, keyboardCoordinates, keymap, keycaps, displayControlHelp, cursor, hScroll, vScroll, controlsHeight, controlsWidth, chu, resizeBarHeight, keyboardOriginX, keyboardOriginY, kbu, controlHelpOriginX, controlHelpOriginY, console: true */
 /* jshint -W020 */
 
 function initializeTitle() {
 	titleArea.width=titleArea.clientWidth;
 	titleArea.height=titleArea.clientHeight;
 	
-	drawTitle();
+    drawTitle();
 }
 
 function clearTitleArea() {
@@ -155,7 +155,6 @@ function drawControls() {
 	cctx.strokeStyle="#000";
 	cctx.stroke();
 	cctx.closePath();
-	
 }
 
 function drawKeyCap(cctx,kbu,x,y,noteDescriptor,key) {
