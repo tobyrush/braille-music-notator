@@ -149,21 +149,25 @@ function doNotationMouseDrag(e) {
 	if (localX<20) {
 		autoScrollXDir = -1; // west
 		onEdge = true;
-	} else if (localX>notationWidth-20) {
-		autoScrollXDir = 1; // east
-		onEdge = true;
 	} else {
-		autoScrollXDir = 0;
-	}
+        if (localX>notationArea.clientWidth-20) {
+            autoScrollXDir = 1; // east
+            onEdge = true;
+        } else {
+            autoScrollXDir = 0;
+        }
+    }
 	if (localY<20) {
 		autoScrollYDir = -1; // north
 		onEdge = true;
-	} else if (localY>notationHeight-20) {
-		autoScrollYDir = 1; // south
-		onEdge = true;
 	} else {
-		autoScrollYDir = 0;
-	}
+        if (localY>notationArea.clientHeight-20) {
+            autoScrollYDir = 1; // south
+            onEdge = true;
+        } else {
+            autoScrollYDir = 0;
+        }
+    }
 	
 	if (onEdge) {
 		autoScroller = window.setInterval(function() { autoScroll(); },1000);
