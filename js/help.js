@@ -21,6 +21,8 @@ function displayControlHelp() {
 		cctx.closePath();
 		
 	}
+
+    var tempGridHeight = gridHeight;
 	
 	switch (Math.floor(controlHelp)) {
 	
@@ -291,6 +293,8 @@ function displayControlHelp() {
 			gridWidth=(gridHeight/3)*2;
 			drawCellSimpleDynamic(cctx,controlHelpOriginX+(chu*63),controlHelpOriginY+(chu*41),3);
 			drawBrailleIcons(cctx,controlHelpOriginX+(chu*63),controlHelpOriginY+(chu*41),chu*20,[0,0,0,34,36,93,92],false);
+            gridHeight = tempGridHeight;
+            gridWidth=(gridHeight/3)*2;
 			break;
 		case 18: // gradual dynamic changes
 			drawControlHelpTitleText("Gradual Dynamic Changes");
@@ -307,6 +311,8 @@ function displayControlHelp() {
 			drawCellHairpinDynamic(cctx,controlHelpOriginX+(chu*63),controlHelpOriginY+(chu*45),1);
 			drawBrailleIcons(cctx,controlHelpOriginX+(chu*63),controlHelpOriginY+(chu*45),chu*20,[0,0,34,36,93,92],false);
 			drawCellHairpinDynamic(cctx,controlHelpOriginX+(chu*143),controlHelpOriginY+(chu*45),2);
+            gridHeight=tempGridHeight;
+            gridWidth=(gridHeight/3)*2;
 			break;
 		case 19: // barlines
 			drawControlHelpTitleText("Barlines");
@@ -608,25 +614,28 @@ function drawArrow(c,x,y,height) {
 
 function drawBrailleIcons(c,x,y,height,chars,multiCell) {
 	doNotCheckContiguousCells = multiCell;
-	gridHeight=height;
-	gridWidth=(height/3)*2;
+	var tempGridHeight=height;
+	var tempGridWidth=(height/3)*2;
 	c.strokeStyle="#000";
 	c.lineWidth=1;
 	for (var i=0; i<chars.length; i++) {
 		if (chars[i]!==0) {
 			if ((chars[i]>=533 && chars[i]<=563) || (chars[i]>=565 && chars[i]<=593) || (chars[i]>=647 && chars[i]<=651) || (chars[i]>=654 && chars[i]<=656) || (chars[i]>=665 && chars[i]<=674)) { // if it's literary braille
-				c.strokeRect(x+(gridWidth*i)+2,y+2,gridWidth-4,gridHeight-4);
+				c.strokeRect(x+(tempGridWidth*i)+2,y+2,tempGridWidth-4,tempGridHeight-4);
 			}
-			drawInterpretedBrailleSymbol(c,chars[i],x+(gridWidth*i),y,0,0);
+			drawInterpretedBrailleSymbol(c,chars[i],x+(tempGridWidth*i),y,0,0);
 		}
 	}
 	doNotCheckContiguousCells = false;
 }
 
 function drawCellOctaveIcon(c,x,y,height,val) {
-	gridHeight=height;
+	var tempGridHeight = gridHeight;
+    gridHeight=height;
 	gridWidth=(height/3)*2;
 	drawCellOctaveRange(c,x,y,val);
+    gridHeight=tempGridHeight;
+    gridWidth=(gridHeight/3)*2;
 }
 
 function drawLine(c,x1,y1,x2,y2,color,width) {
@@ -703,4 +712,3 @@ function drawSlur(c,x1,y1,x2,y2,x3,y3) {
 	c.stroke();
 	c.closePath();
 }
-	
