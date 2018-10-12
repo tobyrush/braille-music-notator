@@ -1436,10 +1436,10 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		chars=['C','D','E','F','G','A','B'];
 		drawCellNoteName(ctx,x,y,chars[val-368]);
 
-	} else if (val==376) { // clef (last symbol)
-		if ((checkPreviousCell(col,row,447) === false) && (checkPreviousCell(col,row,643) === false) && (checkPreviousCell(col,row,634) === false) && (checkPreviousCell(col,row,635) === false)) {
-			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
-		}
+//	} else if (val==376) { // clef (last symbol)
+//		if ((checkPreviousCell(col,row,447) === false) && (checkPreviousCell(col,row,643) === false) && (checkPreviousCell(col,row,634) === false) && (checkPreviousCell(col,row,635) === false)) {
+//			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
+//		}
 
 	} else if (val==377) { // right H-bar rest
 		drawCellBackground(ctx,x,y,"#F00");
