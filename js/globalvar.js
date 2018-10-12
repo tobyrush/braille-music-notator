@@ -8,7 +8,7 @@ var ctx, nwu, nhu, nu, chu;
 var resizeBarHeight;
 var resizeBarPosition = 0.7;
 var closeButtonCenterX, closeButtonCenterY;
-var notationGridHeight = 60, notationGridWidth = 40, gridHeight, gridWidth;
+var notationGridHeight = 60, notationGridWidth = 40, gridHeight, gridWidth, savedGridHeight;
 var hScroll = 0, vScroll = 0; // these values are in pixels
 var hScrollOffset, vScrollOffset; // these are in pixels too (but are automatically calculated in drawNotation() from hScroll and vScroll)
 var hScrollUnits, vScrollUnits; // these are in cells (but are also automatically calculated in drawNotation() )

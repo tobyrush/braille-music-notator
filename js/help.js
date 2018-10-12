@@ -1,4 +1,4 @@
-/* global devMode, cctx, controlHelpOriginX, controlHelpOriginY, controlsHeight, chu, controlsWidth, controlHelp, gridHeight, gridWidth, drawCellSimpleDynamic, drawCellHairpinDynamic, drawMultiCellBackground, gw, gh, drawCellClef, drawCellTextLabel, drawMetronomeMarkingEquals, doNotCheckContiguousCells, drawInterpretedBrailleSymbol, drawCellOctaveRange: true */
+/* global devMode, cctx, controlHelpOriginX, controlHelpOriginY, controlsHeight, chu, controlsWidth, controlHelp, gridHeight, gridWidth, drawCellSimpleDynamic, drawCellHairpinDynamic, drawMultiCellBackground, gw, gh, drawCellClef, drawCellTextLabel, drawMetronomeMarkingEquals, doNotCheckContiguousCells, drawInterpretedBrailleSymbol, drawCellOctaveRange, savedGridHeight: true */
 /* jshint -W020 */
 
 function displayControlHelp() {
@@ -263,7 +263,9 @@ function displayControlHelp() {
 		case 15: // music prefix
 			drawControlHelpTitleText("Music Prefix");
 			drawControlHelpDescriptionText("Use the music prefix symbol before music symbols\non lines which mix music and text.");
-			drawBrailleIcons(cctx,controlHelpOriginX,controlHelpOriginY+(chu*41),chu*20,[544,580,576,565,589,0,344,0,46,89,0,62,561],true);
+			drawBrailleIcons(cctx,controlHelpOriginX,controlHelpOriginY+(chu*41),chu*20,[544,580,576,565,589],false);
+			drawBrailleIcons(cctx,controlHelpOriginX+(chu*78),controlHelpOriginY+(chu*41),chu*20,[344,0,46],true);
+			drawBrailleIcons(cctx,controlHelpOriginX+(chu*118),controlHelpOriginY+(chu*41),chu*20,[89,0,62,561],false);
 			cctx.fillStyle="#000"; // black
 			cctx.textBaseline = "alphabetic";
 			cctx.textAlign = "left";
@@ -273,7 +275,9 @@ function displayControlHelp() {
 		case 16: // text prefix
 			drawControlHelpTitleText("Text Prefix");
 			drawControlHelpDescriptionText("Use the text prefix symbol before literary braille\non lines which mix music and text.");
-			drawBrailleIcons(cctx,controlHelpOriginX,controlHelpOriginY+(chu*41),chu*20,[544,580,576,565,589,0,344,0,46,89,0,62,561],true);
+			drawBrailleIcons(cctx,controlHelpOriginX,controlHelpOriginY+(chu*41),chu*20,[544,580,576,565,589],false);
+			drawBrailleIcons(cctx,controlHelpOriginX+(chu*78),controlHelpOriginY+(chu*41),chu*20,[344,0,46],true);
+			drawBrailleIcons(cctx,controlHelpOriginX+(chu*118),controlHelpOriginY+(chu*41),chu*20,[89,0,62,561],false);
 			cctx.fillStyle="#000"; // black
 			cctx.textBaseline = "alphabetic";
 			cctx.textAlign = "left";
@@ -289,12 +293,10 @@ function displayControlHelp() {
 			drawNote(cctx,controlHelpOriginX+(chu*28),controlHelpOriginY+(chu*45),chu*13,"noteQuarterUp",3,0);
 			drawNote(cctx,controlHelpOriginX+(chu*38),controlHelpOriginY+(chu*45),chu*13,"noteQuarterUp",2,0);
 			drawArrow(cctx,controlHelpOriginX+(chu*52),controlHelpOriginY+(chu*56),chu*13);
-			gridHeight=chu*20;
-			gridWidth=(gridHeight/3)*2;
-			drawCellSimpleDynamic(cctx,controlHelpOriginX+(chu*63),controlHelpOriginY+(chu*41),3);
+			setTempGridSize(chu*20);
+			drawCellSimpleDynamic(cctx,controlHelpOriginX+(chu*63),controlHelpOriginY+(chu*41),0,0,3);
+            restoreTempGridSize();
 			drawBrailleIcons(cctx,controlHelpOriginX+(chu*63),controlHelpOriginY+(chu*41),chu*20,[0,0,0,34,36,93,92],false);
-            gridHeight = tempGridHeight;
-            gridWidth=(gridHeight/3)*2;
 			break;
 		case 18: // gradual dynamic changes
 			drawControlHelpTitleText("Gradual Dynamic Changes");
@@ -306,13 +308,11 @@ function displayControlHelp() {
 			drawNote(cctx,controlHelpOriginX+(chu*28),controlHelpOriginY+(chu*49),chu*13,"noteQuarterUp",3,0);
 			drawNote(cctx,controlHelpOriginX+(chu*38),controlHelpOriginY+(chu*49),chu*13,"noteQuarterUp",2,0);
 			drawArrow(cctx,controlHelpOriginX+(chu*52),controlHelpOriginY+(chu*60),chu*13);
-			gridHeight=chu*20;
-			gridWidth=(gridHeight/3)*2;
-			drawCellHairpinDynamic(cctx,controlHelpOriginX+(chu*63),controlHelpOriginY+(chu*45),1);
-			drawBrailleIcons(cctx,controlHelpOriginX+(chu*63),controlHelpOriginY+(chu*45),chu*20,[0,0,34,36,93,92],false);
-			drawCellHairpinDynamic(cctx,controlHelpOriginX+(chu*143),controlHelpOriginY+(chu*45),2);
-            gridHeight=tempGridHeight;
-            gridWidth=(gridHeight/3)*2;
+			setTempGridSize(chu*20);
+			drawCellHairpinDynamic(cctx,controlHelpOriginX+(chu*63),controlHelpOriginY+(chu*45),0,0,1);
+			drawCellHairpinDynamic(cctx,controlHelpOriginX+(chu*143),controlHelpOriginY+(chu*45),0,0,2);
+            restoreTempGridSize();
+            drawBrailleIcons(cctx,controlHelpOriginX+(chu*63),controlHelpOriginY+(chu*45),chu*20,[0,0,34,36,93,92],false);
 			break;
 		case 19: // barlines
 			drawControlHelpTitleText("Barlines");
@@ -325,11 +325,13 @@ function displayControlHelp() {
 			drawLine(cctx,controlHelpOriginX+(chu*52),controlHelpOriginY+(chu*49),controlHelpOriginX+(chu*52),controlHelpOriginY+(chu*62),"#000",chu*1.25);
 			drawArrow(cctx,controlHelpOriginX+(chu*57),controlHelpOriginY+(chu*60),chu*13);
 			drawBrailleIcons(cctx,controlHelpOriginX+(chu*68),controlHelpOriginY+(chu*45),chu*20,[34,41,0,90],false);
-			drawMultiCellBackground(cctx,controlHelpOriginX+(chu*121.33),controlHelpOriginY+(chu*45),"#000",2); // 2 cells black
+			setTempGridSize(chu*20);
+            drawMultiCellBackground(cctx,controlHelpOriginX+(chu*121.33),controlHelpOriginY+(chu*45),0,0,"#000",2); // 2 cells black
 			cctx.font = "normal "+gridHeight*0.6+"px Bravura";
 			cctx.textBaseline = "alphabetic";
 			cctx.fillStyle = "#FFF"; // white
 			cctx.fillText("\ue032",controlHelpOriginX+(chu*121.33)+gw(1),controlHelpOriginY+(chu*45)+gh(0.8));
+            restoreTempGridSize();
 			break;
 		case 20: // mark repeated section
 			drawControlHelpTitleText("Marking Repeated Sections");
@@ -363,7 +365,9 @@ function displayControlHelp() {
 			drawNote(cctx,controlHelpOriginX+(chu*16),controlHelpOriginY+(chu*45),chu*13,"noteHalfDown",-1,0);
 			drawNote(cctx,controlHelpOriginX+(chu*26),controlHelpOriginY+(chu*45),chu*13,"noteHalfDown",-2,0);
 			drawArrow(cctx,controlHelpOriginX+(chu*42),controlHelpOriginY+(chu*56),chu*13);
-			drawCellClef(cctx,controlHelpOriginX+(chu*53),controlHelpOriginY+(chu*41),1);
+			setTempGridSize(chu*20);
+            drawCellClef(cctx,controlHelpOriginX+(chu*53),controlHelpOriginY+(chu*41),0,0,1);
+            restoreTempGridSize();
 			drawBrailleIcons(cctx,controlHelpOriginX+(chu*93),controlHelpOriginY+(chu*41),chu*20,[46,78,79],false);
 			break;
 		case 25: // braille music comma
@@ -381,7 +385,9 @@ function displayControlHelp() {
 			drawLine(cctx,controlHelpOriginX+(chu*48.7),controlHelpOriginY+(chu*46.625),controlHelpOriginX+(chu*62.2),controlHelpOriginY+(chu*46.625),"#000",chu*1.625);
 			drawArrow(cctx,controlHelpOriginX+(chu*72),controlHelpOriginY+(chu*56),chu*13);
 			drawBrailleIcons(cctx,controlHelpOriginX+(chu*83),controlHelpOriginY+(chu*41),chu*20,[34,71,71,71],false);
-			drawCellTextLabel(cctx,controlHelpOriginX+(chu*136.33),controlHelpOriginY+(chu*41),"MUSIC","COMMA","#000","#FFF",2);
+			setTempGridSize(chu*20);
+            drawCellTextLabel(cctx,controlHelpOriginX+(chu*136.33),controlHelpOriginY+(chu*41),0,0,"MUSIC","COMMA","#000","#FFF",2);
+            restoreTempGridSize();
 			drawBrailleIcons(cctx,controlHelpOriginX+(chu*163),controlHelpOriginY+(chu*41),chu*20,[70,70,70],false);
 			break;
 		case 26: // value signs
@@ -396,7 +402,9 @@ function displayControlHelp() {
 			drawMusicSymbol(cctx,"\ue881\ue883\ue882",controlHelpOriginX+(chu*20),controlHelpOriginY+(chu*47),chu*13);
 			drawArrow(cctx,controlHelpOriginX+(chu*38),controlHelpOriginY+(chu*48),chu*13);
 			drawBrailleIcons(cctx,controlHelpOriginX+(chu*49),controlHelpOriginY+(chu*33),chu*20,[68,0,0,665,667,666],false);
-			drawMetronomeMarkingEquals(cctx,controlHelpOriginX+(chu*62.33),controlHelpOriginY+(chu*33));
+			setTempGridSize(chu*20);
+            drawMetronomeMarkingEquals(cctx,controlHelpOriginX+(chu*62.33),controlHelpOriginY+(chu*33),0,0);
+            restoreTempGridSize();
 			break;
 		case 28: // multimeasure rests
 			drawControlHelpTitleText("Multimeasure Rests");
@@ -439,9 +447,10 @@ function displayControlHelp() {
 			drawArrow(cctx,controlHelpOriginX+(chu*55),controlHelpOriginY+(chu*63),chu*13);
 			drawBrailleIcons(cctx,controlHelpOriginX+(chu*96.66),controlHelpOriginY+(chu*40),chu*20,[34,87,92,46,78],true);
 			drawBrailleIcons(cctx,controlHelpOriginX+(chu*96.66),controlHelpOriginY+(chu*60),chu*20,[95,79,78],true);
-			drawCellTextLabel(cctx,controlHelpOriginX+(chu*70),controlHelpOriginY+(chu*40),"RIGHT","HAND","#000","#FFF",2);
-			drawCellTextLabel(cctx,controlHelpOriginX+(chu*70),controlHelpOriginY+(chu*60),"LEFT","HAND","#000","#FFF",2);
-			
+			setTempGridSize(chu*20);
+            drawCellTextLabel(cctx,controlHelpOriginX+(chu*70),controlHelpOriginY+(chu*40),0,0,"RIGHT","HAND","#000","#FFF",2);
+			drawCellTextLabel(cctx,controlHelpOriginX+(chu*70),controlHelpOriginY+(chu*60),0,0,"LEFT","HAND","#000","#FFF",2);
+			restoreTempGridSize();
 			break;
 		case 32: // grace notes
 			drawControlHelpTitleText("Grace Note");
@@ -614,28 +623,25 @@ function drawArrow(c,x,y,height) {
 
 function drawBrailleIcons(c,x,y,height,chars,multiCell) {
 	doNotCheckContiguousCells = multiCell;
-	var tempGridHeight=height;
-	var tempGridWidth=(height/3)*2;
+	setTempGridSize(height);
 	c.strokeStyle="#000";
 	c.lineWidth=1;
 	for (var i=0; i<chars.length; i++) {
 		if (chars[i]!==0) {
 			if ((chars[i]>=533 && chars[i]<=563) || (chars[i]>=565 && chars[i]<=593) || (chars[i]>=647 && chars[i]<=651) || (chars[i]>=654 && chars[i]<=656) || (chars[i]>=665 && chars[i]<=674)) { // if it's literary braille
-				c.strokeRect(x+(tempGridWidth*i)+2,y+2,tempGridWidth-4,tempGridHeight-4);
+				c.strokeRect(x+(gridWidth*i)+2,y+2,gridWidth-4,gridHeight-4);
 			}
-			drawInterpretedBrailleSymbol(c,chars[i],x+(tempGridWidth*i),y,0,0);
+			drawInterpretedBrailleSymbol(c,chars[i],x+(gridWidth*i),y,0,0);
 		}
 	}
+    restoreTempGridSize();
 	doNotCheckContiguousCells = false;
 }
 
 function drawCellOctaveIcon(c,x,y,height,val) {
-	var tempGridHeight = gridHeight;
-    gridHeight=height;
-	gridWidth=(height/3)*2;
+	setTempGridSize(height);
 	drawCellOctaveRange(c,x,y,val);
-    gridHeight=tempGridHeight;
-    gridWidth=(gridHeight/3)*2;
+    restoreTempGridSize();
 }
 
 function drawLine(c,x1,y1,x2,y2,color,width) {
@@ -711,4 +717,15 @@ function drawSlur(c,x1,y1,x2,y2,x3,y3) {
 	c.strokeStyle = "#000"; // black
 	c.stroke();
 	c.closePath();
+}
+
+function setTempGridSize(height) {
+    savedGridHeight = gridHeight;
+    gridHeight = height;
+    gridWidth = (height*2)/3;
+}
+
+function restoreTempGridSize() {
+    gridHeight = savedGridHeight;
+    gridWidth = (gridHeight*2)/3;
 }
