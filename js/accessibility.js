@@ -1,4 +1,4 @@
-/* global document, cursor, score, useBrailleDisplay, checkContiguousCells, ctx: true */
+/* global document, cursor, score, useBrailleDisplay, checkContiguousCells, checkPreviousCell, ctx: true */
 
 function updateScreenreader(msg) {
 	if (useBrailleDisplay) {
@@ -37,12 +37,17 @@ function getScoreLine(row) {
 function characterName(val,x,y) {
 	
 	var chars, s, fromScore = true;
+
     if (x == -1) {
 		fromScore = false;
 	}
 	
 	if (val==33) { // A whole note
-		s="A whole note";
+		if (fromScore && checkContiguousCells(x,y,[33,75])) {
+			s="first character of A double whole note";
+		} else {
+			s="A whole note";
+        }
 		
 	} else if (val==34) { // octave 4
 		s="fourth octave";
@@ -61,16 +66,28 @@ function characterName(val,x,y) {
 		}
 
 	} else if (val==38) { // E whole note
-		s="E whole note";
+		if (fromScore && checkContiguousCells(x,y,[38,75])) {
+			s="first character of E double whole note";
+		} else {
+			s="E whole note";
+        }
 		
 	} else if (val==39) { // augmentation dot
 		s="dot";
 		
 	} else if (val==40) { // G whole note
-		s="G whole note";
+		if (fromScore && checkContiguousCells(x,y,[40,75])) {
+			s="first character of G double whole note";
+		} else {
+			s="G whole note";
+        }
 		
 	} else if (val==41) { // B whole note
-		s="B whole note";
+		if (fromScore && checkContiguousCells(x,y,[41,75])) {
+			s="first character of B double whole note";
+		} else {
+			s="B whole note";
+        }
 		
 	} else if (val==42) { // natural
 		s="natural";
@@ -114,7 +131,11 @@ function characterName(val,x,y) {
 		}
 		
 	} else if (val==61) { // F whole note
-		s="F whole note";
+		if (fromScore && checkContiguousCells(x,y,[61,75])) {
+			s="first character of F double whole note";
+		} else {
+			s="F whole note";
+        }
 		
 	} else if (val==62) { // word prefix
 		s="word prefix";
@@ -139,6 +160,13 @@ function characterName(val,x,y) {
 		chars=['C','D','E','F','G','A','B'];
 		s=chars[val-68]+" eighth note";
 		
+	} else if (val==75) { // double whole note or rest (second symbol)
+		if (checkPreviousCell(x,y,77)) {
+            s="last character of double whole rest symbol";
+        } else {
+            s="last character of double whole note symbol";
+        }
+
 	} else if (val==76) { // forced barline
 		s="bar line";
 		
@@ -163,7 +191,11 @@ function characterName(val,x,y) {
 		
 	} else if (val>=89 && val<=90) { // C and D whole notes
 		chars=['C','D'];
-		s=chars[val-89]+" whole note";
+		if (fromScore && checkContiguousCells(x,y,[val,75])) {
+			s="first character of "+chars[val-89]+" double whole note";
+		} else {
+			s=chars[val-89]+" whole note";
+        }
 		
 	} else if (val==91) { // A quarter note
 		s="A quarter note";
@@ -389,8 +421,8 @@ function characterName(val,x,y) {
 	} else if (val==346) { // accent (first symbol)
 		s="first character of accent";
 		
-	} else if (val==349) { // braille music comma (second symbol)
-		s="second character of braille music comma";
+	} else if (val==349) { // braille music comma (second symbol) or large note values symbol (last symbol)
+		s="second character of braille music comma or last character of large note values symbol";
 		
 	} else if (val==350) { // end bracket slur (second symbol)
 		s="second character of end bracket slur";
@@ -422,6 +454,9 @@ function characterName(val,x,y) {
 	
 	} else if (val==375) { // in-accord measure division (second symbol)
 		s="second character of measure division for in-accord";
+
+	} else if (val==376) { // clef (second symbol)
+		s="second character of clef symbol";
 
 	} else if (val==377) { // multi-meaure rest suffix
 		s="multi-measure rest suffix";
@@ -459,10 +494,10 @@ function characterName(val,x,y) {
 	} else if (val==462) { // simple/text dynamics (first symbol)
 		s="first character of dynamic symbol";
 		
-	} else if (val==449) { // fingering 1
+	} else if (val==465) { // fingering 1
 		s="thumb";
 		
-	} else if (val==449) { // fingering 2
+	} else if (val==466) { // fingering 2
 		s="index finger";
 		
 	} else if (val==467) { // common time/cut time (second symbol)
@@ -471,15 +506,15 @@ function characterName(val,x,y) {
 	} else if (val==475) { // fingering 5
 		s="fifth finger";
 		
-	} else if (val==449) { // fingering 3
+	} else if (val==476) { // fingering 3
 		s="third finger";
 		
 	} else if (val==495) { // left hand (first symbol)
 		s="first character of left hand sign";
 		
 	} else if (val>=533 && val<=563) { // punctuation and contractions
-		chars=['the','','number sign','e d','s h','and',"apostrophe",'of','with','c h','i n g','capital sign','hyphen','decimal point','s t','','comma','semicolon','colon','full stop','e n','exclamation point','open parenthesis','question mark','in','w h','text sign','g h','for','a r','t h'];
-		s="text "+chars[val-533];
+		chars=['the','text contraction symbol','number sign','e d','s h','and',"apostrophe",'of','with','c h','i n g','capital sign','hyphen','decimal point','s t','','comma','semicolon','colon','full stop','e n','exclamation point','parenthesis','question mark','in','w h','text sign','g h','for','a r','t h'];
+        s="text "+chars[val-533];
 	
 	} else if (val>=565 && val<=590) { // text letters
 		s="text "+String.fromCharCode(val-500);
@@ -487,66 +522,268 @@ function characterName(val,x,y) {
 	} else if (val>=591 && val<=593) { // contractions
 		chars=['o w','o u','e r'];
 		s="text "+chars[val-591];
+
+    } else if (val==594 || val==595) { // contractions
+		s="text contraction symbol";
 	
+	} else if (val==633) {
+		if (checkPreviousCell(x,y,534)) { // contraction THERE (last symbol)
+            s="last character of text contraction there";
+        } else if (checkPreviousCell(x,y,594)) { // contraction THESE (last symbol)
+            s="last character of text contraction these";
+        } else if (checkPreviousCell(x,y,595)) { // contraction THEIR (last symbol)
+            s="last character of text contraction their";
+        }
+
 	} else if (val==634) { // tenor clef (third symbol)
 		s="third character of tenor clef";
 		
 	} else if (val==635) { // bass clef (second symbol)
 		s="second character of bass clef";
 		
+	} else if (val==637) { // contraction SHALL
+		s="text contraction shall";
+
+	} else if (val==638) { // contraction SPIRIT (last symbol)
+		s="last character of text contraction spirit";
+
 	} else if (val==639) { // up bow (second symbol)
 		s="second character of up bow";
 		
+	} else if (val==642) { // contraction CHILD
+		s="text contraction child";
+
 	} else if (val==643) { // alto/tenor clef (second symbol)
 		s="second character of alto or tenor clef";
 		
+	} else if (val==644) { // contractions
+		if (checkContiguousCells(x,y,[644,789])) { // ally
+			s="first character of contraction a l l y";
+		} else if (checkContiguousCells(x,y,[644,678])) { // ation
+			s="first character of contraction a t i o n";
+		}
+
+	} else if (val==645) { // contraction COM
+		s="text contraction com";
+
 	} else if (val==646) { // in-accord measure division (first character)
 		s="first character of measure division symbol for in-accord";
 		
-	} else if (val>=647 && val<=651) { // punctuation and contractions
-		chars=['slash','close quotation marks','e a','b b','c c'];
+	} else if (val>=647 && val<=657) { // punctuation and contractions
+		chars=['slash','close quotation marks','e a','b b','c c','d d','','f f','g g','open quotation marks','by'];
 		s="text "+chars[val-647];
 	
-	} else if (val>=654 && val<=656) { // punctuation and contractions
-		chars=['f f','close parenthesis','open quotation marks'];
-		s="text "+chars[val-654];
-	
-	} else if (val==660) { // braille music comma (first symbol)
-		s="first character of braille music comma";
+	} else if (val==658) { // contraction WHICH
+		s="text contraction which";
+
+	} else if (val==659) { // contraction
+		s="text contraction symbol";
+
+	} else if (val==660) { // braille music comma (first symbol) or large note values symbol (second symbol)
+		s="first character of braille music comma or second character of large note values symbol";
 		
 	} else if (val==662) { // clef (first symbol)
 		s="first character of clef symbol";
 		
+	} else if (val==663) { // contraction THIS
+		s="text contraction this";
+
 	} else if (val>=665 && val<=673) { // numbers 1-9
 		s="text "+String.fromCharCode(val-616);
 	
 	} else if (val==674) { // numbers 0
 		s="text 0";
 
-	} else if (val==676) { // clef (last symbol)
-		s="last character of clef symbol";
-		
+	} else if (val==675) { // contraction KNOW (last symbol)
+		s="last character of text contraction know";
+
+	} else if (val==676) {
+		if (checkPreviousCell(x,y,534)) { // contraction LORD (last symbol)
+            s="last character of text contraction lord";
+        } else if (checkPreviousCell(x,y,659)) { // contraction FUL (last symbol)
+            s="last character of text contraction f u l";
+        }
+
+	} else if (val==677) {
+		if (checkPreviousCell(x,y,534)) { // contraction MOTHER (last symbol)
+            s="last character of text contraction mother";
+        } else if (checkPreviousCell(x,y,595)) { // contraction MANY (last symbol)
+            s="last character of text contraction many";
+        }
+
+	} else if (val==678) {
+		if (checkPreviousCell(x,y,534)) { // contraction NAME (last symbol)
+            s="last character of text contraction name";
+        } else if (checkPreviousCell(x,y,644)) { // contraction ATION (last symbol)
+            s="last character of text contraction a t i o n";
+        } else if (checkPreviousCell(x,y,659)) { // contraction TION (last symbol)
+            s="last character of text contraction t i o n";
+        } else if (checkPreviousCell(x,y,746)) { // contraction SION (last symbol)
+            s="last character of text contraction s i o n";
+        }
+
+	} else if (val==679) { // contraction ONE (last symbol)
+		s="last character of text contraction one";
+
+	} else if (val==680) { // contraction PART (last symbol)
+		s="last character of text contraction part";
+
+	} else if (val==681) { // contraction QUESTION (last symbol)
+		s="last character of text contraction question";
+
+	} else if (val==682) { // contraction RIGHT (last symbol)
+		s="last character of text contraction right";
+
+	} else if (val==683) {
+		if (checkPreviousCell(x,y,534)) { // contraction SOME (last symbol)
+            s="last character of text contraction some";
+        } else if (checkPreviousCell(x,y,659)) { // contraction NESS (last symbol)
+            s="last character of text contraction ness";
+        } else if (checkPreviousCell(x,y,746)) { // contraction LESS (last symbol)
+            s="last character of text contraction less";
+        }
+
+	} else if (val==684) {
+		if (checkPreviousCell(x,y,534)) { // contraction TIME (last symbol)
+            s="last character of text contraction time";
+        } else if (checkPreviousCell(x,y,659)) { // contraction MENT (last symbol)
+            s="last character of text contraction m e n t";
+        } else if (checkPreviousCell(x,y,746)) { // contraction OUNT (last symbol)
+            s="last character of text contraction o u n t";
+        }
+
+	} else if (val>=685 && val<=692) { // punctuation and contractions
+		chars=['us','very','will','it','you','as','','out'];
+		s="text contraction "+chars[val-685];
+
 	} else if (val==735) { // left H-bar rest
 		s="multi-measure rest prefix";
 		
-	} else if (val==747) { // treble clef (second symbol)
-		s="second character of treble clef";
+	} else if (val==742) { // contraction CHARACTER (last symbol)
+		s="last character of text contraction character";
+
+	} else if (val==746) { // contraction
+		s="text contraction symbol";
+
+	} else if (val==747) { // contraction STILL
+		s="text contraction still";
 		
 	} else if (val==749) { // partial measure in-accord (second symbol)
 		s="second character of partial measure in-accord";
 		
+	} else if (val>=750 && val<=757) { // punctuation and contractions
+		chars=['be','con','dis','enough','to','were','his','was'];
+		s="text contraction "+chars[val-750];
+
+	} else if (val==758) {
+		if (checkPreviousCell(x,y,534)) { // contraction WHERE (last symbol)
+            s="last character of text contraction where";
+        } else if (checkPreviousCell(x,y,594)) { // contraction WHOSE (last symbol)
+            s="last character of text contraction whose";
+        }
+
 	} else if (val==760) { // bowing (first character)
 		s="first character of bow marking";
 		
 	} else if (val==762) { // in-accord (second symbol)
 		s="second character of in-accord symbol";
 		
+	} else if (val==763) {
+		if (checkPreviousCell(x,y,534)) { // contraction THROUGH (last symbol)
+            s="last character of text contraction through";
+        } else if (checkPreviousCell(x,y,594)) { // contraction THOSE (last symbol)
+            s="last character of text contraction those";
+        }
+
 	} else if (val==767) { // change fingers
 		s="change fingering";
 		
+	} else if (val==768) {
+		if (checkPreviousCell(x,y,534)) { // contraction DAY (last symbol)
+            s="last character of text contraction day";
+        } else if (checkPreviousCell(x,y,746)) { // contraction OUND (last symbol)
+            s="last character of text contraction o u n d";
+        }
+
+	} else if (val==769) {
+		if (checkPreviousCell(x,y,534)) { // contraction EVER (last symbol)
+            s="last character of text contraction ever";
+        } else if (checkPreviousCell(x,y,659)) { // contraction ENCE (last symbol)
+            s="last character of text contraction e n c e";
+        } else if (checkPreviousCell(x,y,746)) { // contraction ANCE (last symbol)
+            s="last character of text contraction a n c e";
+        }
+
+	} else if (val==770) { // contraction FROM
+		s="text contraction from";
+
+	} else if (val==771) { // contraction ONG (last symbol)
+		s="last character of text contraction o n g";
+
+	} else if (val==772) {
+		if (checkPreviousCell(x,y,534)) { // contraction HERE (last symbol)
+            s="last character of text contraction here";
+        } else if (checkPreviousCell(x,y,595)) { // contraction HAD (last symbol)
+            s="last character of text contraction had";
+        }
+
+	} else if (val>=775 && val<=784) { // contractions
+		chars=['knowledge','like','more','not','','people','quite','rather','so','that'];
+		s="text contraction "+chars[val-775];
+
+	} else if (val==785) {
+		if (checkPreviousCell(x,y,534)) { // contraction UNDER (last symbol)
+            s="last character of text contraction under";
+        } else if (checkPreviousCell(x,y,594)) { // contraction UPON (last symbol)
+            s="last character of text contraction upon";
+        }
+
+	} else if (val==787) {
+		if (checkPreviousCell(x,y,534)) { // contraction WORK (last symbol)
+            s="last character of text contraction work";
+        } else if (checkPreviousCell(x,y,594)) { // contraction WORD (last symbol)
+            s="last character of text contraction word";
+        } else if (checkPreviousCell(x,y,595)) { // contraction WORLD (last symbol)
+            s="last character of text contraction world";
+        }
+
+	} else if (val==789) {
+		if (checkPreviousCell(x,y,534)) { // contraction young (last symbol)
+            s="last character of text contraction young";
+        } else if (checkPreviousCell(x,y,644)) { // contraction ALLY (last symbol)
+            s="last character of text contraction a l l y";
+        } else if (checkPreviousCell(x,y,659)) { // contraction ITY (last symbol)
+            s="last character of text contraction i t y";
+        }
+
+	} else if (val==792) { // contraction OUGHT (last symbol)
+		s="last character of text contraction ought";
+
+	} else if (val==849) { // half-diminished (last symbol)
+		s="last character of half-diminished symbol";
+
+	} else if (val==835) { // contraction BLE
+		s="text contraction b l e";
+
+	} else if (val==854) { // plus (last symbol)
+		s="last character of plus symbol";
+
+	} else if (val==855) { // equals (last symbol)
+		s="last character of equals symbol";
+
 	} else if (val==860) { // in-accord (first character)
 		s="first character of in-accord symbol";
 		
+	} else if (val>=866 && val<=874) { // contractions
+		chars=['but','can','do','every','self','go','have','','just'];
+		s="text contraction "+chars[val-866];
+
+	} else if (val==967) { // contractions CANNOT (last symbol)
+		s="last character of text contraction cannot";
+
+	} else if (val==970) { // contractions FATHER (last symbol)
+		s="last character of text contraction father";
+
 	} else if (typeof val==="undefined" || val===null || val===0 || val==32) {
 		s="empty";
 		
