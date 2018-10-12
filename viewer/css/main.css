@@ -1,0 +1,159 @@
+@font-face {
+	/* Bravura by Steinberg: www.smufl.org/fonts/ */
+	font-family: 'Bravura';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../font/bravura/Bravura.eot');
+	src: url('../font/bravura/Bravura.eot?#iefix') format('embedded-opentype'), local('Bravura'), url('../font/bravura/Bravura.woff') format('woff'), url('../font/bravura/Bravura.otf') format('opentype');
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 19px;
+	color: #000;
+	font-weight: 300;
+}
+h1 {
+	font-size: 42px;
+	line-height: 56px;
+	font-weight: 200;
+	color: #000;
+	margin-bottom: 8px;
+}
+h2   {
+	font-size: 18px;
+	line-height: 21px;
+	font-weight: 300;
+	color: #666;
+	margin-top: 0px;
+}
+h3   {
+	font-size: 18px;
+	line-height: 21px;
+	font-weight: 600;
+	color: #000;
+	padding: 10px;
+	background-color: #DDD;
+	display: inline-block;
+	width: 100%;
+}
+a {
+	font-weight: 800;
+	color: #000;
+	text-decoration: none;
+}
+h2 a {
+	font-weight: 800;
+	color: #666;
+}
+
+#translator, #example {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+
+#inputFieldArea, #outputFieldArea {
+	margin-right: 5%;
+	margin-left: 5%;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	width: 28%;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+#inputField, #outputField {
+	font-family: "Courier New", Courier, monospace;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 14px;
+	resize: vertical;
+}
+
+#exampleViewer {
+	clear: both;
+	margin-top: 30px;
+	margin-right: auto;
+	margin-left: auto;
+	height: 300px;
+	width: 1000px;
+}
+
+#translateButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
+	background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
+	background-color:#ffffff;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
+	background:-moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:-webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:-o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:-ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
+	background-color:#f6f6f6;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+#controls {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20%;
+}
+
+.textControl {
+	width: 30px;
+}
+.webcode {
+	background-color: #CCC;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 13px;
+	display: inline-block;
+	padding: 16px;
+}
+
+#smallViewer {
+	text-align: center;
+	display: inline;
+	float: right;
+	height: 190px;
+	width: 450px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-style: italic;
+}
+
+.antable {
+	position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+	font-size: 1px;
+}
