@@ -1,7 +1,7 @@
 // Braille Music Viewer by Toby W. Rush. For information and usage, visit <http://tobyrush.com/braillemusic/viewer/>.
 /* global document, window, navigator: true */
 
-var versionString = "0.9.1b";
+var versionString = "0.9.2b";
 var viewerCanvases = [];
 var viewers = [];
 // the following array starts at 32, so values should be accessed a brailleDots[theAsciiCode-32].
