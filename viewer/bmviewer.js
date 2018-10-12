@@ -1562,7 +1562,7 @@ function bmviewer(whichCanvas) {
 			ctx.fillText("\ue560",x+gw*0.5,y+gh*0.55);
 
 		} else if (val==154) { // trill
-			t.drawCellArticulation(x,y,7);
+			t.drawCellArticulation(x,y,col,row,7);
 
 		} else if (val==155) { // measure repeat
 			t.drawCellBackground(x,y,"#222");
@@ -1581,7 +1581,7 @@ function bmviewer(whichCanvas) {
 
 		} else if (val==159) { // marcato
 			if (t.checkContiguousCells(col,row,[159,156])) {
-				t.drawCellArticulation(x,y,4);
+				t.drawCellArticulation(x,y,col,row,4);
 			} else {
 				t.drawLiteralBrailleSymbol(val,x,y,col,row);
 			}
@@ -1783,13 +1783,13 @@ function bmviewer(whichCanvas) {
 
 		} else if (val==346) { // accent
 			if (t.checkContiguousCells(col,row,[346,156])) {
-				t.drawCellArticulation(x,y,3);
+				t.drawCellArticulation(x,y,col,row,3);
 			} else {
 				t.drawLiteralBrailleSymbol(val,x,y,col,row);
 			}
 
 		} else if (val==356) { // staccato
-			t.drawCellArticulation(x,y,1);
+			t.drawCellArticulation(x,y,col,row,1);
 
 
 		} else if (val==359) { // begin bracket slur
@@ -1801,7 +1801,7 @@ function bmviewer(whichCanvas) {
 
 		} else if (val==362) { // pause
 			if (t.checkContiguousCells(col,row,[362,149])) {
-				t.drawCellArticulation(x,y,6);
+				t.drawCellArticulation(x,y,col,row,6);
 			} else {
 				t.drawLiteralBrailleSymbol(val,x,y,col,row);
 			}
@@ -1846,7 +1846,7 @@ function bmviewer(whichCanvas) {
 
 		} else if (val==395) { // tenuto
 			if (t.checkContiguousCells(col,row,[395,156])) {
-				t.drawCellArticulation(x,y,2);
+				t.drawCellArticulation(x,y,col,row,2);
 			} else {
 				t.drawLiteralBrailleSymbol(val,x,y);
 			}
@@ -1867,7 +1867,7 @@ function bmviewer(whichCanvas) {
             t.drawCellChordSymbol(ctx,x,y,4);
 
         } else if (val==449) { // fingering 4
-			t.drawCellArticulation(x,y,14);
+			t.drawCellArticulation(x,y,col,row,14);
 
 		} else if (val==452) { // circle
             if (t.checkContiguousCells(col,row,[452,849])) {
@@ -1885,7 +1885,7 @@ function bmviewer(whichCanvas) {
 
 		} else if (val==460) { // fermata
 			if (t.checkContiguousCells(col,row,[460,176])) {
-				t.drawCellArticulation(x,y,5);
+				t.drawCellArticulation(x,y,col,row,5);
 			} else {
 				t.drawLiteralBrailleSymbol(val,x,y,col,row);
 			}
@@ -1926,16 +1926,16 @@ function bmviewer(whichCanvas) {
 			}
 
 		} else if (val==465) { // fingering 1
-			t.drawCellArticulation(x,y,11);
+			t.drawCellArticulation(x,y,col,row,11);
 
 		} else if (val==466) { // fingering 2
-			t.drawCellArticulation(x,y,12);
+			t.drawCellArticulation(x,y,col,row,12);
 
 		} else if (val==475) { // fingering 5
-			t.drawCellArticulation(x,y,15);
+			t.drawCellArticulation(x,y,col,row,15);
 
 		} else if (val==476) { // fingering 3
-			t.drawCellArticulation(x,y,13);
+			t.drawCellArticulation(x,y,col,row,13);
 
 		} else if (val==495) { // left hand (first symbol)
 			if (t.checkContiguousCells(col,row,[495,262,239])) {
