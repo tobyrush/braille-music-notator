@@ -497,6 +497,8 @@ function interpretKeyCode(keyCode) {
 				setScore(x,y,252);
 			} else if (k==4) {
 				setScore(x,y,462); setScore(x+1,y,577); setScore(x+2,y,580); adv=3; readerMessage = "Mezzo Piano";
+			} else if (k==5) {
+				setScore(x,y,260); setScore(x+1,y,355); adv=2; readerMessage = "Begin Repeat";
 			} else if (k==6) {
 				setScore(x,y,570);
 			}
@@ -510,6 +512,8 @@ function interpretKeyCode(keyCode) {
 				setScore(x,y,253);
 			} else if (k==4) {
 				setScore(x,y,462); setScore(x+1,y,580); adv=2; readerMessage = "Piano";
+			} else if (k==5) {
+				setScore(x,y,260); setScore(x+1,y,450); adv=2; readerMessage = "End Repeat";
 			} else if (k==6) {
 				setScore(x,y,571);
 			}
@@ -535,7 +539,9 @@ function interpretKeyCode(keyCode) {
 					setScore(x,y,254);
 				} else if (k==4) {
 					setScore(x,y,462); setScore(x+1,y,580); setScore(x+2,y,580); adv=3; readerMessage = "Pianissimo";
-				} else if (k==6) {
+				} else if (k==5) {
+                    setScore(x,y,260); setScore(x+1,y,276); adv=2; readerMessage = "Coda";
+                } else if (k==6) {
 					setScore(x,y,572);
 				}
 			}
@@ -584,7 +590,9 @@ function interpretKeyCode(keyCode) {
 					setScore(x,y,187);
 				} else if (k==3) {
 					setScore(x,y,255);
-				} else if (k==6) {
+				} else if (k==5) {
+                    setScore(x,y,935); setScore(x+1,y,949); adv=2; readerMessage = "First Ending";
+                } else if (k==6) {
 					setScore(x,y,574);
 				}
 			}
@@ -609,7 +617,9 @@ function interpretKeyCode(keyCode) {
 					setScore(x,y,256);
 				} else if (k==4) {
 					setScore(x,y,162); setScore(x+1,y,567); adv=2; readerMessage = "Begin crescendo";
-				} else if (k==6) {
+				} else if (k==5) {
+                    setScore(x,y,935); setScore(x+1,y,950); adv=2; readerMessage = "Second Ending";
+                } else if (k==6) {
 					setScore(x,y,575);
 				}
 			}
@@ -634,7 +644,9 @@ function interpretKeyCode(keyCode) {
 					setScore(x,y,257);
 				} else if (k==4) {
 					setScore(x,y,162); setScore(x+1,y,551); adv=2; readerMessage = "End crescendo";
-				} else if (k==6) {
+				} else if (k==5) {
+                    setScore(x,y,935); setScore(x+1,y,951); adv=2; readerMessage = "Third Ending";
+                } else if (k==6) {
 					setScore(x,y,576);
 				}
 			}

@@ -1084,13 +1084,20 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		drawCellNote(ctx,x,y,"\ue1d9");
 		drawCellNoteName(ctx,x,y,"A");
 		
-	} else if (val==134) { // play section #
-		if (checkContiguousCells(col,row,[134,243])) {
-			drawCellTextLabel(ctx,x,y,col,row,"PLAY","SECTION #","#000","#FFF",2); // white on black
-		} else {
-			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
-		}
+//	} else if (val==134) { // play section #
+//		if (checkContiguousCells(col,row,[134,243])) {
+//			drawCellTextLabel(ctx,x,y,col,row,"PLAY","SECTION #","#000","#FFF",2); // white on black
+//		} else {
+//			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
+//		}
 		
+	} else if (val==134) { // end repeated section
+		drawMultiCellBackground(ctx,x,y,col,row,"#000",2); // black
+		ctx.font = "normal "+gridHeight*0.55+"px Bravura";
+		ctx.textBaseline = "alphabetic";
+		ctx.fillStyle = "#FFF"; // white
+		ctx.fillText("\ue045",x+gw(1),y+gh(0.65));
+
 	} else if (val==135) { // interval 4th
 		drawCellInterval(ctx,x,y,4);
 		
@@ -1133,7 +1140,7 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		ctx.font = "normal "+gridHeight*0.55+"px Bravura";
 		ctx.textBaseline = "alphabetic";
 		ctx.fillStyle = "#FFF"; // white
-		ctx.fillText("\ue040",x+gw(0.5),y+gh(0.8));
+		ctx.fillText("\ue047",x+gw(0.5),y+gh(0.7));
 
 	} else if (val==146) { // common time
 		if (checkContiguousCells(col,row,[146,467])) {
@@ -1313,12 +1320,8 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 	} else if (val==235) { // key sig prefix
 		drawCellTextLabel(ctx,x,y,col,row,"KEY","PREFIX","#00F","#FFF",1); // white on blue
 
-	} else if (val==242) { // end repeated section
-		drawCellBackground(ctx,x,y,"#000"); // black
-		ctx.font = "normal "+gridHeight*0.55+"px Bravura";
-		ctx.textBaseline = "alphabetic";
-		ctx.fillStyle = "#FFF"; // white
-		ctx.fillText("\ue041",x+gw(0.5),y+gh(0.8));
+	} else if (val==242) { // end repeat
+		drawCellTextLabel(ctx,x,y,col,row,"END","REPEAT","#000","#FFF",1);
 
 	} else if (val==244) { // prefer smaller note values
 		if (checkContiguousCells(col,row,[244,660,349])) {
@@ -1356,6 +1359,18 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 			drawMultiCellBackground(ctx,x,y,col,row,"#000",2); // 2 cells black
 			ctx.fillStyle = "#FFF"; // white
 			ctx.fillText("\ue032",x+gw(1),y+gh(0.8));
+		} else if (checkContiguousCells(col,row,[260,355])) { // begin repeat
+			drawMultiCellBackground(ctx,x,y,col,row,"#000",2); // 2 cells black
+			ctx.fillStyle = "#FFF"; // white
+			ctx.fillText("\ue040",x+gw(1),y+gh(0.8));
+		} else if (checkContiguousCells(col,row,[260,450])) { // end repeat
+			drawMultiCellBackground(ctx,x,y,col,row,"#000",2); // 2 cells black
+			ctx.fillStyle = "#FFF"; // white
+			ctx.fillText("\ue041",x+gw(1),y+gh(0.8));
+		} else if (checkContiguousCells(col,row,[260,276])) { // coda
+			drawMultiCellBackground(ctx,x,y,col,row,"#000",2); // 2 cells black
+			ctx.fillStyle = "#FFF"; // white
+			ctx.fillText("\ue048",x+gw(1),y+gh(0.7));
 		} else {
 			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
@@ -1816,6 +1831,28 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 	} else if (val>=866 && val<=874) { // contractions
 		chars=['BUT','CAN','DO','EVERY','SELF','GO','HAVE','','JUST'];
 		drawCellASCII(ctx,x,y,col,row,chars[val-866],(val % 100));
+
+	} else if (val==935) { // bowing (first character)
+		if (checkContiguousCells(col,row,[935,949]) ||
+            checkContiguousCells(col,row,[935,950]) ||
+            checkContiguousCells(col,row,[935,951])) {
+			drawMultiCellBackground(ctx,x,y,col,row,"#000",2);
+            ctx.beginPath();
+            ctx.moveTo(x+gw(1.66),y+gh(0.33));
+            ctx.lineTo(x+gw(0.33),y+gh(0.33));
+            ctx.lineTo(x+gw(0.33),y+gh(0.66));
+            ctx.lineWidth=1;
+            ctx.strokeStyle="#FFF";
+            ctx.stroke();
+            ctx.closePath();
+            ctx.textAlign="center";
+            ctx.textBaseline="middle";
+            ctx.fillStyle="#fff";
+            ctx.font = "normal "+gh(0.25)+"px sans-serif";
+            ctx.fillText((score[row][+col+1]-948).toString()+".",x+gw(0.65),y+gh(0.50));
+        } else {
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
+		}
 
 	} else if ((val !== null) && ((val%100) !== 0)) {
 		drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
