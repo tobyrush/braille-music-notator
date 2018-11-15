@@ -335,8 +335,8 @@ function displayControlHelp() {
 			break;
 		case 20: // mark repeated section
 			drawControlHelpTitleText("Marking Repeated Sections");
-			drawControlHelpDescriptionText("Mark sections to repeat by placing the beginning repeat symbol followed\nby a number before the section, and an ending repeat symbol afterward.\nThese symbols only mark the section; use \"Play Section #\" to indicate\nwhen the section is to be repeated.");
-			drawBrailleIcons(cctx,controlHelpOriginX,controlHelpOriginY+(chu*55),chu*20,[143,665,94,86,63,86,93,0,86,63,86,92,242],false);
+			drawControlHelpDescriptionText("Mark sections to repeat by placing the beginning repeat symbol followed\nby a letter before the section, and an ending repeat symbol afterward.\nThese symbols only mark the section; use \"D.S.\" to indicate\nwhen the section is to be repeated.");
+			drawBrailleIcons(cctx,controlHelpOriginX,controlHelpOriginY+(chu*55),chu*20,[143,565,94,86,63,86,93,0,86,63,86,92,242],false);
 			break;
 		case 21: // measure repeat
 			drawControlHelpTitleText("Measure Repeat");
@@ -351,8 +351,8 @@ function displayControlHelp() {
 			break;
 		case 22: // play marked section
 			drawControlHelpTitleText("Playing Marked Sections");
-			drawControlHelpDescriptionText("To instruct performer to play a previously marked section, use \"Play\nSection #\" followed by the section number, then \"Number of Measures\"\nfollowed by the measure length of the section.");
-			drawBrailleIcons(cctx,controlHelpOriginX,controlHelpOriginY+(chu*45),chu*20,[134,0,665,335,666],true);
+			drawControlHelpDescriptionText("To instruct performer to play a previously marked section, use \"Play\nSection #\" followed by the section letter, then \"Number of Measures\"\nfollowed by the measure length of the section.");
+			drawBrailleIcons(cctx,controlHelpOriginX,controlHelpOriginY+(chu*45),chu*20,[134,0,565,335,666],false);
 			break;
 		case 23: // literary braille
 			drawControlHelpTitleText("Literary Braille");

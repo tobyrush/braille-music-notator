@@ -432,7 +432,32 @@ function drawKeyCap(cctx,kbu,x,y,noteDescriptor,key) {
 			
 			// barline
 			cctx.fillStyle="#FFF";
-			if (noteDescriptor[1]<6) {
+			if (noteDescriptor[1]==4) { // end repeat
+				cctx.textAlign="center";
+				cctx.textBaseline="middle";
+				cctx.font = "normal "+(kbu*0.20)+"px sans-serif";
+				cctx.fillText("END",x+(kbu*0.47),y+(kbu*0.25));
+				cctx.fillText("RPT",x+(kbu*0.47),y+(kbu*0.51));
+			} else if (noteDescriptor[1]==7) {
+				cctx.textAlign="center";
+				cctx.textBaseline="middle";
+				cctx.font = "normal "+(kbu*0.20)+"px sans-serif";
+				cctx.fillText("# OF",x+(kbu*0.47),y+(kbu*0.25));
+				cctx.fillText("MEAS.",x+(kbu*0.47),y+(kbu*0.51));
+			} else if (noteDescriptor[1]>10 && noteDescriptor[1]<14) {
+				cctx.beginPath();
+				cctx.moveTo(x+(kbu*0.75),y+(kbu*0.30));
+                cctx.lineTo(x+(kbu*0.25),y+(kbu*0.30));
+                cctx.lineTo(x+(kbu*0.25),y+(kbu*0.60));
+                cctx.lineWidth=1;
+                cctx.strokeStyle="#FFF";
+                cctx.stroke();
+                cctx.closePath();
+                cctx.textAlign="center";
+				cctx.textBaseline="middle";
+				cctx.font = "normal "+(kbu*0.25)+"px sans-serif";
+				cctx.fillText((noteDescriptor[1]-10).toString()+".",x+(kbu*0.47),y+(kbu*0.45));
+			} else {
 				cctx.font = "normal "+kbu*0.5+"px Bravura";
 				cctx.textAlign="center";
 				cctx.textBaseline="alphabetic";
@@ -441,24 +466,15 @@ function drawKeyCap(cctx,kbu,x,y,noteDescriptor,key) {
 					case 0: char="\ue030"; break; // single barline
 					case 1: char="\ue031"; break; // double barline
 					case 2: char="\ue032"; break; // final barline
-					case 3: char="\ue040"; break; // forward repeat
-					case 4: char="\ue041"; break; // backward repeat
+					case 3: char="\ue047"; baseline=0.55; break; // segno
 					case 5: char="\ue500"; baseline=0.45; break; // measure repeat
+					case 6: char="\ue045"; baseline=0.45; break; // D.S.
+                    case 8: char="\ue040"; break; // begin repeat barline
+                    case 9: char="\ue041"; break; // end repeat barline
+                    case 10: char="\ue048"; baseline=0.55; break; // coda
 					
 				}
 				cctx.fillText(char,x+(kbu*0.48),y+(kbu*baseline));
-			} else if (noteDescriptor[1]==6) {
-				cctx.textAlign="center";
-				cctx.textBaseline="middle";
-				cctx.font = "normal "+(kbu*0.20)+"px sans-serif";
-				cctx.fillText("PLAY",x+(kbu*0.47),y+(kbu*0.25));
-				cctx.fillText("SECT #",x+(kbu*0.47),y+(kbu*0.51));
-			} else if (noteDescriptor[1]==7) {
-				cctx.textAlign="center";
-				cctx.textBaseline="middle";
-				cctx.font = "normal "+(kbu*0.20)+"px sans-serif";
-				cctx.fillText("# OF",x+(kbu*0.47),y+(kbu*0.25));
-				cctx.fillText("MEAS.",x+(kbu*0.47),y+(kbu*0.51));
 			}
 			
 			// set color for key cap
