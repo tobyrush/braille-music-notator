@@ -1668,7 +1668,7 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 	} else if (val==595) { // contractions
 		if (checkContiguousCells(col,row,[595,633])) { // their
 			drawMultiCellASCII(ctx,x,y,col,row,2,'THEIR',(val % 100));
-		} else if (checkContiguousCells(col,row,[595,638])) { // spirit
+		} else if (checkContiguousCells(col,row,[595,683])) { // spirit
 			drawMultiCellASCII(ctx,x,y,col,row,2,'SPIRIT',(val % 100));
 		} else if (checkContiguousCells(col,row,[595,677])) { // many
 			drawMultiCellASCII(ctx,x,y,col,row,2,'MANY',(val % 100));

@@ -973,13 +973,13 @@ function interpretKeyCode(keyCode) {
 					if (isAfterDynamic(x,y)) {
 						setScore(x,y,239); setScore(x+1,y,37); setScore(x+2,y,337); adv=3; readerMessage = "Double sharp";
 					} else {
-						setScore(x,y,37); setScore(x+1,y,337); adv=3; readerMessage = "Double sharp";
+						setScore(x,y,37); setScore(x+1,y,337); adv=2; readerMessage = "Double sharp";
 					}
 				} else if (k==2) {
 					if (isAfterDynamic(x,y)) {
 						setScore(x,y,239); setScore(x+1,y,37); setScore(x+2,y,337); adv=3; readerMessage = "Double sharp";
 					} else {
-						setScore(x,y,37); setScore(x+1,y,337); adv=3; readerMessage = "Double sharp";
+						setScore(x,y,37); setScore(x+1,y,337); adv=2; readerMessage = "Double sharp";
 					}
 				} else if (k==3) {
 					setScore(x,y,195); setScore(x+1,y,467); adv=2; readerMessage = "Cut time";
