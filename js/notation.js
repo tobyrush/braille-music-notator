@@ -1008,9 +1008,11 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
         ctx.fillStyle = "#FFF"; // white
         if (checkContiguousCells(col,row,[val,75])) {
             drawMultiCellBackground(ctx,x,y,col,row,"#F00",2); // 2 cells red
-            ctx.fillText("\ue4f3",x+gw(1),y+gh(0.5));
+            ctx.fillStyle = "#FFF"; // white
+            ctx.fillText("\ue4f3",x+gw(1),y+gh(0.6));
         } else {
 			drawCellBackground(ctx,x,y,"#F00");
+            ctx.fillStyle = "#FFF"; // white
             ctx.fillText("\ue4f4",x+gw(0.5),y+gh(0.5));
         }
 		

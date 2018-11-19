@@ -1177,7 +1177,7 @@ function interpretKeyCode(keyCode) {
 			break;
 		case "":
 			if ((typeof score[y]!=="undefined") && (score[y]!==null) && (typeof score[y][x]!=="undefined")) {
-				updateScreenreader(characterName(score[y][x],-1,-1)); // note that x still has previous value (before cursor.x += adv)
+				updateScreenreader(characterName(score[y][x],x,y)); // note that x still has previous value (before cursor.x += adv)
 			}
 			break;
 		default:
