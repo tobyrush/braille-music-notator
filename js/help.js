@@ -417,7 +417,7 @@ function displayControlHelp() {
 			break;
 		case 29: // braille music hyphen
 			drawControlHelpTitleText("Braille Music Hyphen");
-			drawControlHelpDescriptionText("The braille music hyphen indicates allows for notation to be\nbroken into multiple lines of braille characters.");
+			drawControlHelpDescriptionText("The braille music hyphen indicates allows for a single measure\nto be broken into multiple lines.");
 			drawBrailleIcons(cctx,controlHelpOriginX,controlHelpOriginY+(chu*40),chu*20,[86,59,72,72,72,71,72,60,72,0,86,88,234],false);
 			drawBrailleIcons(cctx,controlHelpOriginX+(chu*26.66),controlHelpOriginY+(chu*60),chu*20,[60],false);
 			drawBrailleIcons(cctx,controlHelpOriginX+(chu*40),controlHelpOriginY+(chu*60),chu*20,[72,364,0,72,73,72,70],true);
@@ -489,6 +489,10 @@ function displayControlHelp() {
 		case 35: // chord symbols
 			drawControlHelpTitleText("Chord Symbols");
 			drawControlHelpDescriptionText("These symbols are used with literary braille to\nindicate chords for lead sheets.");
+			break;
+		case 36: // repeat symbols
+			drawControlHelpTitleText("Repeat Symbols");
+			drawControlHelpDescriptionText("These symbols are used in braille just as in\ntraditional music notation.");
 			break;
 		default:
 			drawControlHelpDescriptionText("Click keys or type to add symbols to the score above.\n\nClick tabs to the left or press spacebar to switch between keyboards.\n\nMouse over the keyboard for help.");
