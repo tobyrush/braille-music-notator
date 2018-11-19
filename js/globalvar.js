@@ -149,7 +149,9 @@ function clearDocument() {
 }
 
 function getScore(x,y) {
-	if ((x === null) || (y === null) || (typeof score[y]==='undefined') || (typeof score[y][x]==='undefined')) {
+	if ((x === null) || (y === null) ||
+        (typeof score[y]==='undefined') || (score[y]===null) ||
+        (typeof score[y][x]==='undefined')) {
 		return 0;
 	} else {
 		return score[y][x];
