@@ -1,4 +1,4 @@
-/* global titleArea, tctx, versionString, helpDialogOpen, roundRect, optionsDialogOpen, fileDialogOpen, controlArea, cctx, whichKeyboard, keyboardCoordinates, keymap, keycaps, displayControlHelp, cursor, hScroll, vScroll, controlsHeight, controlsWidth, chu, resizeBarHeight, keyboardOriginX, keyboardOriginY, kbu, controlHelpOriginX, controlHelpOriginY, console: true */
+/* global titleArea, tctx, versionString, helpDialogOpen, roundRect, optionsDialogOpen, fileDialogOpen, controlArea, cctx, whichKeyboard, keyboardCoordinates, keymap, keycaps, displayControlHelp, cursor, hScroll, vScroll, controlsHeight, controlsWidth, chu, resizeBarHeight, keyboardOriginX, keyboardOriginY, kbu, controlHelpOriginX, controlHelpOriginY, console, shiftKeyDown, metaKeyDown: true */
 /* jshint -W020 */
 
 function initializeTitle() {
@@ -136,6 +136,23 @@ function drawControls() {
 	for (var i=0;i<keyboardCoordinates.length;i++) {
 		drawKeyCap(cctx,kbu,keyboardOriginX+(keyboardCoordinates[i][0]*kbu), keyboardOriginY+(keyboardCoordinates[i][1]*kbu),keymap[whichKeyboard][i],keycaps[i]);
 	}
+    cctx.textAlign="center";
+	cctx.textBaseline="middle";
+	cctx.font = "normal "+(kbu*0.25)+"px sans-serif";
+	if (shiftKeyDown) {
+        cctx.fillStyle="#00F";
+        cctx.fillRect(keyboardOriginX,keyboardOriginY+(kbu*3),kbu*1.5,kbu*0.45);
+        cctx.fillStyle="#FFF";
+        cctx.fillText("SHIFT",keyboardOriginX+(0.75*kbu),keyboardOriginY+(3.25*kbu));
+        //drawKeyCap(cctx,kbu,keyboardOriginX, keyboardOriginY+(2*kbu),[20,0],"");
+    }
+	if (metaKeyDown) {
+        cctx.fillStyle="#00F";
+        cctx.fillRect(keyboardOriginX,keyboardOriginY+(kbu*3.5),kbu*1.5,kbu*0.45);
+        cctx.fillStyle="#FFF";
+        cctx.fillText("CTRL",keyboardOriginX+(0.75*kbu),keyboardOriginY+(3.75*kbu));
+        //drawKeyCap(cctx,kbu,keyboardOriginX, keyboardOriginY+(3*kbu),[20,1],"");
+    }
 	
 	// draw controls help
 	
@@ -994,6 +1011,29 @@ function drawKeyCap(cctx,kbu,x,y,noteDescriptor,key) {
 			cctx.textBaseline="alphabetic";
 			cctx.fillText(['\ue872','\ue870','\ue871','\ue873'][noteDescriptor[1]-1],x+(kbu*0.45),y+(kbu*0.50));
 			
+            // set color for key cap
+			cctx.fillStyle="#CCC";
+
+			break;
+
+		case 20: // shift and meta key
+			// background
+			cctx.fillStyle="#CCC";
+			cctx.strokeStyle="#00F";
+			cctx.lineWidth=2;
+			roundRect(cctx, x, y, kbu*0.92, kbu*0.92, kbu*0.2, true, true);
+
+			// letter
+			cctx.fillStyle="#00F";
+			cctx.font = "normal "+kbu*0.25+"px bravura";
+			cctx.textAlign="center";
+			cctx.textBaseline="alphabetic";
+			if (noteDescriptor[1]===0) {
+                cctx.fillText('SHIFT',x+(kbu*0.45),y+(kbu*0.50));
+            } else {
+                cctx.fillText('CTRL',x+(kbu*0.45),y+(kbu*0.50));
+            }
+
             // set color for key cap
 			cctx.fillStyle="#CCC";
             

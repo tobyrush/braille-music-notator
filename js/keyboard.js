@@ -30,6 +30,7 @@ function doKeyUp(e) {
 		default:
 			passThrough = true;
 	}
+    drawControls();
 	if (passThrough) {
 		return true;
 	} else {
