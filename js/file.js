@@ -137,7 +137,7 @@ function downloadFile(reduceASCII) {
 	var file=document.createElement('a');
 	if (reduceASCII) {
 		file.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileString));
-		file.setAttribute('download', "Untitled.txt");
+		file.setAttribute('download', "Untitled.brf");
 	} else {
 		file.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileString));
 		file.setAttribute('download', 'Untitled.brm');
