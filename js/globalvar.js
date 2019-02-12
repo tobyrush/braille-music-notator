@@ -37,9 +37,14 @@ var parseOnImport = true;
 var currentBeatUnit = 4;
 //var dialogField, editFieldVisible, editFieldCallback;
 //var flashIsPresent = false;
+var resizeBarHeight = 10;
+
+var controlModules = ['controls/en/classic.xml'];
+var defaultControlModule = 'controls/en/classic.html';
+var currentControlModule;
 
 var score = [[]]; // y,x
-var blankCells = [[]];
+var storedBlankCells, blankCells = [[]];
 
 // the following array starts at 32, so values should be accessed a brailleDots[theAsciiCode-32].
 var brailleDots = [0,46,16,60,43,41,47,4,55,62,33,44,32,36,40,12,52,2,6,18,50,34,22,54,38,20,49,48,35,63,28,57,8,1,3,9,25,17,11,27,19,10,26,5,7,13,29,21,15,31,23,14,30,37,39,58,45,61,53,42,51,59,24,56];
@@ -180,6 +185,20 @@ function deleteScore(x,y) {
 
 function cellIsEmpty(x,y) {
 	return (typeof score[y]==='undefined') || (typeof score[y][x]==='undefined') || (score[y][x]<=0);
+}
+
+function getCellContext(x,y) {
+    // returns a string containing the character and the three cells before and after
+    var r="";
+    for (var i=(x-3); i<=(x+3); i++) {
+        if (typeof score[y][i]==="undefined" || score[y][i]===null || score[y][i]===0 || score[y][i]==32) {
+            r=r+" ";
+        } else {
+            r=r+String.fromCharCode(score[y][i]);
+        }
+    }
+
+    return r;
 }
 
 function saveToUndo() {

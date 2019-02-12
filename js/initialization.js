@@ -1,10 +1,11 @@
-/* global versionString, devMode, container, document, notationArea, window, doKeyDown, doKeyUp, doWindowMouseUp, doWindowMouseMove, handleClipboard, fileUploader, doFileOpen, doNotationMouseDown, doNotationMouseUp, doNotationMouseMove, doNotationDragOver, doNotationDragEnter, doNotationDragLeave, doNotationDrop, doNotationMouseWheel, controlArea, doControlMouseDown, doControlMouseMove, doControlMouseOut, titleArea, doTitleMouseDown, cctx, tctx, ctx, clipboardArea, cursor, loadCookie, initializeTitle, initializeNotation, initializeControls, resizeBarPosition: true */
+/* global versionString, devMode, container, document, notationArea, window, doKeyDown, doKeyUp, doWindowMouseUp, doWindowMouseMove, handleClipboard, fileUploader, doFileOpen, doNotationMouseDown, doNotationMouseUp, doNotationMouseMove, doNotationDragOver, doNotationDragEnter, doNotationDragLeave, doNotationDrop, doNotationMouseWheel, controlArea, doControlMouseDown, doControlMouseMove, doControlMouseOut, titleArea, doTitleMouseDown, cctx, tctx, ctx, clipboardArea, cursor, loadCookie, initializeTitle, initializeNotation, initializeControls, resizeBarPosition, localize: true */
 /* jshint -W020 */
 
 function initialize() {
 	versionString = "0.9.2b";
-	devMode = false;
+	devMode = true;
 	
+    localize('en');
 	container = document.getElementById("container");
 	notationArea = document.getElementById("notationAreaCanvas");
 	window.addEventListener("keydown",doKeyDown,false); //if we need to deal with focus, check out stackoverflow.com/questions/12886286
@@ -34,7 +35,7 @@ function initialize() {
 	controlArea.addEventListener("mouseout",doControlMouseOut,false);
 	titleArea = document.getElementById("titleCanvas");
 	titleArea.addEventListener("mousedown",doTitleMouseDown,false);
-	cctx = controlArea.getContext("2d");
+	//cctx = controlArea.getContext("2d");
 	tctx = titleArea.getContext("2d");
 	ctx = notationArea.getContext("2d");
 	clipboardArea = document.getElementById("clipboard");

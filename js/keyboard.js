@@ -1,4 +1,4 @@
-/* global shiftKeyDown, metaKeyDown, cursor, whichKeyboard, score, clearSelection, cellIsEmpty, deleteScore, hScrollUnits, isMacOS, focusClipboard, firstCharPosInRow, hScroll, vScroll, deleteRowAtCursor, insertRowAtCursor, setScore, scoreWidth, scoreHeight, interpretBraille, updateScreenreader, drawAllDots, downloadFile, currentBeatUnit, parseOnImport, showPageBreaks, setPageSize, pageWidth, pageHeight, confirm, clearDocument, resetCursorAndScroll, fileUploader, rotateSelection, convertSelectionToText, useBrailleDisplay, doRedo, doUndo, setCellHeight, gridHeight, saveToUndo, suspendUndo, scrollToCursor, characterName, drawNotation, drawControls, getScore: true */
+/* global shiftKeyDown, metaKeyDown, cursor, whichKeyboard, score, clearSelection, cellIsEmpty, deleteScore, hScrollUnits, isMacOS, focusClipboard, firstCharPosInRow, hScroll, vScroll, deleteRowAtCursor, insertRowAtCursor, setScore, scoreWidth, scoreHeight, interpretBraille, updateScreenreader, drawAllDots, downloadFile, currentBeatUnit, parseOnImport, showPageBreaks, setPageSize, pageWidth, pageHeight, confirm, clearDocument, resetCursorAndScroll, fileUploader, rotateSelection, convertSelectionToText, useBrailleDisplay, doRedo, doUndo, setCellHeight, gridHeight, saveToUndo, suspendUndo, scrollToCursor, characterName, drawNotation, drawControls, getScore, currentControlModule: true */
 /* jshint -W020 */
 
 function doKeyDown(e) {
@@ -40,7 +40,9 @@ function doKeyUp(e) {
 }
 
 function interpretKeyCode(keyCode) {
-  	var x=cursor.x;
+  	currentControlModule.keyDown(keyCode);
+
+    var x=cursor.x;
 	var y=cursor.y;
 	var k=whichKeyboard;
 	var i, adv=1;
@@ -1201,14 +1203,3 @@ function isAfterDynamic(x,y) {
 	}
 	return result;
 }
-
-//function interpretEditFieldKeypress(e) {
-//	if (e.keyCode==9 || e.keyCode==13) { // tab(9) or enter(13)
-//		editFieldCallback.call();
-//		hideEditField();
-//		e.preventDefault();
-//		return true;
-//	} else {
-//		return false;
-//	}
-//}

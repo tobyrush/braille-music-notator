@@ -1,4 +1,4 @@
-/* global notationArea, gridHeight, gridWidth, notationGridHeight, notationGridWidth, notationCellWidth, notationCellHeight, ctx, showPageBreaks, pageWidth, pageHeight, hScrollUnits, vScrollUnits, hScrollOffset, vScrollOffset, hScroll, vScroll, gh, gw, score, arrayHasOwnIndex, interpretBraille, cursor, devMode, getScore, dropzone, optionsDialogOpen, fileDialogOpen, drawOptionsDialog, drawFileDialog, doNotCheckContiguousCells, brailleDots, drawAllDots, cellIsEmpty, setScore, saveToUndo, blankCells, longContractions, console: true */
+/* global notationArea, gridHeight, gridWidth, notationGridHeight, notationGridWidth, notationCellWidth, notationCellHeight, ctx, showPageBreaks, pageWidth, pageHeight, hScrollUnits, vScrollUnits, hScrollOffset, vScrollOffset, hScroll, vScroll, gh, gw, score, arrayHasOwnIndex, interpretBraille, cursor, devMode, getScore, dropzone, optionsDialogOpen, fileDialogOpen, drawOptionsDialog, drawFileDialog, doNotCheckContiguousCells, brailleDots, drawAllDots, cellIsEmpty, setScore, saveToUndo, blankCells, longContractions, console, kDropFileZoneMessage: true */
 /* jshint -W020 */
 
 function initializeNotation() {
@@ -78,13 +78,7 @@ function drawNotation() {
 		if ((y>vScrollUnits-1) && (y<vScrollUnits+(notationCellHeight+1)) && arrayHasOwnIndex(score,y)) {
 			for (var x in score[y]) {
 				if ((x>hScrollUnits-1) && (x<hScrollUnits+(notationCellWidth+1)) && arrayHasOwnIndex(score[y],x)) {
-					if (interpretBraille) {
-						drawInterpretedBrailleSymbol(ctx,score[y][x],(gridWidth*(x-hScrollUnits))-hScrollOffset,(gridHeight*(y-vScrollUnits))-vScrollOffset,x,y);
-					} else {
-						if (score[y][x] !== null) {
-							drawLiteralBrailleSymbol(ctx,score[y][x],(gridWidth*(x-hScrollUnits))-hScrollOffset,(gridHeight*(y-vScrollUnits))-vScrollOffset,x,y);
-						}
-					}
+					drawSymbol(ctx,score[y][x],(gridWidth*(x-hScrollUnits))-hScrollOffset,(gridHeight*(y-vScrollUnits))-vScrollOffset,x,y);
 				}
 			}
 		}
@@ -137,8 +131,8 @@ function drawNotation() {
 		ctx.textAlign="left";
 		ctx.textBaseline="top";
 		ctx.font="normal "+gh(0.25)+"px sans-serif";
-		//ctx.fillText(getScore(cursor.x,cursor.y),4,4);
-        ctx.fillText("vScroll: " + vScroll + "; vScrollUnits: " + vScrollUnits + "; vScrollOffset: " + vScrollOffset + "; notationCellHeight: " + notationCellHeight,4,4);
+		ctx.fillText(getScore(cursor.x,cursor.y),4,4);
+        //ctx.fillText("vScroll: " + vScroll + "; vScrollUnits: " + vScrollUnits + "; vScrollOffset: " + vScrollOffset + "; notationCellHeight: " + notationCellHeight,4,4);
 		
 	}
 	
@@ -152,7 +146,7 @@ function drawNotation() {
 		ctx.textBaseline="middle";
 		ctx.font="bold 36px sans-serif";
 		ctx.fillStyle="#00F";
-		ctx.fillText("drop file here to load",notationWidth/2,notationHeight/2);
+		ctx.fillText(kDropFileZoneMessage,notationWidth/2,notationHeight/2);
 	}
 	
 	if (optionsDialogOpen || fileDialogOpen) {
@@ -724,6 +718,16 @@ function checkContiguousCells(col,row,cells) {
 function checkPreviousCell(col,row,cell) {
 	// return ((score[row][+col-1] == cell) || ((typeof score[row][+col-1] == 'undefined') && (cell === 0)));
     return ((compareCell(score[row][+col-1],cell)) || ((typeof score[row][+col-1] == 'undefined') && (cell === 0)));
+}
+
+function drawSymbol(ctx,val,x,y,col,row) {
+    if (val !== null) {
+        if (interpretBraille) {
+            drawInterpretedBrailleSymbol(ctx,val,x,y,col,row);
+        } else {
+            drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
+        }
+    }
 }
 
 function drawLiteralBrailleSymbol(ctx,val,x,y,col,row) {

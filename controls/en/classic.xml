@@ -1,0 +1,2125 @@
+<controlModule name="Classic" help="default" font="sans-serif" style="normal" align="left" baseline="alphabetic">
+    <page name="1">
+        <indicator type="shift" top="67" left="13" width="27" height="9">
+            <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="SHIFT" />
+        </indicator>
+        <indicator type="control" top="76" left="13" width="27" height="9">
+            <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="CTRL" />
+        </indicator>
+        <control keycode="192" top="13" left="13" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" font="Bravura" size="80" align="center" top="48" left="48" content="&#xe1e7;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="`" />
+            <help page="augmentationDot" />
+            <character code="" />
+        </control>
+        <control keycode="49" top="13" left="31" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="C" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d2;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="1" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="50" top="13" left="49" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="D" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d2;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="2" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="51" top="13" left="67" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="E" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d2;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="3" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="52" top="13" left="85" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="F" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d2;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="4" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="53" top="13" left="103" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="G" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d2;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="5" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="54" top="13" left="121" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="A" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d2;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="6" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="55" top="13" left="139" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="B" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d2;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="7" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="56" top="13" left="157" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#929" />
+            <graphic type="text" color="#FFF" size="22" align="center" top="10" left="48" baseline="top" content="OCT" />
+            <graphic type="text" color="#FFF" size="45" align="center" top="75" left="48" content="8" />
+            <graphic type="text" color="#C8C" left="15" top="80" size="20" content="8" />
+            <help page="3.8" />
+            <character code="" />
+        </control>
+        <control keycode="57" top="13" left="175" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#929" />
+            <graphic type="text" color="#FFF" size="22" align="center" top="10" left="48" baseline="top" content="OCT" />
+            <graphic type="text" color="#FFF" size="45" align="center" top="75" left="48" content="4" />
+            <graphic type="text" color="#C8C" left="15" top="80" size="20" content="9" />
+            <help page="3.4" />
+            <character code="" />
+        </control>
+        <control keycode="48" top="13" left="193" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="60" font="Bravura" align="center" top="48" left="48" baseline="middle" content="&#xe4f4;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="0" />
+            <help page="4" />
+            <character code="" />
+        </control>
+        <control keycode="189" top="13" left="211" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F80" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="48" content="&#xe264;" />
+            <graphic type="text" color="#740" left="15" top="80" size="20" content="-" />
+            <help page="5" />
+            <character code="" />
+        </control>
+        <control keycode="187" top="13" left="229" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F80" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="47" left="48" content="&#xe263;" />
+             <graphic type="text" color="#740" left="15" top="80" size="20" content="=" />
+            <help page="5" />
+            <character code="" />
+        </control>
+        <control keycode="81" top="31" left="40" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="C" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d3;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="Q" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="87" top="31" left="58" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="D" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d3;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="W" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="69" top="31" left="76" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="E" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d3;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="E" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="82" top="31" left="94" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="F" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d3;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="R" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="84" top="31" left="112" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="G" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d3;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="T" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="89" top="31" left="130" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="A" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d3;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="Y" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="85" top="31" left="148" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="B" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d3;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="U" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="73" top="31" left="166" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#929" />
+            <graphic type="text" color="#FFF" size="22" align="center" top="10" left="48" baseline="top" content="OCT" />
+            <graphic type="text" color="#FFF" size="45" align="center" top="75" left="48" baseline="alphabetic" content="7" />
+            <graphic type="text" color="#C8C" left="15" top="80" size="20" content="I" />
+            <help page="3.7" />
+            <character code="" />
+        </control>
+        <control keycode="79" top="31" left="184" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#929" />
+            <graphic type="text" color="#FFF" size="22" align="center" top="10" left="48" baseline="top" content="OCT" />
+            <graphic type="text" color="#FFF" size="45" align="center" top="75" left="48" baseline="alphabetic" content="3" />
+            <graphic type="text" color="#C8C" left="15" top="80" size="20" content="O" />
+            <help page="3.3" />
+            <character code="" />
+        </control>
+        <control keycode="80" top="31" left="202" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="60" font="Bravura" align="center" top="48" left="48" baseline="middle" content="&#xe4f5;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="P" />
+            <help page="4" />
+            <character code="" />
+        </control>
+        <control keycode="219" top="31" left="220" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F80" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="48" content="&#xe260;" />
+             <graphic type="text" color="#740" left="15" top="80" size="20" content="[" />
+            <help page="5" />
+            <character code="" />
+        </control>
+        <control keycode="221" top="31" left="238" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F80" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="47" left="48" content="&#xe262;" />
+             <graphic type="text" color="#740" left="15" top="80" size="20" content="]" />
+            <help page="5" />
+            <character code="" />
+        </control>
+        <control keycode="220" top="31" left="256" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F80" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="47" left="48" content="&#xe261;" />
+            <graphic type="text" color="#740" left="15" top="80" size="20" content="\" />
+            <help page="5" />
+            <character code="" />
+        </control>
+        <control keycode="65" top="49" left="46" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="C" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d5;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="A" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="83" top="49" left="64" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="D" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d5;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="S" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="68" top="49" left="82" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="E" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d5;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="D" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="70" top="49" left="100" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="F" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d5;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="F" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="71" top="49" left="118" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="G" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d5;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="G" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="72" top="49" left="136" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="A" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d5;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="H" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="74" top="49" left="154" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="B" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d5;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="J" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="75" top="49" left="172" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#929" />
+            <graphic type="text" color="#FFF" size="22" align="center" top="10" left="48" baseline="top" content="OCT" />
+            <graphic type="text" color="#FFF" size="45" align="center" top="75" left="48" baseline="alphabetic" content="6" />
+            <graphic type="text" color="#C8C" left="15" top="80" size="20" content="K" />
+            <help page="3.6" />
+            <character code="" />
+        </control>
+        <control keycode="76" top="49" left="190" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#929" />
+            <graphic type="text" color="#FFF" size="22" align="center" top="10" left="48" baseline="top" content="OCT" />
+            <graphic type="text" color="#FFF" size="45" align="center" top="75" left="48" baseline="alphabetic" content="2" />
+            <graphic type="text" color="#C8C" left="15" top="80" size="20" content="L" />
+            <help page="3.2" />
+            <character code="" />
+        </control>
+        <control keycode="186" top="49" left="208" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="60" font="Bravura" align="center" top="48" left="48" baseline="middle" content="&#xe4e5;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content=";" />
+            <help page="4" />
+            <character code="" />
+        </control>
+        <control keycode="222" top="49" left="226" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="60" font="Bravura" align="center" top="48" left="48" baseline="middle" content="&#xe4e6;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="'" />
+            <help page="4" />
+            <character code="" />
+        </control>
+        <control keycode="90" top="67" left="52" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="C" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d7;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="Z" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="88" top="67" left="70" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="D" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d7;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="X" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="67" top="67" left="88" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="E" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d7;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="C" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="86" top="67" left="106" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="F" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d7;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="V" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="66" top="67" left="124" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="G" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d7;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="B" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="78" top="67" left="142" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="A" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d7;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="N" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="77" top="67" left="160" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="B" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d7;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="M" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="188" top="67" left="178" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#929" />
+            <graphic type="text" color="#FFF" size="22" align="center" top="10" left="48" baseline="top" content="OCT" />
+            <graphic type="text" color="#FFF" size="45" align="center" top="75" left="48" baseline="alphabetic" content="5" />
+            <graphic type="text" color="#C8C" left="15" top="80" size="20" content="," />
+            <help page="3.5" />
+            <character code="" />
+        </control>
+        <control keycode="190" top="67" left="196" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#929" />
+            <graphic type="text" color="#FFF" size="22" align="center" top="10" left="48" baseline="top" content="OCT" />
+            <graphic type="text" color="#FFF" size="45" align="center" top="75" left="48" baseline="alphabetic" content="1" />
+            <graphic type="text" color="#C8C" left="15" top="80" size="20" content="." />
+            <help page="3.1" />
+            <character code="" />
+        </control>
+        <control keycode="191" top="67" left="214" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#929" />
+            <graphic type="text" color="#FFF" size="22" align="center" top="10" left="48" baseline="top" content="OCT" />
+            <graphic type="text" color="#FFF" size="45" align="center" top="75" left="48" baseline="alphabetic" content="0" />
+            <graphic type="text" color="#C8C" left="15" top="80" size="20" content="/" />
+            <help page="octaveZero" />
+            <character code="" />
+        </control>
+   </page>
+    <page name="2">
+        <indicator type="shift" top="67" left="13" width="27" height="9">
+            <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="SHIFT" />
+        </indicator>
+        <indicator type="control" top="76" left="13" width="27" height="9">
+            <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="CTRL" />
+        </indicator>
+        <control keycode="192" top="13" left="13" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" font="Bravura" size="80" align="center" top="48" left="48" content="&#xe1e7;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="`" />
+            <help page="1" />
+            <character code="" />
+        </control>
+        <control keycode="49" top="13" left="31" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="C" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d9;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="1" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="50" top="13" left="49" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="D" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d9;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="2" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="51" top="13" left="67" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="E" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d9;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="3" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="52" top="13" left="85" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="F" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d9;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="4" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="53" top="13" left="103" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="G" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d9;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="5" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="54" top="13" left="121" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="A" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d9;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="6" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="55" top="13" left="139" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="B" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1d9;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="7" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="56" top="13" left="157" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FAF" />
+            <graphic type="text" color="#000" size="30" align="center" top="27" left="48" content="+" />
+            <graphic type="text" color="#000" size="35" align="center" top="60" left="48" content="8ve" />
+            <graphic type="text" color="#757" left="15" top="80" size="20" content="8" />
+            <help page="6" />
+            <character code="" />
+        </control>
+        <control keycode="57" top="13" left="175" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FAF" />
+            <graphic type="text" color="#000" size="30" align="center" top="27" left="48" content="+" />
+            <graphic type="text" color="#000" size="35" align="center" top="60" left="48" content="4th" />
+            <graphic type="text" color="#757" left="15" top="80" size="20" content="9" />
+            <help page="6" />
+            <character code="" />
+        </control>
+        <control keycode="48" top="13" left="193" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="60" font="Bravura" align="center" top="48" left="48" baseline="middle" content="&#xe4e7;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="0" />
+            <help page="4" />
+            <character code="" />
+        </control>
+        <control keycode="189" top="13" left="211" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F80" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="48" content="&#xe264;" />
+            <graphic type="text" color="#740" left="15" top="80" size="20" content="-" />
+            <help page="5" />
+            <character code="" />
+        </control>
+        <control keycode="187" top="13" left="229" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F80" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="47" left="48" content="&#xe263;" />
+             <graphic type="text" color="#740" left="15" top="80" size="20" content="=" />
+            <help page="5" />
+            <character code="" />
+        </control>
+        <control keycode="81" top="31" left="40" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="C" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1db;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="Q" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="87" top="31" left="58" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="D" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1db;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="W" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="69" top="31" left="76" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="E" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1db;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="E" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="82" top="31" left="94" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="F" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1db;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="R" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="84" top="31" left="112" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="G" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1db;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="T" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="89" top="31" left="130" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="A" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1db;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="Y" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="85" top="31" left="148" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="B" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1db;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="U" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="73" top="31" left="166" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FAF" />
+            <graphic type="text" color="#000" size="30" align="center" top="27" left="48" content="+" />
+            <graphic type="text" color="#000" size="35" align="center" top="60" left="48" content="7th" />
+            <graphic type="text" color="#757" left="15" top="80" size="20" content="I" />
+            <help page="6" />
+            <character code="" />
+        </control>
+        <control keycode="79" top="31" left="184" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FAF" />
+            <graphic type="text" color="#000" size="30" align="center" top="27" left="48" content="+" />
+            <graphic type="text" color="#000" size="35" align="center" top="60" left="48" content="3rd" />
+            <graphic type="text" color="#757" left="15" top="80" size="20" content="O" />
+            <help page="6" />
+            <character code="" />
+        </control>
+        <control keycode="80" top="31" left="202" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="60" font="Bravura" align="center" top="48" left="48" baseline="middle" content="&#xe4e8;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="P" />
+            <help page="4" />
+            <character code="" />
+        </control>
+        <control keycode="219" top="31" left="220" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F80" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="48" content="&#xe260;" />
+             <graphic type="text" color="#740" left="15" top="80" size="20" content="[" />
+            <help page="5" />
+            <character code="" />
+        </control>
+        <control keycode="221" top="31" left="238" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F80" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="47" left="48" content="&#xe262;" />
+             <graphic type="text" color="#740" left="15" top="80" size="20" content="]" />
+            <help page="5" />
+            <character code="" />
+        </control>
+        <control keycode="220" top="31" left="256" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F80" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="47" left="48" content="&#xe261;" />
+             <graphic type="text" color="#740" left="15" top="80" size="20" content="\" />
+            <help page="5" />
+            <character code="" />
+        </control>
+        <control keycode="65" top="49" left="46" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="C" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1dd;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="A" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="83" top="49" left="64" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="D" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1dd;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="S" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="68" top="49" left="82" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="E" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1dd;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="D" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="70" top="49" left="100" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="F" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1dd;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="F" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="71" top="49" left="118" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="G" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1dd;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="G" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="72" top="49" left="136" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="A" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1dd;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="H" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="74" top="49" left="154" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="B" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1dd;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="J" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="75" top="49" left="172" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FAF" />
+            <graphic type="text" color="#000" size="30" align="center" top="27" left="48" content="+" />
+            <graphic type="text" color="#000" size="35" align="center" top="60" left="48" content="6th" />
+            <graphic type="text" color="#757" left="15" top="80" size="20" content="K" />
+            <help page="6" />
+            <character code="" />
+        </control>
+        <control keycode="76" top="49" left="190" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FAF" />
+            <graphic type="text" color="#000" size="30" align="center" top="27" left="48" content="+" />
+            <graphic type="text" color="#000" size="35" align="center" top="60" left="48" content="2nd" />
+            <graphic type="text" color="#757" left="15" top="80" size="20" content="L" />
+            <help page="6" />
+            <character code="" />
+        </control>
+        <control keycode="186" top="49" left="208" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="48" left="48" baseline="middle" content="&#xe4e9;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content=";" />
+            <help page="4" />
+            <character code="" />
+        </control>
+        <control keycode="222" top="49" left="226" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="48" left="48" baseline="middle" content="&#xe4ea;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="'" />
+            <help page="4" />
+            <character code="" />
+        </control>
+         <control keycode="90" top="67" left="52" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="C" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1df;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="Z" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="88" top="67" left="70" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="D" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1df;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="X" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="67" top="67" left="88" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="E" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1df;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="C" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="86" top="67" left="106" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="F" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1df;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="V" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="66" top="67" left="124" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="G" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1df;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="B" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="78" top="67" left="142" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="A" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1df;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="N" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="77" top="67" left="160" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="33" align="center" top="10" left="40" baseline="top" content="B" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="right" top="75" left="80" baseline="alphabetic" content="&#xe1df;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="M" />
+            <help page="notes" />
+            <character code="" />
+        </control>
+        <control keycode="188" top="67" left="178" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FAF" />
+            <graphic type="text" color="#000" size="30" align="center" top="27" left="48" content="+" />
+            <graphic type="text" color="#000" size="35" align="center" top="60" left="48" content="5th" />
+            <graphic type="text" color="#757" left="15" top="80" size="20" content="," />
+            <help page="6" />
+            <character code="" />
+        </control>
+        <control keycode="190" top="67" left="196" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#ff0" />
+            <graphic type="arc" x="48" y="65" radius="40" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000"/>
+            <graphic type="text" color="#000" size="20" align="center" top="60" left="47" content="TIE" />
+            <graphic type="text" color="#770" left="15" top="80" size="20" content="." />
+            <help page="7" />
+            <character code="" />
+        </control>
+        <control keycode="191" top="67" left="214" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="45" font="Bravura" align="center" top="50" left="50" baseline="middle" content="&#xe560;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="/" />
+            <help page="32" />
+            <character code="" />
+        </control>
+   </page>
+    <page name="3">
+        <indicator type="shift" top="67" left="13" width="27" height="9">
+            <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="SHIFT" />
+        </indicator>
+        <indicator type="control" top="76" left="13" width="27" height="9">
+            <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="CTRL" />
+        </indicator>
+        <control keycode="192" top="13" left="13" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#FFF" size="20" align="center" top="40" left="47" content="METER" />
+            <graphic type="text" color="#FFF" size="20" align="center" top="66" left="47" content="PREFIX" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="`" />
+            <help page="8" />
+            <character code="" />
+        </control>
+        <control keycode="49" top="13" left="31" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="30" left="53" content="&#xe080;" />
+            <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="76" left="53" content="x" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="1" />
+            <help page="8" />
+            <character code="" />
+        </control>
+        <control keycode="50" top="13" left="49" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="30" left="53" content="&#xe081;" />
+            <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="76" left="53" content="x" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="2" />
+            <help page="8" />
+            <character code="" />
+        </control>
+        <control keycode="51" top="13" left="67" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="30" left="53" content="&#xe082;" />
+            <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="76" left="53" content="x" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="3" />
+            <help page="8" />
+            <character code="" />
+        </control>
+        <control keycode="52" top="13" left="85" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="30" left="53" content="&#xe083;" />
+            <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="76" left="53" content="x" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="4" />
+            <help page="8" />
+            <character code="" />
+        </control>
+        <control keycode="53" top="13" left="103" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="30" left="53" content="&#xe084;" />
+            <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="76" left="53" content="x" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="5" />
+            <help page="8" />
+            <character code="" />
+        </control>
+        <control keycode="54" top="13" left="121" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="30" left="53" content="&#xe085;" />
+            <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="76" left="53" content="x" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="6" />
+            <help page="8" />
+            <character code="" />
+        </control>
+        <control keycode="55" top="13" left="139" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="30" left="53" content="&#xe086;" />
+            <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="76" left="53" content="x" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="7" />
+            <help page="8" />
+            <character code="" />
+        </control>
+        <control keycode="56" top="13" left="157" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="30" left="53" content="&#xe087;" />
+            <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="76" left="53" content="x" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="8" />
+            <help page="8" />
+            <character code="" />
+        </control>
+        <control keycode="57" top="13" left="175" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="30" left="53" content="&#xe088;" />
+            <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="76" left="53" content="x" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="9" />
+            <help page="8" />
+            <character code="" />
+        </control>
+        <control keycode="48" top="13" left="193" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="30" left="53" content="&#xe089;" />
+            <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="76" left="53" content="x" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="0" />
+            <help page="8" />
+            <character code="" />
+        </control>
+        <control keycode="189" top="13" left="211" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#FFF" size="65" font="Bravura" align="center" top="47" left="47" content="&#xe08a;" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="-" />
+            <help page="9" />
+            <character code="" />
+        </control>
+        <control keycode="187" top="13" left="229" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#FFF" size="65" font="Bravura" align="center" top="47" left="47" content="&#xe08b;" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="=" />
+            <help page="9" />
+            <character code="" />
+        </control>
+        <control keycode="81" top="31" left="40" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="40" left="53" content="x" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="63" left="53" content="&#xe080;" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="Q" />
+            <help page="8" />
+            <character code="" />
+        </control>
+        <control keycode="87" top="31" left="58" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="40" left="53" content="x" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="63" left="53" content="&#xe081;" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="W" />
+            <help page="8" />
+            <character code="" />
+        </control>
+        <control keycode="69" top="31" left="76" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="40" left="53" content="x" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="63" left="53" content="&#xe082;" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="E" />
+            <help page="8" />
+            <character code="" />
+        </control>
+        <control keycode="82" top="31" left="94" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="40" left="53" content="x" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="63" left="53" content="&#xe083;" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="R" />
+            <help page="8" />
+            <character code="" />
+        </control>
+        <control keycode="84" top="31" left="112" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="40" left="53" content="x" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="63" left="53" content="&#xe084;" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="T" />
+            <help page="8" />
+            <character code="" />
+        </control>
+        <control keycode="89" top="31" left="130" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="40" left="53" content="x" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="63" left="53" content="&#xe085;" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="Y" />
+            <help page="8" />
+            <character code="" />
+        </control>
+        <control keycode="85" top="31" left="148" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="40" left="53" content="x" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="63" left="53" content="&#xe086;" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="U" />
+            <help page="8" />
+            <character code="" />
+        </control>
+        <control keycode="73" top="31" left="166" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="40" left="53" content="x" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="63" left="53" content="&#xe087;" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="I" />
+            <help page="8" />
+            <character code="" />
+        </control>
+        <control keycode="79" top="31" left="184" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="40" left="53" content="x" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="63" left="53" content="&#xe088;" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="O" />
+            <help page="8" />
+            <character code="" />
+        </control>
+        <control keycode="80" top="31" left="202" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="40" left="53" content="x" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="63" left="53" content="&#xe089;" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="P" />
+            <help page="8" />
+            <character code="" />
+        </control>
+        <control keycode="219" top="31" left="220" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="80" font="Bravura" align="center" top="57" left="48" content="&#xe260;" />
+             <graphic type="text" color="#77F" left="15" top="80" size="20" content="[" />
+            <help page="10" />
+            <character code="" />
+        </control>
+        <control keycode="221" top="31" left="238" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="80" font="Bravura" align="center" top="47" left="48" content="&#xe262;" />
+             <graphic type="text" color="#77F" left="15" top="80" size="20" content="]" />
+            <help page="10" />
+            <character code="" />
+        </control>
+        <control keycode="220" top="31" left="256" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="80" font="Bravura" align="center" top="47" left="48" content="&#xe261;" />
+             <graphic type="text" color="#77F" left="15" top="80" size="20" content="\" />
+            <help page="10" />
+            <character code="" />
+        </control>
+        <control keycode="65" top="49" left="46" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe880;" />
+            <graphic type="text" color="#770" left="15" top="80" size="20" content="A" />
+            <help page="11.1" />
+            <character code="" />
+        </control>
+        <control keycode="83" top="49" left="64" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe881;" />
+            <graphic type="text" color="#770" left="15" top="80" size="20" content="S" />
+            <help page="11.1" />
+            <character code="" />
+        </control>
+        <control keycode="68" top="49" left="82" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe882;" />
+            <graphic type="text" color="#770" left="15" top="80" size="20" content="D" />
+            <help page="11.1" />
+            <character code="" />
+        </control>
+        <control keycode="70" top="49" left="100" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe883;" />
+            <graphic type="text" color="#770" left="15" top="80" size="20" content="F" />
+            <help page="11.1" />
+            <character code="" />
+        </control>
+        <control keycode="71" top="49" left="118" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe884;" />
+            <graphic type="text" color="#770" left="15" top="80" size="20" content="G" />
+            <help page="11.1" />
+            <character code="" />
+        </control>
+        <control keycode="72" top="49" left="136" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe885;" />
+            <graphic type="text" color="#770" left="15" top="80" size="20" content="H" />
+            <help page="11.1" />
+            <character code="" />
+        </control>
+        <control keycode="74" top="49" left="154" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe886;" />
+            <graphic type="text" color="#770" left="15" top="80" size="20" content="J" />
+            <help page="11.1" />
+            <character code="" />
+        </control>
+        <control keycode="75" top="49" left="172" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe887;" />
+            <graphic type="text" color="#770" left="15" top="80" size="20" content="K" />
+            <help page="11.1" />
+            <character code="" />
+        </control>
+        <control keycode="76" top="49" left="190" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe888;" />
+            <graphic type="text" color="#770" left="15" top="80" size="20" content="L" />
+            <help page="11.1" />
+            <character code="" />
+        </control>
+        <control keycode="186" top="49" left="208" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe889;" />
+            <graphic type="text" color="#770" left="15" top="80" size="20" content=";" />
+            <help page="11.1" />
+            <character code="" />
+        </control>
+        <control keycode="222" top="49" left="226" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
+            <graphic type="text" color="#000" size="60" font="Bravura" align="center" top="100" left="20" baseline="middle" content="&#xe1fe;" />
+            <graphic type="text" color="#000" size="60" font="Bravura" align="center" top="100" left="30" baseline="middle" content="&#xe1ff;" />
+            <graphic type="text" color="#000" size="60" font="Bravura" align="center" top="100" left="60" baseline="middle" content="&#xe200;" />
+            <graphic type="text" color="#770" left="15" top="80" size="20" content="'" />
+            <help page="11.2" />
+            <character code="" />
+        </control>
+         <control keycode="90" top="67" left="52" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
+            <graphic type="text" color="#000" size="80" align="center" font="Bravura" top="130" left="40" baseline="middle" content="&#xe1fe;" />
+            <graphic type="text" color="#770" left="15" top="80" size="20" content="Z" />
+            <help page="11.1" />
+            <character code="" />
+        </control>
+        <control keycode="88" top="67" left="70" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
+            <graphic type="text" color="#000" size="80" align="center" font="Bravura" top="130" left="40" baseline="middle" content="&#xe200;" />
+            <graphic type="text" color="#770" left="15" top="80" size="20" content="X" />
+            <help page="11.1" />
+            <character code="" />
+        </control>
+        <control keycode="67" top="67" left="88" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#ff0" />
+            <graphic type="arc" x="48" y="65" radius="40" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000"/>
+            <graphic type="text" color="#000" size="20" align="center" top="60" left="47" content="SLUR" />
+            <graphic type="text" color="#770" left="15" top="80" size="20" content="C" />
+            <help page="12" />
+            <character code="" />
+        </control>
+        <control keycode="86" top="67" left="106" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
+            <graphic type="text" color="#000" size="20" align="center" top="25" left="47" baseline="middle" content="BEGIN" />
+            <graphic type="text" color="#000" size="20" align="center" top="51" left="47" baseline="middle" content="SLUR" />
+            <graphic type="text" color="#770" left="15" top="80" size="20" content="V" />
+            <help page="13" />
+            <character code="" />
+        </control>
+        <control keycode="66" top="67" left="124" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
+            <graphic type="text" color="#000" size="20" align="center" top="25" left="47" baseline="middle" content="END" />
+            <graphic type="text" color="#000" size="20" align="center" top="51" left="47" baseline="middle" content="SLUR" />
+            <graphic type="text" color="#770" left="15" top="80" size="20" content="B" />
+            <help page="13" />
+            <character code="" />
+        </control>
+        <control keycode="78" top="67" left="142" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="20" align="center" top="25" left="47" baseline="middle" content="KEY" />
+            <graphic type="text" color="#FFF" size="20" align="center" top="51" left="47" baseline="middle" content="PREFIX" />
+            <graphic type="text" color="#77F" left="15" top="80" size="20" content="N" />
+            <help page="10" />
+            <character code="" />
+        </control>
+        <control keycode="77" top="67" left="160" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="40" align="center" top="40" left="47" baseline="middle" content="4×" />
+            <graphic type="text" color="#77F" left="15" top="80" size="20" content="M" />
+            <help page="10" />
+            <character code="" />
+        </control>
+        <control keycode="188" top="67" left="178" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="40" align="center" top="40" left="47" baseline="middle" content="5×" />
+            <graphic type="text" color="#77F" left="15" top="80" size="20" content="," />
+            <help page="10" />
+            <character code="" />
+        </control>
+        <control keycode="190" top="67" left="196" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="40" align="center" top="40" left="47" baseline="middle" content="6×" />
+            <graphic type="text" color="#77F" left="15" top="80" size="20" content="." />
+            <help page="10" />
+            <character code="" />
+        </control>
+        <control keycode="191" top="67" left="214" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="40" align="center" top="40" left="47" baseline="middle" content="7×" />
+            <graphic type="text" color="#77F" left="15" top="80" size="20" content="/" />
+            <help page="10" />
+            <character code="" />
+        </control>
+   </page>
+    <page name="4">
+        <indicator type="shift" top="67" left="13" width="27" height="9">
+            <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="SHIFT" />
+        </indicator>
+        <indicator type="control" top="76" left="13" width="27" height="9">
+            <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="CTRL" />
+        </indicator>
+        <control keycode="192" top="13" left="13" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="`" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="49" top="13" left="31" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#7F462C" />
+            <graphic type="text" color="#FFF" size="60" font="Bravura" align="center" baseline="middle" top="48" left="48" content="&#xe4a2;" />
+            <graphic type="text" color="#bfa295" left="15" top="80" size="20" content="1" />
+            <help page="14" />
+            <character code="" />
+        </control>
+        <control keycode="50" top="13" left="49" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#7F462C" />
+            <graphic type="text" color="#FFF" size="60" font="Bravura" align="center" baseline="middle" top="48" left="48" content="&#xe4a4;" />
+            <graphic type="text" color="#bfa295" left="15" top="80" size="20" content="2" />
+            <help page="14" />
+            <character code="" />
+        </control>
+        <control keycode="51" top="13" left="67" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#7F462C" />
+            <graphic type="text" color="#FFF" size="60" font="Bravura" align="center" baseline="middle" top="48" left="48" content="&#xe4a0;" />
+            <graphic type="text" color="#bfa295" left="15" top="80" size="20" content="3" />
+            <help page="14" />
+            <character code="" />
+        </control>
+        <control keycode="52" top="13" left="85" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#7F462C" />
+            <graphic type="text" color="#FFF" size="60" font="Bravura" align="center" baseline="middle" top="48" left="48" content="&#xe4ac;" />
+            <graphic type="text" color="#bfa295" left="15" top="80" size="20" content="4" />
+            <help page="14" />
+            <character code="" />
+        </control>
+        <control keycode="53" top="13" left="103" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#7F462C" />
+            <graphic type="text" color="#FFF" size="60" font="Bravura" align="center" baseline="middle" top="48" left="48" content="&#xe4c0;" />
+            <graphic type="text" color="#bfa295" left="15" top="80" size="20" content="5" />
+            <help page="14" />
+            <character code="" />
+        </control>
+        <control keycode="54" top="13" left="121" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#7F462C" />
+            <graphic type="text" color="#FFF" size="60" font="Bravura" align="center" baseline="middle" top="48" left="48" content="&#xe4ce;" />
+            <graphic type="text" color="#bfa295" left="15" top="80" size="20" content="6" />
+            <help page="14" />
+            <character code="" />
+        </control>
+        <control keycode="55" top="13" left="139" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#7F462C" />
+            <graphic type="text" color="#FFF" size="60" font="Bravura" align="center" baseline="middle" top="48" left="48" content="&#xe566;" />
+            <graphic type="text" color="#bfa295" left="15" top="80" size="20" content="7" />
+            <help page="14" />
+            <character code="" />
+        </control>
+        <control keycode="56" top="13" left="157" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#7F462C" />
+            <graphic type="text" color="#FFF" size="60" font="Bravura" align="center" baseline="middle" top="48" left="48" content="&#xe612;" />
+            <graphic type="text" color="#bfa295" left="15" top="80" size="20" content="8" />
+            <help page="14" />
+            <character code="" />
+        </control>
+        <control keycode="57" top="13" left="175" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#7F462C" />
+            <graphic type="text" color="#FFF" size="60" font="Bravura" align="center" baseline="middle" top="48" left="48" content="&#xe610;" />
+            <graphic type="text" color="#bfa295" left="15" top="80" size="20" content="9" />
+            <help page="14" />
+            <character code="" />
+        </control>
+        <control keycode="48" top="13" left="193" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="0" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="189" top="13" left="211" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="60" font="Bravura" align="center" baseline="middle" top="48" left="48" content="&#xe4ef;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="-" />
+            <help page="28" />
+            <character code="" />
+        </control>
+        <control keycode="187" top="13" left="229" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
+            <graphic type="text" color="#FFF" size="60" font="Bravura" align="center" baseline="middle" top="48" left="48" content="&#xe4f1;" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="=" />
+            <help page="28" />
+            <character code="" />
+        </control>
+        <control keycode="81" top="31" left="40" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#7F462C" />
+            <graphic type="text" color="#FFF" size="60" font="Bravura" align="center" baseline="middle" top="48" left="48" content="&#xea51;" />
+            <graphic type="text" color="#bfa295" left="15" top="80" size="20" content="Q" />
+            <help page="30" />
+            <character code="" />
+        </control>
+        <control keycode="87" top="31" left="58" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#7F462C" />
+            <graphic type="text" color="#FFF" size="60" font="Bravura" align="center" baseline="middle" top="48" left="48" content="&#xea52;" />
+            <graphic type="text" color="#bfa295" left="15" top="80" size="20" content="W" />
+            <help page="30" />
+            <character code="" />
+        </control>
+        <control keycode="69" top="31" left="76" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#7F462C" />
+            <graphic type="text" color="#FFF" size="60" font="Bravura" align="center" baseline="middle" top="48" left="48" content="&#xea54;" />
+            <graphic type="text" color="#bfa295" left="15" top="80" size="20" content="E" />
+            <help page="30" />
+            <character code="" />
+        </control>
+        <control keycode="82" top="31" left="94" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#7F462C" />
+            <graphic type="text" color="#FFF" size="60" font="Bravura" align="center" baseline="middle" top="48" left="48" content="&#xea55;" />
+            <graphic type="text" color="#bfa295" left="15" top="80" size="20" content="R" />
+            <help page="30" />
+            <character code="" />
+        </control>
+        <control keycode="84" top="31" left="112" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#7F462C" />
+            <graphic type="text" color="#FFF" size="60" font="Bravura" align="center" baseline="middle" top="48" left="48" content="&#xea57;" />
+            <graphic type="text" color="#bfa295" left="15" top="80" size="20" content="T" />
+            <help page="30" />
+            <character code="" />
+        </control>
+        <control keycode="89" top="31" left="130" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#7F462C" />
+            <graphic type="text" color="#FFF" size="60" font="Bravura" align="center" baseline="middle" top="48" left="48" content="&#xe577;" />
+            <graphic type="text" color="#bfa295" left="15" top="80" size="20" content="Y" />
+            <help page="30" />
+            <character code="" />
+        </control>
+        <control keycode="85" top="31" left="148" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="U" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="73" top="31" left="166" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="I" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="79" top="31" left="184" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="O" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="80" top="31" left="202" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#0F0" />
+            <graphic type="text" color="#000" size="35" font="Bravura" align="center" baseline="middle" top="60" left="50" content="&#xe014;&#xe014;&#xe014;" />
+            <graphic type="text" color="#000" size="35" font="Bravura" align="center" baseline="middle" top="52" left="50" content="&#xe050;" />
+            <graphic type="text" color="#077" left="15" top="80" size="20" content="P" />
+            <help page="24" />
+            <character code="" />
+        </control>
+        <control keycode="219" top="31" left="220" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#0F0" />
+            <graphic type="text" color="#000" size="35" font="Bravura" align="center" baseline="middle" top="60" left="50" content="&#xe014;&#xe014;&#xe014;" />
+            <graphic type="text" color="#000" size="35" font="Bravura" align="center" baseline="middle" top="43" left="50" content="&#xe05b;" />
+            <graphic type="text" color="#077" left="15" top="80" size="20" content="[" />
+            <help page="24" />
+            <character code="" />
+        </control>
+        <control keycode="221" top="31" left="238" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#0F0" />
+            <graphic type="text" color="#000" size="35" font="Bravura" align="center" baseline="middle" top="60" left="50" content="&#xe014;&#xe014;&#xe014;" />
+            <graphic type="text" color="#000" size="35" font="Bravura" align="center" baseline="middle" top="34" left="50" content="&#xe05b;" />
+            <graphic type="text" color="#077" left="15" top="80" size="20" content="]" />
+            <help page="24" />
+            <character code="" />
+        </control>
+        <control keycode="220" top="31" left="256" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#0F0" />
+            <graphic type="text" color="#000" size="35" font="Bravura" align="center" baseline="middle" top="60" left="50" content="&#xe014;&#xe014;&#xe014;" />
+            <graphic type="text" color="#000" size="35" font="Bravura" align="center" baseline="middle" top="33" left="50" content="&#xe061;" />
+            <graphic type="text" color="#077" left="15" top="80" size="20" content="\" />
+            <help page="24" />
+            <character code="" />
+        </control>
+        <control keycode="65" top="49" left="46" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#0FF" />
+            <graphic type="text" color="#000" size="60" font="Bravura" align="center" top="42" left="56" baseline="middle" content="&#xe52f;" />
+            <graphic type="text" color="#077" left="15" top="80" size="20" content="A" />
+            <help page="17" />
+            <character code="" />
+        </control>
+        <control keycode="83" top="49" left="64" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#0FF" />
+            <graphic type="text" color="#000" size="60" font="Bravura" align="center" top="42" left="56" baseline="middle" content="&#xe522;" />
+            <graphic type="text" color="#077" left="15" top="80" size="20" content="S" />
+            <help page="17" />
+            <character code="" />
+        </control>
+        <control keycode="68" top="49" left="82" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#0FF" />
+            <graphic type="text" color="#000" size="60" font="Bravura" align="center" top="42" left="56" baseline="middle" content="&#xe52d;" />
+            <graphic type="text" color="#077" left="15" top="80" size="20" content="D" />
+            <help page="17" />
+            <character code="" />
+        </control>
+        <control keycode="70" top="49" left="100" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#0FF" />
+            <graphic type="text" color="#000" size="60" font="Bravura" align="center" top="42" left="56" baseline="middle" content="&#xe52c;" />
+            <graphic type="text" color="#077" left="15" top="80" size="20" content="F" />
+            <help page="17" />
+            <character code="" />
+        </control>
+        <control keycode="71" top="49" left="118" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#0FF" />
+            <graphic type="text" color="#000" size="60" font="Bravura" align="center" top="42" left="56" baseline="middle" content="&#xe520;" />
+            <graphic type="text" color="#077" left="15" top="80" size="20" content="G" />
+            <help page="17" />
+            <character code="" />
+        </control>
+        <control keycode="72" top="49" left="136" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#0FF" />
+            <graphic type="text" color="#000" size="60" font="Bravura" align="center" top="42" left="56" baseline="middle" content="&#xe52b;" />
+            <graphic type="text" color="#077" left="15" top="80" size="20" content="H" />
+            <help page="17" />
+            <character code="" />
+        </control>
+        <control keycode="74" top="49" left="154" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="J" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="75" top="49" left="172" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#0FF" />
+            <graphic type="text" color="#000" size="20" align="center" top="25" left="47" baseline="middle" content="BEGIN" />
+            <graphic type="line" color="#000" startX="70" startY="45" endX="30" endY="55" lineWidth="1" />
+            <graphic type="line" color="#000" startX="30" startY="55" endX="70" endY="65" lineWidth="1" />
+            <graphic type="text" color="#077" left="15" top="80" size="20" content="K" />
+            <help page="18" />
+            <character code="" />
+        </control>
+        <control keycode="76" top="49" left="190" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#0FF" />
+            <graphic type="text" color="#000" size="20" align="center" top="25" left="47" baseline="middle" content="END" />
+            <graphic type="line" color="#000" startX="70" startY="45" endX="30" endY="55" lineWidth="1" />
+            <graphic type="line" color="#000" startX="30" startY="55" endX="70" endY="65" lineWidth="1" />
+            <graphic type="text" color="#077" left="15" top="80" size="20" content="L" />
+            <help page="18" />
+            <character code="" />
+        </control>
+        <control keycode="186" top="49" left="208" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#0FF" />
+            <graphic type="text" color="#000" size="20" align="center" top="25" left="47" baseline="middle" content="BEGIN" />
+            <graphic type="line" color="#000" startX="30" startY="45" endX="70" endY="55" lineWidth="1" />
+            <graphic type="line" color="#000" startX="70" startY="55" endX="30" endY="65" lineWidth="1" />
+            <graphic type="text" color="#077" left="15" top="80" size="20" content=";" />
+            <help page="18" />
+            <character code="" />
+        </control>
+        <control keycode="222" top="49" left="226" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#0FF" />
+            <graphic type="text" color="#000" size="20" align="center" top="25" left="47" baseline="middle" content="END" />
+            <graphic type="line" color="#000" startX="30" startY="45" endX="70" endY="55" lineWidth="1" />
+            <graphic type="line" color="#000" startX="70" startY="55" endX="30" endY="65" lineWidth="1" />
+            <graphic type="text" color="#077" left="15" top="80" size="20" content="'" />
+            <help page="18" />
+            <character code="" />
+        </control>
+         <control keycode="90" top="67" left="52" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#0FF" />
+            <graphic type="text" color="#000" size="30" align="center" font="serif" style="italic" top="42" left="50" baseline="middle" content="cresc." />
+            <graphic type="text" color="#077" left="15" top="80" size="20" content="Z" />
+            <help page="17" />
+            <character code="" />
+        </control>
+        <control keycode="88" top="67" left="70" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#0FF" />
+            <graphic type="text" color="#000" size="25" align="center" font="serif" style="italic" top="42" left="50" baseline="middle" content="decresc." />
+            <graphic type="text" color="#077" left="15" top="80" size="20" content="X" />
+            <help page="17" />
+            <character code="" />
+        </control>
+        <control keycode="67" top="67" left="88" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#0FF" />
+            <graphic type="text" color="#000" size="30" align="center" font="serif" style="italic" top="42" left="50" baseline="middle" content="dim." />
+            <graphic type="text" color="#077" left="15" top="80" size="20" content="C" />
+            <help page="17" />
+            <character code="" />
+        </control>
+        <control keycode="86" top="67" left="106" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" size="45" font="Bravura" align="center" top="50" left="45" content="&#xe872;" />
+            <graphic type="text" color="#CCC" left="15" top="80" size="20" content="V" />
+            <help page="35" />
+            <character code="" />
+        </control>
+        <control keycode="66" top="67" left="124" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" size="45" font="Bravura" align="center" top="50" left="45" content="&#xe870;" />
+            <graphic type="text" color="#CCC" left="15" top="80" size="20" content="B" />
+            <help page="35" />
+            <character code="" />
+        </control>
+        <control keycode="78" top="67" left="142" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" size="45" font="Bravura" align="center" top="50" left="45" content="&#xe871;" />
+            <graphic type="text" color="#CCC" left="15" top="80" size="20" content="N" />
+            <help page="35" />
+            <character code="" />
+        </control>
+        <control keycode="77" top="67" left="160" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" size="45" font="Bravura" align="center" top="50" left="45" content="&#xe873;" />
+            <graphic type="text" color="#CCC" left="15" top="80" size="20" content="M" />
+            <help page="35" />
+            <character code="" />
+        </control>
+        <control keycode="188" top="67" left="178" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="," />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="190" top="67" left="196" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="." />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="191" top="67" left="214" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="/" />
+            <help page="0" />
+            <character code="" />
+        </control>
+   </page>
+    <page name="5">
+        <indicator type="shift" top="67" left="13" width="27" height="9">
+            <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="SHIFT" />
+        </indicator>
+        <indicator type="control" top="76" left="13" width="27" height="9">
+            <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="CTRL" />
+        </indicator>
+        <control keycode="192" top="13" left="13" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="`" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="49" top="13" left="31" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="1" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="50" top="13" left="49" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="2" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="51" top="13" left="67" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="3" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="52" top="13" left="85" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="4" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="53" top="13" left="103" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="5" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="54" top="13" left="121" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="6" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="55" top="13" left="139" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="7" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="56" top="13" left="157" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="8" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="57" top="13" left="175" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="9" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="48" top="13" left="193" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="0" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="189" top="13" left="211" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="-" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="187" top="13" left="229" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="text" color="#FFF" size="20" align="center" top="30" left="47" content="M.M." />
+            <graphic type="text" color="#FFF" size="50" align="center" top="66" left="47" content="=" />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="=" />
+            <help page="27" />
+            <character code="" />
+        </control>
+        <control keycode="81" top="31" left="40" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="text" color="#FFF" size="20" align="center" baseline="middle" top="25" left="47" content="MUSIC" />
+            <graphic type="text" color="#FFF" size="20" align="center" baseline="middle" top="50" left="47" content="PREFIX" />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="Q" />
+            <help page="15" />
+            <character code="" />
+        </control>
+        <control keycode="87" top="31" left="58" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="text" color="#FFF" size="20" align="center" baseline="middle" top="25" left="47" content="WORD" />
+            <graphic type="text" color="#FFF" size="20" align="center" baseline="middle" top="50" left="47" content="PREFIX" />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="W" />
+            <help page="16" />
+            <character code="" />
+        </control>
+        <control keycode="69" top="31" left="76" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="text" color="#FFF" size="16" align="center" baseline="middle" top="25" left="47" content="LARGER" />
+            <graphic type="text" color="#FFF" size="16" align="center" baseline="middle" top="50" left="47" content="VALUES" />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="E" />
+            <help page="26" />
+            <character code="" />
+        </control>
+        <control keycode="82" top="31" left="94" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="text" color="#FFF" size="16" align="center" baseline="middle" top="25" left="47" content="SMALLER" />
+            <graphic type="text" color="#FFF" size="16" align="center" baseline="middle" top="50" left="47" content="VALUES" />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="R" />
+            <help page="26" />
+            <character code="" />
+        </control>
+        <control keycode="84" top="31" left="112" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="text" color="#FFF" size="19" align="center" baseline="middle" top="25" left="47" content="RIGHT" />
+            <graphic type="text" color="#FFF" size="19" align="center" baseline="middle" top="50" left="47" content="HAND" />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="T" />
+            <help page="31" />
+            <character code="" />
+        </control>
+        <control keycode="89" top="31" left="130" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="text" color="#FFF" size="19" align="center" baseline="middle" top="25" left="47" content="LEFT" />
+            <graphic type="text" color="#FFF" size="19" align="center" baseline="middle" top="50" left="47" content="HAND" />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="Y" />
+            <help page="31" />
+            <character code="" />
+        </control>
+        <control keycode="85" top="31" left="148" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="text" color="#FFF" size="35" font="Bravura" align="center" baseline="middle" top="40" left="50" content="&#xe1d3; &#xe1d3;" />
+            <graphic type="text" color="#FFF" size="35" font="Bravura" align="center" baseline="middle" top="55" left="40" content="&#xe1d2;" />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="U" />
+            <help page="33" />
+            <character code="" />
+        </control>
+        <control keycode="73" top="31" left="166" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="text" color="#FFF" size="15" align="center" baseline="middle" top="25" left="47" content="MEASURE" />
+            <graphic type="text" color="#FFF" size="15" align="center" baseline="middle" top="50" left="47" content="DIVISION" />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="I" />
+            <help page="34" />
+            <character code="" />
+        </control>
+        <control keycode="79" top="31" left="184" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="text" color="#FFF" size="35" font="Bravura" align="center" baseline="middle" top="40" left="60" content="&#xe1f0;&#xe1f7; &#xe1f2;" />
+            <graphic type="text" color="#FFF" size="35" font="Bravura" align="center" baseline="middle" top="55" left="45" content="&#xe1d6;" />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="O" />
+            <help page="34" />
+            <character code="" />
+        </control>
+        <control keycode="80" top="31" left="202" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="P" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="219" top="31" left="220" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="[" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="221" top="31" left="238" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="]" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="220" top="31" left="256" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="\" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="65" top="49" left="46" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="A" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="83" top="49" left="64" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="S" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="68" top="49" left="82" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="D" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="70" top="49" left="100" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="text" color="#FFF" size="50" align="center" font="Bravura" top="70" left="48" content="&#xe040;" />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="F" />
+            <help page="36" />
+            <character code="" />
+        </control>
+        <control keycode="71" top="49" left="118" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="text" color="#FFF" size="50" align="center" font="Bravura" top="70" left="48" content="&#xe041;" />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="G" />
+            <help page="36" />
+            <character code="" />
+        </control>
+        <control keycode="72" top="49" left="136" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="text" color="#FFF" size="50" align="center" font="Bravura" top="60" left="48" content="&#xe048;" />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="H" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="74" top="49" left="154" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="line" color="#FFF" startX="75" startY="30" endX="25" endY="30" lineWidth="1" />
+            <graphic type="line" color="#FFF" startX="25" startY="30" endX="25" endY="60" lineWidth="1" />
+            <graphic type="text" color="#FFF" left="45" top="47" align="center" baseline="middle" size="25" content="1." />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="J" />
+            <help page="36" />
+            <character code="" />
+        </control>
+        <control keycode="75" top="49" left="172" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="line" color="#FFF" startX="75" startY="30" endX="25" endY="30" lineWidth="1" />
+            <graphic type="line" color="#FFF" startX="25" startY="30" endX="25" endY="60" lineWidth="1" />
+            <graphic type="text" color="#FFF" left="45" top="47" align="center" baseline="middle" size="25" content="2." />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="K" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="76" top="49" left="190" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="line" color="#FFF" startX="75" startY="30" endX="25" endY="30" lineWidth="1" />
+            <graphic type="line" color="#FFF" startX="25" startY="30" endX="25" endY="60" lineWidth="1" />
+            <graphic type="text" color="#FFF" left="45" top="47" align="center" baseline="middle" size="25" content="3." />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="L" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="186" top="49" left="208" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content=";" />
+            <help page="0" />
+            <character code="" />
+        </control>
+        <control keycode="222" top="49" left="226" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="'" />
+            <help page="0" />
+            <character code="" />
+        </control>
+         <control keycode="90" top="67" left="52" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="text" color="#FFF" size="50" align="center" font="Bravura" top="70" left="48" content="&#xe030;" />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="Z" />
+            <help page="19" />
+            <character code="" />
+        </control>
+        <control keycode="88" top="67" left="70" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="text" color="#FFF" size="50" align="center" font="Bravura" top="70" left="48" content="&#xe031;" />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="X" />
+            <help page="19" />
+            <character code="" />
+        </control>
+        <control keycode="67" top="67" left="88" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="text" color="#FFF" size="50" align="center" font="Bravura" top="70" left="48" content="&#xe032;" />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="C" />
+            <help page="19" />
+            <character code="" />
+        </control>
+        <control keycode="86" top="67" left="106" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="text" color="#FFF" size="50" align="center" font="Bravura" top="45" left="48" content="&#xe500;" />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="V" />
+            <help page="21" />
+            <character code="" />
+        </control>
+        <control keycode="66" top="67" left="124" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="text" color="#FFF" size="50" align="center" font="Bravura" top="55" left="48" content="&#xe047;" />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="B" />
+            <help page="20" />
+            <character code="" />
+        </control>
+        <control keycode="78" top="67" left="142" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="text" color="#FFF" size="20" align="center" baseline="middle" top="25" left="47" content="END" />
+            <graphic type="text" color="#FFF" size="20" align="center" baseline="middle" top="51" left="47" content="RPT" />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="N" />
+            <help page="20" />
+            <character code="" />
+        </control>
+        <control keycode="77" top="67" left="160" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="text" color="#FFF" size="50" align="center" font="Bravura" top="45" left="48" content="&#xe045;" />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="M" />
+            <help page="20" />
+            <character code="" />
+        </control>
+        <control keycode="188" top="67" left="178" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="text" color="#FFF" size="20" align="center" baseline="middle" top="25" left="47" content="# OF" />
+            <graphic type="text" color="#FFF" size="20" align="center" baseline="middle" top="51" left="47" content="MEAS." />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="," />
+            <help page="22" />
+            <character code="" />
+        </control>
+        <control keycode="190" top="67" left="196" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="text" color="#FFF" size="19" align="center" baseline="middle" top="25" left="47" content="MUSIC" />
+            <graphic type="text" color="#FFF" size="19" align="center" baseline="middle" top="50" left="47" content="HYPHEN" />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="." />
+            <help page="29" />
+            <character code="" />
+        </control>
+        <control keycode="191" top="67" left="214" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="text" color="#FFF" size="19" align="center" baseline="middle" top="25" left="47" content="MUSIC" />
+            <graphic type="text" color="#FFF" size="19" align="center" baseline="middle" top="50" left="47" content="COMMA" />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="/" />
+            <help page="25" />
+            <character code="" />
+        </control>
+   </page>
+    <page name="Aa">
+        <indicator type="shift" top="67" left="13" width="27" height="9">
+            <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="SHIFT" />
+        </indicator>
+        <indicator type="control" top="76" left="13" width="27" height="9">
+            <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="CTRL" />
+        </indicator>
+        <control keycode="192" top="13" left="13" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="!" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="49" top="13" left="31" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="1" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="50" top="13" left="49" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="2" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="51" top="13" left="67" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="3" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="52" top="13" left="85" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="4" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="53" top="13" left="103" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="5" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="54" top="13" left="121" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="6" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="55" top="13" left="139" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="7" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="56" top="13" left="157" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="8" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="57" top="13" left="175" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="9" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="48" top="13" left="193" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="0" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="189" top="13" left="211" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="-" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="187" top="13" left="229" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="#" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="81" top="31" left="40" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="Q" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="87" top="31" left="58" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="W" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="69" top="31" left="76" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="E" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="82" top="31" left="94" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="R" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="84" top="31" left="112" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="T" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="89" top="31" left="130" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="Y" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="85" top="31" left="148" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="U" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="73" top="31" left="166" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="I" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="79" top="31" left="184" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="O" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="80" top="31" left="202" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="P" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="219" top="31" left="220" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="( )" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="221" top="31" left="238" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="&quot;" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="220" top="31" left="256" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content=":" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="65" top="49" left="46" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="A" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="83" top="49" left="64" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="S" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="68" top="49" left="82" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="D" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="70" top="49" left="100" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="F" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="71" top="49" left="118" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="G" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="72" top="49" left="136" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="H" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="74" top="49" left="154" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="J" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="75" top="49" left="172" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="K" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="76" top="49" left="190" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="L" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="186" top="49" left="208" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content=";" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="222" top="49" left="226" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="&apos;" />
+            <help page="99" />
+            <character code="" />
+        </control>
+         <control keycode="90" top="67" left="52" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="Z" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="88" top="67" left="70" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="X" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="67" top="67" left="88" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="C" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="86" top="67" left="106" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="V" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="66" top="67" left="124" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="B" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="78" top="67" left="142" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="N" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="77" top="67" left="160" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="M" />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="188" top="67" left="178" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="," />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="190" top="67" left="196" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="." />
+            <help page="99" />
+            <character code="" />
+        </control>
+        <control keycode="191" top="67" left="214" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="?" />
+            <help page="99" />
+            <character code="" />
+        </control>
+   </page>
+    <help name="default" top="15" left="300" width="200" height="100">
+        <graphic type="text" color="#000" size="8" top="5" left="0" multiline="true" lineHeight="20" content="Click keys or type to add symbols\nto the score above.\n\nClick tabs to the left or press spacebar to\nswitch between keyboards.\n\nMouse over the keyboard for help." />
+    </help>
+    <help name="augmentationDot" top="10" left="300" width="200" height="100">
+        <graphic type="text" style="bold" color="#000" size="10" top="10" left="0" content="Augmentation Dot" />
+        <graphic type="text" color="#000" size="6" top="20" left="0" multiline="true" lineHeight="14" content="Place dot(s) after the affected note." />
+        <graphic type="staff" left="0" top="40" height="13" width="20" clef="1" />
+        <graphic type="note" left="10" top="40" height="13" note="noteQuarterUp" position="1" dots="1" />
+        <graphic type="text" color="#000" size="13" baseline="middle" top="51" left="25" font="Bravura" content="&#xeb62;" />
+        <graphic type="braille" left="30" top="36" height="20" cells="34,91,39" multiCell="true" />
+    </help>
+    <help name="notes" top="10" left="300" width="200" height="100">
+        <graphic type="text" style="bold" color="#000" size="10" top="10" left="0" content="Note Symbols" />
+        <graphic type="text" color="#000" size="6" top="20" left="0" multiline="true" lineHeight="14" content="Each symbol specifies both pitch and length. An octave symbol must\nbe placed before the note, except after:\n   · a leap of a fourth or fifth within the same octave, or\n   · a leap of a third or less (even if the octave changes)." />
+        <graphic type="staff" left="0" top="57" height="13" width="27" clef="1" />
+        <graphic type="note" left="9" top="57" height="13" note="noteQuarterDown" position="-1" dots="0" />
+        <graphic type="note" left="15" top="57" height="13" note="noteQuarterUp" position="0" dots="0" />
+        <graphic type="note" left="20" top="57" height="13" note="noteQuarterUp" position="5" dots="0" />
+        <graphic type="text" color="#000" size="13" baseline="middle" top="67" left="30" font="Bravura" content="&#xeb62;" />
+        <graphic type="braille" left="36" top="53" height="20" cells="46,63,87,34,58" multiCell="false" />
+    </help>
+    <help name="octaveZero" top="10" left="300" width="200" height="100">
+        <graphic type="text" style="bold" color="#000" size="10" top="10" left="0" content="Octave Symbols" />
+        <graphic type="text" color="#000" size="6" top="20" left="0" multiline="true" lineHeight="14" content="Octave symbols are placed before the note affected." />
+        <graphic type="staff" left="0" top="40" height="13" width="33" clef="2" />
+        <graphic type="note" left="10" top="40" height="13" note="noteheadBlack" position="8" dots="0" />
+        <graphic type="line" startX="15" startY="59" endX="22" endY="52" color="#929" lineWidth="4" />
+        <graphic type="note" left="25" top="40" height="13" note="noteheadBlack" position="2" dots="0" />
+        <graphic type="text" color="#000" size="13" baseline="middle" top="73" left="8" font="Bravura" content="&#xe514;" />
+        <graphic type="line" startX="14" startY="70" endX="30" endY="70" color="#000" lineWidth="1" />
+        <graphic type="line" startX="30" startY="70" endX="30" endY="65" color="#000" lineWidth="1" />
+        <graphic type="text" color="#000" size="13" baseline="middle" top="51" left="35" font="Bravura" content="&#xeb62;" />
+        <graphic type="braille" left="40" top="36" height="20" cells="64,164" multiCell="true" />
+    </help>
+</controlModule>

@@ -1,4 +1,4 @@
-/* global navigator, saveToUndo, suspendUndo, cursor, deleteScore, whichKeyboard, parseOnImport, parseData, setScore, drawNotation, clipboardArea, score, rotateChar, convertToText, document, gridWidth, gridHeight, unicodeBrailleMap: true */
+/* global window, XMLHttpRequest, ActiveXObject, phpRootAddress, navigator, saveToUndo, suspendUndo, cursor, deleteScore, whichKeyboard, parseOnImport, parseData, setScore, drawNotation, clipboardArea, score, rotateChar, convertToText, document, gridWidth, gridHeight, unicodeBrailleMap: true */
 /* jshint -W020, -W084 */
 
 function findPos(obj) { // from http://www.quirksmode.org/js/findpos.html
@@ -347,4 +347,61 @@ function padLeft(num, digits) {
         r = '0' + r;
     }
     return r;
+}
+
+function formFill(template,substitutions) {
+    var i = 0;
+    var newString = template;
+    while (i < substitutions.length) {
+        newString = newString.replaceAll("%%"+(i+1),substitutions[i]);
+        i++;
+    }
+    return newString;
+}
+
+function mkStr(chars) {
+    var r="";
+    chars.forEach(function(c) {
+        if (c===0) {
+            r=r+".";
+        } else {
+            var ch = String.fromCharCode(c);
+            if ("^$\\.*+?()[]{}|".indexOf(ch) > -1) {
+                r=r+"\\"+ch;
+            } else {
+                r=r+ch;
+            }
+        }
+    });
+    return r;
+}
+
+function sendHTTPRequest(callback,filename,data) {
+
+	var httpRequest;
+
+    if (window.XMLHttpRequest) {
+		httpRequest = new XMLHttpRequest();
+	} else if (window.ActiveXObject) {
+		httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+
+	// thanks to T.J. Crowder for the following (http://stackoverflow.com/questions/38618031/how-do-i-manage-multiple-overlapping-xmlhttprequests)
+	httpRequest.onreadystatechange = function() {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+            if (httpRequest.status === 200) {
+                // successful, call the callback
+                callback(httpRequest);
+            } else {
+                // error, call the callback -- here we use null to indicate the error
+                callback(null);
+            }
+        } else {
+            // not ready
+        }
+    };
+	httpRequest.open('GET',filename, true);
+	httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	httpRequest.send(data);
+
 }
