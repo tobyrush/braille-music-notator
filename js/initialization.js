@@ -2,7 +2,7 @@
 /* jshint -W020 */
 
 function initialize() {
-	versionString = "0.9.2b";
+	versionString = "0.9.3b";
 	devMode = false;
 	
 	container = document.getElementById("container");
