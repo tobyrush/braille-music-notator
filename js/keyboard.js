@@ -248,6 +248,8 @@ function interpretKeyCode(keyCode) {
 				setScore(x,y,177);
 			} else if (k==3) {
 				setScore(x,y,174);
+			} else if (k==4) {
+				setScore(x,y,353); setScore(x+1,y,275); adv=2; readerMessage = "Approximate Pitch Notehead";
 			} else if (k==6) {
 				setScore(x,y,674);
 			}
@@ -566,7 +568,9 @@ function interpretKeyCode(keyCode) {
 				} else if (k==3) {
 					setScore(x,y,56);
 					currentBeatUnit = 8; // if you're writing x/128 then you are a bad person and you should feel bad
-				} else if (k==5) {
+				} else if (k==4) {
+                    setScore(x,y,353); setScore(x+1,y,766); adv=2; readerMessage = "X Notehead";
+                } else if (k==5) {
 					setScore(x,y,646); setScore(x+1,y,375); adv=2; readerMessage = "In-accord measure division";
 				} else if (k==6) {
 					setScore(x,y,573);
@@ -708,7 +712,9 @@ function interpretKeyCode(keyCode) {
 					setScore(x,y,43);
 				} else if (k==3) {
 					setScore(x,y,57); // no
-				} else if (k==5) {
+				} else if (k==4) {
+                    setScore(x,y,353); setScore(x+1,y,276); adv=2; readerMessage = "Diamond Notehead";
+                } else if (k==5) {
 					setScore(x,y,334); setScore(x+1,y,749); adv=2; readerMessage = "Partial measure in-accord";
 				} else if (k==6) {
 					setScore(x,y,579);
@@ -841,7 +847,9 @@ function interpretKeyCode(keyCode) {
 					setScore(x,y,184);
 				} else if (k==3) {
 					setScore(x,y,55); // why are you using this? ಠ_ಠ
-				} else if (k==5) {
+				} else if (k==4) {
+                    setScore(x,y,353); setScore(x+1,y,765); adv=2; readerMessage = "Notehead Only";
+                } else if (k==5) {
 					setScore(x,y,860); setScore(x+1,y,762); adv=2; readerMessage = "Full measure in-accord";
 				} else if (k==6) {
 					setScore(x,y,585);
