@@ -31,7 +31,6 @@ var pasted = false;
 var fileDialogOpen = false, optionsDialogOpen = false, helpDialogOpen = false;
 var dialogTop,dialogButtonLeft,dialogButtonRight,dialogTop,dialogButtonHeight,dialogButtonWidth,dialogButtonTop = [];
 var autoScroller, autoScrollXDir, autoScrollYDir;
-var doNotCheckContiguousCells = false;
 var helpWindow = false;
 var parseOnImport = true;
 var currentBeatUnit = 4;
@@ -43,7 +42,7 @@ var controlModules = ['controls/en/classic.xml'];
 var defaultControlModule = 'controls/en/classic.html';
 var currentControlModule;
 
-var score = [[]]; // y,x
+var storedScore, score = [[]]; // y,x
 var storedBlankCells, blankCells = [[]];
 
 // the following array starts at 32, so values should be accessed a brailleDots[theAsciiCode-32].

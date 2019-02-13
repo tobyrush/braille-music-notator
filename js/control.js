@@ -1,4 +1,4 @@
-/* global titleArea, tctx, versionString, helpDialogOpen, roundRect, optionsDialogOpen, fileDialogOpen, controlArea, cctx, whichKeyboard, keyboardCoordinates, keymap, keycaps, displayControlHelp, cursor, hScroll, vScroll, controlsHeight, controlsWidth, chu, resizeBarHeight, keyboardOriginX, keyboardOriginY, kbu, controlHelpOriginX, controlHelpOriginY, console, shiftKeyDown, metaKeyDown, formFill, kProgramTitle, kVersionAndAuthor, kHelpButtonCaption, kOptionsButtonCaption, kFileButtonCaption, sendHTTPRequest, defaultControlModule, DOMParser, currentControlModule, updateScreenreader, kScreenReaderControlPageNumber, doNotCheckContiguousCells, createTemporaryGrid, gridWidth, gridHeight, drawSymbol, releaseTemporaryGrid, document, devMode: true */
+/* global titleArea, tctx, versionString, helpDialogOpen, roundRect, optionsDialogOpen, fileDialogOpen, controlArea, cctx, whichKeyboard, keyboardCoordinates, keymap, keycaps, displayControlHelp, cursor, hScroll, vScroll, controlsHeight, controlsWidth, chu, resizeBarHeight, keyboardOriginX, keyboardOriginY, kbu, controlHelpOriginX, controlHelpOriginY, console, shiftKeyDown, metaKeyDown, formFill, kProgramTitle, kVersionAndAuthor, kHelpButtonCaption, kOptionsButtonCaption, kFileButtonCaption, sendHTTPRequest, defaultControlModule, DOMParser, currentControlModule, updateScreenreader, kScreenReaderControlPageNumber, createTemporaryGrid, gridWidth, gridHeight, drawSymbol, releaseTemporaryGrid, document, devMode, score, drawStoredScore: true */
 /* jshint -W020 */
 
 function initializeTitle() {
@@ -476,7 +476,7 @@ class controlGraphic {
     draw(ctx,boxWidth,boxHeight) {
         var a = this.attr;
         var d = this.root.defaults;
-        var x,y,w,h,p,i;
+        var x,y,w,h,p,i,n,yp,c,o;
         [
             'font',
             'style',
@@ -507,7 +507,8 @@ class controlGraphic {
             'clef',
             'position',
             'dots',
-            'note'
+            'note',
+            'accidental'
         ].forEach(function(e) {
                 if (!(a.hasOwnProperty(e)) && d.hasOwnProperty(e)) {
                 a[e]=d[e];
@@ -627,25 +628,55 @@ class controlGraphic {
                 ctx.stroke(); // staff lines
                 ctx.closePath();
 
-                var clefChar, offset=0;
+                o=0;
                 switch (a.clef) {
                     case "1": // treble
-                        clefChar="\ue050";
-                        offset=h*0.75;
+                        c="\ue050";
+                        o=h*0.75;
                         break;
                     case "2": // bass
-                        clefChar="\ue061";
-                        offset=h*0.25;
+                        c="\ue061";
+                        o=h*0.25;
                         break;
                     default: // no clef
-                        clefChar="";
+                        c="";
                 }
 
                 ctx.fillStyle="#000"; // black
                 ctx.textBaseline = "alphabetic";
                 ctx.textAlign = "left";
                 ctx.font = "normal "+h+"px Bravura";
-                ctx.fillText(clefChar,x+(h*0.15),y+offset);
+                ctx.fillText(c,x+(h*0.15),y+o);
+                break;
+            case "accidental":
+                x=a.left*(boxWidth/100);
+                y=a.top*(boxHeight/100);
+                w=a.width*(boxWidth/100);
+                h=a.height*(boxHeight/100);
+                p=a.position;
+                ctx.fillStyle="#000"; // black
+                ctx.textBaseline = "alphabetic";
+                ctx.textAlign = "left";
+                ctx.font = "normal "+h+"px Bravura";
+                yp=y+(h*0.5)+(p*(h/8));
+                switch (a.accidental) {
+                    case "-2":
+                        n="\ue264";
+                        break;
+                    case "-1":
+                        n="\ue260";
+                        break;
+                    case "0":
+                        n="\ue261";
+                        break;
+                    case "1":
+                        n="\ue262";
+                        break;
+                    case "2":
+                        n="\ue263";
+                        break;
+                }
+                ctx.fillText(n,x-(h/3),yp);
                 break;
             case "note":
                 x=a.left*(boxWidth/100);
@@ -657,40 +688,41 @@ class controlGraphic {
                 ctx.textBaseline = "alphabetic";
                 ctx.textAlign = "left";
                 ctx.font = "normal "+h+"px Bravura";
-                var noteChar, yPos = y+(h*0.5)+(p*(h/8));
+                yp = y+(h*0.5)+(p*(h/8));
                 switch (a.note) {
                     case "noteWhole":
-                        noteChar="\ue1d2";
+                        n="\ue1d2";
                         break;
                     case "noteHalfUp":
-                        noteChar="\ue1d3";
+                        n="\ue1d3";
                         break;
                     case "noteHalfDown":
-                        noteChar="\ue1d4";
+                        n="\ue1d4";
                         break;
                     case "noteQuarterUp":
-                        noteChar="\ue1d5";
+                        n="\ue1d5";
                         break;
                     case "noteQuarterDown":
-                        noteChar="\ue1d6";
+                        n="\ue1d6";
                         break;
                     case "note8thDown":
-                        noteChar="\ue1d8";
+                        n="\ue1d8";
                         break;
                     case "noteheadBlack":
-                        noteChar="\ue0a4";
+                        n="\ue0a4";
                         break;
                     case "restHalf":
-                        noteChar="\ue4e4";
-                        yPos = y+(h*0.5)+(0*(h/8));
+                        n="\ue4e4";
+                        yp = y+(h*0.5)+(0*(h/8));
                         break;
                     case "restQuarter":
-                        noteChar="\ue4e5";
-                        yPos = y+(h*0.5)+(0*(h/8));
+                        n="\ue4e5";
+                        yp = y+(h*0.5)+(0*(h/8));
                         break;
                 }
-                ctx.fillText(noteChar,x,yPos);
+                ctx.fillText(n,x,yp);
                 var numberOfLedgers=Math.floor(Math.abs(p/2))-2;
+                ctx.lineWidth=1;
                 ctx.strokeStyle="#000";
                 ctx.beginPath();
                 var currentY;
@@ -702,28 +734,19 @@ class controlGraphic {
                 ctx.stroke();
                 ctx.closePath();
                 for (i=0; i<a.dots; i++) {
-                    ctx.fillText("\ue1e7",x+(h*0.5)+(i*(h*0.3)),yPos-((h/8)*((Math.abs(p)%2)^1)));
+                    ctx.fillText("\ue1e7",x+(h*0.5)+(i*(h*0.3)),yp-((h/8)*((Math.abs(p)%2)^1)));
                 }
                 break;
             case "braille":
                 x=a.left*(boxWidth/100);
                 y=a.top*(boxHeight/100);
                 h=a.height*(boxHeight/100);
-                var chars = a.cells.split(",");
-                doNotCheckContiguousCells = a.multiCell;
                 createTemporaryGrid(h);
                 ctx.strokeStyle="#000";
                 ctx.lineWidth=1;
-                for (i=0; i<chars.length; i++) {
-                    if (chars[i]!==0) {
-                        if ((chars[i]>=533 && chars[i]<=563) || (chars[i]>=565 && chars[i]<=593) || (chars[i]>=647 && chars[i]<=651) || (chars[i]>=654 && chars[i]<=656) || (chars[i]>=665 && chars[i]<=674)) { // if it's literary braille
-                            ctx.strokeRect(x+(gridWidth*i)+2,y+2,gridWidth-4,gridHeight-4);
-                        }
-                        drawSymbol(ctx,chars[i],x+(gridWidth*i),y,i,0);
-                    }
-                }
+                score[0] = a.cells.split(",");
+                drawStoredScore(ctx,x,y);
                 releaseTemporaryGrid();
-                doNotCheckContiguousCells = false;
         }
     }
 }

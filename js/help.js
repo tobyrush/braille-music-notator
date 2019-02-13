@@ -1,4 +1,4 @@
-/* global devMode, cctx, controlHelpOriginX, controlHelpOriginY, controlsHeight, chu, controlsWidth, controlHelp, gridHeight, gridWidth, drawCellSimpleDynamic, drawCellHairpinDynamic, drawMultiCellBackground, gw, gh, drawCellClef, drawCellTextLabel, drawMetronomeMarkingEquals, doNotCheckContiguousCells, drawInterpretedBrailleSymbol, drawCellOctaveRange, savedGridHeight, storedBlankCells, blankCells: true */
+/* global devMode, cctx, controlHelpOriginX, controlHelpOriginY, controlsHeight, chu, controlsWidth, controlHelp, gridHeight, gridWidth, drawCellSimpleDynamic, drawCellHairpinDynamic, drawMultiCellBackground, gw, gh, drawCellClef, drawCellTextLabel, drawMetronomeMarkingEquals, drawInterpretedBrailleSymbol, drawCellOctaveRange, savedGridHeight, storedScore, score, storedBlankCells, blankCells: true */
 /* jshint -W020 */
 
 function displayControlHelp() {
@@ -26,110 +26,110 @@ function displayControlHelp() {
 	
 	switch (Math.floor(controlHelp)) {
 	
-		case 1: // augmentation dot
-			drawControlHelpTitleText("Augmentation Dot");
-			drawControlHelpDescriptionText("Place dot(s) after the affected note.");
-			drawStaff(cctx,controlHelpOriginX,controlHelpOriginY+(chu*40),chu*13,chu*30,1);
-			drawNote(cctx,controlHelpOriginX+(chu*15),controlHelpOriginY+(chu*40),chu*13,"noteQuarterUp",1,1);
-			drawArrow(cctx,controlHelpOriginX+(chu*36),controlHelpOriginY+(chu*51),chu*13);
-			drawBrailleIcons(cctx,controlHelpOriginX+(chu*47),controlHelpOriginY+(chu*36),chu*20,[34,91,39],false);
-			break;
-		case 2: // note symbols
-			drawControlHelpTitleText("Note Symbols");
-			drawControlHelpDescriptionText("Each symbol specifies both pitch and length. An octave symbol must be placed\nbefore the note, except after:\n   · a leap of a fourth or fifth within the same octave, or\n   · a leap of a third or less (even if the octave changes).");
-			drawStaff(cctx,controlHelpOriginX,controlHelpOriginY+(chu*57),chu*13,chu*45,1);
-			drawNote(cctx,controlHelpOriginX+(chu*15),controlHelpOriginY+(chu*57),chu*13,"noteQuarterDown",-1,0);
-			drawNote(cctx,controlHelpOriginX+(chu*26),controlHelpOriginY+(chu*57),chu*13,"noteQuarterUp",0,0);
-			drawNote(cctx,controlHelpOriginX+(chu*35),controlHelpOriginY+(chu*57),chu*13,"noteQuarterUp",5,0);
-			drawArrow(cctx,controlHelpOriginX+(chu*50),controlHelpOriginY+(chu*68),chu*13);
-			drawBrailleIcons(cctx,controlHelpOriginX+(chu*61),controlHelpOriginY+(chu*53),chu*20,[46,63,87,34,58],false);
-			break;
-		case 3: // octave symbols
-			drawControlHelpTitleText("Octave Symbols");
-			drawControlHelpDescriptionText("Octave symbols are placed before the note affected.");
-			drawCellOctaveIcon(cctx,controlHelpOriginX,controlHelpOriginY+(chu*41),chu*20,(controlHelp*10)-30);
-			drawArrow(cctx,controlHelpOriginX+(chu*18),controlHelpOriginY+(chu*56),chu*13);
-			switch (controlHelp) {
-				case 3.0:
-					drawStaff(cctx,controlHelpOriginX+(chu*30),controlHelpOriginY+(chu*45),chu*13,chu*70,2);
-					drawNote(cctx,controlHelpOriginX+(chu*55),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",8,0);
-					drawNote(cctx,controlHelpOriginX+(chu*80),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",2,0);
-					drawLine(cctx,controlHelpOriginX+(chu*63),controlHelpOriginY+(chu*64),controlHelpOriginX+(chu*77),controlHelpOriginY+(chu*57),"#929",4);
-					drawMusicSymbol(cctx,"\ue514",controlHelpOriginX+(chu*47),controlHelpOriginY+(chu*80),chu*13);
-					drawLine(cctx,controlHelpOriginX+(chu*57),controlHelpOriginY+(chu*77),controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*77),"#000",1);
-					drawLine(cctx,controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*77),controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*72),"#000",1);
-					break;
-				case 3.1:
-					drawStaff(cctx,controlHelpOriginX+(chu*30),controlHelpOriginY+(chu*45),chu*13,chu*70,2);
-					drawNote(cctx,controlHelpOriginX+(chu*55),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",8,0);
-					drawNote(cctx,controlHelpOriginX+(chu*80),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",2,0);
-					drawLine(cctx,controlHelpOriginX+(chu*63),controlHelpOriginY+(chu*64),controlHelpOriginX+(chu*77),controlHelpOriginY+(chu*57),"#929",4);
-					drawMusicSymbol(cctx,"\ue510",controlHelpOriginX+(chu*49),controlHelpOriginY+(chu*80),chu*13);
-					drawLine(cctx,controlHelpOriginX+(chu*57),controlHelpOriginY+(chu*77),controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*77),"#000",1);
-					drawLine(cctx,controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*77),controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*72),"#000",1);
-					break;
-				case 3.2:
-					drawStaff(cctx,controlHelpOriginX+(chu*30),controlHelpOriginY+(chu*45),chu*13,chu*70,2);
-					drawNote(cctx,controlHelpOriginX+(chu*55),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",8,0);
-					drawNote(cctx,controlHelpOriginX+(chu*80),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",2,0);
-					drawLine(cctx,controlHelpOriginX+(chu*63),controlHelpOriginY+(chu*64),controlHelpOriginX+(chu*77),controlHelpOriginY+(chu*57),"#929",4);
-					break;
-				case 3.3:
-					drawStaff(cctx,controlHelpOriginX+(chu*30),controlHelpOriginY+(chu*45),chu*13,chu*70,2);
-					drawNote(cctx,controlHelpOriginX+(chu*55),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",1,0);
-					drawNote(cctx,controlHelpOriginX+(chu*80),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",-5,0);
-					drawLine(cctx,controlHelpOriginX+(chu*62),controlHelpOriginY+(chu*52),controlHelpOriginX+(chu*77),controlHelpOriginY+(chu*45),"#929",4);
-					break;
-				case 3.4:
-					drawStaff(cctx,controlHelpOriginX+(chu*30),controlHelpOriginY+(chu*45),chu*13,chu*70,1);
-					drawNote(cctx,controlHelpOriginX+(chu*55),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",6,0);
-					drawNote(cctx,controlHelpOriginX+(chu*80),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",0,0);
-					drawLine(cctx,controlHelpOriginX+(chu*62),controlHelpOriginY+(chu*59),controlHelpOriginX+(chu*77),controlHelpOriginY+(chu*52),"#929",4);
-					break;
-				case 3.5:
-					drawStaff(cctx,controlHelpOriginX+(chu*30),controlHelpOriginY+(chu*45),chu*13,chu*70,1);
-					drawNote(cctx,controlHelpOriginX+(chu*55),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",-1,0);
-					drawNote(cctx,controlHelpOriginX+(chu*80),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",-7,0);
-					drawLine(cctx,controlHelpOriginX+(chu*62),controlHelpOriginY+(chu*47),controlHelpOriginX+(chu*77),controlHelpOriginY+(chu*40),"#929",4);
-					break;
-				case 3.6:
-					drawStaff(cctx,controlHelpOriginX+(chu*30),controlHelpOriginY+(chu*45),chu*13,chu*70,1);
-					drawNote(cctx,controlHelpOriginX+(chu*55),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",-1,0);
-					drawNote(cctx,controlHelpOriginX+(chu*80),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",-7,0);
-					drawLine(cctx,controlHelpOriginX+(chu*62),controlHelpOriginY+(chu*47),controlHelpOriginX+(chu*77),controlHelpOriginY+(chu*40),"#929",4);
-					drawMusicSymbol(cctx,"\ue510",controlHelpOriginX+(chu*49),controlHelpOriginY+(chu*33),chu*13);
-					drawLine(cctx,controlHelpOriginX+(chu*57),controlHelpOriginY+(chu*29),controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*29),"#000",1);
-					drawLine(cctx,controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*29),controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*34),"#000",1);
-					break;
-				case 3.7:
-					drawStaff(cctx,controlHelpOriginX+(chu*30),controlHelpOriginY+(chu*45),chu*13,chu*70,1);
-					drawNote(cctx,controlHelpOriginX+(chu*55),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",-1,0);
-					drawNote(cctx,controlHelpOriginX+(chu*80),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",-7,0);
-					drawLine(cctx,controlHelpOriginX+(chu*62),controlHelpOriginY+(chu*47),controlHelpOriginX+(chu*77),controlHelpOriginY+(chu*40),"#929",4);
-					drawMusicSymbol(cctx,"\ue514",controlHelpOriginX+(chu*47),controlHelpOriginY+(chu*33),chu*13);
-					drawLine(cctx,controlHelpOriginX+(chu*57),controlHelpOriginY+(chu*29),controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*29),"#000",1);
-					drawLine(cctx,controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*29),controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*34),"#000",1);
-					break;
-				case 3.8:
-					drawStaff(cctx,controlHelpOriginX+(chu*30),controlHelpOriginY+(chu*45),chu*13,chu*70,1);
-					drawNote(cctx,controlHelpOriginX+(chu*55),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",-1,0);
-					drawNote(cctx,controlHelpOriginX+(chu*80),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",-7,0);
-					drawLine(cctx,controlHelpOriginX+(chu*62),controlHelpOriginY+(chu*47),controlHelpOriginX+(chu*77),controlHelpOriginY+(chu*40),"#929",4);
-					drawMusicSymbol(cctx,"\ue517",controlHelpOriginX+(chu*45),controlHelpOriginY+(chu*33),chu*13);
-					drawLine(cctx,controlHelpOriginX+(chu*57),controlHelpOriginY+(chu*29),controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*29),"#000",1);
-					drawLine(cctx,controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*29),controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*34),"#000",1);
-					break;
-			}
-			break;
-		case 4: // rest symbols
-			drawControlHelpTitleText("Rest Symbols");
-			drawControlHelpDescriptionText("As in traditional notation, the whole rest symbol can be used\nas a measure rest in any meter.");
-			drawStaff(cctx,controlHelpOriginX,controlHelpOriginY+(chu*45),chu*13,chu*45,2);
-			drawNote(cctx,controlHelpOriginX+(chu*16),controlHelpOriginY+(chu*45),chu*13,"restHalf",0,0);
-			drawNote(cctx,controlHelpOriginX+(chu*30),controlHelpOriginY+(chu*45),chu*13,"restQuarter",0,1);
-			drawArrow(cctx,controlHelpOriginX+(chu*50),controlHelpOriginY+(chu*56),chu*13);
-			drawBrailleIcons(cctx,controlHelpOriginX+(chu*61),controlHelpOriginY+(chu*41),chu*20,[85,86,39],false);
-			break;
+//		case 1: // augmentation dot
+//			drawControlHelpTitleText("Augmentation Dot");
+//			drawControlHelpDescriptionText("Place dot(s) after the affected note.");
+//			drawStaff(cctx,controlHelpOriginX,controlHelpOriginY+(chu*40),chu*13,chu*30,1);
+//			drawNote(cctx,controlHelpOriginX+(chu*15),controlHelpOriginY+(chu*40),chu*13,"noteQuarterUp",1,1);
+//			drawArrow(cctx,controlHelpOriginX+(chu*36),controlHelpOriginY+(chu*51),chu*13);
+//			drawBrailleIcons(cctx,controlHelpOriginX+(chu*47),controlHelpOriginY+(chu*36),chu*20,[34,91,39],false);
+//			break;
+//		case 2: // note symbols
+//			drawControlHelpTitleText("Note Symbols");
+//			drawControlHelpDescriptionText("Each symbol specifies both pitch and length. An octave symbol must be placed\nbefore the note, except after:\n   · a leap of a fourth or fifth within the same octave, or\n   · a leap of a third or less (even if the octave changes).");
+//			drawStaff(cctx,controlHelpOriginX,controlHelpOriginY+(chu*57),chu*13,chu*45,1);
+//			drawNote(cctx,controlHelpOriginX+(chu*15),controlHelpOriginY+(chu*57),chu*13,"noteQuarterDown",-1,0);
+//			drawNote(cctx,controlHelpOriginX+(chu*26),controlHelpOriginY+(chu*57),chu*13,"noteQuarterUp",0,0);
+//			drawNote(cctx,controlHelpOriginX+(chu*35),controlHelpOriginY+(chu*57),chu*13,"noteQuarterUp",5,0);
+//			drawArrow(cctx,controlHelpOriginX+(chu*50),controlHelpOriginY+(chu*68),chu*13);
+//			drawBrailleIcons(cctx,controlHelpOriginX+(chu*61),controlHelpOriginY+(chu*53),chu*20,[46,63,87,34,58],false);
+//			break;
+//		case 3: // octave symbols
+//			drawControlHelpTitleText("Octave Symbols");
+//			drawControlHelpDescriptionText("Octave symbols are placed before the note affected.");
+//			drawCellOctaveIcon(cctx,controlHelpOriginX,controlHelpOriginY+(chu*41),chu*20,(controlHelp*10)-30);
+//			drawArrow(cctx,controlHelpOriginX+(chu*18),controlHelpOriginY+(chu*56),chu*13);
+//			switch (controlHelp) {
+//				case 3.0:
+//					drawStaff(cctx,controlHelpOriginX+(chu*30),controlHelpOriginY+(chu*45),chu*13,chu*70,2);
+//					drawNote(cctx,controlHelpOriginX+(chu*55),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",8,0);
+//					drawNote(cctx,controlHelpOriginX+(chu*80),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",2,0);
+//					drawLine(cctx,controlHelpOriginX+(chu*63),controlHelpOriginY+(chu*64),controlHelpOriginX+(chu*77),controlHelpOriginY+(chu*57),"#929",4);
+//					drawMusicSymbol(cctx,"\ue514",controlHelpOriginX+(chu*47),controlHelpOriginY+(chu*80),chu*13);
+//					drawLine(cctx,controlHelpOriginX+(chu*57),controlHelpOriginY+(chu*77),controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*77),"#000",1);
+//					drawLine(cctx,controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*77),controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*72),"#000",1);
+//					break;
+//				case 3.1:
+//					drawStaff(cctx,controlHelpOriginX+(chu*30),controlHelpOriginY+(chu*45),chu*13,chu*70,2);
+//					drawNote(cctx,controlHelpOriginX+(chu*55),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",8,0);
+//					drawNote(cctx,controlHelpOriginX+(chu*80),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",2,0);
+//					drawLine(cctx,controlHelpOriginX+(chu*63),controlHelpOriginY+(chu*64),controlHelpOriginX+(chu*77),controlHelpOriginY+(chu*57),"#929",4);
+//					drawMusicSymbol(cctx,"\ue510",controlHelpOriginX+(chu*49),controlHelpOriginY+(chu*80),chu*13);
+//					drawLine(cctx,controlHelpOriginX+(chu*57),controlHelpOriginY+(chu*77),controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*77),"#000",1);
+//					drawLine(cctx,controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*77),controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*72),"#000",1);
+//					break;
+//				case 3.2:
+//					drawStaff(cctx,controlHelpOriginX+(chu*30),controlHelpOriginY+(chu*45),chu*13,chu*70,2);
+//					drawNote(cctx,controlHelpOriginX+(chu*55),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",8,0);
+//					drawNote(cctx,controlHelpOriginX+(chu*80),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",2,0);
+//					drawLine(cctx,controlHelpOriginX+(chu*63),controlHelpOriginY+(chu*64),controlHelpOriginX+(chu*77),controlHelpOriginY+(chu*57),"#929",4);
+//					break;
+//				case 3.3:
+//					drawStaff(cctx,controlHelpOriginX+(chu*30),controlHelpOriginY+(chu*45),chu*13,chu*70,2);
+//					drawNote(cctx,controlHelpOriginX+(chu*55),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",1,0);
+//					drawNote(cctx,controlHelpOriginX+(chu*80),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",-5,0);
+//					drawLine(cctx,controlHelpOriginX+(chu*62),controlHelpOriginY+(chu*52),controlHelpOriginX+(chu*77),controlHelpOriginY+(chu*45),"#929",4);
+//					break;
+//				case 3.4:
+//					drawStaff(cctx,controlHelpOriginX+(chu*30),controlHelpOriginY+(chu*45),chu*13,chu*70,1);
+//					drawNote(cctx,controlHelpOriginX+(chu*55),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",6,0);
+//					drawNote(cctx,controlHelpOriginX+(chu*80),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",0,0);
+//					drawLine(cctx,controlHelpOriginX+(chu*62),controlHelpOriginY+(chu*59),controlHelpOriginX+(chu*77),controlHelpOriginY+(chu*52),"#929",4);
+//					break;
+//				case 3.5:
+//					drawStaff(cctx,controlHelpOriginX+(chu*30),controlHelpOriginY+(chu*45),chu*13,chu*70,1);
+//					drawNote(cctx,controlHelpOriginX+(chu*55),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",-1,0);
+//					drawNote(cctx,controlHelpOriginX+(chu*80),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",-7,0);
+//					drawLine(cctx,controlHelpOriginX+(chu*62),controlHelpOriginY+(chu*47),controlHelpOriginX+(chu*77),controlHelpOriginY+(chu*40),"#929",4);
+//					break;
+//				case 3.6:
+//					drawStaff(cctx,controlHelpOriginX+(chu*30),controlHelpOriginY+(chu*45),chu*13,chu*70,1);
+//					drawNote(cctx,controlHelpOriginX+(chu*55),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",-1,0);
+//					drawNote(cctx,controlHelpOriginX+(chu*80),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",-7,0);
+//					drawLine(cctx,controlHelpOriginX+(chu*62),controlHelpOriginY+(chu*47),controlHelpOriginX+(chu*77),controlHelpOriginY+(chu*40),"#929",4);
+//					drawMusicSymbol(cctx,"\ue510",controlHelpOriginX+(chu*49),controlHelpOriginY+(chu*33),chu*13);
+//					drawLine(cctx,controlHelpOriginX+(chu*57),controlHelpOriginY+(chu*29),controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*29),"#000",1);
+//					drawLine(cctx,controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*29),controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*34),"#000",1);
+//					break;
+//				case 3.7:
+//					drawStaff(cctx,controlHelpOriginX+(chu*30),controlHelpOriginY+(chu*45),chu*13,chu*70,1);
+//					drawNote(cctx,controlHelpOriginX+(chu*55),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",-1,0);
+//					drawNote(cctx,controlHelpOriginX+(chu*80),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",-7,0);
+//					drawLine(cctx,controlHelpOriginX+(chu*62),controlHelpOriginY+(chu*47),controlHelpOriginX+(chu*77),controlHelpOriginY+(chu*40),"#929",4);
+//					drawMusicSymbol(cctx,"\ue514",controlHelpOriginX+(chu*47),controlHelpOriginY+(chu*33),chu*13);
+//					drawLine(cctx,controlHelpOriginX+(chu*57),controlHelpOriginY+(chu*29),controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*29),"#000",1);
+//					drawLine(cctx,controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*29),controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*34),"#000",1);
+//					break;
+//				case 3.8:
+//					drawStaff(cctx,controlHelpOriginX+(chu*30),controlHelpOriginY+(chu*45),chu*13,chu*70,1);
+//					drawNote(cctx,controlHelpOriginX+(chu*55),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",-1,0);
+//					drawNote(cctx,controlHelpOriginX+(chu*80),controlHelpOriginY+(chu*45),chu*13,"noteheadBlack",-7,0);
+//					drawLine(cctx,controlHelpOriginX+(chu*62),controlHelpOriginY+(chu*47),controlHelpOriginX+(chu*77),controlHelpOriginY+(chu*40),"#929",4);
+//					drawMusicSymbol(cctx,"\ue517",controlHelpOriginX+(chu*45),controlHelpOriginY+(chu*33),chu*13);
+//					drawLine(cctx,controlHelpOriginX+(chu*57),controlHelpOriginY+(chu*29),controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*29),"#000",1);
+//					drawLine(cctx,controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*29),controlHelpOriginX+(chu*90),controlHelpOriginY+(chu*34),"#000",1);
+//					break;
+//			}
+//			break;
+//		case 4: // rest symbols
+//			drawControlHelpTitleText("Rest Symbols");
+//			drawControlHelpDescriptionText("As in traditional notation, the whole rest symbol can be used\nas a measure rest in any meter.");
+//			drawStaff(cctx,controlHelpOriginX,controlHelpOriginY+(chu*45),chu*13,chu*45,2);
+//			drawNote(cctx,controlHelpOriginX+(chu*16),controlHelpOriginY+(chu*45),chu*13,"restHalf",0,0);
+//			drawNote(cctx,controlHelpOriginX+(chu*30),controlHelpOriginY+(chu*45),chu*13,"restQuarter",0,1);
+//			drawArrow(cctx,controlHelpOriginX+(chu*50),controlHelpOriginY+(chu*56),chu*13);
+//			drawBrailleIcons(cctx,controlHelpOriginX+(chu*61),controlHelpOriginY+(chu*41),chu*20,[85,86,39],false);
+//			break;
 		case 5: // accidentals
 			drawControlHelpTitleText("Accidentals");
 			drawControlHelpDescriptionText("Place the accidental before the affected note.");
@@ -626,7 +626,6 @@ function drawArrow(c,x,y,height) {
 }
 
 function drawBrailleIcons(c,x,y,height,chars,multiCell) {
-	doNotCheckContiguousCells = multiCell;
 	createTemporaryGrid(height);
 	c.strokeStyle="#000";
 	c.lineWidth=1;
@@ -639,7 +638,6 @@ function drawBrailleIcons(c,x,y,height,chars,multiCell) {
 		}
 	}
     releaseTemporaryGrid();
-	doNotCheckContiguousCells = false;
 }
 
 function drawCellOctaveIcon(c,x,y,height,val) {
@@ -727,6 +725,9 @@ function createTemporaryGrid(height) {
     savedGridHeight = gridHeight;
     gridHeight = height;
     gridWidth = (height*2)/3;
+    storedScore = score.slice(0);
+    score = [[]];
+    score[0] = [];
     storedBlankCells = blankCells.slice(0);
     blankCells = [[]];
 }
@@ -734,5 +735,6 @@ function createTemporaryGrid(height) {
 function releaseTemporaryGrid() {
     gridHeight = savedGridHeight;
     gridWidth = (gridHeight*2)/3;
+    score = storedScore.slice(0);
     blankCells = storedBlankCells.slice(0);
 }

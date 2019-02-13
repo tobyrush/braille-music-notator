@@ -1,4 +1,4 @@
-/* global notationArea, gridHeight, gridWidth, notationGridHeight, notationGridWidth, notationCellWidth, notationCellHeight, ctx, showPageBreaks, pageWidth, pageHeight, hScrollUnits, vScrollUnits, hScrollOffset, vScrollOffset, hScroll, vScroll, gh, gw, score, arrayHasOwnIndex, interpretBraille, cursor, devMode, getScore, dropzone, optionsDialogOpen, fileDialogOpen, drawOptionsDialog, drawFileDialog, doNotCheckContiguousCells, brailleDots, drawAllDots, cellIsEmpty, setScore, saveToUndo, blankCells, longContractions, console, kDropFileZoneMessage: true */
+/* global notationArea, gridHeight, gridWidth, notationGridHeight, notationGridWidth, notationCellWidth, notationCellHeight, ctx, showPageBreaks, pageWidth, pageHeight, hScrollUnits, vScrollUnits, hScrollOffset, vScrollOffset, hScroll, vScroll, gh, gw, score, arrayHasOwnIndex, interpretBraille, cursor, devMode, getScore, dropzone, optionsDialogOpen, fileDialogOpen, drawOptionsDialog, drawFileDialog, brailleDots, drawAllDots, cellIsEmpty, setScore, saveToUndo, blankCells, longContractions, console, kDropFileZoneMessage: true */
 /* jshint -W020 */
 
 function initializeNotation() {
@@ -173,6 +173,24 @@ function drawNotation() {
 	
 }
 
+function drawStoredScore(ctx,x,y) {
+    for (var col in score[0]) {
+        if (arrayHasOwnIndex(score[0],col)) {
+            var val = score[0][col];
+            if (
+                (val>=533 && val<=563) ||
+                (val>=565 && val<=593) ||
+                (val>=647 && val<=651) ||
+                (val>=654 && val<=656) ||
+                (val>=665 && val<=674)
+            ) { // if it's literary braille
+                ctx.strokeRect(x+(gridWidth*col)+2,y+2,gridWidth-4,gridHeight-4);
+            }
+            drawSymbol(ctx,score[0][col],x+(gridWidth*col),y,col,0);
+		}
+	}
+}
+
 function setScrollVars() {
 	hScrollOffset = hScroll % gridWidth;
 	vScrollOffset = vScroll % gridHeight;
@@ -325,7 +343,7 @@ function drawCellTimeSignatureNumber(ctx,x,y,val,isTop) {
 }
 
 function drawCellArticulation(ctx,x,y,col,row,val) {
-	if (val==1 || val==7 || val > 9) {
+	if (val==1 || val==7 || (val > 9 && val < 16)) {
 		drawCellBackground(ctx,x,y,"#7f462c"); // mocha
 	} else {
 		drawMultiCellBackground(ctx,x,y,col,row,"#7f462c",2); // mocha
@@ -393,6 +411,22 @@ function drawCellArticulation(ctx,x,y,col,row,val) {
 		case 15: // fingering 5
 			ctx.font = "normal "+gridHeight*0.8+"px Bravura";
 			ctx.fillText("\uea57",x+gw(0.5),y+gh(0.6));
+			break;
+		case 16: // notehead only
+			ctx.font = "normal "+gridHeight*0.8+"px Bravura";
+			ctx.fillText("\ue0a4",x+gw(1),y+gh(0.5));
+			break;
+		case 17: // X notehead
+			ctx.font = "normal "+gridHeight*0.8+"px Bravura";
+			ctx.fillText("\ue0a9",x+gw(1),y+gh(0.5));
+			break;
+		case 18: // diamond notehead
+			ctx.font = "normal "+gridHeight*0.8+"px Bravura";
+			ctx.fillText("\ue0dd",x+gw(1),y+gh(0.5));
+			break;
+		case 19: // approximate pitch notehead
+			ctx.font = "normal "+gridHeight*0.6+"px Bravura";
+			ctx.fillText("\ue210\ue241",x+gw(1),y+gh(0.8));
 			break;
 	}
 }
@@ -697,22 +731,18 @@ function checkContiguousCells(col,row,cells) {
 	if (cells[0]==555) {
         var x=0;
     }
-    if (doNotCheckContiguousCells) {
-		return true;
-	} else {
-		var len = cells.length;
-		var matches = true;
-		for (var i=0; i<len; i++) {
-			if ((row>=score.length) ||
-                (+col+i>=score[row].length && cells[i]!=-1) ||
-                (!(compareCell(score[row][+col+i],cells[i])) &&
-                 !((typeof score[row][+col+i] == 'undefined') &&
-                  (cells[i] === 0)))) {
-				matches=false;
-			}
-		}
-		return matches;
-	}
+    var len = cells.length;
+    var matches = true;
+    for (var i=0; i<len; i++) {
+        if ((row>=score.length) ||
+            (+col+i>=score[row].length && cells[i]!=-1) ||
+            (!(compareCell(score[row][+col+i],cells[i])) &&
+             !((typeof score[row][+col+i] == 'undefined') &&
+              (cells[i] === 0)))) {
+            matches=false;
+        }
+    }
+    return matches;
 }
 
 function checkPreviousCell(col,row,cell) {
@@ -1409,6 +1439,19 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		} else {
 			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
+
+    } else if (val==353) { // special noteheads
+		if (checkContiguousCells(col,row,[353,765])) { // notehead only
+			drawCellArticulation(ctx,x,y,col,row,16);
+		} else if (checkContiguousCells(col,row,[353,766])) { // X notehead
+			drawCellArticulation(ctx,x,y,col,row,17);
+		} else if (checkContiguousCells(col,row,[353,276])) { // diamond notehead
+			drawCellArticulation(ctx,x,y,col,row,18);
+		} else if (checkContiguousCells(col,row,[353,275])) { // approximate pitch notehead
+			drawCellArticulation(ctx,x,y,col,row,19);
+        } else {
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
+		}
 		
 	} else if (val==356) { // staccato
 		drawCellArticulation(ctx,x,y,col,row,1);
@@ -1633,23 +1676,20 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 		} else if (val==555 && checkContiguousCells(col,row,[555,-1])) {
 			drawCellASCII(ctx,x,y,col,row,')',(val % 100));
 		} else if (!(drawLongTextContraction(ctx,x,y,col,row,val)) &&
-            (!(letterIsPartOfSymbol(col,row,val)) ||
-            doNotCheckContiguousCells)) {
+            (!(letterIsPartOfSymbol(col,row,val)))) {
 			chars=['THE','','#','ED','SH','AND',"'",'OF','WITH','CH','ING','capital sign','-','.','ST','',',',';',':','.','EN','!','(…)','?','IN','WH','text sign','GH','FOR','AR','TH'];
 			drawCellASCII(ctx,x,y,col,row,chars[val-533],(val % 100));
 		}
 	
 	} else if (val>=565 && val<=590) { // text letters
 		if (!(drawLongTextContraction(ctx,x,y,col,row,val)) &&
-            (!(letterIsPartOfSymbol(col,row,val)) ||
-            doNotCheckContiguousCells)) {
+            (!(letterIsPartOfSymbol(col,row,val)))) {
 			drawCellASCII(ctx,x,y,col,row,String.fromCharCode(val-500),(val % 100));
 		}
 		
 	} else if (val>=591 && val<=593) { // contractions
 		if (!(drawLongTextContraction(ctx,x,y,col,row,val)) &&
-            (!(letterIsPartOfSymbol(col,row,val)) ||
-            doNotCheckContiguousCells)) {
+            (!(letterIsPartOfSymbol(col,row,val)))) {
             chars=['OW','OU','ER'];
             drawCellASCII(ctx,x,y,col,row,chars[val-591],(val % 100));
         }
@@ -1799,8 +1839,7 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 
 	} else if (val>=750 && val<=757) { // punctuation and contractions
 		if (!(drawLongTextContraction(ctx,x,y,col,row,val)) &&
-            (!(letterIsPartOfSymbol(col,row,val)) ||
-            doNotCheckContiguousCells)) {
+            (!(letterIsPartOfSymbol(col,row,val)))) {
             chars=['BE','CON','DIS','ENOUGH','TO','WERE','HIS','WAS'];
             drawCellASCII(ctx,x,y,col,row,chars[val-750],(val % 100));
         }
