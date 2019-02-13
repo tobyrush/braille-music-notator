@@ -713,7 +713,8 @@ function drawKeyCap(cctx,kbu,x,y,noteDescriptor,key) {
 			cctx.font = "normal "+kbu*0.6+"px Bravura";
 			cctx.textAlign="center";
 			cctx.textBaseline="middle";
-			switch (noteDescriptor[1]) {
+			var vert = 0.48;
+            switch (noteDescriptor[1]) {
 				case 1: char="\ue4a2"; break; // staccato
 				case 2: char="\ue4a4"; break; // tenuto
 				case 3: char="\ue4a0"; break; // accent
@@ -729,9 +730,13 @@ function drawKeyCap(cctx,kbu,x,y,noteDescriptor,key) {
 				case 13: char="\uea54"; break; // fingering 3
 				case 14: char="\uea55"; break; // fingering 4
 				case 15: char="\uea57"; break; // fingering 5
+				case 16: char="\ue0a4"; break; // notehead only
+				case 17: char="\ue0a9"; break; // X notehead
+				case 18: char="\ue0dd"; break; // diamond notehead
+				case 19: char="\ue210\ue241"; vert = 0.7; // approx pitch notehead
 				
 			}
-			cctx.fillText(char,x+(kbu*0.48),y+(kbu*0.48));
+			cctx.fillText(char,x+(kbu*0.48),y+(kbu*vert));
 			
 			// set color for key cap
 			cctx.fillStyle="#bfa295";

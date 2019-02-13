@@ -397,6 +397,12 @@ function characterName(val,x,y) {
 	} else if (val>=265 && val<=271) { // key signature accidental multipliers
 		s="key signature "+(val-264)+" accidentals";
 	
+	} else if (val==275) { // approximate pitch notehead (second symbol)
+		s="second character of approximate pitch notehead symbol";
+
+	} else if (val==276) { // diamond notehead (second symbol)
+		s="second character of diamond notehead symbol";
+
 	} else if (val==295) { // tuplet prefix
 		s="tuplet prefix";
 		
@@ -427,6 +433,9 @@ function characterName(val,x,y) {
 	} else if (val==350) { // end bracket slur (second symbol)
 		s="second character of end bracket slur";
 		
+	} else if (val==353) { // special noteheads (first symbol)
+		s="first character of special notehead";
+
 	} else if (val==356) { // staccato
 		s="staccato";
 		
@@ -694,6 +703,12 @@ function characterName(val,x,y) {
         } else if (checkPreviousCell(x,y,594)) { // contraction THOSE (last symbol)
             s="last character of text contraction those";
         }
+
+	} else if (val==765) { // notehead only (second symbol)
+		s="second character of notehead only symbol";
+
+	} else if (val==766) { // X notehead (second symbol)
+		s="second character of X notehead symbol";
 
 	} else if (val==767) { // change fingers
 		s="change fingering";

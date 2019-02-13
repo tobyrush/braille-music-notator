@@ -331,7 +331,7 @@ function drawCellTimeSignatureNumber(ctx,x,y,val,isTop) {
 }
 
 function drawCellArticulation(ctx,x,y,col,row,val) {
-	if (val==1 || val==7 || val > 9) {
+	if (val==1 || val==7 || (val > 9 && val < 16)) {
 		drawCellBackground(ctx,x,y,"#7f462c"); // mocha
 	} else {
 		drawMultiCellBackground(ctx,x,y,col,row,"#7f462c",2); // mocha
@@ -399,6 +399,22 @@ function drawCellArticulation(ctx,x,y,col,row,val) {
 		case 15: // fingering 5
 			ctx.font = "normal "+gridHeight*0.8+"px Bravura";
 			ctx.fillText("\uea57",x+gw(0.5),y+gh(0.6));
+			break;
+		case 16: // notehead only
+			ctx.font = "normal "+gridHeight*0.8+"px Bravura";
+			ctx.fillText("\ue0a4",x+gw(1),y+gh(0.5));
+			break;
+		case 17: // X notehead
+			ctx.font = "normal "+gridHeight*0.8+"px Bravura";
+			ctx.fillText("\ue0a9",x+gw(1),y+gh(0.5));
+			break;
+		case 18: // diamond notehead
+			ctx.font = "normal "+gridHeight*0.8+"px Bravura";
+			ctx.fillText("\ue0dd",x+gw(1),y+gh(0.5));
+			break;
+		case 19: // approximate pitch notehead
+			ctx.font = "normal "+gridHeight*0.6+"px Bravura";
+			ctx.fillText("\ue210\ue241",x+gw(1),y+gh(0.8));
 			break;
 	}
 }
@@ -1406,6 +1422,19 @@ function drawInterpretedBrailleSymbol(ctx,val,x,y,col,row) {
 			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
 		}
 		
+	} else if (val==353) { // special noteheads
+		if (checkContiguousCells(col,row,[353,765])) { // notehead only
+			drawCellArticulation(ctx,x,y,col,row,16);
+		} else if (checkContiguousCells(col,row,[353,766])) { // X notehead
+			drawCellArticulation(ctx,x,y,col,row,17);
+		} else if (checkContiguousCells(col,row,[353,276])) { // diamond notehead
+			drawCellArticulation(ctx,x,y,col,row,18);
+		} else if (checkContiguousCells(col,row,[353,275])) { // approximate pitch notehead
+			drawCellArticulation(ctx,x,y,col,row,19);
+        } else {
+			drawLiteralBrailleSymbol(ctx,val,x,y,col,row);
+		}
+
 	} else if (val==356) { // staccato
 		drawCellArticulation(ctx,x,y,col,row,1);
 	

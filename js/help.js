@@ -246,8 +246,8 @@ function displayControlHelp() {
 			drawBrailleIcons(cctx,controlHelpOriginX+(chu*63),controlHelpOriginY+(chu*41),chu*20,[46,359,0,93,36,92,93,394,0],true);
 			break;
 		case 14: // articulations
-			drawControlHelpTitleText("Articulations");
-			drawControlHelpDescriptionText("Place articulations before the note affected. Use doubled symbols to\nuse an articulation until specified otherwise.");
+			drawControlHelpTitleText("Articulations & Special Noteheads");
+			drawControlHelpDescriptionText("Place these symbols before the note affected. Use doubled symbols to\nuse an articulation until specified otherwise.");
 			drawStaff(cctx,controlHelpOriginX,controlHelpOriginY+(chu*45),chu*13,chu*47,2);
 			drawNote(cctx,controlHelpOriginX+(chu*14),controlHelpOriginY+(chu*45),chu*13,"noteQuarterDown",0,0);
 			drawMusicSymbol(cctx,"\ue4a2",controlHelpOriginX+(chu*15.3),controlHelpOriginY+(chu*47.2),chu*13);
