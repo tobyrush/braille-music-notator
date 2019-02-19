@@ -44,6 +44,7 @@ var currentControlModule;
 
 var storedScore, score = [[]]; // y,x
 var storedBlankCells, blankCells = [[]];
+var tempGrid = false;
 
 // the following array starts at 32, so values should be accessed a brailleDots[theAsciiCode-32].
 var brailleDots = [0,46,16,60,43,41,47,4,55,62,33,44,32,36,40,12,52,2,6,18,50,34,22,54,38,20,49,48,35,63,28,57,8,1,3,9,25,17,11,27,19,10,26,5,7,13,29,21,15,31,23,14,30,37,39,58,45,61,53,42,51,59,24,56];
@@ -305,4 +306,24 @@ function firstCharPosInRow(y) { // returns position of first nonempty character 
 		}
 	}
 	return pos;
+}
+
+function createTemporaryGrid(height) {
+    savedGridHeight = gridHeight;
+    gridHeight = height;
+    gridWidth = (height*2)/3;
+    storedScore = score.slice(0);
+    score = [[]];
+    score[0] = [];
+    storedBlankCells = blankCells.slice(0);
+    blankCells = [[]];
+    tempGrid = true;
+}
+
+function releaseTemporaryGrid() {
+    gridHeight = savedGridHeight;
+    gridWidth = (gridHeight*2)/3;
+    score = storedScore.slice(0);
+    blankCells = storedBlankCells.slice(0);
+    tempGrid = false;
 }

@@ -476,7 +476,7 @@ class controlGraphic {
     draw(ctx,boxWidth,boxHeight) {
         var a = this.attr;
         var d = this.root.defaults;
-        var x,y,w,h,p,i,n,yp,c,o;
+        var x,y,w,h,p,i,n,yp,c,o,x1,x2,x3,y1,y2,y3,m;
         [
             'font',
             'style',
@@ -500,6 +500,8 @@ class controlGraphic {
             'ccw',
             'startX',
             'startY',
+            'controlX',
+            'controlY',
             'endX',
             'endY',
             'strokeColor',
@@ -508,7 +510,9 @@ class controlGraphic {
             'position',
             'dots',
             'note',
-            'accidental'
+            'accidental',
+            'numerator',
+            'denominator'
         ].forEach(function(e) {
                 if (!(a.hasOwnProperty(e)) && d.hasOwnProperty(e)) {
                 a[e]=d[e];
@@ -562,11 +566,12 @@ class controlGraphic {
                 ctx.textBaseline=a.baseline;
                 if (a.multiline=="true") {
                     var lines = a.content.split('\\n');
+                    var lineHeight = a.lineHeight*(boxHeight/100);
                     for (i=0; i<lines.length; i++) {
                         ctx.fillText(
                             lines[i],
                             a.left*(boxWidth/100),
-                            (a.top*(boxHeight/100))+(i*a.lineHeight)
+                            (a.top*(boxHeight/100))+(i*lineHeight)
                         );
                     }
                 } else {
@@ -747,6 +752,73 @@ class controlGraphic {
                 score[0] = a.cells.split(",");
                 drawStoredScore(ctx,x,y);
                 releaseTemporaryGrid();
+                break;
+            case "tie":
+                x1=a.startX*(boxHeight/100);
+                x2=a.endX*(boxHeight/100);
+                y=a.top*(boxHeight/100);
+                h=a.height*(boxHeight/100);
+                p=a.position;
+                yp = y+(h*0.5)+((p-1)*(h/8));
+                ctx.beginPath();
+                m = (x2-x1)/2;
+                ctx.arc(
+                    x1+m,
+                    yp+m,
+                    Math.sqrt(2*Math.pow(m,2)),
+                    1.25*Math.PI,
+                    1.75*Math.PI,
+                    false
+                );
+                ctx.lineWidth=2;
+                ctx.strokeStyle = "#000"; // black
+                ctx.stroke();
+                ctx.closePath();
+                break;
+            case "timeSignature":
+                x=a.left*(boxWidth/100);
+                y=a.top*(boxHeight/100);
+                h=a.height*(boxHeight/100);
+                ctx.textBaseline = "middle";
+                ctx.textAlign = "left";
+                ctx.font = "normal "+h+"px Bravura";
+                var chars = [
+                    "\ue080",
+                    "\ue081",
+                    "\ue082",
+                    "\ue083",
+                    "\ue084",
+                    "\ue085",
+                    "\ue086",
+                    "\ue087",
+                    "\ue088",
+                    "\ue089"
+                ];
+                ctx.fillText(
+                    chars[a.numerator],
+                    x,
+                    y+(h*0.25)
+                );
+                ctx.fillText(
+                    chars[a.denominator],
+                    x,
+                    y+(h*0.75)
+                );
+                break;
+            case "slur":
+                x1=a.startX*(boxWidth/100);
+                y1=a.startY*(boxHeight/100);
+                x2=a.controlX*(boxWidth/100);
+                y2=a.controlY*(boxHeight/100);
+                x3=a.endX*(boxWidth/100);
+                y3=a.endY*(boxHeight/100);
+                ctx.beginPath();
+                ctx.moveTo(x1,y1);
+                ctx.quadraticCurveTo(x2,y2,x3,y3);
+                ctx.lineWidth=2;
+                ctx.strokeStyle = "#000"; // black
+                ctx.stroke();
+                ctx.closePath();
         }
     }
 }
