@@ -1,4 +1,4 @@
-/* global notationArea, gridHeight, gridWidth, notationGridHeight, notationGridWidth, notationCellWidth, notationCellHeight, ctx, showPageBreaks, pageWidth, pageHeight, hScrollUnits, vScrollUnits, hScrollOffset, vScrollOffset, hScroll, vScroll, gh, gw, score, arrayHasOwnIndex, interpretBraille, cursor, devMode, getScore, dropzone, optionsDialogOpen, fileDialogOpen, drawOptionsDialog, drawFileDialog, brailleDots, drawAllDots, cellIsEmpty, setScore, saveToUndo, blankCells, longContractions, console, kDropFileZoneMessage, tempGrid: true */
+/* global notationArea, gridHeight, gridWidth, notationGridHeight, notationGridWidth, notationCellWidth, notationCellHeight, ctx, showPageBreaks, pageWidth, pageHeight, hScrollUnits, vScrollUnits, hScrollOffset, vScrollOffset, hScroll, vScroll, gh, gw, score, arrayHasOwnIndex, interpretBraille, cursor, devMode, getScore, dropzone, optionsDialogOpen, fileDialogOpen, drawOptionsDialog, drawFileDialog, brailleDots, drawAllDots, cellIsEmpty, setScore, saveToUndo, blankCells, longContractions, console, kDropFileZoneMessage, tempGrid, updateScreenreader, formFill, kScreenReaderTemplate, characterName: true */
 /* jshint -W020 */
 
 function initializeNotation() {
@@ -77,7 +77,7 @@ function drawNotation() {
     for (var y in score) {
 		if ((y>vScrollUnits-1) && (y<vScrollUnits+(notationCellHeight+1)) && arrayHasOwnIndex(score,y)) {
 			for (var x in score[y]) {
-				if ((x>hScrollUnits-1) && (x<hScrollUnits+(notationCellWidth+1)) && arrayHasOwnIndex(score[y],x)) {
+				if ((x>hScrollUnits-7) && (x<hScrollUnits+(notationCellWidth+1)) && arrayHasOwnIndex(score[y],x)) {
 					drawSymbol(ctx,score[y][x],(gridWidth*(x-hScrollUnits))-hScrollOffset,(gridHeight*(y-vScrollUnits))-vScrollOffset,x,y);
 				}
 			}
@@ -2022,6 +2022,24 @@ function scrollCanvas(x,y) {
 		vScroll=0;
 	}
 	drawNotation();
+}
+
+function placeCursor(x,y,w,h,readerText) {
+    cursor.x = x;
+    cursor.y = y;
+    cursor.width = w;
+    cursor.height = h;
+    updateScreenreader(
+        formFill(
+            kScreenReaderTemplate,
+            [
+                readerText,
+                y,
+                x,
+                characterName(getScore(x,y),x,y)
+            ]
+        )
+    );
 }
 
 function scrollToCursor() {

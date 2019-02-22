@@ -12,6 +12,7 @@ var kCharNames,
     kFileNameBRM,
     kHeightLabel,
     kHelpButtonCaption,
+    kKeyCommands = [],
     kNewFileDescription,
     kNewFileLabel,
     kOpenFileDescription,
@@ -500,7 +501,62 @@ function localize(lang) {
                 [mkStr([0,0,0,970,0,0,0]),"last character of text contraction father"],
             ];
 
-
+            kKeyCommands[8] = [
+                "Cleared cell at line %%1 character %%2.",
+                "Cleared selection."
+            ];
+            kKeyCommands[38] = ["Deleted row."];
+            kKeyCommands[40] = ["Inserted row."];
+            kKeyCommands[45] = ["Inserted empty cell"];
+            kKeyCommands[46] = [
+                "Deleted cell at line %%1 character %%2"
+            ];
+            kKeyCommands[65] = ["All cells selected."];
+            kKeyCommands[66] = [
+                "Visual braille interpretation disabled.",
+                "Visual braille interpretation enabled."
+            ];
+            kKeyCommands[67] = ["Selection copied to clipboard."];
+            kKeyCommands[68] = [
+                "Small braille dots disabled.",
+                "Small braille dots enabled."
+            ];
+            kKeyCommands[69] = ["File exported in embosser-ready format."];
+            kKeyCommands[72] = [
+                "Parsing of imported documents disabled.",
+                "Parsing of imported documents enabled."
+            ];
+            kKeyCommands[73] = [
+                "Page height reduced. Height %%1, width %%2.",
+                "Page boundaries visible. Page height reduced. Height %%1, width %%2."
+            ];
+            kKeyCommands[74] = [
+                "Page width reduced. Height %%1, width %%2.",
+                "Page boundaries visible. Page height reduced. Height %%1, width %%2."
+            ];
+            kKeyCommands[75] = [
+                "Page height increased. Height %%1, width %%2.",
+                "Page boundaries visible. Page height reduced. Height %%1, width %%2."
+            ];
+            kKeyCommands[76] = [
+                "Page width increased. Height %%1, width %%2.",
+                "Page boundaries visible. Page height reduced. Height %%1, width %%2."
+            ];
+            kKeyCommands[78] = ["New document."];
+            kKeyCommands[79] = ["Open existing document."];
+            kKeyCommands[80] = [
+                "Page boundaries hidden.",
+                "Page boundaries visible."
+            ];
+            kKeyCommands[83] = ["File saved."];
+            kKeyCommands[85] = [
+                "Accessible output set to screen reader mode.",
+                "Accessible output set to refreshable braille display mode."
+            ];
+            kKeyCommands[89] = ["Redo."];
+            kKeyCommands[90] = ["Undo."];
+            kKeyCommands[187] = ["Magnification increased to %%1."];
+            kKeyCommands[189] = ["Magnification decreased to %%1."];
 
     }
 }

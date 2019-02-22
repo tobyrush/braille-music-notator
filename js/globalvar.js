@@ -191,7 +191,13 @@ function getCellContext(x,y) {
     // returns a string containing the character and the three cells before and after
     var r="";
     for (var i=(x-3); i<=(x+3); i++) {
-        if (typeof score[y][i]==="undefined" || score[y][i]===null || score[y][i]===0 || score[y][i]==32) {
+        if (
+            typeof score[y]==="undefined" ||
+            typeof score[y][i]==="undefined" ||
+            score[y][i]===null ||
+            score[y][i]===0 ||
+            score[y][i]==32
+        ) {
             r=r+" ";
         } else {
             r=r+String.fromCharCode(score[y][i]);

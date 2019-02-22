@@ -1,4 +1,4 @@
-/* global titleArea, tctx, versionString, helpDialogOpen, roundRect, optionsDialogOpen, fileDialogOpen, controlArea, cctx, whichKeyboard, keyboardCoordinates, keymap, keycaps, displayControlHelp, cursor, hScroll, vScroll, controlsHeight, controlsWidth, chu, resizeBarHeight, keyboardOriginX, keyboardOriginY, kbu, controlHelpOriginX, controlHelpOriginY, console, shiftKeyDown, metaKeyDown, formFill, kProgramTitle, kVersionAndAuthor, kHelpButtonCaption, kOptionsButtonCaption, kFileButtonCaption, sendHTTPRequest, defaultControlModule, DOMParser, currentControlModule, updateScreenreader, kScreenReaderControlPageNumber, createTemporaryGrid, gridWidth, gridHeight, drawSymbol, releaseTemporaryGrid, document, devMode, score, drawStoredScore: true */
+/* global titleArea, tctx, versionString, helpDialogOpen, roundRect, optionsDialogOpen, fileDialogOpen, controlArea, cctx, whichKeyboard, keyboardCoordinates, keymap, keycaps, displayControlHelp, cursor, hScroll, vScroll, controlsHeight, controlsWidth, chu, resizeBarHeight, keyboardOriginX, keyboardOriginY, kbu, controlHelpOriginX, controlHelpOriginY, console, shiftKeyDown, metaKeyDown, formFill, kProgramTitle, kVersionAndAuthor, kHelpButtonCaption, kOptionsButtonCaption, kFileButtonCaption, sendHTTPRequest, defaultControlModule, DOMParser, currentControlModule, updateScreenreader, kScreenReaderControlPageNumber, createTemporaryGrid, gridWidth, gridHeight, drawSymbol, releaseTemporaryGrid, document, devMode, score, drawStoredScore, notate: true */
 /* jshint -W020 */
 
 function initializeTitle() {
@@ -255,24 +255,38 @@ class controlModule {
             this.pages[this.currentPage].mouseOver(x-this.pageButtonWidth,y);
         }
     }
-    keyDown(keycode) {
-        if (keycode==9 && this.pages.length>1) {
-            if (shiftKeyDown) {
-                this.currentPage -= 1;
-                if (this.currentPage<0) {
-                    this.currentPage = this.pages.length-1;
-                }
-            } else {
-                this.currentPage += 1;
-                if (this.currentPage>this.pages.length-1) {
-                    this.currentPage = 0;
-                }
+    nextPage() {
+        if (this.pages.length>1) {
+            this.currentPage += 1;
+            if (this.currentPage>this.pages.length-1) {
+                this.currentPage = 0;
             }
-            updateScreenreader(formFill(kScreenReaderControlPageNumber,[this.currentPage+1]));
+            updateScreenreader(
+                formFill(
+                    kScreenReaderControlPageNumber,
+                    [this.currentPage+1]
+                )
+            );
             this.draw();
-        } else {
-            this.pages[this.currentPage].keyDown(keycode);
         }
+    }
+    prevPage() {
+        if (this.pages.length>1) {
+            this.currentPage -= 1;
+            if (this.currentPage<0) {
+                this.currentPage = this.pages.length-1;
+            }
+            updateScreenreader(
+                formFill(
+                    kScreenReaderControlPageNumber,
+                    [this.currentPage+1]
+                )
+            );
+            this.draw();
+        }
+    }
+    keyPress(keycode) {
+        return this.pages[this.currentPage].keyPress(keycode);
     }
 }
 
@@ -317,12 +331,18 @@ class controlPage {
         }
         this.root.draw();
     }
-    keyDown(keycode) {
+    keyPress(keycode) {
+        var resp = {};
         for (let c of this.controlItems) {
-            if (c.keyDown(keycode)) {
-                break;
+            if (c.keycode==keycode) {
+                resp.chars = c.characters;
+                resp.returnText = c.label;
+                return resp;
             }
         }
+        resp.chars = [];
+        resp.returnText = "";
+        return resp;
     }
 }
 
@@ -362,6 +382,7 @@ class controlItem {
         this.left = xml.getAttribute('left');
         this.width = xml.getAttribute('width');
         this.height = xml.getAttribute('height');
+        this.label = xml.getAttribute('label');
         this.graphics = [];
         this.characters = [];
         for (let node of xml.getElementsByTagName('graphic')) {
@@ -401,7 +422,7 @@ class controlItem {
             x<this.left*chu + this.width*chu &&
             y<this.top*chu + this.height*chu
         ) {
-            this.fire();
+            notate(this.characters,this.label);
             return true;
         } else {
             return false;
@@ -415,17 +436,6 @@ class controlItem {
             x<this.left*chu + this.width*chu &&
             y<this.top*chu + this.height*chu
         );
-    }
-    keyDown(keycode) {
-        if (this.keycode==keycode) {
-            this.fire();
-            return true;
-        } else {
-            return false;
-        }
-    }
-    fire() {
-        // send this.characters to notation area
     }
 }
 

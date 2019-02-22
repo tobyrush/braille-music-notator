@@ -3,7 +3,7 @@
 
 function initialize() {
 	versionString = "0.9.2b";
-	devMode = true;
+	devMode = false;
 	
     localize('en');
 	container = document.getElementById("container");
@@ -18,8 +18,6 @@ function initialize() {
 	document.addEventListener("paste",handleClipboard,false);
 	fileUploader = document.getElementById("fileUpload");
 	fileUploader.addEventListener("change",doFileOpen,false);
-	//dialogField = document.getElementById("dialogField");
-	// dialogField.addEventListener("keypress", doDialogFieldKeypress,false);
 	notationArea.addEventListener("mousedown",doNotationMouseDown,false);
 	notationArea.addEventListener("mouseup",doNotationMouseUp,false);
 	notationArea.addEventListener("mousemove",doNotationMouseMove,false);
@@ -35,11 +33,9 @@ function initialize() {
 	controlArea.addEventListener("mouseout",doControlMouseOut,false);
 	titleArea = document.getElementById("titleCanvas");
 	titleArea.addEventListener("mousedown",doTitleMouseDown,false);
-	//cctx = controlArea.getContext("2d");
 	tctx = titleArea.getContext("2d");
 	ctx = notationArea.getContext("2d");
 	clipboardArea = document.getElementById("clipboard");
-	//checkForFlash();
 	cursor.x=0;
 	cursor.y=0;
 	cursor.height=1;
