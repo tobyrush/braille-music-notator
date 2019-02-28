@@ -464,20 +464,56 @@
         <graphic type="background" color="#f80" cells="2"/>
         <graphic type="text" color="#000" align="center" size="80" left="105" top="60" content="&#xe264;" />
     </cell>
+    <cell name="three-quarters flat">
+        <code value="695" />
+        <code value="360" />
+        <graphic type="background" color="#f80" cells="2" />
+        <graphic type="text" color="#000" align="center" size="80" left="105" top="60" content="&#xe440;" />
+    </cell>
     <cell name="flat">
         <code value="60" />
         <graphic type="background" color="#f80" />
         <graphic type="text" color="#000" align="center" size="80" left="55" top="60" content="&#xe260;" />
+    </cell>
+    <cell name="four commas flat">
+        <code value="694" />
+        <code value="360" />
+        <graphic type="background" color="#f80" cells="2" />
+        <graphic type="text" color="#000" align="center" size="80" left="105" top="60" content="&#xe442;" />
+    </cell>
+    <cell name="one-quarter flat">
+        <code value="664" />
+        <code value="360" />
+        <graphic type="background" color="#f80" cells="2" />
+        <graphic type="text" color="#000" align="center" size="80" left="105" top="60" content="&#xe443;" />
     </cell>
     <cell name="natural">
         <code value="42" />
         <graphic type="background" color="#f80" />
         <graphic type="text" color="#000" align="center" size="80" left="55" top="50" content="&#xe261;" />
     </cell>
+    <cell name="one-quarter sharp">
+        <code value="664" />
+        <code value="337" />
+        <graphic type="background" color="#f80" cells="2" />
+        <graphic type="text" color="#000" align="center" size="80" left="105" top="50" content="&#xe444;" />
+    </cell>
     <cell name="sharp">
         <code value="37" />
         <graphic type="background" color="#f80" />
         <graphic type="text" color="#000" align="center" size="80" left="55" top="50" content="&#xe262;" />
+    </cell>
+    <cell name="five commas sharp">
+        <code value="694" />
+        <code value="337" />
+        <graphic type="background" color="#f80" cells="2" />
+        <graphic type="text" color="#000" align="center" size="80" left="105" top="50" content="&#xe446;" />
+    </cell>
+    <cell name="three-quarters sharp">
+        <code value="695" />
+        <code value="337" />
+        <graphic type="background" color="#f80" cells="2" />
+        <graphic type="text" color="#000" align="center" size="80" left="105" top="50" content="&#xe447;" />
     </cell>
     <cell name="double sharp">
         <code value="37" />

@@ -109,7 +109,7 @@
         <control keycode="187" top="13" left="229" width="18" height="18" label="Double sharp">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F80" />
             <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="47" left="48" content="&#xe263;" />
-             <graphic type="text" color="#740" left="15" top="80" size="20" content="=" />
+            <graphic type="text" color="#740" left="15" top="80" size="20" content="=" />
             <help page="accidentals" />
             <character code="37" />
             <character code="337" />
@@ -1544,41 +1544,53 @@
         <control keycode="32" top="0" left="0" width="0" height="0">
             <character code="0" />
         </control>
-        <control keycode="192" top="13" left="13" width="18" height="18">
-            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
-            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="`" />
-            <help page="default" />
-            <character code="0" />
+        <control keycode="192" top="13" left="13" width="18" height="18" label="Three-quarters flat">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F80" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="48" content="&#xe440;" />
+            <graphic type="text" color="#740" left="15" top="80" size="20" content="`" />
+            <help page="accidentals" />
+            <character code="695" />
+            <character code="360" />
         </control>
-        <control keycode="49" top="13" left="31" width="18" height="18">
-            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
-            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="1" />
-            <help page="default" />
-            <character code="0" />
+        <control keycode="49" top="13" left="31" width="18" height="18" label="Four commas flat">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F80" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="48" content="&#xe442;" />
+            <graphic type="text" color="#740" left="15" top="80" size="20" content="1" />
+            <help page="accidentals" />
+            <character code="694" />
+            <character code="360" />
         </control>
-        <control keycode="50" top="13" left="49" width="18" height="18">
-            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
-            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="2" />
-            <help page="default" />
-            <character code="0" />
+        <control keycode="50" top="13" left="49" width="18" height="18" label="One-quarter flat">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F80" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="48" content="&#xe443;" />
+            <graphic type="text" color="#740" left="15" top="80" size="20" content="2" />
+            <help page="accidentals" />
+            <character code="664" />
+            <character code="360" />
         </control>
-        <control keycode="51" top="13" left="67" width="18" height="18">
-            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
-            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="3" />
-            <help page="default" />
-            <character code="0" />
+        <control keycode="51" top="13" left="67" width="18" height="18" label="One-quarter sharp">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F80" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="47" left="48" content="&#xe444;" />
+            <graphic type="text" color="#740" left="15" top="80" size="20" content="3" />
+            <help page="accidentals" />
+            <character code="664" />
+            <character code="337" />
         </control>
-        <control keycode="52" top="13" left="85" width="18" height="18">
-            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
-            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="4" />
-            <help page="default" />
-            <character code="0" />
+        <control keycode="52" top="13" left="85" width="18" height="18" label="Five commas sharp">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F80" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="47" left="48" content="&#xe446;" />
+            <graphic type="text" color="#740" left="15" top="80" size="20" content="4" />
+            <help page="accidentals" />
+            <character code="694" />
+            <character code="337" />
         </control>
-        <control keycode="53" top="13" left="103" width="18" height="18">
-            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
-            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="5" />
-            <help page="default" />
-            <character code="0" />
+        <control keycode="53" top="13" left="103" width="18" height="18" label="Three-quarters sharp">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F80" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="47" left="48" content="&#xe447;" />
+            <graphic type="text" color="#740" left="15" top="80" size="20" content="5" />
+            <help page="accidentals" />
+            <character code="695" />
+            <character code="337" />
         </control>
         <control keycode="54" top="13" left="121" width="18" height="18">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
