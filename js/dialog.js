@@ -1,4 +1,4 @@
-/* global helpWindow, helpDialogOpen, optionsDialogOpen, fileDialogOpen, notationArea, notationWidth, window, config, nu, ctx, roundRect, dialogTop, dialogButtonLeft, dialogButtonTop, dialogButtonRight, interpretBraille, drawAllDots, notationGridHeight, showPageBreaks, pageWidth, pageHeight, dialogButtonWidth, dialogButtonHeight, parseOnImport, notationHeight, closeButtonCenterX, closeButtonCenterY, kOptionsDialogTitle, kShowTranslatedBrailleLabel, kShowTranslatedBrailleDescription, kShowSmallDotsLabel, kShowSmallDotsDescription, kScoreSizeLabel, kShowPageBoundariesLabel, kShowPageBoundariesDescription, kWidthLabel, kHeightLabel, kFileDialogTitle, kNewFileLabel, kNewFileDescription, kOpenFileLabel, kOpenFileDescription, kSaveFileLabel, kSaveFileDescription, kExportFileLabel, kExportFileDescription, kParseImportedFilesLabel, kParseImportedFilesDescription: true */
+/* global helpWindow, helpDialogOpen, optionsDialogOpen, fileDialogOpen, notationArea, notationWidth, window, config, nu, ctx, roundRect, dialogTop, dialogButtonLeft, dialogButtonTop, dialogButtonRight, interpretBraille, drawAllDots, notationGridHeight, showPageBreaks, pageWidth, pageHeight, dialogButtonWidth, dialogButtonHeight, parseOnImport, notationHeight, closeButtonCenterX, closeButtonCenterY, kOptionsDialogTitle, kShowTranslatedBrailleLabel, kShowTranslatedBrailleDescription, kShowSmallDotsLabel, kShowSmallDotsDescription, kScoreSizeLabel, kShowPageBoundariesLabel, kShowPageBoundariesDescription, kWidthLabel, kHeightLabel, kFileDialogTitle, kNewFileLabel, kNewFileDescription, kOpenFileLabel, kOpenFileDescription, kSaveFileLabel, kSaveFileDescription, kExportFileLabel, kExportFileDescription, kParseImportedFilesLabel, kParseImportedFilesDescription, currentCellFont: true */
 /* jshint -W020 */
 
 function toggleHelpDialog() {
@@ -130,7 +130,7 @@ function drawOptionsDialog() {
 	ctx.fillText(kShowTranslatedBrailleLabel,dialogButtonLeft+(nu*15),dialogButtonTop[1]+(nu*4));
 	ctx.font="normal "+(nu*2.7)+"px sans-serif";
 	ctx.fillText(kShowTranslatedBrailleDescription,dialogButtonLeft+(nu*15),dialogButtonTop[1]+(nu*8.5));
-	if (interpretBraille) {
+	if (currentCellFont.interpretBraille) {
 		ctx.lineWidth=4;
 		ctx.beginPath();
 		ctx.moveTo(dialogButtonLeft+(nu*4),dialogButtonTop[1]+(nu*6));

@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>Test</title>
+    </head>
+    <body>
+        <script>
+            const foo = [{bar: [1]}, {bar: [2]}, {bar: [2,4,5]}, {bar: [2,4,6]}, {bar: [2,4,6,7]}, {bar: [2,4,6,9]}, {bar: [3]}];
+
+
+            function alenTomaSearch(arr, minLengthMatch){
+               if (!minLengthMatch) // specify min match or use the default the arr length
+                    minLengthMatch = arr.length;
+             return foo.filter(function(x){
+                    var matchFound = 0;
+                    for(var i in arr){
+                      if (x.bar.indexOf(arr[i]) == i)
+                           matchFound++;
+                      else break; // tha match seq have been broken
+                    }
+                    return matchFound>=minLengthMatch
+               }); // .map(x=> x.bar);
+               // change from .map to flatMap if you want a single array
+            }
+
+            const ostojaSearch = searchArray => {
+              const matchingObjectsArray =  foo.map(obj => {
+                obj.matchCount = 0
+                searchArray.forEach((el, i)=>{
+                  if(el === obj.bar[i]) obj.matchCount += 1
+                })
+                return obj.matchCount ? obj: null //if there are no matches replace obj with null
+               }).filter(Boolean) // get rid of nulls
+              const sortedMatches = matchingObjectsArray
+                                          .sort((a,b)=> b.matchCount - a.matchCount)
+                                          .map(obj=> {
+                                             delete obj.matchCount;
+                                             return obj
+                                           })
+              return sortedMatches
+            }
+
+            const benvcSearch = (objs, arr) => {
+
+              let matches = objs.reduce((acc, obj) => {
+                let len = arr.length <= obj.bar.length ? arr.length : obj.bar.length;
+                let a = JSON.stringify(arr.slice(0, len));
+                let b = JSON.stringify(obj.bar.slice(0, len));
+                if (a === b) {
+                  if (len < arr.length) {
+                    acc.short.push(obj);
+                  } else {
+                    acc.long.push(obj);
+                  }
+                }
+                return acc;
+              }, {long: [], short: []});
+
+              if (!matches.long.length) {
+                return matches.short.sort((a, b) => b.bar.length - a.bar.length).slice(0, 1);
+              }
+
+              return matches.long;
+
+            }
+
+            function chipsterSearch(test) {
+                var result = []; // the list of matches
+                var maxLen = 0; // to be filled later
+                // loop control vars.
+                var j=0;
+                var i=0;
+                // loop 1, for searching every bar
+                for(j=0;j<foo.length;j++) {
+                    // if 1, for knowing our max length.
+                    // Could be replaced with a ?:, but I don't remember if those exist in js
+                    // if they do, it'd look something like
+                    // maxLen = foo[j].bar.length > test.length ? test.length : foo[j].bar.length;
+                    if(foo[j].bar.length > test.length) {
+                        maxLen = test.length;
+                    } else {
+                        maxLen = foo[j].bar.length;
+                    }
+
+                    // a flag to hold if our current bar matches
+                    var doesMatch = true;
+
+                    // loop 2. This one is because we have a variable amount of
+                    for(i =0; i<maxLen;i++) {
+                        doesMatch = doesMatch && (foo[j].bar[i] == test[i]);
+                    }
+
+                    // if 2, see what we matched
+                    if(doesMatch) {
+                        // if we did, add it to the results
+                        result.push(foo[j]);
+                    }
+                }
+                // return what matched
+                return result;
+            }
+        </script>
+    </body>
+</html>

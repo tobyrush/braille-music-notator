@@ -1,4 +1,4 @@
-/* global titleArea, tctx, versionString, helpDialogOpen, roundRect, optionsDialogOpen, fileDialogOpen, controlArea, cctx, whichKeyboard, keyboardCoordinates, keymap, keycaps, displayControlHelp, cursor, hScroll, vScroll, controlsHeight, controlsWidth, chu, resizeBarHeight, keyboardOriginX, keyboardOriginY, kbu, controlHelpOriginX, controlHelpOriginY, console, shiftKeyDown, metaKeyDown, formFill, kProgramTitle, kVersionAndAuthor, kHelpButtonCaption, kOptionsButtonCaption, kFileButtonCaption, sendHTTPRequest, defaultControlModule, DOMParser, currentControlModule, updateScreenreader, kScreenReaderControlPageNumber, createTemporaryGrid, gridWidth, gridHeight, drawSymbol, releaseTemporaryGrid, document, devMode, score, drawStoredScore, notate: true */
+/* global titleArea, tctx, versionString, helpDialogOpen, roundRect, optionsDialogOpen, fileDialogOpen, controlArea, cctx, whichKeyboard, keyboardCoordinates, keymap, keycaps, displayControlHelp, cursor, hScroll, vScroll, controlsHeight, controlsWidth, chu, resizeBarHeight, keyboardOriginX, keyboardOriginY, kbu, controlHelpOriginX, controlHelpOriginY, console, shiftKeyDown, metaKeyDown, formFill, kProgramTitle, kVersionAndAuthor, kHelpButtonCaption, kOptionsButtonCaption, kFileButtonCaption, sendHTTPRequest, defaultControlModule, DOMParser, currentControlModule, updateScreenreader, kScreenReaderControlPageNumber, createTemporaryGrid, gridWidth, gridHeight, releaseTemporaryGrid, document, devMode, score, drawStoredScore, notate, tempGrid, drawNotation, currentCellFont, notationArea: true */
 /* jshint -W020 */
 
 function initializeTitle() {
@@ -90,10 +90,6 @@ function loadControlModule(request) {
 	}
 }
 
-//function clearControlArea() {
-//	controlArea.width = controlArea.clientWidth;
-//}
-//
 function drawControls() {
     currentControlModule.draw();
 }
@@ -124,7 +120,6 @@ class controlModule {
 
         this.pages = [];
         this.helps = [];
-        //this.currentHelp = "default";
         for (let node of root.children) {
             if (node.tagName=="help") {
                 this.helps.push(new helpPage(node,this));
@@ -288,12 +283,16 @@ class controlModule {
     keyPress(keycode) {
         return this.pages[this.currentPage].keyPress(keycode);
     }
+    onTextPage() {
+        return this.pages[this.currentPage].isText;
+    }
 }
 
 class controlPage {
     constructor(xml, root) {
         this.root = root;
         this.name = xml.getAttribute('name');
+        this.isText = (xml.getAttribute('isText')=='true');
         this.controlItems = [];
         this.indicators = [];
         this.currentHelp = this.root.defaultHelp();
@@ -356,7 +355,7 @@ class helpPage {
         this.height = xml.getAttribute('height');
         this.graphics = [];
         for (let node of xml.getElementsByTagName('graphic')) {
-            this.graphics.push(new controlGraphic(node,this.root));
+            this.graphics.push(new graphic(node,this.root));
         }
     }
     draw() {
@@ -386,7 +385,7 @@ class controlItem {
         this.graphics = [];
         this.characters = [];
         for (let node of xml.getElementsByTagName('graphic')) {
-            this.graphics.push(new controlGraphic(node,this.root));
+            this.graphics.push(new graphic(node,this.root));
         }
         if (xml.getElementsByTagName('help').length) {
             this.helpName=xml.getElementsByTagName('help')[0].getAttribute('page');
@@ -423,6 +422,7 @@ class controlItem {
             y<this.top*chu + this.height*chu
         ) {
             notate(this.characters,this.label);
+            drawNotation();
             return true;
         } else {
             return false;
@@ -449,7 +449,7 @@ class indicator {
         this.height = xml.getAttribute('height');
         this.graphics = [];
         for (let node of xml.getElementsByTagName('graphic')) {
-            this.graphics.push(new controlGraphic(node,this.root));
+            this.graphics.push(new graphic(node,this.root));
         }
     }
     draw() {
@@ -470,7 +470,7 @@ class indicator {
     }
 }
 
-class controlGraphic {
+class graphic {
     constructor(xml,root) {
         this.root = root;
         this.attr = {};
@@ -484,9 +484,11 @@ class controlGraphic {
         }
     }
     draw(ctx,boxWidth,boxHeight) {
+        var onScore = (ctx == notationArea.getContext("2d"));
         var a = this.attr;
         var d = this.root.defaults;
-        var x,y,w,h,p,i,n,yp,c,o,x1,x2,x3,y1,y2,y3,m;
+        var chars = [];
+        var xx,yy,w,h,p,i,n,yp,c,o,x1,x2,x3,y1,y2,y3,m;
         [
             'font',
             'style',
@@ -522,20 +524,48 @@ class controlGraphic {
             'note',
             'accidental',
             'numerator',
-            'denominator'
+            'denominator',
+            'rotate',
+            'cells'
         ].forEach(function(e) {
                 if (!(a.hasOwnProperty(e)) && d.hasOwnProperty(e)) {
                 a[e]=d[e];
             }
         });
 
+        ctx.save();
+        var left = a.left;
+        var top = a.top;
+        var x = a.x;
+        var y = a.y;
+        var startX = a.startX;
+        var startY = a.startY;
+        var controlX = a.controlX;
+        var controlY = a.controlY;
+        var endX = a.endX;
+        var endY = a.endY;
+
+        if (a.hasOwnProperty('rotate')) {
+            ctx.rotate(a.rotate*(Math.PI/180));
+            left = a.top * (-1.5);
+            top = a.left/1.5;
+            x = a.y * (-1.5);
+            y = a.x/1.5;
+            startX = a.startY * (-1.5);
+            startY = a.startX/1.5;
+            controlX = a.controlY * (-1.5);
+            controlY = a.controlX/1.5;
+            endX = a.endY * (-1.5);
+            endY = a.endX/1.5;
+        }
+
         switch (this.type) {
             case "rect":
                 if (a.fill=="true") {
                     ctx.fillStyle=a.color;
                     ctx.fillRect(
-                        a.left*(boxWidth/100),
-                        a.top*(boxHeight/100),
+                        left*(boxWidth/100),
+                        top*(boxHeight/100),
                         a.width*(boxWidth/100),
                         a.height*(boxHeight/100)
                     );
@@ -545,8 +575,8 @@ class controlGraphic {
                     ctx.lineWidth=a.lineWidth;
                     ctx.beginPath();
                     ctx.rect(
-                        a.left*(boxWidth/100),
-                        a.top*(boxHeight/100),
+                        left*(boxWidth/100),
+                        top*(boxHeight/100),
                         a.width*(boxWidth/100),
                         a.height*(boxHeight/100)
                     );
@@ -560,8 +590,8 @@ class controlGraphic {
                 ctx.lineWidth=a.lineWidth;
                 roundRect(
                     ctx,
-                    a.left*(boxWidth/100),
-                    a.top*(boxHeight/100),
+                    left*(boxWidth/100),
+                    top*(boxHeight/100),
                     a.width*(boxWidth/100),
                     a.height*(boxHeight/100),
                     a.radius*(boxHeight/100),
@@ -580,15 +610,15 @@ class controlGraphic {
                     for (i=0; i<lines.length; i++) {
                         ctx.fillText(
                             lines[i],
-                            a.left*(boxWidth/100),
-                            (a.top*(boxHeight/100))+(i*lineHeight)
+                            left*(boxWidth/100),
+                            (top*(boxHeight/100))+(i*lineHeight)
                         );
                     }
                 } else {
                     ctx.fillText(
                         a.content,
-                        a.left*(boxWidth/100),
-                        a.top*(boxHeight/100)
+                        left*(boxWidth/100),
+                        top*(boxHeight/100)
                     );
                 }
 
@@ -598,9 +628,9 @@ class controlGraphic {
                 ctx.strokeStyle=a.color;
                 ctx.beginPath();
                 ctx.arc(
-                    a.x*(boxWidth/100),
-                    a.y*(boxHeight/100),
-                    a.radius*(boxWidth/100),
+                    x*(boxWidth/100),
+                    y*(boxHeight/100),
+                    a.radius*(boxHeight/100),
                     a.start,
                     a.end,
                     a.ccw=="true"
@@ -613,33 +643,33 @@ class controlGraphic {
                 ctx.strokeStyle=a.color;
                 ctx.beginPath();
                 ctx.moveTo(
-                    a.startX*(boxWidth/100),
-                    a.startY*(boxHeight/100)
+                    startX*(boxWidth/100),
+                    startY*(boxHeight/100)
                 );
                 ctx.lineTo(
-                    a.endX*(boxWidth/100),
-                    a.endY*(boxHeight/100)
+                    endX*(boxWidth/100),
+                    endY*(boxHeight/100)
                 );
                 ctx.stroke();
                 ctx.closePath();
                 break;
             case "staff":
-                x=a.left*(boxWidth/100);
-                y=a.top*(boxHeight/100);
+                xx=left*(boxWidth/100);
+                yy=top*(boxHeight/100);
                 w=a.width*(boxWidth/100);
                 h=a.height*(boxHeight/100);
                 ctx.strokeStyle="#000";
                 ctx.beginPath();
-                ctx.moveTo(x,y);
-                ctx.lineTo(x+w,y);
-                ctx.moveTo(x,y+(h*0.25));
-                ctx.lineTo(x+w,y+(h*0.25));
-                ctx.moveTo(x,y+(h*0.5));
-                ctx.lineTo(x+w,y+(h*0.5));
-                ctx.moveTo(x,y+(h*0.75));
-                ctx.lineTo(x+w,y+(h*0.75));
-                ctx.moveTo(x,y+h);
-                ctx.lineTo(x+w,y+h);
+                ctx.moveTo(xx,yy);
+                ctx.lineTo(xx+w,yy);
+                ctx.moveTo(xx,yy+(h*0.25));
+                ctx.lineTo(xx+w,yy+(h*0.25));
+                ctx.moveTo(xx,yy+(h*0.5));
+                ctx.lineTo(xx+w,yy+(h*0.5));
+                ctx.moveTo(xx,yy+(h*0.75));
+                ctx.lineTo(xx+w,yy+(h*0.75));
+                ctx.moveTo(xx,yy+h);
+                ctx.lineTo(xx+w,yy+h);
                 ctx.stroke(); // staff lines
                 ctx.closePath();
 
@@ -661,11 +691,11 @@ class controlGraphic {
                 ctx.textBaseline = "alphabetic";
                 ctx.textAlign = "left";
                 ctx.font = "normal "+h+"px Bravura";
-                ctx.fillText(c,x+(h*0.15),y+o);
+                ctx.fillText(c,xx+(h*0.15),yy+o);
                 break;
             case "accidental":
-                x=a.left*(boxWidth/100);
-                y=a.top*(boxHeight/100);
+                xx=left*(boxWidth/100);
+                yy=top*(boxHeight/100);
                 w=a.width*(boxWidth/100);
                 h=a.height*(boxHeight/100);
                 p=a.position;
@@ -673,7 +703,7 @@ class controlGraphic {
                 ctx.textBaseline = "alphabetic";
                 ctx.textAlign = "left";
                 ctx.font = "normal "+h+"px Bravura";
-                yp=y+(h*0.5)+(p*(h/8));
+                yp=yy+(h*0.5)+(p*(h/8));
                 switch (a.accidental) {
                     case "-2":
                         n="\ue264";
@@ -691,11 +721,11 @@ class controlGraphic {
                         n="\ue263";
                         break;
                 }
-                ctx.fillText(n,x-(h/3),yp);
+                ctx.fillText(n,xx-(h/3),yp);
                 break;
             case "note":
-                x=a.left*(boxWidth/100);
-                y=a.top*(boxHeight/100);
+                xx=left*(boxWidth/100);
+                yy=top*(boxHeight/100);
                 w=a.width*(boxWidth/100);
                 h=a.height*(boxHeight/100);
                 p=a.position;
@@ -703,7 +733,7 @@ class controlGraphic {
                 ctx.textBaseline = "alphabetic";
                 ctx.textAlign = "left";
                 ctx.font = "normal "+h+"px Bravura";
-                yp = y+(h*0.5)+(p*(h/8));
+                yp = yy+(h*0.5)+(p*(h/8));
                 switch (a.note) {
                     case "noteWhole":
                         n="\ue1d2";
@@ -728,48 +758,59 @@ class controlGraphic {
                         break;
                     case "restHalf":
                         n="\ue4e4";
-                        yp = y+(h*0.5)+(0*(h/8));
+                        yp = yy+(h*0.5)+(0*(h/8));
                         break;
                     case "restQuarter":
                         n="\ue4e5";
-                        yp = y+(h*0.5)+(0*(h/8));
+                        yp = yy+(h*0.5)+(0*(h/8));
                         break;
                 }
-                ctx.fillText(n,x,yp);
+                ctx.fillText(n,xx,yp);
                 var numberOfLedgers=Math.floor(Math.abs(p/2))-2;
                 ctx.lineWidth=1;
                 ctx.strokeStyle="#000";
                 ctx.beginPath();
                 var currentY;
                 for (i=1; i<=numberOfLedgers; i++) {
-                    currentY=y+(h*0.5)+((p/Math.abs(p))*(h*0.5+(i*(h*0.25))));
-                    ctx.moveTo(x-(h*0.15),currentY);
-                    ctx.lineTo(x+(h*0.45),currentY);
+                    currentY=yy+(h*0.5)+((p/Math.abs(p))*(h*0.5+(i*(h*0.25))));
+                    ctx.moveTo(xx-(h*0.15),currentY);
+                    ctx.lineTo(xx+(h*0.45),currentY);
                 }
                 ctx.stroke();
                 ctx.closePath();
                 for (i=0; i<a.dots; i++) {
-                    ctx.fillText("\ue1e7",x+(h*0.5)+(i*(h*0.3)),yp-((h/8)*((Math.abs(p)%2)^1)));
+                    ctx.fillText("\ue1e7",xx+(h*0.5)+(i*(h*0.3)),yp-((h/8)*((Math.abs(p)%2)^1)));
                 }
                 break;
             case "braille":
-                x=a.left*(boxWidth/100);
-                y=a.top*(boxHeight/100);
+                xx=left*(boxWidth/100);
+                yy=top*(boxHeight/100);
                 h=a.height*(boxHeight/100);
-                createTemporaryGrid(h);
-                ctx.strokeStyle="#000";
-                ctx.lineWidth=1;
-                score[0] = a.cells.split(",");
-                drawStoredScore(ctx,x,y);
-                releaseTemporaryGrid();
+                chars = a.cells.split(",");
+                currentCellFont.drawScoreLine(
+                    xx,
+                    yy,
+                    chars,
+                    0,
+                    chars.length,
+                    ctx,
+                    h/1.5
+                );
+
+//                createTemporaryGrid(h);
+//                ctx.strokeStyle="#000";
+//                ctx.lineWidth=1;
+//                score[0] = a.cells.split(",");
+//                drawStoredScore(ctx,xx,yy);
+//                releaseTemporaryGrid();
                 break;
             case "tie":
-                x1=a.startX*(boxHeight/100);
-                x2=a.endX*(boxHeight/100);
-                y=a.top*(boxHeight/100);
+                x1=startX*(boxHeight/100);
+                x2=endX*(boxHeight/100);
+                yy=top*(boxHeight/100);
                 h=a.height*(boxHeight/100);
                 p=a.position;
-                yp = y+(h*0.5)+((p-1)*(h/8));
+                yp = yy+(h*0.5)+((p-1)*(h/8));
                 ctx.beginPath();
                 m = (x2-x1)/2;
                 ctx.arc(
@@ -786,13 +827,13 @@ class controlGraphic {
                 ctx.closePath();
                 break;
             case "timeSignature":
-                x=a.left*(boxWidth/100);
-                y=a.top*(boxHeight/100);
+                xx=left*(boxWidth/100);
+                yy=top*(boxHeight/100);
                 h=a.height*(boxHeight/100);
                 ctx.textBaseline = "middle";
                 ctx.textAlign = "left";
                 ctx.font = "normal "+h+"px Bravura";
-                var chars = [
+                chars = [
                     "\ue080",
                     "\ue081",
                     "\ue082",
@@ -806,22 +847,22 @@ class controlGraphic {
                 ];
                 ctx.fillText(
                     chars[a.numerator],
-                    x,
-                    y+(h*0.25)
+                    xx,
+                    yy+(h*0.25)
                 );
                 ctx.fillText(
                     chars[a.denominator],
-                    x,
-                    y+(h*0.75)
+                    xx,
+                    yy+(h*0.75)
                 );
                 break;
             case "slur":
-                x1=a.startX*(boxWidth/100);
-                y1=a.startY*(boxHeight/100);
-                x2=a.controlX*(boxWidth/100);
-                y2=a.controlY*(boxHeight/100);
-                x3=a.endX*(boxWidth/100);
-                y3=a.endY*(boxHeight/100);
+                x1=startX*(boxWidth/100);
+                y1=startY*(boxHeight/100);
+                x2=controlX*(boxWidth/100);
+                y2=controlY*(boxHeight/100);
+                x3=endX*(boxWidth/100);
+                y3=endY*(boxHeight/100);
                 ctx.beginPath();
                 ctx.moveTo(x1,y1);
                 ctx.quadraticCurveTo(x2,y2,x3,y3);
@@ -829,6 +870,31 @@ class controlGraphic {
                 ctx.strokeStyle = "#000"; // black
                 ctx.stroke();
                 ctx.closePath();
+                break;
+            case "background":
+                ctx.fillStyle=a.color;
+                if (a.hasOwnProperty('cells')) {
+                    c=Math.max(a.cells,1);
+                } else {
+                    c=1;
+                }
+                ctx.fillRect(
+                    boxWidth*(0.05),
+                    boxWidth*(0.05),
+                    (boxWidth*c)-boxWidth*(0.1),
+                    boxHeight-boxWidth*(0.1)
+                );
+                if ((a.color.toUpperCase()=="#FFF") && !onScore) {
+                    ctx.strokeStyle="#666";
+                    ctx.lineWidth=1;
+                    ctx.strokeRect(
+                        boxWidth*(0.05)+0.5,
+                        boxWidth*(0.05)+0.5,
+                        (boxWidth*c)-boxWidth*(0.1)-1,
+                        (boxHeight*c)-boxWidth*(0.1)-1
+                    );
+                }
         }
+        ctx.restore();
     }
 }

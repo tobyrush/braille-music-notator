@@ -1,4 +1,4 @@
-/* global shiftKeyDown, metaKeyDown, cursor, whichKeyboard, score, clearSelection, cellIsEmpty, deleteScore, hScrollUnits, isMacOS, focusClipboard, firstCharPosInRow, hScroll, vScroll, deleteRowAtCursor, insertRowAtCursor, setScore, scoreWidth, scoreHeight, interpretBraille, updateScreenreader, drawAllDots, downloadFile, currentBeatUnit, parseOnImport, showPageBreaks, setPageSize, pageWidth, pageHeight, confirm, clearDocument, resetCursorAndScroll, fileUploader, rotateSelection, convertSelectionToText, useBrailleDisplay, doRedo, doUndo, setCellHeight, gridHeight, saveToUndo, suspendUndo, scrollToCursor, characterName, drawNotation, drawControls, getScore, currentControlModule, kUnsavedChangesDialogMessage, kKeyCommands, formFill, placeCursor: true */
+/* global shiftKeyDown, metaKeyDown, cursor, whichKeyboard, score, clearSelection, cellIsEmpty, deleteScore, hScrollUnits, isMacOS, focusClipboard, firstCharPosInRow, hScroll, vScroll, deleteRowAtCursor, insertRowAtCursor, setScore, scoreWidth, scoreHeight, updateScreenreader, drawAllDots, downloadFile, currentBeatUnit, parseOnImport, showPageBreaks, setPageSize, pageWidth, pageHeight, confirm, clearDocument, resetCursorAndScroll, fileUploader, rotateSelection, convertSelectionToText, useBrailleDisplay, doRedo, doUndo, setCellHeight, gridHeight, saveToUndo, suspendUndo, scrollToCursor, characterName, drawNotation, drawControls, getScore, currentControlModule, kUnsavedChangesDialogMessage, kKeyCommands, formFill, placeCursor, currentCellFont: true */
 /* jshint -W020 */
 
 function doKeyDown(e) {
@@ -63,8 +63,8 @@ function interpretKeyCode(keyCode) {
 				cursor.height=scoreHeight();
 				break;
             case 66: // B - toggle braille translation
-				interpretBraille = !interpretBraille;
-                readerSwitch = interpretBraille;
+				currentCellFont.interpretBraille = !currentCellFont.interpretBraille;
+                readerSwitch = currentCellFont.interpretBraille;
 				break;
             case 67: // C - copy
 				passThrough = true;
@@ -135,13 +135,14 @@ function interpretKeyCode(keyCode) {
 				break;
             case 82: // R - rotate symbols
 				rotateSelection();
+                drawNotation();
 				break;
             case 83: // S - save file
 				downloadFile(false);
                 break;
             case 84: // T - convert selection to text
 				convertSelectionToText();
-				break;
+                break;
             case 85: // U - toggle reader mode
 				useBrailleDisplay = !useBrailleDisplay;
                 readerSwitch = useBrailleDisplay;
@@ -322,6 +323,7 @@ function interpretKeyCode(keyCode) {
         }
     }
 
+    drawNotation();
     drawControls();
 	return passThrough;
 }
@@ -350,5 +352,5 @@ function notate(chars,readerText) {
     }
     placeCursor(x+adv,y,1,1,readerText);
     scrollToCursor();
-    drawNotation();
+    //drawNotation();
 }

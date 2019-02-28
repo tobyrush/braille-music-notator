@@ -1807,7 +1807,7 @@
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
             <graphic type="text" color="#FFF" left="15" top="80" size="20" content=";" />
             <help page="default" />
-            <character code="" />
+            <character code="0" />
         </control>
         <control keycode="222" top="49" left="226" width="18" height="18">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
@@ -1895,7 +1895,7 @@
             <character code="349" />
         </control>
    </page>
-    <page name="Aa">
+    <page name="Aa" isText="true">
         <indicator type="shift" top="67" left="13" width="27" height="9">
             <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
             <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="SHIFT" />
@@ -2047,15 +2047,15 @@
         </control>
         <control keycode="219" top="31" left="220" width="18" height="18" label="Parenthesis">
             <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
-            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="( )" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="40" content="(…)" />
             <help page="literaryBraille" />
             <character code="555" />
         </control>
-        <control keycode="221" top="31" left="238" width="18" height="18" label="Quotation mark">
+        <control keycode="221" top="31" left="238" width="18" height="18" label="Capital letter sign">
             <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
-            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="&quot;" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="30" content="CAP" />
             <help page="literaryBraille" />
-            <character code="648" />
+            <character code="544" />
         </control>
         <control keycode="220" top="31" left="256" width="18" height="18" label="Colon">
             <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
@@ -2654,12 +2654,12 @@
         <graphic type="staff" left="0" top="44" height="13" width="37.5" clef="1" />
         <graphic type="note" left="9" top="44" height="13" note="noteQuarterUp" position="3" dots="0" />
         <graphic type="note" left="15" top="44" height="13" note="noteQuarterDown" position="0" dots="0" />
-        <graphic type="line" startX="20" startY="44" endX="20" endY="57" lineWidth="1" />
+        <graphic type="line" color="#000" startX="20" startY="44" endX="20" endY="57" lineWidth="1" />
         <graphic type="note" left="23" top="44" height="13" note="noteWhole" position="1" dots="0" />
         <graphic type="text" color="#000" size="13.5" baseline="middle" top="57" left="35.5" font="Bravura" content="&#xe041;" />
         <graphic type="text" color="#000" size="16" baseline="middle" top="40.5" left="22" font="Bravura" content="&#xea51;" />
-        <graphic type="line" startX="20" startY="34" endX="20" endY="42" lineWidth="1" />
-        <graphic type="line" startX="20" startY="34" endX="36" endY="34" lineWidth="1" />
+        <graphic type="line" color="#000" startX="20" startY="34" endX="20" endY="42" lineWidth="1" />
+        <graphic type="line" color="#000" startX="20" startY="34" endX="36" endY="34" lineWidth="1" />
         <graphic type="text" color="#000" size="13" baseline="middle" top="54" left="40" font="Bravura" content="&#xeb62;" />
         <graphic type="braille" left="46" top="40" height="20" cells="34,93,87,0,935,949,33,260,450" />
     </help>

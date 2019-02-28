@@ -1,5 +1,6 @@
-/* global mkStr, defaultControlModule: true */
+/* global mkStr, defaultControlModule, defaultCellFont: true */
 /* jshint -W046 */
+/* jshint -W020 */
 
 var kCharNames,
     kDotsPrefix,
@@ -13,6 +14,7 @@ var kCharNames,
     kHeightLabel,
     kHelpButtonCaption,
     kKeyCommands = [],
+    kLongestSymbol,
     kNewFileDescription,
     kNewFileLabel,
     kOpenFileDescription,
@@ -46,6 +48,8 @@ function localize(lang) {
 
             defaultControlModule = 'controls/en/classic.xml';
 
+            defaultCellFont = 'cellfonts/en/classic.xml';
+
             kDotsPrefix = "Dots";
             kDropFileZoneMessage = "Drop file here to load";
             kExportFileDescription = "Export this document as an embosser-ready BRF file.";
@@ -56,6 +60,7 @@ function localize(lang) {
             kFileNameBRM = "Untitled.brm";
             kHeightLabel = "Height:";
             kHelpButtonCaption = "Help";
+            kLongestSymbol = 7;
             kNewFileDescription = "Discard current document and start with an empty one.";
             kNewFileLabel = "New File…";
             kOpenFileDescription = "Open a previously saved document from your computer.";
