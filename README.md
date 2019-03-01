@@ -13,3 +13,5 @@ The latest stable version of Braille Music Notator is available at http://tobyru
 I created Braille Music Notator and brought it to version 0.9.1b in a single-developer environment and moved the project to GitHub in September 2018. I invite developers to contribute to the project on the condition that they do not make fun of my self-learned skills in HTML and JavaScript!
 
 Because this is also my first experience with GitHub (and version control in general), a secondary requirement for contribution is patience with my beginning Git skills.
+
+For the time being I am including recent news about the project in the Wiki here on Github.
