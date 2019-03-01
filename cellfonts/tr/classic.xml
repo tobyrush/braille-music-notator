@@ -1,0 +1,2393 @@
+<cellFontModule name="Classic" font="Bravura" style="normal" align="left" baseline="alphabetic">
+    <cell name="C double whole note">
+        <code value="89" />
+        <code value="75" />
+        <graphic type="background" color="#f00" cells="2"/>
+        <graphic type="text" color="#fff" align="right" size="50" left="130" top="80" content="&#xe1d0;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="C" />
+    </cell>
+    <cell name="D double whole note">
+        <code value="90" />
+        <code value="75" />
+        <graphic type="background" color="#f00" cells="2"/>
+        <graphic type="text" color="#fff" align="right" size="50" left="130" top="80" content="&#xe1d0;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="D" />
+    </cell>
+    <cell name="E double whole note">
+        <code value="38" />
+        <code value="75" />
+        <graphic type="background" color="#f00" cells="2"/>
+        <graphic type="text" color="#fff" align="right" size="50" left="130" top="80" content="&#xe1d0;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="E" />
+    </cell>
+    <cell name="F double whole note">
+        <code value="61" />
+        <code value="75" />
+        <graphic type="background" color="#f00" cells="2"/>
+        <graphic type="text" color="#fff" align="right" size="50" left="130" top="80" content="&#xe1d0;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="F" />
+    </cell>
+    <cell name="G double whole note">
+        <code value="40" />
+        <code value="75" />
+        <graphic type="background" color="#f00" cells="2"/>
+        <graphic type="text" color="#fff" align="right" size="50" left="130" top="80" content="&#xe1d0;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="G" />
+    </cell>
+    <cell name="A double whole note">
+        <code value="33" />
+        <code value="75" />
+        <graphic type="background" color="#f00" cells="2"/>
+        <graphic type="text" color="#fff" align="right" size="50" left="130" top="80" content="&#xe1d0;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="A" />
+    </cell>
+    <cell name="B double whole note">
+        <code value="41" />
+        <code value="75" />
+        <graphic type="background" color="#f00" cells="2"/>
+        <graphic type="text" color="#fff" align="right" size="50" left="130" top="80" content="&#xe1d0;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="B" />
+    </cell>
+    <cell name="C whole note">
+        <code value="89" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d2;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="C" />
+    </cell>
+    <cell name="D whole note">
+        <code value="90" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d2;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="D" />
+    </cell>
+    <cell name="E whole note">
+        <code value="38" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d2;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="E" />
+    </cell>
+    <cell name="F whole note">
+        <code value="61" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d2;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="F" />
+    </cell>
+    <cell name="G whole note">
+        <code value="40" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d2;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="G" />
+    </cell>
+    <cell name="A whole note">
+        <code value="33" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d2;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="A" />
+    </cell>
+    <cell name="B whole note">
+        <code value="41" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d2;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="B" />
+    </cell>
+    <cell name="C half note">
+        <code value="78" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d3;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="C" />
+    </cell>
+    <cell name="D half note">
+        <code value="79" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d3;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="D" />
+    </cell>
+    <cell name="E half note">
+        <code value="80" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d3;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="E" />
+    </cell>
+    <cell name="F half note">
+        <code value="81" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d3;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="F" />
+    </cell>
+    <cell name="G half note">
+        <code value="82" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d3;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="G" />
+    </cell>
+    <cell name="A half note">
+        <code value="83" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d3;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="A" />
+    </cell>
+    <cell name="B half note">
+        <code value="84" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d3;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="B" />
+    </cell>
+    <cell name="C quarter note">
+        <code value="63" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d5;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="C" />
+    </cell>
+    <cell name="D quarter note">
+        <code value="58" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d5;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="D" />
+    </cell>
+    <cell name="E quarter note">
+        <code value="36" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d5;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="E" />
+    </cell>
+    <cell name="F quarter note">
+        <code value="93" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d5;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="F" />
+    </cell>
+    <cell name="G quarter note">
+        <code value="92" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d5;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="G" />
+    </cell>
+    <cell name="A quarter note">
+        <code value="91" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d5;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="A" />
+    </cell>
+    <cell name="B quarter note">
+        <code value="87" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d5;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="B" />
+    </cell>
+    <cell name="C eighth note">
+        <code value="68" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d7;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="C" />
+    </cell>
+    <cell name="D eighth note">
+        <code value="69" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d7;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="D" />
+    </cell>
+    <cell name="E eighth note">
+        <code value="70" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d7;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="E" />
+    </cell>
+    <cell name="F eighth note">
+        <code value="71" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d7;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="F" />
+    </cell>
+    <cell name="G eighth note">
+        <code value="72" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d7;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="G" />
+    </cell>
+    <cell name="A eighth note">
+        <code value="73" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d7;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="A" />
+    </cell>
+    <cell name="B eighth note">
+        <code value="74" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d7;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="B" />
+    </cell>
+    <cell name="C sixteenth note">
+        <code value="189" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d9;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="C" />
+    </cell>
+    <cell name="D sixteenth note">
+        <code value="190" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d9;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="D" />
+    </cell>
+    <cell name="E sixteenth note">
+        <code value="138" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d9;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="E" />
+    </cell>
+    <cell name="F sixteenth note">
+        <code value="161" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d9;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="F" />
+    </cell>
+    <cell name="G sixteenth note">
+        <code value="140" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d9;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="G" />
+    </cell>
+    <cell name="A sixteenth note">
+        <code value="133" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d9;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="A" />
+    </cell>
+    <cell name="B sixteenth note">
+        <code value="141" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1d9;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="B" />
+    </cell>
+    <cell name="C thirty-second note">
+        <code value="178" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1db;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="C" />
+    </cell>
+    <cell name="D thirty-second note">
+        <code value="179" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1db;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="D" />
+    </cell>
+    <cell name="E thirty-second note">
+        <code value="180" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1db;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="E" />
+    </cell>
+    <cell name="F thirty-second note">
+        <code value="181" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1db;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="F" />
+    </cell>
+    <cell name="G thirty-second note">
+        <code value="182" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1db;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="G" />
+    </cell>
+    <cell name="A thirty-second note">
+        <code value="183" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1db;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="A" />
+    </cell>
+    <cell name="B thirty-second note">
+        <code value="184" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1db;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="B" />
+    </cell>
+    <cell name="C sixty-fourth note">
+        <code value="163" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1dd;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="C" />
+    </cell>
+    <cell name="D sixty-fourth note">
+        <code value="158" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1dd;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="D" />
+    </cell>
+    <cell name="E sixty-fourth note">
+        <code value="136" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1dd;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="E" />
+    </cell>
+    <cell name="F sixty-fourth note">
+        <code value="193" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1dd;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="F" />
+    </cell>
+    <cell name="G sixty-fourth note">
+        <code value="192" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1dd;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="G" />
+    </cell>
+    <cell name="A sixty-fourth note">
+        <code value="191" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1dd;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="A" />
+    </cell>
+    <cell name="B sixty-fourth note">
+        <code value="187" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1dd;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="B" />
+    </cell>
+    <cell name="C one-hundred-twenty-eighth note">
+        <code value="368" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1df;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="C" />
+    </cell>
+    <cell name="D one-hundred-twenty-eighth note">
+        <code value="369" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1df;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="D" />
+    </cell>
+    <cell name="E one-hundred-twenty-eighth note">
+        <code value="370" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1df;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="E" />
+    </cell>
+    <cell name="F one-hundred-twenty-eighth note">
+        <code value="371" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1df;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="F" />
+    </cell>
+    <cell name="G one-hundred-twenty-eighth note">
+        <code value="372" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1df;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="G" />
+    </cell>
+    <cell name="A one-hundred-twenty-eighth note">
+        <code value="373" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1df;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="A" />
+    </cell>
+    <cell name="B one-hundred-twenty-eighth note">
+        <code value="374" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1df;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="B" />
+    </cell>
+    <cell name="double whole rest">
+        <code value="77" />
+        <code value="75" />
+        <graphic type="background" color="#f00" cells="2" />
+        <graphic type="text" color="#fff" align="center" size="60" left="100" top="60" content="&#xe4f4;" />
+    </cell>
+    <cell name="whole rest">
+        <code value="77" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="center" size="60" left="50" top="50" content="&#xe4f4;" />
+    </cell>
+    <cell name="half rest">
+        <code value="85" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="center" size="60" left="50" top="50" content="&#xe4f5;" />
+    </cell>
+    <cell name="quarter rest">
+        <code value="86" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="center" size="60" left="50" top="50" content="&#xe4e5;" />
+    </cell>
+    <cell name="eighth rest">
+        <code value="88" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="center" size="60" left="50" top="50" content="&#xe4e6;" />
+    </cell>
+    <cell name="sixteenth rest">
+        <code value="177" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="center" size="60" left="50" top="50" content="&#xe4e7;" />
+    </cell>
+    <cell name="thirty-second rest">
+        <code value="185" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="center" size="60" left="50" top="50" content="&#xe4e8;" />
+    </cell>
+    <cell name="sixty-fourth rest">
+        <code value="186" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="center" size="50" left="50" top="50" content="&#xe4e9;" />
+    </cell>
+    <cell name="one-hundred-twenty-eighth rest">
+        <code value="188" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="center" size="50" left="50" top="50" content="&#xe4ea;" />
+    </cell>
+    <cell name="left multimeasure rest">
+        <code value="735" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="center" size="60" left="50" top="50" content="&#xe4ef;" />
+    </cell>
+    <cell name="right multimeasure rest">
+        <code value="377" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="center" size="60" left="50" top="50" content="&#xe4f1;" />
+    </cell>
+    <cell name="augmentation dot">
+        <code value="39" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="55" top="53.3" content="&#xe1e7;" />
+    </cell>
+    <cell name="grace note">
+        <code value="153" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="center" size="47" left="50" top="55" content="&#xe560;" />
+    </cell>
+    <cell name="grace note slur">
+        <code value="259" />
+        <code value="67" />
+        <graphic type="background" color="#ff0" cells="2" />
+        <graphic type="arc" x="100" y="45" radius="25" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000"/>
+        <graphic type="text" color="#000" align="center" baseline="middle" size="16" left="100" top="50" font="sans-serif" content="GRACE" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="16" left="100" top="70" font="sans-serif" content="NOTE SLUR" />
+    </cell>
+    <cell name="double flat">
+        <code value="60" />
+        <code value="360" />
+        <graphic type="background" color="#f80" cells="2"/>
+        <graphic type="text" color="#000" align="center" size="80" left="105" top="60" content="&#xe264;" />
+    </cell>
+    <cell name="three-quarters flat">
+        <code value="695" />
+        <code value="360" />
+        <graphic type="background" color="#f80" cells="2" />
+        <graphic type="text" color="#000" align="center" size="80" left="105" top="60" content="&#xe440;" />
+    </cell>
+    <cell name="flat">
+        <code value="60" />
+        <graphic type="background" color="#f80" />
+        <graphic type="text" color="#000" align="center" size="80" left="55" top="60" content="&#xe260;" />
+    </cell>
+    <cell name="four commas flat">
+        <code value="694" />
+        <code value="360" />
+        <graphic type="background" color="#f80" cells="2" />
+        <graphic type="text" color="#000" align="center" size="80" left="105" top="60" content="&#xe442;" />
+    </cell>
+    <cell name="one-quarter flat">
+        <code value="664" />
+        <code value="360" />
+        <graphic type="background" color="#f80" cells="2" />
+        <graphic type="text" color="#000" align="center" size="80" left="105" top="60" content="&#xe443;" />
+    </cell>
+    <cell name="natural">
+        <code value="42" />
+        <graphic type="background" color="#f80" />
+        <graphic type="text" color="#000" align="center" size="80" left="55" top="50" content="&#xe261;" />
+    </cell>
+    <cell name="one-quarter sharp">
+        <code value="664" />
+        <code value="337" />
+        <graphic type="background" color="#f80" cells="2" />
+        <graphic type="text" color="#000" align="center" size="80" left="105" top="50" content="&#xe444;" />
+    </cell>
+    <cell name="sharp">
+        <code value="37" />
+        <graphic type="background" color="#f80" />
+        <graphic type="text" color="#000" align="center" size="80" left="55" top="50" content="&#xe262;" />
+    </cell>
+    <cell name="five commas sharp">
+        <code value="694" />
+        <code value="337" />
+        <graphic type="background" color="#f80" cells="2" />
+        <graphic type="text" color="#000" align="center" size="80" left="105" top="50" content="&#xe446;" />
+    </cell>
+    <cell name="three-quarters sharp">
+        <code value="695" />
+        <code value="337" />
+        <graphic type="background" color="#f80" cells="2" />
+        <graphic type="text" color="#000" align="center" size="80" left="105" top="50" content="&#xe447;" />
+    </cell>
+    <cell name="double sharp">
+        <code value="37" />
+        <code value="337" />
+        <graphic type="background" color="#f80" cells="2"/>
+        <graphic type="text" color="#000" align="center" size="80" left="105" top="50" content="&#xe263;" />
+    </cell>
+    <cell name="octave zero">
+        <code value="64" />
+        <code value="164" />
+        <graphic type="background" color="#929" cells="2" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="top" size="16.6" left="57.5" top="50" content="OCTAVE" rotate="270" />
+        <graphic type="text" font="sans-serif" color="#fff" align="right" baseline="middle" size="60" style="bold" left="142.5" top="50" content="0" />
+    </cell>
+    <cell name="octave one">
+        <code value="64" />
+        <graphic type="background" color="#929" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="top" size="16.6" left="7.5" top="50" content="OCTAVE" rotate="270" />
+        <graphic type="text" font="sans-serif" color="#fff" align="right" baseline="middle" size="60" style="bold" left="92.5" top="50" content="1" />
+    </cell>
+    <cell name="octave two">
+        <code value="94" />
+        <graphic type="background" color="#929" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="top" size="16.6" left="7.5" top="50" content="OCTAVE" rotate="270" />
+        <graphic type="text" font="sans-serif" color="#fff" align="right" baseline="middle" size="60" style="bold" left="92.5" top="50" content="2" />
+    </cell>
+    <cell name="octave three">
+        <code value="95" />
+        <graphic type="background" color="#929" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="top" size="16.6" left="7.5" top="50" content="OCTAVE" rotate="270" />
+        <graphic type="text" font="sans-serif" color="#fff" align="right" baseline="middle" size="60" style="bold" left="92.5" top="50" content="3" />
+    </cell>
+    <cell name="octave four">
+        <code value="34" />
+        <graphic type="background" color="#929" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="top" size="16.6" left="7.5" top="50" content="OCTAVE" rotate="270" />
+        <graphic type="text" font="sans-serif" color="#fff" align="right" baseline="middle" size="60" style="bold" left="92.5" top="50" content="4" />
+    </cell>
+    <cell name="octave five">
+        <code value="46" />
+        <graphic type="background" color="#929" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="top" size="16.6" left="7.5" top="50" content="OCTAVE" rotate="270" />
+        <graphic type="text" font="sans-serif" color="#fff" align="right" baseline="middle" size="60" style="bold" left="92.5" top="50" content="5" />
+    </cell>
+    <cell name="octave six">
+        <code value="59" />
+        <graphic type="background" color="#929" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="top" size="16.6" left="7.5" top="50" content="OCTAVE" rotate="270" />
+        <graphic type="text" font="sans-serif" color="#fff" align="right" baseline="middle" size="60" style="bold" left="92.5" top="50" content="6" />
+    </cell>
+    <cell name="octave seven">
+        <code value="44" />
+        <graphic type="background" color="#929" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="top" size="16.6" left="7.5" top="50" content="OCTAVE" rotate="270" />
+        <graphic type="text" font="sans-serif" color="#fff" align="right" baseline="middle" size="60" style="bold" left="92.5" top="50" content="7" />
+    </cell>
+    <cell name="octave eight">
+        <code value="44" />
+        <code value="144" />
+        <graphic type="background" color="#929" cells="2" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="top" size="16.6" left="57.5" top="50" content="OCTAVE" rotate="270" />
+        <graphic type="text" font="sans-serif" color="#fff" align="right" baseline="middle" size="60" style="bold" left="142.5" top="50" content="8" />
+    </cell>
+    <cell name="added note at second">
+        <code value="47" />
+        <graphic type="background" color="#faf" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="30" left="50" top="60" font="sans-serif" style="bold" content="2nd" />
+        <graphic type="text" color="#000" align="center" baseline="top" size="30" left="50" top="10" font="sans-serif" style="bold" content="+" />
+    </cell>
+    <cell name="added note at third">
+        <code value="43" />
+        <graphic type="background" color="#faf" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="30" left="50" top="60" font="sans-serif" style="bold" content="3rd" />
+        <graphic type="text" color="#000" align="center" baseline="top" size="30" left="50" top="10" font="sans-serif" style="bold" content="+" />
+    </cell>
+    <cell name="added note at fourth">
+        <code value="135" />
+        <graphic type="background" color="#faf" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="30" left="50" top="60" font="sans-serif" style="bold" content="4th" />
+        <graphic type="text" color="#000" align="center" baseline="top" size="30" left="50" top="10" font="sans-serif" style="bold" content="+" />
+    </cell>
+    <cell name="added note at fifth">
+        <code value="157" />
+        <graphic type="background" color="#faf" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="30" left="50" top="60" font="sans-serif" style="bold" content="5th" />
+        <graphic type="text" color="#000" align="center" baseline="top" size="30" left="50" top="10" font="sans-serif" style="bold" content="+" />
+    </cell>
+    <cell name="added note at sixth">
+        <code value="148" />
+        <graphic type="background" color="#faf" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="30" left="50" top="60" font="sans-serif" style="bold" content="6th" />
+        <graphic type="text" color="#000" align="center" baseline="top" size="30" left="50" top="10" font="sans-serif" style="bold" content="+" />
+    </cell>
+    <cell name="added note at seventh">
+        <code value="151" />
+        <graphic type="background" color="#faf" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="30" left="50" top="60" font="sans-serif" style="bold" content="7th" />
+        <graphic type="text" color="#000" align="center" baseline="top" size="30" left="50" top="10" font="sans-serif" style="bold" content="+" />
+    </cell>
+    <cell name="added note at octave">
+        <code value="45" />
+        <graphic type="background" color="#faf" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="30" left="50" top="60" font="sans-serif" style="bold" content="8ve" />
+        <graphic type="text" color="#000" align="center" baseline="top" size="30" left="50" top="10" font="sans-serif" style="bold" content="+" />
+    </cell>
+    <cell name="triplet">
+        <code value="150" />
+        <graphic type="background" color="#ff0" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="40" left="20" top="90" content="&#xe1fe;" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="40" left="30" top="90" content="&#xe1ff;" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="40" left="60" top="90" content="&#xe200;" />
+    </cell>
+    <cell name="tuplet zero">
+        <code value="248" />
+        <graphic type="background" color="#ff0" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe880;" />
+    </cell>
+    <cell name="tuplet one">
+        <code value="249" />
+        <graphic type="background" color="#ff0" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe881;" />
+    </cell>
+    <cell name="tuplet two">
+        <code value="250" />
+        <graphic type="background" color="#ff0" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe882;" />
+    </cell>
+    <cell name="tuplet three">
+        <code value="251" />
+        <graphic type="background" color="#ff0" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe883;" />
+    </cell>
+    <cell name="tuplet four">
+        <code value="252" />
+        <graphic type="background" color="#ff0" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe884;" />
+    </cell>
+    <cell name="tuplet five">
+        <code value="253" />
+        <graphic type="background" color="#ff0" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe885;" />
+    </cell>
+    <cell name="tuplet six">
+        <code value="254" />
+        <graphic type="background" color="#ff0" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe886;" />
+    </cell>
+    <cell name="tuplet seven">
+        <code value="255" />
+        <graphic type="background" color="#ff0" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe887;" />
+    </cell>
+    <cell name="tuplet eight">
+        <code value="256" />
+        <graphic type="background" color="#ff0" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe888;" />
+    </cell>
+    <cell name="tuplet nine">
+        <code value="257" />
+        <graphic type="background" color="#ff0" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe889;" />
+    </cell>
+    <cell name="tuplet prefix">
+        <code value="295" />
+        <graphic type="background" color="#ff0" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="40" top="100" content="&#xe1fe;" />
+    </cell>
+    <cell name="tuplet suffix">
+        <code value="439" />
+        <graphic type="background" color="#ff0" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="40" top="100" content="&#xe200;" />
+    </cell>
+    <cell name="tie">
+        <code value="364" />
+        <code value="367" />
+        <graphic type="background" color="#ff0" cells="2" />
+        <graphic type="arc" x="100" y="90" radius="50" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000"/>
+        <graphic type="text" color="#000" align="center" baseline="middle" size="25" left="100" top="70" font="sans-serif" content="TIE" />
+    </cell>
+    <cell name="short slur">
+        <code value="67" />
+        <graphic type="background" color="#ff0" />
+        <graphic type="arc" x="50" y="60" radius="25" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000"/>
+        <graphic type="text" color="#000" align="center" baseline="middle" size="17" left="50" top="70" font="sans-serif" content="SLUR" />
+    </cell>
+    <cell name="begin bracket slur">
+        <code value="359" />
+        <code value="366" />
+        <graphic type="background" color="#ff0" cells="2" />
+        <graphic type="slur" startX="30" startY="50" controlX="50" controlY="20" endX="170" endY="20" color="#000"/>
+        <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="120" top="50" font="sans-serif" content="BEGIN" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="120" top="75" font="sans-serif" content="SLUR" />
+    </cell>
+    <cell name="end bracket slur">
+        <code value="394" />
+        <code value="350" />
+        <graphic type="background" color="#ff0" cells="2" />
+        <graphic type="slur" startX="170" startY="50" controlX="150" controlY="20" endX="30" endY="20" color="#000"/>
+        <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="80" top="50" font="sans-serif" content="END" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="80" top="75" font="sans-serif" content="SLUR" />
+    </cell>
+    <cell name="fortissimo long">
+        <code value="462" />
+        <code value="570" />
+        <code value="570" />
+        <code value="239" />
+        <graphic type="background" color="#0ff" cells="4" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="70" left="200" top="60" content="&#xe52f;" />
+    </cell>
+    <cell name="forte long">
+        <code value="462" />
+        <code value="570" />
+        <code value="239" />
+        <graphic type="background" color="#0ff" cells="3" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="70" left="150" top="60" content="&#xe522;" />
+    </cell>
+    <cell name="mezzo forte long">
+        <code value="462" />
+        <code value="577" />
+        <code value="570" />
+        <code value="239" />
+        <graphic type="background" color="#0ff" cells="4" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="70" left="200" top="60" content="&#xe52d;" />
+    </cell>
+    <cell name="mezzo piano long">
+        <code value="462" />
+        <code value="577" />
+        <code value="580" />
+        <code value="239" />
+        <graphic type="background" color="#0ff" cells="4" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="70" left="200" top="60" content="&#xe52c;" />
+    </cell>
+    <cell name="piano long">
+        <code value="462" />
+        <code value="580" />
+        <code value="239" />
+        <graphic type="background" color="#0ff" cells="3" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="70" left="150" top="60" content="&#xe520;" />
+    </cell>
+    <cell name="pianissimo long">
+        <code value="462" />
+        <code value="580" />
+        <code value="580" />
+        <code value="239" />
+        <graphic type="background" color="#0ff" cells="4" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="70" left="200" top="60" content="&#xe52b;" />
+    </cell>
+    <cell name="fortissimo short">
+        <code value="462" />
+        <code value="570" />
+        <code value="570" />
+        <graphic type="background" color="#0ff" cells="3" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="70" left="150" top="60" content="&#xe52f;" />
+    </cell>
+    <cell name="forte short">
+        <code value="462" />
+        <code value="570" />
+        <graphic type="background" color="#0ff" cells="2" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="70" left="100" top="60" content="&#xe522;" />
+    </cell>
+    <cell name="mezzo forte short">
+        <code value="462" />
+        <code value="577" />
+        <code value="570" />
+        <graphic type="background" color="#0ff" cells="3" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="70" left="150" top="60" content="&#xe52d;" />
+    </cell>
+    <cell name="mezzo piano short">
+        <code value="462" />
+        <code value="577" />
+        <code value="580" />
+        <graphic type="background" color="#0ff" cells="3" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="70" left="150" top="60" content="&#xe52c;" />
+    </cell>
+    <cell name="piano short">
+        <code value="462" />
+        <code value="580" />
+        <graphic type="background" color="#0ff" cells="2" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="70" left="100" top="60" content="&#xe520;" />
+    </cell>
+    <cell name="pianissimo short">
+        <code value="462" />
+        <code value="580" />
+        <code value="580" />
+        <graphic type="background" color="#0ff" cells="3" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="70" left="150" top="60" content="&#xe52b;" />
+    </cell>
+    <cell name="crescendo">
+        <code value="462" />
+        <code value="567" />
+        <code value="582" />
+        <code value="239" />
+        <graphic type="background" color="#0ff" cells="4" />
+        <graphic type="text" color="#000" align="center" baseline="middle" font="serif" style="italic" size="50" left="200" top="50" content="cresc." />
+    </cell>
+    <cell name="decrescendo">
+        <code value="462" />
+        <code value="568" />
+        <code value="569" />
+        <code value="567" />
+        <code value="582" />
+        <code value="239" />
+        <graphic type="background" color="#0ff" cells="6" />
+        <graphic type="text" color="#000" align="center" baseline="middle" font="serif" style="italic" size="50" left="300" top="50" content="decresc." />
+    </cell>
+    <cell name="diminuendo">
+        <code value="462" />
+        <code value="568" />
+        <code value="573" />
+        <code value="577" />
+        <code value="239" />
+        <graphic type="background" color="#0ff" cells="5" />
+        <graphic type="text" color="#000" align="center" baseline="middle" font="serif" style="italic" size="50" left="250" top="50" content="dim." />
+    </cell>
+    <cell name="begin crescendo short">
+        <code value="162" />
+        <code value="567" />
+        <graphic type="background" color="#0ff" cells="2" />
+        <graphic type="line" startX="150" startY="55" endX="50" endY="65" lineWidth="1" color="#000"/>
+        <graphic type="line" startX="50" startY="65" endX="150" endY="75" lineWidth="1" color="#000"/>
+        <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="100" top="40" font="sans-serif" content="BEGIN" />
+    </cell>
+    <cell name="end crescendo short">
+        <code value="162" />
+        <code value="551" />
+        <graphic type="background" color="#0ff" cells="2" />
+        <graphic type="line" startX="150" startY="55" endX="50" endY="65" lineWidth="1" color="#000"/>
+        <graphic type="line" startX="50" startY="65" endX="150" endY="75" lineWidth="1" color="#000"/>
+        <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="100" top="40" font="sans-serif" content="END" />
+    </cell>
+    <cell name="begin diminuendo short">
+        <code value="162" />
+        <code value="568" />
+        <graphic type="background" color="#0ff" cells="2" />
+        <graphic type="line" startX="50" startY="55" endX="150" endY="65" lineWidth="1" color="#000"/>
+        <graphic type="line" startX="150" startY="65" endX="50" endY="75" lineWidth="1" color="#000"/>
+        <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="100" top="40" font="sans-serif" content="BEGIN" />
+    </cell>
+    <cell name="end diminuendo short">
+        <code value="162" />
+        <code value="552" />
+        <graphic type="background" color="#0ff" cells="2" />
+        <graphic type="line" startX="50" startY="55" endX="150" endY="65" lineWidth="1" color="#000"/>
+        <graphic type="line" startX="150" startY="65" endX="50" endY="75" lineWidth="1" color="#000"/>
+        <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="100" top="40" font="sans-serif" content="END" />
+    </cell>
+    <cell name="begin crescendo long">
+        <code value="162" />
+        <code value="567" />
+        <code value="239" />
+        <graphic type="background" color="#0ff" cells="3" />
+        <graphic type="line" startX="250" startY="55" endX="50" endY="65" lineWidth="1" color="#000"/>
+        <graphic type="line" startX="50" startY="65" endX="250" endY="75" lineWidth="1" color="#000"/>
+        <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="150" top="40" font="sans-serif" content="BEGIN" />
+    </cell>
+    <cell name="end crescendo long">
+        <code value="162" />
+        <code value="551" />
+        <code value="239" />
+        <graphic type="background" color="#0ff" cells="3" />
+        <graphic type="line" startX="250" startY="55" endX="50" endY="65" lineWidth="1" color="#000"/>
+        <graphic type="line" startX="50" startY="65" endX="250" endY="75" lineWidth="1" color="#000"/>
+        <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="150" top="40" font="sans-serif" content="END" />
+    </cell>
+    <cell name="begin diminuendo long">
+        <code value="162" />
+        <code value="568" />
+        <code value="239" />
+        <graphic type="background" color="#0ff" cells="3" />
+        <graphic type="line" startX="50" startY="55" endX="250" endY="65" lineWidth="1" color="#000"/>
+        <graphic type="line" startX="250" startY="65" endX="50" endY="75" lineWidth="1" color="#000"/>
+        <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="150" top="40" font="sans-serif" content="BEGIN" />
+    </cell>
+    <cell name="end diminuendo long">
+        <code value="162" />
+        <code value="552" />
+        <code value="239" />
+        <graphic type="background" color="#0ff" cells="3" />
+        <graphic type="line" startX="50" startY="55" endX="250" endY="65" lineWidth="1" color="#000"/>
+        <graphic type="line" startX="250" startY="65" endX="50" endY="75" lineWidth="1" color="#000"/>
+        <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="150" top="40" font="sans-serif" content="END" />
+    </cell>
+    <cell name="key signature prefix">
+        <code value="235" />
+        <graphic type="background" color="#00f" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="17" left="35" top="50" content="KEY" rotate="270" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="17" left="65" top="50" content="PREFIX" rotate="270" />
+    </cell>
+    <cell name="key signature flat">
+        <code value="160" />
+        <graphic type="background" color="#00f" />
+        <graphic type="text" color="#fff" align="center" size="80" left="55" top="60" content="&#xe260;" />
+    </cell>
+    <cell name="key signature natural">
+        <code value="142" />
+        <graphic type="background" color="#00f" />
+        <graphic type="text" color="#fff" align="center" size="80" left="55" top="50" content="&#xe261;" />
+    </cell>
+    <cell name="key signature sharp">
+        <code value="137" />
+        <graphic type="background" color="#00f" />
+        <graphic type="text" color="#fff" align="center" size="80" left="55" top="50" content="&#xe262;" />
+    </cell>
+    <cell name="key signature multiplier 1x">
+        <code value="265" />
+        <graphic type="background" color="#00f" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" font="sans-serif" size="40" left="50" top="50" content="1x" />
+    </cell>
+    <cell name="key signature multiplier 2x">
+        <code value="266" />
+        <graphic type="background" color="#00f" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" font="sans-serif" size="40" left="50" top="50" content="2x" />
+    </cell>
+    <cell name="key signature multiplier 3x">
+        <code value="267" />
+        <graphic type="background" color="#00f" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" font="sans-serif" size="40" left="50" top="50" content="3x" />
+    </cell>
+    <cell name="key signature multiplier 4x">
+        <code value="268" />
+        <graphic type="background" color="#00f" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" font="sans-serif" size="40" left="50" top="50" content="4x" />
+    </cell>
+    <cell name="key signature multiplier 5x">
+        <code value="269" />
+        <graphic type="background" color="#00f" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" font="sans-serif" size="40" left="50" top="50" content="5x" />
+    </cell>
+    <cell name="key signature multiplier 6x">
+        <code value="270" />
+        <graphic type="background" color="#00f" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" font="sans-serif" size="40" left="50" top="50" content="6x" />
+    </cell>
+    <cell name="key signature multiplier 7x">
+        <code value="271" />
+        <graphic type="background" color="#00f" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" font="sans-serif" size="40" left="50" top="50" content="7x" />
+    </cell>
+    <cell name="meter prefix">
+        <code value="35" />
+        <graphic type="background" color="#070" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="17" left="35" top="50" content="METER" rotate="270" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="17" left="65" top="50" content="PREFIX" rotate="270" />
+    </cell>
+    <cell name="time signature top zero">
+        <code value="174" />
+        <graphic type="background" color="#070" />
+        <graphic type="text" color="#fff" align="center" baseline="alphabetic" size="50" left="50" top="33" content="&#xe080;" />
+        <graphic type="text" color="#7b7" align="center" baseline="alphabetic" style="bold italic" font="serif" size="50" left="50" top="77" content="x" />
+    </cell>
+    <cell name="time signature top one">
+        <code value="165" />
+        <graphic type="background" color="#070" />
+        <graphic type="text" color="#fff" align="center" baseline="alphabetic" size="50" left="50" top="33" content="&#xe081;" />
+        <graphic type="text" color="#7b7" align="center" baseline="alphabetic" style="bold italic" font="serif" size="50" left="50" top="77" content="x" />
+    </cell>
+    <cell name="time signature top two">
+        <code value="166" />
+        <graphic type="background" color="#070" />
+        <graphic type="text" color="#fff" align="center" baseline="alphabetic" size="50" left="50" top="33" content="&#xe082;" />
+        <graphic type="text" color="#7b7" align="center" baseline="alphabetic" style="bold italic" font="serif" size="50" left="50" top="77" content="x" />
+    </cell>
+    <cell name="time signature top three">
+        <code value="167" />
+        <graphic type="background" color="#070" />
+        <graphic type="text" color="#fff" align="center" baseline="alphabetic" size="50" left="50" top="33" content="&#xe083;" />
+        <graphic type="text" color="#7b7" align="center" baseline="alphabetic" style="bold italic" font="serif" size="50" left="50" top="77" content="x" />
+    </cell>
+    <cell name="time signature top four">
+        <code value="168" />
+        <graphic type="background" color="#070" />
+        <graphic type="text" color="#fff" align="center" baseline="alphabetic" size="50" left="50" top="33" content="&#xe084;" />
+        <graphic type="text" color="#7b7" align="center" baseline="alphabetic" style="bold italic" font="serif" size="50" left="50" top="77" content="x" />
+    </cell>
+    <cell name="time signature top five">
+        <code value="169" />
+        <graphic type="background" color="#070" />
+        <graphic type="text" color="#fff" align="center" baseline="alphabetic" size="50" left="50" top="33" content="&#xe085;" />
+        <graphic type="text" color="#7b7" align="center" baseline="alphabetic" style="bold italic" font="serif" size="50" left="50" top="77" content="x" />
+    </cell>
+    <cell name="time signature top six">
+        <code value="170" />
+        <graphic type="background" color="#070" />
+        <graphic type="text" color="#fff" align="center" baseline="alphabetic" size="50" left="50" top="33" content="&#xe086;" />
+        <graphic type="text" color="#7b7" align="center" baseline="alphabetic" style="bold italic" font="serif" size="50" left="50" top="77" content="x" />
+    </cell>
+    <cell name="time signature top seven">
+        <code value="171" />
+        <graphic type="background" color="#070" />
+        <graphic type="text" color="#fff" align="center" baseline="alphabetic" size="50" left="50" top="33" content="&#xe087;" />
+        <graphic type="text" color="#7b7" align="center" baseline="alphabetic" style="bold italic" font="serif" size="50" left="50" top="77" content="x" />
+    </cell>
+    <cell name="time signature top eight">
+        <code value="172" />
+        <graphic type="background" color="#070" />
+        <graphic type="text" color="#fff" align="center" baseline="alphabetic" size="50" left="50" top="33" content="&#xe088;" />
+        <graphic type="text" color="#7b7" align="center" baseline="alphabetic" style="bold italic" font="serif" size="50" left="50" top="77" content="x" />
+    </cell>
+    <cell name="time signature top nine">
+        <code value="173" />
+        <graphic type="background" color="#070" />
+        <graphic type="text" color="#fff" align="center" baseline="alphabetic" size="50" left="50" top="33" content="&#xe089;" />
+        <graphic type="text" color="#7b7" align="center" baseline="alphabetic" style="bold italic" font="serif" size="50" left="50" top="77" content="x" />
+    </cell>
+    <cell name="time signature bottom zero">
+        <code value="48" />
+        <graphic type="background" color="#070" />
+        <graphic type="text" color="#fff" align="center" baseline="alphabetic" size="50" left="50" top="66.6" content="&#xe080;" />
+        <graphic type="text" color="#7b7" align="center" baseline="alphabetic" style="bold italic" font="serif" size="50" left="50" top="43" content="x" />
+    </cell>
+    <cell name="time signature bottom one">
+        <code value="49" />
+        <graphic type="background" color="#070" />
+        <graphic type="text" color="#fff" align="center" baseline="alphabetic" size="50" left="50" top="66.6" content="&#xe081;" />
+        <graphic type="text" color="#7b7" align="center" baseline="alphabetic" style="bold italic" font="serif" size="50" left="50" top="43" content="x" />
+    </cell>
+    <cell name="time signature bottom two">
+        <code value="50" />
+        <graphic type="background" color="#070" />
+        <graphic type="text" color="#fff" align="center" baseline="alphabetic" size="50" left="50" top="66.6" content="&#xe082;" />
+        <graphic type="text" color="#7b7" align="center" baseline="alphabetic" style="bold italic" font="serif" size="50" left="50" top="43" content="x" />
+    </cell>
+    <cell name="time signature bottom three">
+        <code value="51" />
+        <graphic type="background" color="#070" />
+        <graphic type="text" color="#fff" align="center" baseline="alphabetic" size="50" left="50" top="66.6" content="&#xe083;" />
+        <graphic type="text" color="#7b7" align="center" baseline="alphabetic" style="bold italic" font="serif" size="50" left="50" top="43" content="x" />
+    </cell>
+    <cell name="time signature bottom four">
+        <code value="52" />
+        <graphic type="background" color="#070" />
+        <graphic type="text" color="#fff" align="center" baseline="alphabetic" size="50" left="50" top="66.6" content="&#xe084;" />
+        <graphic type="text" color="#7b7" align="center" baseline="alphabetic" style="bold italic" font="serif" size="50" left="50" top="43" content="x" />
+    </cell>
+    <cell name="time signature bottom five">
+        <code value="53" />
+        <graphic type="background" color="#070" />
+        <graphic type="text" color="#fff" align="center" baseline="alphabetic" size="50" left="50" top="66.6" content="&#xe085;" />
+        <graphic type="text" color="#7b7" align="center" baseline="alphabetic" style="bold italic" font="serif" size="50" left="50" top="43" content="x" />
+    </cell>
+    <cell name="time signature bottom six">
+        <code value="54" />
+        <graphic type="background" color="#070" />
+        <graphic type="text" color="#fff" align="center" baseline="alphabetic" size="50" left="50" top="66.6" content="&#xe086;" />
+        <graphic type="text" color="#7b7" align="center" baseline="alphabetic" style="bold italic" font="serif" size="50" left="50" top="43" content="x" />
+    </cell>
+    <cell name="time signature bottom seven">
+        <code value="55" />
+        <graphic type="background" color="#070" />
+        <graphic type="text" color="#fff" align="center" baseline="alphabetic" size="50" left="50" top="66.6" content="&#xe087;" />
+        <graphic type="text" color="#7b7" align="center" baseline="alphabetic" style="bold italic" font="serif" size="50" left="50" top="43" content="x" />
+    </cell>
+    <cell name="time signature bottom eight">
+        <code value="56" />
+        <graphic type="background" color="#070" />
+        <graphic type="text" color="#fff" align="center" baseline="alphabetic" size="50" left="50" top="66.6" content="&#xe088;" />
+        <graphic type="text" color="#7b7" align="center" baseline="alphabetic" style="bold italic" font="serif" size="50" left="50" top="43" content="x" />
+    </cell>
+    <cell name="time signature bottom nine">
+        <code value="57" />
+        <graphic type="background" color="#070" />
+        <graphic type="text" color="#fff" align="center" baseline="alphabetic" size="50" left="50" top="66.6" content="&#xe089;" />
+        <graphic type="text" color="#7b7" align="center" baseline="alphabetic" style="bold italic" font="serif" size="50" left="50" top="43" content="x" />
+    </cell>
+    <cell name="common time">
+        <code value="146" />
+        <code value="467" />
+        <graphic type="background" color="#070" cells="2" />
+        <graphic type="text" color="#fff" align="center" size="80" left="105" top="50" content="&#xe08a;" />
+    </cell>
+    <cell name="cut time">
+        <code value="195" />
+        <code value="467" />
+        <graphic type="background" color="#070" cells="2" />
+        <graphic type="text" color="#fff" align="center" size="80" left="105" top="50" content="&#xe08b;" />
+    </cell>
+    <cell name="trill">
+        <code value="154" />
+        <graphic type="background" color="#7f462c" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="50" top="60" content="&#xe566;" />
+    </cell>
+    <cell name="staccato">
+        <code value="356" />
+        <graphic type="background" color="#7f462c" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="60" left="50" top="60" content="&#xe4a2;" />
+    </cell>
+    <cell name="accent">
+        <code value="346" />
+        <code value="156" />
+        <graphic type="background" color="#7f462c" cells="2" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="100" top="60" content="&#xe4a0;" />
+    </cell>
+    <cell name="tenuto">
+        <code value="395" />
+        <code value="156" />
+        <graphic type="background" color="#7f462c" cells="2" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="100" top="60" content="&#xe4a4;" />
+    </cell>
+    <cell name="marcato">
+        <code value="159" />
+        <code value="156" />
+        <graphic type="background" color="#7f462c" cells="2" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="100" top="60" content="&#xe4ac;" />
+    </cell>
+    <cell name="fermata">
+        <code value="460" />
+        <code value="176" />
+        <graphic type="background" color="#7f462c" cells="2" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="100" top="60" content="&#xe4c0;" />
+    </cell>
+    <cell name="pause">
+        <code value="362" />
+        <code value="149" />
+        <graphic type="background" color="#7f462c" cells="2" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="100" top="60" content="&#xe4ce;" />
+    </cell>
+    <cell name="up bow">
+        <code value="760" />
+        <code value="639" />
+        <graphic type="background" color="#7f462c" cells="2" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="100" top="60" content="&#xe612;" />
+    </cell>
+    <cell name="down bow">
+        <code value="760" />
+        <code value="66" />
+        <graphic type="background" color="#7f462c" cells="2" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="100" top="60" content="&#xe610;" />
+    </cell>
+    <cell name="fingering thumb">
+        <code value="465" />
+        <graphic type="background" color="#7f462c" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="50" top="60" content="&#xea51;" />
+    </cell>
+    <cell name="fingering second finger">
+        <code value="466" />
+        <graphic type="background" color="#7f462c" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="50" top="60" content="&#xea52;" />
+    </cell>
+    <cell name="fingering third finger">
+        <code value="476" />
+        <graphic type="background" color="#7f462c" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="50" top="60" content="&#xea54;" />
+    </cell>
+    <cell name="fingering fourth finger">
+        <code value="449" />
+        <graphic type="background" color="#7f462c" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="50" top="60" content="&#xea55;" />
+    </cell>
+    <cell name="fingering fifth finger">
+        <code value="475" />
+        <graphic type="background" color="#7f462c" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="50" top="60" content="&#xea57;" />
+    </cell>
+    <cell name="fingering change fingers">
+        <code value="767" />
+        <graphic type="background" color="#7f462c" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="50" top="30" content="&#xe577;" />
+    </cell>
+    <cell name="notehead only">
+        <code value="353" />
+        <code value="765" />
+        <graphic type="background" color="#7f462c" cells="2" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="100" top="50" content="&#xe0a4;" />
+    </cell>
+    <cell name="x notehead">
+        <code value="353" />
+        <code value="766" />
+        <graphic type="background" color="#7f462c" cells="2" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="100" top="50" content="&#xe0a9;" />
+    </cell>
+    <cell name="diamond notehead">
+        <code value="353" />
+        <code value="276" />
+        <graphic type="background" color="#7f462c" cells="2" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="100" top="50" content="&#xe0dd;" />
+    </cell>
+    <cell name="approximate pitch notehead">
+        <code value="353" />
+        <code value="275" />
+        <graphic type="background" color="#7f462c" cells="2" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="60" left="100" top="80" content="&#xe210;&#xe241;" />
+    </cell>
+    <cell name="plus">
+        <code value="343" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" color="#000" align="center" size="50" left="50" top="50" content="&#xe872;" />
+    </cell>
+    <cell name="circle">
+        <code value="452" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" color="#000" align="center" size="50" left="50" top="50" content="&#xe870;" />
+    </cell>
+    <cell name="slashed circle">
+        <code value="452" />
+        <code value="849" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" color="#000" align="center" size="50" left="100" top="50" content="&#xe871;" />
+    </cell>
+    <cell name="triangle">
+        <code value="448" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" color="#000" align="center" size="50" left="50" top="50" content="&#xe873;" />
+    </cell>
+    <cell name="barline">
+        <code value="76" />
+        <graphic type="background" color="#000" />
+        <graphic type="text" color="#fff" align="center" size="60" left="50" top="80" content="&#xe030;" />
+    </cell>
+    <cell name="double barline">
+        <code value="260" />
+        <code value="175" />
+        <code value="139" />
+        <graphic type="background" color="#000" cells="3" />
+        <graphic type="text" color="#fff" align="center" size="60" left="150" top="80" content="&#xe031;" />
+    </cell>
+    <cell name="final barline">
+        <code value="260" />
+        <code value="175" />
+        <graphic type="background" color="#000" cells="2" />
+        <graphic type="text" color="#fff" align="center" size="60" left="100" top="80" content="&#xe032;" />
+    </cell>
+    <cell name="begin repeat symbol">
+        <code value="260" />
+        <code value="355" />
+        <graphic type="background" color="#000" cells="2" />
+        <graphic type="text" color="#fff" align="center" size="60" left="100" top="80" content="&#xe040;" />
+    </cell>
+    <cell name="end repeat symbol">
+        <code value="260" />
+        <code value="450" />
+        <graphic type="background" color="#000" cells="2" />
+        <graphic type="text" color="#fff" align="center" size="60" left="100" top="80" content="&#xe041;" />
+    </cell>
+    <cell name="measure repeat">
+        <code value="155" />
+        <graphic type="background" color="#000" />
+        <graphic type="text" color="#fff" align="center" size="60" left="50" top="50" content="&#xe500;" />
+    </cell>
+    <cell name="number of measures to repeat">
+        <code value="335" />
+        <graphic type="background" color="#000" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="17" left="35" top="50" content="NO. OF" rotate="270" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="17" left="65" top="50" content="MEAS." rotate="270" />
+    </cell>
+    <cell name="end repeat">
+        <code value="242" />
+        <graphic type="background" color="#000" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="17" left="35" top="50" content="END" rotate="270" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="17" left="65" top="50" content="REPEAT" rotate="270" />
+    </cell>
+    <cell name="coda">
+        <code value="260" />
+        <code value="276" />
+        <graphic type="background" color="#000" cells="2" />
+        <graphic type="text" color="#fff" align="center" size="60" left="100" top="70" content="&#xe048;" />
+    </cell>
+    <cell name="begin repeated section">
+        <code value="143" />
+        <graphic type="background" color="#000" />
+        <graphic type="text" color="#fff" align="center" size="55" left="50" top="70" content="&#xe047;" />
+    </cell>
+    <cell name="end repeated section">
+        <code value="134" />
+        <code value="243" />
+        <graphic type="background" color="#000" cells="2" />
+        <graphic type="text" color="#fff" align="center" size="55" left="100" top="65" content="&#xe045;" />
+    </cell>
+    <cell name="first ending">
+        <code value="935" />
+        <code value="949" />
+        <graphic type="background" color="#000" cells="2" />
+        <graphic type="line" startX="166" startY="33" endX="33" endY="33" lineWidth="1" color="#fff"/>
+        <graphic type="line" startX="33" startY="33" endX="33" endY="66" lineWidth="1" color="#fff"/>
+        <graphic type="text" color="#fff" align="center" baseline="middle" font="sans-serif" size="25" left="65" top="50" content="1." />
+    </cell>
+    <cell name="second ending">
+        <code value="935" />
+        <code value="950" />
+        <graphic type="background" color="#000" cells="2" />
+        <graphic type="line" startX="166" startY="33" endX="33" endY="33" lineWidth="1" color="#fff"/>
+        <graphic type="line" startX="33" startY="33" endX="33" endY="66" lineWidth="1" color="#fff"/>
+        <graphic type="text" color="#fff" align="center" baseline="middle" font="sans-serif" size="25" left="65" top="50" content="2." />
+    </cell>
+    <cell name="third ending">
+        <code value="935" />
+        <code value="951" />
+        <graphic type="background" color="#000" cells="2" />
+        <graphic type="line" startX="166" startY="33" endX="33" endY="33" lineWidth="1" color="#fff"/>
+        <graphic type="line" startX="33" startY="33" endX="33" endY="66" lineWidth="1" color="#fff"/>
+        <graphic type="text" color="#fff" align="center" baseline="middle" font="sans-serif" size="25" left="65" top="50" content="3." />
+    </cell>
+    <cell name="treble clef">
+        <code value="662" />
+        <code value="447" />
+        <code value="376" />
+        <graphic type="background" color="#0f0" cells="3" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="150" top="75" content="&#xe014;&#xe014;" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="150" top="62.8" content="&#xe050;" />
+    </cell>
+    <cell name="alto clef">
+        <code value="662" />
+        <code value="643" />
+        <code value="376" />
+        <graphic type="background" color="#0f0" cells="3" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="150" top="75" content="&#xe014;&#xe014;" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="150" top="50.6" content="&#xe05b;" />
+    </cell>
+    <cell name="tenor clef">
+        <code value="662" />
+        <code value="643" />
+        <code value="634" />
+        <code value="376" />
+        <graphic type="background" color="#0f0" cells="4" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="200" top="75" content="&#xe014;&#xe014;" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="200" top="38.4" content="&#xe05b;" />
+    </cell>
+    <cell name="bass clef">
+        <code value="662" />
+        <code value="635" />
+        <code value="376" />
+        <graphic type="background" color="#0f0" cells="3" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="150" top="75" content="&#xe014;&#xe014;" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="150" top="38.4" content="&#xe061;" />
+    </cell>
+    <cell name="metronome marking equals">
+        <code value="455" />
+        <code value="435" />
+        <graphic type="background" color="#000" cells="2" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="100" top="30" content="M.M." />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="50" left="100" top="55" content="=" />
+    </cell>
+    <cell name="left hand short">
+        <code value="495" />
+        <code value="262" />
+        <graphic type="background" color="#000" cells="2" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="100" top="35" content="LEFT" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="100" top="65" content="HAND" />
+    </cell>
+    <cell name="left hand long">
+        <code value="495" />
+        <code value="262" />
+        <code value="239" />
+        <graphic type="background" color="#000" cells="3" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="150" top="35" content="LEFT" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="150" top="65" content="HAND" />
+    </cell>
+    <cell name="right hand short">
+        <code value="446" />
+        <code value="262" />
+        <graphic type="background" color="#000" cells="2" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="100" top="35" content="RIGHT" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="100" top="65" content="HAND" />
+    </cell>
+    <cell name="right hand long">
+        <code value="446" />
+        <code value="262" />
+        <code value="239" />
+        <graphic type="background" color="#000" cells="3" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="150" top="35" content="RIGHT" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="150" top="65" content="HAND" />
+    </cell>
+    <cell name="prefer smaller note values">
+        <code value="244" />
+        <code value="660" />
+        <code value="349" />
+        <graphic type="background" color="#000" cells="3" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="150" top="35" content="READ AS" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="150" top="65" content="SMALLER VALUES" />
+    </cell>
+    <cell name="prefer larger note values">
+        <code value="194" />
+        <code value="660" />
+        <code value="349" />
+        <graphic type="background" color="#000" cells="3" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="150" top="35" content="READ AS" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="150" top="65" content="LARGER VALUES" />
+    </cell>
+    <cell name="in-accord">
+        <code value="860" />
+        <code value="762" />
+        <graphic type="background" color="#000" cells="2" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="65" left="50" top="82.5" content="&#xe030;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="65" left="150" top="82.5" content="&#xe030;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="30" left="100" top="43" content="&#xe1d3; &#xe1d3;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="30" left="105" top="57" content="&#xe1d2;   " />
+    </cell>
+    <cell name="in-accord measure division">
+        <code value="646" />
+        <code value="375" />
+        <graphic type="background" color="#000" cells="2" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" font="sans-serif" size="20" left="100" top="40" content="MEASURE" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" font="sans-serif" size="20" left="100" top="60" content="DIVISION" />
+    </cell>
+    <cell name="partial measure in-accord">
+        <code value="334" />
+        <code value="749" />
+        <graphic type="background" color="#000" cells="2" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="30" left="100" top="43" content="&#xe1f0;&#xe1f7; &#xe1f2;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="30" left="100" top="57" content="&#xe1d6;  " />
+    </cell>
+    <cell name="braille music hyphen">
+        <code value="234" />
+        <graphic type="background" color="#000" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="17" left="35" top="50" content="MUSIC" rotate="270" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="17" left="65" top="50" content="HYPHEN" rotate="270" />
+    </cell>
+    <cell name="braille music comma">
+        <code value="660" />
+        <code value="349" />
+        <graphic type="background" color="#000" cells="2" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" font="sans-serif" size="20" left="100" top="35" content="MUSIC" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" font="sans-serif" size="20" left="100" top="65" content="COMMA" />
+    </cell>
+    <cell name="text prefix">
+        <code value="62" />
+        <graphic type="background" color="#000" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="17" left="35" top="50" content="WORD" rotate="270" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="17" left="65" top="50" content="PREFIX" rotate="270" />
+    </cell>
+    <cell name="music prefix">
+        <code value="344" />
+        <code value="339" />
+        <graphic type="background" color="#000" cells="2" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="100" top="35" content="MUSIC" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="100" top="65" content="PREFIX" />
+    </cell>
+    <cell name="braille sign">
+        <code value="559" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="17" left="35" top="50" content="BRAILLE" rotate="270" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="17" left="65" top="50" content="TEXT" rotate="270" />
+    </cell>
+    <cell name="text a">
+        <code value="565" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="A" />
+    </cell>
+    <cell name="text b">
+        <code value="566" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="B" />
+    </cell>
+    <cell name="text c">
+        <code value="567" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="C" />
+    </cell>
+    <cell name="text d">
+        <code value="568" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="D" />
+    </cell>
+    <cell name="text e">
+        <code value="569" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="E" />
+    </cell>
+    <cell name="text f">
+        <code value="570" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="F" />
+    </cell>
+    <cell name="text g">
+        <code value="571" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="G" />
+    </cell>
+    <cell name="text h">
+        <code value="572" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="H" />
+    </cell>
+    <cell name="text dotless i">
+        <code value="557" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="I" />
+    </cell>
+    <cell name="text dotted i">
+        <code value="573" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="&#x0130;" />
+    </cell>
+    <cell name="text j">
+        <code value="574" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="J" />
+    </cell>
+    <cell name="text k">
+        <code value="575" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="K" />
+    </cell>
+    <cell name="text l">
+        <code value="576" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="L" />
+    </cell>
+    <cell name="text m">
+        <code value="577" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="M" />
+    </cell>
+    <cell name="text n">
+        <code value="578" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="N" />
+    </cell>
+    <cell name="text o">
+        <code value="579" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="O" />
+    </cell>
+    <cell name="text p">
+        <code value="580" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="P" />
+    </cell>
+    <cell name="text q">
+        <code value="581" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="Q" />
+    </cell>
+    <cell name="text r">
+        <code value="582" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="R" />
+    </cell>
+    <cell name="text s">
+        <code value="583" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="S" />
+    </cell>
+    <cell name="text t">
+        <code value="584" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="T" />
+    </cell>
+    <cell name="text u">
+        <code value="585" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="U" />
+    </cell>
+    <cell name="text v">
+        <code value="586" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="V" />
+    </cell>
+    <cell name="text w">
+        <code value="587" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="W" />
+    </cell>
+    <cell name="text x">
+        <code value="588" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="X" />
+    </cell>
+    <cell name="text y">
+        <code value="589" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="Y" />
+    </cell>
+    <cell name="text z">
+        <code value="590" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="Z" />
+    </cell>
+    <cell name="text a with accent">
+        <code value="564" />
+        <code value="565" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0102;" />
+    </cell>
+    <cell name="text c with cedilla">
+        <code value="542" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="&#x00c7;" />
+    </cell>
+    <cell name="text g with breve">
+        <code value="560" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="&#x011e;" />
+    </cell>
+    <cell name="text i with accent">
+        <code value="564" />
+        <code value="557" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="&#x012c;" />
+    </cell>
+    <cell name="text o with umlaut">
+        <code value="491" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="&#x00d6;" />
+    </cell>
+    <cell name="text s with cedilla">
+        <code value="537" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="&#x015e;" />
+    </cell>
+    <cell name="text u with accent">
+        <code value="564" />
+        <code value="585" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="&#x016c;" />
+    </cell>
+    <cell name="text u with umlaut">
+        <code value="492" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="&#x00dc;" />
+    </cell>
+    <cell name="text 1">
+        <code value="665" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="1" />
+    </cell>
+    <cell name="text 2">
+        <code value="666" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="2" />
+    </cell>
+    <cell name="text 3">
+        <code value="667" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="3" />
+    </cell>
+    <cell name="text 4">
+        <code value="668" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="4" />
+    </cell>
+    <cell name="text 5">
+        <code value="669" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="5" />
+    </cell>
+    <cell name="text 6">
+        <code value="670" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="6" />
+    </cell>
+    <cell name="text 7">
+        <code value="671" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="7" />
+    </cell>
+    <cell name="text 8">
+        <code value="672" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="8" />
+    </cell>
+    <cell name="text 9">
+        <code value="673" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="9" />
+    </cell>
+    <cell name="text 0">
+        <code value="674" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="0" />
+    </cell>
+    <cell name="accent">
+        <code value="564" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="&#x02d8;" />
+    </cell>
+    <cell name="capitalize letter">
+        <code value="544" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="17" left="35" top="50" content="CAPITAL" rotate="270" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="17" left="65" top="50" content="LETTER" rotate="270" />
+    </cell>
+    <cell name="capitalize word">
+        <code value="544" />
+        <code value="544" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="CAPITALIZE" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="WORD" />
+    </cell>
+    <cell name="text contraction ally">
+        <code value="644" />
+        <code value="789" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="ALLY" />
+    </cell>
+    <cell name="text contraction ation">
+        <code value="644" />
+        <code value="678" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="ATION" />
+    </cell>
+    <cell name="text contraction ance">
+        <code value="746" />
+        <code value="769" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="ANCE" />
+    </cell>
+    <cell name="text contraction and">
+        <code value="538" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="AND" />
+    </cell>
+    <cell name="text contraction ar">
+        <code value="562" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="AR" />
+    </cell>
+    <cell name="text contraction as">
+        <code value="690" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="AS" />
+    </cell>
+    <cell name="text contraction bb">
+        <code value="650" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="BB" />
+    </cell>
+    <cell name="text contraction be">
+        <code value="750" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="BE" />
+    </cell>
+    <cell name="text contraction ble">
+        <code value="835" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="BLE" />
+    </cell>
+    <cell name="text contraction but">
+        <code value="866" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="BUT" />
+    </cell>
+    <cell name="text contraction by">
+        <code value="657" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="BY" />
+    </cell>
+    <cell name="text contraction can">
+        <code value="867" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="CAN" />
+    </cell>
+    <cell name="text contraction cannot">
+        <code value="595" />
+        <code value="967" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="CANNOT" />
+    </cell>
+    <cell name="text contraction cc">
+        <code value="651" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="CC" />
+    </cell>
+    <cell name="text contraction character">
+        <code value="534" />
+        <code value="758" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="CHARACTER" />
+    </cell>
+    <cell name="text contraction child">
+        <code value="642" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="CHILD" rotate="270" />
+    </cell>
+    <cell name="text contraction com">
+        <code value="645" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="COM" />
+    </cell>
+    <cell name="text contraction con">
+        <code value="751" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="CON" />
+    </cell>
+    <cell name="text contraction day">
+        <code value="534" />
+        <code value="768" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="DAY" />
+    </cell>
+    <cell name="text contraction dd">
+        <code value="652" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="DD" />
+    </cell>
+    <cell name="text contraction dis">
+        <code value="752" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="DIS" />
+    </cell>
+    <cell name="text contraction do">
+        <code value="868" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="DO" />
+    </cell>
+    <cell name="text contraction ea">
+        <code value="649" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="EA" />
+    </cell>
+    <cell name="text contraction ed">
+        <code value="536" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="ED" />
+    </cell>
+    <cell name="text contraction en">
+        <code value="553" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="EN" />
+    </cell>
+    <cell name="text contraction ence">
+        <code value="659" />
+        <code value="769" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="ENCE" />
+    </cell>
+    <cell name="text contraction enough">
+        <code value="753" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="ENOUGH" rotate="270" />
+    </cell>
+    <cell name="text contraction er">
+        <code value="593" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="ER" />
+    </cell>
+    <cell name="text contraction ever">
+        <code value="534" />
+        <code value="769" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="EVER" />
+    </cell>
+    <cell name="text contraction every">
+        <code value="869" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="EVERY" rotate="270" />
+    </cell>
+    <cell name="text contraction father">
+        <code value="534" />
+        <code value="970" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="FATHER" />
+    </cell>
+    <cell name="text contraction ff">
+        <code value="654" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="FF" />
+    </cell>
+    <cell name="text contraction for">
+        <code value="561" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="FOR" />
+    </cell>
+    <cell name="text contraction from">
+        <code value="770" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="FROM" rotate="270" />
+    </cell>
+    <cell name="text contraction ful">
+        <code value="659" />
+        <code value="676" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="FUL" />
+    </cell>
+    <cell name="text contraction gg">
+        <code value="655" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="GG" />
+    </cell>
+    <cell name="text contraction go">
+        <code value="871" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="GO" />
+    </cell>
+    <cell name="text contraction had">
+        <code value="595" />
+        <code value="772" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="HAD" />
+    </cell>
+    <cell name="text contraction have">
+        <code value="872" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="HAVE" rotate="270" />
+    </cell>
+    <cell name="text contraction here">
+        <code value="534" />
+        <code value="785" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="HERE" />
+    </cell>
+    <cell name="text contraction his">
+        <code value="756" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="HIS" />
+    </cell>
+    <cell name="text contraction in">
+        <code value="557" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="IN" />
+    </cell>
+    <cell name="text contraction ing">
+        <code value="543" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="ING" />
+    </cell>
+    <cell name="text contraction it">
+        <code value="688" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="IT" />
+    </cell>
+    <cell name="text contraction ity">
+        <code value="659" />
+        <code value="789" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="ITY" />
+    </cell>
+    <cell name="text contraction just">
+        <code value="874" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="JUST" rotate="270" />
+    </cell>
+    <cell name="text contraction know">
+        <code value="534" />
+        <code value="675" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="KNOW" />
+    </cell>
+    <cell name="text contraction knowledge">
+        <code value="775" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="KNOWLEDGE" rotate="270" />
+    </cell>
+    <cell name="text contraction less">
+        <code value="746" />
+        <code value="683" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="LESS" />
+    </cell>
+    <cell name="text contraction like">
+        <code value="776" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="LIKE" rotate="270" />
+    </cell>
+    <cell name="text contraction lord">
+        <code value="534" />
+        <code value="676" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="LORD" />
+    </cell>
+    <cell name="text contraction many">
+        <code value="595" />
+        <code value="677" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="MANY" />
+    </cell>
+    <cell name="text contraction ment">
+        <code value="659" />
+        <code value="684" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="MENT" />
+    </cell>
+    <cell name="text contraction more">
+        <code value="777" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="MORE" rotate="270" />
+    </cell>
+    <cell name="text contraction mother">
+        <code value="534" />
+        <code value="677" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="MOTHER" />
+    </cell>
+    <cell name="text contraction name">
+        <code value="534" />
+        <code value="678" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="NAME" />
+    </cell>
+    <cell name="text contraction ness">
+        <code value="659" />
+        <code value="683" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="NESS" />
+    </cell>
+    <cell name="text contraction not">
+        <code value="778" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="50" top="50" content="NOT" />
+    </cell>
+    <cell name="text contraction of">
+        <code value="540" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="OF" />
+    </cell>
+    <cell name="text contraction one">
+        <code value="534" />
+        <code value="679" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="ONE" />
+    </cell>
+    <cell name="text contraction ong">
+        <code value="659" />
+        <code value="771" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="ONG" />
+    </cell>
+    <cell name="text contraction ought">
+        <code value="534" />
+        <code value="792" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="OUGHT" />
+    </cell>
+    <cell name="text contraction ou">
+        <code value="592" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="OU" />
+    </cell>
+    <cell name="text contraction ound">
+        <code value="746" />
+        <code value="768" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="OUND" />
+    </cell>
+    <cell name="text contraction ount">
+        <code value="746" />
+        <code value="684" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="OUNT" />
+    </cell>
+    <cell name="text contraction out">
+        <code value="692" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="OUT" />
+    </cell>
+    <cell name="text contraction ow">
+        <code value="591" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="OW" />
+    </cell>
+    <cell name="text contraction part">
+        <code value="534" />
+        <code value="680" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="PART" />
+    </cell>
+    <cell name="text contraction people">
+        <code value="780" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="PEOPLE" rotate="270" />
+    </cell>
+    <cell name="text contraction question">
+        <code value="534" />
+        <code value="681" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="QUESTION" />
+    </cell>
+    <cell name="text contraction quite">
+        <code value="781" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="QUITE" rotate="270" />
+    </cell>
+    <cell name="text contraction rather">
+        <code value="782" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="RATHER" rotate="270" />
+    </cell>
+    <cell name="text contraction right">
+        <code value="534" />
+        <code value="682" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="RIGHT" />
+    </cell>
+    <cell name="text contraction self">
+        <code value="870" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="SELF" rotate="270" />
+    </cell>
+    <cell name="text contraction sh">
+        <code value="537" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="SH" />
+    </cell>
+    <cell name="text contraction shall">
+        <code value="637" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="SHALL" rotate="270" />
+    </cell>
+    <cell name="text contraction sion">
+        <code value="746" />
+        <code value="678" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="SION" />
+    </cell>
+    <cell name="text contraction so">
+        <code value="783" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="SO" />
+    </cell>
+    <cell name="text contraction some">
+        <code value="534" />
+        <code value="683" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="SOME" />
+    </cell>
+    <cell name="text contraction spirit">
+        <code value="595" />
+        <code value="683" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="SPIRIT" />
+    </cell>
+    <cell name="text contraction st">
+        <code value="547" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="ST" />
+    </cell>
+    <cell name="text contraction still">
+        <code value="747" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="STILL" rotate="270" />
+    </cell>
+    <cell name="text contraction th">
+        <code value="563" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="TH" />
+    </cell>
+    <cell name="text contraction that">
+        <code value="784" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="THAT" rotate="270" />
+    </cell>
+    <cell name="text contraction the">
+        <code value="533" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="THE" />
+    </cell>
+    <cell name="text contraction their">
+        <code value="595" />
+        <code value="633" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="THEIR" />
+    </cell>
+    <cell name="text contraction there">
+        <code value="534" />
+        <code value="633" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="THERE" />
+    </cell>
+    <cell name="text contraction these">
+        <code value="594" />
+        <code value="633" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="THESE" />
+    </cell>
+    <cell name="text contraction this">
+        <code value="663" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="THIS" rotate="270" />
+    </cell>
+    <cell name="text contraction those">
+        <code value="594" />
+        <code value="763" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="THOSE" />
+    </cell>
+    <cell name="text contraction through">
+        <code value="534" />
+        <code value="763" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="THROUGH" />
+    </cell>
+    <cell name="text contraction time">
+        <code value="534" />
+        <code value="684" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="TIME" />
+    </cell>
+    <cell name="text contraction tion">
+        <code value="659" />
+        <code value="678" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="TION" />
+    </cell>
+    <cell name="text contraction to">
+        <code value="754" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="TO" />
+    </cell>
+    <cell name="text contraction under">
+        <code value="534" />
+        <code value="785" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="UNDER" />
+    </cell>
+    <cell name="text contraction upon">
+        <code value="594" />
+        <code value="785" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="UPON" />
+    </cell>
+    <cell name="text contraction us">
+        <code value="685" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="US" />
+    </cell>
+    <cell name="text contraction very">
+        <code value="686" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="VERY" rotate="270" />
+    </cell>
+    <cell name="text contraction was">
+        <code value="757" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="WAS" />
+    </cell>
+    <cell name="text contraction were">
+        <code value="755" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="WERE" rotate="270" />
+    </cell>
+    <cell name="text contraction wh">
+        <code value="558" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="WH" />
+    </cell>
+    <cell name="text contraction where">
+        <code value="534" />
+        <code value="758" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="WHERE" />
+    </cell>
+    <cell name="text contraction which">
+        <code value="658" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="WHICH" rotate="270" />
+    </cell>
+    <cell name="text contraction whose">
+        <code value="594" />
+        <code value="758" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="WHOSE" />
+    </cell>
+    <cell name="text contraction will">
+        <code value="687" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="WILL" rotate="270" />
+    </cell>
+    <cell name="text contraction with">
+        <code value="541" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="WITH" rotate="270" />
+    </cell>
+    <cell name="text contraction word">
+        <code value="594" />
+        <code value="787" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="WORD" />
+    </cell>
+    <cell name="text contraction work">
+        <code value="534" />
+        <code value="787" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="WORK" />
+    </cell>
+    <cell name="text contraction world">
+        <code value="595" />
+        <code value="787" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="WORLD" />
+    </cell>
+    <cell name="text contraction you">
+        <code value="689" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="YOU" />
+    </cell>
+    <cell name="text contraction young">
+        <code value="534" />
+        <code value="789" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="YOUNG" />
+    </cell>
+    <cell name="text apostrophe symbol">
+        <code value="539" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="'" />
+    </cell>
+    <cell name="text close quotation mark symbol">
+        <code value="648" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="&#x201d;" />
+    </cell>
+    <cell name="text colon symbol">
+        <code value="551" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content=":" />
+    </cell>
+    <cell name="text comma symbol">
+        <code value="549" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="," />
+    </cell>
+    <cell name="text decimal point symbol">
+        <code value="546" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="." />
+    </cell>
+    <cell name="text em dash symbol">
+        <code value="545" />
+        <code value="545" />
+        <code value="545" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="150" top="50" content="&#x2014;" />
+    </cell>
+    <cell name="text en dash symbol">
+        <code value="545" />
+        <code value="545" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="&#x2013;" />
+    </cell>
+    <cell name="text equals symbol">
+        <code value="534" />
+        <code value="855" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="=" />
+    </cell>
+    <cell name="text exclamation point symbol">
+        <code value="554" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="!" />
+    </cell>
+    <cell name="text hyphen symbol">
+        <code value="545" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="-" />
+    </cell>
+    <cell name="text number symbol">
+        <code value="535" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="#" />
+    </cell>
+    <cell name="text open quotation mark symbol">
+        <code value="656" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="&#x201c;" />
+    </cell>
+    <cell name="text parenthesis symbol">
+        <code value="555" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="(&#x2026;)" />
+    </cell>
+    <cell name="text period symbol">
+        <code value="552" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="." />
+    </cell>
+    <cell name="text plus symbol">
+        <code value="534" />
+        <code value="854" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="+" />
+    </cell>
+    <cell name="text question mark symbol">
+        <code value="556" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="?" />
+    </cell>
+    <cell name="text semicolon symbol">
+        <code value="550" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content=";" />
+    </cell>
+    <cell name="text slash symbol">
+        <code value="647" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="/" />
+    </cell>
+
+</cellFontModule>
