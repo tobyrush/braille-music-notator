@@ -5,7 +5,7 @@ function initialize() {
 	versionString = "0.9.2b";
 	devMode = false;
 	
-    localize('tr');
+    localize('en');
 	container = document.getElementById("container");
 	notationArea = document.getElementById("notationAreaCanvas");
 	window.addEventListener("keydown",doKeyDown,false); //if we need to deal with focus, check out stackoverflow.com/questions/12886286
