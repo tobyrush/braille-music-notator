@@ -1,4 +1,4 @@
-/* global helpWindow, helpDialogOpen, optionsDialogOpen, fileDialogOpen, notationArea, notationWidth, window, config, nu, ctx, roundRect, dialogTop, dialogButtonLeft, dialogButtonTop, dialogButtonRight, interpretBraille, drawAllDots, notationGridHeight, showPageBreaks, pageWidth, pageHeight, dialogButtonWidth, dialogButtonHeight, parseOnImport, notationHeight, closeButtonCenterX, closeButtonCenterY: true */
+/* global helpWindow, helpDialogOpen, optionsDialogOpen, fileDialogOpen, notationArea, notationWidth, window, config, nu, ctx, roundRect, dialogTop, dialogButtonLeft, dialogButtonTop, dialogButtonRight, interpretBraille, drawAllDots, notationGridHeight, showPageBreaks, pageWidth, pageHeight, dialogButtonWidth, dialogButtonHeight, parseOnImport, notationHeight, closeButtonCenterX, closeButtonCenterY, kOptionsDialogTitle, kShowTranslatedBrailleLabel, kShowTranslatedBrailleDescription, kShowSmallDotsLabel, kShowSmallDotsDescription, kScoreSizeLabel, kShowPageBoundariesLabel, kShowPageBoundariesDescription, kWidthLabel, kHeightLabel, kFileDialogTitle, kNewFileLabel, kNewFileDescription, kOpenFileLabel, kOpenFileDescription, kSaveFileLabel, kSaveFileDescription, kExportFileLabel, kExportFileDescription, kParseImportedFilesLabel, kParseImportedFilesDescription, currentCellFont: true */
 /* jshint -W020 */
 
 function toggleHelpDialog() {
@@ -121,16 +121,16 @@ function drawOptionsDialog() {
 	ctx.textAlign="center";
 	ctx.textBaseline="middle";
 	ctx.font="normal "+(nu*5)+"px sans-serif";
-	ctx.fillText("Options",notationWidth/2,dialogTop+(nu*5));
+	ctx.fillText(kOptionsDialogTitle,notationWidth/2,dialogTop+(nu*5));
 	
 	ctx.textAlign="left";
 	ctx.font="bold "+(nu*5)+"px sans-serif";
 	//roundRect(ctx, dialogButtonLeft, dialogButtonTop[1], dialogButtonWidth, dialogButtonHeight, nu*4, false, true);
 	roundRect(ctx, dialogButtonLeft+(nu*3), dialogButtonTop[1]+(nu*3), nu*6, nu*6, nu*2, false, true);
-	ctx.fillText("Show Translated Braille",dialogButtonLeft+(nu*15),dialogButtonTop[1]+(nu*4));
+	ctx.fillText(kShowTranslatedBrailleLabel,dialogButtonLeft+(nu*15),dialogButtonTop[1]+(nu*4));
 	ctx.font="normal "+(nu*2.7)+"px sans-serif";
-	ctx.fillText("Automatically translate braille into music notation.",dialogButtonLeft+(nu*15),dialogButtonTop[1]+(nu*8.5));
-	if (interpretBraille) {
+	ctx.fillText(kShowTranslatedBrailleDescription,dialogButtonLeft+(nu*15),dialogButtonTop[1]+(nu*8.5));
+	if (currentCellFont.interpretBraille) {
 		ctx.lineWidth=4;
 		ctx.beginPath();
 		ctx.moveTo(dialogButtonLeft+(nu*4),dialogButtonTop[1]+(nu*6));
@@ -144,9 +144,9 @@ function drawOptionsDialog() {
 	ctx.font="bold "+(nu*5)+"px sans-serif";
 	//roundRect(ctx, dialogButtonLeft, dialogButtonTop[2], dialogButtonWidth, dialogButtonHeight, nu*4, false, true);
 	roundRect(ctx, dialogButtonLeft+(nu*3), dialogButtonTop[2]+(nu*3), nu*6, nu*6, nu*2, false, true);
-	ctx.fillText("Show Small Dots",dialogButtonLeft+(nu*15),dialogButtonTop[2]+(nu*4));
+	ctx.fillText(kShowSmallDotsLabel,dialogButtonLeft+(nu*15),dialogButtonTop[2]+(nu*4));
 	ctx.font="normal "+(nu*2.7)+"px sans-serif";
-	ctx.fillText("Fill in empty dots in braille characters.",dialogButtonLeft+(nu*15),dialogButtonTop[2]+(nu*8.5));
+	ctx.fillText(kShowSmallDotsDescription,dialogButtonLeft+(nu*15),dialogButtonTop[2]+(nu*8.5));
 	if (drawAllDots) {
 		ctx.lineWidth=4;
 		ctx.beginPath();
@@ -160,7 +160,7 @@ function drawOptionsDialog() {
 	
 	ctx.font="bold "+(nu*5)+"px sans-serif";
 	//roundRect(ctx, dialogButtonLeft, dialogButtonTop[3], dialogButtonWidth, dialogButtonHeight, nu*4, false, true);
-	ctx.fillText("Score size:",dialogButtonLeft+(nu*3),dialogButtonTop[3]+(nu*6));
+	ctx.fillText(kScoreSizeLabel,dialogButtonLeft+(nu*3),dialogButtonTop[3]+(nu*6));
 	ctx.strokeRect(dialogButtonLeft+(nu*33),dialogButtonTop[3]+(nu*1),nu*20,nu*10);
 	
 	ctx.beginPath();
@@ -185,9 +185,9 @@ function drawOptionsDialog() {
 	ctx.font="bold "+(nu*5)+"px sans-serif";
 	//roundRect(ctx, dialogButtonLeft, dialogButtonTop[4], dialogButtonWidth, dialogButtonHeight, nu*4, false, true);
 	roundRect(ctx, dialogButtonLeft+(nu*3), dialogButtonTop[4]+(nu*3), nu*6, nu*6, nu*2, false, true);
-	ctx.fillText("Show Page Boundaries",dialogButtonLeft+(nu*15),dialogButtonTop[4]+(nu*4));
+	ctx.fillText(kShowPageBoundariesLabel,dialogButtonLeft+(nu*15),dialogButtonTop[4]+(nu*4));
 	ctx.font="normal "+(nu*2.7)+"px sans-serif";
-	ctx.fillText("Show where page breaks occur when embossed.",dialogButtonLeft+(nu*15),dialogButtonTop[4]+(nu*8.5));
+	ctx.fillText(kShowPageBoundariesDescription,dialogButtonLeft+(nu*15),dialogButtonTop[4]+(nu*8.5));
 	if (showPageBreaks) {
 		ctx.lineWidth=4;
 		ctx.beginPath();
@@ -199,7 +199,7 @@ function drawOptionsDialog() {
 		ctx.lineWidth=2;
 	
 		ctx.font="bold "+(nu*5)+"px sans-serif";
-		ctx.fillText("Width:",dialogButtonLeft+(nu*3),dialogButtonTop[5]+(nu*6));
+		ctx.fillText(kWidthLabel,dialogButtonLeft+(nu*3),dialogButtonTop[5]+(nu*6));
 		ctx.strokeRect(dialogButtonLeft+(nu*22),dialogButtonTop[5]+(nu*1),nu*15,nu*10);
 		ctx.beginPath();
 		ctx.moveTo(dialogButtonLeft+(nu*32.5),dialogButtonTop[5]+(nu*5));
@@ -221,7 +221,7 @@ function drawOptionsDialog() {
 		ctx.fillText(pageWidth,dialogButtonLeft+(nu*24),dialogButtonTop[5]+(nu*6));
 		
 		ctx.font="bold "+(nu*5)+"px sans-serif";
-		ctx.fillText("Height:",dialogButtonLeft+(nu*42),dialogButtonTop[5]+(nu*6));
+		ctx.fillText(kHeightLabel,dialogButtonLeft+(nu*42),dialogButtonTop[5]+(nu*6));
 		ctx.strokeRect(dialogButtonLeft+(nu*62),dialogButtonTop[5]+(nu*1),nu*15,nu*10);
 		ctx.beginPath();
 		ctx.moveTo(dialogButtonLeft+(nu*72.5),dialogButtonTop[5]+(nu*5));
@@ -255,38 +255,38 @@ function drawFileDialog() {
 	ctx.textAlign="center";
 	ctx.textBaseline="middle";
 	ctx.font="normal "+(nu*5)+"px sans-serif";
-	ctx.fillText("File",notationWidth/2,dialogTop+(nu*5));
+	ctx.fillText(kFileDialogTitle,notationWidth/2,dialogTop+(nu*5));
 	
 	ctx.font="bold "+(nu*5)+"px sans-serif";
 	roundRect(ctx, dialogButtonLeft, dialogButtonTop[1], dialogButtonWidth, dialogButtonHeight, nu*4, false, true);
-	ctx.fillText("New File…",notationWidth/2,dialogButtonTop[1]+(nu*4));
+	ctx.fillText(kNewFileLabel,notationWidth/2,dialogButtonTop[1]+(nu*4));
 	ctx.font="normal "+(nu*2.7)+"px sans-serif";
-	ctx.fillText("Discard current document and start with an empty one.",notationWidth/2,dialogButtonTop[1]+(nu*8.5));
+	ctx.fillText(kNewFileDescription,notationWidth/2,dialogButtonTop[1]+(nu*8.5));
 	
 	ctx.font="bold "+(nu*5)+"px sans-serif";
 	roundRect(ctx, dialogButtonLeft, dialogButtonTop[2], dialogButtonWidth, dialogButtonHeight, nu*4, false, true);
-	ctx.fillText("Open File…",notationWidth/2,dialogButtonTop[2]+(nu*4));
+	ctx.fillText(kOpenFileLabel,notationWidth/2,dialogButtonTop[2]+(nu*4));
 	ctx.font="normal "+(nu*2.7)+"px sans-serif";
-	ctx.fillText("Open a previously saved document from your computer.",notationWidth/2,dialogButtonTop[2]+(nu*8.5));
+	ctx.fillText(kOpenFileDescription,notationWidth/2,dialogButtonTop[2]+(nu*8.5));
 	
 	ctx.font="bold "+(nu*5)+"px sans-serif";
 	roundRect(ctx, dialogButtonLeft, dialogButtonTop[3], dialogButtonWidth, dialogButtonHeight, nu*4, false, true);
-	ctx.fillText("Save File",notationWidth/2,dialogButtonTop[3]+(nu*4));
+	ctx.fillText(kSaveFileLabel,notationWidth/2,dialogButtonTop[3]+(nu*4));
 	ctx.font="normal "+(nu*2.7)+"px sans-serif";
-	ctx.fillText("Save this document in a format this utility can open.",notationWidth/2,dialogButtonTop[3]+(nu*8.5));
+	ctx.fillText(kSaveFileDescription,notationWidth/2,dialogButtonTop[3]+(nu*8.5));
 	
 	ctx.font="bold "+(nu*5)+"px sans-serif";
 	roundRect(ctx, dialogButtonLeft, dialogButtonTop[4], dialogButtonWidth, dialogButtonHeight, nu*4, false, true);
-	ctx.fillText("Export File",notationWidth/2,dialogButtonTop[4]+(nu*4));
+	ctx.fillText(kExportFileLabel,notationWidth/2,dialogButtonTop[4]+(nu*4));
 	ctx.font="normal "+(nu*2.7)+"px sans-serif";
-	ctx.fillText("Export this document as an embosser-ready BRF file.",notationWidth/2,dialogButtonTop[4]+(nu*8.5));
+	ctx.fillText(kExportFileDescription,notationWidth/2,dialogButtonTop[4]+(nu*8.5));
 	
 	ctx.textAlign="left";
 	ctx.font="bold "+(nu*5)+"px sans-serif";
 	roundRect(ctx, dialogButtonLeft+(nu*3), dialogButtonTop[5]+(nu*3), nu*6, nu*6, nu*2, false, true);
-	ctx.fillText("Parse Imported Files",dialogButtonLeft+(nu*13),dialogButtonTop[5]+(nu*4));
+	ctx.fillText(kParseImportedFilesLabel,dialogButtonLeft+(nu*13),dialogButtonTop[5]+(nu*4));
 	ctx.font="normal "+(nu*2.7)+"px sans-serif";
-	ctx.fillText("Attempt to translate BRF files created by other programs.",dialogButtonLeft+(nu*13),dialogButtonTop[5]+(nu*8.5));
+	ctx.fillText(kParseImportedFilesDescription,dialogButtonLeft+(nu*13),dialogButtonTop[5]+(nu*8.5));
 	if (parseOnImport) {
 		ctx.lineWidth=4;
 		ctx.beginPath();

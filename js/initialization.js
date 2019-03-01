@@ -1,10 +1,11 @@
-/* global versionString, devMode, container, document, notationArea, window, doKeyDown, doKeyUp, doWindowMouseUp, doWindowMouseMove, handleClipboard, fileUploader, doFileOpen, doNotationMouseDown, doNotationMouseUp, doNotationMouseMove, doNotationDragOver, doNotationDragEnter, doNotationDragLeave, doNotationDrop, doNotationMouseWheel, controlArea, doControlMouseDown, doControlMouseMove, doControlMouseOut, titleArea, doTitleMouseDown, cctx, tctx, ctx, clipboardArea, cursor, loadCookie, initializeTitle, initializeNotation, initializeControls, resizeBarPosition: true */
+/* global versionString, devMode, container, document, notationArea, window, doKeyDown, doKeyUp, doWindowMouseUp, doWindowMouseMove, handleClipboard, fileUploader, doFileOpen, doNotationMouseDown, doNotationMouseUp, doNotationMouseMove, doNotationDragOver, doNotationDragEnter, doNotationDragLeave, doNotationDrop, doNotationMouseWheel, controlArea, doControlMouseDown, doControlMouseMove, doControlMouseOut, titleArea, doTitleMouseDown, cctx, tctx, ctx, clipboardArea, cursor, loadCookie, initializeTitle, initializeNotation, initializeControls, resizeBarPosition, localize: true */
 /* jshint -W020 */
 
 function initialize() {
 	versionString = "0.9.3b";
 	devMode = false;
 	
+    localize('en');
 	container = document.getElementById("container");
 	notationArea = document.getElementById("notationAreaCanvas");
 	window.addEventListener("keydown",doKeyDown,false); //if we need to deal with focus, check out stackoverflow.com/questions/12886286
@@ -17,8 +18,6 @@ function initialize() {
 	document.addEventListener("paste",handleClipboard,false);
 	fileUploader = document.getElementById("fileUpload");
 	fileUploader.addEventListener("change",doFileOpen,false);
-	//dialogField = document.getElementById("dialogField");
-	// dialogField.addEventListener("keypress", doDialogFieldKeypress,false);
 	notationArea.addEventListener("mousedown",doNotationMouseDown,false);
 	notationArea.addEventListener("mouseup",doNotationMouseUp,false);
 	notationArea.addEventListener("mousemove",doNotationMouseMove,false);
@@ -34,11 +33,9 @@ function initialize() {
 	controlArea.addEventListener("mouseout",doControlMouseOut,false);
 	titleArea = document.getElementById("titleCanvas");
 	titleArea.addEventListener("mousedown",doTitleMouseDown,false);
-	cctx = controlArea.getContext("2d");
 	tctx = titleArea.getContext("2d");
 	ctx = notationArea.getContext("2d");
 	clipboardArea = document.getElementById("clipboard");
-	//checkForFlash();
 	cursor.x=0;
 	cursor.y=0;
 	cursor.height=1;

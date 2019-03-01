@@ -1,4 +1,4 @@
-/* global dropzone, drawNotation, window, reader, fileUploader, saveToUndo, suspendUndo, score, hScroll, vScroll, setScrollVars, parseOnImport, isLowASCII, setScore, cursor, scoreWidth, showPageBreaks, pageWidth, pageHeight, document, MouseEvent, currentBeatUnit: true */
+/* global dropzone, drawNotation, window, reader, fileUploader, saveToUndo, suspendUndo, score, hScroll, vScroll, setScrollVars, parseOnImport, isLowASCII, setScore, cursor, scoreWidth, showPageBreaks, pageWidth, pageHeight, document, MouseEvent, currentBeatUnit, kFileNameBRF, kFileNameBRM: true */
 /* jshint -W020 */
 
 function doNotationDragOver(e) {
@@ -137,10 +137,10 @@ function downloadFile(reduceASCII) {
 	var file=document.createElement('a');
 	if (reduceASCII) {
 		file.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileString));
-		file.setAttribute('download', "Untitled.brf");
+		file.setAttribute('download', kFileNameBRF);
 	} else {
 		file.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileString));
-		file.setAttribute('download', 'Untitled.brm');
+		file.setAttribute('download', kFileNameBRM);
 	}
 	file.setAttribute('target', '_blank');
 	
@@ -207,10 +207,10 @@ function parseData(fileData) {
 		fileData = fileData.replace(/[myzMYZ&=(!)]/g, convertLargeToSmall); // whole notes
 		fileData = fileData.replace(/\s([±]+)(?!\S)/g, convertSixteenthRestToWholeRest); // if 16th rests are alone in a measure, switch it back to a whole rest
 	}
-	fileData = fileData.replace(/[ô][ʔ][ŝ][@^_".;,]?([myzMYZ&=(!)*<%@^_".;,]+|[nopqrstuNOPQRSTU*<%@^_".;,]+|[vV?:$\]\\\[Ww*<%@^_".;,]+|[xdefghijXDEFGHIJ*<%@^_".;,]+)/g, convertLargeToSmall); // observe value signs " <- this quotation mark is here to fix the syntax checker in dreamweaver that can not handle the awesomeness of this regex
+	fileData = fileData.replace(/[ô][ʔ][ŝ][@^_".;,]?([myzMYZ&=(!)*<%@^_".;,]+|[nopqrstuNOPQRSTU*<%@^_".;,]+|[vV?:$\]\\\[Ww*<%@^_".;,]+|[xdefghijXDEFGHIJ*<%@^_".;,]+)/g, convertLargeToSmall); // observe value signs
 	fileData = fileData.replace(/[<][Kk]/g, String.fromCharCode(260,175)); // final barline
 	fileData = fileData.replace(/[<][Kk][']/g, String.fromCharCode(260,175,139)); // double barline
-	fileData = fileData.replace(/[myzMYZ&=(!)nopqrstuNOPQRSTUvV?:$\]\\\[WwxdefghijXDEFGHIJ/\-'ů+]([#903]+)/g, convertIntervalSymbols); // interval symbols '
+	fileData = fileData.replace(/[myzMYZ&=(!)nopqrstuNOPQRSTUvV?:$\]\\\[WwxdefghijXDEFGHIJ/\-'ů+]([#903]+)/g, convertIntervalSymbols); // interval symbols
 	fileData = fileData.replace(/[_]([0-9]+)[']/g, convertTuplet); // tuplets
 	fileData = fileData.replace(/[^A-Ja-j][2]/g, convertTuplet); // triplet
 	fileData = fileData.replace(/[_][8]/g, String.fromCharCode(395,156)); // tenuto

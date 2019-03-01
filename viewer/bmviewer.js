@@ -20,7 +20,6 @@ function bmviewer(whichCanvas) {
 	this.notationGridHeight = 60;
 	this.notationGridWidth = 40;
 	this.interpretBraille = true;
-	this.doNotCheckContiguousCells = false;
 	this.hScroll = 0;
 	this.vScroll = 0; // these values are in pixels
 	this.mouseIsOverInfoButton = false;
@@ -1109,22 +1108,18 @@ function bmviewer(whichCanvas) {
 
     this.checkContiguousCells = function(col,row,cells) {
 		var t=this;
-        if (t.doNotCheckContiguousCells) {
-			return true;
-		} else {
-			var len = cells.length;
-			var matches = true;
-			for (var i=0; i<len; i++) {
-				if ((row>=t.score.length) ||
-                    (+col+i>=t.score[row].length && cells[i]!=-1) ||
-                    (!(compareCell(t.score[row][+col+i],cells[i])) &&
-                     !((typeof t.score[row][+col+i] == 'undefined') &&
-                      (cells[i] === 0)))) {
-					matches=false;
-				}
-			}
-			return matches;
-		}
+        var len = cells.length;
+        var matches = true;
+        for (var i=0; i<len; i++) {
+            if ((row>=t.score.length) ||
+                (+col+i>=t.score[row].length && cells[i]!=-1) ||
+                (!(compareCell(t.score[row][+col+i],cells[i])) &&
+                 !((typeof t.score[row][+col+i] == 'undefined') &&
+                  (cells[i] === 0)))) {
+                matches=false;
+            }
+        }
+        return matches;
 	};
 
 	this.checkPreviousCell = function(col,row,cell) {
@@ -2035,23 +2030,20 @@ function bmviewer(whichCanvas) {
             } else if (val==555 && t.checkContiguousCells(col,row,[555,-1])) {
                 t.drawCellASCII(x,y,col,row,')',(val % 100));
             } else if (!(t.drawLongTextContraction(x,y,col,row,val)) &&
-                (!(t.letterIsPartOfSymbol(col,row,val)) ||
-                t.doNotCheckContiguousCells)) {
+                (!(t.letterIsPartOfSymbol(col,row,val)))) {
                 chars=['THE','','#','ED','SH','AND',"'",'OF','WITH','CH','ING','capital sign','-','.','ST','',',',';',':','.','EN','!','(…)','?','IN','WH','text sign','GH','FOR','AR','TH'];
                 t.drawCellASCII(x,y,col,row,chars[val-533],(val % 100));
             }
 
 		} else if (val>=565 && val<=590) { // text letters
 			if (!(t.drawLongTextContraction(x,y,col,row,val)) &&
-                (!(t.letterIsPartOfSymbol(col,row,val)) ||
-                    t.doNotCheckContiguousCells)) {
+                (!(t.letterIsPartOfSymbol(col,row,val)))) {
 				    t.drawCellASCII(x,y,String.fromCharCode(val-500),(val % 100));
 			}
 
 		} else if (val>=591 && val<=593) { // contractions
             if (!(t.drawLongTextContraction(x,y,col,row,val)) &&
-                (!(t.letterIsPartOfSymbol(col,row,val)) ||
-                 t.doNotCheckContiguousCells)) {
+                (!(t.letterIsPartOfSymbol(col,row,val)))) {
                 chars=['OW','OU','ER'];
                 t.drawCellASCII(x,y,col,row,chars[val-591],(val % 100));
             }
@@ -2201,8 +2193,7 @@ function bmviewer(whichCanvas) {
 
 		} else if (val>=750 && val<=757) { // punctuation and contractions
             if (!(t.drawLongTextContraction(x,y,col,row,val)) &&
-                (!(t.letterIsPartOfSymbol(col,row,val)) ||
-                t.doNotCheckContiguousCells)) {
+                (!(t.letterIsPartOfSymbol(col,row,val)))) {
                 chars=['BE','CON','DIS','ENOUGH','TO','WERE','HIS','WAS'];
                 t.drawCellASCII(x,y,col,row,chars[val-750],(val % 100));
             }
