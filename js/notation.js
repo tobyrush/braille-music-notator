@@ -374,11 +374,10 @@ class cellFontModule {
     findSymbol(chars) {
         // finds best match for the array
         // courtesy of JS genius benvc at https://stackoverflow.com/a/54873442/1754243
+        // JSON.stringify was slow so I replaced it with Tomáš Zato's Array.equals()
         let matches = this.cells.reduce((acc, obj) => {
             let len = chars.length <= obj.codes.length ? chars.length : obj.codes.length;
-            let a = JSON.stringify(chars.slice(0, len));
-            let b = JSON.stringify(obj.codes.slice(0, len));
-            if (a === b) {
+            if (chars.slice(0, len).equals(obj.codes.slice(0, len))) {
                 if (len < chars.length) {
                     acc.short.push(obj);
                 } else {
