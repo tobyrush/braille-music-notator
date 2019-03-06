@@ -1854,7 +1854,7 @@
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="BUT" />
     </cell>
     <cell name="text contraction by">
-        <code value="657" />
+        <code value="648" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="BY" />
     </cell>
@@ -1978,7 +1978,7 @@
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="EITHER" />
     </cell>
     <cell name="text contraction en">
-        <code value="553" />
+        <code value="653" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="EN" />
     </cell>
@@ -2038,7 +2038,7 @@
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="FRIEND" />
     </cell>
     <cell name="text contraction from">
-        <code value="770" />
+        <code value="870" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="FROM" rotate="270" />
     </cell>
@@ -2126,7 +2126,7 @@
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="IMMEDIATE" />
     </cell>
     <cell name="text contraction in">
-        <code value="557" />
+        <code value="657" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="IN" />
     </cell>
@@ -2274,7 +2274,7 @@
     <cell name="text contraction not">
         <code value="778" />
         <graphic type="background" color="#fff" />
-        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="50" top="50" content="NOT" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="50" top="50" content="NOT" rotate="270" />
     </cell>
     <cell name="text contraction o'clock" discrete="1">
         <code value="579" />
@@ -2408,7 +2408,7 @@
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="SAID" />
     </cell>
     <cell name="text contraction self">
-        <code value="870" />
+        <code value="770" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="SELF" rotate="270" />
     </cell>
@@ -2590,7 +2590,7 @@
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="VERY" rotate="270" />
     </cell>
     <cell name="text contraction was">
-        <code value="757" />
+        <code value="748" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="WAS" />
     </cell>
@@ -2693,7 +2693,7 @@
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="'" />
     </cell>
     <cell name="text close quotation mark symbol">
-        <code value="648" />
+        <code value="548" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="&#x201d;" />
     </cell>
@@ -2747,7 +2747,7 @@
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="#" />
     </cell>
     <cell name="text open quotation mark symbol">
-        <code value="656" />
+        <code value="456" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="&#x201c;" />
     </cell>

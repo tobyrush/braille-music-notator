@@ -1907,7 +1907,7 @@
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="BUT" />
     </cell>
     <cell name="text contraction by">
-        <code value="657" />
+        <code value="548" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="BY" />
     </cell>
@@ -2643,7 +2643,7 @@
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="VERY" rotate="270" />
     </cell>
     <cell name="text contraction was">
-        <code value="757" />
+        <code value="748" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="WAS" />
     </cell>

@@ -1,8 +1,10 @@
 /* global mkStr, defaultControlModule, defaultCellFont: true */
 /* jshint -W046 */
 /* jshint -W020 */
+/* jshint -W069 */
 
 var kCharNames,
+    kCommonWords = [],
     kDotsPrefix,
     kDropFileZoneMessage,
     kExportFileDescription,
@@ -23,6 +25,7 @@ var kCharNames,
     kOptionsDialogTitle,
     kParseImportedFilesDescription,
     kParseImportedFilesLabel,
+    kPrefixAbbreviations = [],
     kProgramTitle,
     kSaveFileDescription,
     kSaveFileLabel,
@@ -35,9 +38,11 @@ var kCharNames,
     kShowSmallDotsLabel,
     kShowTranslatedBrailleDescription,
     kShowTranslatedBrailleLabel,
+    kTextAbbreviations = [],
     kUnrecognizedCharacterMessage,
     kUnsavedChangesDialogMessage,
     kVersionAndAuthor,
+    kWordAbbreviations = [],
     kWidthLabel;
 
 function localize(lang) {
@@ -575,6 +580,101 @@ function localize(lang) {
             kKeyCommands[187] = ["Magnification increased to %%1."];
             kKeyCommands[189] = ["Magnification decreased to %%1."];
 
+            kWordAbbreviations['b'] = String.fromCharCode(866);
+            kWordAbbreviations['c'] = String.fromCharCode(867);
+            kWordAbbreviations['d'] = String.fromCharCode(868);
+            kWordAbbreviations['e'] = String.fromCharCode(869);
+            kWordAbbreviations['f'] = String.fromCharCode(870);
+            kWordAbbreviations['g'] = String.fromCharCode(871);
+            kWordAbbreviations['h'] = String.fromCharCode(872);
+            kWordAbbreviations['j'] = String.fromCharCode(874);
+            kWordAbbreviations['k'] = String.fromCharCode(775);
+            kWordAbbreviations['l'] = String.fromCharCode(776);
+            kWordAbbreviations['m'] = String.fromCharCode(777);
+            kWordAbbreviations['n'] = String.fromCharCode(778);
+            kWordAbbreviations['p'] = String.fromCharCode(780);
+            kWordAbbreviations['q'] = String.fromCharCode(781);
+            kWordAbbreviations['r'] = String.fromCharCode(782);
+            kWordAbbreviations['s'] = String.fromCharCode(783);
+            kWordAbbreviations['t'] = String.fromCharCode(784);
+            kWordAbbreviations['u'] = String.fromCharCode(685);
+            kWordAbbreviations['v'] = String.fromCharCode(686);
+            kWordAbbreviations['w'] = String.fromCharCode(687);
+            kWordAbbreviations['x'] = String.fromCharCode(688);
+            kWordAbbreviations['y'] = String.fromCharCode(689);
+            kWordAbbreviations['z'] = String.fromCharCode(690);
+            kWordAbbreviations['/'] = String.fromCharCode(747);
+            kWordAbbreviations['*'] = String.fromCharCode(642);
+            kWordAbbreviations[':'] = String.fromCharCode(658);
+            kWordAbbreviations['%'] = String.fromCharCode(637);
+            kWordAbbreviations['?'] = String.fromCharCode(663);
+            kWordAbbreviations['\\'] = String.fromCharCode(692);
+            kWordAbbreviations['2'] = String.fromCharCode(750);
+            kWordAbbreviations['5'] = String.fromCharCode(753);
+            kWordAbbreviations['7'] = String.fromCharCode(755);
+            kWordAbbreviations['8'] = String.fromCharCode(756);
+            kWordAbbreviations['9'] = String.fromCharCode(657);
+            kWordAbbreviations['0'] = String.fromCharCode(748);
+
+            kPrefixAbbreviations['2'] = String.fromCharCode(750);
+            kPrefixAbbreviations['3'] = String.fromCharCode(751);
+            kPrefixAbbreviations['4'] = String.fromCharCode(752);
+            kPrefixAbbreviations['6'] = String.fromCharCode(754);
+            kPrefixAbbreviations['0'] = String.fromCharCode(648);
+            kPrefixAbbreviations['-'] = String.fromCharCode(645);
+
+            kTextAbbreviations['"h'] = String.fromCharCode(534,772);
+            kTextAbbreviations['"!'] = String.fromCharCode(534,633);
+            kTextAbbreviations['":'] = String.fromCharCode(534,758);
+            kTextAbbreviations['"e'] = String.fromCharCode(534,769);
+            kTextAbbreviations['"\\'] = String.fromCharCode(534,792);
+            kTextAbbreviations['"f'] = String.fromCharCode(534,970);
+            kTextAbbreviations['"m'] = String.fromCharCode(534,677);
+            kTextAbbreviations['"n'] = String.fromCharCode(534,678);
+            kTextAbbreviations['"*'] = String.fromCharCode(534,742);
+            kTextAbbreviations['"q'] = String.fromCharCode(534,681);
+            kTextAbbreviations['"k'] = String.fromCharCode(534,675);
+            kTextAbbreviations['"l'] = String.fromCharCode(534,676);
+            kTextAbbreviations['"o'] = String.fromCharCode(534,679);
+            kTextAbbreviations['"d'] = String.fromCharCode(534,768);
+            kTextAbbreviations['"s'] = String.fromCharCode(534,683);
+            kTextAbbreviations['"p'] = String.fromCharCode(534,680);
+            kTextAbbreviations['"t'] = String.fromCharCode(534,684);
+            kTextAbbreviations['"r'] = String.fromCharCode(534,682);
+            kTextAbbreviations['"?'] = String.fromCharCode(534,763);
+            kTextAbbreviations['"u'] = String.fromCharCode(534,785);
+            kTextAbbreviations['"w'] = String.fromCharCode(534,787);
+            kTextAbbreviations['"y'] = String.fromCharCode(534,789);
+            kTextAbbreviations['^!'] = String.fromCharCode(594,633);
+            kTextAbbreviations['^?'] = String.fromCharCode(594,763);
+            kTextAbbreviations['^u'] = String.fromCharCode(594,785);
+            kTextAbbreviations['^:'] = String.fromCharCode(594,758);
+            kTextAbbreviations['^w'] = String.fromCharCode(594,787);
+            kTextAbbreviations['_c'] = String.fromCharCode(595,967);
+            kTextAbbreviations['_m'] = String.fromCharCode(595,677);
+            kTextAbbreviations['_h'] = String.fromCharCode(595,772);
+            kTextAbbreviations['_!'] = String.fromCharCode(595,633);
+            kTextAbbreviations['_s'] = String.fromCharCode(595,683);
+            kTextAbbreviations['_w'] = String.fromCharCode(595,787);
+            kTextAbbreviations['.d'] = String.fromCharCode(746,768);
+            kTextAbbreviations['.e'] = String.fromCharCode(746,769);
+            kTextAbbreviations['.n'] = String.fromCharCode(746,678);
+            kTextAbbreviations['.s'] = String.fromCharCode(746,683);
+            kTextAbbreviations['.t'] = String.fromCharCode(746,684);
+            kTextAbbreviations[';e'] = String.fromCharCode(659,769);
+            kTextAbbreviations[';g'] = String.fromCharCode(659,771);
+            kTextAbbreviations[';l'] = String.fromCharCode(659,676);
+            kTextAbbreviations[';n'] = String.fromCharCode(659,678);
+            kTextAbbreviations[';s'] = String.fromCharCode(659,683);
+            kTextAbbreviations[';t'] = String.fromCharCode(659,684);
+            kTextAbbreviations[';y'] = String.fromCharCode(659,789);
+            kTextAbbreviations[',n'] = String.fromCharCode(644,678);
+            kTextAbbreviations[',y'] = String.fromCharCode(644,789);
+
+            kCommonWords = [
+                ['DI6]5T','ȸȽʎɑʍɈ'],
+                ['SE3D','ɇȹ˯ȸ']
+            ];
             break;
 
         case "tr":
@@ -1107,6 +1207,95 @@ function localize(lang) {
             kKeyCommands[90] = ["Undo."];
             kKeyCommands[187] = ["Magnification increased to %%1."];
             kKeyCommands[189] = ["Magnification decreased to %%1."];
+
+            kWordAbbreviations['b'] = String.fromCharCode(866);
+            kWordAbbreviations['c'] = String.fromCharCode(867);
+            kWordAbbreviations['d'] = String.fromCharCode(868);
+            kWordAbbreviations['e'] = String.fromCharCode(869);
+            kWordAbbreviations['f'] = String.fromCharCode(870);
+            kWordAbbreviations['g'] = String.fromCharCode(871);
+            kWordAbbreviations['h'] = String.fromCharCode(872);
+            kWordAbbreviations['j'] = String.fromCharCode(874);
+            kWordAbbreviations['k'] = String.fromCharCode(775);
+            kWordAbbreviations['l'] = String.fromCharCode(776);
+            kWordAbbreviations['m'] = String.fromCharCode(777);
+            kWordAbbreviations['n'] = String.fromCharCode(778);
+            kWordAbbreviations['p'] = String.fromCharCode(780);
+            kWordAbbreviations['q'] = String.fromCharCode(781);
+            kWordAbbreviations['r'] = String.fromCharCode(782);
+            kWordAbbreviations['s'] = String.fromCharCode(783);
+            kWordAbbreviations['t'] = String.fromCharCode(784);
+            kWordAbbreviations['u'] = String.fromCharCode(685);
+            kWordAbbreviations['v'] = String.fromCharCode(686);
+            kWordAbbreviations['w'] = String.fromCharCode(687);
+            kWordAbbreviations['x'] = String.fromCharCode(688);
+            kWordAbbreviations['y'] = String.fromCharCode(689);
+            kWordAbbreviations['z'] = String.fromCharCode(690);
+            kWordAbbreviations['/'] = String.fromCharCode(747);
+            kWordAbbreviations['*'] = String.fromCharCode(642);
+            kWordAbbreviations['%'] = String.fromCharCode(637);
+            kWordAbbreviations['?'] = String.fromCharCode(663);
+            kWordAbbreviations['\\'] = String.fromCharCode(692);
+            kWordAbbreviations['2'] = String.fromCharCode(750);
+            kWordAbbreviations['5'] = String.fromCharCode(753);
+            kWordAbbreviations['7'] = String.fromCharCode(755);
+            kWordAbbreviations['8'] = String.fromCharCode(756);
+            kWordAbbreviations['0'] = String.fromCharCode(748);
+
+            kPrefixAbbreviations['2'] = String.fromCharCode(750);
+            kPrefixAbbreviations['3'] = String.fromCharCode(751);
+            kPrefixAbbreviations['4'] = String.fromCharCode(752);
+            kPrefixAbbreviations['6'] = String.fromCharCode(754);
+            kPrefixAbbreviations['0'] = String.fromCharCode(548);
+            kPrefixAbbreviations['-'] = String.fromCharCode(645);
+
+            kTextAbbreviations['"h'] = String.fromCharCode(534,772);
+            kTextAbbreviations['"!'] = String.fromCharCode(534,633);
+            kTextAbbreviations['":'] = String.fromCharCode(534,758);
+            kTextAbbreviations['"e'] = String.fromCharCode(534,769);
+            kTextAbbreviations['"\\'] = String.fromCharCode(534,792);
+            kTextAbbreviations['"f'] = String.fromCharCode(534,970);
+            kTextAbbreviations['"m'] = String.fromCharCode(534,677);
+            kTextAbbreviations['"n'] = String.fromCharCode(534,678);
+            kTextAbbreviations['"*'] = String.fromCharCode(534,742);
+            kTextAbbreviations['"q'] = String.fromCharCode(534,681);
+            kTextAbbreviations['"k'] = String.fromCharCode(534,675);
+            kTextAbbreviations['"l'] = String.fromCharCode(534,676);
+            kTextAbbreviations['"o'] = String.fromCharCode(534,679);
+            kTextAbbreviations['"d'] = String.fromCharCode(534,768);
+            kTextAbbreviations['"s'] = String.fromCharCode(534,683);
+            kTextAbbreviations['"p'] = String.fromCharCode(534,680);
+            kTextAbbreviations['"t'] = String.fromCharCode(534,684);
+            kTextAbbreviations['"r'] = String.fromCharCode(534,682);
+            kTextAbbreviations['"?'] = String.fromCharCode(534,763);
+            kTextAbbreviations['"u'] = String.fromCharCode(534,785);
+            kTextAbbreviations['"w'] = String.fromCharCode(534,787);
+            kTextAbbreviations['"y'] = String.fromCharCode(534,789);
+            kTextAbbreviations['^!'] = String.fromCharCode(594,633);
+            kTextAbbreviations['^?'] = String.fromCharCode(594,763);
+            kTextAbbreviations['^u'] = String.fromCharCode(594,785);
+            kTextAbbreviations['^:'] = String.fromCharCode(594,758);
+            kTextAbbreviations['^w'] = String.fromCharCode(594,787);
+            kTextAbbreviations['_c'] = String.fromCharCode(595,967);
+            kTextAbbreviations['_m'] = String.fromCharCode(595,677);
+            kTextAbbreviations['_h'] = String.fromCharCode(595,772);
+            kTextAbbreviations['_!'] = String.fromCharCode(595,633);
+            kTextAbbreviations['_s'] = String.fromCharCode(595,683);
+            kTextAbbreviations['_w'] = String.fromCharCode(595,787);
+            kTextAbbreviations['.d'] = String.fromCharCode(746,768);
+            kTextAbbreviations['.e'] = String.fromCharCode(746,769);
+            kTextAbbreviations['.n'] = String.fromCharCode(746,678);
+            kTextAbbreviations['.s'] = String.fromCharCode(746,683);
+            kTextAbbreviations['.t'] = String.fromCharCode(746,684);
+            kTextAbbreviations[';e'] = String.fromCharCode(659,769);
+            kTextAbbreviations[';g'] = String.fromCharCode(659,771);
+            kTextAbbreviations[';l'] = String.fromCharCode(659,676);
+            kTextAbbreviations[';n'] = String.fromCharCode(659,678);
+            kTextAbbreviations[';s'] = String.fromCharCode(659,683);
+            kTextAbbreviations[';t'] = String.fromCharCode(659,684);
+            kTextAbbreviations[';y'] = String.fromCharCode(659,789);
+            kTextAbbreviations[',n'] = String.fromCharCode(644,678);
+            kTextAbbreviations[',y'] = String.fromCharCode(644,789);
 
             break;
     }

@@ -1,4 +1,4 @@
-/* global window, XMLHttpRequest, ActiveXObject, phpRootAddress, navigator, saveToUndo, suspendUndo, cursor, deleteScore, whichKeyboard, parseOnImport, parseData, setScore, drawNotation, clipboardArea, score, rotateChar, convertToText, document, gridWidth, gridHeight, unicodeBrailleMap, currentControlModule: true */
+/* global window, XMLHttpRequest, ActiveXObject, phpRootAddress, navigator, saveToUndo, suspendUndo, cursor, deleteScore, whichKeyboard, parseOnImport, parseData, setScore, drawNotation, clipboardArea, score, rotateChar, convertToText, document, gridWidth, gridHeight, unicodeBrailleMap, currentControlModule, parseText: true */
 /* jshint -W020, -W084 */
 
 function findPos(obj) { // from http://www.quirksmode.org/js/findpos.html
@@ -128,8 +128,14 @@ function handleClipboard(e) {
 				
 				clipboardData = newString;
 				
-				if ((!convertToText) && (parseOnImport) && isLowASCII(clipboardData)) {
-					clipboardData = parseData(clipboardData);
+				if (parseOnImport) {
+					if (convertToText) {
+                        clipboardData = parseText(clipboardData);
+                    } else {
+                        if (isLowASCII(clipboardData)) {
+                            clipboardData = parseData(clipboardData);
+                        }
+                    }
 				}
 				
 				for (i=0; i<clipboardData.length; i++) {
@@ -434,3 +440,11 @@ Array.prototype.equals = function (array) {
 };
 // Hide method from for-in loops
 Object.defineProperty(Array.prototype, "equals", {enumerable: false});
+
+Object.prototype.getPropertyOrValue = function (prop, val) {
+    if (this.hasOwnProperty(prop)) {
+        return this[prop];
+    } else {
+        return val;
+    }
+};
