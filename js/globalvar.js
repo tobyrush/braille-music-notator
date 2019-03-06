@@ -50,75 +50,6 @@ var brailleDots = [0,46,16,60,43,41,47,4,55,62,33,44,32,36,40,12,52,2,6,18,50,34
 
 var unicodeBrailleMap = [32,65,49,66,39,75,50,76,64,67,73,70,47,77,83,80,34,69,51,72,57,79,54,82,94,68,74,71,62,78,84,81,44,42,53,60,45,85,56,86,46,37,91,36,43,88,33,38,59,58,52,92,48,90,55,40,95,63,87,93,35,89,41,61];
 
-var longContractions = [[[565,566,586],"ABOVE"],
-                        [[565,566],"ABOUT"],
-                        [[565,567,582],"ACROSS"],
-                        [[565,567],"ACCORDING"],
-                        [[565,570,578],"AFTERNOON"],
-                        [[565,570,587],"AFTERWARD"],
-                        [[565,570],"AFTER"],
-                        [[565,571,547],"AGAINST"],
-                        [[565,571],"AGAIN"],
-                        [[565,576,577],"ALMOST"],
-                        [[565,576,582],"ALREADY"],
-                        [[565,576,584],"ALTOGETHER"],
-                        [[565,576,563],"ALTHOUGH"],
-                        [[565,576,587],"ALWAYS"],
-                        [[565,576],"ALSO"],
-                        [[750,567],"BECAUSE"],
-                        [[750,570],"BEFORE"],
-                        [[750,572],"BEHIND"],
-                        [[750,576],"BELOW"],
-                        [[750,578],"BENEATH"],
-                        [[750,583],"BESIDE"],
-                        [[750,584],"BETWEEN"],
-                        [[750,589],"BEYOND"],
-                        [[566,576],"BLIND"],
-                        [[566,582,576],"BRAILLE"],
-                        [[567,568],"COULD"],
-                        [[567,586,571],"CEIVING"],
-                        [[567,586],"CEIVE"],
-                        [[542,578],"CHILDREN"],
-                        [[568,567,576,571],"DECLARING"],
-                        [[568,567,576],"DECLARE"],
-                        [[569,573],"EITHER"],
-                        [[570,547],"FIRST"],
-                        [[570,582],"FRIEND"],
-                        [[571,568],"GOOD"],
-                        [[571,582,584],"GREAT"],
-                        [[572,593,570],"HERSELF"],
-                        [[572,577,570],"HIMSELF"],
-                        [[573,577,577],"IMMEDIATE"],
-                        [[572,577],"HIM"],
-                        [[576,576],"LITTLE"],
-                        [[576,582],"LETTER"],
-                        [[577,542],"MUCH"],
-                        [[577,547],"MUST"],
-                        [[577,589,570],"MYSELF"],
-                        [[578,569,567],"NECESSARY"],
-                        [[578,569,573],"NEITHER"],
-                        [[579,539,567],"O'CLOCK"],
-                        [[592,582,586,583],"OURSELVES"],
-                        [[580,568],"PAID"],
-                        [[580,593,572],"PERHAPS"],
-                        [[581,575],"QUICK"],
-                        [[582,574,567,571],"REJOICING"],
-                        [[582,574,567],"REJOICE"],
-                        [[583,542],"SUCH"],
-                        [[583,568],"SAID"],
-                        [[537,568],"SHOULD"],
-                        [[584,568],"TODAY"],
-                        [[584,571,582],"TOGETHER"],
-                        [[584,577],"TOMORROW"],
-                        [[584,578],"TONIGHT"],
-                        [[533,577,586,583],"THEMSELVES"],
-                        [[587,568],"WOULD"],
-                        [[588,583],"ITS"],
-                        [[588,570],"ITSELF"],
-                        [[589,582,570],"YOURSELF"],
-                        [[589,582],"YOUR"],
-                        [[589,582,586,583],"YOURSELVES"]];
-
 function clearDocument() {
 	saveToUndo();
 	score=[[]];
@@ -156,6 +87,17 @@ function deleteScore(x,y) {
 
 function cellIsEmpty(x,y) {
 	return (typeof score[y]==='undefined') || (typeof score[y][x]==='undefined') || (score[y][x]<=0);
+}
+
+function cellValIsEmpty(val) {
+    return !(
+        typeof(val) !== 'undefined' &&
+        val !== null &&
+        val !== "0" &&
+        val != "32" &&
+        val !== 0 &&
+        val != 32
+    );
 }
 
 function getCellContext(x,y) {

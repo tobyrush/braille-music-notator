@@ -1,4 +1,4 @@
-/* global notationArea, currentCellFont, sendHTTPRequest, defaultCellFont, gridHeight, notationGridHeight, gridWidth, notationGridWidth, notationCellWidth, notationCellHeight, ctx, showPageBreaks, pageWidth, hScrollUnits, hScrollOffset, hScroll, vScrollUnits, vScrollOffset, pageHeight, score, arrayHasOwnIndex, cursor, devMode, getScore, gh, gw, dropzone, kDropFileZoneMessage, optionsDialogOpen, fileDialogOpen, drawOptionsDialog, drawFileDialog, vScroll, setScore, updateScreenreader, formFill, kScreenReaderTemplate, characterName, saveToUndo, brailleDots, drawAllDots, graphic, cellIsEmpty: true */
+/* global notationArea, currentCellFont, sendHTTPRequest, defaultCellFont, gridHeight, notationGridHeight, gridWidth, notationGridWidth, notationCellWidth, notationCellHeight, ctx, showPageBreaks, pageWidth, hScrollUnits, hScrollOffset, hScroll, vScrollUnits, vScrollOffset, pageHeight, score, arrayHasOwnIndex, cursor, devMode, getScore, gh, gw, dropzone, kDropFileZoneMessage, optionsDialogOpen, fileDialogOpen, drawOptionsDialog, drawFileDialog, vScroll, setScore, updateScreenreader, formFill, kScreenReaderTemplate, characterName, saveToUndo, brailleDots, drawAllDots, graphic, cellIsEmpty, cellValIsEmpty: true */
 /* jshint -W020 */
 
 function initializeNotation() {
@@ -309,22 +309,28 @@ class cellFontModule {
     }
     drawScoreLine(x,y,chars,startCell,endCell,ctx=this.ctx,gw=gridWidth) {
         var c = chars.slice(Math.max(Math.floor(startCell),0),Math.ceil(endCell)+1);
+        var newWord = true;
         c.push("0");
         var currentX = x+(gw*Math.max(startCell,0));
         while (c.length) {
-            var sym = this.findSymbol(c);
+            var sym = this.findSymbol(c,newWord);
             if (this.interpretBraille && sym.length) {
                 sym[0].draw(currentX,y,ctx,gw);
                 c=c.slice(sym[0].length());
                 currentX += gw * sym[0].length();
+                newWord = false;
             } else {
-                if (
-                    typeof(c[0]) !== 'undefined' &&
-                    c[0] !== null &&
-                    c[0] !== "0" &&
-                    c[0] !== "32"
-                ) {
+                if (!cellValIsEmpty(c[0])) {
+//                if (
+//                    typeof(c[0]) !== 'undefined' &&
+//                    c[0] !== null &&
+//                    c[0] !== "0" &&
+//                    c[0] !== "32"
+//                ) {
                     this.drawBrailleSymbol(currentX,y,c[0],ctx,gw);
+                    newWord = false;
+                } else {
+                    newWord = true;
                 }
                 currentX += gw;
                 c = c.slice(1);
@@ -371,13 +377,17 @@ class cellFontModule {
         ctx.fill();
 
     }
-    findSymbol(chars) {
+    findSymbol(chars, newWord) {
         // finds best match for the array
         // courtesy of JS genius benvc at https://stackoverflow.com/a/54873442/1754243
         // JSON.stringify was slow so I replaced it with Tomáš Zato's Array.equals()
         let matches = this.cells.reduce((acc, obj) => {
             let len = chars.length <= obj.codes.length ? chars.length : obj.codes.length;
-            if (chars.slice(0, len).equals(obj.codes.slice(0, len))) {
+            if (chars.slice(0, len).equals(obj.codes.slice(0, len)) &&
+                (!obj.discrete ||
+                 (newWord && cellValIsEmpty(chars[len]))
+                )
+               ) {
                 if (len < chars.length) {
                     acc.short.push(obj);
                 } else {
@@ -399,6 +409,7 @@ class cell {
     constructor(xml, root) {
         this.root = root;
         this.name = xml.getAttribute('name');
+        this.discrete = (xml.getAttribute('discrete')=="1");
         this.codes = [];
         this.graphics = [];
         for (let node of xml.children) {
