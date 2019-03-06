@@ -1639,11 +1639,111 @@
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="CAPITALIZE" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="WORD" />
     </cell>
+    <cell name="text contraction about" discrete="1">
+        <code value="565" />
+        <code value="566" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="ABOUT" />
+    </cell>
+    <cell name="text contraction above">
+        <code value="565" />
+        <code value="566" />
+        <code value="586" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="ABOVE" />
+    </cell>
+    <cell name="text contraction according" discrete="1">
+        <code value="565" />
+        <code value="567" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="ACCORDING" />
+    </cell>
+    <cell name="text contraction across" discrete="1">
+        <code value="565" />
+        <code value="567" />
+        <code value="582" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="ACROSS" />
+    </cell>
+    <cell name="text contraction after">
+        <code value="565" />
+        <code value="570" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="AFTER" />
+    </cell>
+    <cell name="text contraction afternoon">
+        <code value="565" />
+        <code value="570" />
+        <code value="578" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="AFTERNOON" />
+    </cell>
+    <cell name="text contraction afterward">
+        <code value="565" />
+        <code value="570" />
+        <code value="587" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="AFTERWARD" />
+    </cell>
+    <cell name="text contraction again" discrete="1">
+        <code value="565" />
+        <code value="571" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="AGAIN" />
+    </cell>
+    <cell name="text contraction against">
+        <code value="565" />
+        <code value="571" />
+        <code value="547" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="AGAINST" />
+    </cell>
     <cell name="text contraction ally">
         <code value="644" />
         <code value="789" />
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="ALLY" />
+    </cell>
+    <cell name="text contraction almost" discrete="1">
+        <code value="565" />
+        <code value="576" />
+        <code value="577" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="ALMOST" />
+    </cell>
+    <cell name="text contraction already" discrete="1">
+        <code value="565" />
+        <code value="576" />
+        <code value="582" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="ALREADY" />
+    </cell>
+    <cell name="text contraction also" discrete="1">
+        <code value="565" />
+        <code value="576" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="ALSO" />
+    </cell>
+    <cell name="text contraction although" discrete="1">
+        <code value="565" />
+        <code value="576" />
+        <code value="563" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="ALTHOUGH" />
+    </cell>
+    <cell name="text contraction altogether" discrete="1">
+        <code value="565" />
+        <code value="576" />
+        <code value="584" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="ALTOGETHER" />
+    </cell>
+    <cell name="text contraction always" discrete="1">
+        <code value="565" />
+        <code value="576" />
+        <code value="587" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="ALWAYS" />
     </cell>
     <cell name="text contraction ation">
         <code value="644" />
@@ -1682,10 +1782,71 @@
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="BE" />
     </cell>
+    <cell name="text contraction because" discrete="1">
+        <code value="750" />
+        <code value="567" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="BECAUSE" />
+    </cell>
+    <cell name="text contraction before" discrete="1">
+        <code value="750" />
+        <code value="570" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="BEFORE" />
+    </cell>
+    <cell name="text contraction behind" discrete="1">
+        <code value="750" />
+        <code value="572" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="BEHIND" />
+    </cell>
+    <cell name="text contraction below" discrete="1">
+        <code value="750" />
+        <code value="576" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="BELOW" />
+    </cell>
+    <cell name="text contraction beneath" discrete="1">
+        <code value="750" />
+        <code value="578" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="BENEATH" />
+    </cell>
+    <cell name="text contraction beside" discrete="1">
+        <code value="750" />
+        <code value="583" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="BESIDE" />
+    </cell>
+    <cell name="text contraction between" discrete="1">
+        <code value="750" />
+        <code value="584" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="BECAUSE" />
+    </cell>
+    <cell name="text contraction beyond" discrete="1">
+        <code value="750" />
+        <code value="589" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="BECAUSE" />
+    </cell>
     <cell name="text contraction ble">
         <code value="835" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="BLE" />
+    </cell>
+    <cell name="text contraction blind" discrete="1">
+        <code value="566" />
+        <code value="576" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="BLIND" />
+    </cell>
+    <cell name="text contraction braille">
+        <code value="566" />
+        <code value="582" />
+        <code value="576" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="BRAILLE" />
     </cell>
     <cell name="text contraction but">
         <code value="866" />
@@ -1713,6 +1874,19 @@
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="CC" />
     </cell>
+    <cell name="text contraction ceive">
+        <code value="567" />
+        <code value="586" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="CEIVE" />
+    </cell>
+    <cell name="text contraction ceiving">
+        <code value="567" />
+        <code value="586" />
+        <code value="571" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="CEIVING" />
+    </cell>
     <cell name="text contraction ch">
         <code value="542" />
         <graphic type="background" color="#fff" />
@@ -1729,6 +1903,12 @@
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="CHILD" rotate="270" />
     </cell>
+    <cell name="text contraction children">
+        <code value="542" />
+        <code value="578" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="CHILDREN" />
+    </cell>
     <cell name="text contraction com">
         <code value="645" />
         <graphic type="background" color="#fff" />
@@ -1738,6 +1918,12 @@
         <code value="751" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="CON" />
+    </cell>
+    <cell name="text contraction could">
+        <code value="567" />
+        <code value="568" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="COULD" />
     </cell>
     <cell name="text contraction day">
         <code value="534" />
@@ -1749,6 +1935,21 @@
         <code value="652" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="DD" />
+    </cell>
+    <cell name="text contraction declare">
+        <code value="568" />
+        <code value="567" />
+        <code value="576" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="DECLARE" />
+    </cell>
+    <cell name="text contraction declaring">
+        <code value="568" />
+        <code value="567" />
+        <code value="576" />
+        <code value="571" />
+        <graphic type="background" color="#fff" cells="4" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="200" top="50" content="DECLARING" />
     </cell>
     <cell name="text contraction dis">
         <code value="752" />
@@ -1769,6 +1970,12 @@
         <code value="536" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="ED" />
+    </cell>
+    <cell name="text contraction either" discrete="1">
+        <code value="569" />
+        <code value="573" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="EITHER" />
     </cell>
     <cell name="text contraction en">
         <code value="553" />
@@ -1813,10 +2020,22 @@
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="FF" />
     </cell>
+    <cell name="text contraction first">
+        <code value="570" />
+        <code value="547" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="FIRST" />
+    </cell>
     <cell name="text contraction for">
         <code value="561" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="FOR" />
+    </cell>
+    <cell name="text contraction friend" discrete="1">
+        <code value="570" />
+        <code value="582" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="FRIEND" />
     </cell>
     <cell name="text contraction from">
         <code value="770" />
@@ -1844,6 +2063,19 @@
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="GO" />
     </cell>
+    <cell name="text contraction good">
+        <code value="571" />
+        <code value="568" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="GOOD" />
+    </cell>
+    <cell name="text contraction great">
+        <code value="571" />
+        <code value="582" />
+        <code value="584" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="GREAT" />
+    </cell>
     <cell name="text contraction had">
         <code value="595" />
         <code value="772" />
@@ -1857,14 +2089,41 @@
     </cell>
     <cell name="text contraction here">
         <code value="534" />
-        <code value="785" />
+        <code value="772" />
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="HERE" />
+    </cell>
+    <cell name="text contraction herself">
+        <code value="572" />
+        <code value="593" />
+        <code value="570" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="HERSELF" />
+    </cell>
+    <cell name="text contraction him">
+        <code value="572" />
+        <code value="577" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="HIM" />
+    </cell>
+    <cell name="text contraction himself">
+        <code value="572" />
+        <code value="577" />
+        <code value="570" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="HIMSELF" />
     </cell>
     <cell name="text contraction his">
         <code value="756" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="HIS" />
+    </cell>
+    <cell name="text contraction immediate" discrete="1">
+        <code value="572" />
+        <code value="577" />
+        <code value="577" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="IMMEDIATE" />
     </cell>
     <cell name="text contraction in">
         <code value="557" />
@@ -1880,6 +2139,18 @@
         <code value="688" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="IT" />
+    </cell>
+    <cell name="text contraction its" discrete="1">
+        <code value="588" />
+        <code value="583" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="ITS" />
+    </cell>
+    <cell name="text contraction itself" discrete="1">
+        <code value="588" />
+        <code value="570" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="ITSELF" />
     </cell>
     <cell name="text contraction ity">
         <code value="659" />
@@ -1909,10 +2180,22 @@
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="LESS" />
     </cell>
+    <cell name="text contraction letter" discrete="1">
+        <code value="576" />
+        <code value="582" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="LETTER" />
+    </cell>
     <cell name="text contraction like">
         <code value="776" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="LIKE" rotate="270" />
+    </cell>
+    <cell name="text contraction little" discrete="1">
+        <code value="576" />
+        <code value="576" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="LITTLE" />
     </cell>
     <cell name="text contraction lord">
         <code value="534" />
@@ -1943,11 +2226,44 @@
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="MOTHER" />
     </cell>
+    <cell name="text contraction much">
+        <code value="577" />
+        <code value="542" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="MUCH" />
+    </cell>
+    <cell name="text contraction must">
+        <code value="577" />
+        <code value="547" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="MUST" />
+    </cell>
+    <cell name="text contraction myself">
+        <code value="577" />
+        <code value="589" />
+        <code value="570" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="MYSELF" />
+    </cell>
     <cell name="text contraction name">
         <code value="534" />
         <code value="678" />
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="NAME" />
+    </cell>
+    <cell name="text contraction necessary" discrete="1">
+        <code value="578" />
+        <code value="569" />
+        <code value="567" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="NECESSARY" />
+    </cell>
+    <cell name="text contraction neither" discrete="1">
+        <code value="578" />
+        <code value="569" />
+        <code value="573" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="NEITHER" />
     </cell>
     <cell name="text contraction ness">
         <code value="659" />
@@ -1959,6 +2275,13 @@
         <code value="778" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="50" top="50" content="NOT" />
+    </cell>
+    <cell name="text contraction o'clock" discrete="1">
+        <code value="579" />
+        <code value="539" />
+        <code value="567" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="O&#x2019;CLOCK" />
     </cell>
     <cell name="text contraction of">
         <code value="540" />
@@ -2000,6 +2323,14 @@
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="OUNT" />
     </cell>
+    <cell name="text contraction ourselves">
+        <code value="592" />
+        <code value="582" />
+        <code value="586" />
+        <code value="583" />
+        <graphic type="background" color="#fff" cells="4" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="200" top="50" content="OURSELVES" />
+    </cell>
     <cell name="text contraction out">
         <code value="692" />
         <graphic type="background" color="#fff" />
@@ -2009,6 +2340,12 @@
         <code value="591" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="OW" />
+    </cell>
+    <cell name="text contraction paid">
+        <code value="580" />
+        <code value="568" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="PAID" />
     </cell>
     <cell name="text contraction part">
         <code value="534" />
@@ -2021,11 +2358,24 @@
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="PEOPLE" rotate="270" />
     </cell>
+    <cell name="text contraction perhaps" discrete="1">
+        <code value="580" />
+        <code value="593" />
+        <code value="572" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="PERHAPS" />
+    </cell>
     <cell name="text contraction question">
         <code value="534" />
         <code value="681" />
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="QUESTION" />
+    </cell>
+    <cell name="text contraction quick">
+        <code value="581" />
+        <code value="575" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="QUICK" />
     </cell>
     <cell name="text contraction quite">
         <code value="781" />
@@ -2037,11 +2387,25 @@
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="RATHER" rotate="270" />
     </cell>
+    <cell name="text contraction rejoicing">
+        <code value="582" />
+        <code value="574" />
+        <code value="567" />
+        <code value="571" />
+        <graphic type="background" color="#fff" cells="4" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="200" top="50" content="REJOICING" />
+    </cell>
     <cell name="text contraction right">
         <code value="534" />
         <code value="682" />
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="RIGHT" />
+    </cell>
+    <cell name="text contraction said">
+        <code value="583" />
+        <code value="568" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="SAID" />
     </cell>
     <cell name="text contraction self">
         <code value="870" />
@@ -2057,6 +2421,12 @@
         <code value="637" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="SHALL" rotate="270" />
+    </cell>
+    <cell name="text contraction should">
+        <code value="537" />
+        <code value="568" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="SHOULD" />
     </cell>
     <cell name="text contraction sion">
         <code value="746" />
@@ -2091,6 +2461,12 @@
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="STILL" rotate="270" />
     </cell>
+    <cell name="text contraction such">
+        <code value="583" />
+        <code value="542" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="SUCH" />
+    </cell>
     <cell name="text contraction th">
         <code value="563" />
         <graphic type="background" color="#fff" />
@@ -2111,6 +2487,14 @@
         <code value="633" />
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="THEIR" />
+    </cell>
+    <cell name="text contraction themselves">
+        <code value="533" />
+        <code value="577" />
+        <code value="586" />
+        <code value="583" />
+        <graphic type="background" color="#fff" cells="4" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="200" top="50" content="THEMSELVES" />
     </cell>
     <cell name="text contraction there">
         <code value="534" />
@@ -2157,6 +2541,31 @@
         <code value="754" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="TO" />
+    </cell>
+    <cell name="text contraction today" discrete="1">
+        <code value="584" />
+        <code value="568" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="TODAY" />
+    </cell>
+    <cell name="text contraction together">
+        <code value="584" />
+        <code value="571" />
+        <code value="582" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="TOGETHER" />
+    </cell>
+    <cell name="text contraction tomorrow" discrete="1">
+        <code value="584" />
+        <code value="577" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="TOMORROW" />
+    </cell>
+    <cell name="text contraction tonight" discrete="1">
+        <code value="584" />
+        <code value="578" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="TONIGHT" />
     </cell>
     <cell name="text contraction under">
         <code value="534" />
@@ -2240,6 +2649,12 @@
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="WORLD" />
     </cell>
+    <cell name="text contraction would" discrete="1">
+        <code value="587" />
+        <code value="568" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="WOULD" />
+    </cell>
     <cell name="text contraction you">
         <code value="689" />
         <graphic type="background" color="#fff" />
@@ -2250,6 +2665,27 @@
         <code value="789" />
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="YOUNG" />
+    </cell>
+    <cell name="text contraction your" discrete="1">
+        <code value="589" />
+        <code value="582" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="YOUR" />
+    </cell>
+    <cell name="text contraction yourself">
+        <code value="589" />
+        <code value="582" />
+        <code value="570" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="YOURSELF" />
+    </cell>
+    <cell name="text contraction yourselves">
+        <code value="589" />
+        <code value="582" />
+        <code value="586" />
+        <code value="583" />
+        <graphic type="background" color="#fff" cells="4" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="200" top="50" content="YOURSELVES" />
     </cell>
     <cell name="text apostrophe symbol">
         <code value="539" />
