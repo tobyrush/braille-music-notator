@@ -1,4 +1,4 @@
-/* global dropzone, drawNotation, window, reader, fileUploader, saveToUndo, suspendUndo, score, hScroll, vScroll, setScrollVars, parseOnImport, isLowASCII, setScore, cursor, scoreWidth, showPageBreaks, pageWidth, pageHeight, document, MouseEvent, currentBeatUnit, kFileNameBRF, kFileNameBRM: true */
+/* global dropzone, drawNotation, window, reader, fileUploader, saveToUndo, suspendUndo, score, hScroll, vScroll, setScrollVars, parseOnImport, isLowASCII, setScore, cursor, scoreWidth, showPageBreaks, pageWidth, pageHeight, document, MouseEvent, currentBeatUnit, kFileNameBRF, kFileNameBRM, kPrefixAbbreviations, kWordAbbreviations, kTextAbbreviations, kCommonWords: true */
 /* jshint -W020 */
 
 function doNotationDragOver(e) {
@@ -227,13 +227,47 @@ function parseData(fileData) {
 	fileData = fileData.replace(/[.][K]/g, String.fromCharCode(646,375)); // in-accord measure division
 	fileData = fileData.replace(/["][1]/g, String.fromCharCode(334,749)); // partial measure in-accord
 	fileData = fileData.replace(/[^A-Ja-j]([7])/g, convertRepeatSymbols); // convert any remaining repeat symbols
-	
-	fileData = fileData.replace(/[>]([a-zA-Z]+)/g, convertPrefixedWord); // any text left flagged with the word prefix
-	
 
+    fileData = fileData.replace(/[>]([a-zA-Z]+)/g, convertPrefixedWord); // any text left flagged with the word prefix
 	
 	return fileData;
 	
+}
+
+function parseText(fileData) {
+
+    kCommonWords.forEach(function(a) {
+        fileData = fileData.replaceAll(a[0],a[1]);
+    });
+	fileData = fileData.replace(/#[A-J]+4*[A-J]*/g, convertBrailleLettersToNumbers); // convert letters after pound sign to numbers
+	fileData = fileData.replace(/[\s,]([a-zA-Z*%:?\\257890/])\s/g, convertSingleLetterWordAbbreviation); // convert text abbreviations
+	fileData = fileData.replace(/(\s|^)([-23460])[A-Za-z]/g, convertSingleLetterPrefixAbbreviation); // convert text abbreviations
+    fileData = fileData.replace(/(["^_.;][A-Za-z!:\\*?])/g, convertTextAbbreviation); // convert text abbreviations
+	fileData = fileData.replace(/\s(,[A-Za-z!:\\*?])/g, convertTextAbbreviation); // convert text abbreviations
+    fileData = fileData.replace(/\s(,[A-Za-z!:\\*?])/g, convertTextAbbreviation); // convert text abbreviations
+    fileData = fileData.replace(/\s(,[A-Za-z!:\\*?])/g, convertTextAbbreviation); // convert text abbreviations
+    fileData = fileData.replace(/[A-Za-z]([1-790])[A-Za-z]/g, convertMidWordNumbers); // numbers inside words are contractions
+    return fileData;
+}
+
+function convertMidWordNumbers(fullString,nums) {
+    var newString = "";
+	for (var i=0; i<nums.length; i++) {
+		newString = newString + String.fromCharCode(nums.charCodeAt(i)+600);
+	}
+	return fullString.replaceAll(nums,newString);
+}
+
+function convertTextAbbreviation(fullString,str) {
+    return fullString.replaceAll(str,kTextAbbreviations.getPropertyOrValue(str.toLowerCase(),str));
+}
+
+function convertSingleLetterPrefixAbbreviation(fullString,z,str) {
+    return fullString.replaceAll(str,kPrefixAbbreviations.getPropertyOrValue(str.toLowerCase(),str));
+}
+
+function convertSingleLetterWordAbbreviation(fullString,str) {
+    return fullString.replaceAll(str,kWordAbbreviations.getPropertyOrValue(str.toLowerCase(),str));
 }
 
 function convertTrill(fullString,trill) {
@@ -483,14 +517,19 @@ function convertMultimeasureRest(fullMatch,numberPart) {
 
 function convertBrailleLettersToNumbers(str) {
 	var newStr = "";
-	var val;
+	var val, lval;
 	for (var i=0; i<str.length; i++) {
 		val=str.charCodeAt(i);
-		if ((val>564) && (val<575)) { // convert lower case to upper case
-			newStr = newStr + String.fromCharCode(val + 100);
-		} else {
-			newStr = newStr + String.fromCharCode(val);
-		}
+        lval = val % 100;
+        if (lval>64 && lval<75) {
+            newStr = newStr + String.fromCharCode(lval + 600);
+        } else {
+            if (lval == 35) {
+                newStr = newStr + String.fromCharCode(535);
+            } else {
+                newStr = newStr + String.fromCharCode(val);
+            }
+        }
 	}
 	return newStr;
 }
