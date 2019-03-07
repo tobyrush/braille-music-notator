@@ -1,4 +1,4 @@
-/* global FileReader, importData, arrayHasOwnIndex, drawNotation, createCookie, readCookie, convertScoreToString, convertStringToScore, eraseAllCookies, padLeft, document: true */
+/* global FileReader, importData, arrayHasOwnIndex, drawNotation, createCookie, readCookie, convertScoreToString, convertStringToScore, eraseAllCookies, padLeft, document, kDefaultFilename: true */
 
 // global variables
 
@@ -32,6 +32,7 @@ var helpWindow = false;
 var parseOnImport = true;
 var currentBeatUnit = 4;
 var resizeBarHeight = 10;
+var currentFileName = '';
 
 var controlModules = ['controls/en/classic.xml'];
 var defaultControlModule = 'controls/en/classic.html';

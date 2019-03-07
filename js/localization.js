@@ -5,6 +5,7 @@
 
 var kCharNames,
     kCommonWords = [],
+    kDefaultFilename,
     kDotsPrefix,
     kDropFileZoneMessage,
     kExportFileDescription,
@@ -55,6 +56,7 @@ function localize(lang) {
 
             defaultCellFont = 'cellfonts/en/classic.xml';
 
+            kDefaultFilename = "Untitled Score";
             kDotsPrefix = "Dots";
             kDropFileZoneMessage = "Drop file here to load";
             kExportFileDescription = "Export this document as an embosser-ready BRF file.";
