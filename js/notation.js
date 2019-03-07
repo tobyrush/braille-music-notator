@@ -318,7 +318,11 @@ class cellFontModule {
                 sym[0].draw(currentX,y,ctx,gw);
                 c=c.slice(sym[0].length());
                 currentX += gw * sym[0].length();
-                newWord = false;
+                if (sym[0].wordModifier) {
+                    newWord = true;
+                } else {
+                    newWord = false;
+                }
             } else {
                 if (!cellValIsEmpty(c[0])) {
 //                if (
@@ -385,7 +389,9 @@ class cellFontModule {
             let len = chars.length <= obj.codes.length ? chars.length : obj.codes.length;
             if (chars.slice(0, len).equals(obj.codes.slice(0, len)) &&
                 (!obj.discrete ||
-                 (newWord && cellValIsEmpty(chars[len]))
+                 (newWord &&
+                  (cellValIsEmpty(chars[len]) || currentCellFont.findSymbol(chars.slice(len,chars.length),false)[0].wordModifier)
+                 )
                 )
                ) {
                 if (len < chars.length) {
@@ -410,6 +416,7 @@ class cell {
         this.root = root;
         this.name = xml.getAttribute('name');
         this.discrete = (xml.getAttribute('discrete')=="1");
+        this.wordModifier = (xml.getAttribute('word-modifier')=="1");
         this.codes = [];
         this.graphics = [];
         for (let node of xml.children) {

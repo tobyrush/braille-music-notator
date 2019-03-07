@@ -675,7 +675,8 @@ function localize(lang) {
 
             kCommonWords = [
                 ['DI6]5T','ȸȽʎɑʍɈ'],
-                ['SE3D','ɇȹ˯ȸ']
+                ['SE3D','ɇȹ˯ȸ'],
+                ['2F','ˮȺ']
             ];
             break;
 

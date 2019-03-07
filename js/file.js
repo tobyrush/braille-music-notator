@@ -255,7 +255,17 @@ function parseText(fileData) {
     fileData = fileData.replace(/\s(,[A-Za-z!:\\*?])/g, convertTextAbbreviation); // convert text abbreviations
     fileData = fileData.replace(/\s(,[A-Za-z!:\\*?])/g, convertTextAbbreviation); // convert text abbreviations
     fileData = fileData.replace(/[A-Za-z]([1-790])[A-Za-z]/g, convertMidWordNumbers); // numbers inside words are contractions
+    fileData = fileData.replace(/,[/>+*<%?\-:$\]\\\[123456790]/g, convertCapitalizedContraction); // single-cell contractions preceded by the capital sign
     return fileData;
+}
+
+function convertCapitalizedContraction(fullString) {
+    var t = fullString.charCodeAt(1);
+    if (t == 45 || (t>47 && t<58)) {
+        return String.fromCharCode(544,t+600);
+    } else {
+        return String.fromCharCode(544,t+500);
+    }
 }
 
 function convertMidWordNumbers(fullString,nums) {
