@@ -1,4 +1,4 @@
-/* global dropzone, drawNotation, window, reader, fileUploader, saveToUndo, suspendUndo, score, hScroll, vScroll, setScrollVars, parseOnImport, isLowASCII, setScore, cursor, scoreWidth, showPageBreaks, pageWidth, pageHeight, document, MouseEvent, currentBeatUnit, kFileNameBRF, kFileNameBRM, kPrefixAbbreviations, kWordAbbreviations, kTextAbbreviations, kCommonWords: true */
+/* global dropzone, drawNotation, window, reader, fileUploader, saveToUndo, suspendUndo, score, hScroll, vScroll, setScrollVars, parseOnImport, isLowASCII, setScore, cursor, scoreWidth, showPageBreaks, pageWidth, pageHeight, document, MouseEvent, currentBeatUnit, kFileNameBRF, kFileNameBRM, kPrefixAbbreviations, kWordAbbreviations, kTextAbbreviations, kCommonWords, currentFileName, shiftKeyDown: true */
 /* jshint -W020 */
 
 function doNotationDragOver(e) {
@@ -52,6 +52,7 @@ function doNotationDrop(e) {
 
 function doFileOpen(e) {
 	var file = fileUploader.files[0];
+    currentFileName = file.name;
 	reader.readAsText(file);
 }
 
@@ -104,48 +105,55 @@ function importData(fileData) {
 }
 
 function downloadFile(reduceASCII) {
-	var fileString="";
-	var rightMargin=scoreWidth();
-	if (reduceASCII && showPageBreaks) {
-		rightMargin=pageWidth-1;
-	}
-	for (var row=0; row<score.length; row+=1) {
-		if ((typeof score[row]!=='undefined') && (score[row]!==null)) {
-			for (var col=0; col<=Math.min(score[row].length,rightMargin); col+=1) {
-				if ((typeof score[row][col]!=='undefined') && (score[row][col]>0)) {
-					if (reduceASCII) {
-						fileString=fileString+String.fromCharCode(score[row][col] % 100);
-					} else {
-						fileString=fileString+String.fromCharCode(score[row][col]);
-					}
-				} else {
-					fileString=fileString+" ";
-				}
-			}
-			fileString=fileString+String.fromCharCode(13)+String.fromCharCode(10);
-			if (reduceASCII && showPageBreaks && ((row+1) % pageHeight) === 0) {
-				fileString=fileString+String.fromCharCode(12);
-			}
-		} else {
-			fileString=fileString+String.fromCharCode(13)+String.fromCharCode(10);
-			if (reduceASCII && showPageBreaks && ((row+1) % pageHeight) === 0) {
-				fileString=fileString+String.fromCharCode(12);
-			}
-		}
-	}
+	var getFileName;
+    if (shiftKeyDown || (getFileName = window.prompt('Save file as:', currentFileName))) {
+        if (!shiftKeyDown) {
+            currentFileName = getFileName;
+        }
+        var fileString="";
+        var rightMargin=scoreWidth();
+        if (reduceASCII && showPageBreaks) {
+            rightMargin=pageWidth-1;
+        }
+        for (var row=0; row<score.length; row+=1) {
+            if ((typeof score[row]!=='undefined') && (score[row]!==null)) {
+                for (var col=0; col<=Math.min(score[row].length,rightMargin); col+=1) {
+                    if ((typeof score[row][col]!=='undefined') && (score[row][col]>0)) {
+                        if (reduceASCII) {
+                            fileString=fileString+String.fromCharCode(score[row][col] % 100);
+                        } else {
+                            fileString=fileString+String.fromCharCode(score[row][col]);
+                        }
+                    } else {
+                        fileString=fileString+" ";
+                    }
+                }
+                fileString=fileString+String.fromCharCode(13)+String.fromCharCode(10);
+                if (reduceASCII && showPageBreaks && ((row+1) % pageHeight) === 0) {
+                    fileString=fileString+String.fromCharCode(12);
+                }
+            } else {
+                fileString=fileString+String.fromCharCode(13)+String.fromCharCode(10);
+                if (reduceASCII && showPageBreaks && ((row+1) % pageHeight) === 0) {
+                    fileString=fileString+String.fromCharCode(12);
+                }
+            }
+        }
 
-	var file=document.createElement('a');
-	if (reduceASCII) {
-		file.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileString));
-		file.setAttribute('download', kFileNameBRF);
-	} else {
-		file.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileString));
-		file.setAttribute('download', kFileNameBRM);
-	}
-	file.setAttribute('target', '_blank');
-	
-	var clickEvent = new MouseEvent("click", {"view": window, "bubbles": true, "cancelable": false});
-	file.dispatchEvent(clickEvent);
+        var file=document.createElement('a');
+        if (reduceASCII) {
+            file.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileString));
+            file.setAttribute('download', currentFileName+".brf");
+        } else {
+            file.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileString));
+            file.setAttribute('download', currentFileName+".brm");
+        }
+        file.setAttribute('target', '_blank');
+
+        var clickEvent = new MouseEvent("click", {"view": window, "bubbles": true, "cancelable": false});
+        file.dispatchEvent(clickEvent);
+    }
+
 
 }
 

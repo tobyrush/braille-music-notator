@@ -50,6 +50,10 @@ function interpretKeyCode(keyCode) {
     if (metaKeyDown) {
         dontScroll = true;
         switch (keyCode) {
+            case 16: // shift
+                shiftKeyDown = true;
+                passThrough = true;
+                break;
             case 38: // up arrow - delete row
                 deleteRowAtCursor();
                 break;
