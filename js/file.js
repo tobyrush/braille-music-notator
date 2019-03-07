@@ -248,7 +248,7 @@ function parseText(fileData) {
         fileData = fileData.replaceAll(a[0],a[1]);
     });
 	fileData = fileData.replace(/#[A-J]+4*[A-J]*/g, convertBrailleLettersToNumbers); // convert letters after pound sign to numbers
-	fileData = fileData.replace(/[\s,]([a-zA-Z*%:?\\257890/])\s/g, convertSingleLetterWordAbbreviation); // convert text abbreviations
+	fileData = fileData.replace(/[\s,]([a-zA-Z*%:?\\257890/])(?=\s)/g, convertSingleLetterWordAbbreviation); // convert text abbreviations
 	fileData = fileData.replace(/(\s|^)([-23460])[A-Za-z]/g, convertSingleLetterPrefixAbbreviation); // convert text abbreviations
     fileData = fileData.replace(/(["^_.;][A-Za-z!:\\*?])/g, convertTextAbbreviation); // convert text abbreviations
 	fileData = fileData.replace(/\s(,[A-Za-z!:\\*?])/g, convertTextAbbreviation); // convert text abbreviations
