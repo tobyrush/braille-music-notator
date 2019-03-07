@@ -1,4 +1,4 @@
-/* global versionString, devMode, container, document, notationArea, window, doKeyDown, doKeyUp, doWindowMouseUp, doWindowMouseMove, handleClipboard, fileUploader, doFileOpen, doNotationMouseDown, doNotationMouseUp, doNotationMouseMove, doNotationDragOver, doNotationDragEnter, doNotationDragLeave, doNotationDrop, doNotationMouseWheel, controlArea, doControlMouseDown, doControlMouseMove, doControlMouseOut, titleArea, doTitleMouseDown, cctx, tctx, ctx, clipboardArea, cursor, loadCookie, initializeTitle, initializeNotation, initializeControls, resizeBarPosition, localize, currentFileName, kDefaultFilename: true */
+/* global versionString, devMode, container, document, notationArea, window, doKeyDown, doKeyUp, doWindowMouseUp, doWindowMouseMove, handleClipboard, fileUploader, doFileOpen, doNotationMouseDown, doNotationMouseUp, doNotationMouseMove, doNotationDragOver, doNotationDragEnter, doNotationDragLeave, doNotationDrop, doNotationMouseWheel, controlArea, doControlMouseDown, doControlMouseMove, doControlMouseOut, titleArea, doTitleMouseDown, cctx, tctx, ctx, clipboardArea, cursor, loadCookie, initializeTitle, initializeNotation, initializeControls, resizeBarPosition, localize, currentFileName, kDefaultFilename, drawNotation, currentControlModule: true */
 /* jshint -W020 */
 
 function initialize() {
@@ -10,7 +10,7 @@ function initialize() {
 	notationArea = document.getElementById("notationAreaCanvas");
 	window.addEventListener("keydown",doKeyDown,false); //if we need to deal with focus, check out stackoverflow.com/questions/12886286
 	window.addEventListener("keyup",doKeyUp,false);
-	window.addEventListener("resize",initializeCanvases,false);
+	window.addEventListener("resize",refreshCanvases,false);
 	window.addEventListener("mouseup",doWindowMouseUp,false);
 	window.addEventListener("mousemove",doWindowMouseMove,false);
 	document.addEventListener("cut",handleClipboard,false);
@@ -66,6 +66,14 @@ function initializeCanvases() {
 	recalculateSectionHeights();
 	initializeNotation();
 	initializeControls();
+}
+
+function refreshCanvases() {
+    initializeTitle();
+    recalculateSectionHeights();
+    initializeNotation();
+    drawNotation();
+    currentControlModule.draw();
 }
 
 function recalculateSectionHeights() {
