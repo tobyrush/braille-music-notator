@@ -322,8 +322,7 @@ function interpretKeyCode(keyCode) {
                 break;
             default:
                 passThrough=false;
-                var k=currentControlModule.keyPress(keyCode);
-                notate(k.chars,k.readerText);
+                currentControlModule.keyPress(keyCode);
         }
     }
 

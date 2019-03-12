@@ -1,4 +1,4 @@
-/* global titleArea, tctx, versionString, helpDialogOpen, roundRect, optionsDialogOpen, fileDialogOpen, controlArea, cctx, whichKeyboard, keyboardCoordinates, keymap, keycaps, displayControlHelp, cursor, hScroll, vScroll, controlsHeight, controlsWidth, chu, resizeBarHeight, keyboardOriginX, keyboardOriginY, kbu, controlHelpOriginX, controlHelpOriginY, console, shiftKeyDown, metaKeyDown, formFill, kProgramTitle, kVersionAndAuthor, kHelpButtonCaption, kOptionsButtonCaption, kFileButtonCaption, sendHTTPRequest, defaultControlModule, DOMParser, currentControlModule, updateScreenreader, kScreenReaderControlPageNumber, createTemporaryGrid, gridWidth, gridHeight, releaseTemporaryGrid, document, devMode, score, drawStoredScore, notate, tempGrid, drawNotation, currentCellFont, notationArea: true */
+/* global titleArea, tctx, versionString, helpDialogOpen, roundRect, optionsDialogOpen, fileDialogOpen, controlArea, cctx, whichKeyboard, keyboardCoordinates, keymap, keycaps, displayControlHelp, cursor, hScroll, vScroll, controlsHeight, controlsWidth, chu, resizeBarHeight, keyboardOriginX, keyboardOriginY, kbu, controlHelpOriginX, controlHelpOriginY, console, shiftKeyDown, metaKeyDown, formFill, kProgramTitle, kVersionAndAuthor, kHelpButtonCaption, kOptionsButtonCaption, kFileButtonCaption, sendHTTPRequest, defaultControlModule, DOMParser, currentControlModule, updateScreenreader, kScreenReaderControlPageNumber, createTemporaryGrid, gridWidth, gridHeight, releaseTemporaryGrid, document, devMode, score, drawStoredScore, notate, tempGrid, drawNotation, currentCellFont, notationArea, notateMIDINotes: true */
 /* jshint -W020 */
 
 function initializeTitle() {
@@ -281,7 +281,7 @@ class controlModule {
         }
     }
     keyPress(keycode) {
-        return this.pages[this.currentPage].keyPress(keycode);
+        this.pages[this.currentPage].keyPress(keycode);
     }
     onTextPage() {
         return this.pages[this.currentPage].isText;
@@ -331,17 +331,18 @@ class controlPage {
         this.root.draw();
     }
     keyPress(keycode) {
-        var resp = {};
+//        var resp = {};
         for (let c of this.controlItems) {
             if (c.keycode==keycode) {
-                resp.chars = c.characters;
-                resp.returnText = c.label;
-                return resp;
+                c.keyPress();
+//                resp.chars = c.characters;
+//                resp.returnText = c.label;
+//                return resp;
             }
         }
-        resp.chars = [];
-        resp.returnText = "";
-        return resp;
+//        resp.chars = [];
+//        resp.returnText = "";
+//        return resp;
     }
 }
 
@@ -382,6 +383,8 @@ class controlItem {
         this.width = xml.getAttribute('width');
         this.height = xml.getAttribute('height');
         this.label = xml.getAttribute('label');
+        this.midiKey = (xml.getAttribute('midiKey') == 'true');
+        this.midiDuration = xml.getAttribute('midiDuration');
         this.graphics = [];
         this.characters = [];
         for (let node of xml.getElementsByTagName('graphic')) {
@@ -421,12 +424,24 @@ class controlItem {
             x<this.left*chu + this.width*chu &&
             y<this.top*chu + this.height*chu
         ) {
-            notate(this.characters,this.label);
+            if (this.midiKey) {
+                notateMIDINotes(this.midiDuration,false,true);
+            } else {
+                notate(this.characters,this.label);
+            }
             drawNotation();
             return true;
         } else {
             return false;
         }
+    }
+    keyPress() {
+        if (this.midiKey) {
+            notateMIDINotes(this.midiDuration,false,-1,true);
+        } else {
+            notate(this.characters,this.label);
+        }
+        drawNotation();
     }
     mouseOver(x,y) {
         var chu=this.root.chu;

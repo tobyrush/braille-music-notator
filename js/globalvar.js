@@ -34,7 +34,7 @@ var currentBeatUnit = 4;
 var resizeBarHeight = 10;
 var currentFileName = '';
 
-var controlModules = ['controls/en/classic.xml'];
+var controlModules = ['controls/en/classic.xml','controls/en/classic-midi.xml'];
 var defaultControlModule = 'controls/en/classic.html';
 var currentControlModule;
 
@@ -46,10 +46,68 @@ var storedScore, score = [[]]; // y,x
 var storedBlankCells, blankCells = [[]];
 var tempGrid = false;
 
+var midiConnected = false;
+var midiNotes = [];
+
 // the following array starts at 32, so values should be accessed a brailleDots[theAsciiCode-32].
 var brailleDots = [0,46,16,60,43,41,47,4,55,62,33,44,32,36,40,12,52,2,6,18,50,34,22,54,38,20,49,48,35,63,28,57,8,1,3,9,25,17,11,27,19,10,26,5,7,13,29,21,15,31,23,14,30,37,39,58,45,61,53,42,51,59,24,56];
 
 var unicodeBrailleMap = [32,65,49,66,39,75,50,76,64,67,73,70,47,77,83,80,34,69,51,72,57,79,54,82,94,68,74,71,62,78,84,81,44,42,53,60,45,85,56,86,46,37,91,36,43,88,33,38,59,58,52,92,48,90,55,40,95,63,87,93,35,89,41,61];
+
+var sharpNoteValues = [
+    [[89,75],[37,89,75],[90,75],[37,90,75],[38,75],[61,75],[37,61,75],[40,75],[37,40,75],[33,75],[37,33,75],[41,75]],
+    [[89],[37,89],[90],[37,90],[38],[61],[37,61],[40],[37,40],[33],[37,33],[41]],
+    [[78],[37,78],[79],[37,79],[80],[81],[37,81],[82],[37,82],[83],[37,83],[84]],
+    [[63],[37,63],[58],[37,58],[36],[93],[37,93],[92],[37,92],[91],[37,91],[87]],
+    [[68],[37,68],[69],[37,69],[70],[71],[37,71],[72],[37,72],[73],[37,73],[74]],
+    [[189],[37,189],[190],[37,190],[138],[161],[37,161],[140],[37,140],[133],[37,133],[141]],
+    [[178],[37,178],[179],[37,179],[180],[181],[37,181],[182],[37,182],[183],[37,183],[184]],
+    [[163],[37,163],[158],[37,158],[136],[193],[37,193],[192],[37,192],[191],[37,191],[187]],
+    [[168],[37,168],[169],[37,169],[170],[171],[37,171],[172],[37,172],[173],[37,173],[174]]
+];
+
+var flatNoteValues = [
+    [[89,75],[60,90,75],[90,75],[60,38,75],[38,75],[61,75],[60,40,75],[40,75],[60,33,75],[33,75],[60,41,75],[41,75]],
+    [[89],[60,90],[90],[60,38],[38],[61],[60,40],[40],[60,33],[33],[60,41],[41]],
+    [[78],[60,79],[79],[60,80],[80],[81],[60,82],[82],[60,83],[83],[60,84],[84]],
+    [[63],[60,58],[58],[60,36],[36],[93],[60,92],[92],[60,91],[91],[60,87],[87]],
+    [[68],[60,69],[69],[60,70],[70],[71],[60,72],[72],[60,73],[73],[60,74],[74]],
+    [[189],[60,190],[190],[60,138],[138],[161],[60,140],[140],[60,133],[133],[60,141],[141]],
+    [[178],[60,179],[179],[60,180],[180],[181],[60,182],[182],[60,183],[183],[60,184],[184]],
+    [[163],[60,158],[158],[60,136],[136],[193],[60,192],[192],[60,191],[191],[60,187],[187]],
+    [[168],[60,169],[169],[60,170],[170],[171],[60,172],[172],[60,173],[173],[60,174],[174]]
+];
+
+var restValues = [[77,75],[77],[85],[86],[88],[177],[185],[186],[188]];
+
+var octaveValues = [[64,164],[64],[94],[95],[34],[46],[59],[44],[44,144]];
+
+var octaveCharValues = [];
+octaveCharValues[164] = 0;
+octaveCharValues[64] = 1;
+octaveCharValues[94] = 2;
+octaveCharValues[95] = 3;
+octaveCharValues[34] = 4;
+octaveCharValues[46] = 5;
+octaveCharValues[59] = 6;
+octaveCharValues[44] = 7;
+octaveCharValues[144] = 8;
+
+var pitchValues = [];
+pitchValues[89] = pitchValues[78] = pitchValues[63] = pitchValues[68] = 0;
+pitchValues[90] = pitchValues[79] = pitchValues[58] = pitchValues[69] = 1;
+pitchValues[38] = pitchValues[80] = pitchValues[36] = pitchValues[70] = 2;
+pitchValues[61] = pitchValues[81] = pitchValues[93] = pitchValues[71] = 3;
+pitchValues[40] = pitchValues[82] = pitchValues[92] = pitchValues[72] = 4;
+pitchValues[33] = pitchValues[83] = pitchValues[91] = pitchValues[73] = 5;
+pitchValues[41] = pitchValues[84] = pitchValues[87] = pitchValues[74] = 6;
+pitchValues[189] = pitchValues[178] = pitchValues[163] = pitchValues[168] = 0;
+pitchValues[190] = pitchValues[179] = pitchValues[158] = pitchValues[169] = 1;
+pitchValues[138] = pitchValues[180] = pitchValues[136] = pitchValues[170] = 2;
+pitchValues[161] = pitchValues[181] = pitchValues[193] = pitchValues[171] = 3;
+pitchValues[140] = pitchValues[182] = pitchValues[192] = pitchValues[172] = 4;
+pitchValues[133] = pitchValues[183] = pitchValues[191] = pitchValues[173] = 5;
+pitchValues[141] = pitchValues[184] = pitchValues[187] = pitchValues[174] = 6;
 
 function clearDocument() {
 	saveToUndo();
