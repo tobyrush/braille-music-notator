@@ -114,7 +114,7 @@ function needsOctaveSign(chars,position,pitch,octave) {
 		i++;
 	}
 
-    if ((octave==curOctave && Math.abs(curPitch-pitch)<4) ||
+    if ((octave==curOctave && Math.abs(curPitch-pitch)<5) ||
         (octave>curOctave && ((curPitch==6 && pitch<2) || (curPitch==5 && pitch===0))) ||
         (octave<curOctave && ((curPitch===0 && pitch>4) || (curPitch==1 && pitch==6)))
         ) {
