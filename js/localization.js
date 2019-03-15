@@ -52,7 +52,8 @@ function localize(lang) {
 
         case "en":
 
-            defaultControlModule = 'controls/en/classic-midi.xml';
+            //defaultControlModule = 'controls/en/classic-midi.xml';
+            defaultControlModule = 'controls/en/classic.xml';
 
             defaultCellFont = 'cellfonts/en/classic.xml';
 
