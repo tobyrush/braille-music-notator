@@ -675,6 +675,8 @@ function localize(lang) {
             kTextAbbreviations[',y'] = String.fromCharCode(644,789);
 
             kCommonWords = [
+                [' ,N',' Ƞɂ'],
+                [' ,Y',' Ƞɍ'],
                 ['DI6]5T','ȸȽʎɑʍɈ'],
                 ['SE3D','ɇȹ˯ȸ'],
                 ['2F','ˮȺ']
