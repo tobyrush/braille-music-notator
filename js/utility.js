@@ -137,6 +137,11 @@ function handleClipboard(e) {
                         }
                     }
 				}
+
+                while (clipboardData.charCodeAt(clipboardData.length-1) == 13 ||
+                       clipboardData.charCodeAt(clipboardData.length-1) == 10) {
+                    clipboardData = clipboardData.slice(0,-1);
+                }
 				
 				for (i=0; i<clipboardData.length; i++) {
 					val=clipboardData.charCodeAt(i);
@@ -165,6 +170,8 @@ function handleClipboard(e) {
 							col++;
 					}
 				}
+                cursor.x = col;
+                cursor.y = row;
 			}
 			suspendUndo = false;
 			break;
