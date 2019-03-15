@@ -1,4 +1,7 @@
 <controlModule name="Classic MIDI" help="default" font="sans-serif" style="normal" align="left" baseline="alphabetic">
+    <help name="default" top="15" left="300" width="200" height="100">
+        <graphic type="text" color="#000" size="8" top="5" left="0" multiline="true" lineHeight="10" content="Click keys or type to add symbols\nto the score above.\n\nClick tabs to the left or press spacebar to\nswitch between keyboards.\n\nMouse over the keyboard for help." />
+    </help>
     <page name="1">
         <indicator type="shift" top="67" left="13" width="27" height="9">
             <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
@@ -2183,9 +2186,6 @@
             <character code="556" />
         </control>
    </page>
-    <help name="default" top="15" left="300" width="200" height="100">
-        <graphic type="text" color="#000" size="8" top="5" left="0" multiline="true" lineHeight="10" content="Click keys or type to add symbols\nto the score above.\n\nClick tabs to the left or press spacebar to\nswitch between keyboards.\n\nMouse over the keyboard for help." />
-    </help>
     <help name="augmentationDot" top="10" left="300" width="200" height="100">
         <graphic type="text" style="bold" color="#000" size="10" top="10" left="0" content="Augmentation Dot" />
         <graphic type="text" color="#000" size="6" top="20" left="0" multiline="true" lineHeight="8" content="Place dot(s) after the affected note." />
