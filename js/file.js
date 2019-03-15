@@ -254,7 +254,8 @@ function parseText(fileData) {
 	fileData = fileData.replace(/\s(,[A-Za-z!:\\*?])/g, convertTextAbbreviation); // convert text abbreviations
     fileData = fileData.replace(/\s(,[A-Za-z!:\\*?])/g, convertTextAbbreviation); // convert text abbreviations
     fileData = fileData.replace(/\s(,[A-Za-z!:\\*?])/g, convertTextAbbreviation); // convert text abbreviations
-    fileData = fileData.replace(/[A-Za-z]([1-790])[A-Za-z]/g, convertMidWordNumbers); // numbers inside words are contractions
+    fileData = fileData.replace(/([1-790])[A-Za-z]/g, convertMidWordNumbers); // numbers inside words are contractions
+    fileData = fileData.replace(/[A-Za-z]([1-790])/g, convertMidWordNumbers); // numbers inside words are contractions
     fileData = fileData.replace(/,[/>+*<%?\-:$\]\\\[123456790]/g, convertCapitalizedContraction); // single-cell contractions preceded by the capital sign
     return fileData;
 }
