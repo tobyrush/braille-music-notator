@@ -783,85 +783,85 @@
             <help page="timeSignatures" />
             <character code="35" />
         </control>
-        <control keycode="49" top="13" left="31" width="18" height="18" label="Time signature top number zero">
-            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
-            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="30" left="53" content="&#xe080;" />
-            <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="76" left="53" content="x" />
-            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="1" />
-            <help page="timeSignatures" />
-            <character code="174" />
-        </control>
-        <control keycode="50" top="13" left="49" width="18" height="18" label="Time signature top number one">
+        <control keycode="49" top="13" left="31" width="18" height="18" label="Time signature top number one">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="30" left="53" content="&#xe081;" />
             <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="76" left="53" content="x" />
-            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="2" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="1" />
             <help page="timeSignatures" />
             <character code="165" />
         </control>
-        <control keycode="51" top="13" left="67" width="18" height="18" label="Time signature top number two">
+        <control keycode="50" top="13" left="49" width="18" height="18" label="Time signature top number two">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="30" left="53" content="&#xe082;" />
             <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="76" left="53" content="x" />
-            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="3" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="2" />
             <help page="timeSignatures" />
             <character code="166" />
         </control>
-        <control keycode="52" top="13" left="85" width="18" height="18" label="Time signature top number three">
+        <control keycode="51" top="13" left="67" width="18" height="18" label="Time signature top number three">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="30" left="53" content="&#xe083;" />
             <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="76" left="53" content="x" />
-            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="4" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="3" />
             <help page="timeSignatures" />
             <character code="167" />
         </control>
-        <control keycode="53" top="13" left="103" width="18" height="18" label="Time signature top number four">
+        <control keycode="52" top="13" left="85" width="18" height="18" label="Time signature top number four">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="30" left="53" content="&#xe084;" />
             <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="76" left="53" content="x" />
-            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="5" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="4" />
             <help page="timeSignatures" />
             <character code="168" />
         </control>
-        <control keycode="54" top="13" left="121" width="18" height="18" label="Time signature top number five">
+        <control keycode="53" top="13" left="103" width="18" height="18" label="Time signature top number five">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="30" left="53" content="&#xe085;" />
             <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="76" left="53" content="x" />
-            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="6" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="5" />
             <help page="timeSignatures" />
             <character code="169" />
         </control>
-        <control keycode="55" top="13" left="139" width="18" height="18" label="Time signature top number six">
+        <control keycode="54" top="13" left="121" width="18" height="18" label="Time signature top number six">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="30" left="53" content="&#xe086;" />
             <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="76" left="53" content="x" />
-            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="7" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="6" />
             <help page="timeSignatures" />
             <character code="170" />
         </control>
-        <control keycode="56" top="13" left="157" width="18" height="18" label="Time signature top number seven">
+        <control keycode="55" top="13" left="139" width="18" height="18" label="Time signature top number seven">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="30" left="53" content="&#xe087;" />
             <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="76" left="53" content="x" />
-            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="8" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="7" />
             <help page="timeSignatures" />
             <character code="171" />
         </control>
-        <control keycode="57" top="13" left="175" width="18" height="18" label="Time signature top number eight">
+        <control keycode="56" top="13" left="157" width="18" height="18" label="Time signature top number eight">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="30" left="53" content="&#xe088;" />
             <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="76" left="53" content="x" />
-            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="9" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="8" />
             <help page="timeSignatures" />
             <character code="172" />
         </control>
-        <control keycode="48" top="13" left="193" width="18" height="18" label="Time signature top number nine">
+        <control keycode="57" top="13" left="175" width="18" height="18" label="Time signature top number nine">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="30" left="53" content="&#xe089;" />
             <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="76" left="53" content="x" />
-            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="0" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="9" />
             <help page="timeSignatures" />
             <character code="173" />
+        </control>
+        <control keycode="48" top="13" left="193" width="18" height="18" label="Time signature top number zero">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="30" left="53" content="&#xe080;" />
+            <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="76" left="53" content="x" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="0" />
+            <help page="timeSignatures" />
+            <character code="174" />
         </control>
         <control keycode="189" top="13" left="211" width="18" height="18" label="Common time">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
@@ -879,85 +879,85 @@
             <character code="195" />
             <character code="467" />
         </control>
-        <control keycode="81" top="31" left="40" width="18" height="18" label="Time signature bottom number zero">
-            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
-            <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="40" left="53" content="x" />
-            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="63" left="53" content="&#xe080;" />
-            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="Q" />
-            <help page="timeSignatures" />
-            <character code="48" />
-        </control>
-        <control keycode="87" top="31" left="58" width="18" height="18" label="Time signature bottom number one">
+        <control keycode="81" top="31" left="40" width="18" height="18" label="Time signature bottom number one">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
             <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="40" left="53" content="x" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="63" left="53" content="&#xe081;" />
-            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="W" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="Q" />
             <help page="timeSignatures" />
             <character code="49" />
         </control>
-        <control keycode="69" top="31" left="76" width="18" height="18" label="Time signature bottom number two">
+        <control keycode="87" top="31" left="58" width="18" height="18" label="Time signature bottom number two">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
             <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="40" left="53" content="x" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="63" left="53" content="&#xe082;" />
-            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="E" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="W" />
             <help page="timeSignatures" />
             <character code="50" />
         </control>
-        <control keycode="82" top="31" left="94" width="18" height="18" label="Time signature bottom number three">
+        <control keycode="69" top="31" left="76" width="18" height="18" label="Time signature bottom number three">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
             <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="40" left="53" content="x" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="63" left="53" content="&#xe083;" />
-            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="R" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="E" />
             <help page="timeSignatures" />
             <character code="51" />
         </control>
-        <control keycode="84" top="31" left="112" width="18" height="18" label="Time signature bottom number four">
+        <control keycode="82" top="31" left="94" width="18" height="18" label="Time signature bottom number four">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
             <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="40" left="53" content="x" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="63" left="53" content="&#xe084;" />
-            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="T" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="R" />
             <help page="timeSignatures" />
             <character code="52" />
         </control>
-        <control keycode="89" top="31" left="130" width="18" height="18" label="Time signature bottom number five">
+        <control keycode="84" top="31" left="112" width="18" height="18" label="Time signature bottom number five">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
             <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="40" left="53" content="x" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="63" left="53" content="&#xe085;" />
-            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="Y" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="T" />
             <help page="timeSignatures" />
             <character code="53" />
         </control>
-        <control keycode="85" top="31" left="148" width="18" height="18" label="Time signature bottom number six">
+        <control keycode="89" top="31" left="130" width="18" height="18" label="Time signature bottom number six">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
             <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="40" left="53" content="x" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="63" left="53" content="&#xe086;" />
-            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="U" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="Y" />
             <help page="timeSignatures" />
             <character code="54" />
         </control>
-        <control keycode="73" top="31" left="166" width="18" height="18" label="Time signature bottom number seven">
+        <control keycode="85" top="31" left="148" width="18" height="18" label="Time signature bottom number seven">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
             <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="40" left="53" content="x" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="63" left="53" content="&#xe087;" />
-            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="I" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="U" />
             <help page="timeSignatures" />
             <character code="55" />
         </control>
-        <control keycode="79" top="31" left="184" width="18" height="18" label="Time signature bottom number eight">
+        <control keycode="73" top="31" left="166" width="18" height="18" label="Time signature bottom number eight">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
             <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="40" left="53" content="x" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="63" left="53" content="&#xe088;" />
-            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="O" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="I" />
             <help page="timeSignatures" />
             <character code="56" />
         </control>
-        <control keycode="80" top="31" left="202" width="18" height="18" label="Time signature bottom number nine">
+        <control keycode="79" top="31" left="184" width="18" height="18" label="Time signature bottom number nine">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
             <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="40" left="53" content="x" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="63" left="53" content="&#xe089;" />
-            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="P" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="O" />
             <help page="timeSignatures" />
             <character code="57" />
+        </control>
+        <control keycode="80" top="31" left="202" width="18" height="18" label="Time signature bottom number zero">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#070" />
+            <graphic type="text" color="#7B7" size="40" font="serif" style="bold italic" align="center" top="40" left="53" content="x" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="63" left="53" content="&#xe080;" />
+            <graphic type="text" color="#7B7" left="15" top="80" size="20" content="P" />
+            <help page="timeSignatures" />
+            <character code="48" />
         </control>
         <control keycode="219" top="31" left="220" width="18" height="18" label="Key signature flat">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#00F" />
@@ -980,72 +980,72 @@
             <help page="keySignatures" />
             <character code="142" />
         </control>
-        <control keycode="65" top="49" left="46" width="18" height="18" label="Tuplet number zero">
+        <control keycode="65" top="49" left="46" width="18" height="18" label="Tuplet number one">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
-            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe880;" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe881;" />
             <graphic type="text" color="#770" left="15" top="80" size="20" content="A" />
             <help page="tuplets" />
             <character code="249" />
         </control>
-        <control keycode="83" top="49" left="64" width="18" height="18" label="Tuplet number one">
+        <control keycode="83" top="49" left="64" width="18" height="18" label="Tuplet number two">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
-            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe881;" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe882;" />
             <graphic type="text" color="#770" left="15" top="80" size="20" content="S" />
             <help page="tuplets" />
             <character code="250" />
         </control>
-        <control keycode="68" top="49" left="82" width="18" height="18" label="Tuplet number two">
+        <control keycode="68" top="49" left="82" width="18" height="18" label="Tuplet number three">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
-            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe882;" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe883;" />
             <graphic type="text" color="#770" left="15" top="80" size="20" content="D" />
             <help page="tuplets" />
             <character code="251" />
         </control>
-        <control keycode="70" top="49" left="100" width="18" height="18" label="Tuplet number three">
+        <control keycode="70" top="49" left="100" width="18" height="18" label="Tuplet number four">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
-            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe883;" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe884;" />
             <graphic type="text" color="#770" left="15" top="80" size="20" content="F" />
             <help page="tuplets" />
             <character code="252" />
         </control>
-        <control keycode="71" top="49" left="118" width="18" height="18" label="Tuplet number four">
+        <control keycode="71" top="49" left="118" width="18" height="18" label="Tuplet number five">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
-            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe884;" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe885;" />
             <graphic type="text" color="#770" left="15" top="80" size="20" content="G" />
             <help page="tuplets" />
             <character code="253" />
         </control>
-        <control keycode="72" top="49" left="136" width="18" height="18" label="Tuplet number five">
+        <control keycode="72" top="49" left="136" width="18" height="18" label="Tuplet number six">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
-            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe885;" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe886;" />
             <graphic type="text" color="#770" left="15" top="80" size="20" content="H" />
             <help page="tuplets" />
             <character code="254" />
         </control>
-        <control keycode="74" top="49" left="154" width="18" height="18" label="Tuplet number six">
+        <control keycode="74" top="49" left="154" width="18" height="18" label="Tuplet number seven">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
-            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe886;" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe887;" />
             <graphic type="text" color="#770" left="15" top="80" size="20" content="J" />
             <help page="tuplets" />
             <character code="255" />
         </control>
-        <control keycode="75" top="49" left="172" width="18" height="18" label="Tuplet number seven">
+        <control keycode="75" top="49" left="172" width="18" height="18" label="Tuplet number eight">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
-            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe887;" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe888;" />
             <graphic type="text" color="#770" left="15" top="80" size="20" content="K" />
             <help page="tuplets" />
             <character code="256" />
         </control>
-        <control keycode="76" top="49" left="190" width="18" height="18" label="Tuplet number eight">
+        <control keycode="76" top="49" left="190" width="18" height="18" label="Tuplet number nine">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
-            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe888;" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe889;" />
             <graphic type="text" color="#770" left="15" top="80" size="20" content="L" />
             <help page="tuplets" />
             <character code="257" />
         </control>
-        <control keycode="186" top="49" left="208" width="18" height="18" label="Tuplet number nine">
+        <control keycode="186" top="49" left="208" width="18" height="18" label="Tuplet number zero">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
-            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe889;" />
+            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe880;" />
             <graphic type="text" color="#770" left="15" top="80" size="20" content=";" />
             <help page="tuplets" />
             <character code="248" />
