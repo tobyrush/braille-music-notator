@@ -2461,7 +2461,7 @@
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="STILL" rotate="270" />
     </cell>
-    <cell name="text contraction such">
+    <cell name="text contraction such" discrete="1">
         <code value="583" />
         <code value="542" />
         <graphic type="background" color="#fff" cells="2" />
