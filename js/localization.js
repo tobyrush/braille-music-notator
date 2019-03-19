@@ -1,10 +1,11 @@
-/* global mkStr, defaultControlModule, defaultCellFont: true */
+/* global mkStr, defaultControlModule, defaultCellFont, controlModules, selectedControlModule: true */
 /* jshint -W046 */
 /* jshint -W020 */
 /* jshint -W069 */
 
 var kCharNames,
     kCommonWords = [],
+    kControlChangeSymbol,
     kDefaultFilename,
     kDotsPrefix,
     kDropFileZoneMessage,
@@ -48,15 +49,21 @@ var kCharNames,
 
 function localize(lang) {
 
+    selectedControlModule = defaultControlModule = controlModules.find(function(c) {
+        return c.locale === '' || c.locale == lang;
+    });
+
+
     switch(lang) {
 
         case "en":
 
             //defaultControlModule = 'controls/en/classic-midi.xml';
-            defaultControlModule = 'controls/en/classic.xml';
+            //defaultControlModule = 'controls/en/classic.xml';
 
             defaultCellFont = 'cellfonts/en/classic.xml';
 
+            kControlChangeSymbol = "\u2388";
             kDefaultFilename = "Untitled Score";
             kDotsPrefix = "Dots";
             kDropFileZoneMessage = "Drop file here to load";

@@ -189,3 +189,49 @@ h3 {
 	text-align: center;
 	padding-bottom: 20px;
 	}
+
+#dialog {
+    position: absolute;
+    background-color: white;
+    border: solid 1px black;
+    padding: 3vh;
+    width: 40vw;
+    left: 30vw;
+    top: 30vh;
+    box-shadow: 5px 5px 5px lightgray;
+}
+
+#dialogTitle {
+    font-weight: bold;
+    font-size: 4vh;
+}
+
+#dialogDescription {
+    margin-top: 3vh;
+    font-size: 2.5vh;
+}
+
+#dialogControlList {
+    margin-top: 3vh;
+}
+
+.dialogControlListItem {
+    background-color: #eee;
+    padding: 1vh;
+    margin-bottom: 1vh;
+    padding-left: 3vh;
+    border-radius: 1.5vh;
+    border: solid 1px white;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    font-size: 2.3vh;
+}
+
+.dialogControlListItem[selected] {
+    background-color: #bbf;
+    font-weight: bold;
+}
+
+.dialogControlListItem:hover {
+    border: solid 1px black;
+}

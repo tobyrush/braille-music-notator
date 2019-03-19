@@ -1,4 +1,4 @@
-/* global helpWindow, helpDialogOpen, optionsDialogOpen, fileDialogOpen, notationArea, notationWidth, window, config, nu, ctx, roundRect, dialogTop, dialogButtonLeft, dialogButtonTop, dialogButtonRight, interpretBraille, drawAllDots, notationGridHeight, showPageBreaks, pageWidth, pageHeight, dialogButtonWidth, dialogButtonHeight, parseOnImport, notationHeight, closeButtonCenterX, closeButtonCenterY, kOptionsDialogTitle, kShowTranslatedBrailleLabel, kShowTranslatedBrailleDescription, kShowSmallDotsLabel, kShowSmallDotsDescription, kScoreSizeLabel, kShowPageBoundariesLabel, kShowPageBoundariesDescription, kWidthLabel, kHeightLabel, kFileDialogTitle, kNewFileLabel, kNewFileDescription, kOpenFileLabel, kOpenFileDescription, kSaveFileLabel, kSaveFileDescription, kExportFileLabel, kExportFileDescription, kParseImportedFilesLabel, kParseImportedFilesDescription, currentCellFont: true */
+/* global helpWindow, helpDialogOpen, optionsDialogOpen, fileDialogOpen, notationArea, notationWidth, window, config, nu, ctx, roundRect, dialogTop, dialogButtonLeft, dialogButtonTop, dialogButtonRight, interpretBraille, drawAllDots, notationGridHeight, showPageBreaks, pageWidth, pageHeight, dialogButtonWidth, dialogButtonHeight, parseOnImport, notationHeight, closeButtonCenterX, closeButtonCenterY, kOptionsDialogTitle, kShowTranslatedBrailleLabel, kShowTranslatedBrailleDescription, kShowSmallDotsLabel, kShowSmallDotsDescription, kScoreSizeLabel, kShowPageBoundariesLabel, kShowPageBoundariesDescription, kWidthLabel, kHeightLabel, kFileDialogTitle, kNewFileLabel, kNewFileDescription, kOpenFileLabel, kOpenFileDescription, kSaveFileLabel, kSaveFileDescription, kExportFileLabel, kExportFileDescription, kParseImportedFilesLabel, kParseImportedFilesDescription, currentCellFont, document, controlModules, currentLocale, selectedControlModule, initializeControls: true */
 /* jshint -W020 */
 
 function toggleHelpDialog() {
@@ -297,11 +297,42 @@ function drawFileDialog() {
 		ctx.closePath();
 		ctx.lineWidth=2;
 	}
-	
-	
-	
 }
 
-//function commitCanvasMagnification() {
-//	setCellHeight(dialogField.value*1);
-//}
+function toggleControlSelectionDialog() {
+    if (document.querySelectorAll("#dialog").length) {
+        hideControlSelectionDialog();
+    } else {
+        showControlSelectionDialog();
+    }
+}
+
+function showControlSelectionDialog() {
+    var d = document.createElement('div');
+    d.setAttribute('id','dialog');
+    d.appendNode('div',{id:'dialogTitle'}).textContent = 'Select Controls';
+    d.appendNode('div',{id:'dialogDescription'}).textContent = 'Select one of the control arrangements below.';
+    var e = d.appendNode('div',{id:'dialogControlList'});
+    controlModules.forEach(function(cm) {
+        if (cm.locale === '' || cm.locale == currentLocale) {
+            var params = {class:'dialogControlListItem', onClick:'setControlModule('+cm.id+');'};
+            if (selectedControlModule.id == cm.id) {
+                params.selected = "selected";
+            }
+            e.appendNode('div', params).textContent = cm.name;
+        }
+    });
+    document.body.appendChild(d);
+}
+
+function setControlModule(whichID) {
+    selectedControlModule = controlModules.find(function(c) {
+        return c.id == whichID;
+    });
+    initializeControls(true);
+    hideControlSelectionDialog();
+}
+
+function hideControlSelectionDialog() {
+    document.querySelector("#dialog").remove();
+}

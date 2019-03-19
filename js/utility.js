@@ -455,3 +455,21 @@ Object.prototype.getPropertyOrValue = function (prop, val) {
         return val;
     }
 };
+Object.defineProperty(Object.prototype, "getPropertyOrValue", {enumerable: false});
+
+//Object.prototype.appendNode = function(type,id) {
+//    var el = document.createElement(type);
+//    el.setAttribute('id',id);
+//    this.appendChild(el);
+//    return el;
+//};
+
+Object.prototype.appendNode = function(type,params) {
+    var el = document.createElement(type);
+    for (var p in params) {
+        el.setAttribute(p,params[p]);
+    }
+    this.appendChild(el);
+    return el;
+};
+Object.defineProperty(Object.prototype, "appendNode", {enumerable: false});

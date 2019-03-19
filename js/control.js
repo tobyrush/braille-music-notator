@@ -1,4 +1,4 @@
-/* global titleArea, tctx, versionString, helpDialogOpen, roundRect, optionsDialogOpen, fileDialogOpen, controlArea, cctx, whichKeyboard, keyboardCoordinates, keymap, keycaps, displayControlHelp, cursor, hScroll, vScroll, controlsHeight, controlsWidth, chu, resizeBarHeight, keyboardOriginX, keyboardOriginY, kbu, controlHelpOriginX, controlHelpOriginY, console, shiftKeyDown, metaKeyDown, formFill, kProgramTitle, kVersionAndAuthor, kHelpButtonCaption, kOptionsButtonCaption, kFileButtonCaption, sendHTTPRequest, defaultControlModule, DOMParser, currentControlModule, updateScreenreader, kScreenReaderControlPageNumber, createTemporaryGrid, gridWidth, gridHeight, releaseTemporaryGrid, document, devMode, score, drawStoredScore, notate, tempGrid, drawNotation, currentCellFont, notationArea, notateMIDINotes: true */
+/* global titleArea, tctx, versionString, helpDialogOpen, roundRect, optionsDialogOpen, fileDialogOpen, controlArea, cctx, whichKeyboard, keyboardCoordinates, keymap, keycaps, displayControlHelp, cursor, hScroll, vScroll, controlsHeight, controlsWidth, chu, resizeBarHeight, keyboardOriginX, keyboardOriginY, kbu, controlHelpOriginX, controlHelpOriginY, console, shiftKeyDown, metaKeyDown, formFill, kProgramTitle, kVersionAndAuthor, kHelpButtonCaption, kOptionsButtonCaption, kFileButtonCaption, sendHTTPRequest, defaultControlModule, DOMParser, currentControlModule, updateScreenreader, kScreenReaderControlPageNumber, createTemporaryGrid, gridWidth, gridHeight, releaseTemporaryGrid, document, devMode, score, drawStoredScore, notate, tempGrid, drawNotation, currentCellFont, notationArea, notateMIDINotes, selectedControlModule, kControlChangeSymbol, toggleControlSelectionDialog: true */
 /* jshint -W020 */
 
 function initializeTitle() {
@@ -62,14 +62,14 @@ function drawTitle() {
 
 }
 
-function initializeControls() {
-    if (currentControlModule) {
+function initializeControls(forceLoad = false) {
+    if (currentControlModule && !forceLoad) {
         currentControlModule.updateSizes();
     } else {
         // appending the date forces an uncached copy
         sendHTTPRequest(
             loadControlModule,
-            defaultControlModule+'?_='+new Date().getTime(),
+            selectedControlModule.pathname+'?_='+new Date().getTime(),
             ""
         );
     }
@@ -191,6 +191,14 @@ class controlModule {
             this.width = this.width-pbw;
         }
 
+        // draw control switcher
+        ctx.fillStyle="#CCC";
+        ctx.fillRect(this.width-pbw,0,pbw,pbw);
+
+        ctx.fillStyle="#FFF";
+        ctx.fillText(kControlChangeSymbol,this.width-(pbw/2),pbw/2);
+
+
         if (devMode) {
             // draw grid
             ctx.beginPath();
@@ -242,7 +250,11 @@ class controlModule {
             this.currentPage = Math.floor(y/this.pageButtonHeight);
             this.draw();
         } else {
-            this.pages[this.currentPage].click(x-this.pageButtonWidth,y);
+            if (x>(this.width-this.pageButtonWidth) && (y<=this.pageButtonWidth)) {
+                toggleControlSelectionDialog();
+            } else {
+                this.pages[this.currentPage].click(x-this.pageButtonWidth,y);
+            }
         }
     }
     mouseOver(x,y) {

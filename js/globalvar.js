@@ -33,9 +33,29 @@ var parseOnImport = true;
 var currentBeatUnit = 4;
 var resizeBarHeight = 10;
 var currentFileName = '';
+var currentLocale = 'en';
 
-var controlModules = ['controls/en/classic.xml','controls/en/classic-midi.xml'];
-var defaultControlModule = 'controls/en/classic.html';
+var controlModules = [
+    {
+        id: 1,
+        name: 'Classic',
+        pathname: 'controls/en/classic.xml',
+        locale: ''
+    },
+    {
+        id: 2,
+        name: 'MIDI',
+        pathname: 'controls/en/classic-midi.xml',
+        locale: ''
+    },
+    {
+        id: 3,
+        name: 'Classic',
+        pathname: 'controls/tr/classic.xml',
+        locale: 'tr'
+    }
+];
+var selectedControlModule = controlModules[0];
 var currentControlModule;
 
 var cellFonts = ['cellfonts/en/classic.xml'];
