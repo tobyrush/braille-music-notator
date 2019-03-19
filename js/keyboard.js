@@ -251,6 +251,7 @@ function interpretKeyCode(keyCode) {
                 } else {
                     placeCursor(0,y+1,1,1,"");
                 }
+                scrollToCursor();
                 break;
             case 33: // page up
                 hScroll=0;
@@ -325,7 +326,9 @@ function interpretKeyCode(keyCode) {
                 currentControlModule.keyPress(keyCode);
         }
     }
-
+    if (!dontScroll) {
+        scrollToCursor();
+    }
     drawNotation();
     drawControls();
 	return passThrough;
@@ -354,6 +357,6 @@ function notate(chars,readerText) {
         suspendUndo = false;
     }
     placeCursor(x+adv,y,1,1,readerText);
-    scrollToCursor();
+    //scrollToCursor();
     //drawNotation();
 }
