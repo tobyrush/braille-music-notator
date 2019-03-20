@@ -1894,9 +1894,9 @@
     </cell>
     <cell name="text contraction character">
         <code value="534" />
-        <code value="758" />
+        <code value="742" />
         <graphic type="background" color="#fff" cells="2" />
-        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="CHARACTER" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="50" content="CHARACTER" />
     </cell>
     <cell name="text contraction child">
         <code value="642" />
@@ -2718,6 +2718,12 @@
         <code value="545" />
         <graphic type="background" color="#fff" cells="3" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="150" top="50" content="&#x2014;" />
+    </cell>
+    <cell name="text en dash symbol" word-modifier="1">
+        <code value="544" />
+        <code value="545" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="&#x2013;" />
     </cell>
     <cell name="text en dash symbol" word-modifier="1">
         <code value="545" />
