@@ -248,14 +248,16 @@ function parseText(fileData) {
         fileData = fileData.replaceAll(a[0],a[1]);
     });
 	fileData = fileData.replace(/#[A-J]+4*[A-J]*/g, convertBrailleLettersToNumbers); // convert letters after pound sign to numbers
+	fileData = fileData.replace(/^([a-zA-Z*%:?\\257890/])(?=\s)/g, convertSingleLetterWordAbbreviation); // convert text abbreviations
 	fileData = fileData.replace(/[\s,]([a-zA-Z*%:?\\257890/])(?=\s)/g, convertSingleLetterWordAbbreviation); // convert text abbreviations
 	fileData = fileData.replace(/(\s|^)([-23460])[A-Za-z]/g, convertSingleLetterPrefixAbbreviation); // convert text abbreviations
     fileData = fileData.replace(/(["^_.;][A-Za-z!:\\*?])/g, convertTextAbbreviation); // convert text abbreviations
 	fileData = fileData.replace(/\s(,[A-Za-z!:\\*?])/g, convertTextAbbreviation); // convert text abbreviations
     fileData = fileData.replace(/\s(,[A-Za-z!:\\*?])/g, convertTextAbbreviation); // convert text abbreviations
     fileData = fileData.replace(/\s(,[A-Za-z!:\\*?])/g, convertTextAbbreviation); // convert text abbreviations
-    fileData = fileData.replace(/([1-790])[A-Za-z]/g, convertMidWordNumbers); // numbers inside words are contractions
-    fileData = fileData.replace(/[A-Za-z]([1-790])/g, convertMidWordNumbers); // numbers inside words are contractions
+    fileData = fileData.replace(/[A-Za-z]([123467])[A-Za-z]/g, convertMidWordNumbers); // numbers inside words are contractions
+    fileData = fileData.replace(/([59])[A-Za-z]/g, convertMidWordNumbers); // numbers inside words are contractions
+    fileData = fileData.replace(/[A-Za-z]([59])/g, convertMidWordNumbers); // numbers inside words are contractions
     fileData = fileData.replace(/,[/>+*<%?\-:$\]\\\[123456790]/g, convertCapitalizedContraction); // single-cell contractions preceded by the capital sign
     return fileData;
 }

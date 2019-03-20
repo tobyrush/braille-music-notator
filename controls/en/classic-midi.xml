@@ -235,7 +235,7 @@
             <character code="359" />
             <character code="366" />
         </control>
-        <control keycode="71" top="49" left="118" width="18" height="18" label="Begin Bracket Slur">
+        <control keycode="71" top="49" left="118" width="18" height="18" label="End Bracket Slur">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
             <graphic type="text" color="#000" size="20" align="center" top="25" left="47" baseline="middle" content="END" />
             <graphic type="text" color="#000" size="20" align="center" top="51" left="47" baseline="middle" content="SLUR" />
@@ -254,15 +254,15 @@
             <character code="162" />
             <character code="567" />
         </control>
-        <control keycode="74" top="49" left="154" width="18" height="18" label="Begin Diminuendo">
+        <control keycode="74" top="49" left="154" width="18" height="18" label="End Crescendo">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#0FF" />
-            <graphic type="text" color="#000" size="20" align="center" top="25" left="47" baseline="middle" content="BEGIN" />
-            <graphic type="line" color="#000" startX="30" startY="45" endX="70" endY="55" lineWidth="1" />
-            <graphic type="line" color="#000" startX="70" startY="55" endX="30" endY="65" lineWidth="1" />
+            <graphic type="text" color="#000" size="20" align="center" top="25" left="47" baseline="middle" content="END" />
+            <graphic type="line" color="#000" startX="70" startY="45" endX="30" endY="55" lineWidth="1" />
+            <graphic type="line" color="#000" startX="30" startY="55" endX="70" endY="65" lineWidth="1" />
             <graphic type="text" color="#077" left="15" top="80" size="20" content="J" />
             <help page="gradualDynamics" />
             <character code="162" />
-            <character code="568" />
+            <character code="551" />
         </control>
         <control keycode="75" top="49" left="172" width="18" height="18" label="Staccato">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#7F462C" />
@@ -317,15 +317,15 @@
             <help page="measureRepeat" />
             <character code="155" />
         </control>
-        <control keycode="66" top="67" left="124" width="18" height="18" label="End Crescendo">
+        <control keycode="66" top="67" left="124" width="18" height="18" label="Begin Diminuendo">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#0FF" />
-            <graphic type="text" color="#000" size="20" align="center" top="25" left="47" baseline="middle" content="END" />
-            <graphic type="line" color="#000" startX="70" startY="45" endX="30" endY="55" lineWidth="1" />
-            <graphic type="line" color="#000" startX="30" startY="55" endX="70" endY="65" lineWidth="1" />
+            <graphic type="text" color="#000" size="20" align="center" top="25" left="47" baseline="middle" content="BEGIN" />
+            <graphic type="line" color="#000" startX="30" startY="45" endX="70" endY="55" lineWidth="1" />
+            <graphic type="line" color="#000" startX="70" startY="55" endX="30" endY="65" lineWidth="1" />
             <graphic type="text" color="#077" left="15" top="80" size="20" content="B" />
             <help page="gradualDynamics" />
             <character code="162" />
-            <character code="551" />
+            <character code="568" />
         </control>
         <control keycode="78" top="67" left="142" width="18" height="18" label="End Diminuendo">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#0FF" />
