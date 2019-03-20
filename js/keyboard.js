@@ -227,11 +227,13 @@ function interpretKeyCode(keyCode) {
             case 16: // shift
                 shiftKeyDown = true;
                 passThrough = true;
+                dontScroll = true;
                 break;
             case 17: // control
                 metaKeyDown = true;
                 focusClipboard();
                 passThrough = true;
+                dontScroll = true;
                 break;
             case 91: // left command (Safari/Chrome/Opera)
             case 93: // right command (Safari/Chrome/Opera)
@@ -242,6 +244,7 @@ function interpretKeyCode(keyCode) {
                     //populateClipboard();
                 }
                 passThrough = true;
+                dontScroll = true;
                 break;
 //            case 18: // alt/option
 //                break;
