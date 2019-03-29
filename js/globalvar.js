@@ -2,6 +2,7 @@
 
 // global variables
 
+var useLaunchpad = false;
 var notationArea,controlArea,titleArea,fileUploader,clipboardArea;
 var notationCellWidth,notationCellHeight; // these can have fractional values
 var ctx, nwu, nhu, nu, chu;

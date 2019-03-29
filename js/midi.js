@@ -1,4 +1,4 @@
-/* global midiConnected, midiNotes, notate, octaveValues, restValues, sharpNoteValues, flatNoteValues, drawNotation, octaveCharValues, pitchValues, score, cursor: true */
+/* global midiConnected, midiNotes, notate, octaveValues, restValues, sharpNoteValues, flatNoteValues, drawNotation, octaveCharValues, pitchValues, score, cursor, useLaunchpad: true */
 /* jshint -W020 */
 
 function onMIDISuccess(midiAccess) {
@@ -51,7 +51,11 @@ function notateMIDINotes(duration,showOctave,sharp) {
     var pc = -1;
     var noteArray;
     if (midiNotes.length) {
-        pc = midiNotes[0] % 12;
+        if (useLaunchpad) {
+            pc = translateLaunchpad(midiNotes[0]).pitchClass;
+        } else {
+            pc = midiNotes[0] % 12;
+        }
     }
 
     if (pc<0) {
@@ -67,8 +71,13 @@ function notateMIDINotes(duration,showOctave,sharp) {
         var p = getPitch(noteArray); // return diatonic pitch # from noteArray
         var oct = getOctave(midiNotes[0]); // return octave number from MIDI pitch value
 
+        if (useLaunchpad) {
+            oct = translateLaunchpad(midiNotes[0]).octave;
+        }
+
         if (showOctave || needsOctaveSign(score[cursor.y],cursor.x,p,oct)) {
-            notate(octaveValues[Math.floor(midiNotes[0]/12)-1],"");
+            notate(octaveValues[oct],"");
+//            notate(octaveValues[Math.floor(midiNotes[0]/12)-1],"");
         }
 
         notate(noteArray);
@@ -123,6 +132,15 @@ function needsOctaveSign(chars,position,pitch,octave) {
         return true;
     }
 
+}
+
+function translateLaunchpad(value) {
+    var result = {};
+
+    result.pitchClass = [-1,0,2,4,5,7,9,11,-1,-1][value % 10];
+    result.octave = Math.floor(value/10);
+
+    return result;
 }
 
 //function findOctave(chars,position) {
