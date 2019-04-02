@@ -104,30 +104,34 @@ function needsOctaveSign(chars,position,pitch,octave) {
 	var newPitch, curPitch = 0;
 	var diff = 0;
 	var i = 0;
-	while (i<position) {
-		if (typeof(octaveCharValues[chars[i]])==='number') {
-            curOctave = octaveCharValues[chars[i]];
-            justChanged = true;
-        } else if (typeof(pitchValues[chars[i]])==='number') {
-            newPitch = pitchValues[chars[i]];
-            if (!justChanged) {
-                if ((curPitch==6 && newPitch<2) || (curPitch==5 && newPitch===0)) {
-                    curOctave += 1;
-                } else if ((curPitch===0 && newPitch>4) || (curPitch==1 && newPitch==6)) {
-                    curOctave -= 1;
+	if (chars) {
+        while (i<position) {
+            if (typeof(octaveCharValues[chars[i]])==='number') {
+                curOctave = octaveCharValues[chars[i]];
+                justChanged = true;
+            } else if (typeof(pitchValues[chars[i]])==='number') {
+                newPitch = pitchValues[chars[i]];
+                if (!justChanged) {
+                    if ((curPitch==6 && newPitch<2) || (curPitch==5 && newPitch===0)) {
+                        curOctave += 1;
+                    } else if ((curPitch===0 && newPitch>4) || (curPitch==1 && newPitch==6)) {
+                        curOctave -= 1;
+                    }
                 }
+                curPitch = newPitch;
+                justChanged = false;
             }
-            curPitch = newPitch;
-            justChanged = false;
+            i++;
         }
-		i++;
-	}
 
-    if ((octave==curOctave && Math.abs(curPitch-pitch)<5) ||
-        (octave>curOctave && ((curPitch==6 && pitch<2) || (curPitch==5 && pitch===0))) ||
-        (octave<curOctave && ((curPitch===0 && pitch>4) || (curPitch==1 && pitch==6)))
-        ) {
-        return false;
+        if ((octave==curOctave && Math.abs(curPitch-pitch)<5) ||
+            (octave>curOctave && ((curPitch==6 && pitch<2) || (curPitch==5 && pitch===0))) ||
+            (octave<curOctave && ((curPitch===0 && pitch>4) || (curPitch==1 && pitch==6)))
+            ) {
+            return false;
+        } else {
+            return true;
+        }
     } else {
         return true;
     }
