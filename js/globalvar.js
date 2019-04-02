@@ -3,6 +3,7 @@
 // global variables
 
 var useLaunchpad = false;
+var useWordWrap = true;
 var notationArea,controlArea,titleArea,fileUploader,clipboardArea;
 var notationCellWidth,notationCellHeight; // these can have fractional values
 var ctx, nwu, nhu, nu, chu;
@@ -178,6 +179,31 @@ function cellValIsEmpty(val) {
         val !== 0 &&
         val != 32
     );
+}
+
+function lineIsEmpty(y) {
+    if (score[y]) {
+        var l = score[y].length;
+        for (var x=0; x<l; x++) {
+            if (!cellValIsEmpty(score[y][x])) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+function removeLastWordOfLine(y) {
+    var v,word = [];
+    // trim any ending whitespace
+    while (cellValIsEmpty(score[y][score[y].length-1])) {
+        v = score[y].pop();
+    }
+    // collect cells from end until we hit a space
+    while (!cellValIsEmpty(score[y][score[y].length-1])) {
+        word.unshift(score[y].pop());
+    }
+    return word;
 }
 
 function getCellContext(x,y) {
