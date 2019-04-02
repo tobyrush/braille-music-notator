@@ -353,6 +353,7 @@ function localize(lang) {
                 [mkStr([0,0,0,554,0,0,0]),"exclamation point"],
                 [mkStr([0,0,0,555,0,0,0]),"parenthesis"],
                 [mkStr([0,0,0,556,0,0,0]),"question mark"],
+                [mkStr([0,0,0,557,0,0,0]),"text contraction in"],
                 [mkStr([0,0,0,558,0,0,0]),"text contraction w h"],
                 [mkStr([0,0,0,559,0,0,0]),"text sign"],
                 [mkStr([0,0,0,560,0,0,0]),"text contractio  g h"],
@@ -414,7 +415,6 @@ function localize(lang) {
                 [mkStr([0,0,0,654,0,0,0]),"text contraction f f"],
                 [mkStr([0,0,0,655,0,0,0]),"text contraction g g"],
                 [mkStr([0,0,0,656,0,0,0]),"open quotation marks"],
-                [mkStr([0,0,0,657,0,0,0]),"text contraction in"],
                 [mkStr([0,0,0,658,0,0,0]),"text contraction which"],
                 [mkStr([0,0,0,659,0,0,0]),"text contraction symbol"],
                 [mkStr([0,0,0,660,349,0,0]),"first character of braille music comma"],
@@ -623,7 +623,7 @@ function localize(lang) {
             kWordAbbreviations['5'] = String.fromCharCode(753);
             kWordAbbreviations['7'] = String.fromCharCode(755);
             kWordAbbreviations['8'] = String.fromCharCode(756);
-            kWordAbbreviations['9'] = String.fromCharCode(657);
+            kWordAbbreviations['9'] = String.fromCharCode(557);
             kWordAbbreviations['0'] = String.fromCharCode(748);
 
             kPrefixAbbreviations['2'] = String.fromCharCode(750);
@@ -975,6 +975,7 @@ function localize(lang) {
                 [mkStr([0,0,0,545,0,0,0]),"hyphen"],
                 [mkStr([0,0,0,546,0,0,0]),"decimal point"],
                 [mkStr([0,0,0,547,0,0,0]),"text contraction s t"],
+                [mkStr([0,0,0,548,0,0,0]),"close quotation marks"],
                 [mkStr([0,0,0,549,0,0,0]),"comma"],
                 [mkStr([0,0,0,550,0,0,0]),"semicolon"],
                 [mkStr([0,0,0,551,0,0,0]),"colon"],
@@ -1037,7 +1038,7 @@ function localize(lang) {
                 [mkStr([0,0,0,645,0,0,0]),"text contraction com"],
                 [mkStr([0,0,0,646,0,0,0]),"first character of measure division symbol for in-accord"],
                 [mkStr([0,0,0,647,0,0,0]),"slash"],
-                [mkStr([0,0,0,648,0,0,0]),"close quotation marks"],
+                [mkStr([0,0,0,648,0,0,0]),"text contraction by"],
                 [mkStr([0,0,0,649,0,0,0]),"text contraction e a"],
                 [mkStr([0,0,0,650,0,0,0]),"text contraction b b"],
                 [mkStr([0,0,0,651,0,0,0]),"text contraction c c"],
@@ -1045,7 +1046,6 @@ function localize(lang) {
                 [mkStr([0,0,0,654,0,0,0]),"text contraction f f"],
                 [mkStr([0,0,0,655,0,0,0]),"text contraction g g"],
                 [mkStr([0,0,0,656,0,0,0]),"open quotation marks"],
-                [mkStr([0,0,0,657,0,0,0]),"text contraction by"],
                 [mkStr([0,0,0,658,0,0,0]),"text contraction which"],
                 [mkStr([0,0,0,659,0,0,0]),"text contraction symbol"],
                 [mkStr([0,0,0,660,349,0,0]),"first character of braille music comma"],
