@@ -1,4 +1,4 @@
-/* global shiftKeyDown, metaKeyDown, cursor, whichKeyboard, score, clearSelection, cellIsEmpty, deleteScore, hScrollUnits, isMacOS, focusClipboard, firstCharPosInRow, hScroll, vScroll, deleteRowAtCursor, insertRowAtCursor, setScore, scoreWidth, scoreHeight, updateScreenreader, drawAllDots, downloadFile, currentBeatUnit, parseOnImport, showPageBreaks, setPageSize, pageWidth, pageHeight, confirm, clearDocument, resetCursorAndScroll, fileUploader, rotateSelection, convertSelectionToText, useBrailleDisplay, doRedo, doUndo, setCellHeight, gridHeight, saveToUndo, suspendUndo, scrollToCursor, characterName, drawNotation, drawControls, getScore, currentControlModule, kUnsavedChangesDialogMessage, kKeyCommands, formFill, placeCursor, currentCellFont: true */
+/* global shiftKeyDown, metaKeyDown, cursor, whichKeyboard, score, clearSelection, cellIsEmpty, deleteScore, hScrollUnits, isMacOS, focusClipboard, firstCharPosInRow, hScroll, vScroll, deleteRowAtCursor, insertRowAtCursor, setScore, scoreWidth, scoreHeight, updateScreenreader, drawAllDots, downloadFile, currentBeatUnit, parseOnImport, showPageBreaks, setPageSize, pageWidth, pageHeight, confirm, clearDocument, resetCursorAndScroll, fileUploader, rotateSelection, convertSelectionToText, useBrailleDisplay, doRedo, doUndo, setCellHeight, gridHeight, saveToUndo, suspendUndo, scrollToCursor, characterName, drawNotation, drawControls, getScore, currentControlModule, kUnsavedChangesDialogMessage, kKeyCommands, formFill, placeCursor, currentCellFont, useWordWrap, lineIsEmpty, removeLastWordOfLine, octaveCharValues, pitchValues, octaveValues, findPitchAtPosition, cellValIsEmpty, isAccidental: true */
 /* jshint -W020 */
 
 function doKeyDown(e) {
@@ -340,7 +340,7 @@ function interpretKeyCode(keyCode) {
 function notate(chars,readerText) {
     var x=cursor.x;
     var y=cursor.y;
-    var thisRow;
+    var i,thisRow;
     if (shiftKeyDown) {
         if (typeof score[y]!=="undefined") {
             thisRow = score[y].clone(); // capture the row to displace it to the right
@@ -354,12 +354,47 @@ function notate(chars,readerText) {
         thisRow.splice(0,x+hScrollUnits);
         saveToUndo();
         suspendUndo = true;
-        for (var i=0;i<thisRow.length;i++) {
+        for (i=0;i<thisRow.length;i++) {
             setScore(x+adv+i,y,thisRow[i]);
         }
         suspendUndo = false;
     }
-    placeCursor(x+adv,y,1,1,readerText);
-    //scrollToCursor();
-    //drawNotation();
+
+    if (showPageBreaks && useWordWrap && x+adv>pageWidth && lineIsEmpty(y+1)) {
+        if (chars.length==1 && cellValIsEmpty(chars[0])) {
+            placeCursor(firstCharPosInRow(y),y+1,1,1,readerText);
+        } else {
+            var word = removeLastWordOfLine(y);
+            var firstPitch = findFirstUnoctavatedPitch(word);
+            if (firstPitch >= 0) {
+                var o = octaveValues[findPitchAtPosition(score[y],score[y].length).octave];
+                for (i=o.length; i>0; i--) {
+                    word.splice(firstPitch,0,o[i-1]);
+                }
+            }
+            x = firstCharPosInRow(y);
+            var l = word.length;
+            for (i=0; i<l; i++) {
+                setScore(x+i,y+1,word[i]);
+            }
+            placeCursor(x+word.length,y+1,1,1,readerText);
+        }
+    } else {
+        placeCursor(x+adv,y,1,1,readerText);
+    }
+}
+
+function findFirstUnoctavatedPitch(word) {
+    var l = word.length;
+    for (var i=0; i<l; i++) {
+        if (typeof(octaveCharValues[word[i]])==='number') {
+            return -1;
+        } else if (typeof(pitchValues[word[i]])==='number' ||
+                   (isAccidental(word[i]) && typeof(pitchValues[word[i+1]])==='number') ||
+                   (isAccidental(word[i]) && isAccidental(word[i+1]) && typeof(pitchValues[word[i+2]])==='number')
+                  ) {
+            return i;
+        }
+    }
+    return -1;
 }

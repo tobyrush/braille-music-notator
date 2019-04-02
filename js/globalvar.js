@@ -3,6 +3,7 @@
 // global variables
 
 var useLaunchpad = false;
+var useWordWrap = true;
 var notationArea,controlArea,titleArea,fileUploader,clipboardArea;
 var notationCellWidth,notationCellHeight; // these can have fractional values
 var ctx, nwu, nhu, nu, chu;
@@ -180,6 +181,31 @@ function cellValIsEmpty(val) {
     );
 }
 
+function lineIsEmpty(y) {
+    if (score[y]) {
+        var l = score[y].length;
+        for (var x=0; x<l; x++) {
+            if (!cellValIsEmpty(score[y][x])) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+function removeLastWordOfLine(y) {
+    var v,word = [];
+    // trim any ending whitespace
+    while (cellValIsEmpty(score[y][score[y].length-1])) {
+        v = score[y].pop();
+    }
+    // collect cells from end until we hit a space
+    while (!cellValIsEmpty(score[y][score[y].length-1])) {
+        word.unshift(score[y].pop());
+    }
+    return word;
+}
+
 function getCellContext(x,y) {
     // returns a string containing the character and the three cells before and after
     var r="";
@@ -326,4 +352,16 @@ function releaseTemporaryGrid() {
     score = storedScore.slice(0);
     blankCells = storedBlankCells.slice(0);
     tempGrid = false;
+}
+
+function isAccidental(val) {
+    return (val==42 ||
+            val==60 ||
+            val==37 ||
+            val==360 ||
+            val==337 ||
+            val==695 ||
+            val==664 ||
+            val==694
+           );
 }

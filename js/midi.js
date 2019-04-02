@@ -98,43 +98,77 @@ function getOctave(midiPitch) {
     return Math.floor(midiPitch/12)-1;
 }
 
-function needsOctaveSign(chars,position,pitch,octave) {
-
-	var justChanged, curOctave = -99;
-	var newPitch, curPitch = 0;
-	var diff = 0;
-	var i = 0;
-	if (chars) {
+function findPitchAtPosition(chars,position) {
+    var result = {};
+    var newPitch, justChanged, i = 0;
+    result.pitch = 0;
+    result.octave = -99;
+    if (chars) {
         while (i<position) {
             if (typeof(octaveCharValues[chars[i]])==='number') {
-                curOctave = octaveCharValues[chars[i]];
+                result.octave = octaveCharValues[chars[i]];
                 justChanged = true;
             } else if (typeof(pitchValues[chars[i]])==='number') {
                 newPitch = pitchValues[chars[i]];
                 if (!justChanged) {
-                    if ((curPitch==6 && newPitch<2) || (curPitch==5 && newPitch===0)) {
-                        curOctave += 1;
-                    } else if ((curPitch===0 && newPitch>4) || (curPitch==1 && newPitch==6)) {
-                        curOctave -= 1;
+                    if ((result.pitch==6 && newPitch<2) || (result.pitch==5 && newPitch===0)) {
+                        result.octave += 1;
+                    } else if ((result.pitch===0 && newPitch>4) || (result.pitch==1 && newPitch==6)) {
+                        result.octave -= 1;
                     }
                 }
-                curPitch = newPitch;
+                result.pitch = newPitch;
                 justChanged = false;
             }
             i++;
         }
-
-        if ((octave==curOctave && Math.abs(curPitch-pitch)<5) ||
-            (octave>curOctave && ((curPitch==6 && pitch<2) || (curPitch==5 && pitch===0))) ||
-            (octave<curOctave && ((curPitch===0 && pitch>4) || (curPitch==1 && pitch==6)))
-            ) {
-            return false;
-        } else {
-            return true;
-        }
-    } else {
-        return true;
     }
+    return result;
+}
+
+function needsOctaveSign(chars,position,pitch,octave) {
+
+	var c = findPitchAtPosition(chars,position);
+    return !((octave==c.octave && Math.abs(c.pitch-pitch)<5) ||
+            (octave>c.octave && ((c.pitch==6 && pitch<2) || (c.pitch==5 && pitch===0))) ||
+            (octave<c.octave && ((c.pitch===0 && pitch>4) || (c.pitch==1 && pitch==6)))
+            );
+
+//    var justChanged, curOctave = -99;
+//	var newPitch, curPitch = 0;
+//	var diff = 0;
+//	var i = 0;
+//	if (chars) {
+//        while (i<position) {
+//            if (typeof(octaveCharValues[chars[i]])==='number') {
+//                curOctave = octaveCharValues[chars[i]];
+//                justChanged = true;
+//            } else if (typeof(pitchValues[chars[i]])==='number') {
+//                newPitch = pitchValues[chars[i]];
+//                if (!justChanged) {
+//                    if ((curPitch==6 && newPitch<2) || (curPitch==5 && newPitch===0)) {
+//                        curOctave += 1;
+//                    } else if ((curPitch===0 && newPitch>4) || (curPitch==1 && newPitch==6)) {
+//                        curOctave -= 1;
+//                    }
+//                }
+//                curPitch = newPitch;
+//                justChanged = false;
+//            }
+//            i++;
+//        }
+//
+//        if ((octave==curOctave && Math.abs(curPitch-pitch)<5) ||
+//            (octave>curOctave && ((curPitch==6 && pitch<2) || (curPitch==5 && pitch===0))) ||
+//            (octave<curOctave && ((curPitch===0 && pitch>4) || (curPitch==1 && pitch==6)))
+//            ) {
+//            return false;
+//        } else {
+//            return true;
+//        }
+//    } else {
+//        return true;
+//    }
 
 }
 
