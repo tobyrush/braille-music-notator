@@ -353,3 +353,15 @@ function releaseTemporaryGrid() {
     blankCells = storedBlankCells.slice(0);
     tempGrid = false;
 }
+
+function isAccidental(val) {
+    return (val==42 ||
+            val==60 ||
+            val==37 ||
+            val==360 ||
+            val==337 ||
+            val==695 ||
+            val==664 ||
+            val==694
+           );
+}
