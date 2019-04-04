@@ -315,7 +315,10 @@ function showControlSelectionDialog() {
     var e = d.appendNode('div',{id:'dialogControlList'});
     controlModules.forEach(function(cm) {
         if (cm.locale === '' || cm.locale == currentLocale) {
-            var params = {class:'dialogControlListItem', onClick:'setControlModule('+cm.id+');'};
+            var params = {
+                class:'dialogControlListItem',
+                onClick:'setControlModule('+cm.id+'); hideControlSelectionDialog();'
+            };
             if (selectedControlModule.id == cm.id) {
                 params.selected = "selected";
             }
@@ -330,7 +333,7 @@ function setControlModule(whichID) {
         return c.id == whichID;
     });
     initializeControls(true);
-    hideControlSelectionDialog();
+    //hideControlSelectionDialog();
 }
 
 function hideControlSelectionDialog() {
