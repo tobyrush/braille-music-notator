@@ -45,7 +45,8 @@ function doNotationDrop(e) {
 	
 	// attach event handlers here...
    
-	reader.readAsText(file);
+	currentFileName = file.name;
+    reader.readAsText(file);
 	
   return false;
 }
