@@ -1903,7 +1903,7 @@
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="CHILD" rotate="270" />
     </cell>
-    <cell name="text contraction children">
+    <cell name="text contraction children" discrete="1">
         <code value="542" />
         <code value="578" />
         <graphic type="background" color="#fff" cells="2" />

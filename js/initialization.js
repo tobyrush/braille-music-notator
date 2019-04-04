@@ -1,4 +1,4 @@
-/* global versionString, devMode, container, document, notationArea, window, doKeyDown, doKeyUp, doWindowMouseUp, doWindowMouseMove, handleClipboard, fileUploader, doFileOpen, doNotationMouseDown, doNotationMouseUp, doNotationMouseMove, doNotationDragOver, doNotationDragEnter, doNotationDragLeave, doNotationDrop, doNotationMouseWheel, controlArea, doControlMouseDown, doControlMouseMove, doControlMouseOut, titleArea, doTitleMouseDown, cctx, tctx, ctx, clipboardArea, cursor, loadCookie, initializeTitle, initializeNotation, initializeControls, resizeBarPosition, localize, currentFileName, kDefaultFilename, drawNotation, currentControlModule, navigator, onMIDISuccess, onMIDIFailure, currentLocale: true */
+/* global versionString, devMode, container, document, notationArea, window, doKeyDown, doKeyUp, doWindowMouseUp, doWindowMouseMove, handleClipboard, fileUploader, doFileOpen, doNotationMouseDown, doNotationMouseUp, doNotationMouseMove, doNotationDragOver, doNotationDragEnter, doNotationDragLeave, doNotationDrop, doNotationMouseWheel, controlArea, doControlMouseDown, doControlMouseMove, doControlMouseOut, titleArea, doTitleMouseDown, cctx, tctx, ctx, clipboardArea, cursor, loadCookie, initializeTitle, initializeNotation, initializeControls, resizeBarPosition, localize, currentFileName, kDefaultFilename, drawNotation, currentControlModule, navigator, onMIDISuccess, onMIDIFailure, currentLocale, doWindowBlur: true */
 /* jshint -W020 */
 
 function initialize() {
@@ -14,6 +14,7 @@ function initialize() {
 	window.addEventListener("resize",refreshCanvases,false);
 	window.addEventListener("mouseup",doWindowMouseUp,false);
 	window.addEventListener("mousemove",doWindowMouseMove,false);
+    window.addEventListener("blur",doWindowBlur,false);
 	document.addEventListener("cut",handleClipboard,false);
 	document.addEventListener("copy",handleClipboard,false);
 	document.addEventListener("paste",handleClipboard,false);

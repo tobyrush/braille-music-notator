@@ -39,6 +39,13 @@ function doKeyUp(e) {
 	}
 }
 
+function doWindowBlur(e) {
+    shiftKeyDown = false;
+    metaKeyDown = false;
+    drawControls();
+    return true;
+}
+
 function interpretKeyCode(keyCode) {
 
     var i, thisRow, adv = 0;
