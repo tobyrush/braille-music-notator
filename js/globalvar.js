@@ -1,4 +1,4 @@
-/* global FileReader, importData, arrayHasOwnIndex, drawNotation, createCookie, readCookie, convertScoreToString, convertStringToScore, eraseAllCookies, padLeft, document, kDefaultFilename: true */
+/* global FileReader, importData, arrayHasOwnIndex, drawNotation, createCookie, eraseCookie, readCookie, convertScoreToString, convertStringToScore, eraseAllCookies, padLeft, document, kDefaultFilename, setCellHeight, setControlModule: true */
 
 // global variables
 
@@ -36,6 +36,7 @@ var currentBeatUnit = 4;
 var resizeBarHeight = 10;
 var currentFileName = '';
 var currentLocale = 'en';
+var interpretBrailleDefault = true;
 
 var controlModules = [
     {
@@ -235,6 +236,7 @@ function saveToUndo() {
 		undoStack.push(score.clone());
 		undoCursor = undoStack.length-1;
 		updateCookie();
+        savePreferences();
 	}
 }
 
@@ -364,4 +366,54 @@ function isAccidental(val) {
             val==664 ||
             val==694
            );
+}
+
+function savePreferences() {
+    var tab = String.fromCharCode(9);
+    var ps = (currentCellFont.interpretBraille ? "1" : "0") + tab;
+    ps += (drawAllDots ? "1" : "0") + tab;
+    ps += gridHeight + tab;
+    ps += (showPageBreaks ? "1" : "0") + tab;
+    ps += (useBrailleDisplay ? "1" : "0") + tab;
+    ps += pageWidth + tab + pageHeight + tab;
+    ps += (useLaunchpad ? "1" : "0") + tab;
+    ps += (useWordWrap ? "1" : "0") + tab;
+    ps += (parseOnImport ? "1" : "0") + tab;
+    ps += currentLocale + tab;
+    ps += selectedControlModule.id + tab;
+    ps += cursor.x + tab + cursor.y + tab + cursor.width + tab + cursor.height + tab;
+    ps += currentFileName;
+
+    eraseCookie('bmnpref');
+    createCookie('bmnpref',ps);
+}
+
+function loadPreferences() {
+    var ps = [];
+    var prefString = readCookie('bmnpref');
+    if (prefString) {
+        ps = prefString.split(String.fromCharCode(9));
+    }
+
+    if (ps.length>16) {
+        interpretBrailleDefault = (ps[0]=="1");
+        drawAllDots = (ps[1]=="1");
+        setCellHeight(ps[2]*1,false);
+        showPageBreaks = (ps[3]=="1");
+        useBrailleDisplay = (ps[4]=="1");
+        pageWidth = ps[5]*1;
+        pageHeight = ps[6]*1;
+        useLaunchpad = (ps[7]=="1");
+        useWordWrap = (ps[8]=="1");
+        parseOnImport = (ps[9]=="1");
+        currentLocale = ps[10];
+        setControlModule(ps[11]*1);
+        if (Math.abs(score.length-ps[13])<5) {
+            cursor.x = ps[12]*1;
+            cursor.y = ps[13]*1;
+            cursor.width = ps[14]*1;
+            cursor.height = ps[15]*1;
+            currentFileName = ps[16];
+        }
+    }
 }

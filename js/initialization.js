@@ -1,4 +1,4 @@
-/* global versionString, devMode, container, document, notationArea, window, doKeyDown, doKeyUp, doWindowMouseUp, doWindowMouseMove, handleClipboard, fileUploader, doFileOpen, doNotationMouseDown, doNotationMouseUp, doNotationMouseMove, doNotationDragOver, doNotationDragEnter, doNotationDragLeave, doNotationDrop, doNotationMouseWheel, controlArea, doControlMouseDown, doControlMouseMove, doControlMouseOut, titleArea, doTitleMouseDown, cctx, tctx, ctx, clipboardArea, cursor, loadCookie, initializeTitle, initializeNotation, initializeControls, resizeBarPosition, localize, currentFileName, kDefaultFilename, drawNotation, currentControlModule, navigator, onMIDISuccess, onMIDIFailure, currentLocale, doWindowBlur: true */
+/* global versionString, devMode, container, document, notationArea, window, doKeyDown, doKeyUp, doWindowMouseUp, doWindowMouseMove, handleClipboard, fileUploader, doFileOpen, doNotationMouseDown, doNotationMouseUp, doNotationMouseMove, doNotationDragOver, doNotationDragEnter, doNotationDragLeave, doNotationDrop, doNotationMouseWheel, controlArea, doControlMouseDown, doControlMouseMove, doControlMouseOut, titleArea, doTitleMouseDown, cctx, tctx, ctx, clipboardArea, cursor, loadCookie, initializeTitle, initializeNotation, initializeControls, resizeBarPosition, localize, currentFileName, kDefaultFilename, drawNotation, currentControlModule, navigator, onMIDISuccess, onMIDIFailure, currentLocale, doWindowBlur, loadPreferences: true */
 /* jshint -W020 */
 
 function initialize() {
@@ -63,8 +63,9 @@ function initialize() {
 	controlArea.style.height=(totalHeight-newY)+"px";
 		
 	loadCookie();
+    loadPreferences();
+    initializeCanvases();
 
-	initializeCanvases();
 }
 	
 function initializeCanvases() {

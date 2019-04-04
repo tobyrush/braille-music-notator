@@ -1,4 +1,4 @@
-/* global notationArea, currentCellFont, sendHTTPRequest, defaultCellFont, gridHeight, notationGridHeight, gridWidth, notationGridWidth, notationCellWidth, notationCellHeight, ctx, showPageBreaks, pageWidth, hScrollUnits, hScrollOffset, hScroll, vScrollUnits, vScrollOffset, pageHeight, score, arrayHasOwnIndex, cursor, devMode, getScore, gh, gw, dropzone, kDropFileZoneMessage, optionsDialogOpen, fileDialogOpen, drawOptionsDialog, drawFileDialog, vScroll, setScore, updateScreenreader, formFill, kScreenReaderTemplate, characterName, saveToUndo, brailleDots, drawAllDots, graphic, cellIsEmpty, cellValIsEmpty: true */
+/* global notationArea, currentCellFont, sendHTTPRequest, defaultCellFont, gridHeight, notationGridHeight, gridWidth, notationGridWidth, notationCellWidth, notationCellHeight, ctx, showPageBreaks, pageWidth, hScrollUnits, hScrollOffset, hScroll, vScrollUnits, vScrollOffset, pageHeight, score, arrayHasOwnIndex, cursor, devMode, getScore, gh, gw, dropzone, kDropFileZoneMessage, optionsDialogOpen, fileDialogOpen, drawOptionsDialog, drawFileDialog, vScroll, setScore, updateScreenreader, formFill, kScreenReaderTemplate, characterName, saveToUndo, brailleDots, drawAllDots, graphic, cellIsEmpty, cellValIsEmpty, interpretBrailleDefault: true */
 /* jshint -W020 */
 
 function initializeNotation() {
@@ -198,16 +198,20 @@ function setScrollVars() {
 	vScrollUnits = Math.floor(vScroll/gridHeight);
 }
 
-function setCellHeight(val) {
+function setCellHeight(val,redraw=true) {
 	notationGridHeight=val;
 	notationGridWidth=(val*2)/3;
-	drawNotation();
+	if (redraw) {
+        drawNotation();
+    }
 }
 
-function setPageSize(w,h) {
+function setPageSize(w,h,redraw=true) {
 	pageWidth=w;
 	pageHeight=h;
-	drawNotation();
+	if (redraw) {
+        drawNotation();
+    }
 }
 
 function rotateChar(x,y) {
@@ -290,7 +294,7 @@ class cellFontModule {
     constructor(whichCanvas, xml) {
         this.myCanvas = whichCanvas;
         this.ctx = whichCanvas.getContext("2d");
-        this.interpretBraille = true;
+        this.interpretBraille = interpretBrailleDefault;
         var root = xml.children[0];
         this.defaults = [];
         for (let name of root.getAttributeNames()) {

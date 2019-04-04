@@ -43,6 +43,7 @@ function doWindowBlur(e) {
     shiftKeyDown = false;
     metaKeyDown = false;
     drawControls();
+    saveToUndo();
     return true;
 }
 
