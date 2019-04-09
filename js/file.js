@@ -252,15 +252,27 @@ function parseText(fileData) {
 	fileData = fileData.replace(/^([a-zA-Z*%:?\\257890/])(?=\s)/g, convertSingleLetterWordAbbreviation); // convert text abbreviations
 	fileData = fileData.replace(/[\s,]([a-zA-Z*%:?\\257890/])(?=\s)/g, convertSingleLetterWordAbbreviation); // convert text abbreviations
 	fileData = fileData.replace(/(\s|^)([-23460])[A-Za-z]/g, convertSingleLetterPrefixAbbreviation); // convert text abbreviations
-    fileData = fileData.replace(/(["^_.;][A-Za-z!:\\*?])/g, convertTextAbbreviation); // convert text abbreviations
+    fileData = fileData.replace(/(["^_.;@]{1,2}[A-Za-z!:,\/\\*&%?567890<>\-])/g, convertTextAbbreviation); // convert text abbreviations
 	fileData = fileData.replace(/\s(,[A-Za-z!:\\*?])/g, convertTextAbbreviation); // convert text abbreviations
-    fileData = fileData.replace(/\s(,[A-Za-z!:\\*?])/g, convertTextAbbreviation); // convert text abbreviations
-    fileData = fileData.replace(/\s(,[A-Za-z!:\\*?])/g, convertTextAbbreviation); // convert text abbreviations
-    fileData = fileData.replace(/[A-Za-z]([123467])[A-Za-z]/g, convertMidWordNumbers); // numbers inside words are contractions
-    fileData = fileData.replace(/([59])[A-Za-z]/g, convertMidWordNumbers); // numbers inside words are contractions
-    fileData = fileData.replace(/[A-Za-z]([59])/g, convertMidWordNumbers); // numbers inside words are contractions
+    fileData = fileData.replace(/(,?8)[A-Za-z&=(!),*<%?:$\]\\\[234567890/>"^_]/g, convertOpenQuote); // convert open quotation mark
+    fileData = fileData.replace(/[A-Z />&=(!)+#*<%?:$\]\\\[.0-9](,?0)/g, convertCloseQuote); // convert close quotation mark
+    fileData = fileData.replace(/([1-79])[A-Za-z/>&=(!)+#*<%?:$\[\\\]0-9";._@^]/g, convertMidWordNumbers); // numbers inside words are contractions
+    fileData = fileData.replace(/[A-Za-z/>&=(!)+#*<%?:$\[\\\]0-9";._@^]([1-79])/g, convertMidWordNumbers); // numbers inside words are contractions
+    //fileData = fileData.replace(/[A-Za-z]([123467])[A-Za-z]/g, convertMidWordNumbers); // numbers inside words are contractions
     fileData = fileData.replace(/,[/>+*<%?\-:$\]\\\[123456790]/g, convertCapitalizedContraction); // single-cell contractions preceded by the capital sign
     return fileData;
+}
+
+function convertOpenQuote(fullString,quote) {
+    var r=quote.replaceAll("8",String.fromCharCode(456));
+    r=r.replaceAll(",",String.fromCharCode(644));
+    return fullString.replaceAll(quote,r);
+}
+
+function convertCloseQuote(fullString,quote) {
+    var r=quote.replaceAll("0",String.fromCharCode(548));
+    r=r.replaceAll(",",String.fromCharCode(644));
+    return fullString.replaceAll(quote,r);
 }
 
 function convertCapitalizedContraction(fullString) {
