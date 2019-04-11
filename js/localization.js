@@ -7,6 +7,7 @@ var kCharNames,
     kCommonWords = [],
     kControlChangeSymbol,
     kDefaultFilename,
+    kDialogWidth,
     kDotsPrefix,
     kDropFileZoneMessage,
     kExportFileDescription,
@@ -41,6 +42,9 @@ var kCharNames,
     kShowTranslatedBrailleDescription,
     kShowTranslatedBrailleLabel,
     kTextAbbreviations = [],
+    kTitleAreaHeight,
+    kTitleButtonHeight,
+    kTitleButtonWidth,
     kUnrecognizedCharacterMessage,
     kUnsavedChangesDialogMessage,
     kVersionAndAuthor,
@@ -65,6 +69,7 @@ function localize(lang) {
 
             kControlChangeSymbol = "\u2388";
             kDefaultFilename = "Untitled Score";
+            kDialogWidth = 292;
             kDotsPrefix = "Dots";
             kDropFileZoneMessage = "Drop file here to load";
             kExportFileDescription = "Export this document as an embosser-ready BRF file.";
@@ -96,6 +101,9 @@ function localize(lang) {
             kShowSmallDotsLabel = "Show Small Dots";
             kShowTranslatedBrailleDescription = "Automatically translate braille into music notation.";
             kShowTranslatedBrailleLabel = "Show Translated Braille";
+            kTitleAreaHeight = 32;
+            kTitleButtonHeight = 24;
+            kTitleButtonWidth = 90;
             kUnrecognizedCharacterMessage = "unrecognized character";
             kUnsavedChangesDialogMessage = "Any unsaved changes will be lost. Are you sure you want to continue?";
             kVersionAndAuthor = "v%%1 by Toby W. Rush";

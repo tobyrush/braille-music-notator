@@ -1,5 +1,34 @@
-/* global helpWindow, helpDialogOpen, optionsDialogOpen, fileDialogOpen, notationArea, notationWidth, window, config, nu, ctx, roundRect, dialogTop, dialogButtonLeft, dialogButtonTop, dialogButtonRight, interpretBraille, drawAllDots, notationGridHeight, showPageBreaks, pageWidth, pageHeight, dialogButtonWidth, dialogButtonHeight, parseOnImport, notationHeight, closeButtonCenterX, closeButtonCenterY, kOptionsDialogTitle, kShowTranslatedBrailleLabel, kShowTranslatedBrailleDescription, kShowSmallDotsLabel, kShowSmallDotsDescription, kScoreSizeLabel, kShowPageBoundariesLabel, kShowPageBoundariesDescription, kWidthLabel, kHeightLabel, kFileDialogTitle, kNewFileLabel, kNewFileDescription, kOpenFileLabel, kOpenFileDescription, kSaveFileLabel, kSaveFileDescription, kExportFileLabel, kExportFileDescription, kParseImportedFilesLabel, kParseImportedFilesDescription, currentCellFont, document, controlModules, currentLocale, selectedControlModule, initializeControls: true */
+/* global helpWindow, helpDialogOpen, optionsDialogOpen, fileDialogOpen, notationArea, notationWidth, window, config, nu, ctx, roundRect, dialogTop, dialogButtonLeft, dialogButtonTop, dialogButtonRight, interpretBraille, drawAllDots, notationGridHeight, showPageBreaks, pageWidth, pageHeight, dialogButtonWidth, dialogButtonHeight, parseOnImport, notationHeight, closeButtonCenterX, closeButtonCenterY, kOptionsDialogTitle, kShowTranslatedBrailleLabel, kShowTranslatedBrailleDescription, kShowSmallDotsLabel, kShowSmallDotsDescription, kScoreSizeLabel, kShowPageBoundariesLabel, kShowPageBoundariesDescription, kWidthLabel, kHeightLabel, kFileDialogTitle, kNewFileLabel, kNewFileDescription, kOpenFileLabel, kOpenFileDescription, kSaveFileLabel, kSaveFileDescription, kExportFileLabel, kExportFileDescription, kParseImportedFilesLabel, kParseImportedFilesDescription, currentCellFont, document, controlModules, currentLocale, selectedControlModule, initializeControls, drawNotation, currentControlModule: true */
 /* jshint -W020 */
+
+function showFileDialog() {
+    fileDialogOpen = true;
+    optionsDialogOpen = false;
+    drawNotation();
+    currentControlModule.draw();
+
+    var d = document.createElement('div');
+    d.setAttribute('id','fileDialog');
+    var fileDialog = document.body.appendChild(d);
+}
+
+function showOptionsDialog() {
+    fileDialogOpen = false;
+    optionsDialogOpen = true;
+    drawNotation();
+    currentControlModule.draw();
+
+    var d = document.createElement('div');
+    d.setAttribute('id','optionsDialog');
+    var optionsDialog = document.body.appendChild(d);
+}
+
+function hideDialog() {
+    fileDialogOpen = false;
+    optionsDialogOpen = false;
+    drawNotation();
+    currentControlModule.draw();
+}
 
 function toggleHelpDialog() {
 	//helpDialogOpen = !helpDialogOpen
@@ -333,7 +362,6 @@ function setControlModule(whichID) {
         return c.id == whichID;
     });
     initializeControls(true);
-    //hideControlSelectionDialog();
 }
 
 function hideControlSelectionDialog() {

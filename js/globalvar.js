@@ -33,7 +33,7 @@ var autoScroller, autoScrollXDir, autoScrollYDir;
 var helpWindow = false;
 var parseOnImport = true;
 var currentBeatUnit = 4;
-var resizeBarHeight = 10;
+var resizeBarHeight = 8;
 var currentFileName = '';
 var currentLocale = 'en';
 var interpretBrailleDefault = true;

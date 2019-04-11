@@ -17,9 +17,41 @@
     height: 100%;
 	background: #fff;
 }
+#fileButton,
+#optionsButton,
+#helpButton {
+	position: absolute;
+    border: solid 1px #000;
+    width: 88px;
+    height: 22px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 15px;
+    border-radius: 5px;
+    top: 4px;
+    padding: 1px;
+    background-color: #fff;
+}
+#fileButton[selected],
+#optionsButton[selected] {
+    height: 30px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: #fff;
+    z-index: 99;
+}
+#helpButton {
+    right: 4px;
+}
+#optionsButton {
+    right: 100px;
+}
+#fileButton {
+    right: 196px;
+}
 #container {
 	position: absolute;
-	top: 38px;
+	top: 4px;
 	bottom: 4px;
 	left: 4px;
 	right: 4px;
@@ -27,24 +59,41 @@
 #notationAreaCanvas {
 	display: block;
 	position: absolute;
-	width: 100%;
-	height: 70%;
+	/*width: 100%;*/
+	/*height: 70%;*/
 	top: 0;
 	right: 0;
 	left: 0;
-	/*bottom: 60%;*/
+	/*bottom: 30%;*/
 	background: #fff;
 }
 #controlCanvas {
 	display: block;
 	position: absolute;
-	width: 100%;
-	height: 30%;
+	/*width: 100%;
+	height: 30%;*/
 	top: 70%;
 	right: 0;
 	left: 0;
 	bottom: 0;
 	background: #fff;
+}
+#fileDialog,
+#optionsDialog {
+    position: absolute;
+    border: solid 1px #000;
+    right: 4px;
+    top: 36px;
+    bottom: 8px;
+    width: 282px;
+    background-color: #fff;
+    z-index: 0;
+}
+#fileDialog {
+
+}
+#optionsDialog {
+
 }
 #debug {
 	background: #CCC;

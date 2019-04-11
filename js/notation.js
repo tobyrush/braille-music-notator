@@ -1,9 +1,112 @@
-/* global notationArea, currentCellFont, sendHTTPRequest, defaultCellFont, gridHeight, notationGridHeight, gridWidth, notationGridWidth, notationCellWidth, notationCellHeight, ctx, showPageBreaks, pageWidth, hScrollUnits, hScrollOffset, hScroll, vScrollUnits, vScrollOffset, pageHeight, score, arrayHasOwnIndex, cursor, devMode, getScore, gh, gw, dropzone, kDropFileZoneMessage, optionsDialogOpen, fileDialogOpen, drawOptionsDialog, drawFileDialog, vScroll, setScore, updateScreenreader, formFill, kScreenReaderTemplate, characterName, saveToUndo, brailleDots, drawAllDots, graphic, cellIsEmpty, cellValIsEmpty, interpretBrailleDefault: true */
+/* global notationArea, currentCellFont, sendHTTPRequest, defaultCellFont, gridHeight, notationGridHeight, gridWidth, notationGridWidth, notationCellWidth, notationCellHeight, ctx, showPageBreaks, pageWidth, hScrollUnits, hScrollOffset, hScroll, vScrollUnits, vScrollOffset, pageHeight, score, arrayHasOwnIndex, cursor, devMode, getScore, gh, gw, dropzone, kDropFileZoneMessage, optionsDialogOpen, fileDialogOpen, drawOptionsDialog, drawFileDialog, vScroll, setScore, updateScreenreader, formFill, kScreenReaderTemplate, characterName, saveToUndo, brailleDots, drawAllDots, graphic, cellIsEmpty, cellValIsEmpty, interpretBrailleDefault, kProgramTitle, kVersionAndAuthor, versionString, helpDialogOpen, roundRect, kHelpButtonCaption, kOptionsButtonCaption, kFileButtonCaption, kTitleAreaHeight, document, kDialogWidth, window: true */
 /* jshint -W020 */
 
+//function initializeTitle() {
+//	titleArea.width=titleArea.clientWidth;
+//	titleArea.height=titleArea.clientHeight;
+//
+//    drawTitle();
+//}
+
+//function clearTitleArea() {
+//	titleArea.width = titleArea.clientWidth;
+//}
+
+
+function drawTitle() {
+
+	var titleWidth = notationArea.clientWidth;
+	var titleHeight = kTitleAreaHeight;
+
+	var thu = titleHeight/100; // title height unit
+
+	ctx.resetTransform();
+    ctx.translate(0.5,0.5);
+
+	ctx.fillStyle="#000";
+	ctx.textAlign="left";
+	ctx.textBaseline="top";
+	ctx.font = "bold "+(thu*74)+"px sans-serif";
+	var t=kProgramTitle;
+	ctx.fillText(t,0,0);
+	var twid=ctx.measureText(t).width;
+	ctx.font = "100 "+(thu*74)+"px sans-serif";
+	ctx.fillText(formFill(kVersionAndAuthor,[versionString]),twid*1.03,0);
+
+    updateButtons();
+
+//	ctx.strokeStyle="#000";
+//	ctx.lineWidth=1;
+//	ctx.textAlign="center";
+//	ctx.textBaseline="middle";
+//	ctx.font = "normal "+thu*50+"px sans-serif";
+
+	// help button
+//	if (helpDialogOpen) {ctx.fillStyle="#000";} else {ctx.fillStyle="#fff";}
+//	roundRect(ctx, titleWidth-((kTitleButtonWidth)+1), 3, kTitleButtonWidth, kTitleButtonHeight, 2, helpDialogOpen, true);
+//	if (helpDialogOpen) {ctx.fillStyle="#fff";} else {ctx.fillStyle="#000";}
+//	ctx.fillText(kHelpButtonCaption,titleWidth-((kTitleButtonWidth/2)+0.5),thu*50);
+//
+//	// options button
+//	if (optionsDialogOpen) {ctx.fillStyle="#000";} else {ctx.fillStyle="#fff";}
+//	roundRect(ctx, titleWidth-((kTitleButtonWidth*2)+5), 3, kTitleButtonWidth, kTitleButtonHeight, 2, optionsDialogOpen, true);
+//	if (optionsDialogOpen) {ctx.fillStyle="#fff";} else {ctx.fillStyle="#000";}
+//	ctx.fillText(kOptionsButtonCaption,titleWidth-((kTitleButtonWidth)+3),thu*50);
+//
+//	// file button
+//	if (fileDialogOpen) {ctx.fillStyle="#000";} else {ctx.fillStyle="#fff";}
+//	roundRect(ctx, titleWidth-((kTitleButtonWidth*3)+10), 3, kTitleButtonWidth, kTitleButtonHeight, 2, fileDialogOpen, true);
+//	if (fileDialogOpen) {ctx.fillStyle="#fff";} else {ctx.fillStyle="#000";}
+//	ctx.fillText(kFileButtonCaption,titleWidth-((kTitleButtonWidth*1.5)+5.5),thu*50);
+
+}
+
+function updateButtons() {
+
+    var d;
+    var fileButton = document.querySelector('#fileButton');
+    var optionsButton = document.querySelector('#optionsButton');
+    var helpButton = document.querySelector('#helpButton');
+
+    if (!fileButton) {
+        d = document.createElement('div');
+        d.setAttribute('id','fileButton');
+        d.setAttribute('onclick','showFileDialog();');
+        d.textContent = kFileButtonCaption;
+        fileButton = document.body.appendChild(d);
+    }
+
+    if (!optionsButton) {
+        d = document.createElement('div');
+        d.setAttribute('id','optionsButton');
+        d.setAttribute('onclick','showOptionsDialog();');
+        d.textContent = kOptionsButtonCaption;
+        optionsButton = document.body.appendChild(d);
+    }
+
+    if (!helpButton) {
+        d = document.createElement('div');
+        d.setAttribute('id','helpButton');
+        d.setAttribute('onclick','showHelp();');
+        d.textContent = kHelpButtonCaption;
+        helpButton = document.body.appendChild(d);
+    }
+
+    if (fileDialogOpen) {
+        fileButton.setAttribute('selected','selected');
+    } else {
+        fileButton.removeAttribute('selected');
+    }
+
+    if (optionsDialogOpen) {
+        optionsButton.setAttribute('selected','selected');
+    } else {
+        optionsButton.removeAttribute('selected');
+    }
+}
+
 function initializeNotation() {
- 	notationArea.width=notationArea.clientWidth;
-	notationArea.height=notationArea.clientHeight;
+ 	notationArea.width = window.innerWidth-8;
 	
     initializeCellFont();
 }
@@ -32,10 +135,16 @@ function loadCellFont(request) {
 function drawNotation() {
 	var col, rightMargin;
     
-    notationArea.width = notationArea.clientWidth;
-	
+    if (fileDialogOpen || optionsDialogOpen) {
+        notationArea.width = window.innerWidth-300;
+    } else {
+        notationArea.width = window.innerWidth-8;
+    }
+
 	var notationWidth = notationArea.clientWidth;
-	var notationHeight = notationArea.clientHeight;
+	var notationHeight = notationArea.clientHeight-(kTitleAreaHeight+4);
+
+    drawTitle();
 	
 	gridHeight = notationGridHeight;
 	gridWidth = notationGridWidth;
@@ -43,8 +152,10 @@ function drawNotation() {
 	notationCellWidth = notationWidth/gridWidth;
 	notationCellHeight = notationHeight/gridHeight;
 	
-	ctx.translate(0.5,0.5);
-	
+	ctx.resetTransform();
+    ctx.translate(0.5,kTitleAreaHeight+0.5);
+//	ctx.clearRect(0,0,notationWidth,notationHeight);
+
 	setScrollVars();
 	
 	// add shading for right margin
@@ -167,14 +278,14 @@ function drawNotation() {
 		ctx.fillText(kDropFileZoneMessage,notationWidth/2,notationHeight/2);
 	}
 	
-	if (optionsDialogOpen || fileDialogOpen) {
-		ctx.globalAlpha=0.7;
-		ctx.fillStyle="#FFF";
-		ctx.fillRect(0,0,notationWidth,notationHeight);
-		ctx.globalAlpha=1;
-		if (optionsDialogOpen) { drawOptionsDialog(); }
-		if (fileDialogOpen) { drawFileDialog(); }
-	}
+//	if (optionsDialogOpen || fileDialogOpen) {
+//		ctx.globalAlpha=0.7;
+//		ctx.fillStyle="#FFF";
+//		ctx.fillRect(0,0,notationWidth,notationHeight);
+//		ctx.globalAlpha=1;
+//		if (optionsDialogOpen) { drawOptionsDialog(); }
+//		if (fileDialogOpen) { drawFileDialog(); }
+//	}
 		
 
 	// draw border
