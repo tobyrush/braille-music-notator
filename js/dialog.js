@@ -1,4 +1,4 @@
-/* global helpWindow, helpDialogOpen, optionsDialogOpen, fileDialogOpen, notationArea, notationWidth, window, config, nu, ctx, roundRect, dialogTop, dialogButtonLeft, dialogButtonTop, dialogButtonRight, translateBraille, showSmallDots, notationGridHeight, showPageBreaks, pageWidth, pageHeight, dialogButtonWidth, dialogButtonHeight, parseFiles, notationHeight, closeButtonCenterX, closeButtonCenterY, kOptionsDialogTitle, kShowTranslatedBrailleLabel, kShowTranslatedBrailleDescription, kShowSmallDotsLabel, kShowSmallDotsDescription, kScoreSizeLabel, kshowPageBreaksLabel, kshowPageBreaksDescription, kWidthLabel, kHeightLabel, kFileDialogTitle, kNewFileLabel, kNewFileDescription, kOpenFileLabel, kOpenFileDescription, kSaveFileLabel, kSaveFileDescription, kExportFileLabel, kExportFileDescription, kParseImportedFilesLabel, kParseImportedFilesDescription, currentCellFont, document, controlModules, currentLocale, selectedControlModule, initializeControls, drawNotation, currentControlModule, gridHeight, setCellHeight, dialogFieldFocus, useWordWrap, setPageSize, Event, insertOctaveSymbols, useBrailleDisplay: true */
+/* global helpWindow, helpDialogOpen, optionsDialogOpen, fileDialogOpen, notationArea, notationWidth, window, config, nu, ctx, roundRect, dialogTop, dialogButtonLeft, dialogButtonTop, dialogButtonRight, translateBraille, showSmallDots, notationGridHeight, showPageBreaks, pageWidth, pageHeight, dialogButtonWidth, dialogButtonHeight, parseFiles, notationHeight, closeButtonCenterX, closeButtonCenterY, kOptionsDialogTitle, kTranslateBrailleLabel, kTranslateBrailleDescription, kShowSmallDotsLabel, kShowSmallDotsDescription, kScoreSizeLabel, kshowPageBreaksLabel, kshowPageBreaksDescription, kWidthLabel, kHeightLabel, kFileDialogTitle, kNewFileLabel, kNewFileDescription, kOpenFileLabel, kOpenFileDescription, kSaveFileLabel, kSaveFileDescription, kExportFileLabel, kExportFileDescription, kParseImportedFilesLabel, kParseImportedFilesDescription, currentCellFont, document, controlModules, currentLocale, selectedControlModule, initializeControls, drawNotation, currentControlModule, gridHeight, setCellHeight, dialogFieldFocus, useWordWrap, setPageSize, Event, insertOctaveSymbols, useBrailleDisplay, kUseBrailleDisplayLabel, kUseBrailleDisplayDescription, kScoreSizeUpButton, kScoreSizeDownButton, kPageSizeLabel, kPageSizeByLabel, kUseWordWrapLabel, kUseWordWrapDescription, kControlsLabel, kMIDISettingsLabel, kInsertOctaveSymbolsLabel, kInsertOctaveSymbolsDescription: true */
 /* jshint -W020 */
 
 function toggleFileDialog() {
@@ -26,10 +26,10 @@ function showFileDialog() {
             id: 'newFileButton',
             onclick: 'doNewFile();'
         }));
-        newFileButton.appendChild(document.createTag('div','New File',{
+        newFileButton.appendChild(document.createTag('div',kNewFileLabel,{
             class: 'dialogButtonCaption'
         }));
-        newFileButton.appendChild(document.createTag('div','Discard the current document and start with an empty one.',{
+        newFileButton.appendChild(document.createTag('div',kNewFileDescription,{
             class: 'dialogButtonDescription'
         }));
 
@@ -38,10 +38,10 @@ function showFileDialog() {
             id: 'openFileButton',
             onclick: 'doOpenFile();'
         }));
-        openFileButton.appendChild(document.createTag('div','Open File',{
+        openFileButton.appendChild(document.createTag('div',kOpenFileLabel,{
             class: 'dialogButtonCaption'
         }));
-        openFileButton.appendChild(document.createTag('div','Open a braille music document from your computer.',{
+        openFileButton.appendChild(document.createTag('div',kOpenFileDescription,{
             class: 'dialogButtonDescription'
         }));
 
@@ -50,10 +50,10 @@ function showFileDialog() {
             id: 'saveFileButton',
             onclick: 'doSaveFile();'
         }));
-        saveFileButton.appendChild(document.createTag('div','Save File',{
+        saveFileButton.appendChild(document.createTag('div',kSaveFileLabel,{
             class: 'dialogButtonCaption'
         }));
-        saveFileButton.appendChild(document.createTag('div','Save this document to your computer in a format this utility can open.',{
+        saveFileButton.appendChild(document.createTag('div',kSaveFileDescription,{
             class: 'dialogButtonDescription'
         }));
 
@@ -62,10 +62,10 @@ function showFileDialog() {
             id: 'exportFileButton',
             onclick: 'doExportFile();'
         }));
-        exportFileButton.appendChild(document.createTag('div','Export File',{
+        exportFileButton.appendChild(document.createTag('div',kExportFileLabel,{
             class: 'dialogButtonCaption'
         }));
-        exportFileButton.appendChild(document.createTag('div','Export this document as an embosser-ready BRF file.',{
+        exportFileButton.appendChild(document.createTag('div',kExportFileDescription,{
             class: 'dialogButtonDescription'
         }));
 
@@ -77,10 +77,10 @@ function showFileDialog() {
         parseFilesCheckbox.appendChild(document.createTag('div','',{
             class: 'dialogCheckboxIndicator'
         }));
-        parseFilesCheckbox.appendChild(document.createTag('div','Parse Imported Files',{
+        parseFilesCheckbox.appendChild(document.createTag('div',kParseImportedFilesLabel,{
             class: 'dialogCheckboxCaption'
         }));
-        parseFilesCheckbox.appendChild(document.createTag('div','Attempt to translate BRF files created by other programs.',{
+        parseFilesCheckbox.appendChild(document.createTag('div',kParseImportedFilesDescription,{
             class: 'dialogCheckboxDescription'
         }));
         if (parseFiles) { parseFilesCheckbox.setAttribute('selected','selected'); }
@@ -153,10 +153,10 @@ function showOptionsDialog() {
         translateBrailleCheckbox.appendChild(document.createTag('div','',{
             class: 'dialogCheckboxIndicator'
         }));
-        translateBrailleCheckbox.appendChild(document.createTag('div','Translate Braille',{
+        translateBrailleCheckbox.appendChild(document.createTag('div',kTranslateBrailleLabel,{
             class: 'dialogCheckboxCaption'
         }));
-        translateBrailleCheckbox.appendChild(document.createTag('div','Automatically translate braille into traditional music notation.',{
+        translateBrailleCheckbox.appendChild(document.createTag('div',kTranslateBrailleDescription,{
             class: 'dialogCheckboxDescription'
         }));
         if (currentCellFont.translateBraille) { translateBrailleCheckbox.setAttribute('selected','selected'); }
@@ -169,10 +169,10 @@ function showOptionsDialog() {
         showSmallDotsCheckbox.appendChild(document.createTag('div','',{
             class: 'dialogCheckboxIndicator'
         }));
-        showSmallDotsCheckbox.appendChild(document.createTag('div','Show Small Dots',{
+        showSmallDotsCheckbox.appendChild(document.createTag('div',kShowSmallDotsLabel,{
             class: 'dialogCheckboxCaption'
         }));
-        showSmallDotsCheckbox.appendChild(document.createTag('div','Fill in empty dots in braille characters.',{
+        showSmallDotsCheckbox.appendChild(document.createTag('div',kShowSmallDotsDescription,{
             class: 'dialogCheckboxDescription'
         }));
         if (showSmallDots) { showSmallDotsCheckbox.setAttribute('selected','selected'); }
@@ -185,10 +185,10 @@ function showOptionsDialog() {
         useBrailleDisplayCheckbox.appendChild(document.createTag('div','',{
             class: 'dialogCheckboxIndicator'
         }));
-        useBrailleDisplayCheckbox.appendChild(document.createTag('div','Use Braille Display',{
+        useBrailleDisplayCheckbox.appendChild(document.createTag('div',kUseBrailleDisplayLabel,{
             class: 'dialogCheckboxCaption'
         }));
-        useBrailleDisplayCheckbox.appendChild(document.createTag('div','Display current line on a connected refreshable braille display.',{
+        useBrailleDisplayCheckbox.appendChild(document.createTag('div',kUseBrailleDisplayDescription,{
             class: 'dialogCheckboxDescription'
         }));
         if (useBrailleDisplay) { useBrailleDisplayCheckbox.setAttribute('selected','selected'); }
@@ -197,7 +197,7 @@ function showOptionsDialog() {
             class: 'dialogField',
             id: 'scoreSizeField'
         }));
-        scoreSizeField.appendChild(document.createTag('label','Score Size:',{
+        scoreSizeField.appendChild(document.createTag('label',kScoreSizeLabel,{
             class: 'dialogFieldCaption',
             for: 'scoreSizeFieldValue'
         }));
@@ -213,11 +213,11 @@ function showOptionsDialog() {
         var scoreSizeButtons = scoreSizeField.appendChild(document.createTag('div','',{
             class: 'dialogFieldButtons'
         }));
-        scoreSizeButtons.appendChild(document.createTag('div','▲',{ // unicode 25b2
+        scoreSizeButtons.appendChild(document.createTag('div',kScoreSizeUpButton,{ // unicode 25b2
             class: 'dialogFieldIncreaseButton',
             onclick: 'setScoreSize(gridHeight+10);',
         }));
-        scoreSizeButtons.appendChild(document.createTag('div','▼',{ // unicode 25bc
+        scoreSizeButtons.appendChild(document.createTag('div',kScoreSizeDownButton,{ // unicode 25bc
             class: 'dialogFieldDecreaseButton',
             onclick: 'setScoreSize(gridHeight-10);',
         }));
@@ -230,10 +230,10 @@ function showOptionsDialog() {
         showPageBreaksCheckbox.appendChild(document.createTag('div','',{
             class: 'dialogCheckboxIndicator'
         }));
-        showPageBreaksCheckbox.appendChild(document.createTag('div','Show Page Breaks',{
+        showPageBreaksCheckbox.appendChild(document.createTag('div',kshowPageBreaksLabel,{
             class: 'dialogCheckboxCaption'
         }));
-        showPageBreaksCheckbox.appendChild(document.createTag('div','Show where page edges are when embossed.',{
+        showPageBreaksCheckbox.appendChild(document.createTag('div',kshowPageBreaksDescription,{
             class: 'dialogCheckboxDescription'
         }));
         if (showPageBreaks) { showPageBreaksCheckbox.setAttribute('selected','selected'); }
@@ -242,7 +242,7 @@ function showOptionsDialog() {
             class: 'dialogSubField',
             id: 'pageSizeField'
         }));
-        pageSizeField.appendChild(document.createTag('label','Page Size:',{
+        pageSizeField.appendChild(document.createTag('label',kPageSizeLabel,{
             class: 'dialogFieldCaption',
             for: 'scoreSizeFieldValue'
         }));
@@ -255,7 +255,7 @@ function showOptionsDialog() {
             onfocus: 'setDialogFieldFocus(true)',
             onblur: 'setDialogFieldFocus(false)'
         }));
-        pageSizeField.appendChild(document.createTag('label','×',{
+        pageSizeField.appendChild(document.createTag('label',kPageSizeByLabel,{
             class: 'dialogFieldCaption'
         }));
         pageSizeField.appendChild(document.createTag('input','',{
@@ -276,10 +276,10 @@ function showOptionsDialog() {
         useWordWrapCheckbox.appendChild(document.createTag('div','',{
             class: 'dialogCheckboxIndicator'
         }));
-        useWordWrapCheckbox.appendChild(document.createTag('div','Use Word Wrap',{
+        useWordWrapCheckbox.appendChild(document.createTag('div',kUseWordWrapLabel,{
             class: 'dialogCheckboxCaption'
         }));
-        useWordWrapCheckbox.appendChild(document.createTag('div','Move current measure to next line when edge of page is reached.',{
+        useWordWrapCheckbox.appendChild(document.createTag('div',kUseWordWrapDescription,{
             class: 'dialogCheckboxDescription'
         }));
         if (useWordWrap) { useWordWrapCheckbox.setAttribute('selected','selected'); }
@@ -288,7 +288,7 @@ function showOptionsDialog() {
             class: 'dialogPopup',
             id: 'controlsPopup'
         }));
-        controlsPopup.appendChild(document.createTag('label','Controls:',{
+        controlsPopup.appendChild(document.createTag('label',kControlsLabel,{
             class: 'dialogPopupCaption',
             for: 'controlsPopupMenu'
         }));
@@ -310,7 +310,7 @@ function showOptionsDialog() {
             }
         });
 
-        var midiSettingsLabel = optionsDialog.appendChild(document.createTag('div','MIDI Settings:', {
+        var midiSettingsLabel = optionsDialog.appendChild(document.createTag('div',kMIDISettingsLabel, {
             class: 'dialogLabel',
             id: 'midiSettingsLabel'
         }));
@@ -323,10 +323,10 @@ function showOptionsDialog() {
         insertOctaveSymbolsCheckbox.appendChild(document.createTag('div','',{
             class: 'dialogCheckboxIndicator'
         }));
-        insertOctaveSymbolsCheckbox.appendChild(document.createTag('div','Insert Octave Symbols',{
+        insertOctaveSymbolsCheckbox.appendChild(document.createTag('div',kInsertOctaveSymbolsLabel,{
             class: 'dialogCheckboxCaption'
         }));
-        insertOctaveSymbolsCheckbox.appendChild(document.createTag('div','Intelligently insert octave symbols when required.',{
+        insertOctaveSymbolsCheckbox.appendChild(document.createTag('div',kInsertOctaveSymbolsDescription,{
             class: 'dialogCheckboxDescription'
         }));
         if (insertOctaveSymbols) { insertOctaveSymbolsCheckbox.setAttribute('selected','selected'); }

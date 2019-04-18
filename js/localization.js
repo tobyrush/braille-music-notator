@@ -5,7 +5,7 @@
 
 var kCharNames,
     kCommonWords = [],
-    //kControlChangeSymbol,
+    kControlsLabel,
     kDefaultFilename,
     kDialogWidth,
     kDotsPrefix,
@@ -18,14 +18,19 @@ var kCharNames,
     kFileNameBRM,
     kHeightLabel,
     kHelpButtonCaption,
+    kInsertOctaveSymbolsDescription,
+    kInsertOctaveSymbolsLabel,
     kKeyCommands = [],
     kLongestSymbol,
+    kMIDISettingsLabel,
     kNewFileDescription,
     kNewFileLabel,
     kOpenFileDescription,
     kOpenFileLabel,
     kOptionsButtonCaption,
     kOptionsDialogTitle,
+    kPageSizeLabel,
+    kPageSizeByLabel,
     kParseImportedFilesDescription,
     kParseImportedFilesLabel,
     kPrefixAbbreviations = [],
@@ -33,20 +38,26 @@ var kCharNames,
     kSaveFileDescription,
     kSaveFileLabel,
     kScoreSizeLabel,
+    kScoreSizeUpButton,
+    kScoreSizeDownButton,
     kScreenReaderControlPageNumber,
     kScreenReaderTemplate,
     kshowPageBreaksDescription,
     kshowPageBreaksLabel,
     kShowSmallDotsDescription,
     kShowSmallDotsLabel,
-    kShowTranslatedBrailleDescription,
-    kShowTranslatedBrailleLabel,
+    kTranslateBrailleDescription,
+    kTranslateBrailleLabel,
     kTextAbbreviations = [],
     kTitleAreaHeight,
     kTitleButtonHeight,
     kTitleButtonWidth,
     kUnrecognizedCharacterMessage,
     kUnsavedChangesDialogMessage,
+    kUseBrailleDisplayLabel,
+    kUseBrailleDisplayDescription,
+    kUseWordWrapLabel,
+    kUseWordWrapDescription,
     kVersionAndAuthor,
     kWordAbbreviations = [],
     kWidthLabel;
@@ -68,6 +79,7 @@ function localize(lang) {
             defaultCellFont = 'cellfonts/en/classic.xml';
 
             //kControlChangeSymbol = "\u2388";
+            kControlsLabel = "Controls:";
             kDefaultFilename = "Untitled Score";
             kDialogWidth = 292;
             kDotsPrefix = "Dots";
@@ -80,32 +92,43 @@ function localize(lang) {
             kFileNameBRM = "Untitled.brm";
             kHeightLabel = "Height:";
             kHelpButtonCaption = "Help";
+            kInsertOctaveSymbolsDescription = "Intelligently insert octave symbols when required.";
+            kInsertOctaveSymbolsLabel = "Insert Octave Symbols";
             kLongestSymbol = 7;
+            kMIDISettingsLabel = "MIDI Settings:";
             kNewFileDescription = "Discard current document and start with an empty one.";
-            kNewFileLabel = "New File…";
-            kOpenFileDescription = "Open a previously saved document from your computer.";
-            kOpenFileLabel = "Open File…";
+            kNewFileLabel = "New File";
+            kOpenFileDescription = "Open a braille document from your computer.";
+            kOpenFileLabel = "Open File";
             kOptionsButtonCaption = "Options";
             kOptionsDialogTitle = "Options";
+            kPageSizeLabel = "Page Size:";
+            kPageSizeByLabel = "\u00d7";
             kParseImportedFilesDescription = "Attempt to translate BRF files created by other programs.";
             kParseImportedFilesLabel = "Parse Imported Files";
             kProgramTitle = "Braille Music Notator";
             kSaveFileDescription = "Save this document in a format this utility can open.";
             kSaveFileLabel = "Save File";
             kScoreSizeLabel = "Score size:";
+            kScoreSizeUpButton = "\u25b2";
+            kScoreSizeDownButton = "\u25bc";
             kScreenReaderControlPageNumber = "Control page %%1";
             kScreenReaderTemplate = "%%1. line %%2 character %%3. %%4";
             kshowPageBreaksDescription = "Show where page breaks occur when embossed.";
-            kshowPageBreaksLabel = "Show Page Boundaries";
+            kshowPageBreaksLabel = "Show Page Breaks";
             kShowSmallDotsDescription = "Fill in empty dots in braille characters.";
             kShowSmallDotsLabel = "Show Small Dots";
-            kShowTranslatedBrailleDescription = "Automatically translate braille into music notation.";
-            kShowTranslatedBrailleLabel = "Show Translated Braille";
+            kTranslateBrailleDescription = "Automatically translate braille into music notation.";
+            kTranslateBrailleLabel = "Translate Braille";
             kTitleAreaHeight = 32;
             kTitleButtonHeight = 24;
             kTitleButtonWidth = 90;
             kUnrecognizedCharacterMessage = "unrecognized character";
+            kUseWordWrapLabel = "Use Word Wrap";
+            kUseWordWrapDescription = "Move current measure to next line when edge of page is reached.";
             kUnsavedChangesDialogMessage = "Any unsaved changes will be lost. Are you sure you want to continue?";
+            kUseBrailleDisplayLabel = "Use Braille Display";
+            kUseBrailleDisplayDescription = "Display current line on a connected refreshable braille display.";
             kVersionAndAuthor = "v%%1 by Toby W. Rush";
             kWidthLabel = "Width:";
 
@@ -852,8 +875,8 @@ function localize(lang) {
             kshowPageBreaksLabel = "Show Page Boundaries";
             kShowSmallDotsDescription = "Fill in empty dots in braille characters.";
             kShowSmallDotsLabel = "Show Small Dots";
-            kShowTranslatedBrailleDescription = "Automatically translate braille into music notation.";
-            kShowTranslatedBrailleLabel = "Show Translated Braille";
+            kTranslateBrailleDescription = "Automatically translate braille into music notation.";
+            kTranslateBrailleLabel = "Show Translated Braille";
             kUnrecognizedCharacterMessage = "unrecognized character";
             kUnsavedChangesDialogMessage = "Any unsaved changes will be lost. Are you sure you want to continue?";
             kVersionAndAuthor = "v%%1 by Toby W. Rush";
