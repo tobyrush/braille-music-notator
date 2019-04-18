@@ -1,4 +1,4 @@
-/* global helpDialogOpen, optionsDialogOpen, fileDialogOpen, findPos, notationArea, hScrollOffset, gridWidth, hScrollUnits, vScrollOffset, gridHeight, vScrollUnits, shiftKeyDown, cursor, mouseIsDown, closeButtonCenterX, closeButtonCenterY, dialogButtonLeft, dialogButtonRight, dialogButtonTop, dialogButtonHeight, drawAllDots, setCellHeight, showPageBreaks, setPageSize, pageWidth, pageHeight, confirm, clearDocument, resetCursorAndScroll, fileUploader, downloadFile, parseOnImport, drawTitle, drawNotation, updateScreenreader, window, autoScroller, autoScrollXDir, autoScrollYDir, notationWidth, notationHeight, startDragX, startDragY, vScroll, hScroll, chu, controlArea, resizeBarHeight, resizeBarDrag, resizeBarDragOrigin, container, whichKeyboard, keyboardOriginX, keyboardOriginY, keyboardCoordinates, interpretKeyCode, keyCodes, drawControls, controlHelp, keyHelp, resizeBarPosition, initializeCanvases, titleArea, titleWidth, titleHeight, toggleHelpDialog, toggleOptionsDialog, toggleFileDialog, thu, kbu, nu, kUnsavedChangesDialogMessage, currentControlModule, currentCellFont, kTitleAreaHeight, kDialogWidth: true */
+/* global helpDialogOpen, optionsDialogOpen, fileDialogOpen, findPos, notationArea, hScrollOffset, gridWidth, hScrollUnits, vScrollOffset, gridHeight, vScrollUnits, shiftKeyDown, cursor, mouseIsDown, closeButtonCenterX, closeButtonCenterY, dialogButtonLeft, dialogButtonRight, dialogButtonTop, dialogButtonHeight, showSmallDots, setCellHeight, showPageBreaks, setPageSize, pageWidth, pageHeight, confirm, clearDocument, resetCursorAndScroll, fileUploader, downloadFile, parseFiles, drawTitle, drawNotation, updateScreenreader, window, autoScroller, autoScrollXDir, autoScrollYDir, notationWidth, notationHeight, startDragX, startDragY, vScroll, hScroll, chu, controlArea, resizeBarHeight, resizeBarDrag, resizeBarDragOrigin, container, whichKeyboard, keyboardOriginX, keyboardOriginY, keyboardCoordinates, interpretKeyCode, keyCodes, drawControls, controlHelp, keyHelp, resizeBarPosition, initializeCanvases, titleArea, titleWidth, titleHeight, toggleHelpDialog, toggleOptionsDialog, toggleFileDialog, thu, kbu, nu, kUnsavedChangesDialogMessage, currentControlModule, currentCellFont, kTitleAreaHeight, kDialogWidth: true */
 /* jshint -W020 */
 
 
@@ -56,9 +56,9 @@ function doNotationMouseDown(e) {
 //            } else if (optionsDialogOpen) {
 //                if (x>dialogButtonLeft && x<dialogButtonRight) {
 //                    if (y>dialogButtonTop[1] && y<dialogButtonTop[1]+dialogButtonHeight) {
-//                        currentCellFont.interpretBraille=!currentCellFont.interpretBraille;
+//                        currentCellFont.translateBraille=!currentCellFont.translateBraille;
 //                    } else if (y>dialogButtonTop[2] && y<dialogButtonTop[2]+dialogButtonHeight) {
-//                        drawAllDots = !drawAllDots;
+//                        showSmallDots = !showSmallDots;
 //                    } else if (y>dialogButtonTop[3] && y<dialogButtonTop[3]+dialogButtonHeight) {
 //                        if (x>dialogButtonLeft+(nu*47.5) && x<dialogButtonLeft+(nu*57.5)) {
 //                            if (y>dialogButtonTop[3]+(nu*1) && y<dialogButtonTop[3]+(nu*6)) { // +
@@ -106,7 +106,7 @@ function doNotationMouseDown(e) {
 //                        downloadFile(true);
 //                        fileDialogOpen=false;
 //                    } else if (y>dialogButtonTop[5] && y<dialogButtonTop[5]+dialogButtonHeight) {
-//                        parseOnImport = !parseOnImport;
+//                        parseFiles = !parseFiles;
 //                    }
 //                }
 //            }

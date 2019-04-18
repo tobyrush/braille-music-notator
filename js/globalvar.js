@@ -10,14 +10,16 @@ var ctx, nwu, nhu, nu, chu;
 var resizeBarHeight;
 var resizeBarPosition = 0.7;
 var closeButtonCenterX, closeButtonCenterY;
-var notationGridHeight = 60, notationGridWidth = 40, gridHeight, gridWidth, savedGridHeight;
+var dialogFieldFocus = false;
+var gridHeight = 60, gridWidth = 40, savedGridHeight;
 var hScroll = 0, vScroll = 0; // these values are in pixels
 var hScrollOffset, vScrollOffset; // these are in pixels too (but are automatically calculated in drawNotation() from hScroll and vScroll)
 var hScrollUnits, vScrollUnits; // these are in cells (but are also automatically calculated in drawNotation() )
 var showPageBreaks = true, pageHeight = 25, pageWidth = 40;
+var insertOctaveSymbols = true;
 var cursor = {};
 var startDragX, startDragY, mouseIsDown, resizeBarDrag, resizeBarDragOrigin;
-var drawAllDots = true;
+var showSmallDots = true;
 var useBrailleDisplay = false;
 var controlHelp=0;
 var reader = new FileReader(); reader.onload = function () { importData(reader.result); };
@@ -31,12 +33,12 @@ var fileDialogOpen = false, optionsDialogOpen = false, helpDialogOpen = false;
 var dialogTop,dialogButtonLeft,dialogButtonRight,dialogTop,dialogButtonHeight,dialogButtonWidth,dialogButtonTop = [];
 var autoScroller, autoScrollXDir, autoScrollYDir;
 var helpWindow = false;
-var parseOnImport = true;
+var parseFiles = true;
 var currentBeatUnit = 4;
 var resizeBarHeight = 8;
 var currentFileName = '';
 var currentLocale = 'en';
-var interpretBrailleDefault = true;
+var translateBrailleDefault = true;
 
 var controlModules = [
     {
@@ -370,15 +372,15 @@ function isAccidental(val) {
 
 function savePreferences() {
     var tab = String.fromCharCode(9);
-    var ps = (currentCellFont.interpretBraille ? "1" : "0") + tab;
-    ps += (drawAllDots ? "1" : "0") + tab;
+    var ps = (currentCellFont.translateBraille ? "1" : "0") + tab;
+    ps += (showSmallDots ? "1" : "0") + tab;
     ps += gridHeight + tab;
     ps += (showPageBreaks ? "1" : "0") + tab;
     ps += (useBrailleDisplay ? "1" : "0") + tab;
     ps += pageWidth + tab + pageHeight + tab;
     ps += (useLaunchpad ? "1" : "0") + tab;
     ps += (useWordWrap ? "1" : "0") + tab;
-    ps += (parseOnImport ? "1" : "0") + tab;
+    ps += (parseFiles ? "1" : "0") + tab;
     ps += currentLocale + tab;
     ps += selectedControlModule.id + tab;
     ps += cursor.x + tab + cursor.y + tab + cursor.width + tab + cursor.height + tab;
@@ -396,8 +398,8 @@ function loadPreferences() {
     }
 
     if (ps.length>16) {
-        interpretBrailleDefault = (ps[0]=="1");
-        drawAllDots = (ps[1]=="1");
+        translateBrailleDefault = (ps[0]=="1");
+        showSmallDots = (ps[1]=="1");
         setCellHeight(ps[2]*1,false);
         showPageBreaks = (ps[3]=="1");
         useBrailleDisplay = (ps[4]=="1");
@@ -405,7 +407,7 @@ function loadPreferences() {
         pageHeight = ps[6]*1;
         useLaunchpad = (ps[7]=="1");
         useWordWrap = (ps[8]=="1");
-        parseOnImport = (ps[9]=="1");
+        parseFiles = (ps[9]=="1");
         currentLocale = ps[10];
         setControlModule(ps[11]*1);
         if (Math.abs(score.length-ps[13])<5) {

@@ -31,6 +31,7 @@
     top: 4px;
     padding: 1px;
     background-color: #fff;
+    cursor: pointer;
 }
 #fileButton[selected],
 #optionsButton[selected] {
@@ -93,6 +94,181 @@
 
 }
 #optionsDialog {
+
+}
+.dialogButton {
+    background-color: #ddd;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+.dialogButton:hover {
+    border: 1px solid #000;
+}
+.dialogButtonCaption {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.dialogButtonDescription {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 0px 20px;
+}
+.dialogCheckbox,
+.dialogSubCheckbox {
+    position: relative;
+    padding: 10px 10px 0px 10px;
+    width: 242px;
+    margin: 10px;
+    height: 56px;
+}
+.dialogSubCheckbox {
+    padding: 0px 10px 0px 10px;
+}
+.dialogSubCheckbox[disabled],
+.dialogSubField[disabled],
+.dialogLabel[disabled] {
+    pointer-events: none;
+    opacity: 0.4;
+}
+.dialogCheckboxIndicator {
+    border: 2px solid #000;
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    left: 10px;
+}
+.dialogSubCheckbox .dialogCheckboxIndicator {
+    left: 30px
+}
+.dialogCheckbox:hover .dialogCheckboxIndicator,
+.dialogSubCheckbox:hover .dialogCheckboxIndicator{
+    background-color: #ddd;
+}
+.dialogCheckbox[selected] .dialogCheckboxIndicator::before,
+.dialogSubCheckbox[selected] .dialogCheckboxIndicator::before {
+    content: "\2714";
+    left: 1px;
+    position: relative;
+    top: -1px;
+}
+.dialogCheckboxCaption {
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    left: 36px;
+    width: 220px;
+}
+.dialogSubCheckbox .dialogCheckboxCaption {
+    font-size: 18px;
+    left: 56px;
+}
+.dialogCheckboxDescription {
+    font-size: 12px;
+    line-height: 14px;
+    position: absolute;
+    left: 36px;
+    top: 35px;
+    width: 200px;
+}
+.dialogSubCheckbox .dialogCheckboxDescription {
+	top: 25px;
+    left: 56px;
+}
+.dialogField,
+.dialogSubField {
+    position: relative;
+    padding: 0px 10px;
+    width: 242px;
+    margin: 10px;
+    height: 40px;
+}
+.dialogSubField {
+    padding-left: 30px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+}
+.dialogFieldCaption {
+    font-size: 20px;
+    font-weight: bold;
+}
+.dialogSubField .dialogFieldCaption {
+    font-size: 18px;
+}
+.dialogFieldValue {
+    font-size: 20px;
+    font-weight: bold;
+    width: 35px;
+    text-align: center;
+    margin-left: 8px;
+    margin-right: 7px;
+    padding: 5px;
+}
+.dialogSubField .dialogFieldValue {
+    font-size: 18px;
+    width: 30px;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding: 3px;
+}
+.dialogFieldButtons {
+    font-size: 12px;
+    width: 20px;
+    display: inline-block;
+    line-height: 17px;
+    vertical-align: -5px;
+    cursor: pointer;
+}
+.dialogFieldIncreaseButton {
+
+}
+.dialogFieldDecreaseButton {
+
+}
+.dialogPopup {
+    position: relative;
+    padding: 10px 10px 0px 10px;
+    width: 242px;
+    margin: 10px;
+    height: 33px;
+}
+.dialogPopupCaption {
+    font-size: 20px;
+    font-weight: bold;
+}
+.dialogPopupMenu {
+    background: transparent;
+    border: 1px solid #000;
+    font-size: 20px;
+    height: 32px;
+    padding: 8px;
+    width: 143px;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.dialogPopupMenuItem {
+
+}
+.dialogLabel {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 40px 15px 20px;
+}
+#newFileButton {
+
+}
+#openFileButton {
+
+}
+#saveFileButton {
+
+}
+#exportFileButton {
 
 }
 #debug {

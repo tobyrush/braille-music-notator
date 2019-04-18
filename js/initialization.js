@@ -33,9 +33,6 @@ function initialize() {
 	controlArea.addEventListener("mousedown",doControlMouseDown,false);
 	controlArea.addEventListener("mousemove",doControlMouseMove,false);
 	controlArea.addEventListener("mouseout",doControlMouseOut,false);
-//	titleArea = document.getElementById("titleCanvas");
-//	titleArea.addEventListener("mousedown",doTitleMouseDown,false);
-//	tctx = titleArea.getContext("2d");
 	ctx = notationArea.getContext("2d");
 	clipboardArea = document.getElementById("clipboard");
 	cursor.x=0;
@@ -69,14 +66,12 @@ function initialize() {
 }
 	
 function initializeCanvases() {
-//	initializeTitle();
 	recalculateSectionHeights();
 	initializeNotation();
 	initializeControls();
 }
 
 function refreshCanvases() {
-//    initializeTitle();
     recalculateSectionHeights();
     initializeNotation();
     drawNotation();

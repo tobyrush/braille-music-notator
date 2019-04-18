@@ -5,7 +5,7 @@
 
 var kCharNames,
     kCommonWords = [],
-    kControlChangeSymbol,
+    //kControlChangeSymbol,
     kDefaultFilename,
     kDialogWidth,
     kDotsPrefix,
@@ -35,8 +35,8 @@ var kCharNames,
     kScoreSizeLabel,
     kScreenReaderControlPageNumber,
     kScreenReaderTemplate,
-    kShowPageBoundariesDescription,
-    kShowPageBoundariesLabel,
+    kshowPageBreaksDescription,
+    kshowPageBreaksLabel,
     kShowSmallDotsDescription,
     kShowSmallDotsLabel,
     kShowTranslatedBrailleDescription,
@@ -67,7 +67,7 @@ function localize(lang) {
 
             defaultCellFont = 'cellfonts/en/classic.xml';
 
-            kControlChangeSymbol = "\u2388";
+            //kControlChangeSymbol = "\u2388";
             kDefaultFilename = "Untitled Score";
             kDialogWidth = 292;
             kDotsPrefix = "Dots";
@@ -95,8 +95,8 @@ function localize(lang) {
             kScoreSizeLabel = "Score size:";
             kScreenReaderControlPageNumber = "Control page %%1";
             kScreenReaderTemplate = "%%1. line %%2 character %%3. %%4";
-            kShowPageBoundariesDescription = "Show where page breaks occur when embossed.";
-            kShowPageBoundariesLabel = "Show Page Boundaries";
+            kshowPageBreaksDescription = "Show where page breaks occur when embossed.";
+            kshowPageBreaksLabel = "Show Page Boundaries";
             kShowSmallDotsDescription = "Fill in empty dots in braille characters.";
             kShowSmallDotsLabel = "Show Small Dots";
             kShowTranslatedBrailleDescription = "Automatically translate braille into music notation.";
@@ -625,6 +625,10 @@ function localize(lang) {
             kKeyCommands[46] = [
                 "Deleted cell at line %%1 character %%2"
             ];
+            kKeyCommands[56] = [
+                "Automatic insertion of octave symbols disabled.",
+                "Automatic insertion of octave symbols enabled."
+            ];
             kKeyCommands[65] = ["All cells selected."];
             kKeyCommands[66] = [
                 "Visual braille interpretation disabled.",
@@ -670,6 +674,10 @@ function localize(lang) {
             kKeyCommands[89] = ["Redo."];
             kKeyCommands[90] = ["Undo."];
             kKeyCommands[187] = ["Magnification increased to %%1."];
+            kKeyCommands[188] = [
+                "Word wrap disabled.",
+                "Word wrap enabled."
+            ];
             kKeyCommands[189] = ["Magnification decreased to %%1."];
 
             kWordAbbreviations['b'] = String.fromCharCode(866);
@@ -840,8 +848,8 @@ function localize(lang) {
             kScoreSizeLabel = "Score size:";
             kScreenReaderControlPageNumber = "Control page %%1";
             kScreenReaderTemplate = "%%1. line %%2 character %%3. %%4";
-            kShowPageBoundariesDescription = "Show where page breaks occur when embossed.";
-            kShowPageBoundariesLabel = "Show Page Boundaries";
+            kshowPageBreaksDescription = "Show where page breaks occur when embossed.";
+            kshowPageBreaksLabel = "Show Page Boundaries";
             kShowSmallDotsDescription = "Fill in empty dots in braille characters.";
             kShowSmallDotsLabel = "Show Small Dots";
             kShowTranslatedBrailleDescription = "Automatically translate braille into music notation.";
