@@ -1,8 +1,8 @@
-/* global shiftKeyDown, metaKeyDown, cursor, whichKeyboard, score, clearSelection, cellIsEmpty, deleteScore, hScrollUnits, isMacOS, focusClipboard, firstCharPosInRow, hScroll, vScroll, deleteRowAtCursor, insertRowAtCursor, setScore, scoreWidth, scoreHeight, updateScreenreader, drawAllDots, downloadFile, currentBeatUnit, parseOnImport, showPageBreaks, setPageSize, pageWidth, pageHeight, confirm, clearDocument, resetCursorAndScroll, fileUploader, rotateSelection, convertSelectionToText, useBrailleDisplay, doRedo, doUndo, setCellHeight, gridHeight, saveToUndo, suspendUndo, scrollToCursor, characterName, drawNotation, drawControls, getScore, currentControlModule, kUnsavedChangesDialogMessage, kKeyCommands, formFill, placeCursor, currentCellFont, useWordWrap, lineIsEmpty, removeLastWordOfLine, octaveCharValues, pitchValues, octaveValues, findPitchAtPosition, cellValIsEmpty, isAccidental: true */
+/* global shiftKeyDown, metaKeyDown, cursor, whichKeyboard, score, clearSelection, cellIsEmpty, deleteScore, hScrollUnits, isMacOS, focusClipboard, firstCharPosInRow, hScroll, vScroll, deleteRowAtCursor, insertRowAtCursor, setScore, scoreWidth, scoreHeight, updateScreenreader, showSmallDots, downloadFile, currentBeatUnit, parseFiles, showPageBreaks, setPageSize, pageWidth, pageHeight, confirm, clearDocument, resetCursorAndScroll, fileUploader, rotateSelection, convertSelectionToText, useBrailleDisplay, doRedo, doUndo, setCellHeight, gridHeight, saveToUndo, suspendUndo, scrollToCursor, characterName, drawNotation, drawControls, getScore, currentControlModule, kUnsavedChangesDialogMessage, kKeyCommands, formFill, placeCursor, currentCellFont, useWordWrap, lineIsEmpty, removeLastWordOfLine, octaveCharValues, pitchValues, octaveValues, findPitchAtPosition, cellValIsEmpty, isAccidental, dialogFieldFocus, document, setNodeSelectedValue, insertOctaveSymbols: true */
 /* jshint -W020 */
 
 function doKeyDown(e) {
-	if (interpretKeyCode(e.keyCode)) {
+	if (dialogFieldFocus || interpretKeyCode(e.keyCode)) {
 		return true;
 	} else {
 		e.preventDefault();
@@ -31,7 +31,7 @@ function doKeyUp(e) {
 			passThrough = true;
 	}
     drawControls();
-	if (passThrough) {
+	if (dialogFieldFocus || passThrough) {
 		return true;
 	} else {
 		e.preventDefault();
@@ -68,6 +68,14 @@ function interpretKeyCode(keyCode) {
             case 40: // down arrow - insert row
                 insertRowAtCursor();
                 break;
+            case 56: // 8 - toggle insert octave symbols
+				insertOctaveSymbols = !insertOctaveSymbols;
+                setNodeSelectedValue(
+                    document.querySelector("#insertOctaveSymbolsCheckbox"),
+                    insertOctaveSymbols
+                );
+                readerSwitch = insertOctaveSymbols;
+				break;
             case 65: // A - select all symbols
 				cursor.x=0;
 				cursor.y=0;
@@ -75,22 +83,34 @@ function interpretKeyCode(keyCode) {
 				cursor.height=scoreHeight();
 				break;
             case 66: // B - toggle braille translation
-				currentCellFont.interpretBraille = !currentCellFont.interpretBraille;
-                readerSwitch = currentCellFont.interpretBraille;
+				currentCellFont.translateBraille = !currentCellFont.translateBraille;
+                setNodeSelectedValue(
+                    document.querySelector("#translateBrailleCheckbox"),
+                    currentCellFont.translateBraille
+                );
+                readerSwitch = currentCellFont.translateBraille;
 				break;
             case 67: // C - copy
 				passThrough = true;
 				break;
             case 68: // D - toggle small braille dots
-				drawAllDots = !drawAllDots;
-                readerSwitch = drawAllDots;
+				showSmallDots = !showSmallDots;
+                setNodeSelectedValue(
+                    document.querySelector("#showSmallDotsCheckbox"),
+                    showSmallDots
+                );
+                readerSwitch = showSmallDots;
 				break;
             case 69: // E - export file
 				downloadFile(true);
                 break;
             case 72: // H - toggle parse imported files
-				parseOnImport = !parseOnImport;
-                readerSwitch = parseOnImport;
+				parseFiles = !parseFiles;
+                setNodeSelectedValue(
+                    document.querySelector("#parseFilesCheckbox"),
+                    parseFiles
+                );
+                readerSwitch = parseFiles;
 				break;
             case 73: // I - decrease page height by 1
 				if (!showPageBreaks) {
@@ -143,6 +163,10 @@ function interpretKeyCode(keyCode) {
                 break;
             case 80: // P - toggle page boundaries
 				showPageBreaks = !showPageBreaks;
+                setNodeSelectedValue(
+                    document.querySelector("#showPageBreaksCheckbox"),
+                    showPageBreaks
+                );
                 readerSwitch = showPageBreaks;
 				break;
             case 82: // R - rotate symbols
@@ -157,6 +181,10 @@ function interpretKeyCode(keyCode) {
                 break;
             case 85: // U - toggle reader mode
 				useBrailleDisplay = !useBrailleDisplay;
+                setNodeSelectedValue(
+                    document.querySelector("#useBrailleDisplayCheckbox"),
+                    useBrailleDisplay
+                );
                 readerSwitch = useBrailleDisplay;
 				break;
             case 86: // V - paste
@@ -174,6 +202,14 @@ function interpretKeyCode(keyCode) {
             case 187: // = - increase magnification by 10
 				setCellHeight(gridHeight+10);
 				readerData[0]=gridHeight;
+				break;
+            case 188: // , - toggle word wrap
+				useWordWrap = !useWordWrap;
+                setNodeSelectedValue(
+                    document.querySelector("#useWordWrap"),
+                    useWordWrap
+                );
+                readerSwitch = useWordWrap;
 				break;
             case 189: // - - decrease magnification by 10
 				setCellHeight(Math.max(10,gridHeight-10));

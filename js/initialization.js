@@ -33,9 +33,6 @@ function initialize() {
 	controlArea.addEventListener("mousedown",doControlMouseDown,false);
 	controlArea.addEventListener("mousemove",doControlMouseMove,false);
 	controlArea.addEventListener("mouseout",doControlMouseOut,false);
-	titleArea = document.getElementById("titleCanvas");
-	titleArea.addEventListener("mousedown",doTitleMouseDown,false);
-	tctx = titleArea.getContext("2d");
 	ctx = notationArea.getContext("2d");
 	clipboardArea = document.getElementById("clipboard");
 	cursor.x=0;
@@ -50,17 +47,17 @@ function initialize() {
         navigator.requestMIDIAccess().then(onMIDISuccess,onMIDIFailure);
     }
 	
-	var totalHeight=notationArea.clientHeight+controlArea.clientHeight;
-	var newY=totalHeight-(controlArea.clientWidth/5.4);
+	var totalHeight=window.innerHeight;
+	var newY=totalHeight-(window.innerWidth/5.4);
 		
 	if (newY<(totalHeight/2)) {
 		newY = totalHeight/2;
 	} else if (newY>(totalHeight*0.9)) {
 		newY = totalHeight*0.9;
 	}
-	notationArea.style.height=newY+"px";
+	notationArea.height=newY;
 	controlArea.style.top=newY+"px";
-	controlArea.style.height=(totalHeight-newY)+"px";
+	controlArea.height=totalHeight-newY-8;
 		
 	loadCookie();
     loadPreferences();
@@ -69,14 +66,12 @@ function initialize() {
 }
 	
 function initializeCanvases() {
-	initializeTitle();
 	recalculateSectionHeights();
 	initializeNotation();
 	initializeControls();
 }
 
 function refreshCanvases() {
-    initializeTitle();
     recalculateSectionHeights();
     initializeNotation();
     drawNotation();
@@ -84,9 +79,9 @@ function refreshCanvases() {
 }
 
 function recalculateSectionHeights() {
-	var totalHeight=document.getElementById("container").clientHeight;
+	var totalHeight=window.innerHeight; //var totalHeight=document.getElementById("container").clientHeight;
 	var newY = totalHeight * resizeBarPosition;
-	notationArea.style.height=newY+"px";
+	notationArea.height=newY; //notationArea.style.height=newY+"px";
 	controlArea.style.top=newY+"px";
-	controlArea.style.height=(totalHeight-newY)+"px";	
+	controlArea.height=totalHeight-newY-8; //controlArea.style.height=(totalHeight-newY)+"px";
 }

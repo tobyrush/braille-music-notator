@@ -1,4 +1,4 @@
-/* global window, XMLHttpRequest, ActiveXObject, phpRootAddress, navigator, saveToUndo, suspendUndo, cursor, deleteScore, whichKeyboard, parseOnImport, parseData, setScore, drawNotation, clipboardArea, score, rotateChar, convertToText, document, gridWidth, gridHeight, unicodeBrailleMap, currentControlModule, parseText: true */
+/* global window, XMLHttpRequest, ActiveXObject, phpRootAddress, navigator, saveToUndo, suspendUndo, cursor, deleteScore, whichKeyboard, parseFiles, parseData, setScore, drawNotation, clipboardArea, score, rotateChar, convertToText, document, gridWidth, gridHeight, unicodeBrailleMap, currentControlModule, parseText, Document: true */
 /* jshint -W020, -W084 */
 
 function findPos(obj) { // from http://www.quirksmode.org/js/findpos.html
@@ -128,7 +128,7 @@ function handleClipboard(e) {
 				
 				clipboardData = newString;
 				
-				if (parseOnImport) {
+				if (parseFiles) {
 					if (convertToText) {
                         clipboardData = parseText(clipboardData);
                     } else {
@@ -473,3 +473,29 @@ Object.prototype.appendNode = function(type,params) {
     return el;
 };
 Object.defineProperty(Object.prototype, "appendNode", {enumerable: false});
+
+Document.prototype.createTag = function(name, contents, attributes) {
+    var o = this.createElement(name);
+    o.textContent = contents;
+    for (var key in attributes) {
+        o.setAttribute(key,attributes[key]);
+    }
+    return o;
+};
+Object.defineProperty(Document.prototype, "createTag", {enumerable: false});
+
+function setNodeSelectedValue(node,val) {
+    if (node) {
+        if (val) {
+            node.setAttribute('selected','selected');
+        } else {
+            node.removeAttribute('selected');
+        }
+    }
+}
+
+function setNodeValue(node,val) {
+    if (node) {
+        node.setAttribute('value',val);
+    }
+}
