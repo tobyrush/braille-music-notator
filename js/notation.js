@@ -159,9 +159,18 @@ function drawNotation() {
 	ctx.stroke();
 	ctx.closePath();
 	
-	// draw braille symbols
+	ctx.save();
+    ctx.beginPath();
+    ctx.moveTo(0,0);
+    ctx.lineTo(notationWidth,0);
+    ctx.lineTo(notationWidth,notationHeight);
+    ctx.lineTo(0,notationHeight);
+    ctx.lineTo(0,0);
+    ctx.clip();
 
-    	for (var y in score) {
+    // draw braille symbols
+
+    for (var y in score) {
 		if ((y>vScrollUnits-1) && (y<vScrollUnits+(notationCellHeight+1)) && arrayHasOwnIndex(score,y)) {
 			currentCellFont.drawScoreLine(
 				(gridWidth*(0-hScrollUnits))-hScrollOffset,
@@ -179,6 +188,8 @@ function drawNotation() {
 	ctx.fillStyle="#000";
 	ctx.fillRect(gridWidth*(cursor.x-hScrollUnits)-hScrollOffset,gridHeight*(cursor.y-vScrollUnits)-vScrollOffset,gridWidth*cursor.width,gridHeight*cursor.height);
 	ctx.globalAlpha=1;
+
+    ctx.restore(); // release clipping area
 	
 	// draw page breaks
 	if (showPageBreaks) {
