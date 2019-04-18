@@ -1,4 +1,4 @@
-<controlModule name="Classic MIDI" help="default" font="sans-serif" style="normal" align="left" baseline="alphabetic">
+<controlModule name="Classic MIDI" help="default" font="sans-serif" style="normal" align="left" baseline="alphabetic" midi="true">
     <help name="default" top="15" left="300" width="200" height="100">
         <graphic type="text" color="#000" size="8" top="5" left="0" multiline="true" lineHeight="10" content="Click keys or type to add symbols\nto the score above.\n\nClick tabs to the left or press spacebar to\nswitch between keyboards.\n\nMouse over the keyboard for help." />
     </help>

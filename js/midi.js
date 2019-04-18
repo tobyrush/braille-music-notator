@@ -1,4 +1,4 @@
-/* global midiConnected, midiNotes, notate, octaveValues, restValues, sharpNoteValues, flatNoteValues, drawNotation, octaveCharValues, pitchValues, score, cursor, useLaunchpad: true */
+/* global midiConnected, midiNotes, notate, octaveValues, restValues, sharpNoteValues, flatNoteValues, drawNotation, octaveCharValues, pitchValues, score, cursor, useLaunchpad, insertOctaveSymbols: true */
 /* jshint -W020 */
 
 function onMIDISuccess(midiAccess) {
@@ -44,7 +44,7 @@ function midiNoteOn(note) {
     midiNotes.push(note);
 }
 
-function notateMIDINotes(duration,showOctave,sharp) {
+function notateMIDINotes(duration,forceShowOctave,sharp) {
     midiNotes.sort(function(a,b) {
         return b-a; // sorts high to low
     });
@@ -75,9 +75,8 @@ function notateMIDINotes(duration,showOctave,sharp) {
             oct = translateLaunchpad(midiNotes[0]).octave;
         }
 
-        if (showOctave || needsOctaveSign(score[cursor.y],cursor.x,p,oct)) {
+        if (forceShowOctave || needsOctaveSign(score[cursor.y],cursor.x,p,oct)) {
             notate(octaveValues[oct],"");
-//            notate(octaveValues[Math.floor(midiNotes[0]/12)-1],"");
         }
 
         notate(noteArray);
@@ -128,48 +127,15 @@ function findPitchAtPosition(chars,position) {
 
 function needsOctaveSign(chars,position,pitch,octave) {
 
-	var c = findPitchAtPosition(chars,position);
-    return !((octave==c.octave && Math.abs(c.pitch-pitch)<5) ||
-            (octave>c.octave && ((c.pitch==6 && pitch<2) || (c.pitch==5 && pitch===0))) ||
-            (octave<c.octave && ((c.pitch===0 && pitch>4) || (c.pitch==1 && pitch==6)))
-            );
-
-//    var justChanged, curOctave = -99;
-//	var newPitch, curPitch = 0;
-//	var diff = 0;
-//	var i = 0;
-//	if (chars) {
-//        while (i<position) {
-//            if (typeof(octaveCharValues[chars[i]])==='number') {
-//                curOctave = octaveCharValues[chars[i]];
-//                justChanged = true;
-//            } else if (typeof(pitchValues[chars[i]])==='number') {
-//                newPitch = pitchValues[chars[i]];
-//                if (!justChanged) {
-//                    if ((curPitch==6 && newPitch<2) || (curPitch==5 && newPitch===0)) {
-//                        curOctave += 1;
-//                    } else if ((curPitch===0 && newPitch>4) || (curPitch==1 && newPitch==6)) {
-//                        curOctave -= 1;
-//                    }
-//                }
-//                curPitch = newPitch;
-//                justChanged = false;
-//            }
-//            i++;
-//        }
-//
-//        if ((octave==curOctave && Math.abs(curPitch-pitch)<5) ||
-//            (octave>curOctave && ((curPitch==6 && pitch<2) || (curPitch==5 && pitch===0))) ||
-//            (octave<curOctave && ((curPitch===0 && pitch>4) || (curPitch==1 && pitch==6)))
-//            ) {
-//            return false;
-//        } else {
-//            return true;
-//        }
-//    } else {
-//        return true;
-//    }
-
+	if (insertOctaveSymbols) {
+        var c = findPitchAtPosition(chars,position);
+        return !((octave==c.octave && Math.abs(c.pitch-pitch)<5) ||
+                (octave>c.octave && ((c.pitch==6 && pitch<2) || (c.pitch==5 && pitch===0))) ||
+                (octave<c.octave && ((c.pitch===0 && pitch>4) || (c.pitch==1 && pitch==6)))
+                );
+    } else {
+        return false;
+    }
 }
 
 function translateLaunchpad(value) {
@@ -180,29 +146,3 @@ function translateLaunchpad(value) {
 
     return result;
 }
-
-//function findOctave(chars,position) {
-//	var justChanged, curOctave = 4;
-//	var newPitch, curPitch = 0;
-//	var diff = 0;
-//	var i = 0;
-//	while (i<position) {
-//		if (typeof(octaveCharValues[chars[i]])==='number') {
-//            curOctave = octaveCharValues[chars[i]];
-//            justChanged = true;
-//        } else if (typeof(pitchValues[chars[i]])==='number') {
-//            newPitch = pitchValues[chars[i]];
-//            if (!justChanged) {
-//                if ((curPitch==6 && newPitch<2) || (curPitch==5 && newPitch===0)) {
-//                    curOctave += 1;
-//                } else if ((curPitch===0 && newPitch>4) || (curPitch==1 && newPitch==6)) {
-//                    curOctave -= 1;
-//                }
-//            }
-//            curPitch = newPitch;
-//            justChanged = false;
-//        }
-//		i++;
-//	}
-//    return curOctave;
-//}

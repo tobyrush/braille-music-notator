@@ -1,66 +1,5 @@
-/* global titleArea, tctx, versionString, helpDialogOpen, roundRect, optionsDialogOpen, fileDialogOpen, controlArea, cctx, whichKeyboard, keyboardCoordinates, keymap, keycaps, displayControlHelp, cursor, hScroll, vScroll, controlsHeight, controlsWidth, chu, resizeBarHeight, keyboardOriginX, keyboardOriginY, kbu, controlHelpOriginX, controlHelpOriginY, console, shiftKeyDown, metaKeyDown, formFill, kProgramTitle, kVersionAndAuthor, kHelpButtonCaption, kOptionsButtonCaption, kFileButtonCaption, sendHTTPRequest, defaultControlModule, DOMParser, currentControlModule, updateScreenreader, kScreenReaderControlPageNumber, createTemporaryGrid, gridWidth, gridHeight, releaseTemporaryGrid, document, devMode, score, drawStoredScore, notate, tempGrid, drawNotation, currentCellFont, notationArea, notateMIDINotes, selectedControlModule, kControlChangeSymbol, toggleControlSelectionDialog: true */
+/* global titleArea, tctx, versionString, helpDialogOpen, roundRect, optionsDialogOpen, fileDialogOpen, controlArea, cctx, whichKeyboard, keyboardCoordinates, keymap, keycaps, displayControlHelp, cursor, hScroll, vScroll, controlsHeight, controlsWidth, chu, resizeBarHeight, keyboardOriginX, keyboardOriginY, kbu, controlHelpOriginX, controlHelpOriginY, console, shiftKeyDown, metaKeyDown, formFill, kProgramTitle, kVersionAndAuthor, kHelpButtonCaption, kOptionsButtonCaption, kFileButtonCaption, sendHTTPRequest, defaultControlModule, DOMParser, currentControlModule, updateScreenreader, kScreenReaderControlPageNumber, createTemporaryGrid, gridWidth, gridHeight, releaseTemporaryGrid, document, devMode, score, drawStoredScore, notate, tempGrid, drawNotation, currentCellFont, notationArea, notateMIDINotes, selectedControlModule, kControlChangeSymbol, toggleControlSelectionDialog, window, findPos, updateEnabledFlags: true */
 /* jshint -W020 */
-
-function initializeTitle() {
-	titleArea.width=titleArea.clientWidth;
-	titleArea.height=titleArea.clientHeight;
-	
-    drawTitle();
-}
-
-function clearTitleArea() {
-	titleArea.width = titleArea.clientWidth;
-}
-
-
-function drawTitle() {
-	clearTitleArea();
-	
-	titleArea.width=titleArea.clientWidth;
-	titleArea.height=titleArea.clientHeight;
-	
-	var titleWidth = titleArea.clientWidth;
-	var titleHeight = titleArea.clientHeight;
-	
-	var thu = titleHeight/100; // title height unit
-	
-	tctx.translate(0.5,0.5);
-	
-	tctx.fillStyle="#000";
-	tctx.textAlign="left";
-	tctx.textBaseline="top";
-	tctx.font = "bold "+(thu*80)+"px sans-serif";
-	var t=kProgramTitle;
-	tctx.fillText(t,0,0);
-	var twid=tctx.measureText(t).width;
-	tctx.font = "100 "+(thu*80)+"px sans-serif";
-	tctx.fillText(formFill(kVersionAndAuthor,[versionString]),twid*1.03,0);
-	
-	tctx.strokeStyle="#000";
-	tctx.lineWidth=1;
-	tctx.textAlign="center";
-	tctx.textBaseline="middle";
-	tctx.font = "normal "+thu*50+"px sans-serif";
-	
-	// help button
-	if (helpDialogOpen) {tctx.fillStyle="#000";} else {tctx.fillStyle="#fff";}
-	roundRect(tctx, titleWidth-((thu*300)+1), thu*10, thu*300, thu*80, thu*5, helpDialogOpen, true);
-	if (helpDialogOpen) {tctx.fillStyle="#fff";} else {tctx.fillStyle="#000";}
-	tctx.fillText(kHelpButtonCaption,titleWidth-((thu*155)+0.5),thu*50);
-	
-	// options button
-	if (optionsDialogOpen) {tctx.fillStyle="#000";} else {tctx.fillStyle="#fff";}
-	roundRect(tctx, titleWidth-((thu*600)+5), thu*10, thu*300, thu*80, thu*5, optionsDialogOpen, true);
-	if (optionsDialogOpen) {tctx.fillStyle="#fff";} else {tctx.fillStyle="#000";}
-	tctx.fillText(kOptionsButtonCaption,titleWidth-((thu*455)+3),thu*50);
-	
-	// file button
-	if (fileDialogOpen) {tctx.fillStyle="#000";} else {tctx.fillStyle="#fff";}
-	roundRect(tctx, titleWidth-((thu*900)+10), thu*10, thu*300, thu*80, thu*5, fileDialogOpen, true);
-	if (fileDialogOpen) {tctx.fillStyle="#fff";} else {tctx.fillStyle="#000";}
-	tctx.fillText(kFileButtonCaption,titleWidth-((thu*755)+5.5),thu*50);
-
-}
 
 function initializeControls(forceLoad = false) {
     if (currentControlModule && !forceLoad) {
@@ -87,6 +26,7 @@ function loadControlModule(request) {
         );
 
         currentControlModule.draw();
+        updateEnabledFlags();
 	}
 }
 
@@ -113,6 +53,8 @@ class controlModule {
             let value = root.getAttribute(name);
             if (name == "name") {
                 this.name = value;
+            } else if (name == "midi") {
+                this.midi = value;
             } else {
                 this.defaults[name] = value;
             }
@@ -143,8 +85,12 @@ class controlModule {
         var pbw=this.pageButtonWidth;
         var pbh=this.pageButtonHeight;
 
-        this.myCanvas.width=this.myCanvas.clientWidth;
-        this.myCanvas.height=this.myCanvas.clientHeight;
+        if (fileDialogOpen || optionsDialogOpen) {
+            this.myCanvas.width=window.innerWidth-300;
+        } else {
+            this.myCanvas.width=window.innerWidth-8;
+        }
+        this.myCanvas.height=window.innerHeight-findPos(this.myCanvas).y-8;
 
         var cw = this.myCanvas.width;
         var ch = this.myCanvas.height-resizeBarHeight;
@@ -192,11 +138,11 @@ class controlModule {
         }
 
         // draw control switcher
-        ctx.fillStyle="#CCC";
-        ctx.fillRect(this.width-pbw,0,pbw,pbw);
-
-        ctx.fillStyle="#FFF";
-        ctx.fillText(kControlChangeSymbol,this.width-(pbw/2),pbw/2);
+//        ctx.fillStyle="#CCC";
+//        ctx.fillRect(this.width-pbw,0,pbw,pbw);
+//
+//        ctx.fillStyle="#FFF";
+//        ctx.fillText(kControlChangeSymbol,this.width-(pbw/2),pbw/2);
 
 
         if (devMode) {
@@ -250,11 +196,11 @@ class controlModule {
             this.currentPage = Math.floor(y/this.pageButtonHeight);
             this.draw();
         } else {
-            if (x>(this.width-this.pageButtonWidth) && (y<=this.pageButtonWidth)) {
-                toggleControlSelectionDialog();
-            } else {
+//            if (x>(this.width-this.pageButtonWidth) && (y<=this.pageButtonWidth)) {
+//                toggleControlSelectionDialog();
+//            } else {
                 this.pages[this.currentPage].click(x-this.pageButtonWidth,y);
-            }
+//            }
         }
     }
     mouseOver(x,y) {
@@ -343,18 +289,11 @@ class controlPage {
         this.root.draw();
     }
     keyPress(keycode) {
-//        var resp = {};
         for (let c of this.controlItems) {
             if (c.keycode==keycode) {
                 c.keyPress();
-//                resp.chars = c.characters;
-//                resp.returnText = c.label;
-//                return resp;
             }
         }
-//        resp.chars = [];
-//        resp.returnText = "";
-//        return resp;
     }
 }
 

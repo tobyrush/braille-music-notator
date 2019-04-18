@@ -1,131 +1,58 @@
-/* global helpDialogOpen, optionsDialogOpen, fileDialogOpen, findPos, notationArea, hScrollOffset, gridWidth, hScrollUnits, vScrollOffset, gridHeight, vScrollUnits, shiftKeyDown, cursor, mouseIsDown, closeButtonCenterX, closeButtonCenterY, dialogButtonLeft, dialogButtonRight, dialogButtonTop, dialogButtonHeight, drawAllDots, setCellHeight, showPageBreaks, setPageSize, pageWidth, pageHeight, confirm, clearDocument, resetCursorAndScroll, fileUploader, downloadFile, parseOnImport, drawTitle, drawNotation, updateScreenreader, window, autoScroller, autoScrollXDir, autoScrollYDir, notationWidth, notationHeight, startDragX, startDragY, vScroll, hScroll, chu, controlArea, resizeBarHeight, resizeBarDrag, resizeBarDragOrigin, container, whichKeyboard, keyboardOriginX, keyboardOriginY, keyboardCoordinates, interpretKeyCode, keyCodes, drawControls, controlHelp, keyHelp, resizeBarPosition, initializeCanvases, titleArea, titleWidth, titleHeight, toggleHelpDialog, toggleOptionsDialog, toggleFileDialog, thu, kbu, nu, kUnsavedChangesDialogMessage, currentControlModule, currentCellFont: true */
+/* global helpDialogOpen, optionsDialogOpen, fileDialogOpen, findPos, notationArea, hScrollOffset, gridWidth, hScrollUnits, vScrollOffset, gridHeight, vScrollUnits, shiftKeyDown, cursor, mouseIsDown, closeButtonCenterX, closeButtonCenterY, dialogButtonLeft, dialogButtonRight, dialogButtonTop, dialogButtonHeight, showSmallDots, setCellHeight, showPageBreaks, setPageSize, pageWidth, pageHeight, confirm, clearDocument, resetCursorAndScroll, fileUploader, downloadFile, parseFiles, drawTitle, drawNotation, updateScreenreader, window, autoScroller, autoScrollXDir, autoScrollYDir, notationWidth, notationHeight, startDragX, startDragY, vScroll, hScroll, chu, controlArea, resizeBarHeight, resizeBarDrag, resizeBarDragOrigin, container, whichKeyboard, keyboardOriginX, keyboardOriginY, keyboardCoordinates, interpretKeyCode, keyCodes, drawControls, controlHelp, keyHelp, resizeBarPosition, initializeCanvases, titleArea, titleWidth, titleHeight, toggleHelpDialog, toggleOptionsDialog, toggleFileDialog, thu, kbu, nu, kUnsavedChangesDialogMessage, currentControlModule, currentCellFont, kTitleAreaHeight, kDialogWidth: true */
 /* jshint -W020 */
 
 
 function doNotationMouseDown(e) {
   	
-	if (!helpDialogOpen && !optionsDialogOpen && !fileDialogOpen) {
-	
-		startDragX = Math.floor(((e.clientX-findPos(notationArea).x)+hScrollOffset)/gridWidth)+hScrollUnits;
-		startDragY = Math.floor(((e.clientY-findPos(notationArea).y)+vScrollOffset)/gridHeight)+vScrollUnits;
-		if (shiftKeyDown) {
-			
-			var currentX = startDragX;
-			var currentY = startDragY;
-			var prevCursorX = cursor.x;
-			var prevCursorY = cursor.y;
-		
-			if (currentX<=cursor.x) {
-				cursor.x=currentX;
-				cursor.width=prevCursorX-currentX+1;
-				cursor.pinnedLeft=false;
-			} else {
-					cursor.width = currentX-prevCursorX+1;
-					cursor.pinnedLeft=true;
-			}
-	
-			if (currentY<=cursor.y) {
-				cursor.y=currentY;
-				cursor.height=prevCursorY-currentY+1;
-				cursor.pinnedTop=false;
-			} else {
-				cursor.height = currentY-prevCursorY+1;
-				cursor.pinnedTop=true;
-			}
-		} else {
-			cursor.x = startDragX;
-			cursor.y = startDragY;
-			cursor.width = 1;
-			cursor.height = 1;
-		}
-	
-		mouseIsDown = true;
-	
-	} else {
-		var x = e.clientX-findPos(notationArea).x;
-		var y = e.clientY-findPos(notationArea).y;
-		
-		if (x>closeButtonCenterX-(nu*3) && x<closeButtonCenterX+(nu*3) && y>closeButtonCenterY-(nu*3) && y<closeButtonCenterY+(nu*3)) {
-			helpDialogOpen = false;
-			optionsDialogOpen = false;
-			fileDialogOpen = false;
-		} else if (helpDialogOpen) {
-			if (x>dialogButtonLeft && x<dialogButtonRight) {
-				if (y>dialogButtonTop[1] && y<dialogButtonTop[1]+dialogButtonHeight) {
-					
-				} else if (y>dialogButtonTop[2] && y<dialogButtonTop[2]+dialogButtonHeight) {
-					
-				} else if (y>dialogButtonTop[3] && y<dialogButtonTop[3]+dialogButtonHeight) {
-					
-				} else if (y>dialogButtonTop[4] && y<dialogButtonTop[4]+dialogButtonHeight) {
-					
-				} else if (y>dialogButtonTop[5] && y<dialogButtonTop[5]+dialogButtonHeight) {
-				
-				}
-			}
-		} else if (optionsDialogOpen) {
-			if (x>dialogButtonLeft && x<dialogButtonRight) {
-				if (y>dialogButtonTop[1] && y<dialogButtonTop[1]+dialogButtonHeight) {
-					currentCellFont.interpretBraille=!currentCellFont.interpretBraille;
-				} else if (y>dialogButtonTop[2] && y<dialogButtonTop[2]+dialogButtonHeight) {
-					drawAllDots = !drawAllDots;
-				} else if (y>dialogButtonTop[3] && y<dialogButtonTop[3]+dialogButtonHeight) {
-					if (x>dialogButtonLeft+(nu*47.5) && x<dialogButtonLeft+(nu*57.5)) {
-						if (y>dialogButtonTop[3]+(nu*1) && y<dialogButtonTop[3]+(nu*6)) { // +
-							setCellHeight(gridHeight+10);
-						} else if (y>dialogButtonTop[3]+(nu*6) && y<dialogButtonTop[3]+(nu*11)) { // -
-							setCellHeight(Math.max(10,gridHeight-10));
-						}
-					}
-				} else if (y>dialogButtonTop[4] && y<dialogButtonTop[4]+dialogButtonHeight) {
-					showPageBreaks = !showPageBreaks;
-				} else if (y>dialogButtonTop[5] && y<dialogButtonTop[5]+dialogButtonHeight) {
-					if (x>dialogButtonLeft+(nu*32.5) && x<dialogButtonLeft+(nu*42.5)) {
-						if (y>dialogButtonTop[5]+(nu*1) && y<dialogButtonTop[5]+(nu*6)) { // +
-							setPageSize(pageWidth+1,pageHeight);
-						} else if (y>dialogButtonTop[5]+(nu*6) && y<dialogButtonTop[5]+(nu*11)) { // -
-							setPageSize(Math.max(1,pageWidth-1),pageHeight);
-						}
-					} else if (x>dialogButtonLeft+(nu*72.5) && x<dialogButtonLeft+(nu*82.5)) {
-						if (y>dialogButtonTop[5]+(nu*1) && y<dialogButtonTop[5]+(nu*6)) { // +
-							setPageSize(pageWidth,pageHeight+1);
-						} else if (y>dialogButtonTop[5]+(nu*6) && y<dialogButtonTop[5]+(nu*11)) { // -
-							setPageSize(pageWidth,Math.max(1,pageHeight-1));
-						}
-					}
-				}
-			}
-		} else { // fileDialogOpen
-			if (x>dialogButtonLeft && x<dialogButtonRight) {
-				if (y>dialogButtonTop[1] && y<dialogButtonTop[1]+dialogButtonHeight) { // new file
-					if (confirm(kUnsavedChangesDialogMessage)) {
-						clearDocument();
-						resetCursorAndScroll();
-						fileDialogOpen=false;
-					}
-				} else if (y>dialogButtonTop[2] && y<dialogButtonTop[2]+dialogButtonHeight) {
-					if (confirm(kUnsavedChangesDialogMessage)) {
-						fileUploader.click();
-						resetCursorAndScroll();
-						fileDialogOpen=false;
-					}
-				} else if (y>dialogButtonTop[3] && y<dialogButtonTop[3]+dialogButtonHeight) {
-					downloadFile(false);
-					fileDialogOpen=false;
-				} else if (y>dialogButtonTop[4] && y<dialogButtonTop[4]+dialogButtonHeight) {
-					downloadFile(true);
-					fileDialogOpen=false;
-				} else if (y>dialogButtonTop[5] && y<dialogButtonTop[5]+dialogButtonHeight) {
-					parseOnImport = !parseOnImport;
-				}
-			}
-		}
-		drawTitle();
-	}
-	
-	drawNotation();
-	updateScreenreader("");
-	
+	var x = e.clientX-findPos(notationArea).x;
+    var y = e.clientY-findPos(notationArea).y-kTitleAreaHeight;
+
+    if (y > 0) {
+
+        //y = y + kTitleAreaHeight+4;
+
+        if ((!optionsDialogOpen && !fileDialogOpen) || x < kDialogWidth) {
+
+            startDragX = Math.floor((x+hScrollOffset)/gridWidth)+hScrollUnits;
+            startDragY = Math.floor((y+vScrollOffset)/gridHeight)+vScrollUnits;
+            if (shiftKeyDown) {
+
+                var currentX = startDragX;
+                var currentY = startDragY;
+                var prevCursorX = cursor.x;
+                var prevCursorY = cursor.y;
+
+                if (currentX<=cursor.x) {
+                    cursor.x=currentX;
+                    cursor.width=prevCursorX-currentX+1;
+                    cursor.pinnedLeft=false;
+                } else {
+                        cursor.width = currentX-prevCursorX+1;
+                        cursor.pinnedLeft=true;
+                }
+
+                if (currentY<=cursor.y) {
+                    cursor.y=currentY;
+                    cursor.height=prevCursorY-currentY+1;
+                    cursor.pinnedTop=false;
+                } else {
+                    cursor.height = currentY-prevCursorY+1;
+                    cursor.pinnedTop=true;
+                }
+            } else {
+                cursor.x = startDragX;
+                cursor.y = startDragY;
+                cursor.width = 1;
+                cursor.height = 1;
+            }
+
+            mouseIsDown = true;
+
+            drawNotation();
+            updateScreenreader("");
+
+        }
+    }
 }
 
 function doNotationMouseUp(e) {
@@ -143,7 +70,7 @@ function doNotationMouseMove(e) {
 function doNotationMouseDrag(e) {
 
 	var localX = e.clientX-findPos(notationArea).x;
-	var localY = e.clientY-findPos(notationArea).y;
+	var localY = e.clientY-findPos(notationArea).y-kTitleAreaHeight;
 	
 	var onEdge = false;
 	if (localX<20) {
@@ -267,7 +194,7 @@ function doWindowMouseUp(e) {
 function doWindowMouseMove(e) {
 	if (resizeBarDrag) {
 		var newY = (e.clientY-findPos(container).y)-resizeBarDragOrigin;
-		var totalHeight=notationArea.clientHeight+controlArea.clientHeight;
+		var totalHeight=window.innerHeight;
 		
 		if (newY<(totalHeight/2)) {
 			newY = totalHeight/2;
@@ -275,9 +202,9 @@ function doWindowMouseMove(e) {
 			newY = totalHeight*0.9;
 		}
 		
-		notationArea.style.height=newY+"px";
+		notationArea.height=newY;
 		controlArea.style.top=newY+"px";
-		controlArea.style.height=(totalHeight-newY)+"px";
+		controlArea.height=totalHeight-newY-8;
 		
 		resizeBarPosition = newY/totalHeight;
 		initializeCanvases();
@@ -285,32 +212,6 @@ function doWindowMouseMove(e) {
 		drawNotation();
 		drawControls();
 	}
-}
-
-function doTitleMouseDown(e) {
-	
-	var x = e.clientX-findPos(titleArea).x;
-	var y = e.clientY-findPos(titleArea).y;
-	
-	titleWidth = titleArea.clientWidth;
-	titleHeight = titleArea.clientHeight;
-	
-	thu = titleHeight/100; // title height unit
-	
-	if (y>=thu*10 && y<=thu*80) {
-		if (x>=titleWidth-((thu*300)+1) && x<=titleWidth-((thu*0)+1)) {
-			toggleHelpDialog();
-		} else if (x>=titleWidth-((thu*600)+5) && x<=titleWidth-((thu*300)+5)) {
-			toggleOptionsDialog();
-		} else if (x>=titleWidth-((thu*900)+10) && x<=titleWidth-((thu*600)+10)) {
-			toggleFileDialog();
-		}
-	}
-	
-	drawTitle();
-	drawNotation();
-	drawControls();
-	
 }
 
 function autoScroll() {
