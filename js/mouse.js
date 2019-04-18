@@ -5,11 +5,11 @@
 function doNotationMouseDown(e) {
   	
 	var x = e.clientX-findPos(notationArea).x;
-    var y = e.clientY-findPos(notationArea).y;
+    var y = e.clientY-findPos(notationArea).y-kTitleAreaHeight;
 
-    if (y > kTitleAreaHeight+4) {
+    if (y > 0) {
 
-        y = y + kTitleAreaHeight+4;
+        //y = y + kTitleAreaHeight+4;
 
         if ((!optionsDialogOpen && !fileDialogOpen) || x < kDialogWidth) {
 
@@ -48,97 +48,11 @@ function doNotationMouseDown(e) {
 
             mouseIsDown = true;
 
-//        } else {
-//
-//            if (x>closeButtonCenterX-(nu*3) && x<closeButtonCenterX+(nu*3) && y>closeButtonCenterY-(nu*3) && y<closeButtonCenterY+(nu*3)) {
-//                optionsDialogOpen = false;
-//                fileDialogOpen = false;
-//            } else if (optionsDialogOpen) {
-//                if (x>dialogButtonLeft && x<dialogButtonRight) {
-//                    if (y>dialogButtonTop[1] && y<dialogButtonTop[1]+dialogButtonHeight) {
-//                        currentCellFont.translateBraille=!currentCellFont.translateBraille;
-//                    } else if (y>dialogButtonTop[2] && y<dialogButtonTop[2]+dialogButtonHeight) {
-//                        showSmallDots = !showSmallDots;
-//                    } else if (y>dialogButtonTop[3] && y<dialogButtonTop[3]+dialogButtonHeight) {
-//                        if (x>dialogButtonLeft+(nu*47.5) && x<dialogButtonLeft+(nu*57.5)) {
-//                            if (y>dialogButtonTop[3]+(nu*1) && y<dialogButtonTop[3]+(nu*6)) { // +
-//                                setCellHeight(gridHeight+10);
-//                            } else if (y>dialogButtonTop[3]+(nu*6) && y<dialogButtonTop[3]+(nu*11)) { // -
-//                                setCellHeight(Math.max(10,gridHeight-10));
-//                            }
-//                        }
-//                    } else if (y>dialogButtonTop[4] && y<dialogButtonTop[4]+dialogButtonHeight) {
-//                        showPageBreaks = !showPageBreaks;
-//                    } else if (y>dialogButtonTop[5] && y<dialogButtonTop[5]+dialogButtonHeight) {
-//                        if (x>dialogButtonLeft+(nu*32.5) && x<dialogButtonLeft+(nu*42.5)) {
-//                            if (y>dialogButtonTop[5]+(nu*1) && y<dialogButtonTop[5]+(nu*6)) { // +
-//                                setPageSize(pageWidth+1,pageHeight);
-//                            } else if (y>dialogButtonTop[5]+(nu*6) && y<dialogButtonTop[5]+(nu*11)) { // -
-//                                setPageSize(Math.max(1,pageWidth-1),pageHeight);
-//                            }
-//                        } else if (x>dialogButtonLeft+(nu*72.5) && x<dialogButtonLeft+(nu*82.5)) {
-//                            if (y>dialogButtonTop[5]+(nu*1) && y<dialogButtonTop[5]+(nu*6)) { // +
-//                                setPageSize(pageWidth,pageHeight+1);
-//                            } else if (y>dialogButtonTop[5]+(nu*6) && y<dialogButtonTop[5]+(nu*11)) { // -
-//                                setPageSize(pageWidth,Math.max(1,pageHeight-1));
-//                            }
-//                        }
-//                    }
-//                }
-//            } else { // fileDialogOpen
-//                if (x>dialogButtonLeft && x<dialogButtonRight) {
-//                    if (y>dialogButtonTop[1] && y<dialogButtonTop[1]+dialogButtonHeight) { // new file
-//                        if (confirm(kUnsavedChangesDialogMessage)) {
-//                            clearDocument();
-//                            resetCursorAndScroll();
-//                            fileDialogOpen=false;
-//                        }
-//                    } else if (y>dialogButtonTop[2] && y<dialogButtonTop[2]+dialogButtonHeight) {
-//                        if (confirm(kUnsavedChangesDialogMessage)) {
-//                            fileUploader.click();
-//                            resetCursorAndScroll();
-//                            fileDialogOpen=false;
-//                        }
-//                    } else if (y>dialogButtonTop[3] && y<dialogButtonTop[3]+dialogButtonHeight) {
-//                        downloadFile(false);
-//                        fileDialogOpen=false;
-//                    } else if (y>dialogButtonTop[4] && y<dialogButtonTop[4]+dialogButtonHeight) {
-//                        downloadFile(true);
-//                        fileDialogOpen=false;
-//                    } else if (y>dialogButtonTop[5] && y<dialogButtonTop[5]+dialogButtonHeight) {
-//                        parseFiles = !parseFiles;
-//                    }
-//                }
-//            }
-//            drawTitle();
+            drawNotation();
+            updateScreenreader("");
+
         }
-
-        drawNotation();
-        updateScreenreader("");
-
-    } else {
-
-        titleWidth = notationArea.clientWidth;
-        titleHeight = kTitleAreaHeight;
-
-        thu = titleHeight/100; // title height unit
-
-        if (y>=thu*10 && y<=thu*80) {
-            if (x>=titleWidth-((thu*300)+1) && x<=titleWidth-((thu*0)+1)) {
-                toggleHelpDialog();
-            } else if (x>=titleWidth-((thu*600)+5) && x<=titleWidth-((thu*300)+5)) {
-                toggleOptionsDialog();
-            } else if (x>=titleWidth-((thu*900)+10) && x<=titleWidth-((thu*600)+10)) {
-                toggleFileDialog();
-            }
-        }
-
-        drawTitle();
-        drawNotation();
-        drawControls();
-
     }
-	
 }
 
 function doNotationMouseUp(e) {
@@ -156,7 +70,7 @@ function doNotationMouseMove(e) {
 function doNotationMouseDrag(e) {
 
 	var localX = e.clientX-findPos(notationArea).x;
-	var localY = e.clientY-findPos(notationArea).y;
+	var localY = e.clientY-findPos(notationArea).y-kTitleAreaHeight;
 	
 	var onEdge = false;
 	if (localX<20) {
@@ -299,32 +213,6 @@ function doWindowMouseMove(e) {
 		drawControls();
 	}
 }
-
-//function doTitleMouseDown(e) {
-//
-//	var x = e.clientX-findPos(titleArea).x;
-//	var y = e.clientY-findPos(titleArea).y;
-//
-//	titleWidth = titleArea.clientWidth;
-//	titleHeight = titleArea.clientHeight;
-//
-//	thu = titleHeight/100; // title height unit
-//
-//	if (y>=thu*10 && y<=thu*80) {
-//		if (x>=titleWidth-((thu*300)+1) && x<=titleWidth-((thu*0)+1)) {
-//			toggleHelpDialog();
-//		} else if (x>=titleWidth-((thu*600)+5) && x<=titleWidth-((thu*300)+5)) {
-//			toggleOptionsDialog();
-//		} else if (x>=titleWidth-((thu*900)+10) && x<=titleWidth-((thu*600)+10)) {
-//			toggleFileDialog();
-//		}
-//	}
-//
-//	drawTitle();
-//	drawNotation();
-//	drawControls();
-//
-//}
 
 function autoScroll() {
 	
