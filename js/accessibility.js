@@ -19,14 +19,17 @@ function getScoreDescriptor(x,y) {
 	
 }
 	
-function getScoreLine(row) {
+function getScoreLine(row,lowASCII=true) {
 	
 	var lineString = "";
+    var modValue = Infinity;
+
+    if (lowASCII) { modValue = 100; }
 	
 	if (typeof score[row]!=='undefined') {
         for (var col=0; col<=score[row].length; col+=1) {
             if ((typeof score[row][col]!=='undefined') && (score[row][col]>0)) {
-                lineString=lineString+String.fromCharCode(score[row][col] % 100);
+                lineString=lineString+String.fromCharCode(score[row][col] % modValue);
             } else {
                 lineString=lineString+" ";
             }

@@ -1,4 +1,4 @@
-/* global helpWindow, helpDialogOpen, optionsDialogOpen, fileDialogOpen, notationArea, notationWidth, window, config, nu, ctx, roundRect, dialogTop, dialogButtonLeft, dialogButtonTop, dialogButtonRight, translateBraille, showSmallDots, notationGridHeight, showPageBreaks, pageWidth, pageHeight, dialogButtonWidth, dialogButtonHeight, parseFiles, notationHeight, closeButtonCenterX, closeButtonCenterY, kOptionsDialogTitle, kTranslateBrailleLabel, kTranslateBrailleDescription, kShowSmallDotsLabel, kShowSmallDotsDescription, kScoreSizeLabel, kshowPageBreaksLabel, kshowPageBreaksDescription, kWidthLabel, kHeightLabel, kFileDialogTitle, kNewFileLabel, kNewFileDescription, kOpenFileLabel, kOpenFileDescription, kSaveFileLabel, kSaveFileDescription, kExportFileLabel, kExportFileDescription, kParseImportedFilesLabel, kParseImportedFilesDescription, currentCellFont, document, controlModules, currentLocale, selectedControlModule, initializeControls, drawNotation, currentControlModule, gridHeight, setCellHeight, dialogFieldFocus, useWordWrap, setPageSize, Event, insertOctaveSymbols, useBrailleDisplay, kUseBrailleDisplayLabel, kUseBrailleDisplayDescription, kScoreSizeUpButton, kScoreSizeDownButton, kPageSizeLabel, kPageSizeByLabel, kUseWordWrapLabel, kUseWordWrapDescription, kControlsLabel, kMIDISettingsLabel, kInsertOctaveSymbolsLabel, kInsertOctaveSymbolsDescription: true */
+/* global helpWindow, helpDialogOpen, optionsDialogOpen, fileDialogOpen, notationArea, notationWidth, window, config, nu, ctx, roundRect, dialogTop, dialogButtonLeft, dialogButtonTop, dialogButtonRight, translateBraille, showSmallDots, notationGridHeight, showPageBreaks, pageWidth, pageHeight, dialogButtonWidth, dialogButtonHeight, parseFiles, notationHeight, closeButtonCenterX, closeButtonCenterY, kOptionsDialogTitle, kTranslateBrailleLabel, kTranslateBrailleDescription, kShowSmallDotsLabel, kShowSmallDotsDescription, kScoreSizeLabel, kshowPageBreaksLabel, kshowPageBreaksDescription, kWidthLabel, kHeightLabel, kFileDialogTitle, kNewFileLabel, kNewFileDescription, kOpenFileLabel, kOpenFileDescription, kSaveFileLabel, kSaveFileDescription, kExportFileLabel, kExportFileDescription, kParseImportedFilesLabel, kParseImportedFilesDescription, currentCellFont, document, controlModules, currentLocale, selectedControlModule, initializeControls, drawNotation, currentControlModule, gridHeight, setCellHeight, dialogFieldFocus, useWordWrap, setPageSize, Event, insertOctaveSymbols, useBrailleDisplay, kUseBrailleDisplayLabel, kUseBrailleDisplayDescription, kScoreSizeUpButton, kScoreSizeDownButton, kPageSizeLabel, kPageSizeByLabel, kUseWordWrapLabel, kUseWordWrapDescription, kControlsLabel, kMIDISettingsLabel, kInsertOctaveSymbolsLabel, kInsertOctaveSymbolsDescription, kObserveKeySignaturesLabel, kObserveKeySignaturesDescription, observeKeySignatures: true */
 /* jshint -W020 */
 
 function toggleFileDialog() {
@@ -330,6 +330,22 @@ function showOptionsDialog() {
             class: 'dialogCheckboxDescription'
         }));
         if (insertOctaveSymbols) { insertOctaveSymbolsCheckbox.setAttribute('selected','selected'); }
+
+        var observeKeySignaturesCheckbox = optionsDialog.appendChild(document.createTag('div','',{
+            class: 'dialogSubCheckbox',
+            id: 'observeKeySignaturesCheckbox',
+            onclick: 'toggleObserveKeySignatures();'
+        }));
+        observeKeySignaturesCheckbox.appendChild(document.createTag('div','',{
+            class: 'dialogCheckboxIndicator'
+        }));
+        observeKeySignaturesCheckbox.appendChild(document.createTag('div',kObserveKeySignaturesLabel,{
+            class: 'dialogCheckboxCaption'
+        }));
+        observeKeySignaturesCheckbox.appendChild(document.createTag('div',kObserveKeySignaturesDescription,{
+            class: 'dialogCheckboxDescription'
+        }));
+        if (observeKeySignatures) { observeKeySignaturesCheckbox.setAttribute('selected','selected'); }
     }
 
     updateEnabledFlags();
@@ -440,6 +456,34 @@ function toggleUseBrailleDisplay() {
     }
 }
 
+function toggleInsertOctaveSymbols() {
+    if (insertOctaveSymbols) {
+        insertOctaveSymbols=false;
+        if (document.querySelector('#optionsDialog')) {
+            document.querySelector('#insertOctaveSymbolsCheckbox').removeAttribute('selected');
+        }
+    } else {
+        insertOctaveSymbols=true;
+        if (document.querySelector('#optionsDialog')) {
+            document.querySelector('#insertOctaveSymbolsCheckbox').setAttribute('selected','selected');
+        }
+    }
+}
+
+function toggleObserveKeySignatures() {
+    if (observeKeySignatures) {
+        observeKeySignatures=false;
+        if (document.querySelector('#optionsDialog')) {
+            document.querySelector('#observeKeySignaturesCheckbox').removeAttribute('selected');
+        }
+    } else {
+        observeKeySignatures=true;
+        if (document.querySelector('#optionsDialog')) {
+            document.querySelector('#observeKeySignaturesCheckbox').setAttribute('selected','selected');
+        }
+    }
+}
+
 function updateEnabledFlags() {
     var pb = document.querySelector('#showPageBreaksCheckbox');
     if (pb) {
@@ -456,9 +500,11 @@ function updateEnabledFlags() {
         if (currentControlModule.midi) {
             ms.removeAttribute('disabled');
             document.querySelector('#insertOctaveSymbolsCheckbox').removeAttribute('disabled');
+            document.querySelector('#observeKeySignaturesCheckbox').removeAttribute('disabled');
         } else {
             ms.setAttribute('disabled','disabled');
             document.querySelector('#insertOctaveSymbolsCheckbox').setAttribute('disabled','disabled');
+            document.querySelector('#observeKeySignaturesCheckbox').setAttribute('disabled','disabled');
         }
     }
 }
