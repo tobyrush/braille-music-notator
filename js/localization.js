@@ -25,6 +25,8 @@ var kCharNames,
     kMIDISettingsLabel,
     kNewFileDescription,
     kNewFileLabel,
+    kObserveKeySignaturesLabel,
+    kObserveKeySignaturesDescription,
     kOpenFileDescription,
     kOpenFileLabel,
     kOptionsButtonCaption,
@@ -98,6 +100,8 @@ function localize(lang) {
             kMIDISettingsLabel = "MIDI Settings:";
             kNewFileDescription = "Discard current document and start with an empty one.";
             kNewFileLabel = "New File";
+            kObserveKeySignaturesLabel = "Observe Key Signatures";
+            kObserveKeySignaturesDescription = "Apply accidentals according to the most recently written key signature.";
             kOpenFileDescription = "Open a braille document from your computer.";
             kOpenFileLabel = "Open File";
             kOptionsButtonCaption = "Options";

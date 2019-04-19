@@ -1,4 +1,4 @@
-/* global FileReader, importData, arrayHasOwnIndex, drawNotation, createCookie, eraseCookie, readCookie, convertScoreToString, convertStringToScore, eraseAllCookies, padLeft, document, kDefaultFilename, setCellHeight, setControlModule: true */
+/* global FileReader, importData, arrayHasOwnIndex, drawNotation, createCookie, eraseCookie, readCookie, convertScoreToString, convertStringToScore, eraseAllCookies, padLeft, document, kDefaultFilename, setCellHeight, setControlModule, observeKeySignatures: true */
 
 // global variables
 
@@ -39,6 +39,7 @@ var resizeBarHeight = 8;
 var currentFileName = '';
 var currentLocale = 'en';
 var translateBrailleDefault = true;
+var trackKeySignatures = true;
 
 var controlModules = [
     {
@@ -101,6 +102,18 @@ var flatNoteValues = [
     [[178],[60,179],[179],[60,180],[180],[181],[60,182],[182],[60,183],[183],[60,184],[184]],
     [[163],[60,158],[158],[60,136],[136],[193],[60,192],[192],[60,191],[191],[60,187],[187]],
     [[168],[60,169],[169],[60,170],[170],[171],[60,172],[172],[60,173],[173],[60,174],[174]]
+];
+
+var diatonicNoteValues = [
+    [[89,75],[90,75],[38,75],[61,75],[40,75],[33,75],[41,75]],
+    [[89],[90],[38],[61],[40],[33],[41]],
+    [[78],[79],[80],[81],[82],[83],[84]],
+    [[63],[58],[36],[93],[92],[91],[87]],
+    [[68],[69],[70],[71],[72],[73],[74]],
+    [[189],[190],[138],[161],[140],[133],[141]],
+    [[178],[179],[180],[181],[182],[183],[184]],
+    [[163],[158],[136],[193],[192],[191],[187]],
+    [[168],[169],[170],[171],[172],[173],[174]]
 ];
 
 var restValues = [[77,75],[77],[85],[86],[88],[177],[185],[186],[188]];
@@ -384,7 +397,9 @@ function savePreferences() {
     ps += currentLocale + tab;
     ps += selectedControlModule.id + tab;
     ps += cursor.x + tab + cursor.y + tab + cursor.width + tab + cursor.height + tab;
-    ps += currentFileName;
+    ps += currentFileName + tab;
+    ps += (insertOctaveSymbols ? "1" : "0") + tab;
+    ps += (observeKeySignatures ? "1" : "0");
 
     eraseCookie('bmnpref');
     createCookie('bmnpref',ps);
@@ -417,5 +432,7 @@ function loadPreferences() {
             cursor.height = ps[15]*1;
             currentFileName = ps[16];
         }
+        insertOctaveSymbols = (ps[17]=="1");
+        observeKeySignatures = (ps[18]=="1");
     }
 }

@@ -1,4 +1,4 @@
-/* global midiConnected, midiNotes, notate, octaveValues, restValues, sharpNoteValues, flatNoteValues, drawNotation, octaveCharValues, pitchValues, score, cursor, useLaunchpad, insertOctaveSymbols: true */
+/* global midiConnected, midiNotes, notate, octaveValues, restValues, sharpNoteValues, flatNoteValues, drawNotation, octaveCharValues, pitchValues, score, cursor, useLaunchpad, insertOctaveSymbols, getScoreLine, diatonicNoteValues, observeKeySignatures: true */
 /* jshint -W020 */
 
 function onMIDISuccess(midiAccess) {
@@ -44,7 +44,7 @@ function midiNoteOn(note) {
     midiNotes.push(note);
 }
 
-function notateMIDINotes(duration,forceShowOctave,sharp) {
+function notateMIDINotes(duration,forceShowOctave) {
     midiNotes.sort(function(a,b) {
         return b-a; // sorts high to low
     });
@@ -62,11 +62,19 @@ function notateMIDINotes(duration,forceShowOctave,sharp) {
         notate(restValues[duration]);
     } else {
 
-        if (sharp) {
-            noteArray = sharpNoteValues[duration][pc];
+        var k;
+        if (observeKeySignatures) {
+            k=findKeySignatureAtPosition(cursor.x,cursor.y);
         } else {
-            noteArray = flatNoteValues[duration][pc];
+            k=findKeySignatureAtPosition(0,0);
         }
+        noteArray = k.notateInKey(pc,duration);
+
+//        if (sharp) {
+//            noteArray = sharpNoteValues[duration][pc];
+//        } else {
+//            noteArray = flatNoteValues[duration][pc];
+//        }
 
         var p = getPitch(noteArray); // return diatonic pitch # from noteArray
         var oct = getOctave(midiNotes[0]); // return octave number from MIDI pitch value
@@ -125,6 +133,24 @@ function findPitchAtPosition(chars,position) {
     return result;
 }
 
+function findKeySignatureAtPosition(xPos,yPos) {
+    var currentRow;
+    var kFlat = String.fromCharCode(160);
+    var kSharp = String.fromCharCode(137);
+    for (var row=yPos; row>-1; row--) {
+        currentRow = getScoreLine(row,false);
+        if (row==yPos) {
+            currentRow = currentRow.slice(0,xPos);
+        }
+        var r = new RegExp('ë?[ČčĎď]?['+kFlat+kSharp+']{1,3}','g');
+        if (r.test(currentRow)) {
+            var m=currentRow.match(r);
+            return new keySignature(m[m.length-1]);
+        }
+    }
+    return new keySignature("");
+}
+
 function needsOctaveSign(chars,position,pitch,octave) {
 
 	if (insertOctaveSymbols) {
@@ -145,4 +171,49 @@ function translateLaunchpad(value) {
     result.octave = Math.floor(value/10);
 
     return result;
+}
+
+class keySignature {
+    constructor(chars) {
+        if (chars==="") {
+            this.keyNum = 0;
+        } else {
+            var kFlat = String.fromCharCode(160);
+            var kSharp = String.fromCharCode(137);
+            if (/ëČ/.test(chars)) { this.keyNum=4; }
+            else if (/ëč/.test(chars)) { this.keyNum=5; }
+            else if (/ëĎ/.test(chars)) { this.keyNum=6; }
+            else if (/ëď/.test(chars)) { this.keyNum=7; }
+            else { this.keyNum = chars.match(new RegExp('['+kFlat+kSharp+']','g')).length; }
+            if (chars.indexOf(kFlat) > -1) { this.keyNum = this.keyNum * -1; }
+        }
+        let C=0, D=1, E=2, F=3, G=4, A=5, B=6;
+        let L=-0, l=1, n=2, s=3, S=4;
+        this.keyMap = [];
+        this.keyMap[-7]=[[C,n],[D  ],[E,L],[E  ],[F  ],[F,n],[G  ],[G,n],[A  ],[B,L],[B  ],[C  ]];
+        this.keyMap[-6]=[[C,n],[D  ],[D,n],[E  ],[F,l],[F  ],[G  ],[G,n],[A  ],[B,L],[B  ],[C  ]];
+        this.keyMap[-5]=[[C  ],[D  ],[D,n],[E  ],[F,l],[F  ],[G  ],[G,n],[A  ],[A,n],[B  ],[C,l]];
+        this.keyMap[-4]=[[C  ],[D  ],[D,n],[E  ],[E,n],[F  ],[G,l],[G  ],[A  ],[A,n],[B  ],[C,l]];
+        this.keyMap[-3]=[[C  ],[D,l],[D  ],[E  ],[E,n],[F  ],[G,l],[G  ],[A  ],[A,n],[B  ],[B,n]];
+        this.keyMap[-2]=[[C  ],[D,l],[D  ],[E  ],[E,n],[F  ],[F,s],[G  ],[A,l],[A  ],[B  ],[B,n]];
+        this.keyMap[-1]=[[C  ],[C,s],[D  ],[E,l],[E  ],[F  ],[F,s],[G  ],[A,l],[A  ],[B  ],[B,n]];
+        this.keyMap[ 0]=[[C  ],[C,s],[D  ],[E,l],[E  ],[F  ],[F,s],[G  ],[G,s],[A  ],[B,l],[B  ]];
+        this.keyMap[ 1]=[[C  ],[C,s],[D  ],[D,s],[E  ],[F,n],[F  ],[G  ],[G,s],[A  ],[B,l],[B  ]];
+        this.keyMap[ 2]=[[C,n],[C  ],[D  ],[D,s],[E  ],[F,n],[F  ],[G  ],[G,s],[A  ],[A,s],[B  ]];
+        this.keyMap[ 3]=[[C,n],[C  ],[D  ],[D,s],[E  ],[E,s],[F  ],[G,n],[G  ],[A  ],[A,s],[B  ]];
+        this.keyMap[ 4]=[[B,s],[C  ],[D,n],[D  ],[E  ],[E,s],[F  ],[G,n],[G  ],[A  ],[A,s],[B  ]];
+        this.keyMap[ 5]=[[B,s],[C  ],[D,n],[D  ],[E  ],[E,s],[F  ],[F,S],[G  ],[A,n],[A  ],[B  ]];
+        this.keyMap[ 6]=[[B,s],[C  ],[C,S],[D  ],[E,n],[E  ],[F  ],[F,S],[G  ],[A,n],[A  ],[B  ]];
+        this.keyMap[ 7]=[[B  ],[C  ],[C,S],[D  ],[E,n],[E  ],[F  ],[F,S],[G  ],[G,S],[A  ],[B,n]];
+    }
+    notateInKey(pc,duration) {
+        var r = [],
+            n = this.keyMap[this.keyNum][pc],
+            acc = [[60,60],[60],[42],[37],[37,37]];
+        if (n.length>1) {
+            r.push(...acc[n[1]]);
+        }
+        r.push(...diatonicNoteValues[duration][n[0]]);
+        return r;
+    }
 }
