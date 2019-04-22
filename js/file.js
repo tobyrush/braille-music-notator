@@ -1,4 +1,4 @@
-/* global dropzone, drawNotation, window, reader, fileUploader, saveToUndo, suspendUndo, score, hScroll, vScroll, setScrollVars, parseFiles, isLowASCII, setScore, cursor, scoreWidth, showPageBreaks, pageWidth, pageHeight, document, MouseEvent, currentBeatUnit, kFileNameBRF, kFileNameBRM, kPrefixAbbreviations, kWordAbbreviations, kTextAbbreviations, kCommonWords, currentFileName, shiftKeyDown: true */
+/* global dropzone, drawNotation, window, reader, fileUploader, saveToUndo, suspendUndo, score, hScroll, vScroll, setScrollVars, parseFiles, isLowASCII, setScore, cursor, scoreWidth, showPageBreaks, pageWidth, pageHeight, document, MouseEvent, currentBeatUnit, kFileNameBRF, kFileNameBRM, kPrefixAbbreviations, kWordAbbreviations, kTextAbbreviations, kCommonWords, currentFileName, shiftKeyDown, confirm, kUnsavedChangesDialogMessage, clearDocument, resetCursorAndScroll: true */
 /* jshint -W020 */
 
 function doNotationDragOver(e) {
@@ -49,6 +49,28 @@ function doNotationDrop(e) {
     reader.readAsText(file);
 	
   return false;
+}
+
+function doNewFile() {
+    if (confirm(kUnsavedChangesDialogMessage)) {
+        clearDocument();
+        resetCursorAndScroll();
+    }
+}
+
+function doOpenFile() {
+    if (confirm(kUnsavedChangesDialogMessage)) {
+        fileUploader.click();
+        resetCursorAndScroll();
+    }
+}
+
+function doSaveFile() {
+    downloadFile(false);
+}
+
+function doExportFile() {
+    downloadFile(true);
 }
 
 function doFileOpen(e) {

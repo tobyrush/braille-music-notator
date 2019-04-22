@@ -39,7 +39,7 @@ var resizeBarHeight = 8;
 var currentFileName = '';
 var currentLocale = 'en';
 var translateBrailleDefault = true;
-var trackKeySignatures = true;
+var observeKeySignatures = true;
 
 var controlModules = [
     {
