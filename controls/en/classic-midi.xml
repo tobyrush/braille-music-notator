@@ -115,7 +115,7 @@
             <graphic type="text" color="#F77" left="15" top="80" size="20" content="Q" />
             <help page="notes" />
         </control>
-        <control keycode="87" top="31" left="58" width="18" height="18" label="Sixty-Fourth Note or Rest">
+        <control keycode="87" top="31" left="58" width="18" height="18" label="Sixty-Fourth Note or Rest" midiKey="true" midiDuration="7">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="68" left="58" content="&#xe1dd;" />
             <graphic type="text" color="#F77" left="15" top="80" size="20" content="W" />

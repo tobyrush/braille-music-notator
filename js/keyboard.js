@@ -412,8 +412,10 @@ function notate(chars,readerText) {
             var firstPitch = findFirstUnoctavatedPitch(word);
             if (firstPitch >= 0) {
                 var o = octaveValues[findPitchAtPosition(score[y],score[y].length).octave];
-                for (i=o.length; i>0; i--) {
-                    word.splice(firstPitch,0,o[i-1]);
+                if (o) {
+                    for (i=o.length; i>0; i--) {
+                        word.splice(firstPitch,0,o[i-1]);
+                    }
                 }
             }
             x = firstCharPosInRow(y);
