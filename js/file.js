@@ -278,6 +278,7 @@ function parseText(fileData) {
 	fileData = fileData.replace(/(,[A-Za-z!:\\*?078])/g, convertTextAbbreviation); // convert text abbreviations
     fileData = fileData.replace(/(,?8)[A-Za-z&=(!),*<%?:$\]\\\[234567890/>"^_]/g, convertOpenQuote); // convert open quotation mark
     fileData = fileData.replace(/[A-Z />&=(!)+#*<%?:$\]\\\[.0-9](,?0)/g, convertCloseQuote); // convert close quotation mark
+    fileData = fileData.replace(/[A-Za-z/>&=(!)+#*<%?:$\[\\\]0-9";._@^]([1-79])(\s|$)/g, convertEndOfWordNumbers); // numbers inside words are contractions
     fileData = fileData.replace(/([1-79])[A-Za-z/>&=(!)+#*<%?:$\[\\\]0-9";._@^]/g, convertMidWordNumbers); // numbers inside words are contractions
     fileData = fileData.replace(/[A-Za-z/>&=(!)+#*<%?:$\[\\\]0-9";._@^]([1-79])/g, convertMidWordNumbers); // numbers inside words are contractions
     fileData = fileData.replace(/,[/>+*<%?\-:$\]\\\[123456790]/g, convertCapitalizedContraction); // single-cell contractions preceded by the capital sign
@@ -303,6 +304,14 @@ function convertCapitalizedContraction(fullString) {
     } else {
         return String.fromCharCode(544,t+500);
     }
+}
+
+function convertEndOfWordNumbers(fullString,nums) {
+    var newString = "";
+	for (var i=0; i<nums.length; i++) {
+		newString = newString + String.fromCharCode(nums.charCodeAt(i)+500);
+	}
+	return fullString.replaceAll(nums,newString);
 }
 
 function convertMidWordNumbers(fullString,nums) {
