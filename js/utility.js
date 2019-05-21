@@ -499,3 +499,7 @@ function setNodeValue(node,val) {
         node.setAttribute('value',val);
     }
 }
+
+function removeExtension(s) {
+    return s.replace(/\.[^/.]+$/, '');
+}

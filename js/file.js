@@ -1,4 +1,4 @@
-/* global dropzone, drawNotation, window, reader, fileUploader, saveToUndo, suspendUndo, score, hScroll, vScroll, setScrollVars, parseFiles, isLowASCII, setScore, cursor, scoreWidth, showPageBreaks, pageWidth, pageHeight, document, MouseEvent, currentBeatUnit, kFileNameBRF, kFileNameBRM, kPrefixAbbreviations, kWordAbbreviations, kTextAbbreviations, kCommonWords, currentFileName, shiftKeyDown, confirm, kUnsavedChangesDialogMessage, clearDocument, resetCursorAndScroll: true */
+/* global dropzone, drawNotation, window, reader, fileUploader, saveToUndo, suspendUndo, score, hScroll, vScroll, setScrollVars, parseFiles, isLowASCII, setScore, cursor, scoreWidth, showPageBreaks, pageWidth, pageHeight, document, MouseEvent, currentBeatUnit, kFileNameBRF, kFileNameBRM, kPrefixAbbreviations, kWordAbbreviations, kTextAbbreviations, kCommonWords, currentFileName, shiftKeyDown, confirm, kUnsavedChangesDialogMessage, clearDocument, resetCursorAndScroll, removeExtension: true */
 /* jshint -W020 */
 
 function doNotationDragOver(e) {
@@ -45,7 +45,7 @@ function doNotationDrop(e) {
 	
 	// attach event handlers here...
    
-	currentFileName = file.name;
+	currentFileName = removeExtension(file.name);
     reader.readAsText(file);
 	
   return false;
@@ -75,7 +75,7 @@ function doExportFile() {
 
 function doFileOpen(e) {
 	var file = fileUploader.files[0];
-    currentFileName = file.name;
+    currentFileName = removeExtension(file.name);
 	reader.readAsText(file);
 }
 
@@ -129,7 +129,8 @@ function importData(fileData) {
 
 function downloadFile(reduceASCII) {
 	var getFileName;
-    if (shiftKeyDown || (getFileName = window.prompt('Save file as:', currentFileName))) {
+    var ext = reduceASCII ? '.brf' : '.brm';
+    if (shiftKeyDown || (getFileName = window.prompt('Save file as:', removeExtension(currentFileName)+ext))) {
         if (!shiftKeyDown) {
             currentFileName = getFileName;
         }
@@ -164,13 +165,9 @@ function downloadFile(reduceASCII) {
         }
 
         var file=document.createElement('a');
-        if (reduceASCII) {
-            file.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileString));
-            file.setAttribute('download', currentFileName+".brf");
-        } else {
-            file.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileString));
-            file.setAttribute('download', currentFileName+".brm");
-        }
+
+        file.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileString));
+        file.setAttribute('download', currentFileName);
         file.setAttribute('target', '_blank');
 
         var clickEvent = new MouseEvent("click", {"view": window, "bubbles": true, "cancelable": false});
