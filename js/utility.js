@@ -1,4 +1,4 @@
-/* global window, XMLHttpRequest, ActiveXObject, phpRootAddress, navigator, saveToUndo, suspendUndo, cursor, deleteScore, whichKeyboard, parseFiles, parseData, setScore, drawNotation, clipboardArea, score, rotateChar, convertToText, document, gridWidth, gridHeight, unicodeBrailleMap, currentControlModule, parseText, Document: true */
+/* global window, XMLHttpRequest, ActiveXObject, phpRootAddress, navigator, saveToUndo, suspendUndo, cursor, deleteScore, whichKeyboard, parseFiles, parseData, setScore, drawNotation, clipboardArea, score, rotateChar, convertToText, document, gridWidth, gridHeight, unicodeBrailleMap, currentControlModule, parseText, Document, cellValIsEmpty, clipboardBackup: true */
 /* jshint -W020, -W084 */
 
 function findPos(obj) { // from http://www.quirksmode.org/js/findpos.html
@@ -93,15 +93,25 @@ function clearSelection() {
 	suspendUndo = false;
 }
 
+function copySelection(e) {
+    var s = getCurrentSelection();
+    if (s) {
+        e.clipboardData.setData('text',s);
+        clipboardBackup = s;
+    } else {
+        e.clipboardData.setData('text',clipboardBackup); // if selected area is blank, previous clipboard is restored
+    }
+}
+
 function handleClipboard(e) {
 	switch (e.type) {
 		case "copy":
-			e.clipboardData.setData('text',getCurrentSelection());
-			e.preventDefault();
+			copySelection(e);
+            e.preventDefault();
 			break;
 		case "cut":
-			e.clipboardData.setData('text',getCurrentSelection());
-			clearSelection();
+			copySelection(e);
+            clearSelection();
 			e.preventDefault();
 			break;
 		case "paste":
@@ -187,17 +197,24 @@ function focusClipboard() {
 
 function getCurrentSelection() {
 	var clipping="";
+    var c,isEmpty = true;
 	for (var row=cursor.y;row<cursor.y+cursor.height;row++) {
 		for (var col=cursor.x;col<cursor.x+cursor.width;col++) {
 			if ((typeof score[row]==='undefined') || (typeof score[row][col]==='undefined')) {
 				clipping=clipping+" ";
 			} else {
-				clipping=clipping+String.fromCharCode(score[row][col]);
+				c = score[row][col];
+                if (!cellValIsEmpty(c)) { isEmpty = false; }
+                clipping=clipping+String.fromCharCode(c);
 			}
 		}
 		clipping=clipping+String.fromCharCode(13)+String.fromCharCode(10);
 	}
-	return clipping;
+	if (isEmpty) {
+        return "";
+    } else {
+        return clipping;
+    }
 }
 
 function rotateSelection() {

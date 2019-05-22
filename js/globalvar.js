@@ -40,6 +40,7 @@ var currentFileName = '';
 var currentLocale = 'en';
 var translateBrailleDefault = true;
 var observeKeySignatures = true;
+var clipboardBackup = "";
 
 var controlModules = [
     {
