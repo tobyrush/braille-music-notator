@@ -2,7 +2,7 @@
 /* jshint -W020 */
 
 function doKeyDown(e) {
-	if (dialogFieldFocus || interpretKeyCode(e.keyCode)) {
+	if (dialogFieldFocus || interpretKeyCode(e)) {
 		return true;
 	} else {
 		e.preventDefault();
@@ -12,18 +12,19 @@ function doKeyDown(e) {
 
 function doKeyUp(e) {
 	var passThrough = false;
-	switch (e.keyCode) {
-		case 16: // shift
+	switch (e.code) {
+		case "ShiftLeft":
+        case "ShiftRight":
 			shiftKeyDown = false;
 			passThrough = true;
 			break;
-		case 17: // control
+		case "ControlLeft":
+        case "ControlRight":
 			metaKeyDown = false;
 			passThrough = true;
 			break;
-		case 91: // left command (Safari/Chrome/Opera)
-		case 93: // right command (Safari/Chrome/Opera)
-		case 224: // command (Firefox)
+		case "MetaLeft":
+		case "MetaRight":
 			metaKeyDown = false;
 			passThrough = true;
 			break;
@@ -47,7 +48,7 @@ function doWindowBlur(e) {
     return true;
 }
 
-function interpretKeyCode(keyCode) {
+function interpretKeyCode(e) {
 
     var i, thisRow, adv = 0;
     var readerSwitch = 0;
@@ -57,7 +58,7 @@ function interpretKeyCode(keyCode) {
     var insertChars = false;
     if (metaKeyDown) {
         dontScroll = true;
-        switch (keyCode) {
+        switch (e.keyCode) {
             case 16: // shift
                 shiftKeyDown = true;
                 passThrough = true;
@@ -216,10 +217,10 @@ function interpretKeyCode(keyCode) {
 				readerData[0]=gridHeight;
 				break;
         }
-        if (typeof kKeyCommands[keyCode]!=="undefined") {
+        if (typeof kKeyCommands[e.keyCode]!=="undefined") {
             updateScreenreader(
                 formFill(
-                     kKeyCommands[keyCode][readerSwitch],
+                     kKeyCommands[e.keyCode][readerSwitch],
                      readerData
                  )
             );
@@ -230,8 +231,8 @@ function interpretKeyCode(keyCode) {
         var w=cursor.width;
         var h=cursor.height;
         var readerText="";
-        switch (keyCode) {
-            case 8: // bksp
+        switch (e.code) {
+            case "Backspace":
                 if ((w>1) || (h>1)) {
                     clearSelection();
                     readerSwitch=1;
@@ -246,7 +247,7 @@ function interpretKeyCode(keyCode) {
                     readerData[1]=x;
                 }
                 break;
-            case 9: // tab
+            case "Tab":
                 if (shiftKeyDown) {
                     currentControlModule.prevPage();
                 } else {
@@ -254,11 +255,11 @@ function interpretKeyCode(keyCode) {
                 }
                 passThrough = false;
                 break;
-            case 45: // insert
+            case "Insert":
                 insertChars=true;
                 var butPutTheCursorBack=true;
                 break;
-            case 46: // delete
+            case "Delete":
                 clearSelection();
                 for (i=y;i<y+h;i++) {
                     if (typeof score[i]!=="undefined") {
@@ -268,20 +269,21 @@ function interpretKeyCode(keyCode) {
                 readerData[0]=y;
                 readerData[1]=x;
                 break;
-            case 16: // shift
+            case "ShiftLeft":
+            case "ShiftRight":
                 shiftKeyDown = true;
                 passThrough = true;
                 dontScroll = true;
                 break;
-            case 17: // control
+            case "ControlLeft":
+            case "ControlRight":
                 metaKeyDown = true;
                 focusClipboard();
                 passThrough = true;
                 dontScroll = true;
                 break;
-            case 91: // left command (Safari/Chrome/Opera)
-            case 93: // right command (Safari/Chrome/Opera)
-            case 224: // command (Firefox)
+            case "MetaLeft":
+            case "MetaRight":
                 if (isMacOS()) {
                     metaKeyDown = true;
                     focusClipboard();
@@ -290,9 +292,10 @@ function interpretKeyCode(keyCode) {
                 passThrough = true;
                 dontScroll = true;
                 break;
-//            case 18: // alt/option
+//            case "AltLeft":
+//            case "AltRight:"
 //                break;
-            case 13: // enter
+            case "Enter":
                 if (shiftKeyDown) {
                     placeCursor(firstCharPosInRow(y),y+1,1,1,"");
                 } else {
@@ -300,23 +303,23 @@ function interpretKeyCode(keyCode) {
                 }
                 scrollToCursor();
                 break;
-            case 33: // page up
+            case "PageUp":
                 hScroll=0;
                 vScroll=Math.max(vScroll-(pageHeight*gridHeight), 0);
                 dontScroll=true;
                 break;
-            case 34: // page down
+            case "PageDown":
                 hScroll=0;
                 vScroll=vScroll+(pageHeight*gridHeight);
                 dontScroll=true;
                 break;
-            case 36: // home
+            case "Home":
                 placeCursor(0,0,1,1,"");
                 hScroll=0;
                 vScroll=0;
                 dontScroll=true;
                 break;
-            case 37: // left arrow
+            case "ArrowLeft":
                 if (shiftKeyDown) {
                     if ((w==1 || !cursor.pinnedLeft) && x>0) {
                         placeCursor(x-1,y,w+1,h,"");
@@ -330,7 +333,7 @@ function interpretKeyCode(keyCode) {
                     }
                 }
                 break;
-            case 38: // up arrow
+            case "ArrowUp":
                 if (shiftKeyDown) {
                     if ((h==1 || !cursor.pinnedTop) && y>0) {
                         placeCursor(x,y-1,w,h+1,"");
@@ -344,7 +347,7 @@ function interpretKeyCode(keyCode) {
                     }
                 }
                 break;
-            case 39: // right arrow
+            case "ArrowRight":
                 if (shiftKeyDown) {
                     if (w==1 || cursor.pinnedLeft) {
                         placeCursor(x,y,w+1,h,"");
@@ -356,7 +359,7 @@ function interpretKeyCode(keyCode) {
                     placeCursor(x+w,y,1,1,"");
                 }
                 break;
-            case 40: // down arrow
+            case "ArrowDown":
                 if (shiftKeyDown) {
                     if (h==1 || cursor.pinnedTop) {
                         placeCursor(x,y,w,h+1,"");
@@ -370,7 +373,7 @@ function interpretKeyCode(keyCode) {
                 break;
             default:
                 passThrough=false;
-                currentControlModule.keyPress(keyCode);
+                currentControlModule.keyPress(e.code);
         }
     }
     if (!dontScroll) {

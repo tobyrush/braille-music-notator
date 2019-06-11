@@ -2814,7 +2814,7 @@
         <code value="534" />
         <code value="644" />
         <code value="545" />
-        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="background" color="#fff" cells="3" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="150" top="50" content="&#x2013;" />
     </cell>
     <cell name="text en dash symbol" word-modifier="1">

@@ -857,7 +857,7 @@ class graphic {
                         boxWidth*(0.05)+0.5,
                         boxWidth*(0.05)+0.5,
                         (boxWidth*c)-boxWidth*(0.1)-1,
-                        (boxHeight*c)-boxWidth*(0.1)-1
+                        (boxHeight)-boxWidth*(0.1)-1
                     );
                 }
         }
