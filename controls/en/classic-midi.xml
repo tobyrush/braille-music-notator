@@ -3,6 +3,12 @@
         <graphic type="text" color="#000" size="8" top="5" left="0" multiline="true" lineHeight="10" content="Click keys or type to add symbols\nto the score above.\n\nClick tabs to the left or press tab\nto switch between keyboards.\n\nMouse over the keyboard for help." />
     </help>
     <page name="1">
+        <indicator type="intervalBottomUp" top="49" left="18" width="18" height="18">
+            <graphic type="rect" top="0" left="0" height="90" width="90" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="68" left="35" content="&#xe1d5;" />
+            <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="54" left="35" content="&#xe0a4;" />
+            <graphic type="text" color="#FFF" size="75" font="Bravura" align="center" top="68" left="65" content="&#xeb60;" />
+        </indicator>
         <indicator type="shift" top="67" left="13" width="27" height="9">
             <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
             <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="SHIFT" />
@@ -1722,7 +1728,7 @@
             <help page="literaryBraille" />
             <character code="539" />
         </control>
-         <control keycode="KeyZ" top="60" left="52" width="18" height="18" label="Z">
+        <control keycode="KeyZ" top="60" left="52" width="18" height="18" label="Z">
             <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
             <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="Z" />
             <help page="literaryBraille" />

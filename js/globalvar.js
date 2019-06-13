@@ -3,6 +3,7 @@
 // global variables
 
 var useWordWrap = true;
+var spellChordsDownward = true;
 var notationArea,controlArea,titleArea,fileUploader,clipboardArea;
 var notationCellWidth,notationCellHeight; // these can have fractional values
 var ctx, nwu, nhu, nu, chu;
@@ -96,6 +97,8 @@ var restValues = [[77,75],[77],[85],[86],[88],[177],[185],[186],[188]];
 
 var octaveValues = [[64,164],[64],[94],[95],[34],[46],[59],[44],[44,144]];
 
+var intervalValues = [[45],[47],[43],[135],[157],[148],[151]];
+
 var octaveCharValues = [];
 octaveCharValues[164] = 0;
 octaveCharValues[64] = 1;
@@ -106,6 +109,15 @@ octaveCharValues[46] = 5;
 octaveCharValues[59] = 6;
 octaveCharValues[44] = 7;
 octaveCharValues[144] = 8;
+
+var intervalCharValues = []; // these are 0-based (0=8ve, 1=2nd)
+intervalCharValues[45] = 0;
+intervalCharValues[47] = 1;
+intervalCharValues[43] = 2;
+intervalCharValues[135] = 3;
+intervalCharValues[157] = 4;
+intervalCharValues[148] = 5;
+intervalCharValues[151] = 6;
 
 var pitchValues = [];
 pitchValues[89] = pitchValues[78] = pitchValues[63] = pitchValues[68] = 0;
@@ -375,7 +387,8 @@ function savePreferences() {
     ps += cursor.x + tab + cursor.y + tab + cursor.width + tab + cursor.height + tab;
     ps += currentFileName + tab;
     ps += (insertOctaveSymbols ? "1" : "0") + tab;
-    ps += (observeKeySignatures ? "1" : "0");
+    ps += (observeKeySignatures ? "1" : "0") + tab;
+    ps += (spellChordsDownward ? "1" : "0");
 
     eraseCookie('bmnpref');
     createCookie('bmnpref',ps);
@@ -410,5 +423,6 @@ function loadPreferences() {
         }
         insertOctaveSymbols = (ps[17]=="1");
         observeKeySignatures = (ps[18]=="1");
+        spellChordsDownward = (ps[19]=="1");
     }
 }
