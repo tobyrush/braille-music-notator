@@ -25,8 +25,8 @@ var kCharNames,
     kMIDISettingsLabel,
     kNewFileDescription,
     kNewFileLabel,
-    kObserveKeySignaturesLabel,
     kObserveKeySignaturesDescription,
+    kObserveKeySignaturesLabel,
     kOpenFileDescription,
     kOpenFileLabel,
     kOptionsButtonCaption,
@@ -44,10 +44,12 @@ var kCharNames,
     kScoreSizeDownButton,
     kScreenReaderControlPageNumber,
     kScreenReaderTemplate,
-    kshowPageBreaksDescription,
-    kshowPageBreaksLabel,
+    kShowPageBreaksDescription,
+    kShowPageBreaksLabel,
     kShowSmallDotsDescription,
     kShowSmallDotsLabel,
+    kSpellChordsDownwardDescription,
+    kSpellChordsDownwardLabel,
     kTranslateBrailleDescription,
     kTranslateBrailleLabel,
     kTextAbbreviations = [],
@@ -100,8 +102,8 @@ function localize(lang) {
             kMIDISettingsLabel = "MIDI Settings:";
             kNewFileDescription = "Discard current document and start with an empty one.";
             kNewFileLabel = "New File";
-            kObserveKeySignaturesLabel = "Observe Key Signatures";
             kObserveKeySignaturesDescription = "Apply accidentals according to the most recently written key signature.";
+            kObserveKeySignaturesLabel = "Observe Key Signatures";
             kOpenFileDescription = "Open a braille document from your computer.";
             kOpenFileLabel = "Open File";
             kOptionsButtonCaption = "Options";
@@ -118,10 +120,12 @@ function localize(lang) {
             kScoreSizeDownButton = "\u25bc";
             kScreenReaderControlPageNumber = "Control page %%1";
             kScreenReaderTemplate = "%%1. line %%2 character %%3. %%4";
-            kshowPageBreaksDescription = "Show where page breaks occur when embossed.";
-            kshowPageBreaksLabel = "Show Page Breaks";
+            kShowPageBreaksDescription = "Show where page breaks occur when embossed.";
+            kShowPageBreaksLabel = "Show Page Breaks";
             kShowSmallDotsDescription = "Fill in empty dots in braille characters.";
             kShowSmallDotsLabel = "Show Small Dots";
+            kSpellChordsDownwardDescription = "Measure intervals from the top note downward.";
+            kSpellChordsDownwardLabel =  "Spell Chords Downward";
             kTranslateBrailleDescription = "Automatically translate braille into music notation.";
             kTranslateBrailleLabel = "Translate Braille";
             kTitleAreaHeight = 32;
@@ -652,6 +656,10 @@ function localize(lang) {
             kKeyCommands[46] = [
                 "Deleted cell at line %%1 character %%2"
             ];
+            kKeyCommands[48] = [
+                "Chords will be spelled from bottom to top.",
+                "Chords will be spelled from top to bottom."
+            ];
             kKeyCommands[56] = [
                 "Automatic insertion of octave symbols disabled.",
                 "Automatic insertion of octave symbols enabled."
@@ -875,10 +883,12 @@ function localize(lang) {
             kScoreSizeLabel = "Score size:";
             kScreenReaderControlPageNumber = "Control page %%1";
             kScreenReaderTemplate = "%%1. line %%2 character %%3. %%4";
-            kshowPageBreaksDescription = "Show where page breaks occur when embossed.";
-            kshowPageBreaksLabel = "Show Page Boundaries";
+            kShowPageBreaksDescription = "Show where page breaks occur when embossed.";
+            kShowPageBreaksLabel = "Show Page Boundaries";
             kShowSmallDotsDescription = "Fill in empty dots in braille characters.";
             kShowSmallDotsLabel = "Show Small Dots";
+            kSpellChordsDownwardDescription = "Measure intervals from the top note downward.";
+            kSpellChordsDownwardLabel =  "Spell Chords Downward";
             kTranslateBrailleDescription = "Automatically translate braille into music notation.";
             kTranslateBrailleLabel = "Show Translated Braille";
             kUnrecognizedCharacterMessage = "unrecognized character";

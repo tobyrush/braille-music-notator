@@ -1,4 +1,4 @@
-/* global shiftKeyDown, metaKeyDown, cursor, whichKeyboard, score, clearSelection, cellIsEmpty, deleteScore, hScrollUnits, isMacOS, focusClipboard, firstCharPosInRow, hScroll, vScroll, deleteRowAtCursor, insertRowAtCursor, setScore, scoreWidth, scoreHeight, updateScreenreader, showSmallDots, downloadFile, currentBeatUnit, parseFiles, showPageBreaks, setPageSize, pageWidth, pageHeight, confirm, clearDocument, resetCursorAndScroll, fileUploader, rotateSelection, convertSelectionToText, useBrailleDisplay, doRedo, doUndo, setCellHeight, gridHeight, saveToUndo, suspendUndo, scrollToCursor, characterName, drawNotation, drawControls, getScore, currentControlModule, kUnsavedChangesDialogMessage, kKeyCommands, formFill, placeCursor, currentCellFont, useWordWrap, lineIsEmpty, removeLastWordOfLine, octaveCharValues, pitchValues, octaveValues, findPitchAtPosition, cellValIsEmpty, isAccidental, dialogFieldFocus, document, setNodeSelectedValue, insertOctaveSymbols: true */
+/* global shiftKeyDown, metaKeyDown, cursor, whichKeyboard, score, clearSelection, cellIsEmpty, deleteScore, hScrollUnits, isMacOS, focusClipboard, firstCharPosInRow, hScroll, vScroll, deleteRowAtCursor, insertRowAtCursor, setScore, scoreWidth, scoreHeight, updateScreenreader, showSmallDots, downloadFile, currentBeatUnit, parseFiles, showPageBreaks, setPageSize, pageWidth, pageHeight, confirm, clearDocument, resetCursorAndScroll, fileUploader, rotateSelection, convertSelectionToText, useBrailleDisplay, doRedo, doUndo, setCellHeight, gridHeight, saveToUndo, suspendUndo, scrollToCursor, characterName, drawNotation, drawControls, getScore, currentControlModule, kUnsavedChangesDialogMessage, kKeyCommands, formFill, placeCursor, currentCellFont, useWordWrap, lineIsEmpty, removeLastWordOfLine, octaveCharValues, pitchValues, octaveValues, findPitchAtPosition, cellValIsEmpty, isAccidental, dialogFieldFocus, document, setNodeSelectedValue, insertOctaveSymbols, spellChordsDownward, rotateControlModule: true */
 /* jshint -W020 */
 
 function doKeyDown(e) {
@@ -76,6 +76,15 @@ function interpretKeyCode(e) {
                     insertOctaveSymbols
                 );
                 readerSwitch = insertOctaveSymbols;
+				break;
+            case 48: // 0 - toggle interval direction
+				spellChordsDownward = !spellChordsDownward;
+                setNodeSelectedValue(
+                    document.querySelector("#spellChordsDownwardCheckbox"),
+                    spellChordsDownward
+                );
+                drawControls();
+                readerSwitch = spellChordsDownward;
 				break;
             case 65: // A - select all symbols
 				cursor.x=0;
@@ -215,6 +224,9 @@ function interpretKeyCode(e) {
             case 189: // - - decrease magnification by 10
 				setCellHeight(Math.max(10,gridHeight-10));
 				readerData[0]=gridHeight;
+				break;
+            case 192: // ` - rotate controls
+				rotateControlModule();
 				break;
         }
         if (typeof kKeyCommands[e.keyCode]!=="undefined") {
