@@ -237,7 +237,7 @@
         <a name="midinoteentry"><h3>MIDI Note Entry</h3></a>
         <p>Notes can be entered into Braille Music Notator using a MIDI keyboard (or any other MIDI-capable instrument) connected to the computer. To use a MIDI keyboard with Braille Music Notator, connect the keyboard to your computer; consult your MIDI keyboard user manual for detailed instructions. Ensure that the MIDI keyboard is recognized by your computer's operating system using Audio/MIDI Setup on MacOS or MIDI Mapper on Windows. Lastly, ensure that a MIDI-capable controls arrangement is selected from the Controls menu in the Options tab (see <a href="#controls">Controls</a>).</p>
         <a name="midicompatiblebrowsers"><h4>MIDI-Compatible Browsers</h4></a>
-        <p>To use MIDI note entry, Braille Music Notator must be open in a browser which can access the Web MIDI API. Currently, Chrome and Opera support MIDI. Firefox can be made to support MIDI by installing the <a href="https://github.com/jazz-soft/web-midi">Web MIDI API extension</a>. Safari does not support MIDI, and there are currently no extensions which allow it to do so.</p>
+        <p>To use MIDI note entry, Braille Music Notator must be open in a browser which can access the Web MIDI API. Currently, Chrome, Edge and Opera support MIDI. Firefox can be made to support MIDI by installing the <a href="https://github.com/jazz-soft/web-midi">Web MIDI API extension</a>. Safari does not support MIDI, and there are currently no extensions which allow it to do so.</p>
         <a name="enteringnoteswithmidi"><h4>Entering Notes with MIDI</h4></a>
         <p>To enter notes using MIDI, press and hold one or more notes on the MIDI keyboard. Before releasing the note or notes, click the appropriate note length in the control area or press the corresponding key on the computer keyboard. The symbol matching note length and pitch will be entered into the score, along with any necessary octave symbol (see <a href="#insertoctavesymbols">Insert Octave Symbols</a>) and accidentals (see <a href="#observekeysignatures">Observe Key Signatures</a>). Repeated notes of the same pitch can be added by pressing the note length key while continuing to hold down the note or notes on the MIDI keyboard.</p>
         <a name="enteringrestswithmidi"><h4>Entering Rests with MIDI</h4></a>
@@ -286,6 +286,14 @@
           <tr>
             <td>8</td>
             <td>Toggle Insert Octave Symbols (MIDI Entry only)</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Toggle Observe Key Signatures (MIDI Entry only)</td>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>Toggle Spell Chords Downward (MIDI Entry only)</td>
           </tr>
           <tr>
             <td>A</td>
@@ -386,6 +394,10 @@
           <tr>
             <td>?</td>
             <td>Help</td>
+          </tr>
+          <tr>
+            <td>`</td>
+            <td>Rotate Through Control Arrangements</td>
           </tr>
           <tr>
             <td>Up Arrow</td>
