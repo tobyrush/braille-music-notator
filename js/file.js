@@ -1,4 +1,4 @@
-/* global dropzone, drawNotation, window, reader, fileUploader, saveToUndo, suspendUndo, score, hScroll, vScroll, setScrollVars, parseFiles, isLowASCII, setScore, cursor, scoreWidth, showPageBreaks, pageWidth, pageHeight, document, MouseEvent, currentBeatUnit, kFileNameBRF, kFileNameBRM, kPrefixAbbreviations, kWordAbbreviations, kTextAbbreviations, kCommonWords, currentFileName, shiftKeyDown, confirm, kUnsavedChangesDialogMessage, clearDocument, resetCursorAndScroll, removeExtension: true */
+/* global dropzone, drawNotation, window, reader, fileUploader, saveToUndo, suspendUndo, score, hScroll, vScroll, setScrollVars, parseFiles, isLowASCII, setScore, cursor, scoreWidth, showPageBreaks, pageWidth, pageHeight, document, MouseEvent, currentBeatUnit, kFileNameBRF, kFileNameBRM, kPrefixAbbreviations, kWordAbbreviations, kTextAbbreviations, kCommonWords, currentFileName, shiftKeyDown, confirm, kUnsavedChangesDialogMessage, clearDocument, resetCursorAndScroll, removeExtension, DOMParser, sendHTTPPostRequest, XMLSerializer: true */
 /* jshint -W020 */
 
 function doNotationDragOver(e) {
@@ -77,6 +77,17 @@ function doFileOpen(e) {
 	var file = fileUploader.files[0];
     currentFileName = removeExtension(file.name);
 	reader.readAsText(file);
+}
+
+function checkFileType(fileData) {
+    var parser = new DOMParser();
+    var doc = parser.parseFromString(fileData, "application/xml");
+    if (doc.getElementsByTagName("score-partwise").length || doc.getElementsByTagName("score-timewise").length) {
+        // musicXML file detected
+        sendToBrailleMUSE(fileData);
+    } else {
+        importData(fileData);
+    }
 }
 
 function importData(fileData) {
@@ -607,4 +618,69 @@ function convertBrailleMusicHyphen(str) {
 		}
 	}
 	return newStr;
+}
+
+function getImportParameters() {
+
+    var elem;
+    var doc = document.implementation.createDocument("", "", null);
+    var root = doc.createElement("param-braillemuse");
+
+    var params = {
+        LangType: "Eng",
+        ChordType: "0",
+        num_measure_per_line: "0",
+        page_length: pageHeight,
+        page_width: pageWidth,
+        octave_mark: "2",
+        BeamGroup: "0",
+        TypeMelody: "5",
+        PartialInAccord: "100",
+        fifthPoint: "3",
+        accident_5th: "1",
+        measure_repeat: "1",
+        measure_num: "5",
+        abre_staccato: "4",
+        slur_reconst: "3",
+        MoveDirectionToRight: "0",
+        rm_pedal: "1",
+        ornament: "1",
+        expression_word: "1",
+        clef_mark: "0",
+        multipart_selection: "2",
+        partnumber_selection: "1",
+        print_header: "0",
+        lyric_selection: "0",
+        harmony: "0",
+        transcription_notes: "0",
+        select_part: "0",
+        chord_order: "0",
+        titel_type: "1"
+    };
+
+    for (const [param, value] of Object.entries(params)) {
+        elem = doc.createElement(param);
+        elem.innerHTML = value;
+        root.appendChild(elem);
+    }
+
+    doc.appendChild(root);
+
+    var xmls = new XMLSerializer();
+
+    return xmls.serializeToString(doc);
+
+}
+
+function sendToBrailleMUSE(xmlFile) {
+    var url = "http://tk2-250-34589.vs.sakura.ne.jp/BrailleMUSE/servlet/BrailleMuseForToby_c2";
+    var request = {};
+    request.upload_p = getImportParameters();
+    request.upload_m = xmlFile;
+    var callback = function(response) {
+        var r = response;
+        //$("#output").text(response[condition] + "," + response[file_name] + "," + response[braile_music]);
+    };
+    //sendHTTPPostRequest(callback,url,request);
+    $.post(url, request, callback);
 }

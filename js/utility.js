@@ -436,6 +436,36 @@ function sendHTTPRequest(callback,filename,data) {
 
 }
 
+function sendHTTPPostRequest(callback,filename,data) {
+
+	var httpRequest;
+
+    if (window.XMLHttpRequest) {
+		httpRequest = new XMLHttpRequest();
+	} else if (window.ActiveXObject) {
+		httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+
+	// thanks to T.J. Crowder for the following (http://stackoverflow.com/questions/38618031/how-do-i-manage-multiple-overlapping-xmlhttprequests)
+	httpRequest.onreadystatechange = function() {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+            if (httpRequest.status === 200) {
+                // successful, call the callback
+                callback(httpRequest);
+            } else {
+                // error, call the callback -- here we use null to indicate the error
+                callback(null);
+            }
+        } else {
+            // not ready
+        }
+    };
+	httpRequest.open('POST',filename, true);
+	httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	httpRequest.send(data);
+
+}
+
 // from Tomáš Zato at https://stackoverflow.com/questions/7837456/how-to-compare-arrays-in-javascript
 
 // attach the .equals method to Array's prototype to call it on any array

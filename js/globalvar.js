@@ -22,7 +22,7 @@ var startDragX, startDragY, mouseIsDown, resizeBarDrag, resizeBarDragOrigin;
 var showSmallDots = true;
 var useBrailleDisplay = false;
 var controlHelp=0;
-var reader = new FileReader(); reader.onload = function () { importData(reader.result); };
+var reader = new FileReader(); reader.onload = function () { checkFileType(reader.result); };
 var dropzone = false;
 var undoStack = [];
 var suspendUndo = false;
