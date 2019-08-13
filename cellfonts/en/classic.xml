@@ -2764,7 +2764,13 @@
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#x2019;' />
     </cell>
-     <cell name="text close square bracket symbol" word-modifier="1">
+    <cell name="text close single quotation mark symbol ueb" word-modifier="1">
+        <code value="644" />
+        <code value="848" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#x201d;' />
+    </cell>
+    <cell name="text close square bracket symbol" word-modifier="1">
         <code value="746" />
         <code value="862" />
         <graphic type="background" color="#fff" cells="2" />
@@ -2915,6 +2921,12 @@
         <code value="960" />
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="(" />
+    </cell>
+    <cell name="text open single quotation mark symbol ueb" word-modifier="1">
+        <code value="644" />
+        <code value="856" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#x201c;' />
     </cell>
     <cell name="text open single quotation mark symbol" word-modifier="1">
         <code value="644" />
