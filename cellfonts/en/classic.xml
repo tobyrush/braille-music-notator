@@ -2768,7 +2768,7 @@
         <code value="644" />
         <code value="848" />
         <graphic type="background" color="#fff" cells="2" />
-        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#x201d;' />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#x2019;' />
     </cell>
     <cell name="text close square bracket symbol" word-modifier="1">
         <code value="746" />
@@ -2926,7 +2926,7 @@
         <code value="644" />
         <code value="856" />
         <graphic type="background" color="#fff" cells="2" />
-        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#x201c;' />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#x2018;' />
     </cell>
     <cell name="text open single quotation mark symbol" word-modifier="1">
         <code value="644" />
