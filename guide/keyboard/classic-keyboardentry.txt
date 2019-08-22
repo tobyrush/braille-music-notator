@@ -160,7 +160,7 @@ key 6 creates dots 3 4 5 dots 2 which means breath mark
 key 7 creates dots 2 3 5 which means trill
 key 8 creates dots 1 2 6 dots 3 which means up bow
 key 9 creates dots 1 2 6 dots 1 2 which means down bow
-key 0 is unused
+key 0 creates dots 2 6 dots 1 3 which means indeterminate pitch note indicator
 key dash creates dots 3 4 5 6 which means multi-measure rest prefix
 key equals creates dots 1 3 4 which means multi-measure rest suffix
 key Q creates dots 1 which means fingering 1
@@ -169,9 +169,9 @@ key E creates dots 1 2 3 which means fingering 3
 key R creates dots 2 which means fingering 4
 key T creates dots 1 3 which means fingering 5
 key Y creates dots 1 4 which means change fingers
-key U is unused
-key I is unused
-key O is unused
+key U creates dots 2 6 dot 1 which means stemless notehead
+key I creates dots 2 6 dots 1 2 which means X notehead
+key O creates dots 2 6 dots 1 2 3 which means diamond notehead
 key P creates dots 3 4 5 dots 3 4 dots 1 2 3 which means treble clef
 key open bracket creates dots 3 4 5 dots 3 4 6 dots 1 2 3 which means alto clef
 key close bracket creates dots 3 4 5 dots 3 4 6 dots 5 dots 1 2 3 which means tenor clef
@@ -190,22 +190,22 @@ key single quote creates dots 3 4 5 dots 2 5 6 which means end diminuendo
 key Z creates dots 3 4 5 dots 1 4 dots 1 2 3 5 dots 3 which means crescendo
 key X creates dots 3 4 5 dots 1 4 5 dots 1 5 dots 1 4 dots 1 2 3 5 dots 3 which means decrescendo
 key C creates dots 3 4 5 dots 1 4 5 dots 2 4 dots 1 3 4 dots 3 which means diminuendo
-key V is unused
-key B is unused
-key N is unused
-key M is unused
+key V creates dots 3 4 6 which means chord symbol augmented
+key B creates dots 2 5 6 which means chord symbol diminished
+key N creates dots 2 5 6 dots 2 which means chord symbol half-diminished
+key M creates dots 3 5 6 which means chord symbol major
 key comma is unused
 key period is unused
 key slash is unused
 
 Keyboard 5
 
-key accent is unused
-key 1 is unused
-key 2 is unused
-key 3 is unused
-key 4 is unused
-key 5 is unused
+key accent creates dots 4 5 6 dots 1 2 6 which means three quarters flat
+key 1 creates dots 4 5 dots 1 2 6 which means four commas flat
+key 2 creates dots 4 dots 1 2 6 which means one quarter flat
+key 3 creates dots 4 dots 1 4 6 which means one quarter sharp
+key 4 creates dots 4 5 dots 1 4 6 which means five commas sharp
+key 5 creates dots 4 5 6 dots 1 4 6 which means three quarters sharp
 key 6 is unused
 key 7 is unused
 key 8 is unused
@@ -229,12 +229,12 @@ key backslash is unused
 key A is unused
 key S is unused
 key D is unused
-key F is unused
-key G is unused
-key H is unused
-key J is unused
-key K is unused
-key L is unused
+key F creates dots 1 2 6 dots 2 3 5 6 which means begin repeat sign
+key G creates dots 1 2 6 dots 2 3 which means end repeat sign
+key H creates dots 1 2 6 dots 1 2 3 which means coda sign
+key J creates dots 3 4 5 6 dots 2 which means first ending
+key K creates dots 3 4 5 6 dots 2 3 which means second ending
+key L creates dots 3 4 5 6 dots 2 5 which means third ending
 key semicolon is unused
 key single quote is unused
 key Z creates dots 1 2 3 which means single barline
@@ -262,7 +262,7 @@ key 8 creates dots 1 2 5 which means 8
 key 9 creates dots 2 4 which means 9
 key 0 creates dots 2 4 5 which means 0
 key dash creates dots 3 6 which means dash
-key equals creates dots 3 4 5 6 which means number sign
+key equals creates dot 5 dots 2 3 5 6 which means equals
 key Q creates dots 1 2 3 4 5 which means Q
 key W creates dots 2 4 5 6 which means W
 key E creates dots 1 5 which means E
@@ -273,8 +273,8 @@ key U creates dots 1 3 6 which means U
 key I creates dots 2 4 which means I
 key O creates dots 1 3 5 which means O
 key P creates dots 1 2 3 4 which means P
-key open bracket creates dots 2 3 5 6 which means open parenthesis
-key close bracket creates dots 2 3 5 6 which means close parenthesis
+key open bracket creates dots 3 4 5 6 which means number sign
+key close bracket creates dot 6 which means capital sign
 key backslash creates dots 2 5 which means colon
 key A creates dots 1 which means A
 key S creates dots 2 3 4 which means S
@@ -297,3 +297,19 @@ key M creates dots 1 3 4 which means M
 key comma creates dots 2 which means comma
 key period creates dots 2 5 6 which means period
 key slash creates dots 2 3 6 which means question mark
+key keypad equals creates dot 4 dots 1 2 3 4 6 which means ampersand
+key keypad slash creates dot 5 dots 1 2 6 which means open parenthesis
+key keypad asterisk creates dot 5 dots 3 4 5 which means close parenthesis
+key keypad seven creates dot 5 dots 2 3 5 which means plus
+key keypad eight creates dot 4 5 6 dots 3 4 which means slash
+key keypad nine creates dot 4 6 dots 1 2 6 which means open bracket
+key keypad dash creates dot 4 6 dots 3 4 5 which means close bracket
+key keypad four creates dot 4 5 dots 2 3 6 which means open double quotation mark
+key keypad five creates dot 4 5 dots 3 5 6 which means close double quotation mark
+key keypad six creates dot 4 dots 1 2 6 which means less than sign
+key keypad plus creates dot 4 dots 3 4 5 which means greater than sign
+key keypad one creates dot 6 dots 2 3 6 which means open single quotation mark
+key keypad two creates dot 6 dots 3 5 6 which means close single quotation mark
+key keypad three creates dot 4 6 dots 3 5 6 which means percent sign
+key keypad zero creates dot 5 dot 6 dots 3 6 which means em dash
+key keypad period creates dot 5 dots 3 6 which means en dash
