@@ -2217,7 +2217,7 @@ function bmviewer(whichCanvas) {
             chars=['KNOWLEDGE','LIKE','MORE','NOT','','PEOPLE','QUITE','RATHER','SO','THAT'];
             t.drawCellASCII(x,y,col,row,chars[val-775],(val % 100));
 
-        } else if (val==835) { // contractions
+        } else if (val==935) { // contractions
             t.drawCellASCII(x,y,col,row,'BLE',(val % 100));
 
         } else if (val==860) { // in-accord (first character)
@@ -3052,7 +3052,7 @@ function bmviewer(whichCanvas) {
         } else if (val==849) { // half-diminished (last symbol)
             s="last character of half-diminished symbol";
 
-        } else if (val==835) { // contraction BLE
+        } else if (val==935) { // contraction BLE
             s="text contraction b l e";
 
         } else if (val==854) { // plus (last symbol)
