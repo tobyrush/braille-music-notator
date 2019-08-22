@@ -200,12 +200,12 @@ key slash is unused
 
 Keyboard 5
 
-key creates dots 4 5 6 dots 1 2 6 which means three quarters flat
-key creates dots 4 5 dots 1 2 6 which means four commas flat
-key creates dots 4 dots 1 2 6 which means one quarter flat
-key creates dots 4 dots 1 4 6 which means one quarter sharp
-key creates dots 4 5 dots 1 4 6 which means five commas sharp
-key creates dots 4 5 6 dots 1 4 6 which means three quarters sharp
+key accent creates dots 4 5 6 dots 1 2 6 which means three quarters flat
+key 1 creates dots 4 5 dots 1 2 6 which means four commas flat
+key 2 creates dots 4 dots 1 2 6 which means one quarter flat
+key 3 creates dots 4 dots 1 4 6 which means one quarter sharp
+key 4 creates dots 4 5 dots 1 4 6 which means five commas sharp
+key 5 creates dots 4 5 6 dots 1 4 6 which means three quarters sharp
 key 6 is unused
 key 7 is unused
 key 8 is unused

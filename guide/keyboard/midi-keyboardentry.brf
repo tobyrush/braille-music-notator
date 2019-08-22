@@ -1,300 +1,301 @@
-           KEYBO>D #A  PAGE #A         
-A35T            ‘       AUGM5T,N DOT
-1               Y       C :OLE NOTE
-2               Z       D :OLE NOTE
-3               &       E :OLE NOTE
-4               =       F :OLE NOTE
-5               (       G :OLE NOTE
-6               !       A :OLE NOTE
-7               )       B :OLE NOTE
-8               ,,      OCTAVE 8
-9               "       OCTAVE 4
-0               M       :OLE RE/
-DA%             <<      D\# FLAT
-EQUALS          %%      D\# %>P
-Q               N       C HALF NOTE
-W               O       D HALF NOTE
-E               P       E HALF NOTE
-R               Q       F HALF NOTE
-T               R       G HALF NOTE
-Y               S       A HALF NOTE
-U               T       B HALF NOTE
-I               ,       OCTAVE 7
-O               _       OCTAVE 3
-P               U       HALF RE/
-                                 
-           KEYBO>D #A  PAGE #B         
-OP5 BRACKET     <       FLAT
-CLOSE BRACKET   %       %>P
-BACKSLA%        *       NATURAL
-A               ?       C QU>T] NOTE
-S               :       D QU>T] NOTE
-D               $       E QU>T] NOTE
-F               ]       F QU>T] NOTE
-G               \       G QU>T] NOTE
-H               [       A QU>T] NOTE
-J               W       B QU>T] NOTE
-K               ;       OCTAVE 6
-L               ^       OCTAVE 2
-SEMICOLON       V       QU>T] RE/
-APO/ROPHE       X       EI<? RE/
-Z               D       C EI<? NOTE
-X               E       D EI<? NOTE
-C               F       E EI<? NOTE
-V               G       F EI<? NOTE
-B               H       G EI<? NOTE
-N               I       A EI<? NOTE
-M               J       B EI<? NOTE
--MA             .       OCTAVE 5
-P]IOD           @       OCTAVE 1
-SLA%            @@      OCTAVE 0 
-           KEYBO>D #B  PAGE #C         
-A35T            ‘       AUGM5T,N DOT
-1               Y       C #AF;? NOTE
-2               Z       D #AF;? NOTE
-3               &       E #AF;? NOTE
-4               =       F #AF;? NOTE
-5               (       G #AF;? NOTE
-6               !       A #AF;? NOTE
-7               )       B #AF;? NOTE
-8               -       ADD OCTAVE
-9               #       ADD F\R?
-0               Y       #AF;? RE/
-DA%             <<      D\# FLAT
-EQUALS          %%      D\# %>P
-Q               N       C #CB;ND NOTE
-W               O       D #CB;ND NOTE
-E               P       E #CB;ND NOTE
-R               Q       F #CB;ND NOTE
-T               R       G #CB;ND NOTE
-Y               S       A #CB;ND NOTE
-U               T       B #CB;ND NOTE
-I               3       ADD SEV5?
-O               +       ADD ?IRD
-P               U       #CB;ND RE/
+           KEYBO>D #A  PAGE #A 
+A35T      ,,MIDI PIT*3 D\BLE :OLE NOTE 
+A         ,,MIDI PIT*3 :OLE NOTE       
+B         ,,MIDI PIT*3 #ABH? NOTE   
+C               %%      D\# %>P     
+D               *       NATURAL     
+E               <<      D\# FLAT    
+F               >MF     MEZZO =TE   
+G               >F      =TE         
+H               >FF     =TISSIMO 
+I               <7      BEG9 REP1T 
+J               <2      END REP1T 
+DA%             ,'      MUSIC PREFIX 
+EQUALS          >       ^W PREFIX 
+Q         ,,MIDI PIT*3 HALF NOTE    
+W         ,,MIDI PIT*3 #FD? NOTE    
+E               %       %>P         
+R               <       FLAT        
+T               C       %ORT SLUR   
+Y               >MP     MEZZO PIANO 
+U               >P      PIANO       
+I               >PP     PIANISSIMO 
+O               L       S+LE B>L9E 
+P               <K'     D\# B>L9E 
                                    
-           KEYBO>D #B  PAGE #D 
-OP5 BRACKET     <       FLAT
-CLOSE BRACKET   %       %>P
-BACKSLA%        *       NATURAL
-A               ?       C #FD;? NOTE
-S               :       D #FD;? NOTE
-D               $       E #FD;? NOTE
-F               ]       F #FD;? NOTE
-G               \       G #FD;? NOTE
-H               [       A #FD;? NOTE
-J               W       B #FD;? NOTE
-K               0       ADD SIX?
-L               /       ADD SECOND
-SEMICOLON       V       #FD;? RE/
-APO/ROPHE       X       #ABH;? RE/
-Z               D       C #ABH;? NOTE
-X               E       D #ABH;? NOTE
-C               F       E #ABH;? NOTE
-V               G       F #ABH;? NOTE
-B               H       G #ABH;? NOTE
-N               I       A #ABH;? NOTE
-M               J       B #ABH;? NOTE
--MA             9       ADD FIF?
-P]IOD           @C      TIE
-SLA%            5       GRACE NOTE
+           KEYBO>D #B  PAGE #B 
+OP5 BRACKET     <K      F9AL B>L9E 
+CLOSE BRACKET   "       BRL MUSIC HYPH5 
+BACKSLA%        <>      9-A3ORD SIGN 
+A         ,,MIDI PIT*3 QU>T] NOTE    
+S         ,,MIDI PIT*3 #CBND NOTE       
+D               @C      TIE          
+F               ;B      2G9 L;G SLUR 
+G               ^2      5D L;G SLUR  
+H               >C      2G9 CRESC5DO 
+J               >3      5D CRESC5DO  
+K               >CR'    CRESC5DO 
+L               8       /A3ATO   
+SEMICOLON       .8      A35T      
+APO/ROPHE               UNUS$    
+Z         ,,MIDI PIT*3 EI<? NOTE    
+X         ,,MIDI PIT*3 #AF;? NOTE   
+C               '       AUGM5T,N DOT 
+V               7       REP1T M1S / 2AT 
+B               >D      2G9 DIMINU5DO 
+N               >4      5D DIMINU5DO 
+M               >DIM'   DIMINU5DO   
+-MA             >DECR'  DECRESC5DO 
+P]IOD           _8      T5UTO    
+SLA%            <L      F]MATA   
+           KEYBO>D #B  PAGE #C 
+A35T            @@      OCTAVE #J    
+A               @       OCTAVE #A    
+B               ^       OCTAVE #B    
+C               _       OCTAVE #C    
+D               "       OCTAVE #D    
+E               .       OCTAVE #E    
+F               ;       OCTAVE #F    
+G               ,       OCTAVE #G    
+H               ,,      OCTAVE #H  
+I               5A      /EM.S NOTEH1D 
+J               5B      X NOTEH1D 
+DA%             5L      DIAMOND NOTEH1D 
+EQUALS          5K      9DET]M9ATE PIT* 
+Q               C       *ANGE F+]S    
+W               /       ADD SECOND    
+E               +       ADD ?IRD      
+R               #       ADD F\R?      
+T               9       ADD FIF?      
+Y               0       ADD SIX?      
+U               3       ADD SEV5?     
+I               -       ADD OCTAVE 
+O               ;8      M>CATO   
+P               >1      BR1? M>K   
+
+           KEYBO>D B  PAGE #D 
+OP5 BRACKET     6       TRILL 
+CLOSE BRACKET   <'      UP B[ 
+BACKSLA%        <B      D[N B[  
+A               A       F+]+ A       
+S               B       F+]+ B       
+D               L       F+]+ C       
+F               1       F+]+ D       
+G               K       F+]+ E       
+H               5       GRACE NOTE   
+J                       UNUS$        
+K                       UNUS$    
+L                       UNUS$      
+SEMICOLON               UNUS$     
+APO/ROPHE               UNUS$      
+Z               >/L     TRE# CLEF     
+X               >+L     ALTO CLEF     
+C               >+"L    T5OR CLEF     
+V               >#L     BASS CLEF     
+B               #       M4M4 RE/ PREFIX 
+N               M       M4M4 RE/ SU6IX 
+M               +       AUGM5T$ SYMBOL 
+-MA             4       DIM9I%$ SYMBOL 
+P]IOD           41      HALF-DIM SYMBOL 
+SLA%            0       MAJOR SYMBOL 
            KEYBO>D #C  PAGE #E 
-A35T            #       MET] PREFIX
-1               A       MET] 6P 1
-2               B       MET] 6P 2
-3               C       MET] 6P 3
-4               D       MET] 6P 4
-5               E       MET] 6P 5
-6               F       MET] 6P 6
-7               G       MET] 6P 7
-8               H       MET] 6P 8
-9               I       MET] 6P 9
-0               J       MET] 6P 0
-DA%             .C      -MON "T
-EQUALS          _C      CUT "T
-Q               1       MET] BOTTOM 1
-W               2       MET] BOTTOM 2
-E               3       MET] BOTTOM 3
-R               4       MET] BOTTOM 4
-T               5       MET] BOTTOM 5
-Y               6       MET] BOTTOM 6
-U               7       MET] BOTTOM 7
-I               8       MET] BOTTOM 8
-O               9       MET] BOTTOM 9
-P               0       MET] BOTTOM 0
+A35T            #       MET] PREFIX 
+A               A       MET] 6P A 
+B               B       MET] 6P B 
+C               C       MET] 6P C 
+D               D       MET] 6P D 
+E               E       MET] 6P E 
+F               F       MET] 6P F 
+G               G       MET] 6P G 
+H               H       MET] 6P H 
+I               I       MET] 6P I 
+J               J       MET] 6P J 
+DA%             .C      -MON "T 
+EQUALS          _C      CUT "T 
+Q               1       MET] BOTTOM A 
+W               2       MET] BOTTOM B 
+E               3       MET] BOTTOM C 
+R               4       MET] BOTTOM D 
+T               5       MET] BOTTOM E 
+Y               6       MET] BOTTOM F 
+U               7       MET] BOTTOM G 
+I               8       MET] BOTTOM H 
+O               9       MET] BOTTOM I 
+P               0       MET] BOTTOM J 
 
            KEYBO>D #C  PAGE #F 
-OP5 BRACKET     <       KEY SIG FLAT
-CLOSE BRACKET   %       KEY SIG %>P
-BACKSLA%        *       KEY SIG NATURAL
-A               1       TUPLET 1
-S               2       TUPLET 2
-D               3       TUPLET 3
-F               4       TUPLET 4
-G               5       TUPLET 5
-H               6       TUPLET 6
-J               7       TUPLET 7
-K               8       TUPLET 8
-L               9       TUPLET 9
-SEMICOLON       0       TUPLET 0
-APO/ROPHE       2       TRIPLET
-Z               _       TUPLET PREFIX
-X                ‘      TUPLET SU6IX
-C               C       %ORT SLUR
-V               ;B      2G9 L;G SLUR
-B               ^2      5D L;G SLUR
-N               #       KEY SIG PREFIX
-M               D       KEY SIG X4
--MA             E       KEY SIG X5
-P]IOD           F       KEY SIG X6
-SLA%            G       KEY SIG X7 
+OP5 BRACKET     7#      M4 M4 EQUALS 
+CLOSE BRACKET           UNUS$       
+BACKSLA%                UNUS$           
+A               1       TUPLET A 
+S               2       TUPLET B 
+D               3       TUPLET C 
+F               4       TUPLET D 
+G               5       TUPLET E 
+H               6       TUPLET F 
+J               7       TUPLET G 
+K               8       TUPLET H 
+L               9       TUPLET I 
+SEMICOLON       0       TUPLET J 
+APO/ROPHE       2       TRIPLET 
+Z               _       TUPLET PREFIX 
+X               '       TUPLET SU6IX 
+C               <       KEY SIG FLAT 
+V               %       KEY SIG %>P  
+B               *       KEY SIG NATURAL 
+N               #       KEY SIG PREFIX 
+M               D       KEY SIG XD 
+-MA             E       KEY SIG XE 
+P]IOD           F       KEY SIG XF 
+SLA%            G       KEY SIG XG 
            KEYBO>D #D  PAGE #G 
-A35T                    UNUS$
-1               8       /A3ATO
-2               _8      T5UTO
-3               .8      A35T
-4               ;8      M>CATO
-5               <L      F]MATA
-6               >1      BR1? M>K
-7               6       TRILL
-8               <'      UP B[
-9               <B      D[N B[
-0                       UNUS$
-DA%             #       M'M' RE/ PREFIX
-EQUALS          M       M'M' RE/ SU6IX
-Q               A       F+]+ 1
-W               B       F+]+ 2
-E               L       F+]+ 3
-R               1       F+]+ 4
-T               K       F+]+ 5
-Y               C       *ANGE F+]S
-U                       UNUS$
-I                       UNUS$
-O                       UNUS$
-P               >/L     TRE# CLEF
+A35T            _<      #C_/#D FLAT 
+A               ^<      #D COMMAS FLAT 
+B               @<      #A_/#D FLAT 
+C               @%      #A_/#D %>P 
+D               ^%      #E COMMAS %>P 
+E               _%      #C_/#D %>P 
+F               ^<1     L>GE NOTE VALUE 
+G               ,<1     SM NOTE VALUE 
+H               .>      "R H& SIGN 
+I               _>      LEFT H& SIGN 
+J               .K      9-A3ORD M1S DIV 
+DA%             "1      PT M1S 9-A3ORD  
+EQUALS          <1      BRL MUSIC -MA  
+Q                       UNUS$  
+W                       UNUS$  
+E                       UNUS$  
+R                       UNUS$  
+T                       UNUS$  
+Y               <L      CODA SYMBOL 
+U               +       2G9 REP1T$ SECT 
+I               *       5D REP1T$ SECT 
+O               "+      PLAY SECT # 
+P               #       NUMB] ( M1SURES 
 
            KEYBO>D #D  PAGE #H 
-OP5 BRACKET     >+L     ALTO CLEF
-CLOSE BRACKET   >+"L    T5OR CLEF
-BACKSLA%        >#L     BASS CLEF
-A               >FF     =TISSIMO
-S               >F      =TE
-D               >MF     MEZZO =TE
-F               >MP     MEZZO PIANO
-G               >P      PIANO
-H               >PP     PIANISSIMO
-J                       UNUS$
-K               >C      2G9 CRESC5DO
-L               >3      5D CRESC5DO
-SEMICOLON       >D      2G9 DIMINU5DO
-APO/ROPHE       >4      5D DIMINU5DO
-Z               >CR’    CRESC5DO
-X               >DECR’  DECRESC5DO
-C               >DIM’   DIMINU5DO
-V                       UNUS$
-B                       UNUS$
-N                       UNUS$
-M                       UNUS$
--MA                     UNUS$
-P]IOD                   UNUS$
-SLA%                    UNUS$
-           KEYBO>D #E  PAGE #I 
-A35T                    UNUS$
-1                       UNUS$
-2                       UNUS$
-3                       UNUS$
-4                       UNUS$
-5                       UNUS$
-6                       UNUS$
-7                       UNUS$
-8                       UNUS$
-9                       UNUS$
-0                       UNUS$
-DA%                     UNUS$
-EQUALS          7#      M' M' EQUALS
-Q               ,’      MUSIC PREFIX
-W               >       ^W PREFIX
-E               ^<1     L>GE NOTE VALUE
-R               ,<1     SM NOTE VALUE
-T               .>      "R H& SIGN
-Y               _>      LEFT H& SIGN
-U               <>      9-A3ORD SIGN
-I               .K      9-A3ORD M1S DIV
-O               "1      PT M1S 9-A3ORD
-P                       UNUS$
-           KEYBO>D #E  PAGE #AJ 
-OP5 BRACKET             UNUS$
-CLOSE BRACKET           UNUS$
-BACKSLA%                UNUS$
-A                       UNUS$
-S                       UNUS$
-D                       UNUS$
-F                       UNUS$
-G                       UNUS$
-H                       UNUS$
-J                       UNUS$
-K                       UNUS$
-L                       UNUS$
-SEMICOLON               UNUS$
-APO/ROPHE               UNUS$
-Z               L       S+LE B>L9E
-X               <K'     D\# B>L9E
-C               <K      F9AL B>L9E
-V               7       REP1T M1S / 2AT
-B               +       2G9 REP1T$ SECT
-N               *       5D REP1T$ SECT
-M               "+      PLAY SECT #
--MA             #       NUMB] ( M1SURES
-P]IOD           "       BRL MUSIC HYPH5
-SLA%            <1      BRL MUSIC -MA
+OP5 BRACKET     #1      F/ END+   
+CLOSE BRACKET   #2      SE3D END+ 
+BACKSLA%        #3      ?IRD END+ 
+A                       UNUS$    
+S                       UNUS$ 
+D                       UNUS$     
+F                       UNUS$       
+G                       UNUS$ 
+H                       UNUS$      
+J                       UNUS$ 
+K                       UNUS$        
+L                       UNUS$       
+SEMICOLON               UNUS$         
+APO/ROPHE               UNUS$        
+Z                       UNUS$ 
+X                       UNUS$ 
+C                       UNUS$ 
+V                       UNUS$ 
+B                       UNUS$ 
+N                       UNUS$ 
+M                       UNUS$ 
+-MA                     UNUS$ 
+P]IOD                   UNUS$ 
+SLA%                    UNUS$ 
            KEYBO>D #F  PAGE #AA 
 A35T            6       EXCLAM,N M>K 
-1               A       A 
-2               B       B 
-3               C       C 
-4               D       D 
-5               E       E 
-6               F       F 
-7               G       G 
-8               H       H 
-9               I       I 
-0               J       J 
-DA%             -       DA% 
-EQUALS          #       NUMB] SIGN 
-Q               Q       Q 
-W               W       W 
-E               E       E 
-R               R       R 
-T               T       T 
-Y               Y       Y 
-U               U       U 
-I               I       I 
-O               O       O 
-P               P       P 
-
-           KEYBO>D #F  PAGE #AB
-OP5 BRACKET     7       OP5 P>5!SIS 
-CLOSE BRACKET   7       CLOSE P>5!SIS 
+A               A       A               
+B               B       B     
+C               C       C     
+D               D       D     
+E               E       E               
+F               F       F     
+G               G       G     
+H               H       H     
+I               I       I     
+J               J       J     
+DA%             -       DA%   
+EQUALS          "7      EQUALS       
+Q               Q       Q            
+W               W       W         
+E               E       E               
+R               R       R             
+T               T       T          
+Y               Y       Y            
+U               U       U            
+I               I       I               
+O               O       O              
+P               P       P     
+ 
+           KEYBO>D #F  PAGE #AB 
+OP5 BRACKET     #       OP5 P>5!SIS 
+CLOSE BRACKET   ,       CLOSE P>5!SIS 
 BACKSLA%        3       COLON 
-A               A       A 
-S               S       S 
-D               D       D 
-F               F       F 
-G               G       G 
-H               H       H 
-J               J       J 
-K               K       K 
-L               L       L 
+A               A       A     
+S               S       S     
+D               D       D     
+F               F       F     
+G               G       G     
+H               H       H     
+J               J       J     
+K               K       K     
+L               L       L     
 SEMICOLON       2       SEMICOLON 
 APO/ROPHE       '       APO/ROPHE 
-Z               Z       Z 
-X               X       X 
-C               C       C 
-V               V       V 
-B               B       B 
-N               N       N 
-M               M       M 
--MA             1       -MA 
-P]IOD           4       P]IOD 
-SLA%            8       QUES;N M>K 
+Z               Z       Z          
+X               X       X         
+C               C       C          
+V               V       V               
+B               B       B               
+N               N       N              
+M               M       M           
+-MA             1       -MA             
+P]IOD           4       P]IOD           
+SLA%            8       QUES;N M>K    
+           KEYBO>D #F  PAGE #AC 
+KEYPAD EQUALS   @&      AMP]S&       
+KEYPAD SLA%     "<      OPEN P>5!SIS 
+KEYPAD A/]ISK   ">      CLOSE P>5!SIS 
+KEYPAD G        "6      PLUS 
+KEYPAD H        _/      SLA% 
+KEYPAD I        .<      OPEN BRACKET 
+KEYPAD DA%      .>      CLOSE BRACKET 
+KEYPAD D        ^8      OPEN D\# QUOTES 
+KEYPAD E        ^0      CLOSE D\# QUOTES
+KEYPAD F        @<      LESS ?AN SIGN 
+KEYPAD PLUS     @>      GRT] ?AN SIGN 
+KEYPAD A        ,8      OPEN S+LE QUOTE 
+KEYPAD B        ,0      CLOSE S+LE QUOTE
+KEYPAD C        .0      P]C5T SIGN 
+KEYPAD J        ",-     EM DA% 
+KEYPAD P]IOD    "-      EN DA% 
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+ 
+                                
+                                    
+                                      
+                              
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                                  
+                                  
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                            
+                              
+                                   
 
