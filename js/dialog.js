@@ -1,4 +1,4 @@
-/* global helpWindow, helpDialogOpen, optionsDialogOpen, fileDialogOpen, notationArea, notationWidth, window, config, nu, ctx, roundRect, dialogTop, dialogButtonLeft, dialogButtonTop, dialogButtonRight, translateBraille, showSmallDots, notationGridHeight, showPageBreaks, pageWidth, pageHeight, dialogButtonWidth, dialogButtonHeight, parseFiles, notationHeight, closeButtonCenterX, closeButtonCenterY, kOptionsDialogTitle, kTranslateBrailleLabel, kTranslateBrailleDescription, kShowSmallDotsLabel, kShowSmallDotsDescription, kScoreSizeLabel, kshowPageBreaksLabel, kshowPageBreaksDescription, kWidthLabel, kHeightLabel, kFileDialogTitle, kNewFileLabel, kNewFileDescription, kOpenFileLabel, kOpenFileDescription, kSaveFileLabel, kSaveFileDescription, kExportFileLabel, kExportFileDescription, kParseImportedFilesLabel, kParseImportedFilesDescription, currentCellFont, document, controlModules, currentLocale, selectedControlModule, initializeControls, drawNotation, currentControlModule, gridHeight, setCellHeight, dialogFieldFocus, useWordWrap, setPageSize, Event, insertOctaveSymbols, useBrailleDisplay, kUseBrailleDisplayLabel, kUseBrailleDisplayDescription, kScoreSizeUpButton, kScoreSizeDownButton, kPageSizeLabel, kPageSizeByLabel, kUseWordWrapLabel, kUseWordWrapDescription, kControlsLabel, kMIDISettingsLabel, kInsertOctaveSymbolsLabel, kInsertOctaveSymbolsDescription, kObserveKeySignaturesLabel, kObserveKeySignaturesDescription, observeKeySignatures: true */
+/* global helpWindow, helpDialogOpen, optionsDialogOpen, fileDialogOpen, notationArea, notationWidth, window, config, nu, ctx, roundRect, dialogTop, dialogButtonLeft, dialogButtonTop, dialogButtonRight, translateBraille, showSmallDots, notationGridHeight, showPageBreaks, pageWidth, pageHeight, dialogButtonWidth, dialogButtonHeight, parseFiles, notationHeight, closeButtonCenterX, closeButtonCenterY, kOptionsDialogTitle, kTranslateBrailleLabel, kTranslateBrailleDescription, kShowSmallDotsLabel, kShowSmallDotsDescription, kScoreSizeLabel, kshowPageBreaksLabel, kshowPageBreaksDescription, kWidthLabel, kHeightLabel, kFileDialogTitle, kNewFileLabel, kNewFileDescription, kOpenFileLabel, kOpenFileDescription, kImportFileText, kSaveFileLabel, kSaveFileDescription, kExportFileLabel, kExportFileDescription, kParseImportedFilesLabel, kParseImportedFilesDescription, currentCellFont, document, controlModules, currentLocale, selectedControlModule, initializeControls, drawNotation, currentControlModule, gridHeight, setCellHeight, dialogFieldFocus, useWordWrap, setPageSize, Event, insertOctaveSymbols, useBrailleDisplay, kUseBrailleDisplayLabel, kUseBrailleDisplayDescription, kScoreSizeUpButton, kScoreSizeDownButton, kPageSizeLabel, kPageSizeByLabel, kUseWordWrapLabel, kUseWordWrapDescription, kControlsLabel, kMIDISettingsLabel, kInsertOctaveSymbolsLabel, kInsertOctaveSymbolsDescription, kObserveKeySignaturesLabel, kObserveKeySignaturesDescription, observeKeySignatures: true */
 /* jshint -W020 */
 
 function toggleFileDialog() {
@@ -43,6 +43,11 @@ function showFileDialog() {
         }));
         openFileButton.appendChild(document.createTag('div',kOpenFileDescription,{
             class: 'dialogButtonDescription'
+        }));
+
+        var importFileText = fileDialog.appendChild(document.createTag('div',kImportFileText,{
+            class: 'dialogText',
+            id: 'importFileText',
         }));
 
         var saveFileButton = fileDialog.appendChild(document.createTag('div','',{

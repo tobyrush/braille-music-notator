@@ -1,4 +1,4 @@
-/* global FileReader, importData, arrayHasOwnIndex, drawNotation, createCookie, eraseCookie, readCookie, convertScoreToString, convertStringToScore, eraseAllCookies, padLeft, document, kDefaultFilename, setCellHeight, setControlModule, observeKeySignatures: true */
+/* global FileReader, importData, arrayHasOwnIndex, drawNotation, createCookie, eraseCookie, readCookie, convertScoreToString, convertStringToScore, eraseAllCookies, padLeft, document, kDefaultFilename, setCellHeight, setControlModule, checkFileType: true */
 
 // global variables
 
@@ -23,7 +23,7 @@ var showSmallDots = true;
 var useBrailleDisplay = false;
 var controlHelp=0;
 var reader = new FileReader(); reader.onload = function () { checkFileType(reader.result); };
-var dropzone = false;
+var dropzone = false, fileLoading = false;
 var undoStack = [];
 var suspendUndo = false;
 var undoCursor = -1;
@@ -205,6 +205,16 @@ function lineIsEmpty(y) {
             if (!cellValIsEmpty(score[y][x])) {
                 return false;
             }
+        }
+    }
+    return true;
+}
+
+function scoreIsEmpty() {
+    var h = score.length;
+    for (var y=0; y<h; y++) {
+        if (!lineIsEmpty(y)) {
+            return false;
         }
     }
     return true;
