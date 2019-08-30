@@ -14,7 +14,10 @@ var kCharNames,
     kExportFileLabel,
     kFileButtonCaption,
     kFileDialogTitle,
+    kFileLoadingBrailleMUSE,
+    kFileLoadingCreditMessage,
     kFileLoadingMessage,
+    kFileLoadingURL,
     kFileNameBRF,
     kFileNameBRM,
     kHeightLabel,
@@ -94,7 +97,10 @@ function localize(lang) {
             kExportFileLabel = "Export File";
             kFileButtonCaption = "File";
             kFileDialogTitle = "File";
+            kFileLoadingBrailleMUSE = "BrailleMUSE";
+            kFileLoadingCreditMessage = "MusicXML translation provided by";
             kFileLoadingMessage = "Loading score...";
+            kFileLoadingURL = "www.braillemuse.net";
             kFileNameBRF = "Untitled.brf";
             kFileNameBRM = "Untitled.brm";
             kHeightLabel = "Height:";

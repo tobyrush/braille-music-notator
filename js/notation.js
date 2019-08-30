@@ -1,4 +1,4 @@
-/* global notationArea, currentCellFont, sendHTTPRequest, defaultCellFont, gridHeight, notationGridHeight, gridWidth, notationGridWidth, notationCellWidth, notationCellHeight, ctx, showPageBreaks, pageWidth, hScrollUnits, hScrollOffset, hScroll, vScrollUnits, vScrollOffset, pageHeight, score, arrayHasOwnIndex, cursor, devMode, getScore, gh, gw, dropzone, kDropFileZoneMessage, optionsDialogOpen, fileDialogOpen, drawOptionsDialog, drawFileDialog, vScroll, setScore, updateScreenreader, formFill, kScreenReaderTemplate, characterName, saveToUndo, brailleDots, showSmallDots, graphic, cellIsEmpty, cellValIsEmpty, translateBrailleDefault, kProgramTitle, kVersionAndAuthor, versionString, helpDialogOpen, roundRect, kHelpButtonCaption, kOptionsButtonCaption, kFileButtonCaption, kTitleAreaHeight, document, kDialogWidth, window, setNodeValue, fileLoading, kFileLoadingMessage: true */
+/* global notationArea, currentCellFont, sendHTTPRequest, defaultCellFont, gridHeight, notationGridHeight, gridWidth, notationGridWidth, notationCellWidth, notationCellHeight, ctx, showPageBreaks, pageWidth, hScrollUnits, hScrollOffset, hScroll, vScrollUnits, vScrollOffset, pageHeight, score, arrayHasOwnIndex, cursor, devMode, getScore, gh, gw, dropzone, kDropFileZoneMessage, optionsDialogOpen, fileDialogOpen, drawOptionsDialog, drawFileDialog, vScroll, setScore, updateScreenreader, formFill, kScreenReaderTemplate, characterName, saveToUndo, brailleDots, showSmallDots, graphic, cellIsEmpty, cellValIsEmpty, translateBrailleDefault, kProgramTitle, kVersionAndAuthor, versionString, helpDialogOpen, roundRect, kHelpButtonCaption, kOptionsButtonCaption, kFileButtonCaption, kTitleAreaHeight, document, kDialogWidth, window, setNodeValue, fileLoading, kFileLoadingMessage, kFileLoadingCreditMessage, kFileLoadingBrailleMUSE, kFileLoadingURL: true */
 /* jshint -W020 */
 
 function drawTitle() {
@@ -236,8 +236,8 @@ function drawNotation() {
 		
 	}
 	
-	// draw dropzone indicator
-	if (dropzone || fileLoading) {
+	// draw dropzone/file loading indicator
+	if (dropzone) {
 		ctx.globalAlpha=0.9;
 		ctx.fillStyle="#FFF";
 		ctx.fillRect(0,0,notationWidth,notationHeight);
@@ -246,12 +246,24 @@ function drawNotation() {
 		ctx.textBaseline="middle";
 		ctx.font="bold 36px sans-serif";
 		ctx.fillStyle="#00F";
-        if (dropzone) {
-            ctx.fillText(kDropFileZoneMessage,notationWidth/2,notationHeight/2);
-        } else {
-            ctx.fillText(kFileLoadingMessage,notationWidth/2,notationHeight/2);
-        }
-	}
+        ctx.fillText(kDropFileZoneMessage,notationWidth/2,notationHeight/2);
+	} else if (fileLoading) {
+        ctx.globalAlpha=0.9;
+		ctx.fillStyle="#FFF";
+		ctx.fillRect(0,0,notationWidth,notationHeight);
+		ctx.globalAlpha=1;
+		ctx.textAlign="center";
+		ctx.textBaseline="middle";
+		ctx.font="bold 36px sans-serif";
+		ctx.fillStyle="#00F";
+        ctx.fillText(kFileLoadingMessage,notationWidth/2,(notationHeight/2)-40);
+        ctx.font="bold 18px sans-serif";
+        ctx.fillText(kFileLoadingCreditMessage,notationWidth/2,notationHeight/2+10);
+        ctx.font="bold 36px 'Arial Rounded MT Bold'";
+        ctx.fillText(kFileLoadingBrailleMUSE,notationWidth/2,(notationHeight/2+40));
+        ctx.font="bold 14px sans-serif";
+        ctx.fillText(kFileLoadingURL,notationWidth/2,(notationHeight/2+70));
+    }
 		
 
 	// draw border
