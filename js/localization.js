@@ -14,10 +14,12 @@ var kCharNames,
     kExportFileLabel,
     kFileButtonCaption,
     kFileDialogTitle,
+    kFileLoadingMessage,
     kFileNameBRF,
     kFileNameBRM,
     kHeightLabel,
     kHelpButtonCaption,
+    kImportFileText,
     kInsertOctaveSymbolsDescription,
     kInsertOctaveSymbolsLabel,
     kKeyCommands = [],
@@ -92,10 +94,12 @@ function localize(lang) {
             kExportFileLabel = "Export File";
             kFileButtonCaption = "File";
             kFileDialogTitle = "File";
+            kFileLoadingMessage = "Loading score...";
             kFileNameBRF = "Untitled.brf";
             kFileNameBRM = "Untitled.brm";
             kHeightLabel = "Height:";
             kHelpButtonCaption = "Help";
+            kImportFileText = "MusicXML import graciously provided by BrailleMUSE, an online translation system by Dr. Toshiyuki Gotoh.";
             kInsertOctaveSymbolsDescription = "Intelligently insert octave symbols when required.";
             kInsertOctaveSymbolsLabel = "Insert Octave Symbols";
             kLongestSymbol = 7;
@@ -104,7 +108,7 @@ function localize(lang) {
             kNewFileLabel = "New File";
             kObserveKeySignaturesDescription = "Apply accidentals according to the most recently written key signature.";
             kObserveKeySignaturesLabel = "Observe Key Signatures";
-            kOpenFileDescription = "Open a braille document from your computer.";
+            kOpenFileDescription = "Open a braille or MusicXML document from your computer.";
             kOpenFileLabel = "Open File";
             kOptionsButtonCaption = "Options";
             kOptionsDialogTitle = "Options";

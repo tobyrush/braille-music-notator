@@ -1,0 +1,80 @@
+﻿<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+	<title>Sample for BMN interface of BrailleMUSE with Simple BRL Output.</title>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    </head>
+<!-- =================================================================== -->
+    <body>
+        <h1>Sample for BMN interface of BrailleMUSE with Simple BRL Output.</h1>
+        <p>No need to select files; they are built in to this page! This is what BMN needs, so it can send files on the user's behalf.</p>
+        <hr />
+        <button onclick="sendToBM();">sendToBM</button>
+<script>
+
+    function hex2a(hexx) {
+        //var hex = hexx.toString();//force conversion
+        var str = '';
+        for (var i = 0; i < hexx.length; i += 2)
+        str += String.fromCharCode(parseInt(hexx.substr(i, 2), 16));
+    //    str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+        return str;
+    }
+//
+    function sendToBM() {
+        alert('execute');
+        var formData = getFormData();
+        $.ajax({
+            url: 'http://tk2-250-34589.vs.sakura.ne.jp/BrailleMUSE/servlet/BrailleMuseForToby_c2',
+            method: 'post',
+            dataType: 'json',
+            data: formData,
+            processData: false,
+            contentType: false,
+            timeout: 100000,
+            async: false
+         }).done(function( res ) {
+            alert('success');
+            alert(res.foot_notes);
+            alert("error = "+res.return_code);
+            alert(res.file_name);
+            alert(hex2a(res.braille_music));
+        }).fail(function( jqXHR, textStatus, errorThrown ) {
+            alert("fail");
+        }).always(function(){
+            alert("always");
+        });
+    }
+
+    function getFormData() {
+        var formData = new FormData();
+
+        var content = getParamFile();
+        var blob1 = new Blob([content], { type: "text/xml"});
+        formData.append("upload_p", blob1);
+
+        var content = getMusicFile();
+        var blob2 = new Blob([content], { type: "text/xml"});
+        formData.append("upload_m", blob2, "C scale");
+
+        return formData;
+    }
+
+    function getParamFile() {
+        var s = '<?xml version="1.0" encoding="UTF-8"?><param-braillemuse><LangType>Eng</LangType><ChordType>0</ChordType><num_measure_per_line>2</num_measure_per_line><NumMeasureLines></NumMeasureLines><page_length>22</page_length><page_width>31</page_width><octave_mark>2</octave_mark><BeamGroup>1</BeamGroup><TypeMelody>5</TypeMelody><PartialInAccord>100</PartialInAccord><fifthPoint>3</fifthPoint><accident_5th>1</accident_5th><measure_repeat>1</measure_repeat><measure_num>5</measure_num><abre_staccato>4</abre_staccato><slur_reconst>3</slur_reconst><MoveDirectionToRight>0</MoveDirectionToRight><rm_pedal>1</rm_pedal><ornament>1</ornament><expression_word>1</expression_word><clef_mark>0</clef_mark><multipart_selection>3</multipart_selection><partnumber_selection>1</partnumber_selection><print_header>0</print_header><lyric_selection>0</lyric_selection><harmony>0</harmony><transcription_notes>0</transcription_notes><select_part>0</select_part><chord_order>0</chord_order><titel_type>1</titel_type></param-braillemuse>';
+        return s;
+    }
+
+    function getMusicFile() {
+        var s = '<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 3.0 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd"><score-partwise version="3.0"> <identification> <encoding> <software>Finale for Mac</software> <encoding-date>2019-08-01</encoding-date> <supports attribute="new-system" element="print" type="yes" value="yes"/> <supports attribute="new-page" element="print" type="yes" value="yes"/> <supports element="accidental" type="yes"/> <supports element="beam" type="yes"/> <supports element="stem" type="yes"/> </encoding> </identification> <defaults> <scaling> <millimeters>7.2319</millimeters> <tenths>40</tenths> </scaling> <page-layout> <page-height>1545</page-height> <page-width>1194</page-width> <page-margins type="both"> <left-margin>70</left-margin> <right-margin>70</right-margin> <top-margin>88</top-margin> <bottom-margin>88</bottom-margin> </page-margins> </page-layout> <system-layout> <system-margins> <left-margin>0</left-margin> <right-margin>0</right-margin> </system-margins> <system-distance>121</system-distance> <top-system-distance>70</top-system-distance> </system-layout> <appearance> <line-width type="stem">0.7487</line-width> <line-width type="beam">5</line-width> <line-width type="staff">0.7487</line-width> <line-width type="light barline">0.7487</line-width> <line-width type="heavy barline">5</line-width> <line-width type="leger">0.7487</line-width> <line-width type="ending">0.7487</line-width> <line-width type="wedge">0.7487</line-width> <line-width type="enclosure">0.7487</line-width> <line-width type="tuplet bracket">0.7487</line-width> <note-size type="grace">60</note-size> <note-size type="cue">60</note-size> <distance type="hyphen">120</distance> <distance type="beam">8</distance> </appearance> <music-font font-family="Maestro,engraved" font-size="20.5"/> <word-font font-family="Times New Roman" font-size="10.25"/> </defaults> <part-list> <score-part id="P1"> <part-name print-object="no">MusicXML Part</part-name> <score-instrument id="P1-I1"> <instrument-name>SmartMusic SoftSynth 1</instrument-name> </score-instrument> <midi-instrument id="P1-I1"> <midi-channel>1</midi-channel> <midi-bank>15489</midi-bank> <midi-program>1</midi-program> <volume>80</volume> <pan>0</pan> </midi-instrument> </score-part> </part-list> <!--=========================================================--> <part id="P1"> <measure number="1" width="531"> <print> <system-layout> <system-margins> <left-margin>70</left-margin> <right-margin>0</right-margin> </system-margins> <top-system-distance>211</top-system-distance> </system-layout> <measure-numbering>system</measure-numbering> </print> <attributes> <divisions>2</divisions> <key> <fifths>0</fifths> <mode>major</mode> </key> <time> <beats>4</beats> <beat-type>4</beat-type> </time> <clef> <sign>G</sign> <line>2</line> </clef> </attributes> <sound tempo="120"/> <note default-x="86"> <pitch> <step>C</step> <octave>4</octave> </pitch> <duration>2</duration> <voice>1</voice> <type>quarter</type> <stem default-y="-14.5">up</stem> </note> <note default-x="197"> <pitch> <step>D</step> <octave>4</octave> </pitch> <duration>2</duration> <voice>1</voice> <type>quarter</type> <stem default-y="-9.5">up</stem> </note> <note default-x="308"> <pitch> <step>E</step> <octave>4</octave> </pitch> <duration>2</duration> <voice>1</voice> <type>quarter</type> <stem default-y="-5">up</stem> </note> <note default-x="419"> <pitch> <step>F</step> <octave>4</octave> </pitch> <duration>2</duration> <voice>1</voice> <type>quarter</type> <stem default-y="0">up</stem> </note> </measure> <!--=======================================================--> <measure number="2" width="453"> <note default-x="13"> <pitch> <step>G</step> <octave>4</octave> </pitch> <duration>2</duration> <voice>1</voice> <type>quarter</type> <stem default-y="5.5">up</stem> </note> <note default-x="121"> <pitch> <step>A</step> <octave>4</octave> </pitch> <duration>2</duration> <voice>1</voice> <type>quarter</type> <stem default-y="10.5">up</stem> </note> <note default-x="228"> <pitch> <step>B</step> <octave>4</octave> </pitch> <duration>2</duration> <voice>1</voice> <type>quarter</type> <stem default-y="-55">down</stem> </note> <note default-x="336"> <pitch> <step>C</step> <octave>5</octave> </pitch> <duration>2</duration> <voice>1</voice> <type>quarter</type> <stem default-y="-50.5">down</stem> </note> <barline location="right"> <bar-style>light-heavy</bar-style> </barline> </measure> </part> <!--=========================================================--></score-partwise>';
+
+        return s;
+    }
+
+
+</script>
+
+    </body>
+</html>
+

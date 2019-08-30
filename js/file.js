@@ -1,4 +1,4 @@
-/* global dropzone, drawNotation, window, reader, fileUploader, saveToUndo, suspendUndo, score, hScroll, vScroll, setScrollVars, parseFiles, isLowASCII, setScore, cursor, scoreWidth, showPageBreaks, pageWidth, pageHeight, document, MouseEvent, currentBeatUnit, kFileNameBRF, kFileNameBRM, kPrefixAbbreviations, kWordAbbreviations, kTextAbbreviations, kCommonWords, currentFileName, shiftKeyDown, confirm, kUnsavedChangesDialogMessage, clearDocument, resetCursorAndScroll, removeExtension: true */
+/* global dropzone, drawNotation, window, reader, fileUploader, saveToUndo, suspendUndo, score, hScroll, vScroll, setScrollVars, parseFiles, isLowASCII, setScore, cursor, scoreWidth, showPageBreaks, pageWidth, pageHeight, document, MouseEvent, currentBeatUnit, kFileNameBRF, kFileNameBRM, kPrefixAbbreviations, kWordAbbreviations, kTextAbbreviations, kCommonWords, currentFileName, shiftKeyDown, confirm, kUnsavedChangesDialogMessage, clearDocument, resetCursorAndScroll, removeExtension, DOMParser, sendHTTPPostRequest, XMLSerializer, FormData, Blob, scoreIsEmpty, fileLoading: true */
 /* jshint -W020 */
 
 function doNotationDragOver(e) {
@@ -43,23 +43,24 @@ function doNotationDrop(e) {
 	var files = dt.files;
 	var file = files[0];
 	
-	// attach event handlers here...
-   
-	currentFileName = removeExtension(file.name);
-    reader.readAsText(file);
-	
+	if (scoreIsEmpty() || confirm(kUnsavedChangesDialogMessage)) {
+        currentFileName = removeExtension(file.name);
+        reader.readAsText(file);
+    }
+
   return false;
 }
 
 function doNewFile() {
-    if (confirm(kUnsavedChangesDialogMessage)) {
+    if (scoreIsEmpty() || confirm(kUnsavedChangesDialogMessage)) {
         clearDocument();
+        drawNotation();
         resetCursorAndScroll();
     }
 }
 
 function doOpenFile() {
-    if (confirm(kUnsavedChangesDialogMessage)) {
+    if (scoreIsEmpty() || confirm(kUnsavedChangesDialogMessage)) {
         fileUploader.click();
         resetCursorAndScroll();
     }
@@ -73,10 +74,27 @@ function doExportFile() {
     downloadFile(true);
 }
 
-function doFileOpen(e) {
-	var file = fileUploader.files[0];
-    currentFileName = removeExtension(file.name);
-	reader.readAsText(file);
+function doFileLoad(e) {
+	if (fileUploader.files.length) {
+        var file = fileUploader.files[0];
+        currentFileName = removeExtension(file.name);
+        reader.readAsText(file);
+        fileUploader.value="";
+    }
+}
+
+function checkFileType(fileData) {
+    var parser = new DOMParser();
+    var doc = parser.parseFromString(fileData, "application/xml");
+    if (doc.getElementsByTagName("score-partwise").length || doc.getElementsByTagName("score-timewise").length) {
+        // musicXML file detected
+        dropzone = false;
+        sendToBrailleMUSE(fileData);
+        fileLoading = true;
+        drawNotation();
+    } else {
+        importData(fileData);
+    }
 }
 
 function importData(fileData) {
@@ -123,6 +141,7 @@ function importData(fileData) {
 		suspendUndo = false;
 		cursor.x=0;
 		cursor.y=0;
+        fileLoading = false;
 		drawNotation();
 	}
 }
@@ -198,7 +217,7 @@ function parseData(fileData) {
 	
 	fileData = fileData.replace(/\s+([%<*]{1,3}|#[d-g][%<*]|)(#[A-Ia-i]+[1-9]+|[._]C)/g, convertTimeAndKeySignature); // initial time and key signature line
 	fileData = fileData.replace(/[#][A-Ja-j][0-9]/g, convertTimeSignature); // isolated time signatures
-	fileData = fileData.replace(/[^\n] {4,}([,;#][ -~]+)/g, convertImportedStringToText); // if line starts with more than one space then convert the line to text
+	fileData = fileData.replace(/[^\n] {4,}([ -~]+)/g, convertImportedStringToText); // if line starts with more than one space then convert the line to text, excepting time/key sig blocks
 	fileData = fileData.replace(/([dDnNyY?ɍɂȳȸ]'*)(7#|ȫȗ)([a-i,ʙ-ʢ,ȵ-Ⱦ]{1,3})/g, convertMetronomeMarking); // metronome marking
 	fileData = fileData.replace(/[\n]\s*#*[A-Ja-j]+\b/g, convertImportedStringToText); // measure numbers
 	fileData = fileData.replace(/[7]([A-Za-z "]+)[7]/g, convertParenthesizedText); // convert isolated parentheticals to text
@@ -623,4 +642,81 @@ function convertBrailleMusicHyphen(str) {
 		}
 	}
 	return newStr;
+}
+
+function getImportParameters() {
+
+    var s = '<?xml version="1.0" encoding="UTF-8"?><param-braillemuse>' +
+        '<LangType>Eng</LangType>' +
+        '<ChordType>0</ChordType>' +
+        '<num_measure_per_line>2</num_measure_per_line>' +
+        '<NumMeasureLines></NumMeasureLines>' +
+        '<page_length>' + pageHeight + '</page_length>' +
+        '<page_width>' + pageWidth + '</page_width>' +
+        '<octave_mark>2</octave_mark>' +
+        '<BeamGroup>1</BeamGroup>' +
+        '<TypeMelody>5</TypeMelody>' +
+        '<PartialInAccord>100</PartialInAccord>' +
+        '<fifthPoint>3</fifthPoint>' +
+        '<accident_5th>1</accident_5th>' +
+        '<measure_repeat>1</measure_repeat>' +
+        '<measure_num>5</measure_num>' +
+        '<abre_staccato>4</abre_staccato>' +
+        '<slur_reconst>3</slur_reconst>' +
+        '<MoveDirectionToRight>0</MoveDirectionToRight>' +
+        '<rm_pedal>1</rm_pedal>' +
+        '<ornament>1</ornament>' +
+        '<expression_word>1</expression_word>' +
+        '<clef_mark>0</clef_mark>' +
+        '<multipart_selection>3</multipart_selection>' +
+        '<partnumber_selection>1</partnumber_selection>' +
+        '<print_header>0</print_header>' +
+        '<lyric_selection>0</lyric_selection>' +
+        '<harmony>0</harmony>' +
+        '<transcription_notes>0</transcription_notes>' +
+        '<select_part>0</select_part>' +
+        '<chord_order>0</chord_order>' +
+        '<titel_type>1</titel_type>' +
+        '</param-braillemuse>';
+
+    return s;
+
+}
+
+function sendToBrailleMUSE(xmlFile) {
+
+    var formData = new FormData();
+
+    var content = '' + getImportParameters();
+    var blob3 = new Blob([content], { type: "text/xml"});
+    formData.append("upload_p", blob3);
+
+    content = xmlFile;
+    var blob4 = new Blob([content], { type: "text/xml"});
+    formData.append("upload_m", blob4, currentFileName);
+
+    var request = new window.XMLHttpRequest();
+    request.open("POST","http://tk2-250-34589.vs.sakura.ne.jp/BrailleMUSE/servlet/BrailleMuseForToby_c2",true);
+    request.setRequestHeader("Accept", "application/json, text/javascript, */*; q=0.01");
+    request.setRequestHeader("Accept-Language","en-us");
+    request.onload = function() {
+        if (this.status >= 200 && this.status < 400) {
+            var fileData = hexToDec(this.response).split(String.fromCharCode(12))[2];
+            importData(fileData);
+        } else {
+            // server error
+        }
+    };
+    request.onerror = function() {
+        // connection error
+    };
+    request.send(formData);
+}
+
+function hexToDec(val) {
+    var str = '';
+    for (var i = 0; i < val.length; i += 2) {
+        str += String.fromCharCode(parseInt(val.substr(i, 2), 16));
+    }
+    return str;
 }

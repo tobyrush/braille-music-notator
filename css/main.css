@@ -98,6 +98,13 @@
 #optionsDialog {
 
 }
+.dialogText {
+    font-size: 10px;
+    line-height: 14px;
+    padding: 0px 20px;
+    text-align: center;
+}
+
 .dialogButton {
     background-color: #ddd;
     border-radius: 10px;

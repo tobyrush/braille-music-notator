@@ -1,0 +1,100 @@
+﻿<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+	<title>Sample for BMN interface of BrailleMUSE with Simple BRL Output.</title>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    </head>
+<!-- =================================================================== -->
+    <body>
+        <h1>Sample for BMN interface of BrailleMUSE with Simple BRL Output.</h1>
+        <form id = "my_form" name = "my_form" enctype = "multipart/form-data" method = "POST">
+            <h2>Select a Translation Parameter Setting File(XML).</h2>
+            <input type ="file" size=50 name = "upload_p" id = "up_p">
+            <h2>Select a MusicXML File to be Translated.</h2>
+            <input type ="file" size=50 name = "upload_m" id = "up_m">
+            <h2>Let's Try to Translate it into Braille Music.</h2>
+            <input type = "submit" id = "execute" value = "run">
+            <br>
+            <output id="output"></output>
+        </form>
+        <p>The "run" button above sends the data as a form submission, which CORS allows (because it is directly initiated by the user).</p>
+        <hr />
+        <p>The "sendToBM" button below is not a form submission; it sends the data using JavaScript. Because of this, CORS blocks the data (because the browser thinks it may be done automatically, not directly from the user).</p>
+        <button onclick="sendToBM();">sendToBM</button>
+<script>
+    $("#execute").on("click", function () {
+        alert('execute');
+        var form = $('#my_form').get()[0];
+        // FormData オブジェクトを作成
+        var formData = new FormData( form );
+    //    alert('2');
+        // Ajaxで送信
+        $.ajax({
+            method: 'post',
+//           url: 'http://localhost:8084/BrailleMUSE/servlet/BrailleMuseForToby_c2',
+            url: 'http://tk2-250-34589.vs.sakura.ne.jp/BrailleMUSE/servlet/BrailleMuseForToby_c2',
+            dataType: 'json',   // using Json
+            data: formData,     // using FormData
+            processData: false,
+            contentType: false,
+            timeout: 100000,
+            async: false        // Let's try asynchronous
+         }).done(function( res ) {
+            alert('success');
+            alert(res.foot_notes);
+            alert("error = "+res.return_code);
+            alert(res.file_name);
+        //    document.getElementById("output").innerHTML = hex2a(res.braille_music);
+            alert(hex2a(res.braille_music));
+        }).fail(function( jqXHR, textStatus, errorThrown ) {
+          alter("fail");
+          // console.log( 'ERROR', jqXHR, textStatus, errorThrown );
+        }).always(function(){
+          //  document.getElementById("output").innerHTML = "test-output2";
+            alter("always");
+        });
+      //  alert('3');
+    });
+    //
+    function hex2a(hexx) {
+        //var hex = hexx.toString();//force conversion
+        var str = '';
+        for (var i = 0; i < hexx.length; i += 2)
+        str += String.fromCharCode(parseInt(hexx.substr(i, 2), 16));
+    //    str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+        return str;
+    }
+//
+    function sendToBM() {
+        alert('execute');
+        var form = $('#my_form').get()[0];
+        var formData = new FormData( form );
+        $.ajax({
+            url: 'http://tk2-250-34589.vs.sakura.ne.jp/BrailleMUSE/servlet/BrailleMuseForToby_c2',
+            method: 'post',
+            dataType: 'json',
+            data: formData,
+            processData: false,
+            contentType: false,
+            timeout: 100000,
+            async: false
+         }).done(function( res ) {
+            alert('success');
+            alert(res.foot_notes);
+            alert("error = "+res.return_code);
+            alert(res.file_name);
+            alert(hex2a(res.braille_music));
+        }).fail(function( jqXHR, textStatus, errorThrown ) {
+            alert("fail");
+        }).always(function(){
+            alert("always");
+        });
+    }
+
+
+</script>
+
+    </body>
+</html>
+

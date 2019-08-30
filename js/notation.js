@@ -1,4 +1,4 @@
-/* global notationArea, currentCellFont, sendHTTPRequest, defaultCellFont, gridHeight, notationGridHeight, gridWidth, notationGridWidth, notationCellWidth, notationCellHeight, ctx, showPageBreaks, pageWidth, hScrollUnits, hScrollOffset, hScroll, vScrollUnits, vScrollOffset, pageHeight, score, arrayHasOwnIndex, cursor, devMode, getScore, gh, gw, dropzone, kDropFileZoneMessage, optionsDialogOpen, fileDialogOpen, drawOptionsDialog, drawFileDialog, vScroll, setScore, updateScreenreader, formFill, kScreenReaderTemplate, characterName, saveToUndo, brailleDots, showSmallDots, graphic, cellIsEmpty, cellValIsEmpty, translateBrailleDefault, kProgramTitle, kVersionAndAuthor, versionString, helpDialogOpen, roundRect, kHelpButtonCaption, kOptionsButtonCaption, kFileButtonCaption, kTitleAreaHeight, document, kDialogWidth, window, setNodeValue: true */
+/* global notationArea, currentCellFont, sendHTTPRequest, defaultCellFont, gridHeight, notationGridHeight, gridWidth, notationGridWidth, notationCellWidth, notationCellHeight, ctx, showPageBreaks, pageWidth, hScrollUnits, hScrollOffset, hScroll, vScrollUnits, vScrollOffset, pageHeight, score, arrayHasOwnIndex, cursor, devMode, getScore, gh, gw, dropzone, kDropFileZoneMessage, optionsDialogOpen, fileDialogOpen, drawOptionsDialog, drawFileDialog, vScroll, setScore, updateScreenreader, formFill, kScreenReaderTemplate, characterName, saveToUndo, brailleDots, showSmallDots, graphic, cellIsEmpty, cellValIsEmpty, translateBrailleDefault, kProgramTitle, kVersionAndAuthor, versionString, helpDialogOpen, roundRect, kHelpButtonCaption, kOptionsButtonCaption, kFileButtonCaption, kTitleAreaHeight, document, kDialogWidth, window, setNodeValue, fileLoading, kFileLoadingMessage: true */
 /* jshint -W020 */
 
 function drawTitle() {
@@ -237,8 +237,8 @@ function drawNotation() {
 	}
 	
 	// draw dropzone indicator
-	if (dropzone) {
-		ctx.globalAlpha=0.7;
+	if (dropzone || fileLoading) {
+		ctx.globalAlpha=0.9;
 		ctx.fillStyle="#FFF";
 		ctx.fillRect(0,0,notationWidth,notationHeight);
 		ctx.globalAlpha=1;
@@ -246,7 +246,11 @@ function drawNotation() {
 		ctx.textBaseline="middle";
 		ctx.font="bold 36px sans-serif";
 		ctx.fillStyle="#00F";
-		ctx.fillText(kDropFileZoneMessage,notationWidth/2,notationHeight/2);
+        if (dropzone) {
+            ctx.fillText(kDropFileZoneMessage,notationWidth/2,notationHeight/2);
+        } else {
+            ctx.fillText(kFileLoadingMessage,notationWidth/2,notationHeight/2);
+        }
 	}
 		
 

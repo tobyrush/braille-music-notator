@@ -19,7 +19,7 @@ function initialize() {
 	document.addEventListener("copy",handleClipboard,false);
 	document.addEventListener("paste",handleClipboard,false);
 	fileUploader = document.getElementById("fileUpload");
-	fileUploader.addEventListener("change",doFileOpen,false);
+	fileUploader.addEventListener("change",doFileLoad,false);
 	notationArea.addEventListener("mousedown",doNotationMouseDown,false);
 	notationArea.addEventListener("mouseup",doNotationMouseUp,false);
 	notationArea.addEventListener("mousemove",doNotationMouseMove,false);
