@@ -1884,7 +1884,7 @@
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="100" top="50" content="BECAUSE" />
     </cell>
     <cell name="text contraction ble">
-        <code value="835" />
+        <code value="935" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="BLE" />
     </cell>

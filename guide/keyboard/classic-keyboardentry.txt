@@ -1,0 +1,315 @@
+Keyboard 1
+
+key accent creates dots 3 which means augmentation dot
+key 1 creates dots 1 3 4 5 6 which means C whole note
+key 2 creates dots 1 3 5 6 which means D whole note
+key 3 creates dots 1 2 3 4 6 which means E whole note
+key 4 creates dots 1 2 3 4 5 6 which means F whole note
+key 5 creates dots 1 2 3 5 6 which means G whole note
+key 6 creates dots 2 3 4 6 which means A whole note
+key 7 creates dots 2 3 4 5 6 which means B whole note
+key 8 creates dots 6 dots 6 which means octave 8
+key 9 creates dots 5 which means octave 4
+key 0 creates dots 1 3 4 which means whole rest
+key dash creates dots 1 2 6 dots 1 2 6 which means double flat
+key equals creates dots 1 4 6 dots 1 4 6 which means double sharp
+key Q creates dots 1 3 4 5 which means C half note
+key W creates dots 1 3 5 which means D half note
+key E creates dots 1 2 3 4 which means E half note
+key R creates dots 1 2 3 4 5 which means F half note
+key T creates dots 1 2 3 5 which means G half note
+key Y creates dots 2 3 4 which means A half note
+key U creates dots 2 3 4 5 which means B half note
+key I creates dots 6 which means octave 7
+key O creates dots 4 5 6 which means octave 3
+key P creates dots 1 3 6 which means half rest
+key open bracket creates dots 1 2 6 which means flat
+key close bracket creates dots 1 4 6 which means sharp
+key backslash creates dots 1 6 which means natural
+key A creates dots 1 4 5 6 which means C quarter note
+key S creates dots 1 5 6 which means D quarter note
+key D creates dots 1 2 4 6 which means E quarter note
+key F creates dots 1 2 4 5 6 which means F quarter note
+key G creates dots 1 2 5 6 which means G quarter note
+key H creates dots 2 4 6 which means A quarter note
+key J creates dots 2 4 5 6 which means B quarter note
+key K creates dots 5 6 which means octave 6
+key L creates dots 4 5 which means octave 2
+key semicolon creates dots 1 2 3 6 which means quarter rest
+key single quote creates dots 1 3 4 6 which means eighth rest
+key Z creates dots 1 4 5 which means C eighth note
+key X creates dots 1 5 which means D eighth note
+key C creates dots 1 2 4 which means E eighth note
+key V creates dots 1 2 4 5 which means F eighth note
+key B creates dots 1 2 5 which means G eighth note
+key N creates dots 2 4 which means A eighth note
+key M creates dots 2 4 5 which means B eighth note
+key comma creates dots 4 6 which means octave 5
+key period creates dots 4 which means octave 1
+key slash creates dots 4 dots 4 which means octave 0
+
+Keyboard 2
+
+key accent creates dots 3 which means augmentation dot
+key 1 creates dots 1 3 4 5 6 which means C sixteenth note
+key 2 creates dots 1 3 5 6 which means D sixteenth note
+key 3 creates dots 1 2 3 4 6 which means E sixteenth note
+key 4 creates dots 1 2 3 4 5 6 which means F sixteenth note
+key 5 creates dots 1 2 3 5 6 which means G sixteenth note
+key 6 creates dots 2 3 4 6 which means A sixteenth note
+key 7 creates dots 2 3 4 5 6 which means B sixteenth note
+key 8 creates dots 3 6 which means add octave
+key 9 creates dots 3 4 5 6 which means add fourth
+key 0 creates dots 1 3 4 which means sixteenth rest
+key dash creates dots 1 2 6 dots 1 2 6 which means double flat
+key equals creates dots 1 4 6 dots 1 4 6 which means double sharp
+key Q creates dots 1 3 4 5 which means C thirty-second note
+key W creates dots 1 3 5 which means D thirty-second note
+key E creates dots 1 2 3 4 which means E thirty-second note
+key R creates dots 1 2 3 4 5 which means F thirty-second note
+key T creates dots 1 2 3 5 which means G thirty-second note
+key Y creates dots 2 3 4 which means A thirty-second note
+key U creates dots 2 3 4 5 which means B thirty-second note
+key I creates dots 2 5 which means add seventh
+key O creates dots 3 4 6 which means add third
+key P creates dots 1 3 6 which means thirty-second rest
+key open bracket creates dots 1 2 6 which means flat
+key close bracket creates dots 1 4 6 which means sharp
+key backslash creates dots 1 6 which means natural
+key A creates dots 1 4 5 6 which means C sixty-fourth note
+key S creates dots 1 5 6 which means D sixty-fourth note
+key D creates dots 1 2 4 6 which means E sixty-fourth note
+key F creates dots 1 2 4 5 6 which means F sixty-fourth note
+key G creates dots 1 2 5 6 which means G sixty-fourth note
+key H creates dots 2 4 6 which means A sixty-fourth note
+key J creates dots 2 4 5 6 which means B sixty-fourth note
+key K creates dots 3 5 6 which means add sixth
+key L creates dots 3 4 which means add second
+key semicolon creates dots 1 2 3 6 which means sixty-fourth rest
+key single quote creates dots 1 3 4 6 which means one-hundred-twenty-eighth rest
+key Z creates dots 1 4 5 which means C one-hundred-twenty-eighth note
+key X creates dots 1 5 which means D one-hundred-twenty-eighth note
+key C creates dots 1 2 4 which means E one-hundred-twenty-eighth note
+key V creates dots 1 2 4 5 which means F one-hundred-twenty-eighth note
+key B creates dots 1 2 5 which means G one-hundred-twenty-eighth note
+key N creates dots 2 4 which means A one-hundred-twenty-eighth note
+key M creates dots 2 4 5 which means B one-hundred-twenty-eighth note
+key comma creates dots 3 5 which means add fifth
+key period creates dots 4 dots 1 4 which means tie
+key slash creates dots 2 6 which means grace note
+
+Keyboard 3
+
+key accent creates dots 3 4 5 6 which means time signature prefix
+key 1 creates dots 1 which means time signature top number 1
+key 2 creates dots 1 2 which means time signature top number 2
+key 3 creates dots 1 4 which means time signature top number 3
+key 4 creates dots 1 4 5 which means time signature top number 4
+key 5 creates dots 1 5 which means time signature top number 5
+key 6 creates dots 1 2 4 which means time signature top number 6
+key 7 creates dots 1 2 4 5 which means time signature top number 7
+key 8 creates dots 1 2 5 which means time signature top number 8
+key 9 creates dots 2 4 which means time signature top number 9
+key 0 creates dots 2 4 5 which means time signature top number 0
+key dash creates dots 4 6 dots 1 4 which means common time
+key equals creates dots 4 5 6 dots 1 4 which means cut time
+key Q creates dots 2 which means time signature bottom number 1
+key W creates dots 2 3 which means time signature bottom number 2
+key E creates dots 2 5 which means time signature bottom number 3
+key R creates dots 2 5 6 which means time signature bottom number 4
+key T creates dots 2 6 which means time signature bottom number 5
+key Y creates dots 2 3 5 which means time signature bottom number 6
+key U creates dots 2 3 5 6 which means time signature bottom number 7
+key I creates dots 2 3 6 which means time signature bottom number 8
+key O creates dots 3 5 which means time signature bottom number 9
+key P creates dots 3 5 6 which means time signature bottom number 0
+key open bracket creates dots 1 2 6 which means key signature flat
+key close bracket creates dots 1 4 6 which means key signature sharp
+key backslash creates dots 1 6 which means key signature natural
+key A creates dots 2 which means tuplet number 1
+key S creates dots 2 3 which means tuplet number 2
+key D creates dots 2 5 which means tuplet number 3
+key F creates dots 2 5 6 which means tuplet number 4
+key G creates dots 2 6 which means tuplet number 5
+key H creates dots 2 3 5 which means tuplet number 6
+key J creates dots 2 3 5 6 which means tuplet number 7
+key K creates dots 2 3 6 which means tuplet number 8
+key L creates dots 3 5 which means tuplet number 9
+key semicolon creates dots 3 5 6 which means tuplet number 0
+key single quote creates dots 2 3 which means triplet
+key Z creates dots 4 5 6 which means tuplet prefix
+key X creates dots 3 which means tuplet suffix
+key C creates dots 1 4 which means short slur
+key V creates dots 5 6 dots 1 2 which means begin long slur
+key B creates dots 4 5 dots 2 3 which means end long slur
+key N creates dots 3 4 5 6 which means key signature prefix
+key M creates dots 1 4 5 which means key signature multiplier 4
+key comma creates dots 1 5 which means key signature multiplier 5
+key period creates dots 1 2 4 which means key signature multiplier 6
+key slash creates dots 1 2 4 5 which means key signature multiplier 7
+
+Keyboard 4
+
+key accent is unused
+key 1 creates dots 2 3 6 which means staccato
+key 2 creates dots 4 5 6 dots 2 3 6 which means tenuto
+key 3 creates dots 4 6 dots 2 3 6 which means accent
+key 4 creates dots 5 6 dots 2 3 6 which means marcato
+key 5 creates dots 1 2 6 dots 1 2 3 which means fermata
+key 6 creates dots 3 4 5 dots 2 which means breath mark
+key 7 creates dots 2 3 5 which means trill
+key 8 creates dots 1 2 6 dots 3 which means up bow
+key 9 creates dots 1 2 6 dots 1 2 which means down bow
+key 0 creates dots 2 6 dots 1 3 which means indeterminate pitch note indicator
+key dash creates dots 3 4 5 6 which means multi-measure rest prefix
+key equals creates dots 1 3 4 which means multi-measure rest suffix
+key Q creates dots 1 which means fingering 1
+key W creates dots 1 2 which means fingering 2
+key E creates dots 1 2 3 which means fingering 3
+key R creates dots 2 which means fingering 4
+key T creates dots 1 3 which means fingering 5
+key Y creates dots 1 4 which means change fingers
+key U creates dots 2 6 dot 1 which means stemless notehead
+key I creates dots 2 6 dots 1 2 which means X notehead
+key O creates dots 2 6 dots 1 2 3 which means diamond notehead
+key P creates dots 3 4 5 dots 3 4 dots 1 2 3 which means treble clef
+key open bracket creates dots 3 4 5 dots 3 4 6 dots 1 2 3 which means alto clef
+key close bracket creates dots 3 4 5 dots 3 4 6 dots 5 dots 1 2 3 which means tenor clef
+key backslash creates dots 3 4 5 dots 3 4 5 6 dots 1 2 3 which means bass clef
+key A creates dots 3 4 5 dots 1 2 4 dots 1 2 4 which means fortissimo
+key S creates dots 3 4 5 dots 1 2 4 which means forte
+key D creates dots 3 4 5 dots 1 3 4 dots 1 2 4 which means mezzo forte
+key F creates dots 3 4 5 dots 1 3 4 dots 1 2 3 4 which means mezzo piano
+key G creates dots 3 4 5 dots 1 2 3 4 which means piano
+key H creates dots 3 4 5 dots 1 2 3 4 dots 1 2 3 4 which means pianissimo
+key J is unused
+key K creates dots 3 4 5 dots 1 4 which means begin crescendo
+key L creates dots 3 4 5 dots 2 5 which means end crescendo
+key semicolon creates dots 3 4 5 dots 1 4 5 which means begin diminuendo
+key single quote creates dots 3 4 5 dots 2 5 6 which means end diminuendo
+key Z creates dots 3 4 5 dots 1 4 dots 1 2 3 5 dots 3 which means crescendo
+key X creates dots 3 4 5 dots 1 4 5 dots 1 5 dots 1 4 dots 1 2 3 5 dots 3 which means decrescendo
+key C creates dots 3 4 5 dots 1 4 5 dots 2 4 dots 1 3 4 dots 3 which means diminuendo
+key V creates dots 3 4 6 which means chord symbol augmented
+key B creates dots 2 5 6 which means chord symbol diminished
+key N creates dots 2 5 6 dots 2 which means chord symbol half-diminished
+key M creates dots 3 5 6 which means chord symbol major
+key comma is unused
+key period is unused
+key slash is unused
+
+Keyboard 5
+
+key accent creates dots 4 5 6 dots 1 2 6 which means three quarters flat
+key 1 creates dots 4 5 dots 1 2 6 which means four commas flat
+key 2 creates dots 4 dots 1 2 6 which means one quarter flat
+key 3 creates dots 4 dots 1 4 6 which means one quarter sharp
+key 4 creates dots 4 5 dots 1 4 6 which means five commas sharp
+key 5 creates dots 4 5 6 dots 1 4 6 which means three quarters sharp
+key 6 is unused
+key 7 is unused
+key 8 is unused
+key 9 is unused
+key 0 is unused
+key dash is unused
+key equals creates dots 2 3 5 6 dots 3 4 5 6 which means metronome marking equals sign
+key Q creates dots 6 dots 3 which means music prefix
+key W creates dots 3 4 5 which means word prefix
+key E creates dots 4 5 dots 1 2 6 dots 2 which means large note value sign
+key R creates dots 6 dots 1 2 6 dots 2 which means small note value sign
+key T creates dots 4 6 dots 3 4 5 which means right hand sign
+key Y creates dots 4 5 6 dots 3 4 5 which means left hand sign
+key U creates dots 1 2 6 dots 3 4 5 which means in-accord sign
+key I creates dots 4 6 dots 1 3 which means in-accord measure division
+key O creates dots 5 dots 2 which means partial measure in-accord
+key P is unused
+key open bracket is unused
+key close bracket is unused
+key backslash is unused
+key A is unused
+key S is unused
+key D is unused
+key F creates dots 1 2 6 dots 2 3 5 6 which means begin repeat sign
+key G creates dots 1 2 6 dots 2 3 which means end repeat sign
+key H creates dots 1 2 6 dots 1 2 3 which means coda sign
+key J creates dots 3 4 5 6 dots 2 which means first ending
+key K creates dots 3 4 5 6 dots 2 3 which means second ending
+key L creates dots 3 4 5 6 dots 2 5 which means third ending
+key semicolon is unused
+key single quote is unused
+key Z creates dots 1 2 3 which means single barline
+key X creates dots 1 2 6 dots 1 3 dots 3 which means double barline
+key C creates dots 1 2 6 dots 1 3 which means final barline
+key V creates dots 2 3 5 6 which means repeat measure or beat
+key B creates dots 3 4 6 which means begin repeated section
+key N creates dots 1 6 which means end repeated section
+key M creates dots 5 dots 3 4 6 which means play section number
+key comma creates dots 3 4 5 6 which means number of measures
+key period creates dots 5 which means braille music hyphen
+key slash creates dots 1 2 6 dots 2 which means braille music comma
+
+Keyboard 6 (Literary braille)
+
+key accent creates dots 2 3 5 which means exclamation mark
+key 1 creates dots 1 which means 1
+key 2 creates dots 1 2 which means 2
+key 3 creates dots 1 4 which means 3
+key 4 creates dots 1 4 5 which means 4
+key 5 creates dots 1 5 which means 5
+key 6 creates dots 1 2 4 which means 6
+key 7 creates dots 1 2 4 5 which means 7
+key 8 creates dots 1 2 5 which means 8
+key 9 creates dots 2 4 which means 9
+key 0 creates dots 2 4 5 which means 0
+key dash creates dots 3 6 which means dash
+key equals creates dot 5 dots 2 3 5 6 which means equals
+key Q creates dots 1 2 3 4 5 which means Q
+key W creates dots 2 4 5 6 which means W
+key E creates dots 1 5 which means E
+key R creates dots 1 2 3 5 which means R
+key T creates dots 2 3 4 5 which means T
+key Y creates dots 1 3 4 5 6 which means Y
+key U creates dots 1 3 6 which means U
+key I creates dots 2 4 which means I
+key O creates dots 1 3 5 which means O
+key P creates dots 1 2 3 4 which means P
+key open bracket creates dots 3 4 5 6 which means number sign
+key close bracket creates dot 6 which means capital sign
+key backslash creates dots 2 5 which means colon
+key A creates dots 1 which means A
+key S creates dots 2 3 4 which means S
+key D creates dots 1 4 5 which means D
+key F creates dots 1 2 4 which means F
+key G creates dots 1 2 4 5 which means G
+key H creates dots 1 2 5 which means H
+key J creates dots 2 4 5 which means J
+key K creates dots 1 3 which means K
+key L creates dots 1 2 3 which means L
+key semicolon creates dots 2 3 which means semicolon
+key single quote creates dots 3 which means apostrophe
+key Z creates dots 1 3 5 6 which means Z
+key X creates dots 1 3 4 6 which means X
+key C creates dots 1 4 which means C
+key V creates dots 1 2 3 6 which means V
+key B creates dots 1 2  which means B
+key N creates dots 1 3 4 5 which means N
+key M creates dots 1 3 4 which means M
+key comma creates dots 2 which means comma
+key period creates dots 2 5 6 which means period
+key slash creates dots 2 3 6 which means question mark
+key keypad equals creates dot 4 dots 1 2 3 4 6 which means ampersand
+key keypad slash creates dot 5 dots 1 2 6 which means open parenthesis
+key keypad asterisk creates dot 5 dots 3 4 5 which means close parenthesis
+key keypad seven creates dot 5 dots 2 3 5 which means plus
+key keypad eight creates dot 4 5 6 dots 3 4 which means slash
+key keypad nine creates dot 4 6 dots 1 2 6 which means open bracket
+key keypad dash creates dot 4 6 dots 3 4 5 which means close bracket
+key keypad four creates dot 4 5 dots 2 3 6 which means open double quotation mark
+key keypad five creates dot 4 5 dots 3 5 6 which means close double quotation mark
+key keypad six creates dot 4 dots 1 2 6 which means less than sign
+key keypad plus creates dot 4 dots 3 4 5 which means greater than sign
+key keypad one creates dot 6 dots 2 3 6 which means open single quotation mark
+key keypad two creates dot 6 dots 3 5 6 which means close single quotation mark
+key keypad three creates dot 4 6 dots 3 5 6 which means percent sign
+key keypad zero creates dot 5 dot 6 dots 3 6 which means em dash
+key keypad period creates dot 5 dots 3 6 which means en dash

@@ -1,4 +1,4 @@
-/* global midiConnected, midiNotes, notate, octaveValues, restValues, sharpNoteValues, flatNoteValues, drawNotation, octaveCharValues, pitchValues, score, cursor, useLaunchpad, insertOctaveSymbols, getScoreLine, diatonicNoteValues, observeKeySignatures: true */
+/* global midiConnected, midiNotes, notate, octaveValues, restValues, sharpNoteValues, flatNoteValues, drawNotation, octaveCharValues, pitchValues, score, cursor, insertOctaveSymbols, getScoreLine, diatonicNoteValues, observeKeySignatures, spellChordsDownward, intervalValues, intervalCharValues: true */
 /* jshint -W020 */
 
 function onMIDISuccess(midiAccess) {
@@ -44,18 +44,77 @@ function midiNoteOn(note) {
     midiNotes.push(note);
 }
 
+function translateMIDIChord(midiNoteSet,topDown=true) {
+    if (midiNoteSet.length) {
+        midiNoteSet.sort(function(a,b) {
+            if (topDown) {
+                return b-a; // sorts high to low
+            } else {
+                return a-b; // sorts low to high
+            }
+        });
+        var noteArray = [];
+        midiNoteSet.forEach( function(note) {
+            noteArray.push([note % 12, getOctave(note)]);
+        });
+        return noteArray;
+    } else {
+        return [];
+    }
+}
+
+function getMIDINotes(duration,octaveFlag,key,topDown=spellChordsDownward) {
+    var noteArray = [],
+        p = translateMIDIChord(midiNotes,topDown);
+    if (p.length) {
+        if (octaveFlag == 1 || ( octaveFlag === 0 && needsOctaveSign(score[cursor.y],cursor.x,key.getDiatonicPitch(p[0][0]),p[0][1]))) {
+            noteArray.push(...octaveValues[p[0][1]]);
+        }
+        noteArray.push(...key.notateInKey(p[0][0],duration));
+        if (p.length>1) {
+            for (var i=1; i<p.length; i++) {
+                noteArray.push(...key.notateIntervalInKey(
+                    p[i][0],
+                    p[i][1],
+                    p[0][0],
+                    p[0][1],
+                    p[i-1][0],
+                    p[i-1][1]
+                ));
+            }
+        }
+        return noteArray;
+    } else {
+        return restValues[duration];
+    }
+}
+
 function notateMIDINotes(duration,forceShowOctave) {
+
+    var k;
+    if (observeKeySignatures) {
+        k=findKeySignatureAtPosition(cursor.x,cursor.y);
+    } else {
+        k=findKeySignatureAtPosition(0,0);
+    }
+
+    var oct = 0;
+    if (!insertOctaveSymbols) {oct = -1; }
+    if (forceShowOctave) {oct = 1; }
+
+    notate(getMIDINotes(duration,oct,k,spellChordsDownward));
+
+    drawNotation();
+}
+
+function oldNotateMIDINotes(duration,forceShowOctave) {
     midiNotes.sort(function(a,b) {
         return b-a; // sorts high to low
     });
     var pc = -1;
     var noteArray;
     if (midiNotes.length) {
-        if (useLaunchpad) {
-            pc = translateLaunchpad(midiNotes[0]).pitchClass;
-        } else {
-            pc = midiNotes[0] % 12;
-        }
+        pc = midiNotes[0] % 12;
     }
 
     if (pc<0) {
@@ -70,18 +129,8 @@ function notateMIDINotes(duration,forceShowOctave) {
         }
         noteArray = k.notateInKey(pc,duration);
 
-//        if (sharp) {
-//            noteArray = sharpNoteValues[duration][pc];
-//        } else {
-//            noteArray = flatNoteValues[duration][pc];
-//        }
-
         var p = getPitch(noteArray); // return diatonic pitch # from noteArray
         var oct = getOctave(midiNotes[0]); // return octave number from MIDI pitch value
-
-        if (useLaunchpad) {
-            oct = translateLaunchpad(midiNotes[0]).octave;
-        }
 
         if (forceShowOctave || needsOctaveSign(score[cursor.y],cursor.x,p,oct)) {
             notate(octaveValues[oct],"");
@@ -113,8 +162,10 @@ function findPitchAtPosition(chars,position) {
     if (chars) {
         while (i<position) {
             if (typeof(octaveCharValues[chars[i]])==='number') {
-                result.octave = octaveCharValues[chars[i]];
-                justChanged = true;
+                if (chars.length<i || typeof(intervalCharValues[chars[i+1]]) !== "number") {
+                    result.octave = octaveCharValues[chars[i]];
+                    justChanged = true;
+                }
             } else if (typeof(pitchValues[chars[i]])==='number') {
                 newPitch = pitchValues[chars[i]];
                 if (!justChanged) {
@@ -164,15 +215,6 @@ function needsOctaveSign(chars,position,pitch,octave) {
     }
 }
 
-function translateLaunchpad(value) {
-    var result = {};
-
-    result.pitchClass = [-1,0,2,4,5,7,9,11,-1,-1][value % 10];
-    result.octave = Math.floor(value/10);
-
-    return result;
-}
-
 class keySignature {
     constructor(chars) {
         if (chars==="") {
@@ -206,6 +248,9 @@ class keySignature {
         this.keyMap[ 6]=[[B,s],[C  ],[C,S],[D  ],[E,n],[E  ],[F  ],[F,S],[G  ],[A,n],[A  ],[B  ]];
         this.keyMap[ 7]=[[B  ],[C  ],[C,S],[D  ],[E,n],[E  ],[F  ],[F,S],[G  ],[G,S],[A  ],[B,n]];
     }
+    getDiatonicPitch(pc) {
+        return this.keyMap[this.keyNum][pc][0];
+    }
     notateInKey(pc,duration) {
         var r = [],
             n = this.keyMap[this.keyNum][pc],
@@ -214,6 +259,27 @@ class keySignature {
             r.push(...acc[n[1]]);
         }
         r.push(...diatonicNoteValues[duration][n[0]]);
+        return r;
+    }
+    getIntervalInKey(pc,oct,basePC,baseOct) {
+        // this is 0-based (0=unison, 1=2nd, etc.)
+        return Math.abs(this.keyMap[this.keyNum][pc][0]-this.keyMap[this.keyNum][basePC][0]+((oct-baseOct)*7));
+    }
+    intervalNeedsOctaveSign(pc,oct,basePC,baseOct) {
+        var int = this.getIntervalInKey(pc,oct,basePC,baseOct);
+        return ((int === 0) || (int > 7));
+    }
+    notateIntervalInKey(pc,oct,basePC,baseOct,lastPC=basePC,lastOct=baseOct) {
+        var r = [],
+            n = this.keyMap[this.keyNum][pc],
+            acc = [[60,60],[60],[42],[37],[37,37]];
+        if (this.intervalNeedsOctaveSign(pc,oct,lastPC,lastOct)) {
+            r.push(...octaveValues[oct]);
+        }
+        if (n.length>1) {
+            r.push(...acc[n[1]]);
+        }
+        r.push(...intervalValues[this.getIntervalInKey(pc,oct,basePC,baseOct) % 7]);
         return r;
     }
 }

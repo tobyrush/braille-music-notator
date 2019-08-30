@@ -1,4 +1,4 @@
-/* global titleArea, tctx, versionString, helpDialogOpen, roundRect, optionsDialogOpen, fileDialogOpen, controlArea, cctx, whichKeyboard, keyboardCoordinates, keymap, keycaps, displayControlHelp, cursor, hScroll, vScroll, controlsHeight, controlsWidth, chu, resizeBarHeight, keyboardOriginX, keyboardOriginY, kbu, controlHelpOriginX, controlHelpOriginY, console, shiftKeyDown, metaKeyDown, formFill, kProgramTitle, kVersionAndAuthor, kHelpButtonCaption, kOptionsButtonCaption, kFileButtonCaption, sendHTTPRequest, defaultControlModule, DOMParser, currentControlModule, updateScreenreader, kScreenReaderControlPageNumber, createTemporaryGrid, gridWidth, gridHeight, releaseTemporaryGrid, document, devMode, score, drawStoredScore, notate, tempGrid, drawNotation, currentCellFont, notationArea, notateMIDINotes, selectedControlModule, kControlChangeSymbol, toggleControlSelectionDialog, window, findPos, updateEnabledFlags: true */
+/* global titleArea, tctx, versionString, helpDialogOpen, roundRect, optionsDialogOpen, fileDialogOpen, controlArea, cctx, whichKeyboard, keyboardCoordinates, keymap, keycaps, displayControlHelp, cursor, hScroll, vScroll, controlsHeight, controlsWidth, chu, resizeBarHeight, keyboardOriginX, keyboardOriginY, kbu, controlHelpOriginX, controlHelpOriginY, console, shiftKeyDown, metaKeyDown, formFill, kProgramTitle, kVersionAndAuthor, kHelpButtonCaption, kOptionsButtonCaption, kFileButtonCaption, sendHTTPRequest, defaultControlModule, DOMParser, currentControlModule, updateScreenreader, kScreenReaderControlPageNumber, createTemporaryGrid, gridWidth, gridHeight, releaseTemporaryGrid, document, devMode, score, drawStoredScore, notate, tempGrid, drawNotation, currentCellFont, notationArea, notateMIDINotes, selectedControlModule, kControlChangeSymbol, toggleControlSelectionDialog, window, findPos, updateEnabledFlags, spellChordsDownward, currentLocale, controlModules, switchControls: true */
 /* jshint -W020 */
 
 function initializeControls(forceLoad = false) {
@@ -39,6 +39,25 @@ function resetCursorAndScroll() {
 	cursor.y=0;
 	hScroll=0;
 	vScroll=0;
+}
+
+function rotateControlModule() {
+    var cm,s,currentModules = [];
+    var i=0;
+    controlModules.forEach(function(cm) {
+        if (cm.locale === '' || cm.locale == currentLocale) {
+            currentModules.push(cm);
+            if (selectedControlModule.id == cm.id) {
+                s = i;
+            }
+            i++;
+        }
+    });
+    if (s+1 < currentModules.length) {
+        switchControls(currentModules[s+1].id);
+    } else {
+        switchControls(currentModules[0].id);
+    }
 }
 
 class controlModule {
@@ -423,7 +442,8 @@ class indicator {
         var chu=this.root.chu;
 
         if ((this.type=="shift" && shiftKeyDown) ||
-            (this.type=="control" && metaKeyDown)) {
+            (this.type=="control" && metaKeyDown) ||
+            (this.type=="intervalBottomUp" && !spellChordsDownward)) {
             ctx.save();
             ctx.translate(chu*this.left,chu*this.top);
             var w=chu*this.width;
@@ -857,7 +877,7 @@ class graphic {
                         boxWidth*(0.05)+0.5,
                         boxWidth*(0.05)+0.5,
                         (boxWidth*c)-boxWidth*(0.1)-1,
-                        (boxHeight*c)-boxWidth*(0.1)-1
+                        (boxHeight)-boxWidth*(0.1)-1
                     );
                 }
         }

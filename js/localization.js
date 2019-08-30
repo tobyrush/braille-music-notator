@@ -27,8 +27,8 @@ var kCharNames,
     kMIDISettingsLabel,
     kNewFileDescription,
     kNewFileLabel,
-    kObserveKeySignaturesLabel,
     kObserveKeySignaturesDescription,
+    kObserveKeySignaturesLabel,
     kOpenFileDescription,
     kOpenFileLabel,
     kOptionsButtonCaption,
@@ -46,10 +46,12 @@ var kCharNames,
     kScoreSizeDownButton,
     kScreenReaderControlPageNumber,
     kScreenReaderTemplate,
-    kshowPageBreaksDescription,
-    kshowPageBreaksLabel,
+    kShowPageBreaksDescription,
+    kShowPageBreaksLabel,
     kShowSmallDotsDescription,
     kShowSmallDotsLabel,
+    kSpellChordsDownwardDescription,
+    kSpellChordsDownwardLabel,
     kTranslateBrailleDescription,
     kTranslateBrailleLabel,
     kTextAbbreviations = [],
@@ -104,8 +106,8 @@ function localize(lang) {
             kMIDISettingsLabel = "MIDI Settings:";
             kNewFileDescription = "Discard current document and start with an empty one.";
             kNewFileLabel = "New File";
-            kObserveKeySignaturesLabel = "Observe Key Signatures";
             kObserveKeySignaturesDescription = "Apply accidentals according to the most recently written key signature.";
+            kObserveKeySignaturesLabel = "Observe Key Signatures";
             kOpenFileDescription = "Open a braille or MusicXML document from your computer.";
             kOpenFileLabel = "Open File";
             kOptionsButtonCaption = "Options";
@@ -122,10 +124,12 @@ function localize(lang) {
             kScoreSizeDownButton = "\u25bc";
             kScreenReaderControlPageNumber = "Control page %%1";
             kScreenReaderTemplate = "%%1. line %%2 character %%3. %%4";
-            kshowPageBreaksDescription = "Show where page breaks occur when embossed.";
-            kshowPageBreaksLabel = "Show Page Breaks";
+            kShowPageBreaksDescription = "Show where page breaks occur when embossed.";
+            kShowPageBreaksLabel = "Show Page Breaks";
             kShowSmallDotsDescription = "Fill in empty dots in braille characters.";
             kShowSmallDotsLabel = "Show Small Dots";
+            kSpellChordsDownwardDescription = "Measure intervals from the top note downward.";
+            kSpellChordsDownwardLabel =  "Spell Chords Downward";
             kTranslateBrailleDescription = "Automatically translate braille into music notation.";
             kTranslateBrailleLabel = "Translate Braille";
             kTitleAreaHeight = 32;
@@ -600,7 +604,7 @@ function localize(lang) {
                 [mkStr([0,0,644,789,0,0,0]),"last character of text contraction a l l y"],
                 [mkStr([0,0,659,789,0,0,0]),"last character of text contraction i t y"],
                 [mkStr([0,0,0,792,0,0,0]),"last character of text contraction ought"],
-                [mkStr([0,0,0,835,0,0,0]),"text contraction b l e"],
+                [mkStr([0,0,0,935,0,0,0]),"text contraction b l e"],
                 [mkStr([0,0,534,847,0,0,0]),"last character of division symbol"],
                 [mkStr([0,0,595,847,0,0,0]),"last character of slash"],
                 [mkStr([0,0,594,848,0,0,0]),"last character of close quotation mark"],
@@ -655,6 +659,10 @@ function localize(lang) {
             kKeyCommands[45] = ["Inserted empty cell"];
             kKeyCommands[46] = [
                 "Deleted cell at line %%1 character %%2"
+            ];
+            kKeyCommands[48] = [
+                "Chords will be spelled from bottom to top.",
+                "Chords will be spelled from top to bottom."
             ];
             kKeyCommands[56] = [
                 "Automatic insertion of octave symbols disabled.",
@@ -879,10 +887,12 @@ function localize(lang) {
             kScoreSizeLabel = "Score size:";
             kScreenReaderControlPageNumber = "Control page %%1";
             kScreenReaderTemplate = "%%1. line %%2 character %%3. %%4";
-            kshowPageBreaksDescription = "Show where page breaks occur when embossed.";
-            kshowPageBreaksLabel = "Show Page Boundaries";
+            kShowPageBreaksDescription = "Show where page breaks occur when embossed.";
+            kShowPageBreaksLabel = "Show Page Boundaries";
             kShowSmallDotsDescription = "Fill in empty dots in braille characters.";
             kShowSmallDotsLabel = "Show Small Dots";
+            kSpellChordsDownwardDescription = "Measure intervals from the top note downward.";
+            kSpellChordsDownwardLabel =  "Spell Chords Downward";
             kTranslateBrailleDescription = "Automatically translate braille into music notation.";
             kTranslateBrailleLabel = "Show Translated Braille";
             kUnrecognizedCharacterMessage = "unrecognized character";
@@ -1305,7 +1315,7 @@ function localize(lang) {
                 [mkStr([0,0,644,789,0,0,0]),"last character of text contraction a l l y"],
                 [mkStr([0,0,659,789,0,0,0]),"last character of text contraction i t y"],
                 [mkStr([0,0,0,792,0,0,0]),"last character of text contraction ought"],
-                [mkStr([0,0,0,835,0,0,0]),"text contraction b l e"],
+                [mkStr([0,0,0,935,0,0,0]),"text contraction b l e"],
                 [mkStr([0,0,0,849,0,0,0]),"last character of half-diminished symbol"],
                 [mkStr([0,0,0,854,0,0,0]),"last character of plus symbol"],
                 [mkStr([0,0,0,855,0,0,0]),"last character of equals symbol"],

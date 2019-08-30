@@ -1,4 +1,4 @@
-/* global helpWindow, helpDialogOpen, optionsDialogOpen, fileDialogOpen, notationArea, notationWidth, window, config, nu, ctx, roundRect, dialogTop, dialogButtonLeft, dialogButtonTop, dialogButtonRight, translateBraille, showSmallDots, notationGridHeight, showPageBreaks, pageWidth, pageHeight, dialogButtonWidth, dialogButtonHeight, parseFiles, notationHeight, closeButtonCenterX, closeButtonCenterY, kOptionsDialogTitle, kTranslateBrailleLabel, kTranslateBrailleDescription, kShowSmallDotsLabel, kShowSmallDotsDescription, kScoreSizeLabel, kshowPageBreaksLabel, kshowPageBreaksDescription, kWidthLabel, kHeightLabel, kFileDialogTitle, kNewFileLabel, kNewFileDescription, kOpenFileLabel, kOpenFileDescription, kImportFileText, kSaveFileLabel, kSaveFileDescription, kExportFileLabel, kExportFileDescription, kParseImportedFilesLabel, kParseImportedFilesDescription, currentCellFont, document, controlModules, currentLocale, selectedControlModule, initializeControls, drawNotation, currentControlModule, gridHeight, setCellHeight, dialogFieldFocus, useWordWrap, setPageSize, Event, insertOctaveSymbols, useBrailleDisplay, kUseBrailleDisplayLabel, kUseBrailleDisplayDescription, kScoreSizeUpButton, kScoreSizeDownButton, kPageSizeLabel, kPageSizeByLabel, kUseWordWrapLabel, kUseWordWrapDescription, kControlsLabel, kMIDISettingsLabel, kInsertOctaveSymbolsLabel, kInsertOctaveSymbolsDescription, kObserveKeySignaturesLabel, kObserveKeySignaturesDescription, observeKeySignatures: true */
+/* global helpWindow, helpDialogOpen, optionsDialogOpen, fileDialogOpen, notationArea, notationWidth, window, config, nu, ctx, roundRect, dialogTop, dialogButtonLeft, dialogButtonTop, dialogButtonRight, translateBraille, showSmallDots, notationGridHeight, showPageBreaks, pageWidth, pageHeight, dialogButtonWidth, dialogButtonHeight, parseFiles, notationHeight, closeButtonCenterX, closeButtonCenterY, kOptionsDialogTitle, kTranslateBrailleLabel, kTranslateBrailleDescription, kShowSmallDotsLabel, kShowSmallDotsDescription, kScoreSizeLabel, kShowPageBreaksLabel, kShowPageBreaksDescription, kWidthLabel, kHeightLabel, kFileDialogTitle, kNewFileLabel, kNewFileDescription, kOpenFileLabel, kOpenFileDescription, kSaveFileLabel, kSaveFileDescription, kExportFileLabel, kExportFileDescription, kParseImportedFilesLabel, kParseImportedFilesDescription, currentCellFont, document, controlModules, currentLocale, selectedControlModule, initializeControls, drawNotation, currentControlModule, gridHeight, setCellHeight, dialogFieldFocus, useWordWrap, setPageSize, Event, insertOctaveSymbols, useBrailleDisplay, kUseBrailleDisplayLabel, kUseBrailleDisplayDescription, kScoreSizeUpButton, kScoreSizeDownButton, kPageSizeLabel, kPageSizeByLabel, kUseWordWrapLabel, kUseWordWrapDescription, kControlsLabel, kMIDISettingsLabel, kInsertOctaveSymbolsLabel, kInsertOctaveSymbolsDescription, kObserveKeySignaturesLabel, kObserveKeySignaturesDescription, observeKeySignatures, drawControls: true */
 /* jshint -W020 */
 
 function toggleFileDialog() {
@@ -235,10 +235,10 @@ function showOptionsDialog() {
         showPageBreaksCheckbox.appendChild(document.createTag('div','',{
             class: 'dialogCheckboxIndicator'
         }));
-        showPageBreaksCheckbox.appendChild(document.createTag('div',kshowPageBreaksLabel,{
+        showPageBreaksCheckbox.appendChild(document.createTag('div',kShowPageBreaksLabel,{
             class: 'dialogCheckboxCaption'
         }));
-        showPageBreaksCheckbox.appendChild(document.createTag('div',kshowPageBreaksDescription,{
+        showPageBreaksCheckbox.appendChild(document.createTag('div',kShowPageBreaksDescription,{
             class: 'dialogCheckboxDescription'
         }));
         if (showPageBreaks) { showPageBreaksCheckbox.setAttribute('selected','selected'); }
@@ -351,6 +351,22 @@ function showOptionsDialog() {
             class: 'dialogCheckboxDescription'
         }));
         if (observeKeySignatures) { observeKeySignaturesCheckbox.setAttribute('selected','selected'); }
+
+        var spellChordsDownwardCheckbox = optionsDialog.appendChild(document.createTag('div','',{
+            class: 'dialogSubCheckbox',
+            id: 'spellChordsDownwardCheckbox',
+            onclick: 'toggleSpellChordsDownward();'
+        }));
+        spellChordsDownwardCheckbox.appendChild(document.createTag('div','',{
+            class: 'dialogCheckboxIndicator'
+        }));
+        spellChordsDownwardCheckbox.appendChild(document.createTag('div',kSpellChordsDownwardLabel,{
+            class: 'dialogCheckboxCaption'
+        }));
+        spellChordsDownwardCheckbox.appendChild(document.createTag('div',kSpellChordsDownwardDescription,{
+            class: 'dialogCheckboxDescription'
+        }));
+        if (spellChordsDownward) { spellChordsDownwardCheckbox.setAttribute('selected','selected'); }
     }
 
     updateEnabledFlags();
@@ -487,6 +503,21 @@ function toggleObserveKeySignatures() {
             document.querySelector('#observeKeySignaturesCheckbox').setAttribute('selected','selected');
         }
     }
+}
+
+function toggleSpellChordsDownward() {
+    if (spellChordsDownward) {
+        spellChordsDownward=false;
+        if (document.querySelector('#optionsDialog')) {
+            document.querySelector('#spellChordsDownwardCheckbox').removeAttribute('selected');
+        }
+    } else {
+        spellChordsDownward=true;
+        if (document.querySelector('#optionsDialog')) {
+            document.querySelector('#spellChordsDownwardCheckbox').setAttribute('selected','selected');
+        }
+    }
+    drawControls();
 }
 
 function updateEnabledFlags() {

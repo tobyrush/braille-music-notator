@@ -249,6 +249,15 @@
     font-size: 20px;
     font-weight: bold;
 }
+@supports (-moz-appearance:none) {
+    .dialogPopupMenu {
+        padding: 0 !important;
+    }
+    .dialogCheckbox[selected] .dialogCheckboxIndicator::before,
+    .dialogSubCheckbox[selected] .dialogCheckboxIndicator::before {
+        font-size: 24px !important;
+    }
+}
 .dialogPopupMenu {
     background: transparent;
     border: 1px solid #000;

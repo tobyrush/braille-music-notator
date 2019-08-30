@@ -2,8 +2,8 @@
 
 // global variables
 
-var useLaunchpad = false;
 var useWordWrap = true;
+var spellChordsDownward = true;
 var notationArea,controlArea,titleArea,fileUploader,clipboardArea;
 var notationCellWidth,notationCellHeight; // these can have fractional values
 var ctx, nwu, nhu, nu, chu;
@@ -81,30 +81,6 @@ var brailleDots = [0,46,16,60,43,41,47,4,55,62,33,44,32,36,40,12,52,2,6,18,50,34
 
 var unicodeBrailleMap = [32,65,49,66,39,75,50,76,64,67,73,70,47,77,83,80,34,69,51,72,57,79,54,82,94,68,74,71,62,78,84,81,44,42,53,60,45,85,56,86,46,37,91,36,43,88,33,38,59,58,52,92,48,90,55,40,95,63,87,93,35,89,41,61];
 
-//var sharpNoteValues = [
-//    [[89,75],[37,89,75],[90,75],[37,90,75],[38,75],[61,75],[37,61,75],[40,75],[37,40,75],[33,75],[37,33,75],[41,75]],
-//    [[89],[37,89],[90],[37,90],[38],[61],[37,61],[40],[37,40],[33],[37,33],[41]],
-//    [[78],[37,78],[79],[37,79],[80],[81],[37,81],[82],[37,82],[83],[37,83],[84]],
-//    [[63],[37,63],[58],[37,58],[36],[93],[37,93],[92],[37,92],[91],[37,91],[87]],
-//    [[68],[37,68],[69],[37,69],[70],[71],[37,71],[72],[37,72],[73],[37,73],[74]],
-//    [[189],[37,189],[190],[37,190],[138],[161],[37,161],[140],[37,140],[133],[37,133],[141]],
-//    [[178],[37,178],[179],[37,179],[180],[181],[37,181],[182],[37,182],[183],[37,183],[184]],
-//    [[163],[37,163],[158],[37,158],[136],[193],[37,193],[192],[37,192],[191],[37,191],[187]],
-//    [[168],[37,168],[169],[37,169],[170],[171],[37,171],[172],[37,172],[173],[37,173],[174]]
-//];
-//
-//var flatNoteValues = [
-//    [[89,75],[60,90,75],[90,75],[60,38,75],[38,75],[61,75],[60,40,75],[40,75],[60,33,75],[33,75],[60,41,75],[41,75]],
-//    [[89],[60,90],[90],[60,38],[38],[61],[60,40],[40],[60,33],[33],[60,41],[41]],
-//    [[78],[60,79],[79],[60,80],[80],[81],[60,82],[82],[60,83],[83],[60,84],[84]],
-//    [[63],[60,58],[58],[60,36],[36],[93],[60,92],[92],[60,91],[91],[60,87],[87]],
-//    [[68],[60,69],[69],[60,70],[70],[71],[60,72],[72],[60,73],[73],[60,74],[74]],
-//    [[189],[60,190],[190],[60,138],[138],[161],[60,140],[140],[60,133],[133],[60,141],[141]],
-//    [[178],[60,179],[179],[60,180],[180],[181],[60,182],[182],[60,183],[183],[60,184],[184]],
-//    [[163],[60,158],[158],[60,136],[136],[193],[60,192],[192],[60,191],[191],[60,187],[187]],
-//    [[168],[60,169],[169],[60,170],[170],[171],[60,172],[172],[60,173],[173],[60,174],[174]]
-//];
-
 var diatonicNoteValues = [
     [[89,75],[90,75],[38,75],[61,75],[40,75],[33,75],[41,75]],
     [[89],[90],[38],[61],[40],[33],[41]],
@@ -121,6 +97,8 @@ var restValues = [[77,75],[77],[85],[86],[88],[177],[185],[186],[188]];
 
 var octaveValues = [[64,164],[64],[94],[95],[34],[46],[59],[44],[44,144]];
 
+var intervalValues = [[45],[47],[43],[135],[157],[148],[151]];
+
 var octaveCharValues = [];
 octaveCharValues[164] = 0;
 octaveCharValues[64] = 1;
@@ -131,6 +109,15 @@ octaveCharValues[46] = 5;
 octaveCharValues[59] = 6;
 octaveCharValues[44] = 7;
 octaveCharValues[144] = 8;
+
+var intervalCharValues = []; // these are 0-based (0=8ve, 1=2nd)
+intervalCharValues[45] = 0;
+intervalCharValues[47] = 1;
+intervalCharValues[43] = 2;
+intervalCharValues[135] = 3;
+intervalCharValues[157] = 4;
+intervalCharValues[148] = 5;
+intervalCharValues[151] = 6;
 
 var pitchValues = [];
 pitchValues[89] = pitchValues[78] = pitchValues[63] = pitchValues[68] = 0;
@@ -402,7 +389,7 @@ function savePreferences() {
     ps += (showPageBreaks ? "1" : "0") + tab;
     ps += (useBrailleDisplay ? "1" : "0") + tab;
     ps += pageWidth + tab + pageHeight + tab;
-    ps += (useLaunchpad ? "1" : "0") + tab;
+    ps += "0" + tab; // unused
     ps += (useWordWrap ? "1" : "0") + tab;
     ps += (parseFiles ? "1" : "0") + tab;
     ps += currentLocale + tab;
@@ -410,7 +397,8 @@ function savePreferences() {
     ps += cursor.x + tab + cursor.y + tab + cursor.width + tab + cursor.height + tab;
     ps += currentFileName + tab;
     ps += (insertOctaveSymbols ? "1" : "0") + tab;
-    ps += (observeKeySignatures ? "1" : "0");
+    ps += (observeKeySignatures ? "1" : "0") + tab;
+    ps += (spellChordsDownward ? "1" : "0");
 
     eraseCookie('bmnpref');
     createCookie('bmnpref',ps);
@@ -431,7 +419,7 @@ function loadPreferences() {
         useBrailleDisplay = (ps[4]=="1");
         pageWidth = ps[5]*1;
         pageHeight = ps[6]*1;
-        useLaunchpad = (ps[7]=="1");
+        // unused = (ps[7]=="1");
         useWordWrap = (ps[8]=="1");
         parseFiles = (ps[9]=="1");
         currentLocale = ps[10];
@@ -445,5 +433,6 @@ function loadPreferences() {
         }
         insertOctaveSymbols = (ps[17]=="1");
         observeKeySignatures = (ps[18]=="1");
+        spellChordsDownward = (ps[19]=="1");
     }
 }
