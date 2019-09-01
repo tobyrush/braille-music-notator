@@ -404,33 +404,34 @@ class cellFontModule {
         }
     }
     drawScoreLine(x,y,chars,startCell,endCell,ctx=this.ctx,gw=gridWidth) {
-        var c = chars.slice(Math.max(Math.floor(startCell),0),Math.ceil(endCell)+1);
-        var newWord = true;
-        c.push("0");
-        var currentX = x+(gw*Math.max(startCell,0));
-        while (c.length) {
-            var sym = this.findSymbol(c,newWord);
-            if (this.translateBraille && sym.length) {
-                sym[0].draw(currentX,y,ctx,gw);
-                c=c.slice(sym[0].length());
-                currentX += gw * sym[0].length();
-                if (sym[0].wordModifier) {
-                    newWord = true;
+        if (chars) {
+            var c = chars.slice(Math.max(Math.floor(startCell),0),Math.ceil(endCell)+1);
+            var newWord = true;
+            c.push("0");
+            var currentX = x+(gw*Math.max(startCell,0));
+            while (c.length) {
+                var sym = this.findSymbol(c,newWord);
+                if (this.translateBraille && sym.length) {
+                    sym[0].draw(currentX,y,ctx,gw);
+                    c=c.slice(sym[0].length());
+                    currentX += gw * sym[0].length();
+                    if (sym[0].wordModifier) {
+                        newWord = true;
+                    } else {
+                        newWord = false;
+                    }
                 } else {
-                    newWord = false;
+                    if (!cellValIsEmpty(c[0])) {
+                        this.drawBrailleSymbol(currentX,y,c[0],ctx,gw);
+                        newWord = false;
+                    } else {
+                        newWord = true;
+                    }
+                    currentX += gw;
+                    c = c.slice(1);
                 }
-            } else {
-                if (!cellValIsEmpty(c[0])) {
-                    this.drawBrailleSymbol(currentX,y,c[0],ctx,gw);
-                    newWord = false;
-                } else {
-                    newWord = true;
-                }
-                currentX += gw;
-                c = c.slice(1);
             }
         }
-
     }
     drawBrailleSymbol(x,y,val,ctx=this.ctx,gw=gridWidth) {
         var code = brailleDots[(val % 100)-32];
