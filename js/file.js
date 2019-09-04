@@ -1,5 +1,6 @@
 /* global dropzone, drawNotation, window, reader, fileUploader, saveToUndo, suspendUndo, score, hScroll, vScroll, setScrollVars, parseFiles, isLowASCII, setScore, cursor, scoreWidth, showPageBreaks, pageWidth, pageHeight, document, MouseEvent, currentBeatUnit, kFileNameBRF, kFileNameBRM, kPrefixAbbreviations, kWordAbbreviations, kTextAbbreviations, kCommonWords, currentFileName, shiftKeyDown, confirm, kUnsavedChangesDialogMessage, clearDocument, resetCursorAndScroll, removeExtension, DOMParser, sendHTTPPostRequest, XMLSerializer, FormData, Blob, scoreIsEmpty, fileLoading: true */
 /* jshint -W020 */
+/* jshint -W100 */
 
 function doNotationDragOver(e) {
 
@@ -212,15 +213,21 @@ function downloadFile(reduceASCII) {
 
 }
 
-function parseData(fileData) {
+function parseData(fileData,includeText = true) {
 	
 	
 	fileData = fileData.replace(/\s+([%<*]{1,3}|#[d-g][%<*]|)(#[A-Ia-i]+[1-9]+|[._]C)/g, convertTimeAndKeySignature); // initial time and key signature line
 	fileData = fileData.replace(/[#][A-Ja-j][0-9]/g, convertTimeSignature); // isolated time signatures
-	fileData = fileData.replace(/[^\n] {4,}([ -~]+)/g, convertImportedStringToText); // if line starts with more than one space then convert the line to text, excepting time/key sig blocks
+    fileData = fileData.replace(/CREDIT-DUMP/g, ""); // remove "credit dump" message
+	if (includeText) {
+        fileData = fileData.replace(/[^\n] {5,}([ -~]+)/g, convertImportedStringToText); // if line starts with more than five space then convert the line to text, excepting time/key sig blocks
+    }
 	fileData = fileData.replace(/([dDnNyY?ɍɂȳȸ]'*)(7#|ȫȗ)([a-i,ʙ-ʢ,ȵ-Ⱦ]{1,3})/g, convertMetronomeMarking); // metronome marking
-	fileData = fileData.replace(/[\n]\s*#*[A-Ja-j]+\b/g, convertImportedStringToText); // measure numbers
+	if (includeText) {
+        fileData = fileData.replace(/[\n]\s*#*[A-Ja-j]+\b/g, convertImportedStringToText); // measure numbers
+    }
 	fileData = fileData.replace(/[7]([A-Za-z "]+)[7]/g, convertParenthesizedText); // convert isolated parentheticals to text
+    fileData = fileData.replace(/[^¥¦§¨©ª«¬­®0-9](7)/g, convertMeasureRepeats); // measure repeat character
 	fileData = fileData.replace(/>\/l/g, String.fromCharCode(662,647,676)); // treble clef
 	fileData = fileData.replace(/>\+l/g, String.fromCharCode(662,643,676)); // alto clef
 	fileData = fileData.replace(/>\+"l/g, String.fromCharCode(662,643,634,676)); // tenor clef
@@ -356,6 +363,10 @@ function convertMidWordNumbers(fullString,nums) {
 
 function convertTextAbbreviation(fullString,str) {
     return fullString.replaceAll(str,kTextAbbreviations.getPropertyOrValue(str.toLowerCase(),str));
+}
+
+function convertMeasureRepeats(fullString,str) {
+    return fullString.replaceAll(str,String.fromCharCode(155));
 }
 
 function convertSingleLetterPrefixAbbreviation(fullString,z,str) {

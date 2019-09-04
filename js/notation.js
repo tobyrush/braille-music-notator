@@ -318,8 +318,9 @@ function rotateChar(x,y) {
 
 function convertToText(x,y) {
 	if (!cellIsEmpty(x,y)) {
-		if ((getScore(x,y) > 0) && (getScore(x,y) < 500)) {
-			setScore(x,y,(getScore(x,y) % 100)+500);
+		var val = getScore(x,y);
+        if ((val > 0) && (val < 500) && (val != 32)) {
+			setScore(x,y,(val % 100)+500);
 		}
 	}
 }

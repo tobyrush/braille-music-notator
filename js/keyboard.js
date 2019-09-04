@@ -1,4 +1,4 @@
-/* global shiftKeyDown, metaKeyDown, cursor, whichKeyboard, score, clearSelection, cellIsEmpty, deleteScore, hScrollUnits, isMacOS, focusClipboard, firstCharPosInRow, hScroll, vScroll, deleteRowAtCursor, insertRowAtCursor, setScore, scoreWidth, scoreHeight, updateScreenreader, showSmallDots, downloadFile, currentBeatUnit, parseFiles, showPageBreaks, setPageSize, pageWidth, pageHeight, confirm, clearDocument, resetCursorAndScroll, fileUploader, rotateSelection, convertSelectionToText, useBrailleDisplay, doRedo, doUndo, setCellHeight, gridHeight, saveToUndo, suspendUndo, scrollToCursor, characterName, drawNotation, drawControls, getScore, currentControlModule, kUnsavedChangesDialogMessage, kKeyCommands, formFill, placeCursor, currentCellFont, useWordWrap, lineIsEmpty, removeLastWordOfLine, octaveCharValues, pitchValues, octaveValues, findPitchAtPosition, cellValIsEmpty, isAccidental, dialogFieldFocus, document, setNodeSelectedValue, insertOctaveSymbols, spellChordsDownward, rotateControlModule, observeKeySignatures: true */
+/* global shiftKeyDown, metaKeyDown, cursor, whichKeyboard, score, clearSelection, cellIsEmpty, deleteScore, hScrollUnits, isMacOS, focusClipboard, firstCharPosInRow, hScroll, vScroll, deleteRowAtCursor, insertRowAtCursor, setScore, scoreWidth, scoreHeight, updateScreenreader, showSmallDots, downloadFile, currentBeatUnit, parseFiles, showPageBreaks, setPageSize, pageWidth, pageHeight, confirm, clearDocument, resetCursorAndScroll, fileUploader, rotateSelection, convertSelectionToText, useBrailleDisplay, doRedo, doUndo, setCellHeight, gridHeight, saveToUndo, suspendUndo, scrollToCursor, characterName, drawNotation, drawControls, getScore, currentControlModule, kUnsavedChangesDialogMessage, kKeyCommands, formFill, placeCursor, currentCellFont, useWordWrap, lineIsEmpty, removeLastWordOfLine, octaveCharValues, pitchValues, octaveValues, findPitchAtPosition, cellValIsEmpty, isAccidental, dialogFieldFocus, document, setNodeSelectedValue, insertOctaveSymbols, spellChordsDownward, rotateControlModule, observeKeySignatures, convertSelectionToMusic: true */
 /* jshint -W020 */
 
 function doKeyDown(e) {
@@ -195,7 +195,11 @@ function interpretKeyCode(e) {
 				downloadFile(false);
                 break;
             case 84: // T - convert selection to text
-				convertSelectionToText();
+				if (shiftKeyDown) {
+                    convertSelectionToMusic();
+                } else {
+                    convertSelectionToText();
+                }
                 break;
             case 85: // U - toggle reader mode
 				useBrailleDisplay = !useBrailleDisplay;

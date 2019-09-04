@@ -1,4 +1,4 @@
-/* global window, XMLHttpRequest, ActiveXObject, phpRootAddress, navigator, saveToUndo, suspendUndo, cursor, deleteScore, whichKeyboard, parseFiles, parseData, setScore, drawNotation, clipboardArea, score, rotateChar, convertToText, document, gridWidth, gridHeight, unicodeBrailleMap, currentControlModule, parseText, Document, cellValIsEmpty, clipboardBackup: true */
+/* global window, XMLHttpRequest, ActiveXObject, phpRootAddress, navigator, saveToUndo, suspendUndo, cursor, deleteScore, whichKeyboard, parseFiles, parseData, setScore, drawNotation, clipboardArea, score, rotateChar, convertToText, document, gridWidth, gridHeight, unicodeBrailleMap, currentControlModule, parseText, Document, cellValIsEmpty, clipboardBackup, getScore: true */
 /* jshint -W020, -W084 */
 
 function findPos(obj) { // from http://www.quirksmode.org/js/findpos.html
@@ -223,6 +223,32 @@ function rotateSelection() {
 			rotateChar(col,row);
 		}
 	}
+}
+
+function convertSelectionToMusic() {
+    var sel = "", selrow, row, col;
+    for (row=cursor.y;row<cursor.y+cursor.height;row++) {
+		for (col=cursor.x;col<cursor.x+cursor.width;col++) {
+			sel = sel + String.fromCharCode(convertNonprintableCodeToSpaceCode((getScore(col,row)*1) % 100));
+		}
+        sel = sel + String.fromCharCode(13);
+	}
+    sel = parseData(sel,false);
+    for (row=cursor.y;row<cursor.y+cursor.height;row++) {
+		selrow = sel.split(String.fromCharCode(13))[row-cursor.y];
+        for (col=cursor.x;col<cursor.x+cursor.width;col++) {
+			setScore(col,row,selrow.charCodeAt(col-cursor.x));
+		}
+	}
+    drawNotation();
+}
+
+function convertNonprintableCodeToSpaceCode(val) {
+    if (val<32 && val!=13) {
+        return 32;
+    } else {
+        return val;
+    }
 }
 
 function convertSelectionToText() {
