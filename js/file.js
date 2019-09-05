@@ -216,15 +216,13 @@ function downloadFile(reduceASCII) {
 function parseData(fileData,includeText = true) {
 	
 	
-	fileData = fileData.replace(/\s+([%<*]{1,3}|#[d-g][%<*]|)(#[A-Ia-i]+[1-9]+|[._]C)/g, convertTimeAndKeySignature); // initial time and key signature line
+	fileData = fileData.replace(/\n/g,String.fromCharCode(13));
+    fileData = fileData.replace(/\s+([%<*]{1,3}|#[d-g][%<*]|)(#[A-Ia-i]+[1-9]+|[._]C)/g, convertTimeAndKeySignature); // initial time and key signature line
 	fileData = fileData.replace(/[#][A-Ja-j][0-9]/g, convertTimeSignature); // isolated time signatures
     fileData = fileData.replace(/CREDIT-DUMP/g, ""); // remove "credit dump" message
+    fileData = fileData.replace(/([dDnNyY?ɍɂȳȸ]'*)(7#|ȫȗ)([a-i,ʙ-ʢ,ȵ-Ⱦ]{1,3})/g, convertMetronomeMarking); // metronome marking
 	if (includeText) {
-        fileData = fileData.replace(/[^\n] {5,}([ -~]+)/g, convertImportedStringToText); // if line starts with more than five space then convert the line to text, excepting time/key sig blocks
-    }
-	fileData = fileData.replace(/([dDnNyY?ɍɂȳȸ]'*)(7#|ȫȗ)([a-i,ʙ-ʢ,ȵ-Ⱦ]{1,3})/g, convertMetronomeMarking); // metronome marking
-	if (includeText) {
-        fileData = fileData.replace(/[\n]\s*#*[A-Ja-j]+\b/g, convertImportedStringToText); // measure numbers
+        fileData = fileData.replace(/\x0D\s*(#*[A-Ja-j]+) /g, convertMeasureNumbers); // measure numbers
     }
 	fileData = fileData.replace(/[7]([A-Za-z "]+)[7]/g, convertParenthesizedText); // convert isolated parentheticals to text
     fileData = fileData.replace(/[^¥¦§¨©ª«¬­®0-9](7)/g, convertMeasureRepeats); // measure repeat character
@@ -280,7 +278,7 @@ function parseData(fileData,includeText = true) {
 	fileData = fileData.replace(/[ô][ʔ][ŝ][@^_".;,]?([myzMYZ&=(!)*<%@^_".;,]+|[nopqrstuNOPQRSTU*<%@^_".;,]+|[vV?:$\]\\\[Ww*<%@^_".;,]+|[xdefghijXDEFGHIJ*<%@^_".;,]+)/g, convertLargeToSmall); // observe value signs
 	fileData = fileData.replace(/[<][Kk]/g, String.fromCharCode(260,175)); // final barline
 	fileData = fileData.replace(/[<][Kk][']/g, String.fromCharCode(260,175,139)); // double barline
-	fileData = fileData.replace(/[myzMYZ&=(!)nopqrstuNOPQRSTUvV?:$\]\\\[WwxdefghijXDEFGHIJ/\-'ů+]([#903]+)/g, convertIntervalSymbols); // interval symbols
+	fileData = fileData.replace(/[myzMYZ&=(!)*<%nopqrstuNOPQRSTUvV?:$\]\\\[WwxdefghijXDEFGHIJ/\-'ů+]([#903]+)/g, convertIntervalSymbols); // interval symbols
 	fileData = fileData.replace(/[_]([0-9]+)[']/g, convertTuplet); // tuplets
 	fileData = fileData.replace(/[^A-Ja-j][2]/g, convertTuplet); // triplet
 	fileData = fileData.replace(/[_][8]/g, String.fromCharCode(395,156)); // tenuto
@@ -300,8 +298,54 @@ function parseData(fileData,includeText = true) {
 
     fileData = fileData.replace(/[>]([a-zA-Z]+)/g, convertPrefixedWord); // any text left flagged with the word prefix
 	
+    if (includeText) {
+        fileData = convertTitlesToText(fileData);
+        fileData = convertStrangeSequencesToText(fileData);
+    }
+
 	return fileData;
 	
+}
+
+function convertTitlesToText(fileData) {
+    var result = "";
+    var titlesDone = false;
+    fileData.split(String.fromCharCode(13)).forEach(function(row) {
+        if (!titlesDone && (
+            row.match(/^ +([ ]{1,3}|ë[ČčĎď][ ]|)(#[¥-®1-9]+[0-9]+|[Ã]Ǔ)/g) ||
+            row.match(/^[#]?[A-J]+ /g)
+        )) {
+            titlesDone = true;
+        }
+        if (titlesDone) {
+            result = result + row + String.fromCharCode(13);
+        } else {
+            result = result + convertImportedStringToText(row) + String.fromCharCode(13);
+        }
+    });
+    return result;
+}
+
+function convertStrangeSequencesToText(fileData) {
+    var result = "";
+    fileData.split(String.fromCharCode(13)).forEach(function(row) {
+       row.split(" ").forEach(function(word) {
+          result = result + checkForMusicSanity(word) + " ";
+       });
+        result = result + String.fromCharCode(13);
+    });
+    return result;
+}
+
+function checkForMusicSanity(s) {
+    if (
+        s.match(/#[^¥-­]/g) || // meter prefix not followed top meter number
+        s.match(/[^¥-­][0-9]+/g) // bottom meter numbers not preceeded by top meter numbers
+    ) {
+        return convertImportedStringToText(s);
+    } else {
+        return s;
+    }
 }
 
 function parseText(fileData) {
@@ -454,11 +498,30 @@ function convertHandPrefix(str) {
 	return newStr;
 }
 
+function convertMeasureNumbers(str) {
+    var newStr = "";
+    var val;
+    for (var i=0; i<str.length; i++) {
+        val=str.charCodeAt(i);
+        if (val == 32) {
+			newStr = newStr + " ";
+		} else if (val == 34) {
+			newStr = newStr + String.fromCharCode(234);
+		} else if (val > 32) {
+			newStr = newStr + String.fromCharCode((val % 100) + 600);
+		} else {
+			newStr = newStr + String.fromCharCode(val);
+		}
+    }
+    return newStr;
+}
+
 function convertImportedStringToText(str) { 
 	var newStr = "";
 	var val;
-	for (var i=0; i<str.length; i++) {
-		val=str.charCodeAt(i);
+    var pStr = parseText(str);
+	for (var i=0; i<pStr.length; i++) {
+		val=pStr.charCodeAt(i);
 		if ((val>96) && (val<123)) { // convert lower case to upper case
 			val=val-32;
 		}
@@ -466,7 +529,7 @@ function convertImportedStringToText(str) {
 			newStr = newStr + " ";
 		} else if (val == 34) {
 			newStr = newStr + String.fromCharCode(234);
-		} else if (val > 32) {
+		} else if ((val > 32) && (val < 500)) {
 			newStr = newStr + String.fromCharCode((val % 100) + 500);
 		} else {
 			newStr = newStr + String.fromCharCode(val);
