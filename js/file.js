@@ -147,22 +147,6 @@ function importData(fileData) {
 	}
 }
 
-//function sendToBrailleMUSE() {
-//    $.ajax({
-//        crossDomain: true,
-//        type:"POST",
-//        contentType: "application/json; charset=utf-8",
-//        url: "http://www.braillemuse.net/BrailleMUSE/servlet/Filechange_b2",
-//        data: {test:1},
-//        dataType: "jsonp",
-//        success: function (data) {
-//            console.log("Hey, we got reply form java side, with following data: ");
-//            console.log(data);
-//        }
-//        //jsonpCallback: 'fnsuccesscallback'
-//    });
-//}
-
 function downloadFile(reduceASCII) {
 	var getFileName;
     var ext = reduceASCII ? '.brf' : '.brm';
@@ -538,20 +522,7 @@ function convertImportedStringToText(str) {
 	return newStr;
 }
 
-//function convertImportedStringToTextJudgily(str) { // same as convertImportedStringToText() except it refuses if it doesn't look like text
-//	var newStr = convertImportedStringToText(str);
-//	var numberUnrecognized = 0;
-//	for (var i=0; i<newStr.length; i++) {
-//		val=newStr.charCodeAt(i);
-//		if ((val<65) || (val>74)) {
-//			numberUnrognized += 1;
-//		}
-//	}
-//	return newStr;
-//}
-//
 function convertParenthesizedText(fullString,contents) {
-	//return " " + String.fromCharCode(555) + convertImportedStringToText(contents) + String.fromCharCode(655) + " ";
 	return String.fromCharCode(555) + convertImportedStringToText(contents) + String.fromCharCode(655);
 }
 
