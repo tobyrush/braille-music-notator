@@ -818,6 +818,7 @@ class graphic {
                 h=a.height*(boxHeight/100);
                 ctx.textBaseline = "middle";
                 ctx.textAlign = "left";
+                ctx.fillStyle="#000"; // black
                 ctx.font = "normal "+h+"px Bravura";
                 chars = [
                     "\ue080",
