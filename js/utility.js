@@ -94,6 +94,7 @@ function clearSelection() {
 }
 
 function copySelection(e) {
+    e.clipboardData.setData('src','bmn');
     var s = getCurrentSelection();
     if (s) {
         e.clipboardData.setData('text',s);
@@ -123,6 +124,7 @@ function handleClipboard(e) {
             var col=cursor.x;
 			var row=cursor.y;
 			var clipboardData=e.clipboardData.getData('text/plain');
+            var fromBMN = (e.clipboardData.getData('src')=='bmn');
 			var convertToText = currentControlModule.onTextPage();
 			if (clipboardData==="") {
 				clearSelection();
@@ -138,7 +140,7 @@ function handleClipboard(e) {
 				
 				clipboardData = newString;
 				
-				if (parseFiles) {
+				if (!fromBMN && parseFiles) {
 					if (convertToText) {
                         clipboardData = parseText(clipboardData);
                     } else {
