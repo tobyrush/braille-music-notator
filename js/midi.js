@@ -107,40 +107,40 @@ function notateMIDINotes(duration,forceShowOctave) {
     drawNotation();
 }
 
-function oldNotateMIDINotes(duration,forceShowOctave) {
-    midiNotes.sort(function(a,b) {
-        return b-a; // sorts high to low
-    });
-    var pc = -1;
-    var noteArray;
-    if (midiNotes.length) {
-        pc = midiNotes[0] % 12;
-    }
-
-    if (pc<0) {
-        notate(restValues[duration]);
-    } else {
-
-        var k;
-        if (observeKeySignatures) {
-            k=findKeySignatureAtPosition(cursor.x,cursor.y);
-        } else {
-            k=findKeySignatureAtPosition(0,0);
-        }
-        noteArray = k.notateInKey(pc,duration);
-
-        var p = getPitch(noteArray); // return diatonic pitch # from noteArray
-        var oct = getOctave(midiNotes[0]); // return octave number from MIDI pitch value
-
-        if (forceShowOctave || needsOctaveSign(score[cursor.y],cursor.x,p,oct)) {
-            notate(octaveValues[oct],"");
-        }
-
-        notate(noteArray);
-    }
-
-    drawNotation();
-}
+//function oldNotateMIDINotes(duration,forceShowOctave) {
+//    midiNotes.sort(function(a,b) {
+//        return b-a; // sorts high to low
+//    });
+//    var pc = -1;
+//    var noteArray;
+//    if (midiNotes.length) {
+//        pc = midiNotes[0] % 12;
+//    }
+//
+//    if (pc<0) {
+//        notate(restValues[duration]);
+//    } else {
+//
+//        var k;
+//        if (observeKeySignatures) {
+//            k=findKeySignatureAtPosition(cursor.x,cursor.y);
+//        } else {
+//            k=findKeySignatureAtPosition(0,0);
+//        }
+//        noteArray = k.notateInKey(pc,duration);
+//
+//        var p = getPitch(noteArray); // return diatonic pitch # from noteArray
+//        var oct = getOctave(midiNotes[0]); // return octave number from MIDI pitch value
+//
+//        if (forceShowOctave || needsOctaveSign(score[cursor.y],cursor.x,p,oct)) {
+//            notate(octaveValues[oct],"");
+//        }
+//
+//        notate(noteArray);
+//    }
+//
+//    drawNotation();
+//}
 
 function getPitch(noteArray) {
     if (noteArray.length>1) {
