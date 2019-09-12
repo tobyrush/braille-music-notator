@@ -26,7 +26,7 @@ function getScoreLine(row,lowASCII=true) {
 
     if (lowASCII) { modValue = 100; }
 	
-	if (typeof score[row]!=='undefined') {
+	if (typeof score[row]!=='undefined' && score[row]!==null) {
         for (var col=0; col<=score[row].length; col+=1) {
             if ((typeof score[row][col]!=='undefined') && (score[row][col]>0)) {
                 lineString=lineString+String.fromCharCode(score[row][col] % modValue);
