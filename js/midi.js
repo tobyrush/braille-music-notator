@@ -154,6 +154,21 @@ function getOctave(midiPitch) {
     return Math.floor(midiPitch/12)-1;
 }
 
+function findIntervalAtPosition(chars,position,interval,descending) {
+    var p = findPitchAtPosition(chars,position);
+    var int = interval * (descending ? -1 : 1);
+    p.pitch += int;
+    while (p.pitch<0) {
+        p.pitch += 7;
+        p.octave -= 1;
+    }
+    while (p.pitch>6) {
+        p.pitch -= 7;
+        p.octave += 1;
+    }
+    return p;
+}
+
 function findPitchAtPosition(chars,position) {
     var result = {};
     var newPitch, justChanged, i = 0;

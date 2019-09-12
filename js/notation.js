@@ -1,4 +1,4 @@
-/* global notationArea, currentCellFont, sendHTTPRequest, defaultCellFont, gridHeight, notationGridHeight, gridWidth, notationGridWidth, notationCellWidth, notationCellHeight, ctx, showPageBreaks, pageWidth, hScrollUnits, hScrollOffset, hScroll, vScrollUnits, vScrollOffset, pageHeight, score, arrayHasOwnIndex, cursor, devMode, getScore, gh, gw, dropzone, kDropFileZoneMessage, optionsDialogOpen, fileDialogOpen, drawOptionsDialog, drawFileDialog, vScroll, setScore, updateScreenreader, formFill, kScreenReaderTemplate, characterName, saveToUndo, brailleDots, showSmallDots, graphic, cellIsEmpty, cellValIsEmpty, translateBrailleDefault, kProgramTitle, kVersionAndAuthor, versionString, helpDialogOpen, roundRect, kHelpButtonCaption, kOptionsButtonCaption, kFileButtonCaption, kTitleAreaHeight, document, kDialogWidth, window, setNodeValue, fileLoading, kFileLoadingMessage, kFileLoadingCreditMessage, kFileLoadingBrailleMUSE, kFileLoadingURL: true */
+/* global notationArea, currentCellFont, sendHTTPRequest, defaultCellFont, gridHeight, notationGridHeight, gridWidth, notationGridWidth, notationCellWidth, notationCellHeight, ctx, showPageBreaks, pageWidth, hScrollUnits, hScrollOffset, hScroll, vScrollUnits, vScrollOffset, pageHeight, score, arrayHasOwnIndex, cursor, devMode, getScore, gh, gw, dropzone, kDropFileZoneMessage, optionsDialogOpen, fileDialogOpen, drawOptionsDialog, drawFileDialog, vScroll, setScore, updateScreenreader, formFill, kScreenReaderTemplate, characterName, saveToUndo, brailleDots, showSmallDots, graphic, cellIsEmpty, cellValIsEmpty, translateBrailleDefault, kProgramTitle, kVersionAndAuthor, versionString, helpDialogOpen, roundRect, kHelpButtonCaption, kOptionsButtonCaption, kFileButtonCaption, kTitleAreaHeight, document, kDialogWidth, window, setNodeValue, fileLoading, kFileLoadingMessage, kFileLoadingCreditMessage, kFileLoadingBrailleMUSE, kFileLoadingURL, pitchValues, findPitchAtPosition, findIntervalAtPosition, octaveCharValues, intervalCharValues, accidentalCharValues: true */
 /* jshint -W020 */
 
 function drawTitle() {
@@ -381,6 +381,32 @@ function insertRowAtCursor() {
 function deleteRowAtCursor() {
 	saveToUndo();
 	score.splice(cursor.y,1);
+}
+
+function parseChords(chars,position,descending) {
+    var result = [];
+    var acc = null, // here null means no accidental, 0 means natural
+        p, octChar, i = 0;
+    if (chars) {
+        while (i<position) {
+            if (typeof(pitchValues[chars[i]])==='number') {
+                p = findPitchAtPosition(chars,i+1); // returns diatonic pitch
+                result.push([[p.pitch,acc,p.octave]]);
+                acc = null;
+            } else if (typeof(intervalCharValues[chars[i]])==='number') {
+                p = findIntervalAtPosition(chars,i+1,intervalCharValues[chars[i]],descending);
+                if (typeof(octaveCharValues[chars[i-1]])==='number') {
+                    p.octave = octaveCharValues[chars[i-1]];
+                }
+                result[result.length-1].push([p.pitch,acc,p.octave]);
+                acc = null;
+            } else if (typeof(accidentalCharValues[chars[i]])==='number') {
+                acc = accidentalCharValues[chars[i]];
+            }
+            i++;
+        }
+    }
+    return result;
 }
 
 class cellFontModule {

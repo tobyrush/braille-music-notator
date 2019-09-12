@@ -111,13 +111,20 @@ octaveCharValues[44] = 7;
 octaveCharValues[144] = 8;
 
 var intervalCharValues = []; // these are 0-based (0=8ve, 1=2nd)
-intervalCharValues[45] = 0;
+intervalCharValues[45] = 7;
 intervalCharValues[47] = 1;
 intervalCharValues[43] = 2;
 intervalCharValues[135] = 3;
 intervalCharValues[157] = 4;
 intervalCharValues[148] = 5;
 intervalCharValues[151] = 6;
+
+var accidentalCharValues = [];
+accidentalCharValues[360] = -2;
+accidentalCharValues[60] = -1;
+accidentalCharValues[42] = 0;
+accidentalCharValues[37] = 1;
+accidentalCharValues[337] = 2;
 
 var pitchValues = [];
 pitchValues[89] = pitchValues[78] = pitchValues[63] = pitchValues[68] = 0;
