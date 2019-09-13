@@ -110,6 +110,7 @@
         <p>The Braille Music Notator window is divided into two large sections: the notation area and the control area.</p>
 
         <a name="thenotationarea"><h3>The Notation Area</h3></a>
+        <p><i>For a visual introduction to using Braille Music Notator, visit the <a href="videos.html">Video Tutorials</a> page.</i></p>
         <p>The notation area is the top part of the window, and it displays the currently open score. The notation area consists of a grid; each cell of this grid can hold a single braille character, or can be empty. Every tenth row and column is numbered along the left and top of the window, respectively. When Braille Music Notator is opened for the first time, the score is blank.</p>
         <p>One of the cells is shaded slightly; this cell is the cursor. It indicates where the next character will be placed. When a character is added to the score (by clicking or typing), the cursor advances to the left, ready to place the next character.</p>
         <a name="movingthecursor"><h4>Moving the Cursor</h4></a>
@@ -126,6 +127,7 @@
         <p>Cell size in the notation area grid can be made smaller, allowing more cells to be viewed at once, or larger, increasing the size and visibility of each cell. To adjust the magnification, adjust the Score Size value in the Options Tab (see <a href="#options">Options</a>), or the keyboard shortcuts: Control-Equals increases magnification and Control-Hyphen decreases magnification (see <a href="#keyboardshortcuts">Keyboard Shortcuts</a>).</p>
 
         <a name="thecontrolarea"><h3>The Control Area</h3></a>
+        <p><i>For a visual introduction to using Braille Music Notator, visit the <a href="videos.html">Video Tutorials</a> page.</i></p>
         <p>The control area appears at the bottom of the window, and includes a keyboard diagram showing braille music symbols assigned to each key. Symbols can be entered into the score by clicking on the keyboard diagram or by typing the corresponding key on the computer keyboard.</p>
         <p>Keys are identified with the braille musical symbol they generate. The actual name of the key is displayed in a faded color in the lower left-hand corner of the key. Colors are used to identify types of symbols. Gray key icons indicate unused keys, which do not affect the score.</p>
         <a name="otherkeyboards"><h4>Other Keyboards</h4></a>
@@ -137,6 +139,7 @@
         <p>The control area can be resized by clicking and dragging the top edge of the control area. Resizing the control area also resizes the notation area, but does not alter the score in any way.</p>
 
         <a name="enteringandeditingthescore"><h3>Entering and Editing the Score</h3></a>
+        <p><i>For a visual introduction to using Braille Music Notator, visit the <a href="videos.html">Video Tutorials</a> page.</i></p>
         <p>To begin creating a score, simply open Braille Music Notator, place the cursor where you wish to begin, and click in the control area or type to enter musical symbols. To relocate the cursor, you can click on the new position with the mouse, or you can use the following keys:</p>
         <ul>
             <li><strong>arrow keys:</strong> move cursor one cell in the indicated direction</li>
@@ -181,6 +184,7 @@
         <a name="filecommands" id="filecommands">
 
         <h3>File Commands</h3></a>
+        <p><i>For a visual introduction to working with files in Braille Music Notator, visit the <a href="videos.html">Video Tutorials</a> page.</i></p>
         <p>Scores created in Braille Music Notator can be saved to your local hard disk so they may be opened and edited later. Files can also be exported to send to a braille embosser or other device. Commands for working with files are found by clicking the &quot;File&quot; button in the upper right hand corner of the Braille Music Notator window, which brings up the File Tab. The File Tab is dismissed by clicking the File Button again. File commands can also be issued without opening the File Tab by using the associated keyboard shortcuts (see <a href="#keyboardshortcuts">Keyboard Shortcuts</a>).</p>
         <a name="newfile"><h4>New File</h4></a>
         <p>The New File command discards the current score, leaving a blank notation area in which to begin a new score. The existing score is not saved; a warning appears when using this command before the old data is discarded. The New File command can be issued using the Control-N keyboard shortcut.</p>
@@ -235,6 +239,7 @@
         <p>When a MIDI-capable controls arrangement is selected (see <a href="#midinoteentry">MIDI Note Entry</a>), the Observe Key Signatures option controls whether or not Braille Music Notator will automatically show or hide accidentals based on the most recent indicated key signature. If Observe Key Signatures is not selected, sharps and flats will always be included for chromatic notes entered via MIDI.</p>
 
         <a name="midinoteentry"><h3>MIDI Note Entry</h3></a>
+        <p><i>For a visual demonstration of MIDI Note Entry in Braille Music Notator, visit the <a href="videos.html">Video Tutorials</a> page.</i></p>
         <p>Notes can be entered into Braille Music Notator using a MIDI keyboard (or any other MIDI-capable instrument) connected to the computer. To use a MIDI keyboard with Braille Music Notator, connect the keyboard to your computer; consult your MIDI keyboard user manual for detailed instructions. Ensure that the MIDI keyboard is recognized by your computer's operating system using Audio/MIDI Setup on MacOS or MIDI Mapper on Windows. Lastly, ensure that a MIDI-capable controls arrangement is selected from the Controls menu in the Options tab (see <a href="#controls">Controls</a>).</p>
         <a name="midicompatiblebrowsers"><h4>MIDI-Compatible Browsers</h4></a>
         <p>To use MIDI note entry, Braille Music Notator must be open in a browser which can access the Web MIDI API. Currently, Chrome, Edge and Opera support MIDI. Firefox can be made to support MIDI by installing the <a href="https://github.com/jazz-soft/web-midi">Web MIDI API extension</a>. Safari does not support MIDI, and there are currently no extensions which allow it to do so.</p>
@@ -257,10 +262,12 @@
         <a name="usingbraillemusicnotatoroffline"><h3>Using Braille Music Notator Offline</h3></a>
         <p>Braille Music Notator is a web application, and is designed to be used with an active internet connection. It can, however, be downloaded to your computer's hard drive and used without an internet connection. To use Braille Music Notator offline:</p>
         <ol>
+            <li>Install and launch web server software on your computer. The directions for this vary depending upon the operating system. <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">This site</a> gives one method for accomplishing this.</li>
             <li>Download the <a href="../archive/bmn.zip">current archived version of Braille Music Notator</a>. If necessary, decompress the archive file using a &quot;unzip&quot; utility.</li>
-            <li>In your web browser, select &quot;Open File&quot; from the File menu and navigate to the file &quot;notator.html&quot; in the Braille Music Notator archive.</li>
+            <li>Place the decompressed archive in your web server's documents folder, and point your browser to <a href="http://127.0.0.1/notator/">http://127.0.0.1/notator/</a>.</li>
         </ol>
-        <p>Note that the online version of Braille Music Notator receives periodic updates, which add features and fix errors. These updates will not be reflected in archived versions. To update an archived version, delete the Braille Music Notator archive on your computer and repeat the steps above.</p>
+        <p>Unfortunately, MIDI Note Entry, which requires a secured browser connection, will not work when using Braille Music Notator on a local server.</p>
+        <p>Note also that the online version of Braille Music Notator receives periodic updates, which add features and fix errors. These updates will not be reflected in archived versions. To update an archived version, delete the Braille Music Notator archive on your computer and repeat the steps above.</p>
 
         <a name="usingthekeyboard"><h3>Using the Keyboard</h3></a>
         <p>All features in Braille Music Notator are accessible using the computer keyboard, allowing for quicker editing and accessibility to those unable to use the graphic interface.</p>

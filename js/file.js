@@ -200,7 +200,7 @@ function downloadFile(reduceASCII) {
 function parseData(fileData,includeText = true) {
 	
 	
-	fileData = fileData.replace(/\n/g,String.fromCharCode(13));
+	fileData = fileData.replace(/[\r\n]+/g,String.fromCharCode(13));
     fileData = fileData.replace(/\s+([%<*]{1,3}|#[d-g][%<*]|)(#[A-Ia-i]+[1-9]+|[._]C)/g, convertTimeAndKeySignature); // initial time and key signature line
 	fileData = fileData.replace(/[#][A-Ja-j][0-9]/g, convertTimeSignature); // isolated time signatures
     fileData = fileData.replace(/CREDIT-DUMP/g, ""); // remove "credit dump" message
