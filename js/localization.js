@@ -377,6 +377,7 @@ function localize(lang) {
                 [mkStr([0,0,195,467,0,0,0]),"second character of cut time symbol"],
                 [mkStr([0,0,0,475,0,0,0]),"fifth finger"],
                 [mkStr([0,0,0,476,0,0,0]),"third finger"],
+                [mkStr([0,0,0,459,0,0,0]),"lowercase sign"],
                 [mkStr([0,0,0,495,0,0,0]),"first character of left hand sign"],
                 [mkStr([0,0,0,533,0,0,0]),"text contraction the"],
                 [mkStr([0,0,0,534,0,0,0]),"text contraction symbol"],
