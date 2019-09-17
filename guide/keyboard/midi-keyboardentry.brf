@@ -125,7 +125,7 @@ P               0       MET] BOTTOM J
 
            KEYBO>D #C  PAGE #F 
 OP5 BRACKET     7#      M4 M4 EQUALS 
-CLOSE BRACKET           UNUS$       
+CLOSE BRACKET   ;       L[]CASE
 BACKSLA%                UNUS$           
 A               1       TUPLET A 
 S               2       TUPLET B 

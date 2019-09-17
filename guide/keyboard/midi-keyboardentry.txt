@@ -124,7 +124,7 @@ key I creates dots 2 3 6 which means time signature bottom number 8
 key O creates dots 3 5 which means time signature bottom number 9
 key P creates dots 3 5 6 which means time signature bottom number 0
 key open bracket creates dots 2 3 5 6 dots 3 4 5 6 which means metronome marking equals
-key close bracket is unused
+key close bracket creates dots 5 6 which means lowercase
 key backslash is unused
 key A creates dots 2 which means tuplet number 1
 key S creates dots 2 3 which means tuplet number 2

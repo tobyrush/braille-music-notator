@@ -211,7 +211,7 @@ key 7 is unused
 key 8 is unused
 key 9 is unused
 key 0 is unused
-key dash is unused
+key dash creates dots 5 6 which means lowercase
 key equals creates dots 2 3 5 6 dots 3 4 5 6 which means metronome marking equals sign
 key Q creates dots 6 dots 3 which means music prefix
 key W creates dots 3 4 5 which means word prefix
