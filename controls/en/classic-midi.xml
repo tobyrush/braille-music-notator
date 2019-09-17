@@ -979,11 +979,13 @@
             <character code="455" />
             <character code="435" />
         </control>
-        <control keycode="BracketRight" top="31" left="238" width="18" height="18">
-            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
-            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="]" />
+        <control keycode="BracketRight" top="31" left="238" width="18" height="18" label="Lowercase">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" size="20" align="center" baseline="middle" top="25" left="47" content="LOWER" />
+            <graphic type="text" color="#000" size="20" align="center" baseline="middle" top="50" left="47" content="CASE" />
+            <graphic type="text" color="#CCC" left="15" top="80" size="20" content="-" />
             <help page="default" />
-            <character code="0" />
+            <character code="459" />
         </control>
         <control keycode="Backslash" top="31" left="256" width="18" height="18">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
@@ -991,72 +993,72 @@
             <help page="default" />
             <character code="0" />
         </control>
-        <control keycode="KeyA" top="49" left="46" width="18" height="18" label="Tuplet number one">
+        <control keycode="KeyA" top="49" left="46" width="18" height="18" label="Figure one">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
-            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe881;" />
+            <graphic type="text" color="#000" size="110" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xea51;" />
             <graphic type="text" color="#770" left="15" top="80" size="20" content="A" />
             <help page="tuplets" />
             <character code="249" />
         </control>
-        <control keycode="KeyS" top="49" left="64" width="18" height="18" label="Tuplet number two">
+        <control keycode="KeyS" top="49" left="64" width="18" height="18" label="Figure two">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
-            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe882;" />
+            <graphic type="text" color="#000" size="110" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xea52;" />
             <graphic type="text" color="#770" left="15" top="80" size="20" content="S" />
             <help page="tuplets" />
             <character code="250" />
         </control>
-        <control keycode="KeyD" top="49" left="82" width="18" height="18" label="Tuplet number three">
+        <control keycode="KeyD" top="49" left="82" width="18" height="18" label="Figure three">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
-            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe883;" />
+            <graphic type="text" color="#000" size="110" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xea54;" />
             <graphic type="text" color="#770" left="15" top="80" size="20" content="D" />
             <help page="tuplets" />
             <character code="251" />
         </control>
-        <control keycode="KeyF" top="49" left="100" width="18" height="18" label="Tuplet number four">
+        <control keycode="KeyF" top="49" left="100" width="18" height="18" label="Figure four">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
-            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe884;" />
+            <graphic type="text" color="#000" size="110" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xea55;" />
             <graphic type="text" color="#770" left="15" top="80" size="20" content="F" />
             <help page="tuplets" />
             <character code="252" />
         </control>
-        <control keycode="KeyG" top="49" left="118" width="18" height="18" label="Tuplet number five">
+        <control keycode="KeyG" top="49" left="118" width="18" height="18" label="Figure five">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
-            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe885;" />
+            <graphic type="text" color="#000" size="110" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xea57;" />
             <graphic type="text" color="#770" left="15" top="80" size="20" content="G" />
             <help page="tuplets" />
             <character code="253" />
         </control>
-        <control keycode="KeyH" top="49" left="136" width="18" height="18" label="Tuplet number six">
+        <control keycode="KeyH" top="49" left="136" width="18" height="18" label="Figure six">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
-            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe886;" />
+            <graphic type="text" color="#000" size="110" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xea5b;" />
             <graphic type="text" color="#770" left="15" top="80" size="20" content="H" />
             <help page="tuplets" />
             <character code="254" />
         </control>
-        <control keycode="KeyJ" top="49" left="154" width="18" height="18" label="Tuplet number seven">
+        <control keycode="KeyJ" top="49" left="154" width="18" height="18" label="Figure seven">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
-            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe887;" />
+            <graphic type="text" color="#000" size="110" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xea5d;" />
             <graphic type="text" color="#770" left="15" top="80" size="20" content="J" />
             <help page="tuplets" />
             <character code="255" />
         </control>
-        <control keycode="KeyK" top="49" left="172" width="18" height="18" label="Tuplet number eight">
+        <control keycode="KeyK" top="49" left="172" width="18" height="18" label="Figure eight">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
-            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe888;" />
+            <graphic type="text" color="#000" size="110" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xea5f;" />
             <graphic type="text" color="#770" left="15" top="80" size="20" content="K" />
             <help page="tuplets" />
             <character code="256" />
         </control>
-        <control keycode="KeyL" top="49" left="190" width="18" height="18" label="Tuplet number nine">
+        <control keycode="KeyL" top="49" left="190" width="18" height="18" label="Figure nine">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
-            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe889;" />
+            <graphic type="text" color="#000" size="110" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xea60;" />
             <graphic type="text" color="#770" left="15" top="80" size="20" content="L" />
             <help page="tuplets" />
             <character code="257" />
         </control>
-        <control keycode="Semicolon" top="49" left="208" width="18" height="18" label="Tuplet number zero">
+        <control keycode="Semicolon" top="49" left="208" width="18" height="18" label="Figure zero">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#FF0" />
-            <graphic type="text" color="#000" size="80" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xe880;" />
+            <graphic type="text" color="#000" size="110" font="Bravura" align="center" top="57" left="56" baseline="middle" content="&#xea50;" />
             <graphic type="text" color="#770" left="15" top="80" size="20" content=";" />
             <help page="tuplets" />
             <character code="248" />

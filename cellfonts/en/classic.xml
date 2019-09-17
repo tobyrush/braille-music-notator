@@ -626,55 +626,55 @@
         <graphic type="text" color="#000" align="center" baseline="middle" size="40" left="30" top="90" content="&#xe1ff;" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="40" left="60" top="90" content="&#xe200;" />
     </cell>
-    <cell name="tuplet zero">
+    <cell name="figure zero">
         <code value="248" />
         <graphic type="background" color="#ff0" />
-        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe880;" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="80" left="50" top="60" content="&#xea50;" />
     </cell>
-    <cell name="tuplet one">
+    <cell name="figure one">
         <code value="249" />
         <graphic type="background" color="#ff0" />
-        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe881;" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="80" left="50" top="60" content="&#xea51;" />
     </cell>
-    <cell name="tuplet two">
+    <cell name="figure two">
         <code value="250" />
         <graphic type="background" color="#ff0" />
-        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe882;" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="80" left="50" top="60" content="&#xea52;" />
     </cell>
-    <cell name="tuplet three">
+    <cell name="figure three">
         <code value="251" />
         <graphic type="background" color="#ff0" />
-        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe883;" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="80" left="50" top="60" content="&#xea54;" />
     </cell>
-    <cell name="tuplet four">
+    <cell name="figure four">
         <code value="252" />
         <graphic type="background" color="#ff0" />
-        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe884;" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="80" left="50" top="60" content="&#xea55;" />
     </cell>
-    <cell name="tuplet five">
+    <cell name="figure five">
         <code value="253" />
         <graphic type="background" color="#ff0" />
-        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe885;" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="80" left="50" top="60" content="&#xea57;" />
     </cell>
-    <cell name="tuplet six">
+    <cell name="figure six">
         <code value="254" />
         <graphic type="background" color="#ff0" />
-        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe886;" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="80" left="50" top="60" content="&#xea5b;" />
     </cell>
-    <cell name="tuplet seven">
+    <cell name="figure seven">
         <code value="255" />
         <graphic type="background" color="#ff0" />
-        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe887;" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="80" left="50" top="60" content="&#xea5d;" />
     </cell>
-    <cell name="tuplet eight">
+    <cell name="figure eight">
         <code value="256" />
         <graphic type="background" color="#ff0" />
-        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe888;" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="80" left="50" top="60" content="&#xea60;" />
     </cell>
-    <cell name="tuplet nine">
+    <cell name="figure nine">
         <code value="257" />
         <graphic type="background" color="#ff0" />
-        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe889;" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="80" left="50" top="60" content="&#xea61;" />
     </cell>
     <cell name="tuplet prefix">
         <code value="295" />
@@ -1625,6 +1625,12 @@
         <code value="674" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="0" />
+    </cell>
+    <cell name="lowercase letter" word-modifier="1">
+        <code value="459" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="17" left="35" top="50" content="LOWER" rotate="270" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="17" left="65" top="50" content="CASE" rotate="270" />
     </cell>
     <cell name="capitalize letter" word-modifier="1">
         <code value="544" />
