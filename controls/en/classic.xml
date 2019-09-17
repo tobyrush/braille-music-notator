@@ -2653,7 +2653,7 @@
     </help>
     <help name="literaryBraille" top="10" left="400" width="200" height="100">
         <graphic type="text" style="bold" color="#000" size="10" top="10" left="0" content="Literary Braille" />
-        <graphic type="text" color="#000" size="6" top="20" left="0" multiline="true" lineHeight="8" content="To include text, use literary braille. If music and text is mixed on a single\nline, use the Text Prefix and Music Prefix to switch between systems." />
+        <graphic type="text" color="#000" size="6" top="20" left="0" multiline="true" lineHeight="8" content="To include text, use literary braille.\nIf music and text is mixed on a single\nline, use the Text Prefix and Music\nPrefix to switch between systems." />
     </help>
     <help name="clefs" top="10" left="300" width="200" height="100">
         <graphic type="text" style="bold" color="#000" size="10" top="10" left="0" content="Clefs" />
