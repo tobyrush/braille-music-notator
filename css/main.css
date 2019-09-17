@@ -478,3 +478,27 @@ h3 {
 .dialogControlListItem:hover {
     border: solid 1px black;
 }
+
+#newVersion {
+    position: absolute;
+    top: 6vh;
+    left: 67vw;
+    background-color: green;
+    width: 30vw;
+    color: white;
+    font-size: 1.8vw;
+    padding: 10px;
+    font-weight: bold;
+    opacity: 0.9;
+    height: 7vw;
+    line-height: 2.5vw;
+    text-align: right;
+    -webkit-box-shadow: 10px 10px 40px -17px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 40px -17px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 40px -17px rgba(0,0,0,0.75);
+}
+
+#newVersion a {
+    color: white;
+    text-decoration: underline;
+}

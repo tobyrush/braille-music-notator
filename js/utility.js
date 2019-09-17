@@ -578,3 +578,7 @@ function setNodeValue(node,val) {
 function removeExtension(s) {
     return s.replace(/\.[^/.]+$/, '');
 }
+
+function hideBanner() {
+    document.querySelector("#newVersion").style.display = 'none';
+}
