@@ -714,8 +714,8 @@ function localize(lang) {
             ];
             kKeyCommands[83] = ["File saved."];
             kKeyCommands[85] = [
-                "Accessible output set to screen reader mode.",
-                "Accessible output set to refreshable braille display mode."
+                "Refreshable braille display output turned off.",
+                "Refreshable braille display output turned on."
             ];
             kKeyCommands[89] = ["Redo."];
             kKeyCommands[90] = ["Undo."];
