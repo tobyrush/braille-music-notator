@@ -2,7 +2,7 @@
 /* jshint -W020 */
 
 function initialize() {
-	versionString = "0.9.3b";
+	versionString = "0.9.4b";
 	devMode = false;
     currentLocale = 'en';
 	
