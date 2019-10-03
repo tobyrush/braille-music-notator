@@ -1446,6 +1446,11 @@
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="17" left="35" top="50" content="BRAILLE" rotate="270" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="17" left="65" top="50" content="TEXT" rotate="270" />
     </cell>
+    <cell name="transcriber addition">
+        <code value="434" />
+        <graphic type="background" color="#000" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="50" left="50" top="50" content="&#x270e;" />
+    </cell>
     <cell name="text a">
         <code value="565" />
         <graphic type="background" color="#fff" />

@@ -1619,11 +1619,12 @@
             <help page="default" />
             <character code="0" />
         </control>
-        <control keycode="Digit0" top="13" left="193" width="18" height="18">
-            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
-            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="0" />
-            <help page="default" />
-            <character code="0" />
+        <control keycode="Digit0" top="13" left="193" width="18" height="18" label="Transcriber addition sign">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="text" color="#FFF" size="50" align="center" top="66" left="47" content="&#x270e;" />
+            <graphic type="text" color="#777" left="15" top="80" size="20" content="0" />
+            <help page="transcriberAddition" />
+            <character code="434" />
         </control>
         <control keycode="Minus" top="13" left="211" width="18" height="18" label="Lowercase">
             <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
@@ -2790,5 +2791,15 @@
         <graphic type="line" color="#000" startX="20" startY="34" endX="36" endY="34" lineWidth="1" />
         <graphic type="text" color="#000" size="13" baseline="middle" top="54" left="40" font="Bravura" content="&#xeb62;" />
         <graphic type="braille" left="46" top="40" height="20" cells="34,93,87,0,935,949,33,260,450" />
+    </help>
+    <help name="transcriberAddition" top="10" left="300" width="200" height="100">
+        <graphic type="text" style="bold" color="#000" size="10" top="10" left="0" content="Transcriber Additions" />
+        <graphic type="text" color="#000" size="6" top="20" left="0" multiline="true" lineHeight="8" content="This character precedes an symbol which\nwas added by the braille transcriber." />
+        <graphic type="staff" left="0" top="44" height="13" width="20" clef="1" />
+        <graphic type="note" left="9" top="44" height="13" note="noteQuarterUp" position="3" dots="0" />
+        <graphic type="note" left="15" top="44" height="13" note="noteQuarterDown" position="0" dots="0" />
+        <graphic type="line" color="#000" startX="20" startY="44" endX="20" endY="57" lineWidth="1" />
+        <graphic type="text" color="#000" size="13" baseline="middle" top="54" left="22.5" font="Bravura" content="&#xeb62;" />
+        <graphic type="braille" left="28.5" top="40" height="20" cells="34,93,434,42,87" />
     </help>
 </controlModule>
