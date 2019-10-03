@@ -1,4 +1,4 @@
-/* global shiftKeyDown, metaKeyDown, cursor, whichKeyboard, score, clearSelection, cellIsEmpty, deleteScore, hScrollUnits, isMacOS, focusClipboard, firstCharPosInRow, hScroll, vScroll, deleteRowAtCursor, insertRowAtCursor, setScore, scoreWidth, scoreHeight, updateScreenreader, showSmallDots, downloadFile, currentBeatUnit, parseFiles, showPageBreaks, setPageSize, pageWidth, pageHeight, confirm, clearDocument, resetCursorAndScroll, fileUploader, rotateSelection, convertSelectionToText, useBrailleDisplay, doRedo, doUndo, setCellHeight, gridHeight, saveToUndo, suspendUndo, scrollToCursor, characterName, drawNotation, drawControls, getScore, currentControlModule, kUnsavedChangesDialogMessage, kKeyCommands, formFill, placeCursor, currentCellFont, useWordWrap, lineIsEmpty, removeLastWordOfLine, octaveCharValues, pitchValues, octaveValues, findPitchAtPosition, cellValIsEmpty, isAccidental, dialogFieldFocus, document, setNodeSelectedValue, insertOctaveSymbols, spellChordsDownward, rotateControlModule, observeKeySignatures, convertSelectionToMusic: true */
+/* global shiftKeyDown, metaKeyDown, cursor, whichKeyboard, score, clearSelection, cellIsEmpty, deleteScore, hScrollUnits, isMacOS, focusClipboard, firstCharPosInRow, hScroll, vScroll, deleteRowAtCursor, insertRowAtCursor, setScore, scoreWidth, scoreHeight, updateScreenreader, showSmallDots, downloadFile, currentBeatUnit, parseFiles, showPageBreaks, setPageSize, pageWidth, pageHeight, confirm, clearDocument, resetCursorAndScroll, fileUploader, rotateSelection, convertSelectionToText, useBrailleDisplay, doRedo, doUndo, setCellHeight, gridHeight, saveToUndo, suspendUndo, scrollToCursor, characterName, drawNotation, drawControls, getScore, currentControlModule, kUnsavedChangesDialogMessage, kKeyCommands, formFill, placeCursor, currentCellFont, useWordWrap, lineIsEmpty, removeLastWordOfLine, octaveCharValues, pitchValues, octaveValues, findPitchAtPosition, cellValIsEmpty, isAccidental, dialogFieldFocus, document, setNodeSelectedValue, insertOctaveSymbols, spellChordsDownward, rotateControlModule, observeKeySignatures, convertSelectionToMusic, speaker: true */
 /* jshint -W020 */
 
 function doKeyDown(e) {
@@ -68,6 +68,25 @@ function interpretKeyCode(e) {
                 break;
             case 40: // down arrow - insert row
                 insertRowAtCursor();
+                break;
+            case 49: // 1 - toggle screen reader
+                if (speaker.mute) {
+                    speaker.unmuteSound();
+                } else {
+                    speaker.muteSound();
+                }
+                break;
+            case 50: // 2 - reduce screen reader tempo
+                speaker.decreaseRate();
+                break;
+            case 51: // 3 - increase screen reader tempo
+                speaker.increaseRate();
+                break;
+            case 52: // 4 - previous screen reader voice
+                speaker.previousVoice();
+                break;
+            case 53: // 5 - next screen reader voice
+                speaker.nextVoice();
                 break;
             case 56: // 8 - toggle insert octave symbols
 				insertOctaveSymbols = !insertOctaveSymbols;
@@ -244,7 +263,7 @@ function interpretKeyCode(e) {
         if (typeof kKeyCommands[e.keyCode]!=="undefined") {
             updateScreenreader(
                 formFill(
-                     kKeyCommands[e.keyCode][readerSwitch],
+                     kKeyCommands[e.keyCode][readerSwitch*1],
                      readerData
                  )
             );

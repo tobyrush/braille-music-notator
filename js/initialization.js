@@ -1,4 +1,4 @@
-/* global versionString, devMode, container, document, notationArea, window, doKeyDown, doKeyUp, doWindowMouseUp, doWindowMouseMove, handleClipboard, fileUploader, doFileOpen, doNotationMouseDown, doNotationMouseUp, doNotationMouseMove, doNotationDragOver, doNotationDragEnter, doNotationDragLeave, doNotationDrop, doNotationMouseWheel, controlArea, doControlMouseDown, doControlMouseMove, doControlMouseOut, titleArea, doTitleMouseDown, cctx, tctx, ctx, clipboardArea, cursor, loadCookie, initializeTitle, initializeNotation, initializeControls, resizeBarPosition, localize, currentFileName, kDefaultFilename, drawNotation, currentControlModule, navigator, onMIDISuccess, onMIDIFailure, currentLocale, doWindowBlur, loadPreferences, doFileLoad: true */
+/* global versionString, devMode, container, document, notationArea, window, doKeyDown, doKeyUp, doWindowMouseUp, doWindowMouseMove, handleClipboard, fileUploader, doFileOpen, doNotationMouseDown, doNotationMouseUp, doNotationMouseMove, doNotationDragOver, doNotationDragEnter, doNotationDragLeave, doNotationDrop, doNotationMouseWheel, controlArea, doControlMouseDown, doControlMouseMove, doControlMouseOut, titleArea, doTitleMouseDown, cctx, tctx, ctx, clipboardArea, cursor, loadCookie, initializeTitle, initializeNotation, initializeControls, resizeBarPosition, localize, currentFileName, kDefaultFilename, drawNotation, currentControlModule, navigator, onMIDISuccess, onMIDIFailure, currentLocale, doWindowBlur, loadPreferences, doFileLoad, speaker, speechSynthesizer: true */
 /* jshint -W020 */
 
 function initialize() {
@@ -46,6 +46,8 @@ function initialize() {
     if (navigator.requestMIDIAccess) {
         navigator.requestMIDIAccess().then(onMIDISuccess,onMIDIFailure);
     }
+
+    speaker = new speechSynthesizer(window);
 	
 	var totalHeight=window.innerHeight;
 	var newY=totalHeight-(window.innerWidth/5.4);

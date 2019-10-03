@@ -38,19 +38,14 @@ WebFontConfig = { custom: { families: ['Bravura'], urls: ['css/main.css'] } };
 </script>
 </head>
 
-<body role="application" onload="initialize()">
+<body role="application" onload="initialize()" aria-label="Braille Music Notator. Press control one or command one now to toggle this site's built-in screen reader. Press control two or control three to adjust tempo.">
 
-<div aria-hidden="false" aria-live="assertive" id="screenreader">
-line 0 character 0 empty
+<div aria-hidden="false" aria-live="assertive" id="brailledisplay">
 </div>
-<!--<div id="header">
-<canvas id="titleCanvas"></canvas>
-</div>-->
-<div id="container">
+<div id="container" aria-hidden="true">
 <canvas id="notationAreaCanvas"></canvas>
 <canvas id="controlCanvas"></canvas>
 <input type="file" id="fileUpload" accept="text/plain|application/braillemusic" />
-<!--<input type="text" id="dialogField" />-->
 <textarea display="none" tabIndex="-1" id="clipboard"></textarea>
 
 </div>

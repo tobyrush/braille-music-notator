@@ -1,12 +1,19 @@
-/* global document, cursor, score, useBrailleDisplay, checkContiguousCells, checkPreviousCell, ctx, formFill, kScreenReaderTemplate, getCellContext, kCharNames, kDotsPrefix, brailleDots: true */
+/* global document, cursor, score, useBrailleDisplay, checkContiguousCells, checkPreviousCell, ctx, formFill, kScreenReaderTemplate, getCellContext, kCharNames, kDotsPrefix, brailleDots, speechSynthesizer, SpeechSynthesisUtterance, speaker: true */
 
 function updateScreenreader(msg) {
 	if (useBrailleDisplay) {
-		document.getElementById("screenreader").innerHTML=getScoreLine(+cursor.y);
-	} else {
-		document.getElementById("screenreader").innerHTML=formFill(kScreenReaderTemplate,[msg,(+cursor.y),(+cursor.x),getScoreDescriptor(cursor.x,cursor.y)]);
+		document.getElementById("brailledisplay").innerHTML=getScoreLine(+cursor.y);
 	}
+    speaker.speak(msg);
 }
+
+//function oldUpdateScreenreader(msg) {
+//	if (useBrailleDisplay) {
+//		document.getElementById("screenreader").innerHTML=getScoreLine(+cursor.y);
+//	} else {
+//		document.getElementById("screenreader").innerHTML=formFill(kScreenReaderTemplate,[msg,(+cursor.y),(+cursor.x),getScoreDescriptor(cursor.x,cursor.y)]);
+//	}
+//}
 
 function getScoreDescriptor(x,y) {
 	
@@ -79,4 +86,89 @@ function getDotsDescription(val) {
         r=r+" 6";
     }
     return r;
+}
+
+class speechSynthesizer {
+    constructor(w) {
+        this.synth = w.speechSynthesis;
+        this.pitch = 1;
+        this.rate = 2;
+        this.voices = this.synth.getVoices();
+        this.voice = this.voices[0];
+        this.whichVoice = 0;
+        this.mute = false;
+    }
+    speak(message) {
+        if (!this.mute) {
+            var u = new SpeechSynthesisUtterance(message);
+            u.pitch = this.pitch;
+            u.rate = this.rate;
+            u.voice = this.voice;
+            this.synth.speak(u);
+        }
+    }
+    nextVoice() {
+        if (!this.mute) {
+            this.whichVoice++;
+            if (this.whichVoice>this.voices.length-1) {
+                this.whichVoice = 0;
+            }
+            this.voice = this.voices[this.whichVoice];
+            this.speak("Voice set to "+this.voice.name);
+        }
+    }
+    previousVoice() {
+        if (!this.mute) {
+            this.whichVoice--;
+            if (this.whichVoice<0) {
+                this.whichVoice = this.voices.length-1;
+            }
+            this.voice = this.voices[this.whichVoice];
+            this.speak("Voice set to "+this.voice.name);
+        }
+    }
+    increaseRate() {
+        if (!this.mute) {
+            this.rate++;
+            this.speak("Screen reader tempo set to " + this.rate);
+        }
+    }
+    decreaseRate() {
+        if (!this.mute) {
+            this.rate--;
+            this.speak("Screen reader tempo set to " + this.rate);
+        }
+    }
+    setRate(n) {
+        if (!this.mute) {
+            this.rate = n;
+            this.speak("Screen reader tempo set to " + this.rate);
+        }
+    }
+    increasePitch() {
+        if (!this.mute) {
+            this.pitch++;
+            this.speak("Screen reader pitch set to " + this.pitch);
+        }
+    }
+    decreasePitch() {
+        if (!this.mute) {
+            this.pitch--;
+            this.speak("Screen reader pitch set to " + this.pitch);
+        }
+    }
+    setPitch(n) {
+        if (!this.mute) {
+            this.pitch = n;
+            this.speak("Screen reader pitch set to " + this.pitch);
+        }
+    }
+    muteSound() {
+        this.speak("Screen reader off.");
+        this.mute = true;
+    }
+    unmuteSound() {
+        this.mute = false;
+        this.speak("Screen reader on.");
+    }
 }
