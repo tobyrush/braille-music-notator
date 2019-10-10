@@ -57,6 +57,12 @@ var controlModules = [
     },
     {
         id: 3,
+        name: 'IPA',
+        pathname: 'controls/en/ipa.xml',
+        locale: ''
+    },
+    {
+        id: 4,
         name: 'Classic',
         pathname: 'controls/tr/classic.xml',
         locale: 'tr'

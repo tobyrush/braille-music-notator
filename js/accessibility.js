@@ -96,7 +96,7 @@ class speechSynthesizer {
         this.voices = this.synth.getVoices();
         this.voice = this.voices[0];
         this.whichVoice = 0;
-        this.mute = false;
+        this.mute = true;
     }
     speak(message) {
         if (!this.mute) {

@@ -1,0 +1,2122 @@
+<controlModule name="IPA" help="default" font="sans-serif" style="normal" align="left" baseline="alphabetic">
+    <help name="default" top="15" left="400" width="200" height="100">
+        <graphic type="text" color="#000" size="8" top="5" left="0" multiline="true" lineHeight="10" content="Click keys or type to add symbols\nto the score above.\n\nClick tabs to the left or press tab\nto switch between keyboards.\n\nMouse over the keyboard for help." />
+    </help>
+    <page name="1">
+        <indicator type="shift" top="67" left="13" width="27" height="9">
+            <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="SHIFT" />
+        </indicator>
+        <indicator type="control" top="76" left="13" width="27" height="9">
+            <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="CTRL" />
+        </indicator>
+        <control keycode="Space" top="0" left="0" width="0" height="0" label="Space">
+            <character code="0" />
+        </control>
+        <control keycode="Backquote" top="13" left="13" width="18" height="18" label="Unvoiced diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="40" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="48" top="44" align="center" baseline="middle" size="55" content="&#x02f3;" />
+            <help page="ipa" />
+            <character code="1044" />
+            <character code="1036" />
+        </control>
+        <control keycode="Digit1" top="13" left="31" width="18" height="18" label="More rounded diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="40" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="56" top="44" align="center" baseline="middle" size="55" content="&#x0339;" />
+            <help page="ipa" />
+            <character code="1044" />
+            <character code="1079" />
+        </control>
+        <control keycode="Digit2" top="13" left="49" width="18" height="18" label="Advanced diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="40" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="46" top="54" align="center" baseline="middle" size="55" content="&#x02d6;" />
+            <help page="ipa" />
+            <character code="1044" />
+            <character code="1043" />
+        </control>
+        <control keycode="Digit3" top="13" left="67" width="18" height="18" label="Unrounded front open-mid vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x025b;" />
+            <help page="ipa" />
+            <character code="1062" />
+        </control>
+        <control keycode="Digit4" top="13" left="85" width="18" height="18" label="Centralized diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="40" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="52" top="36" align="center" baseline="middle" size="55" content="&#x0308;" />
+            <help page="ipa" />
+            <character code="1064" />
+            <character code="1051" />
+        </control>
+        <control keycode="Digit5" top="13" left="103" width="18" height="18" label="Syllabic diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="48" top="46" align="center" baseline="middle" size="55" content="&#x02cc;" />
+            <help page="ipa" />
+            <character code="1044" />
+            <character code="1050" />
+        </control>
+        <control keycode="Digit6" top="13" left="121" width="18" height="18" label="Aspirated diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="38" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="66" top="40" align="center" baseline="middle" size="55" content="&#x02b0;" />
+            <help page="ipa" />
+            <character code="1064" />
+            <character code="1072" />
+        </control>
+        <control keycode="Digit7" top="13" left="139" width="18" height="18" label="Breathy voiced diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="54" top="46" align="center" baseline="middle" size="55" content="&#x0324;" />
+            <help page="ipa" />
+            <character code="1044" />
+            <character code="1051" />
+        </control>
+        <control keycode="Digit8" top="13" left="157" width="18" height="18" label="Linguolabial diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="50" top="48" align="center" baseline="middle" size="55" content="&#x033c;" />
+            <help page="ipa" />
+            <character code="1044" />
+            <character code="1038" />
+        </control>
+        <control keycode="Digit9" top="13" left="175" width="18" height="18" label="Raised diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="48" top="62" align="center" baseline="middle" size="55" content="&#x02d4;" />
+            <help page="ipa" />
+            <character code="1044" />
+            <character code="1062" />
+        </control>
+        <control keycode="Digit0" top="13" left="193" width="18" height="18" label="Advanced tongue root diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="55" content="&#x0318;" />
+            <help page="ipa" />
+            <character code="1044" />
+            <character code="1058" />
+        </control>
+        <control keycode="Minus" top="13" left="211" width="18" height="18" label="Dental diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="50" top="48" align="center" baseline="middle" size="55" content="&#x032a;" />
+            <help page="ipa" />
+            <character code="1044" />
+            <character code="1063" />
+        </control>
+        <control keycode="Equal" top="13" left="229" width="18" height="18" label="Nasal release diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="38" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="66" top="40" align="center" baseline="middle" size="55" content="&#x207f;" />
+            <help page="ipa" />
+            <character code="1064" />
+            <character code="1078" />
+        </control>
+        <control keycode="KeyQ" top="31" left="40" width="18" height="18" label="Unvoiced uvular plosive">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="q" />
+            <help page="ipa" />
+            <character code="1081" />
+        </control>
+        <control keycode="KeyW" top="31" left="58" width="18" height="18" label="Voiced labial-velar approximant">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="w" />
+            <help page="ipa" />
+            <character code="1087" />
+        </control>
+        <control keycode="KeyE" top="31" left="76" width="18" height="18" label="Unrounded front close-mid vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="e" />
+            <help page="ipa" />
+            <character code="1069" />
+        </control>
+        <control keycode="KeyR" top="31" left="94" width="18" height="18" label="Voiced alveolar trill">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="r" />
+            <help page="ipa" />
+            <character code="1082" />
+        </control>
+        <control keycode="KeyT" top="31" left="112" width="18" height="18" label="Unvoiced alveolar plosive">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="t" />
+            <help page="ipa" />
+            <character code="1084" />
+        </control>
+        <control keycode="KeyY" top="31" left="130" width="18" height="18" label="Rounded front close vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="y" />
+            <help page="ipa" />
+            <character code="1089" />
+        </control>
+        <control keycode="KeyU" top="31" left="148" width="18" height="18" label="Rounded back close vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="u" />
+            <help page="ipa" />
+            <character code="1085" />
+        </control>
+        <control keycode="KeyI" top="31" left="166" width="18" height="18" label="Unrounded front close vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="i" />
+            <help page="ipa" />
+            <character code="1073" />
+        </control>
+        <control keycode="KeyO" top="31" left="184" width="18" height="18" label="Rounded back close-mid vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="o" />
+            <help page="ipa" />
+            <character code="1079" />
+        </control>
+        <control keycode="KeyP" top="31" left="202" width="18" height="18" label="Unvoiced bilabial plosive">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="p" />
+            <help page="ipa" />
+            <character code="1080" />
+        </control>
+        <control keycode="BracketLeft" top="31" left="220" width="18" height="18" label="Begin IPA transcription">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" size="20" align="center" baseline="middle" top="32" left="47" content="BEGIN" />
+            <graphic type="text" color="#c00" size="30" align="center" baseline="middle" top="57" left="47" content="IPA" />
+            <help page="ipa" />
+            <character code="1094" />
+            <character code="1040" />
+        </control>
+        <control keycode="BracketRight" top="31" left="238" width="18" height="18" label="End IPA transcription">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" size="20" align="center" baseline="middle" top="32" left="47" content="END" />
+            <graphic type="text" color="#c00" size="30" align="center" baseline="middle" top="57" left="47" content="IPA" />
+            <help page="ipa" />
+            <character code="1094" />
+            <character code="1041" />
+        </control>
+        <control keycode="Backslash" top="31" left="256" width="18" height="18" label="Non-IPA symbol">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" size="20" align="center" baseline="middle" top="32" left="47" content="NON-" />
+            <graphic type="text" color="#c00" size="30" align="center" baseline="middle" top="57" left="47" content="IPA" />
+            <help page="ipa" />
+            <character code="1059" />
+        </control>
+        <control keycode="KeyA" top="49" left="46" width="18" height="18" label="Unrounded front open vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="a" />
+            <help page="ipa" />
+            <character code="1065" />
+        </control>
+        <control keycode="KeyS" top="49" left="64" width="18" height="18" label="Unvoiced alveolar fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="s" />
+            <help page="ipa" />
+            <character code="1083" />
+        </control>
+        <control keycode="KeyD" top="49" left="82" width="18" height="18" label="Voiced alveolar plosive">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="d" />
+            <help page="ipa" />
+            <character code="1068" />
+        </control>
+        <control keycode="KeyF" top="49" left="100" width="18" height="18" label="Unvoiced labiodental fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="f" />
+            <help page="ipa" />
+            <character code="1070" />
+        </control>
+        <control keycode="KeyG" top="49" left="118" width="18" height="18" label="Voiced velar plosive">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="g" />
+            <help page="ipa" />
+            <character code="1071" />
+        </control>
+        <control keycode="KeyH" top="49" left="136" width="18" height="18" label="Unvoiced glottal fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="h" />
+            <help page="ipa" />
+            <character code="1072" />
+        </control>
+        <control keycode="KeyJ" top="49" left="154" width="18" height="18" label="Voiced palatal approximant">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="j" />
+            <help page="ipa" />
+            <character code="1074" />
+        </control>
+        <control keycode="KeyK" top="49" left="172" width="18" height="18" label="Unvoiced velar plosive">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="k" />
+            <help page="ipa" />
+            <character code="1075" />
+        </control>
+        <control keycode="KeyL" top="49" left="190" width="18" height="18" label="Voiced alveolar lateral approximant">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="l" />
+            <help page="ipa" />
+            <character code="1076" />
+        </control>
+        <control keycode="Semicolon" top="49" left="208" width="18" height="18" label="Long suprasegmental">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="38" top="40" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="62" top="38" align="center" baseline="middle" size="45" content="&#x02d0;" />
+            <help page="ipa" />
+            <character code="1051" />
+        </control>
+        <control keycode="Quote" top="49" left="226" width="18" height="18" label="Ejective diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="38" top="40" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="60" top="40" align="center" baseline="middle" size="45" content="&#x02bc;" />
+            <help page="ipa" />
+            <character code="1034" />
+            <character code="1039" />
+        </control>
+        <control keycode="KeyZ" top="67" left="52" width="18" height="18" label="Voiced alveolar fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="z" />
+            <help page="ipa" />
+            <character code="1090" />
+        </control>
+        <control keycode="KeyX" top="67" left="70" width="18" height="18" label="Unvoiced velar fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="x" />
+            <help page="ipa" />
+            <character code="1088" />
+        </control>
+        <control keycode="KeyC" top="67" left="88" width="18" height="18" label="Unvoiced palatal plosive">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="c" />
+            <help page="ipa" />
+            <character code="1067" />
+        </control>
+        <control keycode="KeyV" top="67" left="106" width="18" height="18" label="Voiced labiodental fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="v" />
+            <help page="ipa" />
+            <character code="1086" />
+        </control>
+        <control keycode="KeyB" top="67" left="124" width="18" height="18" label="Voiced bilabial plosive">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="b" />
+            <help page="ipa" />
+            <character code="1066" />
+        </control>
+        <control keycode="KeyN" top="67" left="142" width="18" height="18" label="Voiced alveolar nasal">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="n" />
+            <help page="ipa" />
+            <character code="1078" />
+        </control>
+        <control keycode="KeyM" top="67" left="160" width="18" height="18" label="Voiced bilabial nasal">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="m" />
+            <help page="ipa" />
+            <character code="1077" />
+        </control>
+        <control keycode="Comma" top="67" left="178" width="18" height="18" label="Pause">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="," />
+            <help page="ipa" />
+            <character code="1049" />
+        </control>
+        <control keycode="Period" top="67" left="196" width="18" height="18" label="Syllable break suprasegmental">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="." />
+            <help page="ipa" />
+            <character code="1039" />
+        </control>
+        <control keycode="Slash" top="67" left="214" width="18" height="18" label="Begin or end phonemic transcription">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="/ /" />
+            <help page="ipa" />
+            <character code="1094" />
+            <character code="1047" />
+        </control>
+   </page>
+    <page name="2">
+        <indicator type="shift" top="67" left="13" width="27" height="9">
+            <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="SHIFT" />
+        </indicator>
+        <indicator type="control" top="76" left="13" width="27" height="9">
+            <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="CTRL" />
+        </indicator>
+        <control keycode="Space" top="0" left="0" width="0" height="0" label="Space">
+            <character code="0" />
+        </control>
+        <control keycode="Backquote" top="13" left="13" width="18" height="18" label="Voiced diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="40" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="48" top="42" align="center" baseline="middle" size="55" content="&#x02ec;" />
+            <help page="ipa" />
+            <character code="1044" />
+            <character code="1056" />
+        </control>
+        <control keycode="Digit1" top="13" left="31" width="18" height="18" label="Less rounded">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="40" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="52" top="44" align="center" baseline="middle" size="55" content="&#x031c;" />
+            <help page="ipa" />
+            <character code="1044" />
+            <character code="1091" />
+        </control>
+        <control keycode="Digit2" top="13" left="49" width="18" height="18" label="Retracted diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="40" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="48" top="40" align="center" baseline="middle" size="55" content="&#x02cd;" />
+            <help page="ipa" />
+            <character code="1039" />
+            <character code="1045" />
+        </control>
+        <control keycode="Digit3" top="13" left="67" width="18" height="18" label="Unrounded central open-mid vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x025c;" />
+            <help page="ipa" />
+            <character code="1054" />
+            <character code="1062" />
+        </control>
+        <control keycode="Digit4" top="13" left="85" width="18" height="18" label="Mid-centralized diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="48" top="30" align="center" baseline="middle" size="55" content="&#x02df;" />
+            <help page="ipa" />
+            <character code="1064" />
+            <character code="1088" />
+        </control>
+        <control keycode="Digit5" top="13" left="103" width="18" height="18" label="Non-syllabic diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="40" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="52" top="42" align="center" baseline="middle" size="55" content="&#x032f;" />
+            <help page="ipa" />
+            <character code="1044" />
+            <character code="1041" />
+        </control>
+        <control keycode="Digit6" top="13" left="121" width="18" height="18" label="Rhoticity diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="42" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="66" top="44" align="center" baseline="middle" size="55" content="&#x02de;" />
+            <help page="ipa" />
+            <character code="1034" />
+            <character code="1082" />
+        </control>
+        <control keycode="Digit7" top="13" left="139" width="18" height="18" label="Creaky voiced diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="48" top="54" align="center" baseline="middle" size="55" content="&#x02f7;" />
+            <help page="ipa" />
+            <character code="1044" />
+            <character code="1093" />
+        </control>
+        <control keycode="Digit8" top="13" left="157" width="18" height="18" label="Labialized diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="38" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="66" top="40" align="center" baseline="middle" size="55" content="&#x02b7;" />
+            <help page="ipa" />
+            <character code="1064" />
+            <character code="1055" />
+        </control>
+        <control keycode="Digit9" top="13" left="175" width="18" height="18" label="Lowered diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="48" top="62" align="center" baseline="middle" size="55" content="&#x02d5;" />
+            <help page="ipa" />
+            <character code="1044" />
+            <character code="1060" />
+        </control>
+        <control keycode="Digit0" top="13" left="193" width="18" height="18" label="Retracted tongue root diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="54" top="48" align="center" baseline="middle" size="55" content="&#x0319;" />
+            <help page="ipa" />
+            <character code="1044" />
+            <character code="1083" />
+        </control>
+        <control keycode="Minus" top="13" left="211" width="18" height="18" label="Apical diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="48" top="56" align="center" baseline="middle" size="55" content="&#x02fd;" />
+            <help page="ipa" />
+            <character code="1044" />
+            <character code="1054" />
+            <character code="1062" />
+        </control>
+        <control keycode="Equal" top="13" left="229" width="18" height="18" label="Lateral release diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="38" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="62" top="40" align="center" baseline="middle" size="55" content="&#x02e1;" />
+            <help page="ipa" />
+            <character code="1064" />
+            <character code="1076" />
+        </control>
+        <control keycode="KeyQ" top="31" left="40" width="18" height="18" label="Bilabial click">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0298;" />
+            <help page="ipa" />
+            <character code="1038" />
+            <character code="1080" />
+        </control>
+        <control keycode="KeyW" top="31" left="58" width="18" height="18" label="Unrounded back close vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x026f;" />
+            <help page="ipa" />
+            <character code="1054" />
+            <character code="1085" />
+        </control>
+        <control keycode="KeyE" top="31" left="76" width="18" height="18" label="Central mid vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0259;" />
+            <help page="ipa" />
+            <character code="1053" />
+        </control>
+        <control keycode="KeyR" top="31" left="94" width="18" height="18" label="Voiced alveolar tap or flap">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x027e;" />
+            <help page="ipa" />
+            <character code="1054" />
+            <character code="1082" />
+        </control>
+        <control keycode="KeyT" top="31" left="112" width="18" height="18" label="Unvoiced dental fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x03b8;" />
+            <help page="ipa" />
+            <character code="1046" />
+            <character code="1063" />
+        </control>
+        <control keycode="KeyY" top="31" left="130" width="18" height="18" label="Voiced velar fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0263;" />
+            <help page="ipa" />
+            <character code="1046" />
+            <character code="1071" />
+        </control>
+        <control keycode="KeyU" top="31" left="148" width="18" height="18" label="Rounded near-back near-close vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x028a;" />
+            <help page="ipa" />
+            <character code="1040" />
+        </control>
+        <control keycode="KeyI" top="31" left="166" width="18" height="18" label="Unrounded near-front near-close vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x026a;" />
+            <help page="ipa" />
+            <character code="1047" />
+        </control>
+        <control keycode="KeyO" top="31" left="184" width="18" height="18" label="Rounded front open-mid vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0153;" />
+            <help page="ipa" />
+            <character code="1091" />
+        </control>
+        <control keycode="KeyP" top="31" left="202" width="18" height="18" label="Unvoiced bilabial fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0278;" />
+            <help page="ipa" />
+            <character code="1046" />
+            <character code="1070" />
+        </control>
+        <control keycode="BracketLeft" top="31" left="220" width="18" height="18" label="Begin non-IPA">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" size="20" align="center" baseline="middle" top="25" left="47" content="BEGIN" />
+            <graphic type="text" color="#c00" size="20" align="center" baseline="middle" top="50" left="47" content="NON-" />
+            <graphic type="text" color="#c00" size="20" align="center" baseline="middle" top="75" left="47" content="IPA" />
+            <help page="ipa" />
+            <character code="1059" />
+            <character code="1059" />
+        </control>
+        <control keycode="BracketRight" top="31" left="238" width="18" height="18" label="End non-IPA">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" size="20" align="center" baseline="middle" top="25" left="47" content="END" />
+            <graphic type="text" color="#c00" size="20" align="center" baseline="middle" top="50" left="47" content="NON-" />
+            <graphic type="text" color="#c00" size="20" align="center" baseline="middle" top="75" left="47" content="IPA" />
+            <help page="ipa" />
+            <character code="1059" />
+            <character code="1050" />
+        </control>
+        <control keycode="Backslash" top="31" left="256" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="\" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="KeyA" top="49" left="46" width="18" height="18" label="Unrounded back open vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0251;" />
+            <help page="ipa" />
+            <character code="1042" />
+        </control>
+        <control keycode="KeyS" top="49" left="64" width="18" height="18" label="Unvoiced postalveolar fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0283;" />
+            <help page="ipa" />
+            <character code="1058" />
+        </control>
+        <control keycode="KeyD" top="49" left="82" width="18" height="18" label="Voiced dental fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x00f0;" />
+            <help page="ipa" />
+            <character code="1040" />
+        </control>
+        <control keycode="KeyF" top="49" left="100" width="18" height="18" label="Voiced palatal plosive">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x025f;" />
+            <help page="ipa" />
+            <character code="1057" />
+            <character code="1074" />
+        </control>
+        <control keycode="KeyG" top="49" left="118" width="18" height="18" label="Voiced velar implosive">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0260;" />
+            <help page="ipa" />
+            <character code="1056" />
+            <character code="1071" />
+        </control>
+        <control keycode="KeyH" top="49" left="136" width="18" height="18" label="Unvoiced pharyngeal fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0127;" />
+            <help page="ipa" />
+            <character code="1054" />
+            <character code="1072" />
+        </control>
+        <control keycode="KeyJ" top="49" left="154" width="18" height="18" label="Voiced palatal fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x029d;" />
+            <help page="ipa" />
+            <character code="1056" />
+            <character code="1074" />
+        </control>
+        <control keycode="KeyK" top="49" left="172" width="18" height="18" label="Alveolar lateral click">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x01c1;" />
+            <help page="ipa" />
+            <character code="1038" />
+            <character code="1076" />
+        </control>
+        <control keycode="KeyL" top="49" left="190" width="18" height="18" label="Voiced retroflex lateral approximant">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x026d;" />
+            <help page="ipa" />
+            <character code="1052" />
+            <character code="1076" />
+        </control>
+        <control keycode="Semicolon" top="49" left="208" width="18" height="18" label="Half-long suprasegmental">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="38" top="40" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="62" top="38" align="center" baseline="middle" size="45" content="&#x02d1;" />
+            <help page="ipa" />
+            <character code="1034" />
+            <character code="1049" />
+        </control>
+        <control keycode="Quote" top="49" left="226" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="'" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="KeyZ" top="67" left="52" width="18" height="18" label="Voiced postalveolar fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0292;" />
+            <help page="ipa" />
+            <character code="1033" />
+        </control>
+        <control keycode="KeyX" top="67" left="70" width="18" height="18" label="Unvoiced uvular fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x03c7;" />
+            <help page="ipa" />
+            <character code="1046" />
+            <character code="1038" />
+        </control>
+        <control keycode="KeyC" top="67" left="88" width="18" height="18" label="Unvoiced palatal fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0063;&#x0327;" />
+            <help page="ipa" />
+            <character code="1054" />
+            <character code="1067" />
+        </control>
+        <control keycode="KeyV" top="67" left="106" width="18" height="18" label="Unrounded back open-mid vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x028c;" />
+            <help page="ipa" />
+            <character code="1043" />
+        </control>
+        <control keycode="KeyB" top="67" left="124" width="18" height="18" label="Voiced bilabial fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x03b2;" />
+            <help page="ipa" />
+            <character code="1046" />
+            <character code="1066" />
+        </control>
+        <control keycode="KeyN" top="67" left="142" width="18" height="18" label="Voiced velar nasal">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x14b;" />
+            <help page="ipa" />
+            <character code="1036" />
+        </control>
+        <control keycode="KeyM" top="67" left="160" width="18" height="18" label="Voiced labiodental nasal">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0271;" />
+            <help page="ipa" />
+            <character code="1054" />
+            <character code="1077" />
+        </control>
+        <control keycode="Comma" top="67" left="178" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="," />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="Period" top="67" left="196" width="18" height="18" label="Minor (foot) group suprasegmental">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x007c;" />
+            <help page="ipa" />
+            <character code="1095" />
+            <character code="1092" />
+        </control>
+        <control keycode="Slash" top="67" left="214" width="18" height="18" label="Unvoiced glottal plosive">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0294;" />
+            <help page="ipa" />
+            <character code="1050" />
+        </control>
+   </page>
+    <page name="3">
+        <indicator type="shift" top="67" left="13" width="27" height="9">
+            <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="SHIFT" />
+        </indicator>
+        <indicator type="control" top="76" left="13" width="27" height="9">
+            <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="CTRL" />
+        </indicator>
+        <control keycode="Space" top="0" left="0" width="0" height="0">
+            <character code="0" />
+        </control>
+        <control keycode="Backquote" top="13" left="13" width="18" height="18" label="Velarized or pharyngealized diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="52" top="46" align="center" baseline="middle" size="65" content="&#x0334;" />
+            <help page="ipa" />
+            <character code="1034" />
+            <character code="1093" />
+        </control>
+        <control keycode="Digit1" top="13" left="31" width="18" height="18" label="Stress suprasegmental">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="32" top="48" align="center" baseline="middle" size="55" content="&#x02c8;" />
+            <help page="ipa" />
+            <character code="1095" />
+            <character code="1066" />
+        </control>
+        <control keycode="Digit2" top="13" left="49" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="2" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="Digit3" top="13" left="67" width="18" height="18" label="Rounded central open-mid vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x025e;" />
+            <help page="ipa" />
+            <character code="1056" />
+            <character code="1062" />
+        </control>
+        <control keycode="Digit4" top="13" left="85" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="4" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="Digit5" top="13" left="103" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="5" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="Digit6" top="13" left="121" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="6" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="Digit7" top="13" left="139" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="7" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="Digit8" top="13" left="157" width="18" height="18" label="Palatalized diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="70" top="44" align="center" baseline="middle" size="45" content="&#x02b2;" />
+            <help page="ipa" />
+            <character code="1064" />
+            <character code="1074" />
+        </control>
+        <control keycode="Digit9" top="13" left="175" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="9" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="Digit0" top="13" left="193" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="0" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="Minus" top="13" left="211" width="18" height="18" label="Laminal diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="52" top="52" align="center" baseline="middle" size="45" content="&#x033b;" />
+            <help page="ipa" />
+            <character code="1044" />
+            <character code="1055" />
+        </control>
+        <control keycode="Equal" top="13" left="229" width="18" height="18" label="No audible release diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="68" top="48" align="center" baseline="middle" size="45" content="&#x02fa;" />
+            <help page="ipa" />
+            <character code="1064" />
+            <character code="1068" />
+        </control>
+        <control keycode="KeyQ" top="31" left="40" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="Q" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="KeyW" top="31" left="58" width="18" height="18" label="Unvoiced labial-velar approximant">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x028d;" />
+            <help page="ipa" />
+            <character code="1054" />
+            <character code="1055" />
+        </control>
+        <control keycode="KeyE" top="31" left="76" width="18" height="18" label="Rounded central close-mid vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0275;" />
+            <help page="ipa" />
+            <character code="1048" />
+            <character code="1079" />
+        </control>
+        <control keycode="KeyR" top="31" left="94" width="18" height="18" label="Voiced alveolar approximant">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0279;" />
+            <help page="ipa" />
+            <character code="1035" />
+        </control>
+        <control keycode="KeyT" top="31" left="112" width="18" height="18" label="Unvoiced retroflex plosive">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0288;" />
+            <help page="ipa" />
+            <character code="1052" />
+            <character code="1084" />
+        </control>
+        <control keycode="KeyY" top="31" left="130" width="18" height="18" label="Voiced palatal lateral approximant">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x028e;" />
+            <help page="ipa" />
+            <character code="1056" />
+            <character code="1089" />
+        </control>
+        <control keycode="KeyU" top="31" left="148" width="18" height="18" label="Rounded central close vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0289;" />
+            <help page="ipa" />
+            <character code="1048" />
+            <character code="1085" />
+        </control>
+        <control keycode="KeyI" top="31" left="166" width="18" height="18" label="Unrounded central close vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0268;" />
+            <help page="ipa" />
+            <character code="1048" />
+            <character code="1073" />
+        </control>
+        <control keycode="KeyO" top="31" left="184" width="18" height="18" label="Rounded back open vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0252;" />
+            <help page="ipa" />
+            <character code="1054" />
+            <character code="1042" />
+        </control>
+        <control keycode="KeyP" top="31" left="202" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="P" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="BracketLeft" top="31" left="220" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="[" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="BracketRight" top="31" left="238" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="]" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="Backslash" top="31" left="256" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="\" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="KeyA" top="49" left="46" width="18" height="18" label="Unrounded front near-open vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x00e6;" />
+            <help page="ipa" />
+            <character code="1037" />
+        </control>
+        <control keycode="KeyS" top="49" left="64" width="18" height="18" label="Unvoiced retroflex fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0282;" />
+            <help page="ipa" />
+            <character code="1052" />
+            <character code="1083" />
+        </control>
+        <control keycode="KeyD" top="49" left="82" width="18" height="18" label="Voiced retroflex plosive">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0256;" />
+            <help page="ipa" />
+            <character code="1052" />
+            <character code="1068" />
+        </control>
+        <control keycode="KeyF" top="49" left="100" width="18" height="18" label="Voiced retroflex tap or flap">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x027d;" />
+            <help page="ipa" />
+            <character code="1052" />
+            <character code="1082" />
+        </control>
+        <control keycode="KeyG" top="49" left="118" width="18" height="18" label="Voiced uvular plosive">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0262;" />
+            <help page="ipa" />
+            <character code="1057" />
+            <character code="1071" />
+        </control>
+        <control keycode="KeyH" top="49" left="136" width="18" height="18" label="Voiced glottal fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0266;" />
+            <help page="ipa" />
+            <character code="1056" />
+            <character code="1072" />
+        </control>
+        <control keycode="KeyJ" top="49" left="154" width="18" height="18" label="Voiced alveolar lateral flap">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x027a;" />
+            <help page="ipa" />
+            <character code="1056" />
+            <character code="1035" />
+        </control>
+        <control keycode="KeyK" top="49" left="172" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="K" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="KeyL" top="49" left="190" width="18" height="18" label="Unvoiced alveolar lateral fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x026c;" />
+            <help page="ipa" />
+            <character code="1056" />
+            <character code="1076" />
+        </control>
+        <control keycode="Semicolon" top="49" left="208" width="18" height="18" label="extra-short suprasegmental">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="40" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="50" top="36" align="center" baseline="middle" size="55" content="&#x0306;" />
+            <help page="ipa" />
+            <character code="1064" />
+            <character code="1040" />
+        </control>
+        <control keycode="Quote" top="49" left="226" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="'" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="KeyZ" top="67" left="52" width="18" height="18" label="Voiced retroflex fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0290;" />
+            <help page="ipa" />
+            <character code="1052" />
+            <character code="1090" />
+        </control>
+        <control keycode="KeyX" top="67" left="70" width="18" height="18" label="Voiced postalveolar affricate">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x02a4;" />
+            <help page="ipa" />
+            <character code="1068" />
+            <character code="1034" />
+            <character code="1033" />
+        </control>
+        <control keycode="KeyC" top="67" left="88" width="18" height="18" label="Unvoiced alveolo-palatal fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0255;" />
+            <help page="ipa" />
+            <character code="1056" />
+            <character code="1067" />
+        </control>
+        <control keycode="KeyV" top="67" left="106" width="18" height="18" label="Voiced labiodental approximant">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x028b;" />
+            <help page="ipa" />
+            <character code="1056" />
+            <character code="1086" />
+        </control>
+        <control keycode="KeyB" top="67" left="124" width="18" height="18" label="Voiced bilabial implosive">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0253;" />
+            <help page="ipa" />
+            <character code="1056" />
+            <character code="1066" />
+        </control>
+        <control keycode="KeyN" top="67" left="142" width="18" height="18" label="Voiced palatal nasal">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0272;" />
+            <help page="ipa" />
+            <character code="1061" />
+        </control>
+        <control keycode="KeyM" top="67" left="160" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="M" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="Comma" top="67" left="178" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="," />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="Period" top="67" left="196" width="18" height="18" label="Major (intonation) group suprasegmental">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x2016;" />
+            <help page="ipa" />
+            <character code="1095" />
+            <character code="1061" />
+        </control>
+        <control keycode="Slash" top="67" left="214" width="18" height="18" label="Voiced pharyngeal fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0295;" />
+            <help page="ipa" />
+            <character code="1054" />
+            <character code="1050" />
+        </control>
+   </page>
+    <page name="4">
+        <indicator type="shift" top="67" left="13" width="27" height="9">
+            <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="SHIFT" />
+        </indicator>
+        <indicator type="control" top="76" left="13" width="27" height="9">
+            <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="CTRL" />
+        </indicator>
+        <control keycode="Space" top="0" left="0" width="0" height="0">
+            <character code="0" />
+        </control>
+        <control keycode="Backquote" top="13" left="13" width="18" height="18" label="Nasalized diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="50" top="42" align="center" baseline="middle" size="55" content="&#x0303;" />
+            <help page="ipa" />
+            <character code="1064" />
+            <character code="1093" />
+        </control>
+        <control keycode="Digit1" top="13" left="31" width="18" height="18" label="Secondary stress suprasegmental">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="26" top="38" align="center" baseline="middle" size="55" content="&#x02cc;" />
+            <help page="ipa" />
+            <character code="1095" />
+            <character code="1050" />
+        </control>
+        <control keycode="Digit2" top="13" left="49" width="18" height="18" label="Extra high level tone diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="52" top="40" align="center" baseline="middle" size="55" content="&#x030b;" />
+            <help page="ipa" />
+            <character code="1064" />
+            <character code="1044" />
+            <character code="1047" />
+        </control>
+        <control keycode="Digit3" top="13" left="67" width="18" height="18" label="High level tone diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="52" top="40" align="center" baseline="middle" size="55" content="&#x0301;" />
+            <help page="ipa" />
+            <character code="1064" />
+            <character code="1047" />
+        </control>
+        <control keycode="Digit4" top="13" left="85" width="18" height="18" label="Mid level tone diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="52" top="40" align="center" baseline="middle" size="55" content="&#x0304;" />
+            <help page="ipa" />
+            <character code="1064" />
+            <character code="1067" />
+        </control>
+        <control keycode="Digit5" top="13" left="103" width="18" height="18" label="Low level tone diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="50" top="40" align="center" baseline="middle" size="55" content="&#x0300;" />
+            <help page="ipa" />
+            <character code="1064" />
+            <character code="1042" />
+        </control>
+        <control keycode="Digit6" top="13" left="121" width="18" height="18" label="Extra low level tone diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="50" top="40" align="center" baseline="middle" size="55" content="&#x030f;" />
+            <help page="ipa" />
+            <character code="1064" />
+            <character code="1044" />
+            <character code="1042" />
+        </control>
+        <control keycode="Digit7" top="13" left="139" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="7" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="Digit8" top="13" left="157" width="18" height="18" label="Velarized diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="70" top="36" align="center" baseline="middle" size="45" content="&#x02e0;" />
+            <help page="ipa" />
+            <character code="1064" />
+            <character code="1046" />
+            <character code="1092" />
+        </control>
+        <control keycode="Digit9" top="13" left="175" width="18" height="18" label="Rising contour tone diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="52" top="40" align="center" baseline="middle" size="55" content="&#x030c;" />
+            <help page="ipa" />
+            <character code="1064" />
+            <character code="1056" />
+        </control>
+        <control keycode="Digit0" top="13" left="193" width="18" height="18" label="Falling contour tone diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="52" top="40" align="center" baseline="middle" size="55" content="&#x0302;" />
+            <help page="ipa" />
+            <character code="1064" />
+            <character code="1037" />
+        </control>
+        <control keycode="Minus" top="13" left="211" width="18" height="18" label="Affricate or double articulation diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="28" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#ccc" left="68" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="42" top="40" align="center" baseline="middle" size="55" content="&#x0361;" />
+            <help page="ipa" />
+            <character code="1034" />
+        </control>
+        <control keycode="Equal" top="13" left="229" width="18" height="18" label="Rewrite arrow">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x2192;" />
+            <help page="ipa" />
+            <character code="1095" />
+            <character code="1079" />
+        </control>
+        <control keycode="KeyQ" top="31" left="40" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="Q" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="KeyW" top="31" left="58" width="18" height="18" label="Voiced velar approximant">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0270;" />
+            <help page="ipa" />
+            <character code="1056" />
+            <character code="1077" />
+        </control>
+        <control keycode="KeyE" top="31" left="76" width="18" height="18" label="Unrounded central close-mid vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0258;" />
+            <help page="ipa" />
+            <character code="1054" />
+            <character code="1069" />
+        </control>
+        <control keycode="KeyR" top="31" left="94" width="18" height="18" label="Voiced uvular fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0281;" />
+            <help page="ipa" />
+            <character code="1057" />
+            <character code="1035" />
+        </control>
+        <control keycode="KeyT" top="31" left="112" width="18" height="18" label="Postalveolar click">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x01c2;" />
+            <help page="ipa" />
+            <character code="1038" />
+            <character code="1058" />
+        </control>
+        <control keycode="KeyY" top="31" left="130" width="18" height="18" label="Rounded near-front near-close vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x028f;" />
+            <help page="ipa" />
+            <character code="1057" />
+            <character code="1089" />
+        </control>
+        <control keycode="KeyU" top="31" left="148" width="18" height="18" label="Voiced labialized palatal approximant">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0265;" />
+            <help page="ipa" />
+            <character code="1052" />
+            <character code="1072" />
+        </control>
+        <control keycode="KeyI" top="31" left="166" width="18" height="18" label="Dental click">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x01c0;" />
+            <help page="ipa" />
+            <character code="1038" />
+            <character code="1063" />
+        </control>
+        <control keycode="KeyO" top="31" left="184" width="18" height="18" label="Rounded front open vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0276;" />
+            <help page="ipa" />
+            <character code="1057" />
+            <character code="1091" />
+        </control>
+        <control keycode="KeyP" top="31" left="202" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="P" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="BracketLeft" top="31" left="220" width="18" height="18" label="High-rising contour tone diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="52" top="40" align="center" baseline="middle" size="55" content="&#x1dc4;" />
+            <help page="ipa" />
+            <character code="1064" />
+            <character code="1073" />
+        </control>
+        <control keycode="BracketRight" top="31" left="238" width="18" height="18" label="Low-rising contour tone diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="52" top="40" align="center" baseline="middle" size="55" content="&#x1dc5;" />
+            <help page="ipa" />
+            <character code="1064" />
+            <character code="1057" />
+        </control>
+        <control keycode="Backslash" top="31" left="256" width="18" height="18" label="Rising-falling contour tone diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="52" top="40" align="center" baseline="middle" size="55" content="&#x1dc8;" />
+            <help page="ipa" />
+            <character code="1064" />
+            <character code="1052" />
+        </control>
+        <control keycode="KeyA" top="49" left="46" width="18" height="18" label="Central near-open vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0250;" />
+            <help page="ipa" />
+            <character code="1054" />
+            <character code="1065" />
+        </control>
+        <control keycode="KeyS" top="49" left="64" width="18" height="18" label="Unvoiced postalveolar fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0161;" />
+            <help page="ipa" />
+            <character code="1083" />
+            <character code="1064" />
+            <character code="1056" />
+        </control>
+        <control keycode="KeyD" top="49" left="82" width="18" height="18" label="Voiced alveolar implosive">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0257;" />
+            <help page="ipa" />
+            <character code="1056" />
+            <character code="1068" />
+        </control>
+        <control keycode="KeyF" top="49" left="100" width="18" height="18" label="Voiced retroflex approximant">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x027b;" />
+            <help page="ipa" />
+            <character code="1052" />
+            <character code="1035" />
+        </control>
+        <control keycode="KeyG" top="49" left="118" width="18" height="18" label="Voiced uvular implosive">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x029b;" />
+            <help page="ipa" />
+            <character code="1056" />
+            <character code="1057" />
+            <character code="1092" />
+        </control>
+        <control keycode="KeyH" top="49" left="136" width="18" height="18" label="Unvoiced postalveolar-velar fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0267;" />
+            <help page="ipa" />
+            <character code="1056" />
+            <character code="1036" />
+        </control>
+        <control keycode="KeyJ" top="49" left="154" width="18" height="18" label="Voiced palatal implosive">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0284;" />
+            <help page="ipa" />
+            <character code="1056" />
+            <character code="1057" />
+            <character code="1052" />
+        </control>
+        <control keycode="KeyK" top="49" left="172" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="K" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="KeyL" top="49" left="190" width="18" height="18" label="Voiced velar lateral approximant">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x029f;" />
+            <help page="ipa" />
+            <character code="1057" />
+            <character code="1076" />
+        </control>
+        <control keycode="Semicolon" top="49" left="208" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content=";" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="Quote" top="49" left="226" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="'" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+         <control keycode="KeyZ" top="67" left="52" width="18" height="18" label="Voiced alveolo-palatal fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0291;" />
+            <help page="ipa" />
+            <character code="1056" />
+            <character code="1090" />
+        </control>
+        <control keycode="KeyX" top="67" left="70" width="18" height="18" label="Unvoiced alveolo-palatal affricate">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x02a8;" />
+            <help page="ipa" />
+            <character code="1084" />
+            <character code="1034" />
+            <character code="1056" />
+            <character code="1067" />
+        </control>
+        <control keycode="KeyC" top="67" left="88" width="18" height="18" label="Rounded back open-mid vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0254;" />
+            <help page="ipa" />
+            <character code="1060" />
+        </control>
+        <control keycode="KeyV" top="67" left="106" width="18" height="18" label="Voiced labiodental tap or flap">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x2c71;" />
+            <help page="ipa" />
+            <character code="1054" />
+            <character code="1086" />
+        </control>
+        <control keycode="KeyB" top="67" left="124" width="18" height="18" label="Voiced bilabial trill">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0299;" />
+            <help page="ipa" />
+            <character code="1057" />
+            <character code="1066" />
+        </control>
+        <control keycode="KeyN" top="67" left="142" width="18" height="18" label="Voiced retroflex nasal">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0273;" />
+            <help page="ipa" />
+            <character code="1052" />
+            <character code="1078" />
+        </control>
+        <control keycode="KeyM" top="67" left="160" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="M" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="Comma" top="67" left="178" width="18" height="18" label="Downstep">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x2193;" />
+            <help page="ipa" />
+            <character code="1095" />
+            <character code="1033" />
+        </control>
+        <control keycode="Period" top="67" left="196" width="18" height="18" label="Global fall">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x2198;" />
+            <help page="ipa" />
+            <character code="1095" />
+            <character code="1048" />
+        </control>
+        <control keycode="Slash" top="67" left="214" width="18" height="18" label="Unvoiced epiglottal plosive">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x02a1;" />
+            <help page="ipa" />
+            <character code="1056" />
+            <character code="1050" />
+        </control>
+   </page>
+    <page name="5">
+        <indicator type="shift" top="67" left="13" width="27" height="9">
+            <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="SHIFT" />
+        </indicator>
+        <indicator type="control" top="76" left="13" width="27" height="9">
+            <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="CTRL" />
+        </indicator>
+        <control keycode="Space" top="0" left="0" width="0" height="0">
+            <character code="0" />
+        </control>
+        <control keycode="Backquote" top="13" left="13" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="`" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="Digit1" top="13" left="31" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="1" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="Digit2" top="13" left="49" width="18" height="18" label="Extra high level tone letter">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x02e5;" />
+            <help page="ipa" />
+            <character code="1095" />
+            <character code="1064" />
+            <character code="1067" />
+        </control>
+        <control keycode="Digit3" top="13" left="67" width="18" height="18" label="High level tone letter">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x02e6;" />
+            <help page="ipa" />
+            <character code="1095" />
+            <character code="1067" />
+        </control>
+        <control keycode="Digit4" top="13" left="85" width="18" height="18" label="Mid level tone letter">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x02e7;" />
+            <help page="ipa" />
+            <character code="1095" />
+            <character code="1051" />
+        </control>
+        <control keycode="Digit5" top="13" left="103" width="18" height="18" label="Low level tone letter">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x02e8;" />
+            <help page="ipa" />
+            <character code="1095" />
+            <character code="1045" />
+        </control>
+        <control keycode="Digit6" top="13" left="121" width="18" height="18" label="Extra low level tone letter">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x02e9;" />
+            <help page="ipa" />
+            <character code="1095" />
+            <character code="1044" />
+            <character code="1045" />
+        </control>
+        <control keycode="Digit7" top="13" left="139" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="7" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="Digit8" top="13" left="157" width="18" height="18" label="Pharyngealized diacritic">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="48" top="48" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="70" top="44" align="center" baseline="middle" size="45" content="&#x02e4;" />
+            <help page="ipa" />
+            <character code="1064" />
+            <character code="1054" />
+            <character code="1050" />
+        </control>
+        <control keycode="Digit9" top="13" left="175" width="18" height="18" label="Rising contour tone letter">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x02e9;&#x02e5;" />
+            <help page="ipa" />
+            <character code="1095" />
+            <character code="1047" />
+        </control>
+        <control keycode="Digit0" top="13" left="193" width="18" height="18" label="Falling contour tone letter">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x02e5;&#x02e9;" />
+            <help page="ipa" />
+            <character code="1095" />
+            <character code="1042" />
+        </control>
+        <control keycode="Minus" top="13" left="211" width="18" height="18" label="Linking suprasegmental">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#ccc" left="28" top="40" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#ccc" left="68" top="40" align="center" baseline="middle" size="65" content="&#x25cc;" />
+            <graphic type="text" color="#c00" left="48" top="44" align="center" baseline="middle" size="55" content="&#x203f;" />
+            <help page="ipa" />
+            <character code="1095" />
+            <character code="1076" />
+        </control>
+        <control keycode="Equal" top="13" left="229" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="=" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="KeyQ" top="31" left="40" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="Q" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="KeyW" top="31" left="58" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="W" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="KeyE" top="31" left="76" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="E" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="KeyR" top="31" left="94" width="18" height="18" label="Voiced uvular trill">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0280;" />
+            <help page="ipa" />
+            <character code="1057" />
+            <character code="1082" />
+        </control>
+        <control keycode="KeyT" top="31" left="112" width="18" height="18" label="Unvoiced alveolar affricate">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x02a6;" />
+            <help page="ipa" />
+            <character code="1084" />
+            <character code="1034" />
+            <character code="1083" />
+        </control>
+        <control keycode="KeyY" top="31" left="130" width="18" height="18" label="Unrounded back close-mid vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0264;" />
+            <help page="ipa" />
+            <character code="1054" />
+            <character code="1079" />
+        </control>
+        <control keycode="KeyU" top="31" left="148" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="U" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="KeyI" top="31" left="166" width="18" height="18" label="Alveolar click">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x01c3;" />
+            <help page="ipa" />
+            <character code="1038" />
+            <character code="1084" />
+        </control>
+        <control keycode="KeyO" top="31" left="184" width="18" height="18" label="Rounded front close-mid vowel">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x00f8;" />
+            <help page="ipa" />
+            <character code="1092" />
+        </control>
+        <control keycode="KeyP" top="31" left="202" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="P" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="BracketLeft" top="31" left="220" width="18" height="18" label="High-rising contour tone letter">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x02e7;&#x02e5;" />
+            <help page="ipa" />
+            <character code="1095" />
+            <character code="1073" />
+        </control>
+        <control keycode="BracketRight" top="31" left="238" width="18" height="18" label="Low-rising contour tone letter">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x02e9;&#x02e7;" />
+            <help page="ipa" />
+            <character code="1095" />
+            <character code="1057" />
+        </control>
+        <control keycode="Backslash" top="31" left="256" width="18" height="18" label="Rising-falling contour tone letter">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x02e8;&#x02e5;&#x02e8;" />
+            <help page="ipa" />
+            <character code="1095" />
+            <character code="1052" />
+        </control>
+        <control keycode="KeyA" top="49" left="46" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="A" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="KeyS" top="49" left="64" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="S" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="KeyD" top="49" left="82" width="18" height="18" label="Voiced alveolar affricate">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x02a3;" />
+            <help page="ipa" />
+            <character code="1068" />
+            <character code="1034" />
+            <character code="1090" />
+        </control>
+        <control keycode="KeyF" top="49" left="100" width="18" height="18" label="Unvoiced postalveolar affricate">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x02a7;" />
+            <help page="ipa" />
+            <character code="1084" />
+            <character code="1034" />
+            <character code="1058" />
+        </control>
+        <control keycode="KeyG" top="49" left="118" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="G" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="KeyH" top="49" left="136" width="18" height="18" label="Unvoiced epiglottal fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x029c;" />
+            <help page="ipa" />
+            <character code="1057" />
+            <character code="1072" />
+        </control>
+        <control keycode="KeyJ" top="49" left="154" width="18" height="18" label="Voiced postalveolar affricate">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x01f0;" />
+            <help page="ipa" />
+            <character code="1074" />
+            <character code="1064" />
+            <character code="1056" />
+        </control>
+        <control keycode="KeyK" top="49" left="172" width="18" height="18" label="Voiced alveolar lateral fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x026e;" />
+            <help page="ipa" />
+            <character code="1076" />
+            <character code="1034" />
+            <character code="1033" />
+        </control>
+        <control keycode="KeyL" top="49" left="190" width="18" height="18" label="Voiced velarized alveolar lateral approximant">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x026b;" />
+            <help page="ipa" />
+            <character code="1054" />
+            <character code="1076" />
+        </control>
+        <control keycode="Semicolon" top="49" left="208" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content=";" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="Quote" top="49" left="226" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="'" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="KeyZ" top="67" left="52" width="18" height="18" label="Voiced postalveolar fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x017e;" />
+            <help page="ipa" />
+            <character code="1090" />
+            <character code="1064" />
+            <character code="1056" />
+        </control>
+        <control keycode="KeyX" top="67" left="70" width="18" height="18" label="Voiced alveolopalatal fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x02a5;" />
+            <help page="ipa" />
+            <character code="1068" />
+            <character code="1034" />
+            <character code="1056" />
+            <character code="1090" />
+        </control>
+        <control keycode="KeyC" top="67" left="88" width="18" height="18" label="Unvoiced postalveolar affricate">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x010d;" />
+            <help page="ipa" />
+            <character code="1067" />
+            <character code="1064" />
+            <character code="1056" />
+        </control>
+        <control keycode="KeyV" top="67" left="106" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="V" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="KeyB" top="67" left="124" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="B" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="KeyN" top="67" left="142" width="18" height="18" label="Voiced uvular nasal">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x0274;" />
+            <help page="ipa" />
+            <character code="1057" />
+            <character code="1078" />
+        </control>
+        <control keycode="KeyM" top="67" left="160" width="18" height="18">
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#CCC" />
+            <graphic type="text" color="#FFF" left="15" top="80" size="20" content="M" />
+            <help page="default" />
+            <character code="0" />
+        </control>
+        <control keycode="Comma" top="67" left="178" width="18" height="18" label="Upset">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x2191;" />
+            <help page="ipa" />
+            <character code="1095" />
+            <character code="1036" />
+        </control>
+        <control keycode="Period" top="67" left="196" width="18" height="18" label="Global rise">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x2197;" />
+            <help page="ipa" />
+            <character code="1095" />
+            <character code="1068" />
+        </control>
+        <control keycode="Slash" top="67" left="214" width="18" height="18" label="Voiced epiglottal fricative">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#c00" left="48" top="48" align="center" baseline="middle" size="45" content="&#x02a2;" />
+            <help page="ipa" />
+            <character code="1057" />
+            <character code="1050" />
+        </control>
+   </page>
+    <page name="Aa" isText="true">
+        <indicator type="shift" top="67" left="13" width="27" height="9">
+            <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="SHIFT" />
+        </indicator>
+        <indicator type="control" top="76" left="13" width="27" height="9">
+            <graphic type="rect" top="0" left="0" height="90" width="100" fill="true" stroke="false" color="#00F" />
+            <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="CTRL" />
+        </indicator>
+        <control keycode="Space" top="0" left="0" width="0" height="0">
+            <character code="0" />
+        </control>
+        <control keycode="Backquote" top="6" left="13" width="18" height="18" label="Exclamation point">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="!" />
+            <help page="literaryBraille" />
+            <character code="554" />
+        </control>
+        <control keycode="Digit1" top="6" left="31" width="18" height="18" label="One">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="1" />
+            <help page="literaryBraille" />
+            <character code="665" />
+        </control>
+        <control keycode="Digit2" top="6" left="49" width="18" height="18" label="Two">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="2" />
+            <help page="literaryBraille" />
+            <character code="666" />
+        </control>
+        <control keycode="Digit3" top="6" left="67" width="18" height="18" label="Three">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="3" />
+            <help page="literaryBraille" />
+            <character code="667" />
+        </control>
+        <control keycode="Digit4" top="6" left="85" width="18" height="18" label="Four">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="4" />
+            <help page="literaryBraille" />
+            <character code="668" />
+        </control>
+        <control keycode="Digit5" top="6" left="103" width="18" height="18" label="Five">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="5" />
+            <help page="literaryBraille" />
+            <character code="669" />
+        </control>
+        <control keycode="Digit6" top="6" left="121" width="18" height="18" label="Six">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="6" />
+            <help page="literaryBraille" />
+            <character code="670" />
+        </control>
+        <control keycode="Digit7" top="6" left="139" width="18" height="18" label="Seven">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="7" />
+            <help page="literaryBraille" />
+            <character code="671" />
+        </control>
+        <control keycode="Digit8" top="6" left="157" width="18" height="18" label="Eight">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="8" />
+            <help page="literaryBraille" />
+            <character code="672" />
+        </control>
+        <control keycode="Digit9" top="6" left="175" width="18" height="18" label="Nine">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="9" />
+            <help page="literaryBraille" />
+            <character code="673" />
+        </control>
+        <control keycode="Digit0" top="6" left="193" width="18" height="18" label="Zero">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="0" />
+            <help page="literaryBraille" />
+            <character code="674" />
+        </control>
+        <control keycode="Minus" top="6" left="211" width="18" height="18" label="Hyphen">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="-" />
+            <help page="literaryBraille" />
+            <character code="545" />
+        </control>
+        <control keycode="Equal" top="6" left="229" width="18" height="18" label="Equals">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="=" />
+            <help page="literaryBraille" />
+            <character code="534" />
+            <character code="855" />
+        </control>
+        <control keycode="KeyQ" top="24" left="40" width="18" height="18" label="Q">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="Q" />
+            <help page="literaryBraille" />
+            <character code="581" />
+        </control>
+        <control keycode="KeyW" top="24" left="58" width="18" height="18" label="W">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="W" />
+            <help page="literaryBraille" />
+            <character code="587" />
+        </control>
+        <control keycode="KeyE" top="24" left="76" width="18" height="18" label="E">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="E" />
+            <help page="literaryBraille" />
+            <character code="569" />
+        </control>
+        <control keycode="KeyR" top="24" left="94" width="18" height="18" label="R">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="R" />
+            <help page="literaryBraille" />
+            <character code="582" />
+        </control>
+        <control keycode="KeyT" top="24" left="112" width="18" height="18" label="T">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="T" />
+            <help page="literaryBraille" />
+            <character code="584" />
+        </control>
+        <control keycode="KeyY" top="24" left="130" width="18" height="18" label="Y">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="Y" />
+            <help page="literaryBraille" />
+            <character code="589" />
+        </control>
+        <control keycode="KeyU" top="24" left="148" width="18" height="18" label="U">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="U" />
+            <help page="literaryBraille" />
+            <character code="585" />
+        </control>
+        <control keycode="KeyI" top="24" left="166" width="18" height="18" label="I">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="I" />
+            <help page="literaryBraille" />
+            <character code="573" />
+        </control>
+        <control keycode="KeyO" top="24" left="184" width="18" height="18" label="O">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="O" />
+            <help page="literaryBraille" />
+            <character code="579" />
+        </control>
+        <control keycode="KeyP" top="24" left="202" width="18" height="18" label="P">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="P" />
+            <help page="literaryBraille" />
+            <character code="580" />
+        </control>
+        <control keycode="BracketLeft" top="24" left="220" width="18" height="18" label="Number sign">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="#" />
+            <help page="literaryBraille" />
+            <character code="535" />
+        </control>
+        <control keycode="BracketRight" top="24" left="238" width="18" height="18" label="Capital letter sign">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="30" content="CAP" />
+            <help page="literaryBraille" />
+            <character code="544" />
+        </control>
+        <control keycode="Backslash" top="24" left="256" width="18" height="18" label="Colon">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content=":" />
+            <help page="literaryBraille" />
+            <character code="551" />
+        </control>
+        <control keycode="KeyA" top="42" left="46" width="18" height="18" label="A">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="A" />
+            <help page="literaryBraille" />
+            <character code="565" />
+        </control>
+        <control keycode="KeyS" top="42" left="64" width="18" height="18" label="S">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="S" />
+            <help page="literaryBraille" />
+            <character code="583" />
+        </control>
+        <control keycode="KeyD" top="42" left="82" width="18" height="18" label="D">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="D" />
+            <help page="literaryBraille" />
+            <character code="568" />
+        </control>
+        <control keycode="KeyF" top="42" left="100" width="18" height="18" label="F">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="F" />
+            <help page="literaryBraille" />
+            <character code="570" />
+        </control>
+        <control keycode="KeyG" top="42" left="118" width="18" height="18" label="G">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="G" />
+            <help page="literaryBraille" />
+            <character code="571" />
+        </control>
+        <control keycode="KeyH" top="42" left="136" width="18" height="18" label="H">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="H" />
+            <help page="literaryBraille" />
+            <character code="572" />
+        </control>
+        <control keycode="KeyJ" top="42" left="154" width="18" height="18" label="J">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="J" />
+            <help page="literaryBraille" />
+            <character code="574" />
+        </control>
+        <control keycode="KeyK" top="42" left="172" width="18" height="18" label="K">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="K" />
+            <help page="literaryBraille" />
+            <character code="575" />
+        </control>
+        <control keycode="KeyL" top="42" left="190" width="18" height="18" label="L">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="L" />
+            <help page="literaryBraille" />
+            <character code="576" />
+        </control>
+        <control keycode="Semicolon" top="42" left="208" width="18" height="18" label="Semicolon">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content=";" />
+            <help page="literaryBraille" />
+            <character code="550" />
+        </control>
+        <control keycode="Quote" top="42" left="226" width="18" height="18" label="Apostrophe">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="&apos;" />
+            <help page="literaryBraille" />
+            <character code="539" />
+        </control>
+         <control keycode="KeyZ" top="60" left="52" width="18" height="18" label="Z">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="Z" />
+            <help page="literaryBraille" />
+            <character code="590" />
+        </control>
+        <control keycode="KeyX" top="60" left="70" width="18" height="18" label="X">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="X" />
+            <help page="literaryBraille" />
+            <character code="588" />
+        </control>
+        <control keycode="KeyC" top="60" left="88" width="18" height="18" label="C">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="C" />
+            <help page="literaryBraille" />
+            <character code="567" />
+        </control>
+        <control keycode="KeyV" top="60" left="106" width="18" height="18" label="V">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="V" />
+            <help page="literaryBraille" />
+            <character code="586" />
+        </control>
+        <control keycode="KeyB" top="60" left="124" width="18" height="18" label="B">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="B" />
+            <help page="literaryBraille" />
+            <character code="566" />
+        </control>
+        <control keycode="KeyN" top="60" left="142" width="18" height="18" label="N">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="N" />
+            <help page="literaryBraille" />
+            <character code="578" />
+        </control>
+        <control keycode="KeyM" top="60" left="160" width="18" height="18" label="M">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="M" />
+            <help page="literaryBraille" />
+            <character code="577" />
+        </control>
+        <control keycode="Comma" top="60" left="178" width="18" height="18" label="Comma">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="," />
+            <help page="literaryBraille" />
+            <character code="549" />
+        </control>
+        <control keycode="Period" top="60" left="196" width="18" height="18" label="Period">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="." />
+            <help page="literaryBraille" />
+            <character code="552" />
+        </control>
+        <control keycode="Slash" top="60" left="214" width="18" height="18" label="Question mark">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="48" align="center" baseline="middle" size="45" content="?" />
+            <help page="literaryBraille" />
+            <character code="556" />
+        </control>
+        <control keycode="NumpadEqual" top="6" left="318" width="18" height="18" label="Ampersand">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="40" align="center" baseline="middle" size="45" content="&amp;" />
+            <help page="literaryBraille" />
+            <character code="564" />
+            <character code="638" />
+        </control>
+        <control keycode="NumpadDivide" top="6" left="336" width="18" height="18" label="Open Parenthesis">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="40" align="center" baseline="middle" size="45" content="(" />
+            <help page="literaryBraille" />
+            <character code="534" />
+            <character code="960" />
+        </control>
+        <control keycode="NumpadMultiply" top="6" left="354" width="18" height="18" label="Close Parenthesis">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="40" align="center" baseline="middle" size="45" content=")" />
+            <help page="literaryBraille" />
+            <character code="534" />
+            <character code="862" />
+        </control>
+        <control keycode="Numpad7" top="24" left="300" width="18" height="18" label="Plus">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="40" align="center" baseline="middle" size="45" content="+" />
+            <help page="literaryBraille" />
+            <character code="534" />
+            <character code="854" />
+        </control>
+        <control keycode="Numpad8" top="24" left="318" width="18" height="18" label="Slash">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="40" align="center" baseline="middle" size="45" content="/" />
+            <help page="literaryBraille" />
+            <character code="595" />
+            <character code="847" />
+        </control>
+        <control keycode="Numpad9" top="24" left="336" width="18" height="18" label="Open Bracket">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="40" align="center" baseline="middle" size="45" content="[" />
+            <help page="literaryBraille" />
+            <character code="746" />
+            <character code="960" />
+        </control>
+        <control keycode="NumpadSubtract" top="24" left="354" width="18" height="18" label="Close Bracket">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="40" align="center" baseline="middle" size="45" content="]" />
+            <help page="literaryBraille" />
+            <character code="746" />
+            <character code="862" />
+        </control>
+        <control keycode="Numpad4" top="42" left="300" width="18" height="18" label="Open Double Quotes">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="40" align="center" baseline="middle" size="45" content="“" />
+            <help page="literaryBraille" />
+            <character code="594" />
+            <character code="856" />
+        </control>
+        <control keycode="Numpad5" top="42" left="318" width="18" height="18" label="Close Double Quotes">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="40" align="center" baseline="middle" size="45" content="”" />
+            <help page="literaryBraille" />
+            <character code="594" />
+            <character code="848" />
+        </control>
+        <control keycode="Numpad6" top="42" left="336" width="18" height="18" label="Less Than">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="40" align="center" baseline="middle" size="45" content="&lt;" />
+            <help page="literaryBraille" />
+            <character code="564" />
+            <character code="960" />
+        </control>
+        <control keycode="NumpadAdd" top="42" left="354" width="18" height="18" label="Greater Than">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="40" align="center" baseline="middle" size="45" content="&gt;" />
+            <help page="literaryBraille" />
+            <character code="564" />
+            <character code="862" />
+        </control>
+        <control keycode="Numpad1" top="60" left="300" width="18" height="18" label="Open Single Quote">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="40" align="center" baseline="middle" size="45" content="‘" />
+            <help page="literaryBraille" />
+            <character code="644" />
+            <character code="856" />
+        </control>
+        <control keycode="Numpad2" top="60" left="318" width="18" height="18" label="Close Single Quote">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="40" align="center" baseline="middle" size="45" content="’" />
+            <help page="literaryBraille" />
+            <character code="644" />
+            <character code="848" />
+        </control>
+        <control keycode="Numpad3" top="60" left="336" width="18" height="18" label="Percent">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="40" align="center" baseline="middle" size="45" content="%" />
+            <help page="literaryBraille" />
+            <character code="746" />
+            <character code="848" />
+        </control>
+        <control keycode="Numpad0" top="78" left="300" width="36" height="18" label="Em Dash">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="40" align="center" baseline="middle" size="45" content="&#x2014;" />
+            <help page="literaryBraille" />
+            <character code="534" />
+            <character code="644" />
+            <character code="545" />
+        </control>
+        <control keycode="NumpadDecimal" top="78" left="336" width="18" height="18" label="En Dash">
+            <graphic type="roundRect" top="0" left="0" height="92" width="92" radius="20" fill="true" stroke="true" color="#FFF" strokeColor="#CCC" lineWidth="2" />
+            <graphic type="text" color="#000" left="48" top="40" align="center" baseline="middle" size="45" content="&#x2013;" />
+            <help page="literaryBraille" />
+            <character code="534" />
+            <character code="545" />
+        </control>
+   </page>
+    <help name="ipa" top="10" left="300" width="200" height="100">
+        <graphic type="text" style="bold" color="#000" size="10" top="10" left="0" content="International Phoenetic Alphabet" />
+        <graphic type="text" color="#000" size="6" top="20" left="0" multiline="true" lineHeight="8" content="IPA characters are separated from literary and music braille\nusing beginning/ending markers.\nDiacritics are placed after the letter they modify." />
+        <graphic type="braille" left="0" top="45" height="20" cells="1094,1040,1066,1082,1069,1047,1076,1094,1041" />
+    </help>
+    <help name="literaryBraille" top="10" left="400" width="200" height="100">
+        <graphic type="text" style="bold" color="#000" size="10" top="10" left="0" content="Literary Braille" />
+        <graphic type="text" color="#000" size="6" top="20" left="0" multiline="true" lineHeight="8" content="To include text, use literary braille.\nIf music and text is mixed on a single\nline, use the Text Prefix and Music\nPrefix to switch between systems." />
+    </help>
+</controlModule>

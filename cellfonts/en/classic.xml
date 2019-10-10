@@ -3007,5 +3007,1194 @@
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='_' />
     </cell>
 
+    <cell name="ipa unvoiced alveolar plosive">
+        <code value="1084" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="t" />
+    </cell>
+    <cell name="ipa unvoiced alveolar lateral fricative">
+        <code value="1056" />
+        <code value="1076" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x026c;" />
+    </cell>
+    <cell name="ipa unvoiced bilabial plosive">
+        <code value="1080" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="p" />
+    </cell>
+    <cell name="ipa unvoiced glottal plosive">
+        <code value="1050" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="&#x0294;" />
+    </cell>
+    <cell name="ipa unvoiced labial-velar approximant">
+        <code value="1054" />
+        <code value="1055" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x028d;" />
+    </cell>
+    <cell name="ipa unvoiced palatal plosive">
+        <code value="1067" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="c" />
+    </cell>
+    <cell name="ipa unvoiced retroflex plosive">
+        <code value="1052" />
+        <code value="1084" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0288;" />
+    </cell>
+    <cell name="ipa unvoiced uvular plosive">
+        <code value="1081" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="q" />
+    </cell>
+    <cell name="ipa unvoiced velar plosive">
+        <code value="1075" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="k" />
+    </cell>
+    <cell name="ipa voiced alveolar approximant">
+        <code value="1035" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="&#x0279;" />
+    </cell>
+    <cell name="ipa voiced alveolar lateral flap">
+        <code value="1056" />
+        <code value="1035" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x027a;" />
+    </cell>
+    <cell name="ipa voiced alveolar plosive">
+        <code value="1068" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="d" />
+    </cell>
+    <cell name="ipa voiced bilabial implosive">
+        <code value="1056" />
+        <code value="1066" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0253;" />
+    </cell>
+    <cell name="ipa voiced bilabial plosive">
+        <code value="1066" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="b" />
+    </cell>
+    <cell name="ipa voiced glottal fricative">
+        <code value="1056" />
+        <code value="1072" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0266;" />
+    </cell>
+    <cell name="ipa voiced labial-velar approximant">
+        <code value="1087" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="w" />
+    </cell>
+    <cell name="ipa voiced labiodental approximant">
+        <code value="1056" />
+        <code value="1086" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x028b;" />
+    </cell>
+    <cell name="ipa voiced palatal lateral approximant">
+        <code value="1056" />
+        <code value="1089" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x028e;" />
+    </cell>
+    <cell name="ipa voiced palatal nasal">
+        <code value="1061" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="&#x0272;" />
+    </cell>
+    <cell name="ipa voiced palatal plosive">
+        <code value="1057" />
+        <code value="1074" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x025f;" />
+    </cell>
+    <cell name="ipa voiced retroflex plosive">
+        <code value="1052" />
+        <code value="1068" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0256;" />
+    </cell>
+    <cell name="ipa voiced uvular plosive">
+        <code value="1057" />
+        <code value="1071" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0262;" />
+    </cell>
+    <cell name="ipa voiced velar implosive">
+        <code value="1056" />
+        <code value="1071" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0260;" />
+    </cell>
+    <cell name="ipa voiced velar plosive">
+        <code value="1071" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="g" />
+    </cell>
+
+    <cell name="ipa voiced alveolar lateral approximant">
+        <code value="1076" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="l" />
+    </cell>
+    <cell name="ipa voiced retroflex lateral approximant">
+        <code value="1052" />
+        <code value="1076" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x026d;" />
+    </cell>
+    <cell name="ipa voiced labialized palatal approximant">
+        <code value="1052" />
+        <code value="1072" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0265;" />
+    </cell>
+    <cell name="ipa voiced palatal approximant">
+        <code value="1074" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="j" />
+    </cell>
+    <cell name="ipa unvoiced alveolar fricative">
+        <code value="1083" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="s" />
+    </cell>
+    <cell name="ipa voiced labiodental fricative">
+        <code value="1086" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="v" />
+    </cell>
+    <cell name="ipa unvoiced glottal fricative">
+        <code value="1072" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="h" />
+    </cell>
+    <cell name="ipa unvoiced labiodental fricative">
+        <code value="1070" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="f" />
+    </cell>
+    <cell name="ipa voiced alveolar fricative">
+        <code value="1090" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="z" />
+    </cell>
+    <cell name="ipa unvoiced velar fricative">
+        <code value="1088" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="x" />
+    </cell>
+    <cell name="ipa unvoiced pharyngeal fricative">
+        <code value="1054" />
+        <code value="1072" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0127;" />
+    </cell>
+    <cell name="ipa voiced palatal fricative">
+        <code value="1056" />
+        <code value="1074" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x029d;" />
+    </cell>
+    <cell name="ipa unvoiced palatal fricative">
+        <code value="1054" />
+        <code value="1067" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0063;&#x0327;" />
+    </cell>
+    <cell name="ipa voiced postalveolar fricative">
+        <code value="1033" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="&#x0292;" />
+    </cell>
+    <cell name="ipa unvoiced postalveolar fricative">
+        <code value="1058" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="&#x0283;" />
+    </cell>
+    <cell name="ipa voiced velar fricative">
+        <code value="1046" />
+        <code value="1071" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0263;" />
+    </cell>
+    <cell name="ipa voiced velar approximant">
+        <code value="1056" />
+        <code value="1077" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0270;" />
+    </cell>
+    <cell name="ipa unvoiced uvular fricative">
+        <code value="1046" />
+        <code value="1038" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x03c7;" />
+    </cell>
+    <cell name="ipa voiced uvular fricative">
+        <code value="1057" />
+        <code value="1035" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0281;" />
+    </cell>
+    <cell name="ipa unvoiced bilabial fricative">
+        <code value="1046" />
+        <code value="1070" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0278;" />
+    </cell>
+    <cell name="ipa voiced bilabial fricative">
+        <code value="1046" />
+        <code value="1066" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x03b2;" />
+    </cell>
+    <cell name="ipa unvoiced dental fricative">
+        <code value="1046" />
+        <code value="1063" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x03b8;" />
+    </cell>
+    <cell name="ipa unvoiced retroflex fricative">
+        <code value="1052" />
+        <code value="1083" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0282;" />
+    </cell>
+    <cell name="ipa voiced retroflex tap or flap">
+        <code value="1052" />
+        <code value="1082" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x027d;" />
+    </cell>
+    <cell name="ipa voiced retroflex fricative">
+        <code value="1052" />
+        <code value="1090" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0290;" />
+    </cell>
+    <cell name="ipa unvoiced alveolo-palatal fricative">
+        <code value="1056" />
+        <code value="1067" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0255;" />
+    </cell>
+    <cell name="ipa voiced postalveolar affricate">
+        <code value="1068" />
+        <code value="1034" />
+        <code value="1033" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="150" top="50" content="&#x02a4;" />
+    </cell>
+    <cell name="ipa voiced dental fricative">
+        <code value="1040" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="&#x00f0;" />
+    </cell>
+    <cell name="ipa voiced alveolar tap or flap">
+        <code value="1054" />
+        <code value="1082" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x027e;" />
+    </cell>
+    <cell name="ipa voiced alveolar nasal">
+        <code value="1078" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="n" />
+    </cell>
+    <cell name="ipa voiced velar nasal">
+        <code value="1036" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="&#x14b;" />
+    </cell>
+    <cell name="ipa voiced labiodental nasal">
+        <code value="1054" />
+        <code value="1077" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0271;" />
+    </cell>
+    <cell name="ipa voiced bilabial nasal">
+        <code value="1077" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="m" />
+    </cell>
+    <cell name="ipa voiced alveolar trill">
+        <code value="1082" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="r" />
+    </cell>
+    <cell name="ipa bilabial click">
+        <code value="1038" />
+        <code value="1080" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0298;" />
+    </cell>
+    <cell name="ipa postalveolar click">
+        <code value="1038" />
+        <code value="1058" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x01c2;" />
+    </cell>
+    <cell name="ipa dental click">
+        <code value="1038" />
+        <code value="1063" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x01c0;" />
+    </cell>
+    <cell name="ipa alveolar lateral click">
+        <code value="1038" />
+        <code value="1076" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x01c1;" />
+    </cell>
+    <cell name="ipa voiced pharyngeal fricative">
+        <code value="1054" />
+        <code value="1050" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0295;" />
+    </cell>
+    <cell name="ipa unvoiced postalveolar fricative">
+        <code value="1083" />
+        <code value="1064" />
+        <code value="1056" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="150" top="50" content="&#x0161;" />
+    </cell>
+    <cell name="ipa voiced alveolar implosive">
+        <code value="1056" />
+        <code value="1068" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0257;" />
+    </cell>
+    <cell name="ipa voiced retroflex approximant">
+        <code value="1052" />
+        <code value="1035" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x027b;" />
+    </cell>
+    <cell name="ipa voiced uvular implosive">
+        <code value="1056" />
+        <code value="1057" />
+        <code value="1092" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="150" top="50" content="&#x029b;" />
+    </cell>
+    <cell name="ipa voiced palatal implosive">
+        <code value="1056" />
+        <code value="1057" />
+        <code value="1052" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="150" top="50" content="&#x0284;" />
+    </cell>
+    <cell name="ipa unvoiced postalveolar-velar fricative">
+        <code value="1056" />
+        <code value="1036" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0267;" />
+    </cell>
+    <cell name="ipa voiced velar lateral approximant">
+        <code value="1057" />
+        <code value="1076" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x029f;" />
+    </cell>
+    <cell name="ipa voiced alveolo-palatal fricative">
+        <code value="1056" />
+        <code value="1090" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0291;" />
+    </cell>
+    <cell name="ipa unvoiced alveolo-palatal affricate">
+        <code value="1084" />
+        <code value="1034" />
+        <code value="1056" />
+        <code value="1067" />
+        <graphic type="background" color="#fff" cells="4" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="200" top="50" content="&#x02a8;" />
+    </cell>
+    <cell name="ipa voiced labiodental tap or flap">
+        <code value="1054" />
+        <code value="1086" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x2c71;" />
+    </cell>
+    <cell name="ipa voiced bilabial trill">
+        <code value="1057" />
+        <code value="1066" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0299;" />
+    </cell>
+    <cell name="ipa voiced retroflex nasal">
+        <code value="1052" />
+        <code value="1078" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0273;" />
+    </cell>
+    <cell name="ipa unvoiced epiglottal plosive">
+        <code value="1056" />
+        <code value="1050" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x02a1;" />
+    </cell>
+    <cell name="ipa voiced uvular trill">
+        <code value="1057" />
+        <code value="1082" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0280;" />
+    </cell>
+    <cell name="ipa unvoiced alveolar affricate">
+        <code value="1084" />
+        <code value="1034" />
+        <code value="1083" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="150" top="50" content="&#x02a6;" />
+    </cell>
+    <cell name="ipa alveolar click">
+        <code value="1038" />
+        <code value="1084" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x01c3;" />
+    </cell>
+    <cell name="ipa voiced alveolar affricate">
+        <code value="1068" />
+        <code value="1034" />
+        <code value="1090" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="150" top="50" content="&#x02a3;" />
+    </cell>
+    <cell name="ipa unvoiced postalveolar affricate">
+        <code value="1084" />
+        <code value="1034" />
+        <code value="1058" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="150" top="50" content="&#x02a7;" />
+    </cell>
+    <cell name="ipa voiced postalveolar affricate">
+        <code value="1074" />
+        <code value="1064" />
+        <code value="1056" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="150" top="50" content="&#x01f0;" />
+    </cell>
+    <cell name="ipa unvoiced postalveolar affricate">
+        <code value="1067" />
+        <code value="1064" />
+        <code value="1056" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="150" top="50" content="&#x010d;" />
+    </cell>
+    <cell name="ipa unvoiced epiglottal fricative">
+        <code value="1057" />
+        <code value="1072" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x029c;" />
+    </cell>
+    <cell name="ipa voiced alveolar lateral fricative">
+        <code value="1076" />
+        <code value="1034" />
+        <code value="1033" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="150" top="50" content="&#x026e;" />
+    </cell>
+    <cell name="ipa voiced velarized alveolar lateral approximant">
+        <code value="1054" />
+        <code value="1076" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x026b;" />
+    </cell>
+    <cell name="ipa voiced postalveolar fricative">
+        <code value="1090" />
+        <code value="1064" />
+        <code value="1056" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="150" top="50" content="&#x017e;" />
+    </cell>
+    <cell name="ipa voiced alveolopalatal fricative">
+        <code value="1068" />
+        <code value="1034" />
+        <code value="1056" />
+        <code value="1090" />
+        <graphic type="background" color="#fff" cells="4" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="200" top="50" content="&#x02a5;" />
+    </cell>
+    <cell name="ipa voiced uvular nasal">
+        <code value="1057" />
+        <code value="1078" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0274;" />
+    </cell>
+    <cell name="ipa voiced epiglottal fricative">
+        <code value="1057" />
+        <code value="1050" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x02a2;" />
+    </cell>
+
+    <cell name="ipa unrounded front open-mid vowel">
+        <code value="1062" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="&#x025b;" />
+    </cell>
+    <cell name="ipa unrounded front near-open vowel">
+        <code value="1037" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="&#x00e6;" />
+    </cell>
+    <cell name="ipa unrounded back open-mid vowel">
+        <code value="1043" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="&#x028c;" />
+    </cell>
+    <cell name="ipa unrounded central open-mid vowel">
+        <code value="1054" />
+        <code value="1062" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x025c;" />
+    </cell>
+    <cell name="ipa unrounded front close-mid vowel">
+        <code value="1069" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="e" />
+    </cell>
+    <cell name="ipa rounded back open-mid vowel">
+        <code value="1060" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="&#x0254;" />
+    </cell>
+    <cell name="ipa rounded back close-mid vowel">
+        <code value="1079" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="o" />
+    </cell>
+    <cell name="ipa rounded front close vowel">
+        <code value="1089" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="y" />
+    </cell>
+    <cell name="ipa rounded near-back near-close vowel">
+        <code value="1040" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="&#x028a;" />
+    </cell>
+    <cell name="ipa unrounded near-front near-close vowel">
+        <code value="1047" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="&#x026a;" />
+    </cell>
+    <cell name="ipa rounded near-front near-close vowel">
+        <code value="1057" />
+        <code value="1089" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x028f;" />
+    </cell>
+    <cell name="ipa rounded front open-mid vowel">
+        <code value="1091" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="&#x0153;" />
+    </cell>
+    <cell name="ipa unrounded back close vowel">
+        <code value="1054" />
+        <code value="1085" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x026f;" />
+    </cell>
+    <cell name="ipa unrounded front close vowel">
+        <code value="1073" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="i" />
+    </cell>
+    <cell name="ipa rounded back close vowel">
+        <code value="1085" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="u" />
+    </cell>
+    <cell name="ipa unrounded back open vowel">
+        <code value="1042" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="&#x0251;" />
+    </cell>
+    <cell name="ipa unrounded front open vowel">
+        <code value="1065" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="a" />
+    </cell>
+    <cell name="ipa central mid vowel">
+        <code value="1053" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="&#x0259;" />
+    </cell>
+    <cell name="ipa rounded central open-mid vowel">
+        <code value="1056" />
+        <code value="1062" />
+        <graphic type="background" color="#fff" cells="2"/>
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x025e;" />
+    </cell>
+    <cell name="ipa rounded central close-mid vowel">
+        <code value="1048" />
+        <code value="1079" />
+        <graphic type="background" color="#fff" cells="2"/>
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0275;" />
+    </cell>
+    <cell name="ipa unrounded central close-mid vowel">
+        <code value="1054" />
+        <code value="1069" />
+        <graphic type="background" color="#fff" cells="2"/>
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0258;" />
+    </cell>
+    <cell name="ipa rounded central close vowel">
+        <code value="1048" />
+        <code value="1085" />
+        <graphic type="background" color="#fff" cells="2"/>
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0289;" />
+    </cell>
+    <cell name="ipa unrounded central close vowel">
+        <code value="1048" />
+        <code value="1073" />
+        <graphic type="background" color="#fff" cells="2"/>
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0268;" />
+    </cell>
+    <cell name="ipa rounded back open vowel">
+        <code value="1054" />
+        <code value="1042" />
+        <graphic type="background" color="#fff" cells="2"/>
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0252;" />
+    </cell>
+    <cell name="ipa rounded front open vowel">
+        <code value="1057" />
+        <code value="1091" />
+        <graphic type="background" color="#fff" cells="2"/>
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0276;" />
+    </cell>
+    <cell name="ipa central near-open vowel">
+        <code value="1054" />
+        <code value="1065" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0250;" />
+    </cell>
+    <cell name="ipa unrounded back close-mid vowel">
+        <code value="1054" />
+        <code value="1079" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0264;" />
+    </cell>
+    <cell name="ipa rounded front close-mid vowel">
+        <code value="1092" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="&#x00f8;" />
+    </cell>
+
+    <cell name="ipa begin ipa transcription">
+        <code value="1094" />
+        <code value="1040" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="20" left="100" top="35" content="BEGIN" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="30" left="100" top="60" content="IPA" />
+    </cell>
+    <cell name="ipa end ipa transcription">
+        <code value="1094" />
+        <code value="1041" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="20" left="100" top="35" content="END" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="30" left="100" top="60" content="IPA" />
+    </cell>
+    <cell name="ipa non-ipa symbol">
+        <code value="1059" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="17" left="35" top="50" content="NON-IPA" rotate="270" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="17" left="65" top="50" content="SYMBOL" rotate="270" />
+    </cell>
+    <cell name="ipa begin or end phonemic transcription">
+        <code value="1094" />
+        <code value="1047" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="20" left="100" top="35" content="BEGIN/END" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="20" left="100" top="65" content="PHONEMIC" />
+    </cell>
+    <cell name="ipa begin non-ipa characters">
+        <code value="1059" />
+        <code value="1059" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="20" left="100" top="35" content="BEGIN" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="20" left="100" top="65" content="NON-IPA" />
+    </cell>
+    <cell name="ipa end non-ipa characters">
+        <code value="1059" />
+        <code value="1050" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="20" left="100" top="35" content="END" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="20" left="100" top="65" content="NON-IPA" />
+    </cell>
+    <cell name="ipa pause">
+        <code value="1049" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="," />
+    </cell>
+    <cell name="ipa rewrite arrow">
+        <code value="1095" />
+        <code value="1079" />
+        <graphic type="background" color="#fff" cells="2"/>
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x2192;" />
+    </cell>
+    <cell name="ipa downstep">
+        <code value="1095" />
+        <code value="1033" />
+        <graphic type="background" color="#fff" cells="2"/>
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x2193;" />
+    </cell>
+    <cell name="ipa upset">
+        <code value="1095" />
+        <code value="1036" />
+        <graphic type="background" color="#fff" cells="2"/>
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x2191;" />
+    </cell>
+    <cell name="ipa global fall">
+        <code value="1095" />
+        <code value="1048" />
+        <graphic type="background" color="#fff" cells="2"/>
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x2198;" />
+    </cell>
+    <cell name="ipa global rise">
+        <code value="1095" />
+        <code value="1068" />
+        <graphic type="background" color="#fff" cells="2"/>
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x2197;" />
+    </cell>
+
+    <cell name="ipa unvoiced diacritic">
+        <code value="1044" />
+        <code value="1036" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x02f3;" />
+    </cell>
+    <cell name="ipa voiced diacritic">
+        <code value="1044" />
+        <code value="1056" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x02ec;" />
+    </cell>
+    <cell name="ipa more rounded diacritic">
+        <code value="1044" />
+        <code value="1079" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="110" top="50" content="&#x0339;" />
+    </cell>
+    <cell name="ipa less rounded diacritic">
+        <code value="1044" />
+        <code value="1091" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="110" top="50" content="&#x031c;" />
+    </cell>
+    <cell name="ipa advanced diacritic">
+        <code value="1044" />
+        <code value="1043" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="98" top="60" content="&#x02d6;" />
+    </cell>
+    <cell name="ipa retracted diacritic">
+        <code value="1039" />
+        <code value="1045" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x02cd;" />
+    </cell>
+    <cell name="ipa centralized diacritic">
+        <code value="1064" />
+        <code value="1051" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="105" top="50" content="&#x0308;" />
+    </cell>
+    <cell name="ipa nasalized diacritic">
+        <code value="1064" />
+        <code value="1093" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="105" top="50" content="&#x0303;" />
+    </cell>
+    <cell name="ipa mid-centralized diacritic">
+        <code value="1064" />
+        <code value="1088" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="40" content="&#x02df;" />
+    </cell>
+    <cell name="ipa syllabic diacritic">
+        <code value="1044" />
+        <code value="1050" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x02cc;" />
+    </cell>
+    <cell name="ipa non-syllabic diacritic">
+        <code value="1044" />
+        <code value="1041" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="105" top="50" content="&#x032f;" />
+    </cell>
+    <cell name="ipa aspirated diacritic">
+        <code value="1064" />
+        <code value="1072" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="140" top="50" content="&#x02b0;" />
+    </cell>
+    <cell name="ipa velarized diacritic">
+        <code value="1064" />
+        <code value="1046" />
+        <code value="1092" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="150" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="185" top="45" content="&#x02e0;" />
+    </cell>
+    <cell name="ipa rhoticity diacritic">
+        <code value="1034" />
+        <code value="1082" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="130" top="45" content="&#x02de;" />
+    </cell>
+    <cell name="ipa breathy voiced diacritic">
+        <code value="1044" />
+        <code value="1051" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="105" top="50" content="&#x0324;" />
+    </cell>
+    <cell name="ipa creaky voiced diacritic">
+        <code value="1044" />
+        <code value="1093" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="57" content="&#x02f7;" />
+    </cell>
+    <cell name="ipa linguolabial diacritic">
+        <code value="1044" />
+        <code value="1038" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="105" top="50" content="&#x033c;" />
+    </cell>
+    <cell name="ipa labialized diacritic">
+        <code value="1064" />
+        <code value="1055" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="140" top="50" content="&#x02b7;" />
+    </cell>
+    <cell name="ipa raised diacritic">
+        <code value="1044" />
+        <code value="1062" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="60" content="&#x02d4;" />
+    </cell>
+    <cell name="ipa lowered diacritic">
+        <code value="1044" />
+        <code value="1060" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="60" content="&#x02d5;" />
+    </cell>
+    <cell name="ipa advanced tongue root diacritic">
+        <code value="1044" />
+        <code value="1058" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0318;" />
+    </cell>
+    <cell name="ipa retracted tongue root diacritic">
+        <code value="1044" />
+        <code value="1083" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="105" top="50" content="&#x0319;" />
+    </cell>
+    <cell name="ipa dental diacritic">
+        <code value="1044" />
+        <code value="1063" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="105" top="50" content="&#x032a;" />
+    </cell>
+    <cell name="ipa apical diacritic">
+        <code value="1044" />
+        <code value="1054" />
+        <code value="1062" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="150" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="150" top="60" content="&#x02fd;" />
+    </cell>
+    <cell name="ipa nasal release diacritic">
+        <code value="1064" />
+        <code value="1078" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="140" top="50" content="&#x207f;" />
+    </cell>
+    <cell name="ipa lateral release diacritic">
+        <code value="1064" />
+        <code value="1076" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="130" top="50" content="&#x02e1;" />
+    </cell>
+    <cell name="ipa ejective diacritic">
+        <code value="1034" />
+        <code value="1039" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="80" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="115" top="50" content="&#x02bc;" />
+    </cell>
+    <cell name="ipa velarized or pharyngealized diacritic">
+        <code value="1034" />
+        <code value="1093" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="105" top="50" content="&#x0334;" />
+    </cell>
+    <cell name="ipa palatalized diacritic">
+        <code value="1064" />
+        <code value="1074" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="80" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="115" top="50" content="&#x02b2;" />
+    </cell>
+    <cell name="ipa laminal diacritic">
+        <code value="1044" />
+        <code value="1055" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="107" top="50" content="&#x033b;" />
+    </cell>
+    <cell name="ipa no audible release diacritic">
+        <code value="1064" />
+        <code value="1068" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="95" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="120" top="50" content="&#x02fa;" />
+    </cell>
+    <cell name="ipa extra high level tone diacritic">
+        <code value="1064" />
+        <code value="1044" />
+        <code value="1047" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="150" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="158" top="50" content="&#x030b;" />
+    </cell>
+    <cell name="ipa high level tone diacritic">
+        <code value="1064" />
+        <code value="1047" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="110" top="50" content="&#x0301;" />
+    </cell>
+    <cell name="ipa mid level tone diacritic">
+        <code value="1064" />
+        <code value="1067" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="105" top="50" content="&#x0304;" />
+    </cell>
+    <cell name="ipa low level tone diacritic">
+        <code value="1064" />
+        <code value="1042" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0300;" />
+    </cell>
+    <cell name="ipa extra low level tone diacritic">
+        <code value="1064" />
+        <code value="1044" />
+        <code value="1042" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="102" top="50" content="&#x030f;" />
+    </cell>
+    <cell name="ipa rising contour tone diacritic">
+        <code value="1064" />
+        <code value="1056" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="105" top="50" content="&#x030c;" />
+    </cell>
+    <cell name="ipa falling contour tone diacritic">
+        <code value="1064" />
+        <code value="1037" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="105" top="50" content="&#x0302;" />
+    </cell>
+    <cell name="ipa affricate or double articulation diacritic">
+        <code value="1034" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="28" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="68" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="40" top="45" content="&#x0361;" />
+    </cell>
+    <cell name="ipa high-rising contour tone diacritic">
+        <code value="1064" />
+        <code value="1073" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="105" top="45" content="&#x1dc4;" />
+    </cell>
+    <cell name="ipa low-rising contour tone diacritic">
+        <code value="1064" />
+        <code value="1057" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="105" top="45" content="&#x1dc5;" />
+    </cell>
+    <cell name="ipa rising-falling contour tone diacritic">
+        <code value="1064" />
+        <code value="1052" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="105" top="45" content="&#x1dc8;" />
+    </cell>
+    <cell name="ipa pharyngealized diacritic">
+        <code value="1064" />
+        <code value="1054" />
+        <code value="1050" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="150" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="180" top="50" content="&#x02e4;" />
+    </cell>
+
+    <cell name="ipa extra high level tone letter">
+        <code value="1095" />
+        <code value="1064" />
+        <code value="1067" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="150" top="50" content="&#x02e5;" />
+    </cell>
+    <cell name="ipa high level tone letter">
+        <code value="1095" />
+        <code value="1067" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x02e6;" />
+    </cell>
+    <cell name="ipa mid level tone letter">
+        <code value="1095" />
+        <code value="1051" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x02e7;" />
+    </cell>
+    <cell name="ipa low level tone letter">
+        <code value="1095" />
+        <code value="1045" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x02e8;" />
+    </cell>
+    <cell name="ipa extra low level tone letter">
+        <code value="1095" />
+        <code value="1044" />
+        <code value="1045" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="150" top="50" content="&#x02e9;" />
+    </cell>
+    <cell name="ipa rising contour tone letter">
+        <code value="1095" />
+        <code value="1047" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x02e9;&#x02e5;" />
+    </cell>
+    <cell name="ipa falling contour tone letter">
+        <code value="1095" />
+        <code value="1042" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x02e5;&#x02e9;" />
+    </cell>
+    <cell name="ipa high-rising contour tone letter">
+        <code value="1095" />
+        <code value="1073" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x02e7;&#x02e5;" />
+    </cell>
+    <cell name="ipa low-rising contour tone letter">
+        <code value="1095" />
+        <code value="1057" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x02e9;&#x02e7;" />
+    </cell>
+    <cell name="ipa rising-falling contour tone letter">
+        <code value="1095" />
+        <code value="1052" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x02e8;&#x02e5;&#x02e8;" />
+    </cell>
+
+    <cell name="ipa long suprasegmental">
+        <code value="1051" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="37" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="74" top="45" content="&#x02d0;" />
+    </cell>
+    <cell name="ipa half-long suprasegmental">
+        <code value="1034" />
+        <code value="1049" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="87" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="124" top="45" content="&#x02d1;" />
+    </cell>
+    <cell name="ipa extra-short suprasegmental">
+        <code value="1064" />
+        <code value="1040" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="100" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="105" top="50" content="&#x0306;" />
+    </cell>
+    <cell name="ipa syllable break suprasegmental">
+        <code value="1039" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="." />
+    </cell>
+    <cell name="ipa minor group suprasegmental">
+        <code value="1095" />
+        <code value="1092" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x007c;" />
+    </cell>
+    <cell name="ipa major group suprasegmental">
+        <code value="1095" />
+        <code value="1061" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x2016;" />
+    </cell>
+    <cell name="ipa stress suprasegmental">
+        <code value="1095" />
+        <code value="1066" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="102" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="80" top="50" content="&#x02c8;" />
+    </cell>
+    <cell name="ipa secondary stress suprasegmental">
+        <code value="1095" />
+        <code value="1050" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="102" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="80" top="45" content="&#x02cc;" />
+    </cell>
+    <cell name="ipa linking suprasegmental">
+        <code value="1095" />
+        <code value="1076" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="78" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#ccc" align="center" baseline="middle" size="50" left="118" top="50" content="&#x25cc;" />
+        <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="55" content="&#x203f;" />
+    </cell>
 
 </cellFontModule>
