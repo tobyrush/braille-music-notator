@@ -3294,7 +3294,7 @@
         <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="150" top="50" content="&#x02a4;" />
     </cell>
     <cell name="ipa voiced dental fricative">
-        <code value="1040" />
+        <code value="1093" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="50" top="50" content="&#x00f0;" />
     </cell>

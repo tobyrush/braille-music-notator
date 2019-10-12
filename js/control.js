@@ -263,6 +263,9 @@ class controlModule {
     onTextPage() {
         return this.pages[this.currentPage].isText;
     }
+    onIPAPage() {
+        return this.pages[this.currentPage].isIPA;
+    }
 }
 
 class controlPage {
@@ -270,6 +273,7 @@ class controlPage {
         this.root = root;
         this.name = xml.getAttribute('name');
         this.isText = (xml.getAttribute('isText')=='true');
+        this.isIPA = (xml.getAttribute('isIPA')=='true');
         this.controlItems = [];
         this.indicators = [];
         this.currentHelp = this.root.defaultHelp();

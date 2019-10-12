@@ -1,4 +1,4 @@
-/* global dropzone, drawNotation, window, reader, fileUploader, saveToUndo, suspendUndo, score, hScroll, vScroll, setScrollVars, parseFiles, isLowASCII, setScore, cursor, scoreWidth, showPageBreaks, pageWidth, pageHeight, document, MouseEvent, currentBeatUnit, kFileNameBRF, kFileNameBRM, kPrefixAbbreviations, kWordAbbreviations, kTextAbbreviations, kCommonWords, currentFileName, shiftKeyDown, confirm, kUnsavedChangesDialogMessage, clearDocument, resetCursorAndScroll, removeExtension, DOMParser, sendHTTPPostRequest, XMLSerializer, FormData, Blob, scoreIsEmpty, fileLoading: true */
+/* global dropzone, drawNotation, window, reader, fileUploader, saveToUndo, suspendUndo, score, hScroll, vScroll, setScrollVars, parseFiles, isLowASCII, setScore, cursor, scoreWidth, showPageBreaks, pageWidth, pageHeight, document, MouseEvent, currentBeatUnit, kFileNameBRF, kFileNameBRM, kPrefixAbbreviations, kWordAbbreviations, kTextAbbreviations, kCommonWords, currentFileName, shiftKeyDown, confirm, kUnsavedChangesDialogMessage, clearDocument, resetCursorAndScroll, removeExtension, DOMParser, sendHTTPPostRequest, XMLSerializer, FormData, Blob, scoreIsEmpty, fileLoading, ipaBrailleMap: true */
 /* jshint -W020 */
 /* jshint -W100 */
 
@@ -331,6 +331,24 @@ function checkForMusicSanity(s) {
     } else {
         return s;
     }
+}
+
+function parseIPA(fileData) {
+    // use ipaBrailleMap() to convert
+    var s = fileData.split("");
+    var i,n = "";
+    s.forEach(function(t) {
+        i = ipaBrailleMap[t.charCodeAt(0)];
+        if (i) {
+            i.forEach(function(u) {
+                n = n + String.fromCharCode(u);
+            });
+        } else {
+            n = n + t;
+        }
+    });
+
+    return n;
 }
 
 function parseText(fileData) {

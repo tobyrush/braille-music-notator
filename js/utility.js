@@ -1,4 +1,4 @@
-/* global window, XMLHttpRequest, ActiveXObject, phpRootAddress, navigator, saveToUndo, suspendUndo, cursor, deleteScore, whichKeyboard, parseFiles, parseData, setScore, drawNotation, clipboardArea, score, rotateChar, convertToText, document, gridWidth, gridHeight, unicodeBrailleMap, currentControlModule, parseText, Document, cellValIsEmpty, clipboardBackup, getScore: true */
+/* global window, XMLHttpRequest, ActiveXObject, phpRootAddress, navigator, saveToUndo, suspendUndo, cursor, deleteScore, whichKeyboard, parseFiles, parseData, setScore, drawNotation, clipboardArea, score, rotateChar, convertToText, document, gridWidth, gridHeight, unicodeBrailleMap, currentControlModule, parseText, Document, cellValIsEmpty, clipboardBackup, getScore, parseIPA, showPageBreaks, pageWidth: true */
 /* jshint -W020, -W084 */
 
 function findPos(obj) { // from http://www.quirksmode.org/js/findpos.html
@@ -126,6 +126,7 @@ function handleClipboard(e) {
 			var clipboardData=e.clipboardData.getData('text/plain');
             var fromBMN = (e.clipboardData.getData('src')=='bmn');
 			var convertToText = currentControlModule.onTextPage();
+            var convertToIPA = currentControlModule.onIPAPage();
 			if (clipboardData==="") {
 				clearSelection();
 			} else {
@@ -142,7 +143,9 @@ function handleClipboard(e) {
 				
 				if (!fromBMN && parseFiles) {
 					if (convertToText) {
-                        clipboardData = parseText(clipboardData);
+                        clipboardData = wrapToPage(parseText(clipboardData));
+                    } else if (convertToIPA) {
+                        clipboardData = wrapToPage(parseIPA(clipboardData));
                     } else {
                         if (isLowASCII(clipboardData)) {
                             clipboardData = parseData(clipboardData);
@@ -189,6 +192,41 @@ function handleClipboard(e) {
 			break;
 	}
 	drawNotation();
+}
+
+function wrapToPage(s) {
+    if (showPageBreaks) {
+        var w,r=[],l=0;
+        while (s.length) {
+            w=s.split(" ")[0];
+            if (w.length >= pageWidth) {
+                if (r[l] && r[l].length) {
+                    l++;
+                    r[l] = w;
+                    l++;
+                } else {
+                    r[l] = w;
+                    l++;
+                }
+            } else {
+                if ((r[l] && (r[l].length + 1 + w.length) > pageWidth)) {
+                    l++;
+                    r[l] = w;
+                } else {
+                    if (r[l]) {
+                        r[l] = r[l] + " " + w;
+                    } else {
+                        r[l] = w;
+                    }
+
+                }
+            }
+            s = s.slice(w.length).trim();
+        }
+        return r.join(String.fromCharCode(13));
+    } else {
+        return s;
+    }
 }
 
 function focusClipboard() {
