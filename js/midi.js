@@ -1,4 +1,5 @@
 /* global midiConnected, midiNotes, notate, octaveValues, restValues, sharpNoteValues, flatNoteValues, drawNotation, octaveCharValues, pitchValues, score, cursor, insertOctaveSymbols, getScoreLine, diatonicNoteValues, observeKeySignatures, spellChordsDownward, intervalValues, intervalCharValues: true */
+/* jshint esversion: 6 */
 /* jshint -W020 */
 
 function onMIDISuccess(midiAccess) {

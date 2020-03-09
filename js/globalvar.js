@@ -1,4 +1,5 @@
 /* global FileReader, importData, arrayHasOwnIndex, drawNotation, createCookie, eraseCookie, readCookie, convertScoreToString, convertStringToScore, eraseAllCookies, padLeft, document, kDefaultFilename, setCellHeight, setControlModule, checkFileType, window, speechSynthesizer: true */
+/* jshint esversion: 6 */
 
 // global variables
 

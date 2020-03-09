@@ -1,4 +1,5 @@
 /* global helpDialogOpen, optionsDialogOpen, fileDialogOpen, findPos, notationArea, hScrollOffset, gridWidth, hScrollUnits, vScrollOffset, gridHeight, vScrollUnits, shiftKeyDown, cursor, mouseIsDown, closeButtonCenterX, closeButtonCenterY, dialogButtonLeft, dialogButtonRight, dialogButtonTop, dialogButtonHeight, showSmallDots, setCellHeight, showPageBreaks, setPageSize, pageWidth, pageHeight, confirm, clearDocument, resetCursorAndScroll, fileUploader, downloadFile, parseFiles, drawTitle, drawNotation, updateScreenreader, window, autoScroller, autoScrollXDir, autoScrollYDir, notationWidth, notationHeight, startDragX, startDragY, vScroll, hScroll, chu, controlArea, resizeBarHeight, resizeBarDrag, resizeBarDragOrigin, container, whichKeyboard, keyboardOriginX, keyboardOriginY, keyboardCoordinates, interpretKeyCode, keyCodes, drawControls, controlHelp, keyHelp, resizeBarPosition, initializeCanvases, titleArea, titleWidth, titleHeight, toggleHelpDialog, toggleOptionsDialog, toggleFileDialog, thu, kbu, nu, kUnsavedChangesDialogMessage, currentControlModule, currentCellFont, kTitleAreaHeight, kDialogWidth: true */
+/* jshint esversion: 6 */
 /* jshint -W020 */
 
 

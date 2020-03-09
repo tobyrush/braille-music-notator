@@ -1,4 +1,5 @@
 /* global mkStr, defaultControlModule, defaultCellFont, controlModules, selectedControlModule: true */
+/* jshint esversion: 6 */
 /* jshint -W046 */
 /* jshint -W020 */
 /* jshint -W069 */

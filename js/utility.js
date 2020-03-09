@@ -1,4 +1,5 @@
 /* global window, XMLHttpRequest, ActiveXObject, phpRootAddress, navigator, saveToUndo, suspendUndo, cursor, deleteScore, whichKeyboard, parseFiles, parseData, setScore, drawNotation, clipboardArea, score, rotateChar, convertToText, document, gridWidth, gridHeight, unicodeBrailleMap, currentControlModule, parseText, Document, cellValIsEmpty, clipboardBackup, getScore, parseIPA, showPageBreaks, pageWidth: true */
+/* jshint esversion: 6 */
 /* jshint -W020, -W084 */
 
 function findPos(obj) { // from http://www.quirksmode.org/js/findpos.html

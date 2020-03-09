@@ -1,4 +1,5 @@
 /* global versionString, devMode, container, document, notationArea, window, doKeyDown, doKeyUp, doWindowMouseUp, doWindowMouseMove, handleClipboard, fileUploader, doFileOpen, doNotationMouseDown, doNotationMouseUp, doNotationMouseMove, doNotationDragOver, doNotationDragEnter, doNotationDragLeave, doNotationDrop, doNotationMouseWheel, controlArea, doControlMouseDown, doControlMouseMove, doControlMouseOut, titleArea, doTitleMouseDown, cctx, tctx, ctx, clipboardArea, cursor, loadCookie, initializeTitle, initializeNotation, initializeControls, resizeBarPosition, localize, currentFileName, kDefaultFilename, drawNotation, currentControlModule, navigator, onMIDISuccess, onMIDIFailure, currentLocale, doWindowBlur, loadPreferences, doFileLoad, speaker, speechSynthesizer: true */
+/* jshint esversion: 6 */
 /* jshint -W020 */
 
 function initialize() {

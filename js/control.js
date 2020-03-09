@@ -1,4 +1,5 @@
 /* global titleArea, tctx, versionString, helpDialogOpen, roundRect, optionsDialogOpen, fileDialogOpen, controlArea, cctx, whichKeyboard, keyboardCoordinates, keymap, keycaps, displayControlHelp, cursor, hScroll, vScroll, controlsHeight, controlsWidth, chu, resizeBarHeight, keyboardOriginX, keyboardOriginY, kbu, controlHelpOriginX, controlHelpOriginY, console, shiftKeyDown, metaKeyDown, formFill, kProgramTitle, kVersionAndAuthor, kHelpButtonCaption, kOptionsButtonCaption, kFileButtonCaption, sendHTTPRequest, defaultControlModule, DOMParser, currentControlModule, updateScreenreader, kScreenReaderControlPageNumber, createTemporaryGrid, gridWidth, gridHeight, releaseTemporaryGrid, document, devMode, score, drawStoredScore, notate, tempGrid, drawNotation, currentCellFont, notationArea, notateMIDINotes, selectedControlModule, kControlChangeSymbol, toggleControlSelectionDialog, window, findPos, updateEnabledFlags, spellChordsDownward, currentLocale, controlModules, switchControls: true */
+/* jshint esversion: 6 */
 /* jshint -W020 */
 
 function initializeControls(forceLoad = false) {

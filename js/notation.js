@@ -1,4 +1,5 @@
 /* global notationArea, currentCellFont, sendHTTPRequest, defaultCellFont, gridHeight, notationGridHeight, gridWidth, notationGridWidth, notationCellWidth, notationCellHeight, ctx, showPageBreaks, pageWidth, hScrollUnits, hScrollOffset, hScroll, vScrollUnits, vScrollOffset, pageHeight, score, arrayHasOwnIndex, cursor, devMode, getScore, gh, gw, dropzone, kDropFileZoneMessage, optionsDialogOpen, fileDialogOpen, drawOptionsDialog, drawFileDialog, vScroll, setScore, updateScreenreader, formFill, kScreenReaderTemplate, characterName, saveToUndo, brailleDots, showSmallDots, graphic, cellIsEmpty, cellValIsEmpty, translateBrailleDefault, kProgramTitle, kVersionAndAuthor, versionString, helpDialogOpen, roundRect, kHelpButtonCaption, kOptionsButtonCaption, kFileButtonCaption, kTitleAreaHeight, document, kDialogWidth, window, setNodeValue, fileLoading, kFileLoadingMessage, kFileLoadingCreditMessage, kFileLoadingBrailleMUSE, kFileLoadingURL: true */
+/* jshint esversion: 6 */
 /* jshint -W020 */
 
 function drawTitle() {

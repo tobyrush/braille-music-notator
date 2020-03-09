@@ -1,4 +1,5 @@
 /* global document, cursor, score, useBrailleDisplay, checkContiguousCells, checkPreviousCell, ctx, formFill, kScreenReaderTemplate, getCellContext, kCharNames, kDotsPrefix, brailleDots, speechSynthesizer, SpeechSynthesisUtterance, speaker: true */
+/* jshint esversion: 6 */
 
 function updateScreenreader(msg) {
 	if (useBrailleDisplay) {
