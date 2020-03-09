@@ -669,12 +669,12 @@
     <cell name="figure eight">
         <code value="256" />
         <graphic type="background" color="#ff0" />
-        <graphic type="text" color="#000" align="center" baseline="middle" size="80" left="50" top="60" content="&#xea60;" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="80" left="50" top="60" content="&#xea5f;" />
     </cell>
     <cell name="figure nine">
         <code value="257" />
         <graphic type="background" color="#ff0" />
-        <graphic type="text" color="#000" align="center" baseline="middle" size="80" left="50" top="60" content="&#xea61;" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="80" left="50" top="60" content="&#xea60;" />
     </cell>
     <cell name="tuplet prefix">
         <code value="295" />

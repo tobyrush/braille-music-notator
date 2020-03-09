@@ -327,6 +327,8 @@ function interpretKeyCode(e) {
                 break;
             case "MetaLeft":
             case "MetaRight":
+            case "OSLeft":
+            case "OSRight":
                 if (isMacOS()) {
                     metaKeyDown = true;
                     focusClipboard();
