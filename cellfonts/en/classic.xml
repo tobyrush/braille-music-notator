@@ -2130,7 +2130,7 @@
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="HIS" />
     </cell>
     <cell name="text contraction immediate" discrete="1">
-        <code value="572" />
+        <code value="573" />
         <code value="577" />
         <code value="577" />
         <graphic type="background" color="#fff" cells="3" />
@@ -3516,7 +3516,7 @@
         <graphic type="background" color="#fff" cells="3" />
         <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="150" top="50" content="&#x017e;" />
     </cell>
-    <cell name="ipa voiced alveolopalatal fricative">
+    <cell name="ipa voiced alveolo-palatal fricative">
         <code value="1068" />
         <code value="1034" />
         <code value="1056" />
