@@ -761,7 +761,7 @@ function sendToBrailleMUSE(xmlFile) {
     formData.append("upload_m", blob4, currentFileName);
 
     var request = new window.XMLHttpRequest();
-    request.open("POST","http://tk2-250-34589.vs.sakura.ne.jp/BrailleMUSE/servlet/BrailleMuseForToby_c2",true);
+    request.open("POST","https://www.braillemuse.net/BrailleMUSE/servlet/BrailleMuseForToby_c2",true);
     request.setRequestHeader("Accept", "application/json, text/javascript, */*; q=0.01");
     request.setRequestHeader("Accept-Language","en-us");
     request.onload = function() {
