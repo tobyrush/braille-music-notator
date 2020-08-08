@@ -3160,8 +3160,8 @@ function initializeBMViewers() {
 		viewers.push(currentViewer);
 		currentViewer.loadScore();
 		currentViewer.initializeNotation();
-        currentViewer.addEventListener("keydown",currentViewer.doKeyDown,false);
-        currentViewer.addEventListener("keyup",currentViewer.doKeyUp,false);
+        currentViewer.canvas.addEventListener("keydown",currentViewer.doKeyDown,false);
+        currentViewer.canvas.addEventListener("keyup",currentViewer.doKeyUp,false);
         // keydown and keyup require tabindex to be set on the canvas (see stackoverflow.com/questions/12886286)
 	}
 }
