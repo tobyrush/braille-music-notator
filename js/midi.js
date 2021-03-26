@@ -21,7 +21,9 @@ function getMIDIMessage(midiMessage) {
     var note = midiMessage.data[1];
     var velocity = midiMessage.data[2];
     switch (command) {
+        case 140:
         case 144:
+        case 156:
             if (velocity>0) {
                 midiNoteOn(note);
             } else {
