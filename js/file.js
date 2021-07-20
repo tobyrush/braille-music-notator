@@ -69,7 +69,7 @@ function doOpenFile() {
 }
 
 function doSaveFile() {
-    downloadFile(false);
+    downloadBRMFile(false);
 }
 
 function doExportFile() {
@@ -94,9 +94,120 @@ function checkFileType(fileData) {
         sendToBrailleMUSE(fileData);
         fileLoading = true;
         drawNotation();
+	} else if (doc.getElementsByTagName("score-braille").length) {
+		openBRMFile(fileData);
     } else {
         importData(fileData);
     }
+}
+
+function openBRMFile(fileData) {
+	if (true) { // put up an "are you sure" dialog
+		saveToUndo();
+		suspendUndo = true;
+		score=[[]]; // clear old data
+		hScroll=0;
+		vScroll=0;
+		setScrollVars();
+		
+		var p = new DOMParser();
+		var err = false;
+		var xml = p.parseFromString(fileData, "application/xml");
+		
+		var root = xml.getElementsByTagName("score-braille");
+		if (root.length) {
+			var f = xml.getElementsByTagName("filename");
+			if (f.length) {
+				currentFileName = f[0].innerHTML;
+			} else {
+				err = true;
+			}
+			var e = xml.getElementsByTagName("settingentry")
+			for (var i=0; i<e.length; i++) {
+				if (e[i].getAttribute("app") == "braillemusicnotator") {
+					parseSettingsString(e[i].innerHTML);
+				}
+			}
+			var w = xml.getElementsByTagName("width");
+			if (w.length) {
+				pageWidth = w[0].innerHTML;
+			} else {
+				err = true;
+			}
+			var h = xml.getElementsByTagName("height");
+			if (h.length) {
+				pageHeight = h[0].innerHTML;
+			} else {
+				err = true;
+			}
+			var s = xml.getElementsByTagName("symbol");
+			for (i=0; i<s.length; i++) {
+				currentCellFont.addCellToScore(s[i].getAttribute("col"), s[i].getAttribute("row"), s[i].getAttribute("char"), s[i].getAttribute("val"));
+			}
+		} else {
+			err = true;
+		}
+		
+		if (err == true) {
+			alert("Error loading “" + currentFileName + "”; file may be corrupted.");
+			score = [[]];
+		}
+		
+		suspendUndo = false;
+		cursor.x=0;
+		cursor.y=0;
+		fileLoading = false;
+		drawNotation();
+	}
+}
+
+function parseSettingsString(s) {
+	var a = s.split('|');
+	for (var i=0; i<a.length; i++) {
+		item = a[i].split('=');
+		switch (item[0]) {
+			case 'translate':
+				currentCellFont.translateBraille = (item[1]=='1');
+				break;
+			case 'smalldots':
+				showSmallDots = (item[1]=='1');
+				break;
+			case 'brailledisplay':
+				useBrailleDisplay = (item[1]=='1');
+				break;
+			case 'scoresize':
+				setCellHeight(item[1]*1,false);
+				break;
+			case 'pagebreaks':
+				showPageBreaks = (item[1]=='1');
+				break;
+			case 'wordwrap':
+				useWordWrap = (item[1]=='1');
+				break;
+			case 'octavesymbols':
+				insertOctaveSymbols = (item[1]=='1');
+				break;
+			case 'keysignatures':
+				observeKeySignatures = (item[1]=='1');
+				break;
+			case 'spelldownward':
+				spellChordsDownward = (item[1]=='1');
+				break;
+		}
+	}
+}
+
+function createSettingsString() {
+	var s = 'translate=' + (currentCellFont.translateBraille ? '1' : '0') + '|' +
+			'smalldots=' + (showSmallDots ? '1' : '0') + '|' +
+			'brailledisplay=' + (useBrailleDisplay ? '1' : '0') + '|' +
+			'scoresize=' + gridHeight + '|' +
+			'pagebreaks=' + (showPageBreaks ? '1' : '0') + '|' +
+			'wordwrap=' + (useWordWrap ? '1' : '0') + '|' +
+			'octavesymbols=' + (insertOctaveSymbols ? '1' : '0') + '|' +
+			'keysignatures=' + (observeKeySignatures ? '1' : '0') + '|' +
+			'spelldownward=' + (spellChordsDownward ? '1' : '0');
+	return s;
 }
 
 function importData(fileData) {
@@ -145,6 +256,59 @@ function importData(fileData) {
 		cursor.y=0;
         fileLoading = false;
 		drawNotation();
+	}
+}
+
+function downloadBRMFile() {
+	var getFileName;
+	if (shiftKeyDown || (getFileName = window.prompt('Save file as:', removeExtension(currentFileName)+'.brm'))) {
+		if (!shiftKeyDown) {
+			currentFileName = getFileName;
+		}
+		var docType = document.implementation.createDocumentType("score-braille", "-//TobyRush//DTD Braille Music Notator Score 0.9//EN", "https://tobyrush.com/braillemusic/notator/dtd/braillemusic.dtd");
+		var doc = document.implementation.createDocument("","", docType);
+		var rootElement = doc.createElement("score-braille");
+		
+		var filenameElement = doc.createElement("filename");
+		filenameElement.innerHTML = currentFileName;
+		rootElement.appendChild(filenameElement);
+		
+		var settingsElement = doc.createElement("settings");
+		var settingEntryElement = doc.createElement("settingentry");
+		settingEntryElement.setAttribute("app","braillemusicnotator");
+		settingEntryElement.innerHTML = createSettingsString();
+		settingsElement.appendChild(settingEntryElement);
+		rootElement.appendChild(settingsElement);
+		
+		var pageElement = doc.createElement("page");
+		var widthElement = doc.createElement("width");
+		widthElement.innerHTML = pageWidth;
+		pageElement.appendChild(widthElement);
+		var heightElement = doc.createElement("height");
+		heightElement.innerHTML = pageHeight;
+		pageElement.appendChild(heightElement);
+		rootElement.appendChild(pageElement);
+		
+		var scoreElement = doc.createElement("score");
+		var rightMargin = scoreWidth();
+		for (var row=0; row<score.length; row+=1) {
+			if ((typeof score[row]!=='undefined') && (score[row]!==null)) {
+				r = currentCellFont.getXMLFromScoreLine(score[row], row, doc);
+				r.forEach((e) => scoreElement.appendChild(e));
+			}
+		}
+		rootElement.appendChild(scoreElement);
+		doc.appendChild(rootElement);
+		
+		var file=document.createElement('a');
+		var s = new XMLSerializer();
+
+		file.setAttribute('href', 'data:application/xml;charset=utf-8,' + s.serializeToString(doc));
+		file.setAttribute('download', currentFileName);
+		file.setAttribute('target', '_blank');
+
+		var clickEvent = new MouseEvent("click", {"view": window, "bubbles": true, "cancelable": false});
+		file.dispatchEvent(clickEvent);
 	}
 }
 
