@@ -23,23 +23,15 @@
 	accidentalSharp|
 	accidentalThreeQuartersFlat|
 	accidentalThreeQuartersSharp|
-	addedNoteAtFifth|
-	addedNoteAtFourth|
-	addedNoteAtOctave|
-	addedNoteAtSecond|
-	addedNoteAtSeventh|
-	addedNoteAtSixth|
-	addedNoteAtThird|
 	articulationAccent|
-	articulationFermata|
 	articulationDownBow|
+	articulationFermata|
 	articulationMarcato|
 	articulationPause|
 	articulationStaccato|
 	articulationTenuto|
 	articulationTrill|
 	articulationUpBow|
-	augmentationDot|
 	barlineDouble|
 	barlineFinal|
 	barlineSingle|
@@ -56,19 +48,20 @@
 	directionBrailleText|
 	directionLeftHandLong|
 	directionLeftHandShort|
+	directionMetronomeMarkingEquals|
+	directionMusicPrefix|
 	directionRightHandLong|
 	directionRightHandShort|
-	directionMusicPrefix|
 	directionTextPrefix|
 	directionTranscriberAddition|
-	dynamicBeginCrescendoLong|
-	dynamicBeginCrescendoShort|
-	dynamicEndCrescendoLong|
-	dynamicEndCrescendoShort|
-	dynamicBeginDiminuendoLong|
-	dynamicBeginDiminuendoShort|
-	dynamicEndDiminuendoLong|
-	dynamicEndDiminuendoShort|
+	dynamicCrescendoBeginLong|
+	dynamicCrescendoBeginShort|
+	dynamicCrescendoEndLong|
+	dynamicCrescendoEndShort|
+	dynamicDiminuendoBeginLong|
+	dynamicDiminuendoBeginShort|
+	dynamicDiminuendoEndLong|
+	dynamicDiminuendoEndShort|
 	dynamicForteLong|
 	dynamicForteShort|
 	dynamicFortissimoLong|
@@ -100,8 +93,13 @@
 	fingering4|
 	fingering5|
 	fingeringChangeFingers|
-	graceNote|
-	graceNoteSlur|
+	intervalFifth|
+	intervalFourth|
+	intervalOctave|
+	intervalSecond|
+	intervalSeventh|
+	intervalSixth|
+	intervalThird|
 	ipaAdvancedDiacritic|
 	ipaAdvancedTongueRootDiacritic|
 	ipaAffricateOrDoubleArticulationDiacritic|
@@ -200,9 +198,9 @@
 	ipaUnroundedCentralOpenMidVowel|
 	ipaUnroundedFrontCloseMidVowel|
 	ipaUnroundedFrontCloseVowel|
+	ipaUnroundedFrontNearOpenVowel|
 	ipaUnroundedFrontOpenMidVowel|
 	ipaUnroundedFrontOpenVowel|
-	ipaUnroundedFrontNearOpenVowel|
 	ipaUnroundedNearFrontNearCloseVowel|
 	ipaUnvoicedAlveolarAffricate|
 	ipaUnvoicedAlveolarFricative|
@@ -214,8 +212,8 @@
 	ipaUnvoicedBilabialPlosive|
 	ipaUnvoicedDentalFricative|
 	ipaUnvoicedDiacritic|
-	ipaUnvoicedEpiglottalPlosive|
 	ipaUnvoicedEpiglottalFricative|
+	ipaUnvoicedEpiglottalPlosive|
 	ipaUnvoicedGlottalFricative|
 	ipaUnvoicedGlottalPlosive|
 	ipaUnvoicedLabialVelarApproximant|
@@ -267,9 +265,9 @@
 	ipaVoicedLabiodentalTapOrFlap|
 	ipaVoicedPalatalApproximant|
 	ipaVociedPalatalFricative|
+	ipaVoicedPalatalImplosive|
 	ipaVoicedPalatalLateralApproximant|
 	ipaVoicedPalatalNasal|
-	ipaVoicedPalatalImplosive|
 	ipaVoicedPalatalPlosive|
 	ipaVoicedPharyngealFricative|
 	ipaVoicedPostalveolarAffricate|
@@ -294,6 +292,7 @@
 	ipaVoicedVelarLateralApproximant|
 	ipaVoicedVelarNasal|
 	ipaVoicedVelarPlosive|
+	keySignatureFlat|
 	keySignatureMultiplier1|
 	keySignatureMultiplier2|
 	keySignatureMultiplier3|
@@ -301,11 +300,11 @@
 	keySignatureMultiplier5|
 	keySignatureMultiplier6|
 	keySignatureMultiplier7|
-	keySignatureFlat|
 	keySignatureNatural|
 	keySignaturePrefix|
 	keySignatureSharp|
-	metronomeMarkingEquals|
+	noteAppoggiaturaShort|
+	noteAugmentationDot|
 	noteDoubleWholeA|
 	noteDoubleWholeB|
 	noteDoubleWholeC|
@@ -409,6 +408,7 @@
 	restSixtyFourth|
 	restThirtySecond|
 	restWhole|
+	slurAppoggiatura|
 	slurBegin|
 	slurEnd|
 	slurShort|	
@@ -453,11 +453,11 @@
 	textContractionAlthough|
 	textContractionAltogether|
 	textContractionAlways|
-	textContractionAtion|
 	textContractionAnce|
 	textContractionAnd|
 	textContractionAr|
 	textContractionAs|
+	textContractionAtion|
 	textContractionBb|
 	textContractionBe|
 	textContractionBecause|
@@ -619,6 +619,7 @@
 	textContractionYourselves|
 	textCurvedBracketClose|
 	textCurvedBracketOpen|
+	textD|
 	textDecimalPoint|
 	textDivision|
 	textDollar|
@@ -627,7 +628,6 @@
 	textDoubleQuotationMarkOpen|
 	textDoubleQuotationMarkUEBClose|
 	textDoubleQuotationMarkUEBOpen|
-	textD|
 	textE|
 	textEmDash|
 	textEmDashUEB|
