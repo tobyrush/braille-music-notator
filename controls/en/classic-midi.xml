@@ -44,7 +44,7 @@
             <graphic type="text" color="#740" left="15" top="80" size="20" content="3" />
             <help page="accidentals" />
             <character code="37" />
-            <character code="337" />
+            <character code="37" />
         </control>
         <control keycode="Digit4" top="13" left="85" width="18" height="18" label="Natural">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F80" />
@@ -59,7 +59,7 @@
             <graphic type="text" color="#740" left="15" top="80" size="20" content="5" />
             <help page="accidentals" />
             <character code="60" />
-            <character code="360" />
+            <character code="60" />
         </control>
         <control keycode="Digit6" top="13" left="121" width="18" height="18" label="Mezzo Forte">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#0FF" />
@@ -1206,20 +1206,20 @@
             <character code="337" />
         </control>
         <control keycode="Digit6" top="13" left="121" width="18" height="18" label="Read as larger note values">
-            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#f00" />
             <graphic type="text" color="#FFF" size="16" align="center" baseline="middle" top="25" left="47" content="LARGER" />
             <graphic type="text" color="#FFF" size="16" align="center" baseline="middle" top="50" left="47" content="VALUES" />
-            <graphic type="text" color="#777" left="15" top="80" size="20" content="6" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="6" />
             <help page="valueSigns" />
             <character code="194" />
             <character code="660" />
             <character code="349" />
         </control>
         <control keycode="Digit7" top="13" left="139" width="18" height="18" label="Read as smaller note values">
-            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#f00" />
             <graphic type="text" color="#FFF" size="16" align="center" baseline="middle" top="25" left="47" content="SMALLER" />
             <graphic type="text" color="#FFF" size="16" align="center" baseline="middle" top="50" left="47" content="VALUES" />
-            <graphic type="text" color="#777" left="15" top="80" size="20" content="7" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="7" />
             <help page="valueSigns" />
             <character code="244" />
             <character code="660" />

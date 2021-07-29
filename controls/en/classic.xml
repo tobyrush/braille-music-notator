@@ -107,7 +107,7 @@
             <graphic type="text" color="#740" left="15" top="80" size="20" content="-" />
             <help page="accidentals" />
             <character code="60" />
-            <character code="360" />
+            <character code="60" />
         </control>
         <control keycode="Equal" top="13" left="229" width="18" height="18" label="Double sharp">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F80" />
@@ -115,7 +115,7 @@
             <graphic type="text" color="#740" left="15" top="80" size="20" content="=" />
             <help page="accidentals" />
             <character code="37" />
-            <character code="337" />
+            <character code="37" />
         </control>
         <control keycode="KeyQ" top="31" left="40" width="18" height="18" label="C half note">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
@@ -1661,20 +1661,20 @@
             <character code="62" />
         </control>
         <control keycode="KeyE" top="31" left="76" width="18" height="18" label="Read as larger note values">
-            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#f00" />
             <graphic type="text" color="#FFF" size="16" align="center" baseline="middle" top="25" left="47" content="LARGER" />
             <graphic type="text" color="#FFF" size="16" align="center" baseline="middle" top="50" left="47" content="VALUES" />
-            <graphic type="text" color="#777" left="15" top="80" size="20" content="E" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="E" />
             <help page="valueSigns" />
             <character code="194" />
             <character code="660" />
             <character code="349" />
         </control>
         <control keycode="KeyR" top="31" left="94" width="18" height="18" label="Read as smaller note values">
-            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
+            <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#f00" />
             <graphic type="text" color="#FFF" size="16" align="center" baseline="middle" top="25" left="47" content="SMALLER" />
             <graphic type="text" color="#FFF" size="16" align="center" baseline="middle" top="50" left="47" content="VALUES" />
-            <graphic type="text" color="#777" left="15" top="80" size="20" content="R" />
+            <graphic type="text" color="#F77" left="15" top="80" size="20" content="R" />
             <help page="valueSigns" />
             <character code="244" />
             <character code="660" />

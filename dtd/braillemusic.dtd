@@ -24,34 +24,166 @@
 	accidentalThreeQuartersFlat|
 	accidentalThreeQuartersSharp|
 	articulationAccent|
+	articulationAlternationEighth|
+	articulationAlternationOneHundredTwentyEighth|
+	articulationAlternationSixteenth|
+	articulationAlternationSixtyFourth|
+	articulationAlternationThirtySecond|
+	articulationArco|
+	articulationArpeggioDownward|
+	articulationArpeggioDownwardCrossStaff|
+	articulationArpeggioUpward|
+	articulationArpeggioUpwardCrossStaff|
+	articulationBreathFull|
+	articulationBreathHalf|
+	articulationCross|
 	articulationDownBow|
+	articulationFallingCurvedLineAfter|
+	articulationFallingStraightLineAfter|
 	articulationFermata|
+	articulationFermataBarline|
+	articulationFermataBetween|
+	articulationFermataSquare|
+	articulationFermataTriangle|
+	articulationFingernail|
+	articulationHarmonicArtificial|
+	articulationHarmonicNatural|
+	articulationInvertedArch|
 	articulationMarcato|
-	articulationPause|
+	articulationMordentExtendedLower|
+	articulationMordentExtendedLowerFlat|
+	articulationMordentExtendedLowerSharp|
+	articulationMordentExtendedUpper|
+	articulationMordentExtendedUpperFlat|
+	articulationMordentExtendedUpperSharp|
+	articulationMordentLower|
+	articulationMordentLowerFlat|
+	articulationMordentLowerSharp|
+	articulationMordentUpper|
+	articulationMordentUpperFlat|
+	articulationMordentUpperSharp|
+	articulationPizzicato|
+	articulationPizzicatoLeftHand|
+	articulationRisingCurvedLineBefore|
+	articulationRisingStraightLineBefore|
 	articulationStaccato|
+	articulationSwell|
 	articulationTenuto|
+	articulationThumbLeftHand|
+	articulationTremoloEighth|
+	articulationTremoloHigh|
+	articulationTremoloLow|
+	articulationTremoloOneHundredTwentyEighth|
+	articulationTremoloSixteenth|
+	articulationTremoloSixtyFourth|
+	articulationTremoloThirtySecond|
 	articulationTrill|
+	articulationTurn|
+	articulationTurnBothNotesFlat|
+	articulationTurnBothNotesSharp|
+	articulationTurnInverted|
+	articulationTurnInvertedBothNotesFlat|
+	articulationTurnInvertedBothNotesSharp|
+	articulationTurnInvertedLowerNoteFlat|
+	articulationTurnInvertedLowerNoteSharp|
+	articulationTurnInvertedUpperNoteFlat|
+	articulationTurnInvertedUpperNoteFlatLowerNoteSharp|
+	articulationTurnInvertedUpperNoteSharp|
+	articulationTurnInvertedUpperNoteSharpLowerNoteFlat|
+	articulationTurnLowerNoteFlat|
+	articulationTurnLowerNoteSharp|
+	articulationTurnSingle|
+	articulationTurnSingleInverted|
+	articulationTurnUpperNoteFlat|
+	articulationTurnUpperNoteFlatLowerNoteSharp|
+	articulationTurnUpperNoteSharp|
+	articulationTurnUpperNoteSharpLowerNoteFlat|
 	articulationUpBow|
+	barlineDotted|
 	barlineDouble|
 	barlineFinal|
 	barlineSingle|
+	bracketAboveBegin|
+	bracketAboveEnd|
+	bracketAboveSecondaryBegin|
+	bracketAboveSecondaryEnd|
+	bracketAboveDottedBegin|
+	bracketAboveDottedEnd|
+	bracketAboveOpenEnd|
+	bracketBelowBegin|
+	bracketBelowEnd|
+	bracketBelowSecondaryBegin|
+	bracketBelowSecondaryEnd|
+	bracketBelowDottedBegin|
+	bracketBelowDottedEnd|
+	bracketBelowOpenEnd|
 	chordSymbolCircle|
+	chordSymbolCircleSlashed|
 	chordSymbolPlus|
-	chordSymbolSlashedCircle|
 	chordSymbolTriangle|
+	chordSymbolTriangleSlashed|
 	clefAlto|
+	clefBaritone|
 	clefBass|
+	clefBassRightHand|
+	clefFrenchViolin|
 	clefTenor|
 	clefTreble|
+	clefTrebleLeftHand|
+	clefTrebleOctaveUp|
+	clefTrebleOctaveDown|
+	directionAsterisk|
+	directionBarreBracket|
+	directionBarreFull|
+	directionBarrePartial|
 	directionBrailleMusicComma|
 	directionBrailleMusicHyphen|
 	directionBrailleText|
-	directionLeftHandLong|
-	directionLeftHandShort|
+	directionButtonRow1|
+	directionButtonRow2|
+	directionButtonRow3|
+	directionButtonRow4|
+	directionButtonRow5|
+	directionButtonRow6|
+	directionDraw|
+	directionEditorialMark|
+	directionGlissando|
+	directionLeftHand|
 	directionMetronomeMarkingEquals|
+	directionMusicParenthesis|
 	directionMusicPrefix|
-	directionRightHandLong|
-	directionRightHandShort|
+	directionMusicSymbolComma|
+	directionParallelMovement|
+	directionPosition01|
+	directionPosition02|
+	directionPosition03|
+	directionPosition04|
+	directionPosition05|
+	directionPosition06|
+	directionPosition07|
+	directionPosition08|
+	directionPosition09|
+	directionPosition10|
+	directionPosition11|
+	directionPosition12|
+	directionPosition13|
+	directionPositionHalf|
+	directionPositionShiftBegin|
+	directionPositionShiftEnd|
+	directionPrintPaginationIndicator|
+	directionPush|
+	directionRightHand|
+	directionSequence|
+	directionString1|
+	directionString2|
+	directionString3|
+	directionString4|
+	directionString5|
+	directionString6|
+	directionString7|
+	directionStrum|
+	directionSuppressRegistration|
+	directionTerminator|
 	directionTextPrefix|
 	directionTranscriberAddition|
 	dynamicCrescendoBeginLong|
@@ -93,6 +225,9 @@
 	fingering4|
 	fingering5|
 	fingeringChangeFingers|
+	fingeringOmitFirst|
+	fingeringOmitSecond|
+	intervalComma|
 	intervalFifth|
 	intervalFourth|
 	intervalOctave|
@@ -303,8 +438,19 @@
 	keySignatureNatural|
 	keySignaturePrefix|
 	keySignatureSharp|
+	lineContinuationBegin|
+	lineContinuationEnd|
+	lineHorizontal|
 	noteAppoggiaturaShort|
 	noteAugmentationDot|
+	noteBeamedA|
+	noteBeamedB|
+	noteBeamedC|
+	noteBeamedD|
+	noteBeamedE|
+	noteBeamedF|
+	noteBeamedG|
+	noteCoincidence|
 	noteDoubleWholeA|
 	noteDoubleWholeB|
 	noteDoubleWholeC|
@@ -319,6 +465,10 @@
 	noteEighthE|
 	noteEighthF|
 	noteEighthG|
+	noteFeatheredAccelerando|
+	noteFeatheredConstant|
+	noteFeatheredEnd|
+	noteFeatheredRitardando|
 	noteHalfA|
 	noteHalfB|
 	noteHalfC|
@@ -327,7 +477,11 @@
 	noteHalfF|
 	noteHalfG|
 	noteheadApproximatePitch|
+	noteheadApproximatePitchAfterSlantedLine|
 	noteheadDiamond|
+	noteheadShape1|
+	noteheadShape2|
+	noteheadShape3|
 	noteheadStemless|
 	noteheadX|
 	noteInAccord|
@@ -342,6 +496,7 @@
 	noteOneHundredTwentyEighthG|
 	notePreferLargerValues|
 	notePreferSmallerValues|
+	notePreferSmallestValues|
 	noteQuarterA|
 	noteQuarterB|
 	noteQuarterC|
@@ -363,6 +518,12 @@
 	noteSixtyFourthE|
 	noteSixtyFourthF|
 	noteSixtyFourthG|
+	noteStemEighth|
+	noteStemHalf|
+	noteStemQuarter|
+	noteStemSixteenth|
+	noteStemThirtySecond|
+	noteStemWhole|
 	noteThirtySecondA|
 	noteThirtySecondB|
 	noteThirtySecondC|
@@ -370,6 +531,11 @@
 	noteThirtySecondE|
 	noteThirtySecondF|
 	noteThirtySecondG|
+	noteToneClusterAll
+	noteToneClusterFlat|
+	noteToneClusterNatural|
+	noteToneClusterSharp|
+	noteToneClusterUnspecified|
 	noteWholeA|
 	noteWholeB|
 	noteWholeC|
@@ -386,10 +552,46 @@
 	octave6|
 	octave7|
 	octave8|
+	partButtonRow|
+	partFiguredBass|
+	partHandsOnly|
+	partLeftHandLong|
+	partLeftHandIntervalsDownward
+	partLeftHandShort|
+	partPedals|
+	partRightHandLong|
+	partRightHandIntervalsUpward
+	partRightHandShort|
+	partSoloOutline|
+	pedalChangeFeet|
+	pedalCrossFront|
+	pedalCrossBehind|
+	pedalDamp|
+	pedalDampAfterSounding|
+	pedalDampBelowNote|
+	pedalDiagramPositionHigh|
+	pedalDiagramPositionLow|
+	pedalDiagramPositionMiddle|
+	pedalDiagramPositionUnchanged|
+	pedalDiagramPrefix|
+	pedalDown|
+	pedalDownAfterStrike|
+	pedalHalf|
+	pedalLeftHeel|
+	pedalLeftToe|
+	pedalLetVibrate|
+	pedalRightHeel|
+	pedalRightToe|
+	pedalUp|
+	pedalUpAfterStrike|
+	pedalUpDown|
+	repeatAperiodic|
 	repeatBarlineBegin|
 	repeatBarlineEnd|
 	repeatBeginRepeatedSection|
 	repeatCoda|
+	repeatDaCapo|
+	repeatDaCapoBraille|
 	repeatEnd|
 	repeatEndingFirst|
 	repeatEndingSecond|
@@ -410,8 +612,18 @@
 	restWhole|
 	slurAppoggiatura|
 	slurBegin|
+	slurCrossPart|
+	slurCrossPartBegin|
+	slurCrossPartContinue|
 	slurEnd|
-	slurShort|	
+	slurHalfPhrase|
+	slurLongBegin|
+	slurModified|
+	slurOpenBefore|
+	slurOpenAfter|
+	slurShort|
+	slurStaffReceive|
+	slurStaffSend|
 	text0|
 	text1|	
 	text2|	
@@ -423,9 +635,11 @@
 	text8|	
 	text9|	
 	textA|
+	textAccidentalOnly|
 	textAe|
 	textAmpersand|
 	textApostrophe|
+	textAsterisk|
 	textAt|
 	textB|
 	textBackslash|
@@ -437,6 +651,7 @@
 	textCent|
 	textColon|
 	textComma|
+	textContinuationLine|
 	textContractionAbout|
 	textContractionAbove|
 	textContractionAccording|
@@ -621,6 +836,7 @@
 	textCurvedBracketOpen|
 	textD|
 	textDecimalPoint|
+	textDitto|
 	textDivision|
 	textDollar|
 	textDoubleQuotationMark|
@@ -633,10 +849,12 @@
 	textEmDashUEB|
 	textEnDash|
 	textEnDashUEB|
+	textEndTastoSolo|
 	textEquals|
 	textEuro|
 	textExclamationPoint|
 	textF|
+	textFigureSlashed|
 	textG|
 	textGreaterThan|
 	textGraveAccent|
@@ -662,10 +880,17 @@
 	textPercent|
 	textPeriod|
 	textPlus|
+	textPointingSymbol|
+	textPunctuationPrefix|
 	textQ|
 	textQuestionMark|
 	textR|
+	textRecitingToneTextBegin|
+	textRecitingToneTextEnd|
+	textRepeat|
+	textRepeatTwice|
 	textS|
+	textSeconds|
 	textSemicolon|
 	textSingleQuotationMarkClose|
 	textSingleQuotationMarkOpen|
@@ -685,6 +910,8 @@
 	textY|
 	textZ|
 	tie|
+	tieAccumulating|
+	tieMultiple|
 	timeSignatureBottom0|
 	timeSignatureBottom1|
 	timeSignatureBottom2|
