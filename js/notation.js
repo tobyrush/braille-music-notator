@@ -405,6 +405,47 @@ class cellFontModule {
             this.cells.push(new cell(node,this));
         }
     }
+    getXMLFromScoreLine(scoreLine, row, doc) {
+        var c = scoreLine;
+        var newWord = true;
+        var cells = [];
+        var el;
+        c.push("0");
+        var col = 0;
+        while (c.length) {
+            var sym = this.findSymbol(c,newWord);
+            if (sym.length) {
+                el = doc.createElement("symbol");
+                el.setAttribute("row",row);
+                el.setAttribute("col",col);
+                el.setAttribute("char",sym[0].char);
+                cells.push(el);
+                c=c.slice(sym[0].length());
+                col += sym[0].length();
+                if (sym[0].wordModifier) {
+                    newWord = true;
+                } else {
+                    newWord = false;
+                }
+            } else {
+                if (!cellValIsEmpty(c[0])) {
+                    el = doc.createElement("symbol");
+                    el.setAttribute("row",row);
+                    el.setAttribute("col",col);
+                    el.setAttribute("char","untranslated");
+                    el.setAttribute("val",c[0]);
+                    cells.push(el);
+                    newWord = false;
+                } else {
+                    newWord = true;
+                }
+                col += 1;
+                c = c.slice(1);
+            }
+        }
+        return cells;
+    }
+    
     drawScoreLine(x,y,chars,startCell,endCell,ctx=this.ctx,gw=gridWidth) {
         if (chars) {
             var c = chars.slice(Math.max(Math.floor(startCell),0),Math.ceil(endCell)+1);
@@ -433,6 +474,14 @@ class cellFontModule {
                     c = c.slice(1);
                 }
             }
+        }
+    }
+    addCellToScore(x, y, charName, val) {
+        var c = this.cells.find(e => e.char==charName);
+        if (c) {
+            c.codes.forEach((code,i) => setScore((x*1)+i, y, code));
+        } else {
+            setScore(x, y, val);
         }
     }
     drawBrailleSymbol(x,y,val,ctx=this.ctx,gw=gridWidth) {
@@ -508,6 +557,7 @@ class cell {
     constructor(xml, root) {
         this.root = root;
         this.name = xml.getAttribute('name');
+        this.char = xml.getAttribute('char');
         this.discrete = (xml.getAttribute('discrete')=="1");
         this.wordModifier = (xml.getAttribute('word-modifier')=="1");
         this.codes = [];

@@ -479,7 +479,7 @@ class graphic {
         var a = this.attr;
         var d = this.root.defaults;
         var chars = [];
-        var xx,yy,w,h,p,i,n,yp,c,o,x1,x2,x3,y1,y2,y3,m;
+        var xx,yy,w,h,p,i,n,yp,c,o,x1,x2,x3,y1,y2,y3,m,co;
         [
             'font',
             'style',
@@ -517,7 +517,9 @@ class graphic {
             'numerator',
             'denominator',
             'rotate',
-            'cells'
+            'cells',
+            'flipX',
+            'flipY'
         ].forEach(function(e) {
                 if (!(a.hasOwnProperty(e)) && d.hasOwnProperty(e)) {
                 a[e]=d[e];
@@ -535,9 +537,22 @@ class graphic {
         var controlY = a.controlY;
         var endX = a.endX;
         var endY = a.endY;
+        
+        if (a.hasOwnProperty('dashPattern')) {
+            ctx.setLineDash(a.dashPattern.split(','));
+        } else {
+            ctx.setLineDash([]);
+        }
+        
+        if (a.hasOwnProperty('coords')) {
+            var coords = a.coords.split(';');
+            for (i=0; i<coords.length; i++) {
+                coords[i] = coords[i].split(',');
+            }
+        }
 
-        if (a.hasOwnProperty('rotate')) {
-            ctx.rotate(a.rotate*(Math.PI/180));
+        if (a.hasOwnProperty('rotateCCW')) {
+            ctx.rotate(270*(Math.PI/180));
             left = a.top * (-1.5);
             top = a.left/1.5;
             x = a.y * (-1.5);
@@ -548,6 +563,38 @@ class graphic {
             controlY = a.controlX/1.5;
             endX = a.endY * (-1.5);
             endY = a.endX/1.5;
+        }
+        
+        if (a.hasOwnProperty('rotateCW')) {
+            ctx.rotate(90*(Math.PI/180));
+            left = a.top * (1.5);
+            top = a.left/-1.5;
+            x = a.y * (1.5);
+            y = a.x/-1.5;
+            startX = a.startY * (1.5);
+            startY = a.startX/-1.5;
+            controlX = a.controlY * (1.5);
+            controlY = a.controlX/-1.5;
+            endX = a.endY * (1.5);
+            endY = a.endX/-1.5;
+        }
+        
+        if (a.hasOwnProperty('flipX')) {
+            ctx.transform(-1,0,0,1,0,0);
+            left = a.left * (-1);
+            x = a.x * (-1);
+            startX = a.startX * (-1);
+            controlX = a.controlX * (-1);
+            endX = a.endX * (-1);
+        }
+        
+        if (a.hasOwnProperty('flipY')) {
+            ctx.transform(1,0,0,-1,0,0);
+            top = a.top * (-1);
+            y = a.y * (-1);
+            startY = a.startY * (-1);
+            controlY = a.controlY * (-1);
+            endY = a.endY * (-1);
         }
 
         switch (this.type) {
@@ -563,7 +610,7 @@ class graphic {
                 }
                 if (a.stroke=="true") {
                     ctx.strokeStyle=a.strokeColor;
-                    ctx.lineWidth=a.lineWidth;
+                    ctx.lineWidth=a.lineWidth*(boxHeight/100);
                     ctx.beginPath();
                     ctx.rect(
                         left*(boxWidth/100),
@@ -578,7 +625,7 @@ class graphic {
             case "roundRect":
                 ctx.fillStyle=a.color;
                 ctx.strokeStyle=a.strokeColor;
-                ctx.lineWidth=a.lineWidth;
+                ctx.lineWidth=a.lineWidth*(boxHeight/100);
                 roundRect(
                     ctx,
                     left*(boxWidth/100),
@@ -589,6 +636,23 @@ class graphic {
                     a.fill=="true",
                     a.stroke=="true"
                 );
+                break;
+            case "path":
+                ctx.fillStyle=a.color;
+                ctx.strokeStyle=a.strokeColor;
+                ctx.lineWidth=a.lineWidth*(boxHeight/100);
+                ctx.beginPath();
+                ctx.moveTo(coords[0][0]*(boxWidth/100),coords[0][1]*(boxHeight/100));
+                for (i=1; i<coords.length; i++) {
+                    ctx.lineTo(coords[i][0]*(boxWidth/100),coords[i][1]*(boxHeight/100));    
+                }
+                ctx.closePath();
+                if (a.stroke="true") {
+                    ctx.stroke();
+                }
+                if (a.fill="true") {
+                    ctx.fill();
+                }
                 break;
             case "text":
                 ctx.fillStyle=a.color;
@@ -615,7 +679,7 @@ class graphic {
 
                 break;
             case "arc":
-                ctx.lineWidth=a.lineWidth;
+                ctx.lineWidth=a.lineWidth*(boxHeight/100);
                 ctx.strokeStyle=a.color;
                 ctx.beginPath();
                 ctx.arc(
@@ -630,9 +694,10 @@ class graphic {
                 ctx.closePath();
                 break;
             case "line":
-                ctx.lineWidth=a.lineWidth;
+                ctx.lineWidth=a.lineWidth*(boxHeight/100);
                 ctx.strokeStyle=a.color;
                 ctx.beginPath();
+                // ctx.setLineDash(dashPattern);
                 ctx.moveTo(
                     startX*(boxWidth/100),
                     startY*(boxHeight/100)

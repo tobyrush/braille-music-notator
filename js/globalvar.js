@@ -173,6 +173,14 @@ function setScore(x,y,val) {
 	}
 }
 
+function setScoreLine(x,y,vals) {
+    // for console use
+    for (i=0; i<vals.length; i++) {
+        setScore(x+i,y,vals[i]);
+    }
+    drawNotation();
+}
+
 function deleteScore(x,y) {
 	saveToUndo();
 	if (!score[y] || !arrayHasOwnIndex(score,y)) {
