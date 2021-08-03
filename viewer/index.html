@@ -1,121 +1,58 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link href='css/main.css' rel='stylesheet' type='text/css' />
-<title>Braille Music Viewer</title>
-<script>
-// Google font loader
-WebFontConfig = { custom: { families: ['Bravura'], urls: ['https://tobyrush.com/braillemusic/viewer/css/viewer.css'] } };
-</script>
-<script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
-<script type="text/javascript" src="https://tobyrush.com/braillemusic/viewer/bmviewer.js"></script>
-<script type="text/javascript">
-function translateViewerCode() {
-	var inputField = document.getElementById("inputField");
-	var outputField = document.getElementById("outputField");
-	var viewer = document.getElementById("exampleViewer");
-	var heightValue = document.getElementById("heightValue").value;
-	var widthValue = document.getElementById("widthValue").value;
-	var initialViewValue = document.getElementById("initialViewMenu").value;
-	if (document.getElementById("isScrollable").checked) {
-		var scrollable = "true";
-	} else {
-		var scrollable = "false";
-	}
-	if (document.getElementById("drawSmallDots").checked) {
-		var drawSmallDots = "true";
-	} else {
-		var drawSmallDots = "false";
-	}
-	var scoreSize = document.getElementById("scoreSize").value;
-	var tabIndex = document.getElementById("tabIndex").value;
-	var chars = inputField.value;
-	var numString = "";
-	for (var i=0; i<chars.length; i++) {
-		numString=numString + chars.charCodeAt(i) + ",";
-	};
-	numString=numString.slice(0, -1); // remove last comma
-	htmlString = "<canvas id=\"myViewer\" class=\"bmviewer\" height=\""+heightValue+"\" width=\""+widthValue+"\" initialView=\""+initialViewValue+"\" scrollable=\""+scrollable+"\" drawSmallDots=\""+drawSmallDots+"\" scoreSize=\""+scoreSize+"\" tabindex=\""+tabIndex+"\" value=\""+numString+"\"></canvas>";
-	outputField.value = htmlString;
-	document.getElementById("example").innerHTML = htmlString;
-	initializeBMViewers();
-}
-
-</script>
-</head>
-
-<body onload="initializeBMViewers()">
-<h1>Braille Music Viewer</h1>
-<h2>v0.9.3b by Toby W. Rush</h2>
-<p>Braille Music Viewer is a tool web authors can use to display self-translating excerpts of braille music on any web page. It uses the functionality from <a href="http://tobyrush.com/braillemusic/notator/index.html">Braille Music Notator</a>, an online utility which displays braille music using symbols that are easy to read by people who are unfamiliar with braille music notation.</p>
-<h3>Quick Start</h3>
-<p>To use Braille Music Viewer on your web page:</p>
-<p><b>1.</b> Include the following code in the &lt;head&gt; section of your HTML document:</p>
-<div class="webcode">&lt;script&gt;WebFontConfig = { custom: { families: ['Bravura'], urls: ['http://tobyrush.com/braillemusic/viewer/css/viewer.css'] } };&lt;/script&gt;<br />
-&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js&quot;&gt;&lt;/script&gt;<br />
-&lt;script type=&quot;text/javascript&quot; src=&quot;http://tobyrush.com/braillemusic/viewer/bmviewer.js&quot;&gt;&lt;/script&gt;
-</div>
-<div id="smallViewer"><canvas id="smallExample" class="bmviewer" height="150" width="450" initialView="translation" scrollable="false" drawSmallDots="false" scoreSize="50" value="32,32,32,35,168,52,32,32,32,32,10,34,63,58,36,93,32,92,91,87,63"></canvas><br />An example of Braille Music Viewer, showing a C major scale.</div>
-<p><b>2.</b> Include the following in your beginning &lt;body&gt; tag:</p>
-<div class="webcode">&lt;body onload=&quot;initializeBMViewers()&quot;&gt;</div>
-<p>(If you have another function being called in the "onload" event, simply make sure to call initializeBMViewers() from within that function.)</p>
-<p><b>3.</b> Lastly, include a musical example by placing a &lt;canvas&gt;...&lt;/canvas&gt; element in your page where you want the example to appear. The parameters of the canvas element indicate the content of the example and several customizable options.</p>
-<p>You can use the utility below to automatically build a canvas element ready to include in your page. To do so, create your musical example using <a href="http://tobyrush.com/braillemusic/notator/index.html">Braille Music Notator</a>, click and drag to select the area you want included in your example, and choose Copy from the Edit menu. Then place the cursor in the "Score Code" text area below and choose Paste from the Edit menu. (The pasted characters will look strange... it's fine!) Make any desired changes to the settings listed and click "Get Viewer Code"; the required code will appear in the "HTML Code" text area and the resulting viewer will be shown below. You can change settings and click "Get Viewer Code" again to update the code and example. When you are satisfied with the look and functionality of the viewer, simply copy the code from the "HTML Code" field and paste it directly into your web page's HTML.</p>
-<p>Tips on advanced usage are included below the Viewer Code Generator.</p>
-
-<h3>Viewer Code Generator</h3>
-<div id="translator">
-<div id="inputFieldArea"><label class="topdescription" for="inputField">Score Code: </label>
-<textarea cols="40" rows="10" name="inputField" id="inputField"></textarea></div>
-<div id="controls">
-<label class="description" for="heightValue">Height: </label>
-<input id="heightValue" name="heightValue" class="textControl" type="text" maxlength="5" value="300"/><br />
-<label class="description" for="widthValue">Width: </label>
-<input id="widthValue" name="widthValue" class="textControl" type="text" maxlength="5" value="1000"/><br />
-<input id="isScrollable" name="isScrollable" class="checkboxControl" type="checkbox" value="true" />
-<label class="choice" for="isScrollable">Scrollable</label><br />
-<input id="drawSmallDots" name="drawSmallDots" class="checkboxControl" type="checkbox" value="true" />
-<label class="choice" for="drawSmallDots">Include Small Dots</label><br />
-<label class="description" for="initialViewMenu">Initial View: </label>
-<select class="regularMenu" id="initialViewMenu" name="initialViewMenu">
-	<option value="translation" selected="selected">Translation</option>
-	<option value="braille" >Braille</option>
-</select><br />
-<label class="description" for="scoreSize">Score Size: </label>
-<input id="scoreSize" name="scoreSize" class="textControl" type="text" maxlength="5" value="60"/><br />
-<label class="description" for="tabIndex">Tab Index: </label>
-<input id="tabIndex" name="tabIndex" class="textControl" type="text" maxlength="5" value="1"/><br />
-<input type="submit" name="translateButton" id="translateButton" value="Get Viewer Code" onclick="translateViewerCode();"/>
-</div>
-<div id="outputFieldArea"><label class="topdescription" for="ouputField">HTML Code: </label>
-<textarea cols="40" rows="10" readonly="readonly" name="outputField" id="outputField"></textarea></div>
-</div>
-<div id="example">
-<canvas id="exampleViewer" class="bmviewer" tabindex="1"></canvas>
-</div>
-
-<h3>Advanced Usage</h3>
-<p>If you prefer to create the code manually, the available parameters for the &lt;canvas&gt;...&lt;/canvas&gt; are described here:</p>
-<ul>
-<li><em>class:</em> (required) this parameter must be set to &quot;bmviewer&quot; to use the canvas as a Braille Music Viewer.</li>
-<li><em>id:</em> (optional) this parameter is not required, but may be used if your web page uses CSS or Javascript.</li>
-<li><em>height:</em> (optional) this parameter indicates the height of the viewer in pixels. If omitted, the canvas is set to the default height (usually 150).</li>
-<li><em>width:</em> (optional) this parameter indicates the width of the viewer in pixels. If omitted, the canvas is set to the default width (usually 300).</li>
-<li><em>initialView:</em> (optional) this parameter indicates whether the viewer will show translated music symbols or untranslated braille symbols when the page first loads. The user can switch between these two settings using the button in the lower right-hand corner of the viewer. Possible values for the parameter are "braille" or "translation". If omitted, translated symbols will be shown initially.</li>
-<li><em>initialAlternateInterface:</em> (optional) this parameter indicates whether the viewer's alternate interface will output translated music symbols, or untranslated braille descriptions, or braille characters when the page first loads. The alternate interface is not visible on graphic displays, but provides information which is sent to screen-reading software and refreshable braille displays. The user can switch between these two settings using Control-U or Command-U. Possible values for the parameter are "translation", "character-descriptions", or "braille". If omitted, translated symbols will be output initially.</li>
-<li><em>ariaLiveID:</em> (optional) this parameter indicates the "id" of an existing HTML element on the page that Braille Music Viewer can use for status messages related to the alternative interface. If omitted, the necessary code will be automatically added dynamically by the viewer.</li>
-<li><em>scrollable:</em> (optional) this parameter indicates whether the user will be able to scroll the score within the viewer window. A value of &quot;true&quot; indicates that the viewer is scrollable. If omitted, the viewer will not be scrollable.</li>
-<li><em>drawSmallDots:</em> (optional) this parameter indicates whether small dots will be shown in unused portions of braille characters in the braille view. A value of &quot;true&quot; indicates that the viewer will show these small dots. If omitted, small dots will not be shown.</li>
-<li><em>scoreSize:</em> (optional) this parameter indicates the magnification level of the score. The value corresponds to the height of a grid cell in pixels. If omitted, the cell size is set to a height of 60.</li>
-<li><em>tabIndex:</em> (optional) this parameter indicates order among other controls (including other viewers) which will be observed when the user presses the "tab" key to move focus from one control to the next. If omitted, the user will not be able to use the Command-U or Control-U to alternate between braille characters and translated symbols.</li>
-<li><em>value</em> (required) this parameter is a comma-delimited list of braille music character values to display in the viewer. Braille music character codes are generated by the Braille Music Notator utility and are cataloged <a href="http://tobyrush.com/braillemusic/notator/guide/code.html">here</a>. If this parameter is omitted, the viewer will display a message indicating that the parameter needs to be populated.</li>
-</ul>
-<p>The <code>initialAlternateInterface</code> and <code>ariaLiveID</code> parameters above affect all Braille Music Viewer instances on the page. If you wish to set these parameters, you need only include them in one of the Braille Music Viewer tags on your page. Multiple different settings of these parameters on a single page will cause unpredictable behaviour.</p>
-<p>The code above will always load the latest version of Braille Music Viewer into your page, even if a previous version was in place when your page was authored. Every attempt will be made to ensure that Braille Music Viewer maintains backward compatibility throughout future development. If, however, you wish to force a particular version of Braille Music Viewer to be used in your page, include version information in the first and third lines of the HTML code included in the &lt;head&gt; section as shown below:</p>
-<div class="webcode">&lt;script&gt;WebFontConfig = { custom: { families: ['Bravura'], urls: ['http://tobyrush.com/braillemusic/viewer/css/<b>viewer-0.9.2b.css</b>'] } };&lt;/script&gt;<br />
-&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js&quot;&gt;&lt;/script&gt;<br />
-&lt;script type=&quot;text/javascript&quot; src=&quot;http://tobyrush.com/braillemusic/viewer/<b>bmviewer-0.9.2b.js</b>&quot;&gt;&lt;/script&gt;
-</div>
-</body>
+<html>
+	<head>
+		<title>Braille Music Viewer Test</title>
+		<script>WebFontConfig = { custom: { families: ['Bravura'], urls: ['https://tobyrush.com/braillemusic/viewer/css/viewer.css'] } };</script>
+		<script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+		<script type="text/javascript" src="viewer.js"></script>
+		<link href='css/main.css' rel='stylesheet' type='text/css' />
+	</head>
+	<body onload="initializeBMViewers('https://tobyrush.com/braillemusic/notator/dev/cellfonts/en/classic.xml');">
+		<h1>Braille Music Viewer</h1>
+		<h2>v0.9.4b by Toby W. Rush</h2>
+		<p>Braille Music Viewer is a tool web authors can use to display self-translating excerpts of braille music on any web page. It uses the functionality from <a href="http://tobyrush.com/braillemusic/notator/index.html">Braille Music Notator</a>, an online utility which displays braille music using symbols that are easy to read by people who are unfamiliar with braille music notation.</p>
+		<p><b>Note:</b> These directions are for the current version of Braille Music Viewer. If you are using a Braille Music Viewer version 0.9.3b or earlier, <a href="index-093b.html">visit this page</a> for instructions.</p>
+		<h3>Quick Start</h3>
+		<p>To use Braille Music Viewer on your web page:</p>
+		<p><b>1.</b> Include the following code in the &lt;head&gt; section of your HTML document:</p>
+		<div class="webcode">&lt;script&gt;WebFontConfig = { custom: { families: ['Bravura'], urls: ['http://tobyrush.com/braillemusic/viewer/css/viewer.css'] } };&lt;/script&gt;<br />
+		&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js&quot;&gt;&lt;/script&gt;<br />
+		&lt;script type=&quot;text/javascript&quot; src=&quot;http://tobyrush.com/braillemusic/viewer/viewer.js&quot;&gt;&lt;/script&gt;<br />
+		&lt;style&gt; score-braille {display: none;} &lt;/style&gt;
+		</div>
+		<div id="smallViewer">
+			<object type="application/braillemusic" data="brm/testfile2.brm">
+				<param name="initialView" value="translation">
+				<param name="scrollable" value="false">
+				<param name="drawSmallDots" value="false">
+				<param name="scoreSize" value="50">
+			</object>
+			<br />An example of Braille Music Viewer, showing a C major scale.
+		</div>
+		<p><b>2.</b> Include the following in your beginning &lt;body&gt; tag:</p>
+		<div class="webcode">&lt;body onload=&quot;initializeBMViewers()&quot;&gt;</div>
+		<p>(If you have another function being called in the "onload" event, simply make sure to call initializeBMViewers() from within that function.)</p>
+		<p><b>3.</b> Lastly, include a musical example by placing an &lt;object&gt;...&lt;/object&gt; element in your page where you want the example to appear. There are two types of parameters that can be included, as described below.</p>
+		<div class="webcode">
+			&lt;object type=&quot;application/braillemusic&quot; data=&quot;scorefile.brm&quot; width=600 height=300&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=&quot;initialView&quot; value=&quot;translation&quot;&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=&quot;scrollable&quot; value=&quot;false&quot;&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=&quot;drawSmallDots&quot; value=&quot;false&quot;&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=&quot;scoreSize&quot; value=&quot;50&quot;&gt;<br />
+			&lt;/object&gt;
+		</div>
+		<p>Attributes inside the object tag pertain to the viewer frame itself.</p>
+		<ul>
+			<li><b>type</b>: this parameter indicates the type of data contained by the object, and must be set to <b>application/braillemusic</b>.</li>
+			<li><b>data</b>: this parameter must contain a pathname to a braille music score file. Braille music scores can be created using <a href="http://tobyrush.com/braillemusic/notator/index.html">Braille Music Notator</a>. In that program, choose &quot;Save File&quot; from the File dialog to create a score file (which ends in .brm) and upload it to your web host. The data parameter will accept a relative pathname or an absolute URL. (See Embedding Score Files below for an alternative method.)</li>
+		</ul>
+		<p>Settings for the score being displayed are included as &lt;param&gt; tags between the &lt;object&gt; tags.</p>
+		<ul>
+			<li><b>initialView</b>: this parameter specifies the initial setting for the score. A value of &quot;translation&quot; indicates translated symbols; &quot;braille&quot; indicates braille characters. The viewer displays a toggle for the user to switch between translated symbols and braille symbols. If this tag is omitted, the viewer will display translated symbols by default.</li>
+			<li><b>scrollable</b>: this parameter specifies whether or not the user will be able to scroll the score in the viewer. A value of &quot;true&quot; indicates a scrollable score, and &quot;false&quot; indicates a non-scrollable score. If this tag is omitted, the viewer will not be scrollable by default.</li>
+			<li><b>drawSmallDots</b>: this parameter specifies whether braille characters will be shown with small dots in unused dot positions. A value of &quot;true&quot; indicates that small dots will be used, and &quot;false&quot; indicates that unused positions will be left blank. If this tag is omitted, unused positions will be left blank.</li>
+			<li><b>scoreSize</b>: this parameter specifies the level of magnification used by the viewer. The value refers to the pixel height of a single cell. If omitted, the viewer will display cells with a pixel height of 60.</li>
+		</ul>
+		<h4>Embedding Score Files</h4>
+		<p>As an alternative to referring to a separate document, Braille Music Viewer supports including the code of a braille music score file directly in the HTML code of a web page. To do so, simply copy the XML code of the BRM file and place it inside the &lt;object&gt; tag, and omit the &quot;data&quot; attribute. (If the viewer contains both a data attribute and embedded score data, it will use the file referenced by the data attribute.)</p>
+	</body>
 </html>

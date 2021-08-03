@@ -1,0 +1,28 @@
+<!DOCTYPE score-braille PUBLIC "-//TobyRush//DTD Braille Music Notator Score 0.9//EN" "https://tobyrush.com/braillemusic/notator/dtd/braillemusic.dtd">
+<score-braille>
+	<filename>Untitled Score.brm</filename>
+	<settings>
+		<settingentry app="braillemusicnotator">translate=1|smalldots=1|brailledisplay=0|scoresize=60|pagebreaks=1|wordwrap=1|octavesymbols=1|keysignatures=1|spelldownward=1</settingentry>
+		<settingentry app="braillemusicviewer">width=450|height=300</settingentry>
+	</settings>
+	<page>
+		<width>40</width>
+		<height>25</height>
+	</page>
+	<score>
+		<symbol row="1" col="1" char="octave5"/>
+		<symbol row="1" col="2" char="noteEighthC"/>
+		<symbol row="1" col="3" char="noteEighthD"/>
+		<symbol row="1" col="4" char="noteEighthE"/>
+		<symbol row="1" col="5" char="noteEighthF"/>
+		<symbol row="1" col="6" char="noteHalfG"/>
+		<symbol row="1" col="7" char="barlineFinal"/>
+		<symbol row="2" col="1" char="octave5"/>
+		<symbol row="2" col="2" char="noteEighthC"/>
+		<symbol row="2" col="3" char="noteEighthD"/>
+		<symbol row="2" col="4" char="noteEighthE"/>
+		<symbol row="2" col="5" char="noteEighthF"/>
+		<symbol row="2" col="6" char="noteHalfG"/>
+		<symbol row="2" col="7" char="barlineFinal"/>
+	</score>
+</score-braille>
