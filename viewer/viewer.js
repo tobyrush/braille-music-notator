@@ -55,12 +55,17 @@ class bmviewer {
 		this.canvas.addEventListener("mousemove",this.doNotationMouseMove,false);
 		this.canvas.addEventListener("mousewheel",this.doNotationMouseWheel,false);
 		this.canvas.addEventListener("DOMMouseScroll",this.doNotationMouseWheel,false); // because Firefox doesn't do mousewheel
+		this.object.ownerDocument.defaultView.addEventListener("resize",this.doNotationResize.bind(this),false);
 		this.ctx = this.canvas.getContext('2d');
 		this.mouseIsOverTranslationToggle = false;
 		this.score = [[]];
 		this.hScroll = 0;
 		this.vScroll = 0;
 		this.readParams(params);
+		this.updateSizes();
+	}
+	
+	updateSizes() {
 		if (this.object.width) {
 			this.canvas.width = this.object.width;
 		} else {
@@ -75,6 +80,11 @@ class bmviewer {
 		this.notationHeight = this.canvas.clientHeight;
 		this.notationCellWidth = this.notationWidth/this.gridWidth;
 		this.notationCellHeight = this.notationHeight/this.gridHeight;
+	}
+	
+	doNotationResize(e) {
+		this.updateSizes();
+		this.drawNotation();
 	}
 	
 	doNotationMouseWheel(e) {
