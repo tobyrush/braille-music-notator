@@ -14,17 +14,19 @@
 		<h3>Quick Start</h3>
 		<p>To use Braille Music Viewer on your web page:</p>
 		<p><b>1.</b> Include the following code in the &lt;head&gt; section of your HTML document:</p>
-		<div class="webcode">&lt;script&gt;WebFontConfig = { custom: { families: ['Bravura'], urls: ['http://tobyrush.com/braillemusic/viewer/css/viewer.css'] } };&lt;/script&gt;<br />
+		<div class="webcode">&lt;script&gt;WebFontConfig = { custom: { families: ['Bravura'], urls: ['https://tobyrush.com/braillemusic/viewer/css/viewer.css'] } };&lt;/script&gt;<br />
 		&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js&quot;&gt;&lt;/script&gt;<br />
-		&lt;script type=&quot;text/javascript&quot; src=&quot;http://tobyrush.com/braillemusic/viewer/viewer.js&quot;&gt;&lt;/script&gt;<br />
+		&lt;script type=&quot;text/javascript&quot; src=&quot;https://tobyrush.com/braillemusic/viewer/viewer.js&quot;&gt;&lt;/script&gt;<br />
 		&lt;style&gt; score-braille {display: none;} &lt;/style&gt;
 		</div>
 		<div id="smallViewer">
 			<object type="application/braillemusic" data="brm/testfile2.brm">
 				<param name="initialView" value="translation">
-				<param name="scrollable" value="false">
+				<param name="scrollable" value="true">
 				<param name="drawSmallDots" value="false">
 				<param name="scoreSize" value="50">
+				<param name="scoreWidth" value="20">
+				<param name="scoreHeight" value="10">
 			</object>
 			<br />An example of Braille Music Viewer, showing a C major scale.
 		</div>
@@ -33,17 +35,21 @@
 		<p>(If you have another function being called in the "onload" event, simply make sure to call initializeBMViewers() from within that function.)</p>
 		<p><b>3.</b> Lastly, include a musical example by placing an &lt;object&gt;...&lt;/object&gt; element in your page where you want the example to appear. There are two types of parameters that can be included, as described below.</p>
 		<div class="webcode">
-			&lt;object type=&quot;application/braillemusic&quot; data=&quot;scorefile.brm&quot; width=600 height=300&gt;<br />
+			&lt;object type=&quot;application/braillemusic&quot; data=&quot;scorefile.brm&quot;&gt;<br />
 			&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=&quot;initialView&quot; value=&quot;translation&quot;&gt;<br />
-			&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=&quot;scrollable&quot; value=&quot;false&quot;&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=&quot;scrollable&quot; value=&quot;true&quot;&gt;<br />
 			&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=&quot;drawSmallDots&quot; value=&quot;false&quot;&gt;<br />
 			&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=&quot;scoreSize&quot; value=&quot;50&quot;&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=&quot;scoreWidth&quot; value=&quot;20&quot;&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=&quot;scoreHeight&quot; value=&quot;10&quot;&gt;<br />
 			&lt;/object&gt;
 		</div>
 		<p>Attributes inside the object tag pertain to the viewer frame itself.</p>
 		<ul>
 			<li><b>type</b>: this parameter indicates the type of data contained by the object, and must be set to <b>application/braillemusic</b>.</li>
 			<li><b>data</b>: this parameter must contain a pathname to a braille music score file. Braille music scores can be created using <a href="http://tobyrush.com/braillemusic/notator/index.html">Braille Music Notator</a>. In that program, choose &quot;Save File&quot; from the File dialog to create a score file (which ends in .brm) and upload it to your web host. The data parameter will accept a relative pathname or an absolute URL. (See Embedding Score Files below for an alternative method.)</li>
+			<li><b>width</b>: this parameter can be set to specify a width of the viewer in pixels. If this parameter is omitted, the viewer will be set to the width of the enclosing object (for example, a &lt;div&gt; with a width set by CSS).</li>
+			<li><b>height</b>: this parameter can be set to specify a height of the viewer in pixels. If this parameter is omitted, the viewer will be set to the height of the enclosing object (for example, a &lt;div&gt; with a height set by CSS).</li>
 		</ul>
 		<p>Settings for the score being displayed are included as &lt;param&gt; tags between the &lt;object&gt; tags.</p>
 		<ul>
@@ -51,6 +57,8 @@
 			<li><b>scrollable</b>: this parameter specifies whether or not the user will be able to scroll the score in the viewer. A value of &quot;true&quot; indicates a scrollable score, and &quot;false&quot; indicates a non-scrollable score. If this tag is omitted, the viewer will not be scrollable by default.</li>
 			<li><b>drawSmallDots</b>: this parameter specifies whether braille characters will be shown with small dots in unused dot positions. A value of &quot;true&quot; indicates that small dots will be used, and &quot;false&quot; indicates that unused positions will be left blank. If this tag is omitted, unused positions will be left blank.</li>
 			<li><b>scoreSize</b>: this parameter specifies the level of magnification used by the viewer. The value refers to the pixel height of a single cell. If omitted, the viewer will display cells with a pixel height of 60.</li>
+			<li><b>scoreWidth</b>: if the scrollable parameter is set to &quot;true,&quot; this parameter specifies the width of the scrollable score. For example, is this value is set to 20, the user will not be able to scroll past column 20. This parameter does not affect the size of the viewer, which can be set with the width parameter described above or using CSS.</li>
+			<li><b>scoreHeight</b>: if the scrollable parameter is set to &quot;true,&quot; this parameter specifies the height of the scrollable score. For example, is this value is set to 10, the user will not be able to scroll past row 10. This parameter does not affect the size of the viewer, which can be set with the height parameter described above or using CSS.</li>
 		</ul>
 		<h4>Embedding Score Files</h4>
 		<p>As an alternative to referring to a separate document, Braille Music Viewer supports including the code of a braille music score file directly in the HTML code of a web page. To do so, simply copy the XML code of the BRM file and place it inside the &lt;object&gt; tag, and omit the &quot;data&quot; attribute. (If the viewer contains both a data attribute and embedded score data, it will use the file referenced by the data attribute.)</p>

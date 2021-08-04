@@ -61,8 +61,16 @@ class bmviewer {
 		this.hScroll = 0;
 		this.vScroll = 0;
 		this.readParams(params);
-		this.canvas.style.width = "100%";
-		this.canvas.style.height = "100%";
+		if (this.object.width) {
+			this.canvas.width = this.object.width;
+		} else {
+			this.canvas.style.width = "100%";
+		}
+		if (this.object.height) {
+			this.canvas.height = this.object.height;
+		} else {
+			this.canvas.style.height = "100%";
+		}
 		this.notationWidth = this.canvas.clientWidth;
 		this.notationHeight = this.canvas.clientHeight;
 		this.notationCellWidth = this.notationWidth/this.gridWidth;
@@ -89,6 +97,14 @@ class bmviewer {
 
 			v.vScroll = Math.max(0,v.vScroll + deltaY);
 			v.hScroll = Math.max(0,v.hScroll + deltaX);
+			
+			if (v.scoreWidth) {
+				v.hScroll = Math.min((v.scoreWidth*v.gridWidth)-v.notationWidth,v.hScroll);
+			}
+
+			if (v.scoreHeight) {
+				v.vScroll = Math.min((v.scoreHeight*v.gridHeight)-v.notationHeight,v.vScroll);
+			}
 
 			e.preventDefault();
 
@@ -147,12 +163,15 @@ class bmviewer {
 			alertNode.setAttribute("id","bmviewer");
 			alertNode.setAttribute("aria-details",objectID);
 			alertNode.style.position = "absolute";
-			alertNode.style.left = "-999999";
+			alertNode.style.left = "-999999px";
 			this.object.parentElement.insertBefore(alertNode,this.object);
 			this.brailleDisplayElement = alertNode;
 		}
 		
 		this.scrollable = p.scrollable;
+		this.scoreWidth = p.scoreWidth;
+		this.scoreHeight = p.scoreHeight;
+		
 		this.drawSmallDots = p.drawSmallDots;
 		var h = 60;
 		if (p.scoreSize) {
