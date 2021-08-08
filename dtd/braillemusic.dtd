@@ -531,11 +531,18 @@
 	noteThirtySecondE|
 	noteThirtySecondF|
 	noteThirtySecondG|
-	noteToneClusterAll
+	noteToneClusterAll|
 	noteToneClusterFlat|
 	noteToneClusterNatural|
 	noteToneClusterSharp|
 	noteToneClusterUnspecified|
+	noteTwoHundredFiftySixthA|
+	noteTwoHundredFiftySixthB|
+	noteTwoHundredFiftySixthC|
+	noteTwoHundredFiftySixthD|
+	noteTwoHundredFiftySixthE|
+	noteTwoHundredFiftySixthF|
+	noteTwoHundredFiftySixthG|
 	noteWholeA|
 	noteWholeB|
 	noteWholeC|
@@ -609,6 +616,7 @@
 	restSixteenth|
 	restSixtyFourth|
 	restThirtySecond|
+	restTwoHundredFiftySixth|
 	restWhole|
 	slurAppoggiatura|
 	slurBegin|

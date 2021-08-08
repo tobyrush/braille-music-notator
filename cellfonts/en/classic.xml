@@ -3611,6 +3611,48 @@
         <graphic type="text" color="#fff" size="40" left="150" top="80" content="&#xe1d5;" />
         <graphic type="rect" left="149" top="50" width="20" height="30" fill="true" color="#fff"/>
     </cell>
+    <cell name="A two-hundred-fifty-sixth note" char="noteTwoHundredFiftySixthA">
+        <code value="233" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="45" left="80" top="80" content="&#xe1e1;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="A" />
+    </cell>
+    <cell name="B two-hundred-fifty-sixth note" char="noteTwoHundredFiftySixthB">
+        <code value="241" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="45" left="80" top="80" content="&#xe1e1;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="B" />
+    </cell>
+    <cell name="C two-hundred-fifty-sixth note" char="noteTwoHundredFiftySixthC">
+        <code value="289" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="45" left="80" top="80" content="&#xe1e1;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="C" />
+    </cell>
+    <cell name="D two-hundred-fifty-sixth note" char="noteTwoHundredFiftySixthD">
+        <code value="290" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="45" left="80" top="80" content="&#xe1e1;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="D" />
+    </cell>
+    <cell name="E two-hundred-fifty-sixth note" char="noteTwoHundredFiftySixthE">
+        <code value="238" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="45" left="80" top="80" content="&#xe1e1;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="E" />
+    </cell>
+    <cell name="F two-hundred-fifty-sixth note" char="noteTwoHundredFiftySixthF">
+        <code value="261" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="45" left="80" top="80" content="&#xe1e1;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="F" />
+    </cell>
+    <cell name="G two-hundred-fifty-sixth note" char="noteTwoHundredFiftySixthG">
+        <code value="240" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="45" left="80" top="80" content="&#xe1e1;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="G" />
+    </cell>
     <cell name="A whole note" char="noteWholeA">
         <code value="33" />
         <graphic type="background" color="#f00" />
@@ -4092,6 +4134,11 @@
         <code value="185" />
         <graphic type="background" color="#f00" />
         <graphic type="text" color="#fff" align="center" size="60" left="50" top="50" content="&#xe4e8;" />
+    </cell>
+    <cell name="two-hundred-fifty-sixth rest" char="restTwoHundredFiftySixth">
+        <code value="277" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="center" size="45" left="50" top="45" content="&#xe4eb;" />
     </cell>
     <cell name="whole rest" char="restWhole">
         <code value="77" />
