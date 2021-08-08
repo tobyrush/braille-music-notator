@@ -4,8 +4,11 @@
 var versionString = "0.9.4b";
 var brailleDots = [0,46,16,60,43,41,47,4,55,62,33,44,32,36,40,12,52,2,6,18,50,34,22,54,38,20,49,48,35,63,28,57,8,1,3,9,25,17,11,27,19,10,26,5,7,13,29,21,15,31,23,14,30,37,39,58,45,61,53,42,51,59,24,56];
 
+var brailleUnicode=[240,286,256,300,283,281,287,244,295,302,273,284,272,276,280,252,292,242,246,258,290,274,262,294,278,260,289,288,275,303,268,297,248,241,243,249,265,257,251,267,259,250,266,245,247,253,269,261,255,271,263,254,270,277,279,298,285,301,293,282,291,299,264,296] // starts at 32
+
 function initializeBMViewers(fontURL = "https://tobyrush.com/braillemusic/notator/cellfonts/en/classic.xml") {
 	var u;
+	convertASCIIBraille();
 	if (fontURL.match(/\:\/\//g).length) {
 		u = new URL(fontURL,document.location);
 	} else {
@@ -1169,6 +1172,23 @@ function roundRightRect(ctx, x, y, width, height, radius, fill, stroke) {
 	}
 }
 
+function convertASCIIBraille() {
+	var i,j,r,s,t = document.querySelectorAll('.braille');
+	for (i=0; i<t.length; i++) {
+		r = "";
+		s = t[i].textContent.split('');
+		for (j=0; j<s.length; j++) {
+			r = r + "&#10" + brailleUnicode[s[j].charCodeAt(0)-32] + ";";
+		}
+		t[i].innerHTML = r;
+	}
+}
+
+function decodeHtml(html) {
+	var txt = document.createElement("textarea");
+	txt.innerHTML = html;
+	return txt.value;
+}
 Array.prototype.equals = function (array) {
 	// if the other array is a falsy value, return
 	if (!array)
