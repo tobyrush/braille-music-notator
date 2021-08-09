@@ -648,6 +648,16 @@
 	text8|	
 	text9|	
 	textA|
+	textAccentAcute|
+	textAccentBreve|
+	textAccentCedilla|
+	textAccentCircumflex|
+	textAccentDiaeresis|
+	textAccentEng|
+	textAccentGrave|
+	textAccentMacron|
+	textAccentSlash|
+	textAccentTilde|
 	textAccidentalOnly|
 	textAe|
 	textAmpersand|
@@ -870,7 +880,6 @@
 	textFigureSlashed|
 	textG|
 	textGreaterThan|
-	textGraveAccent|
 	textH|
 	textHyphen|
 	textI|

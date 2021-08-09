@@ -4374,6 +4374,67 @@
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="A" />
     </cell>
+    <cell name="text acute accent symbol" word-modifier="1" char="textAccentAcute">
+        <code value="594" />
+        <code value="847" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#x00b4;' />
+    </cell>
+    <cell name="text breve accent symbol" word-modifier="1" char="textAccentBreve">
+        <code value="564" />
+        <code value="743" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#x02d8;' />
+    </cell>
+    <cell name="text cedilla accent symbol" word-modifier="1" char="textAccentCedilla">
+        <code value="594" />
+        <code value="638" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#x0184;' />
+    </cell>
+    <cell name="text circumflex accent symbol" word-modifier="1" char="textAccentCircumflex">
+        <code value="594" />
+        <code value="937" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='^' />
+    </cell>
+    <cell name="text diaeresis accent symbol" word-modifier="1" char="textAccentDiaeresis">
+        <code value="594" />
+        <code value="851" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#x00a8;' />
+    </cell>
+    <cell name="text eng accent symbol" word-modifier="1" char="textAccentEng">
+        <code value="594" />
+        <code value="878" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#x014b;' />
+    </cell>
+    <cell name="text grave accent symbol" word-modifier="1" char="textAccentGrave">
+        <code value="594" />
+        <code value="942" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='`' />
+    </cell>
+    <cell name="text macron accent symbol" word-modifier="1" char="textAccentMacron">
+        <code value="564" />
+        <code value="745" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#x00af;' />
+    </cell>
+    <cell name="text slash accent symbol" word-modifier="1" char="textAccentSlash">
+        <code value="564" />
+        <code value="942" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="\serif" color="#ccc" align="center" style="bold italic" baseline="middle" size="50" left="100" top="50" content='x' />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='/' />
+    </cell>
+    <cell name="text tilde accent symbol" word-modifier="1" char="textAccentTilde">
+        <code value="594" />
+        <code value="993" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#x02dc;' />
+    </cell>
     <cell name="accidental only" char="textAccidentalOnly">
         <code value="975" />
         <graphic type="background" color="#fff" />
@@ -5664,12 +5725,6 @@
         <code value="862" />
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content=">" />
-    </cell>
-    <cell name="text grave accent symbol" word-modifier="1" char="textGraveAccent">
-        <code value="746" />
-        <code value="942" />
-        <graphic type="background" color="#fff" cells="2" />
-        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='`' />
     </cell>
     <cell name="text h" char="textH">
         <code value="572" />
