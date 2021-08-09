@@ -170,6 +170,7 @@
 	directionPositionHalf|
 	directionPositionShiftBegin|
 	directionPositionShiftEnd|
+	directionPrintPageTurn|
 	directionPrintPaginationIndicator|
 	directionPush|
 	directionRightHand|
@@ -518,6 +519,10 @@
 	noteSixtyFourthE|
 	noteSixtyFourthF|
 	noteSixtyFourthG|
+	noteSizeLarger|
+	noteSizeLargerMultiple|
+	noteSizeSmaller|
+	noteSizeSmallerMultiple|
 	noteStemEighth|
 	noteStemHalf|
 	noteStemQuarter|

@@ -1250,6 +1250,13 @@
         <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="150" top="35" content="END" />
         <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="150" top="65" content="POS. SHIFT" />
     </cell>
+    <cell name="print page turn" char="directionPrintPageTurn">
+        <code value="534" />
+        <code value="551" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="PAGE" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="TURN" />
+    </cell>
     <cell name="print pagination indicator" char="directionPrintPaginationIndicator">
         <code value="534" />
         <code value="551" />
@@ -3463,6 +3470,36 @@
         <graphic type="background" color="#f00" />
         <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1dd;" />
         <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="G" />
+    </cell>
+    <cell name="larger note size" char="noteSizeLarger">
+        <code value="759" />
+        <code value="1253" />
+        <graphic type="background" color="#f00" cells="2" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="100" top="35" content="LARGER" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="100" top="65" content="NOTE" />
+    </cell>
+    <cell name="multiple larger note sizes" char="noteSizeLargerMultiple">
+        <code value="759" />
+        <code value="1253" />
+        <code value="1253" />
+        <graphic type="background" color="#f00" cells="3" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="150" top="35" content="LARGER" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="150" top="65" content="NOTES" />
+    </cell>
+    <cell name="smaller note size" char="noteSizeSmaller">
+        <code value="244" />
+        <code value="1253" />
+        <graphic type="background" color="#f00" cells="2" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="100" top="35" content="SMALLER" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="100" top="65" content="NOTE" />
+    </cell>
+    <cell name="multiple smaller note sizes" char="noteSizeSmallerMultiple">
+        <code value="244" />
+        <code value="1253" />
+        <code value="1253" />
+        <graphic type="background" color="#f00" cells="3" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="150" top="35" content="SMALLER" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="150" top="65" content="NOTES" />
     </cell>
     <cell name="eighth stem" char="noteStemEighth">
         <code value="995" />
