@@ -198,7 +198,7 @@ class bmviewer {
 		var d = "";
 		if (this.score.length) {
 			for (var y=0; y<this.score.length; y++) {
-				if (this.score[y].length) {
+				if (this.score[y] && this.score[y].length) {
 					for (var x=0; x<this.score[y].length; x++) {
 						d = d + encodeForHTML(String.fromCharCode(this.getScore(x,y) % 100));
 					}
@@ -549,7 +549,7 @@ class cellFontModule {
 			if (chars.slice(0, len).equals(obj.codes.slice(0, len)) &&
 				(!obj.discrete ||
 				 (newWord &&
-				  (cellValIsEmpty(chars[len]) || currentCellFont.findSymbol(chars.slice(len,chars.length),false)[0].wordModifier)
+				  (cellValIsEmpty(chars[len]) || obj.root.findSymbol(chars.slice(len,chars.length),false)[0].wordModifier)
 				 )
 				)
 			   ) {
