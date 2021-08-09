@@ -260,6 +260,9 @@ function interpretKeyCode(e) {
             case 192: // ` - rotate controls
 				rotateControlModule();
 				break;
+            case 220: // \ - insert character prompt
+                showInsertSymbolDialog();
+                break;
         }
         if (typeof kKeyCommands[e.keyCode]!=="undefined") {
             updateScreenreader(
