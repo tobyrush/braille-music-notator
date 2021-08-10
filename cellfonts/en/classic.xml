@@ -4390,13 +4390,20 @@
         <code value="594" />
         <code value="638" />
         <graphic type="background" color="#fff" cells="2" />
-        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#x0184;' />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#x0327;' />
+    </cell>
+    <cell name="text circle accent symbol" word-modifier="1" char="textAccentCircle">
+        <code value="594" />
+        <code value="636" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="\serif" color="#ccc" align="center" style="bold italic" baseline="middle" size="50" left="97" top="50" content='x' />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="45" content="&#xb0;" />
     </cell>
     <cell name="text circumflex accent symbol" word-modifier="1" char="textAccentCircumflex">
         <code value="594" />
         <code value="937" />
         <graphic type="background" color="#fff" cells="2" />
-        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='^' />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#x0302;' />
     </cell>
     <cell name="text diaeresis accent symbol" word-modifier="1" char="textAccentDiaeresis">
         <code value="594" />
@@ -4427,7 +4434,7 @@
         <code value="942" />
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="\serif" color="#ccc" align="center" style="bold italic" baseline="middle" size="50" left="100" top="50" content='x' />
-        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='/' />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="55" content='/' />
     </cell>
     <cell name="text tilde accent symbol" word-modifier="1" char="textAccentTilde">
         <code value="594" />
@@ -4460,6 +4467,12 @@
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="'" />
     </cell>
     <cell name="text asterisk" char="textAsterisk">
+        <code value="534" />
+        <code value="757" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="70" left="100" top="67" content='*' />
+    </cell>
+    <cell name="text asterisk" char="textAsteriskOld">
         <code value="757" />
         <code value="757" />
         <graphic type="background" color="#fff" cells="2" />
@@ -4488,16 +4501,72 @@
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='|' />
     </cell>
+    <cell name="end boldface" word-modifier="1" char="textBoldfaceEnd">
+        <code value="594" />
+        <code value="239" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="END" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="BOLDFACE" />
+    </cell>
+    <cell name="boldface passage" word-modifier="1" char="textBoldfacePassage">
+        <code value="594" />
+        <code value="955" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="BOLDFACE" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="PASSAGE" />
+    </cell>
+    <cell name="boldface symbol" word-modifier="1" char="textBoldfaceSymbol">
+        <code value="594" />
+        <code value="950" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="BOLDFACE" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="SYMBOL" />
+    </cell>
+    <cell name="boldface word" word-modifier="1" char="textBoldfaceWord">
+        <code value="594" />
+        <code value="949" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="BOLDFACE" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="WORD" />
+    </cell>
+    <cell name="braille symbol indicator" word-modifier="1" char="textBrailleSymbolIndicator">
+        <code value="746" />
+        <code value="661" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="BRAILLE" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="CHARACTER" />
+    </cell>
+    <cell name="text bullet" word-modifier="1" char="textBullet">
+        <code value="595" />
+        <code value="852" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="&#x2022;" />
+    </cell>
     <cell name="text c" char="textC">
         <code value="567" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="C" />
+    </cell>
+    <cell name="end capitalization" word-modifier="1" char="textCapitalizeEnd">
+        <code value="544" />
+        <code value="239" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="END" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="CAPITALS" />
     </cell>
     <cell name="capitalize letter" word-modifier="1" char="textCapitalizeLetter">
         <code value="544" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="17" left="35" top="50" content="CAPITAL" rotateCCW="true" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="17" left="65" top="50" content="LETTER" rotateCCW="true" />
+    </cell>
+    <cell name="capitalize passage" word-modifier="1" char="textCapitalizePassage">
+        <code value="544" />
+        <code value="544" />
+        <code value="544" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="150" top="35" content="CAPITALIZE" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="150" top="65" content="PASSAGE" />
     </cell>
     <cell name="capitalize word" word-modifier="1" char="textCapitalizeWord">
         <code value="544" />
@@ -5281,6 +5350,28 @@
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="RATHER" rotateCCW="true" />
     </cell>
+    <cell name="text contraction receive" char="textContractionReceive">
+        <code value="582" />
+        <code value="567" />
+        <code value="586" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="RECEIVE" />
+    </cell>
+    <cell name="text contraction receiving" char="textContractionReceiving">
+        <code value="582" />
+        <code value="567" />
+        <code value="586" />
+        <code value="571" />
+        <graphic type="background" color="#fff" cells="4" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="200" top="50" content="RECEIVING" />
+    </cell>
+    <cell name="text contraction rejoice" char="textContractionRejoice">
+        <code value="582" />
+        <code value="574" />
+        <code value="567" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="150" top="50" content="REJOICE" />
+    </cell>
     <cell name="text contraction rejoicing" char="textContractionRejoicing">
         <code value="582" />
         <code value="574" />
@@ -5581,6 +5672,12 @@
         <graphic type="background" color="#fff" cells="4" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="30" left="200" top="50" content="YOURSELVES" />
     </cell>
+    <cell name="text copyright symbol" word-modifier="1" char="textCopyright">
+        <code value="594" />
+        <code value="967" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="&#xa9;" />
+    </cell>
     <cell name="text close curved bracket symbol" word-modifier="1" char="textCurvedBracketClose">
         <code value="595" />
         <code value="862" />
@@ -5598,12 +5695,32 @@
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="D" />
     </cell>
+    <cell name="text dagger" char="textDagger">
+        <code value="564" />
+        <code value="644" />
+        <code value="763" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="70" left="150" top="50" content="&#x2020;" />
+    </cell>
+    <cell name="text double dagger" char="textDaggerDouble">
+        <code value="564" />
+        <code value="644" />
+        <code value="793" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="70" left="150" top="50" content="&#x2021;" />
+    </cell>
     <cell name="text decimal point symbol" char="textDecimalPoint">
         <code value="546" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="." />
     </cell>
-    <cell name="text ditto" char="textDitto">
+    <cell name="text degree symbol" word-modifier="1" char="textDegree">
+        <code value="594" />
+        <code value="774" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="&#xb0;" />
+    </cell>
+    <cell name="text ditto mark" char="textDitto">
         <code value="534" />
         <code value="549" />
         <graphic type="background" color="#fff" cells="2" />
@@ -5627,23 +5744,23 @@
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='"' />
     </cell>
-    <cell name="text close double quotation mark symbol" word-modifier="1" char="textDoubleQuotationMarkClose">
+    <cell name="text close double quotation mark symbol" word-modifier="1" char="textDoubleQuotationMarkOldClose">
         <code value="548" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content='&#x201d;' />
     </cell>
-    <cell name="text open double quotation mark symbol" word-modifier="1" char="textDoubleQuotationMarkOpen">
+    <cell name="text open double quotation mark symbol" word-modifier="1" char="textDoubleQuotationMarkOldOpen">
         <code value="456" />
         <graphic type="background" color="#fff"/>
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content='&#x201c;' />
     </cell>
-    <cell name="text close double quotation mark symbol ueb" word-modifier="1" char="textDoubleQuotationMarkUEBClose">
+    <cell name="text close double quotation mark symbol" word-modifier="1" char="textDoubleQuotationMarkClose">
         <code value="594" />
         <code value="848" />
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#x201d;' />
     </cell>
-    <cell name="text open double quotation mark symbol ueb" word-modifier="1" char="textDoubleQuotationMarkUEBOpen">
+    <cell name="text open double quotation mark symbol" word-modifier="1" char="textDoubleQuotationMarkOpen">
         <code value="594" />
         <code value="856" />
         <graphic type="background" color="#fff" cells="2" />
@@ -5655,27 +5772,27 @@
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="E" />
     </cell>
     <cell name="text em dash symbol" word-modifier="1" char="textEmDash">
-        <code value="545" />
-        <code value="545" />
-        <code value="545" />
-        <graphic type="background" color="#fff" cells="3" />
-        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="150" top="50" content="&#x2014;" />
-    </cell>
-    <cell name="text em dash symbol ueb" word-modifier="1" char="textEmDashUEB">
         <code value="534" />
         <code value="644" />
         <code value="545" />
         <graphic type="background" color="#fff" cells="3" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="150" top="50" content="&#x2013;" />
     </cell>
-    <cell name="text en dash symbol" word-modifier="1" char="textEnDash">
+    <cell name="text em dash symbol" word-modifier="1" char="textEmDashOld">
         <code value="545" />
+        <code value="545" />
+        <code value="545" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="150" top="50" content="&#x2014;" />
+    </cell>
+    <cell name="text en dash symbol" word-modifier="1" char="textEnDash">
+        <code value="544" />
         <code value="545" />
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="&#x2013;" />
     </cell>
-    <cell name="text en dash symbol ueb" word-modifier="1" char="textEnDashUEB">
-        <code value="534" />
+    <cell name="text en dash symbol" word-modifier="1" char="textEnDashOld">
+        <code value="545" />
         <code value="545" />
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="&#x2013;" />
@@ -5704,16 +5821,40 @@
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="!" />
     </cell>
+    <cell name="text inverted exclamation point symbol" word-modifier="1" char="textExclamationPointInverted">
+        <code value="594" />
+        <code value="659" />
+        <code value="554" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="150" top="50" content="&#xa1;" />
+    </cell>
     <cell name="text f" char="textF">
         <code value="570" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="F" />
+    </cell>
+    <cell name="text feet symbol" char="textFeet">
+        <code value="939" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="'" />
+    </cell>
+    <cell name="text female symbol" word-modifier="1" char="textFemale">
+        <code value="594" />
+        <code value="788" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="&#x2640;" />
     </cell>
     <cell name="slashed figure" char="textFigureSlashed">
         <code value="1259" />
         <graphic type="background" color="#fff" />
         <graphic type="text" color="#bbb" align="center" baseline="alphabetic" style="bold italic" font="serif" size="50" left="50" top="60" content="x" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="&#x2044;" />
+    </cell>
+    <cell name="text franc symbol" word-modifier="1" char="textFranc">
+        <code value="564" />
+        <code value="970" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="&#x20A3;" />
     </cell>
     <cell name="text g" char="textG">
         <code value="571" />
@@ -5731,15 +5872,49 @@
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="H" />
     </cell>
+    <cell name="text hyphen symbol" word-modifier="1" char="textHyphen">
+        <code value="545" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="-" />
+    </cell>
     <cell name="text i" char="textI">
         <code value="573" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="I" />
     </cell>
-    <cell name="text hyphen symbol" word-modifier="1" char="textHyphen">
-        <code value="545" />
-        <graphic type="background" color="#fff" />
-        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="-" />
+    <cell name="text inches symbol" word-modifier="1" char="textInches">
+        <code value="644" />
+        <code value="855" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='"' />
+    </cell>
+    <cell name="end italics" word-modifier="1" char="textItalicEnd">
+        <code value="746" />
+        <code value="239" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="END" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="ITALICS" />
+    </cell>
+    <cell name="italic passage" word-modifier="1" char="textItalicPassage">
+        <code value="746" />
+        <code value="955" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="ITALIC" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="PASSAGE" />
+    </cell>
+    <cell name="italic symbol" word-modifier="1" char="textItalicSymbol">
+        <code value="746" />
+        <code value="950" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="ITALIC" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="SYMBOL" />
+    </cell>
+    <cell name="italic word" word-modifier="1" char="textItalicWord">
+        <code value="746" />
+        <code value="949" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="ITALIC" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="SYMBOL" />
     </cell>
     <cell name="text j" char="textJ">
         <code value="574" />
@@ -5773,6 +5948,18 @@
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="M" />
     </cell>
+    <cell name="text male symbol" word-modifier="1" char="textMale">
+        <code value="594" />
+        <code value="789" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="&#x2642;" />
+    </cell>
+    <cell name="text minus symbol" word-modifier="1" char="textMinus">
+        <code value="534" />
+        <code value="545" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='-' />
+    </cell>
     <cell name="text multiplication symbol" word-modifier="1" char="textMultiplication">
         <code value="534" />
         <code value="856" />
@@ -5783,6 +5970,12 @@
         <code value="578" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="N" />
+    </cell>
+    <cell name="text naira symbol" word-modifier="1" char="textNaira">
+        <code value="564" />
+        <code value="878" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#x20A6;' />
     </cell>
     <cell name="text number symbol" char="textNumberSign">
         <code value="535" />
@@ -5812,10 +6005,11 @@
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="P" />
     </cell>
-    <cell name="text parenthesis symbol" word-modifier="1" char="textParenthesis">
-        <code value="555" />
-        <graphic type="background" color="#fff" />
-        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="(&#x2026;)" />
+    <cell name="text paragraph symbol" word-modifier="1" char="textParagraph">
+        <code value="594" />
+        <code value="880" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="&#xb6;" />
     </cell>
     <cell name="text close parenthesis symbol" word-modifier="1" char="textParenthesisClose">
         <code value="534" />
@@ -5852,6 +6046,17 @@
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="&#x2192;" />
     </cell>
+    <cell name="text pound sterling symbol" char="textPoundSterling">
+        <code value="564" />
+        <code value="676" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="&#xa3;" />
+    </cell>
+    <cell name="text prime symbol" word-modifier="1" char="textPrime">
+        <code value="555" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="&#x2032;" />
+    </cell>
     <cell name="punctuation prefix" word-modifier="1" char="textPunctuationPrefix">
         <code value="795" />
         <graphic type="background" color="#fff" />
@@ -5867,6 +6072,13 @@
         <code value="556" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="?" />
+    </cell>
+    <cell name="text inverted question mark symbol" word-modifier="1" char="textQuestionMarkInverted">
+        <code value="594" />
+        <code value="659" />
+        <code value="556" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="150" top="50" content="&#xbf;" />
     </cell>
     <cell name="text r" char="textR">
         <code value="582" />
@@ -5887,6 +6099,12 @@
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="END" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="RECIT TONE" />
     </cell>
+    <cell name="text registered trade mark symbol" char="textRegistered">
+        <code value="594" />
+        <code value="882" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="&#xae;" />
+    </cell>
     <cell name="text repeat symbol" char="textRepeat">
         <code value="557" />
         <graphic type="background" color="#fff" />
@@ -5904,46 +6122,80 @@
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="S" />
     </cell>
+    <cell name="end script" word-modifier="1" char="textScriptEnd">
+        <code value="564" />
+        <code value="239" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="END" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="SCRIPT" />
+    </cell>
+    <cell name="script passage" word-modifier="1" char="textScriptPassage">
+        <code value="564" />
+        <code value="955" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="SCRIPT" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="PASSAGE" />
+    </cell>
+    <cell name="script symbol" word-modifier="1" char="textScriptSymbol">
+        <code value="564" />
+        <code value="950" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="SCRIPT" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="SYMBOL" />
+    </cell>
+    <cell name="script word" word-modifier="1" char="textScriptWord">
+        <code value="564" />
+        <code value="949" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="SCRIPT" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="WORD" />
+    </cell>
     <cell name="text seconds symbol" char="textSeconds">
         <code value="494" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="15" left="50" top="50" content="SECONDS" rotateCCW="true" />
+    </cell>
+    <cell name="text section symbol" word-modifier="1" char="textSection">
+        <code value="594" />
+        <code value="883" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#xa7;' />
     </cell>
     <cell name="text semicolon symbol" word-modifier="1" char="textSemicolon">
         <code value="550" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content=";" />
     </cell>
-    <cell name="text close single quotation mark symbol" word-modifier="1" char="textSingleQuotationMarkClose">
+    <cell name="text close single quotation mark symbol" word-modifier="1" char="textSingleQuotationMarkOldClose">
         <code value="644" />
         <code value="548" />
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#x2019;' />
     </cell>
-    <cell name="text open single quotation mark symbol" word-modifier="1" char="textSingleQuotationMarkOpen">
+    <cell name="text open single quotation mark symbol" word-modifier="1" char="textSingleQuotationMarkOldOpen">
         <code value="644" />
         <code value="456" />
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#x2018;' />
     </cell>
-    <cell name="text close single quotation mark symbol ueb" word-modifier="1" char="textSingleQuotationMarkUEBClose">
+    <cell name="text close single quotation mark symbol" word-modifier="1" char="textSingleQuotationMarkClose">
         <code value="644" />
         <code value="848" />
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#x2019;' />
     </cell>
-    <cell name="text open single quotation mark symbol ueb" word-modifier="1" char="textSingleQuotationMarkUEBOpen">
+    <cell name="text open single quotation mark symbol" word-modifier="1" char="textSingleQuotationMarkOpen">
         <code value="644" />
         <code value="856" />
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#x2018;' />
     </cell>
-    <cell name="text slash symbol" char="textSlash">
+    <cell name="text slash symbol" char="textSlashOld">
         <code value="647" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="/" />
     </cell>
-    <cell name="text slash symbol ueb" word-modifier="1" char="textSlashUEB">
+    <cell name="text slash symbol" word-modifier="1" char="textSlash">
         <code value="595" />
         <code value="847" />
         <graphic type="background" color="#fff" cells="2" />
@@ -5961,6 +6213,18 @@
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='[' />
     </cell>
+    <cell name="subscript" char="textSubscript">
+        <code value="553" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="17" left="35" top="50" content="SUB-" rotateCCW="true" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="17" left="65" top="50" content="SCRIPT" rotateCCW="true" />
+    </cell>
+    <cell name="superscript" char="textSuperscript">
+        <code value="957" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="17" left="35" top="50" content="SUPER-" rotateCCW="true" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="17" left="65" top="50" content="SCRIPT" rotateCCW="true" />
+    </cell>
     <cell name="text t" char="textT">
         <code value="584" />
         <graphic type="background" color="#fff" />
@@ -5972,10 +6236,60 @@
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="~" />
     </cell>
+    <cell name="text trademark symbol" word-modifier="1" char="textTrademark">
+        <code value="594" />
+        <code value="884" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="&#x2122;" />
+    </cell>
+    <cell name="begin transcriber note" word-modifier="1" char="textTranscriberNoteBegin">
+        <code value="564" />
+        <code value="746" />
+        <code value="960" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="150" top="35" content="BEGIN" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="150" top="65" content="NOTE" />
+    </cell>
+    <cell name="end transcriber note" word-modifier="1" char="textTranscriberNoteEnd">
+        <code value="564" />
+        <code value="746" />
+        <code value="862" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="150" top="35" content="END" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="150" top="65" content="NOTE" />
+    </cell>
     <cell name="text u" char="textU">
         <code value="585" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="U" />
+    </cell>
+    <cell name="end underline" word-modifier="1" char="textUnderlineEnd">
+        <code value="595" />
+        <code value="239" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="END" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="UNDERLINE" />
+    </cell>
+    <cell name="underline passage" word-modifier="1" char="textUnderlinePassage">
+        <code value="595" />
+        <code value="955" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="UNDERLINE" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="PASSAGE" />
+    </cell>
+    <cell name="underline symbol" word-modifier="1" char="textUnderlineSymbol">
+        <code value="595" />
+        <code value="950" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="UNDERLINE" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="SYMBOL" />
+    </cell>
+    <cell name="underline word" word-modifier="1" char="textUnderlineWord">
+        <code value="595" />
+        <code value="949" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="UNDERLINE" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="WORD" />
     </cell>
     <cell name="text underscore symbol" word-modifier="1" char="textUnderscore">
         <code value="746" />
@@ -6002,6 +6316,12 @@
         <code value="589" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="Y" />
+    </cell>
+    <cell name="text yen" word-modifier="1" char="textYen">
+        <code value="564" />
+        <code value="789" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='&#xa5;' />
     </cell>
     <cell name="text z" char="textZ">
         <code value="590" />
