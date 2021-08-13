@@ -1100,10 +1100,9 @@
     </cell>
     <cell name="metronome marking equals" char="directionMetronomeMarkingEquals">
         <code value="455" />
-        <code value="435" />
-        <graphic type="background" color="#000" cells="2" />
-        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="100" top="30" content="M.M." />
-        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="50" left="100" top="55" content="=" />
+        <graphic type="background" color="#000" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="50" top="30" content="M.M." />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="50" left="50" top="55" content="=" />
     </cell>
     <cell name="music parenthesis" char="directionMusicParenthesis">
         <code value="744" />
@@ -1117,6 +1116,13 @@
         <graphic type="background" color="#000" cells="2" />
         <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="100" top="35" content="MUSIC" />
         <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="100" top="65" content="PREFIX" />
+    </cell>
+    <cell name="music suffix" char="directionMusicSuffix">
+        <code value="559" />
+        <code value="850" />
+        <graphic type="background" color="#000" cells="2" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="100" top="35" content="MUSIC" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="100" top="65" content="SUFFIX" />
     </cell>
     <cell name="music symbol comma" word-modifier="1" char="directionMusicSymbolComma">
         <code value="444" />
@@ -5931,6 +5937,11 @@
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="L" />
     </cell>
+    <cell name="leading dots symbol" char="textLeadingDots">
+        <code value="1239" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="..." />
+    </cell>
     <cell name="text less than symbol" word-modifier="1" char="textLessThan">
         <code value="564" />
         <code value="960" />
@@ -6011,6 +6022,11 @@
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="&#xb6;" />
     </cell>
+    <cell name="text parenthesis" char="textParenthesis">
+        <code value="555" />
+        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="(&#x2026;)" />
+    </cell>
     <cell name="text close parenthesis symbol" word-modifier="1" char="textParenthesisClose">
         <code value="534" />
         <code value="862" />
@@ -6053,7 +6069,7 @@
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="&#xa3;" />
     </cell>
     <cell name="text prime symbol" word-modifier="1" char="textPrime">
-        <code value="555" />
+        <code value="1155" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="&#x2032;" />
     </cell>
