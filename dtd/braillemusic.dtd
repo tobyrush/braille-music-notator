@@ -171,6 +171,8 @@
 	directionPositionHalf|
 	directionPositionShiftBegin|
 	directionPositionShiftEnd|
+	directionPrintBracketClose|
+	directionPrintBracketOpen|
 	directionPrintPageTurn|
 	directionPrintPaginationIndicator|
 	directionPush|

@@ -769,7 +769,7 @@
         <graphic type="line" startX="220" startY="70" endX="220" endY="80" lineWidth="1" color="#999"/>
         <graphic type="text" color="#fff" align="center" baseline="middle" size="20" left="150" top="30" font="sans-serif" content="END" />
     </cell>
-    <cell name="begin dotted bracket above" char="bracketDottedAboveBegin">
+    <cell name="begin dotted bracket above" char="bracketAboveDottedBegin">
         <code value="959" />
         <code value="949" />
         <code value="949" />
@@ -779,7 +779,7 @@
         <graphic type="line" startX="220" startY="60" endX="220" endY="80" lineWidth="1" dashPattern="3,3" color="#fff"/>
         <graphic type="text" color="#fff" align="center" baseline="middle" size="20" left="150" top="40" font="sans-serif" content="BEGIN" />
     </cell>
-    <cell name="end dotted bracket above" char="bracketDottedAboveEnd">
+    <cell name="end dotted bracket above" char="bracketAboveDottedEnd">
         <code value="934" />
         <code value="934" />
         <code value="950" />
@@ -1255,6 +1255,18 @@
         <graphic type="background" color="#000" cells="3" />
         <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="150" top="35" content="END" />
         <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="150" top="65" content="POS. SHIFT" />
+    </cell>
+    <cell name="print closing bracket" char="directionPrintBracketClose">
+        <code value="1344" />
+        <code value="949" />
+        <graphic type="background" color="#000" cells="2" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="40" left="100" top="50" font="sans-serif" content="]" />
+    </cell>
+    <cell name="print open bracket" char="directionPrintBracketOpen">
+        <code value="934" />
+        <code value="1339" />
+        <graphic type="background" color="#000" cells="2" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="40" left="100" top="50" font="sans-serif" content="[" />
     </cell>
     <cell name="print page turn" char="directionPrintPageTurn">
         <code value="534" />
@@ -6024,7 +6036,7 @@
     </cell>
     <cell name="text parenthesis" char="textParenthesis">
         <code value="555" />
-        <graphic type="background" color="#fff" cells="2" />
+        <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="(&#x2026;)" />
     </cell>
     <cell name="text close parenthesis symbol" word-modifier="1" char="textParenthesisClose">
