@@ -1173,14 +1173,17 @@ function roundRightRect(ctx, x, y, width, height, radius, fill, stroke) {
 }
 
 function convertASCIIBraille() {
-	var i,j,r,s,t = document.querySelectorAll('.braille');
-	for (i=0; i<t.length; i++) {
-		r = "";
-		s = t[i].textContent.split('');
-		for (j=0; j<s.length; j++) {
-			r = r + "&#10" + brailleUnicode[s[j].charCodeAt(0)-32] + ";";
+	if (document.querySelector('.braille')) {
+		var i,j,r,s,t = document.querySelectorAll('.braille');
+		for (i=0; i<t.length; i++) {
+			r = "";
+			s = t[i].textContent.split('');
+			for (j=0; j<s.length; j++) {
+				r = r + "&#10" + brailleUnicode[s[j].charCodeAt(0)-32] + ";";
+			}
+			t[i].innerHTML = r;
 		}
-		t[i].innerHTML = r;
+		document.querySelector('.braille').classList.toggle("braille");
 	}
 }
 
