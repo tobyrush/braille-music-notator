@@ -40,6 +40,12 @@
         <graphic type="background" color="#f80" cells="2" />
         <graphic type="text" color="#000" align="center" size="80" left="105" top="60" content="&#xe442;" />
     </cell>
+    <cell name="full barre" char="accidentalMusicaFicta">
+        <code value="144" />
+        <graphic type="background" color="#f80" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="17" left="35" top="50" content="MUSICA" rotateCCW="true" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="17" left="65" top="50" content="FICTA" rotateCCW="true" />
+    </cell>
     <cell name="natural" char="accidentalNatural">
         <code value="42" />
         <graphic type="background" color="#f80" />
@@ -932,7 +938,7 @@
     <cell name="bass clef right hand" char="clefBassRightHand">
         <code value="662" />
         <code value="635" />
-        <code value="846" />
+        <code value="1475" />
         <graphic type="background" color="#0f0" cells="3" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="100" top="75" content="&#xe014;&#xe014;" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="100" top="38.4" content="&#xe061;" />
@@ -968,7 +974,7 @@
     <cell name="treble clef left hand" char="clefTrebleLeftHand">
         <code value="662" />
         <code value="447" />
-        <code value="846" />
+        <code value="1475" />
         <graphic type="background" color="#0f0" cells="3" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="100" top="75" content="&#xe014;&#xe014;" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="100" top="62.8" content="&#xe050;" />
@@ -2968,55 +2974,6 @@
         <graphic type="background" color="#f00" />
         <graphic type="text" color="#fff" align="right" size="50" left="55" top="53.3" content="&#xe1e7;" />
     </cell>
-    <cell name="A beamed note" char="noteBeamedA">
-        <code value="473" />
-        <graphic type="background" color="#f00" />
-        <graphic type="text" color="#fff" size="50" left="20" top="80" content="&#xe1d5;" />
-        <graphic type="line" startX="0" startY="40" endX="42" endY="40" lineWidth="5" color="#fff"/>
-        <graphic type="text" color="#fff" align="right" size="30" left="85" top="33.3" font="sans-serif" content="A" />
-    </cell>
-    <cell name="B beamed note" char="noteBeamedB">
-        <code value="474" />
-        <graphic type="background" color="#f00" />
-        <graphic type="text" color="#fff" size="50" left="20" top="80" content="&#xe1d5;" />
-        <graphic type="line" startX="0" startY="40" endX="42" endY="40" lineWidth="5" color="#fff"/>
-        <graphic type="text" color="#fff" align="right" size="30" left="85" top="33.3" font="sans-serif" content="B" />
-    </cell>
-    <cell name="C beamed note" char="noteBeamedC">
-        <code value="468" />
-        <graphic type="background" color="#f00" />
-        <graphic type="text" color="#fff" size="50" left="20" top="80" content="&#xe1d5;" />
-        <graphic type="line" startX="0" startY="40" endX="42" endY="40" lineWidth="5" color="#fff"/>
-        <graphic type="text" color="#fff" align="right" size="30" left="85" top="33.3" font="sans-serif" content="C" />
-    </cell>
-    <cell name="D beamed note" char="noteBeamedD">
-        <code value="469" />
-        <graphic type="background" color="#f00" />
-        <graphic type="text" color="#fff" size="50" left="20" top="80" content="&#xe1d5;" />
-        <graphic type="line" startX="0" startY="40" endX="42" endY="40" lineWidth="5" color="#fff"/>
-        <graphic type="text" color="#fff" align="right" size="30" left="85" top="33.3" font="sans-serif" content="D" />
-    </cell>
-    <cell name="E beamed note" char="noteBeamedE">
-        <code value="470" />
-        <graphic type="background" color="#f00" />
-        <graphic type="text" color="#fff" size="50" left="20" top="80" content="&#xe1d5;" />
-        <graphic type="line" startX="0" startY="40" endX="42" endY="40" lineWidth="5" color="#fff"/>
-        <graphic type="text" color="#fff" align="right" size="30" left="85" top="33.3" font="sans-serif" content="E" />
-    </cell>
-    <cell name="F beamed note" char="noteBeamedF">
-        <code value="471" />
-        <graphic type="background" color="#f00" />
-        <graphic type="text" color="#fff" size="50" left="20" top="80" content="&#xe1d5;" />
-        <graphic type="line" startX="0" startY="40" endX="42" endY="40" lineWidth="5" color="#fff"/>
-        <graphic type="text" color="#fff" align="right" size="30" left="85" top="33.3" font="sans-serif" content="F" />
-    </cell>
-    <cell name="G beamed note" char="noteBeamedG">
-        <code value="472" />
-        <graphic type="background" color="#f00" />
-        <graphic type="text" color="#fff" size="50" left="20" top="80" content="&#xe1d5;" />
-        <graphic type="line" startX="0" startY="40" endX="42" endY="40" lineWidth="5" color="#fff"/>
-        <graphic type="text" color="#fff" align="right" size="30" left="85" top="33.3" font="sans-serif" content="G" />
-    </cell>
     <cell name="note coincidence indicator" char="noteCoincidence">
         <code value="959" />
         <code value="950" />
@@ -3072,6 +3029,48 @@
         <graphic type="background" color="#f00" cells="2"/>
         <graphic type="text" color="#fff" align="right" size="50" left="130" top="80" content="&#xe1d0;" />
         <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="G" />
+    </cell>
+    <cell name="A durationless note" char="noteDurationlessA">
+        <code value="473" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" size="50" left="20" top="80" content="&#xe0a4;" />
+        <graphic type="text" color="#fff" align="right" size="30" left="85" top="33.3" font="sans-serif" content="A" />
+    </cell>
+    <cell name="B durationless note" char="noteDurationlessB">
+        <code value="474" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" size="50" left="20" top="80" content="&#xe0a4;" />
+        <graphic type="text" color="#fff" align="right" size="30" left="85" top="33.3" font="sans-serif" content="B" />
+    </cell>
+    <cell name="C durationless note" char="noteDurationlessC">
+        <code value="468" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" size="50" left="20" top="80" content="&#xe0a4;" />
+        <graphic type="text" color="#fff" align="right" size="30" left="85" top="33.3" font="sans-serif" content="C" />
+    </cell>
+    <cell name="D durationless note" char="noteDurationlessD">
+        <code value="469" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" size="50" left="20" top="80" content="&#xe0a4;" />
+        <graphic type="text" color="#fff" align="right" size="30" left="85" top="33.3" font="sans-serif" content="D" />
+    </cell>
+    <cell name="E durationless note" char="noteDurationlessE">
+        <code value="470" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" size="50" left="20" top="80" content="&#xe0a4;" />
+        <graphic type="text" color="#fff" align="right" size="30" left="85" top="33.3" font="sans-serif" content="E" />
+    </cell>
+    <cell name="F durationless note" char="noteDurationlessF">
+        <code value="471" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" size="50" left="20" top="80" content="&#xe0a4;" />
+        <graphic type="text" color="#fff" align="right" size="30" left="85" top="33.3" font="sans-serif" content="F" />
+    </cell>
+    <cell name="G durationless note" char="noteDurationlessG">
+        <code value="472" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" size="50" left="20" top="80" content="&#xe0a4;" />
+        <graphic type="text" color="#fff" align="right" size="30" left="85" top="33.3" font="sans-serif" content="G" />
     </cell>
     <cell name="A eighth note" char="noteEighthA">
         <code value="73" />
@@ -4143,7 +4142,7 @@
         <code value="77" />
         <code value="75" />
         <graphic type="background" color="#f00" cells="2" />
-        <graphic type="text" color="#fff" align="center" size="60" left="100" top="60" content="&#xe4f4;" />
+        <graphic type="text" color="#fff" align="center" size="60" left="100" top="60" content="&#xe4f3;" />
     </cell>
     <cell name="eighth rest" char="restEighth">
         <code value="88" />

@@ -17,6 +17,7 @@
 	accidentalFiveCommasSharp|
 	accidentalFlat|
 	accidentalFourCommasFlat|
+	accidentalMusicaFicta|
 	accidentalNatural|
 	accidentalOneQuarterFlat|
 	accidentalOneQuarterSharp|
@@ -447,13 +448,6 @@
 	lineHorizontal|
 	noteAppoggiaturaShort|
 	noteAugmentationDot|
-	noteBeamedA|
-	noteBeamedB|
-	noteBeamedC|
-	noteBeamedD|
-	noteBeamedE|
-	noteBeamedF|
-	noteBeamedG|
 	noteCoincidence|
 	noteDoubleWholeA|
 	noteDoubleWholeB|
@@ -462,6 +456,13 @@
 	noteDoubleWholeE|
 	noteDoubleWholeF|
 	noteDoubleWholeG|
+	noteDurationlessA|
+	noteDurationlessB|
+	noteDurationlessC|
+	noteDurationlessD|
+	noteDurationlessE|
+	noteDurationlessF|
+	noteDurationlessG|
 	noteEighthA|
 	noteEighthB|
 	noteEighthC|
