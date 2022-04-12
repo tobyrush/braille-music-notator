@@ -95,3 +95,15 @@ td {
 	background-color: #eee;
 	padding: 0.4em;
 }
+
+#contents details {
+	margin-left: 1em;
+}
+
+#contents summary {
+	
+}
+
+#contents div {
+	margin-left: 2em;
+}
