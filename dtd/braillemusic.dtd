@@ -17,7 +17,6 @@
 	accidentalFiveCommasSharp|
 	accidentalFlat|
 	accidentalFourCommasFlat|
-	accidentalMusicaFicta|
 	accidentalNatural|
 	accidentalOneQuarterFlat|
 	accidentalOneQuarterSharp|
@@ -446,6 +445,8 @@
 	lineContinuationBegin|
 	lineContinuationEnd|
 	lineHorizontal|
+	lineStaffReceive|
+	lineStaffSend|
 	noteAppoggiaturaShort|
 	noteAugmentationDot|
 	noteCoincidence|
@@ -629,6 +630,7 @@
 	restWhole|
 	slurAppoggiatura|
 	slurBegin|
+	slurConverging|
 	slurCrossPart|
 	slurCrossPartBegin|
 	slurCrossPartContinue|
@@ -987,6 +989,7 @@
 	tie|
 	tieAccumulating|
 	tieMultiple|
+	tieMultipleSuccessive|
 	timeSignatureBottom0|
 	timeSignatureBottom1|
 	timeSignatureBottom2|

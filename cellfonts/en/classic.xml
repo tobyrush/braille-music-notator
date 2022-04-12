@@ -40,12 +40,6 @@
         <graphic type="background" color="#f80" cells="2" />
         <graphic type="text" color="#000" align="center" size="80" left="105" top="60" content="&#xe442;" />
     </cell>
-    <cell name="full barre" char="accidentalMusicaFicta">
-        <code value="144" />
-        <graphic type="background" color="#f80" />
-        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="17" left="35" top="50" content="MUSICA" rotateCCW="true" />
-        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="17" left="65" top="50" content="FICTA" rotateCCW="true" />
-    </cell>
     <cell name="natural" char="accidentalNatural">
         <code value="42" />
         <graphic type="background" color="#f80" />
@@ -462,7 +456,7 @@
         <code value="395" />
         <code value="156" />
         <graphic type="background" color="#7f462c" cells="2" />
-        <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="100" top="60" content="&#xe220;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="100" top="60" content="&#xe4a4;" />
     </cell>
     <cell name="left hand thumb" char="articulationThumbLeftHand">
         <code value="342" />
@@ -938,7 +932,7 @@
     <cell name="bass clef right hand" char="clefBassRightHand">
         <code value="662" />
         <code value="635" />
-        <code value="1475" />
+        <code value="846" />
         <graphic type="background" color="#0f0" cells="3" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="100" top="75" content="&#xe014;&#xe014;" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="100" top="38.4" content="&#xe061;" />
@@ -974,7 +968,7 @@
     <cell name="treble clef left hand" char="clefTrebleLeftHand">
         <code value="662" />
         <code value="447" />
-        <code value="1475" />
+        <code value="846" />
         <graphic type="background" color="#0f0" cells="3" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="100" top="75" content="&#xe014;&#xe014;" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="100" top="62.8" content="&#xe050;" />
@@ -2959,6 +2953,22 @@
         <graphic type="background" color="#ff0" />
         <graphic type="line" startX="20" startY="50" endX="80" endY="50"  lineWidth="2" color="#000"/>
     </cell>
+    <cell name="receive line from staff" char="lineStaffReceive">
+        <code value="1146" />
+        <code value="1164" />
+        <code value="976" />
+        <graphic type="background" color="#ff0" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="150" top="35" content="RECEIVE" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="150" top="65" content="LINE" />
+    </cell>
+    <cell name="send line to staff" char="lineStaffSend">
+        <code value="1164" />
+        <code value="976" />
+        <graphic type="background" color="#ff0" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="SEND" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="LINE" />
+    </cell>
+    
     <cell name="long appoggiatura" char="noteAppoggiaturaLong">
         <code value="834" />
         <graphic type="background" color="#f00" />
@@ -4142,7 +4152,7 @@
         <code value="77" />
         <code value="75" />
         <graphic type="background" color="#f00" cells="2" />
-        <graphic type="text" color="#fff" align="center" size="60" left="100" top="60" content="&#xe4f3;" />
+        <graphic type="text" color="#fff" align="center" size="60" left="100" top="60" content="&#xe4f4;" />
     </cell>
     <cell name="eighth rest" char="restEighth">
         <code value="88" />
@@ -6386,6 +6396,20 @@
         <graphic type="text" color="#000" align="right" size="50" left="80" top="75" content="&#xe1d5;" />
         <graphic type="arc" x="125" y="75" radius="30" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000"/>
         <graphic type="arc" x="125" y="55" radius="30" start="0.78" end="2.36" ccw="false" lineWidth="2" color="#000"/>
+    </cell>
+    <cell name="multiple note tie" char="tieMultipleSuccessive">
+        <code value="246" />
+        <code value="367" />
+        <code value="367" />
+        <graphic type="background" color="#ff0" cells="3" />
+        <graphic type="text" color="#000" align="right" size="50" left="60" top="62" content="&#xe1d5;" />
+        <graphic type="text" color="#000" align="right" size="50" left="60" top="75" content="&#xe1d5;" />
+        <graphic type="arc" x="105" y="75" radius="30" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000"/>
+        <graphic type="arc" x="105" y="55" radius="30" start="0.78" end="2.36" ccw="false" lineWidth="2" color="#000"/>
+        <graphic type="text" color="#000" align="right" size="50" left="170" top="62" content="&#xe1d5;" />
+        <graphic type="text" color="#000" align="right" size="50" left="170" top="75" content="&#xe1d5;" />
+        <graphic type="arc" x="215" y="75" radius="30" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000"/>
+        <graphic type="arc" x="215" y="55" radius="30" start="0.78" end="2.36" ccw="false" lineWidth="2" color="#000"/>
     </cell>
     <cell name="time signature bottom zero" char="timeSignatureBottom0">
         <code value="48" />
