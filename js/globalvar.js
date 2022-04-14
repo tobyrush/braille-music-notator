@@ -32,7 +32,7 @@ var metaKeyDown = false, shiftKeyDown = false;
 var pasted = false;
 var fileDialogOpen = false, optionsDialogOpen = false, helpDialogOpen = false;
 var dialogTop,dialogButtonLeft,dialogButtonRight,dialogTop,dialogButtonHeight,dialogButtonWidth,dialogButtonTop = [];
-var autoScroller, autoScrollXDir, autoScrollYDir;
+var autoScroller = null, autoScrollXDir, autoScrollYDir;
 var helpWindow = false;
 var parseFiles = true;
 var currentBeatUnit = 4;

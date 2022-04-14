@@ -3171,7 +3171,7 @@
         <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="100" top="35" content="END SPEC" />
         <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="100" top="65" content="BEAMING" />
     </cell>
-    <cell name="feathered beaming ritardando" char="noteFeatheredRitarando">
+    <cell name="feathered beaming ritardando" char="noteFeatheredRitardando">
         <code value="1244" />
         <code value="1160" />
         <code value="1149" />
@@ -4152,7 +4152,7 @@
         <code value="77" />
         <code value="75" />
         <graphic type="background" color="#f00" cells="2" />
-        <graphic type="text" color="#fff" align="center" size="60" left="100" top="60" content="&#xe4f4;" />
+        <graphic type="text" color="#fff" align="center" size="60" left="100" top="60" content="&#xe4f3;" />
     </cell>
     <cell name="eighth rest" char="restEighth">
         <code value="88" />

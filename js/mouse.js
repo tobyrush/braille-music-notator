@@ -26,10 +26,10 @@ function doNotationMouseDown(e) {
                 if (currentX<=cursor.x) {
                     cursor.x=currentX;
                     cursor.width=prevCursorX-currentX+1;
-                    cursor.pinnedLeft=false;
+					cursor.pinnedLeft=false;
                 } else {
                         cursor.width = currentX-prevCursorX+1;
-                        cursor.pinnedLeft=true;
+						cursor.pinnedLeft=true;
                 }
 
                 if (currentY<=cursor.y) {
@@ -58,7 +58,9 @@ function doNotationMouseDown(e) {
 
 function doNotationMouseUp(e) {
 	mouseIsDown = false;
+	// console.log("cleared autoScroller "+autoScroller);
 	window.clearInterval(autoScroller);
+	autoScroller = null;
 	
 }
 
@@ -98,7 +100,10 @@ function doNotationMouseDrag(e) {
     }
 	
 	if (onEdge) {
-		autoScroller = window.setInterval(function() { autoScroll(); },1000);
+		if (autoScroller == null) {
+			autoScroller = window.setInterval(function() { autoScroll(); },100);
+		}
+		// console.log("set autoScroller "+autoScroller);
 	} else {
 	
 		var currentX = Math.floor((localX+hScrollOffset)/gridWidth)+hScrollUnits;
@@ -190,6 +195,7 @@ function doControlMouseOut(e) {
 
 function doWindowMouseUp(e) {
 	resizeBarDrag = false;
+	doNotationMouseUp(e);
 }
 
 function doWindowMouseMove(e) {
