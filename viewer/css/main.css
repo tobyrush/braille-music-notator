@@ -148,7 +148,6 @@ h2 a {
 	margin-bottom: 10px;
 	margin-left: 10px;
 	margin-right: 10px;
-	font-style: italic;
 }
 
 .antable {
@@ -156,4 +155,13 @@ h2 a {
     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
     clip: rect(1px, 1px, 1px, 1px);
 	font-size: 1px;
+}
+
+score-braille {
+	display: none;
+}
+
+.warning {
+	background-color: #fbb;
+	padding: 15px;
 }

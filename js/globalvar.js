@@ -32,7 +32,7 @@ var metaKeyDown = false, shiftKeyDown = false;
 var pasted = false;
 var fileDialogOpen = false, optionsDialogOpen = false, helpDialogOpen = false;
 var dialogTop,dialogButtonLeft,dialogButtonRight,dialogTop,dialogButtonHeight,dialogButtonWidth,dialogButtonTop = [];
-var autoScroller, autoScrollXDir, autoScrollYDir;
+var autoScroller = null, autoScrollXDir, autoScrollYDir;
 var helpWindow = false;
 var parseFiles = true;
 var currentBeatUnit = 4;
@@ -56,17 +56,23 @@ var controlModules = [
         pathname: 'controls/en/classic-midi.xml',
         locale: ''
     },
-    {
-        id: 3,
-        name: 'IPA',
-        pathname: 'controls/en/ipa.xml',
-        locale: ''
-    },
+    // {
+    //     id: 3,
+    //     name: 'IPA',
+    //     pathname: 'controls/en/ipa.xml',
+    //     locale: ''
+    // },
     {
         id: 4,
         name: 'Classic',
         pathname: 'controls/tr/classic.xml',
         locale: 'tr'
+    },
+    {
+        id: 5,
+        name: 'Full',
+        pathname: 'controls/en/full.xml',
+        locale: ''
     }
 ];
 var selectedControlModule = controlModules[0];

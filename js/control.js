@@ -293,7 +293,9 @@ class controlPage {
         this.indicators.forEach(function(indicator) {
             indicator.draw();
         });
-        this.currentHelp.draw();
+        if (this.currentHelp) {
+            this.currentHelp.draw();
+        }
     }
     click(x,y) {
         for (let c of this.controlItems) {

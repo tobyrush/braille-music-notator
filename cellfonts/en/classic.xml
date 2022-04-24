@@ -5829,6 +5829,13 @@
     <cell name="text en dash symbol" word-modifier="1" char="textEnDash">
         <code value="544" />
         <code value="545" />
+        <code value="545" />
+        <graphic type="background" color="#fff" cells="3" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="150" top="50" content="&#x2014;" />
+    </cell>
+    <cell name="text en dash symbol" word-modifier="1" char="textEnDash">
+        <code value="544" />
+        <code value="545" />
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="&#x2013;" />
     </cell>

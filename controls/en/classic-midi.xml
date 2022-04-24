@@ -24,19 +24,19 @@
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
             <graphic type="text" color="#FFF" font="Bravura" size="70" align="center" top="48" left="48" content="&#xe1d0;" />
             <graphic type="text" color="#F77" left="15" top="80" size="20" content="`" />
-            <help page="notes" />
+            <help page="midinotes" />
         </control>
         <control keycode="Digit1" top="13" left="31" width="18" height="18" label="Whole Note or Rest" midiKey="true" midiDuration="1">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
             <graphic type="text" color="#FFF" size="70" font="Bravura" align="center" top="48" left="48" content="&#xe1d2;" />
             <graphic type="text" color="#F77" left="15" top="80" size="20" content="1" />
-            <help page="notes" />
+            <help page="midinotes" />
         </control>
         <control keycode="Digit2" top="13" left="49" width="18" height="18" label="One-Hundred-Twenty-Eighth Note or Rest" midiKey="true" midiDuration="8">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
             <graphic type="text" color="#FFF" size="40" font="Bravura" align="center" top="68" left="58" content="&#xe1df;" />
             <graphic type="text" color="#F77" left="15" top="80" size="20" content="2" />
-            <help page="notes" />
+            <help page="midinotes" />
         </control>
         <control keycode="Digit3" top="13" left="67" width="18" height="18" label="Double Sharp">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F80" />
@@ -124,13 +124,13 @@
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="68" left="58" content="&#xe1d3;" />
             <graphic type="text" color="#F77" left="15" top="80" size="20" content="Q" />
-            <help page="notes" />
+            <help page="midinotes" />
         </control>
         <control keycode="KeyW" top="31" left="58" width="18" height="18" label="Sixty-Fourth Note or Rest" midiKey="true" midiDuration="7">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="68" left="58" content="&#xe1dd;" />
             <graphic type="text" color="#F77" left="15" top="80" size="20" content="W" />
-            <help page="notes" />
+            <help page="midinotes" />
         </control>
         <control keycode="KeyE" top="31" left="76" width="18" height="18" label="Sharp">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F80" />
@@ -225,13 +225,13 @@
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="68" left="58" content="&#xe1d5;" />
             <graphic type="text" color="#F77" left="15" top="80" size="20" content="A" />
-            <help page="notes" />
+            <help page="midinotes" />
         </control>
         <control keycode="KeyS" top="49" left="64" width="18" height="18" label="Thirty-Second Note or Rest" midiKey="true" midiDuration="6">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="68" left="58" content="&#xe1db;" />
             <graphic type="text" color="#F77" left="15" top="80" size="20" content="S" />
-            <help page="notes" />
+            <help page="midinotes" />
         </control>
         <control keycode="KeyD" top="49" left="82" width="18" height="18" label="Tie">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#ff0" />
@@ -315,13 +315,13 @@
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="68" left="58" content="&#xe1d7;" />
             <graphic type="text" color="#F77" left="15" top="80" size="20" content="Z" />
-            <help page="notes" />
+            <help page="midinotes" />
         </control>
         <control keycode="KeyX" top="67" left="70" width="18" height="18" label="Sixteenth Note or Rest" midiKey="true" midiDuration="5">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
             <graphic type="text" color="#FFF" size="50" font="Bravura" align="center" top="68" left="58" content="&#xe1d9;" />
             <graphic type="text" color="#F77" left="15" top="80" size="20" content="X" />
-            <help page="notes" />
+            <help page="midinotes" />
         </control>
         <control keycode="KeyC" top="67" left="88" width="18" height="18" label="Augmentation Dot">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#F00" />
@@ -1913,6 +1913,16 @@
         <graphic type="text" color="#000" size="13" baseline="middle" top="51" left="25" font="Bravura" content="&#xeb62;" />
         <graphic type="braille" left="30" top="36" height="20" cells="34,91,39" multiCell="true" />
     </help>
+     <help name="midinotes" top="10" left="300" width="200" height="100">
+         <graphic type="text" style="bold" color="#000" size="10" top="10" left="0" content="Note Symbols" />
+         <graphic type="text" color="#000" size="6" top="20" left="0" multiline="true" lineHeight="8" content="Each symbol specifies both pitch and length.\nTo enter a note, hold down a key on an attached\nMIDI keyboard while clicking or typing.\n(Available only on Google Chrome.)" />
+         <graphic type="staff" left="0" top="57" height="13" width="27" clef="1" />
+         <graphic type="note" left="9" top="57" height="13" note="noteQuarterDown" position="-1" dots="0" />
+         <graphic type="note" left="15" top="57" height="13" note="noteQuarterUp" position="0" dots="0" />
+         <graphic type="note" left="20" top="57" height="13" note="noteQuarterUp" position="5" dots="0" />
+         <graphic type="text" color="#000" size="13" baseline="middle" top="67" left="30" font="Bravura" content="&#xeb62;" />
+         <graphic type="braille" left="36" top="53" height="20" cells="46,63,87,34,58" />
+     </help>
     <help name="notes" top="10" left="300" width="200" height="100">
         <graphic type="text" style="bold" color="#000" size="10" top="10" left="0" content="Note Symbols" />
         <graphic type="text" color="#000" size="6" top="20" left="0" multiline="true" lineHeight="8" content="Each symbol specifies both pitch and length. An octave symbol must\nbe placed before the note, except after:\n   · a leap of a fourth or fifth within the same octave, or\n   · a leap of a third or less (even if the octave changes)." />

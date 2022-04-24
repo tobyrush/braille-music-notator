@@ -592,3 +592,10 @@ function setControlModule(whichID) {
     });
     initializeControls(true);
 }
+
+function showInsertSymbolDialog() {
+    var s = prompt("Enter symbol to insert at cursor:");
+    if (s) {
+        currentCellFont.addCellToScore(cursor.x, cursor.y, s, 0);
+    }
+}
