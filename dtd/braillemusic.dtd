@@ -24,6 +24,8 @@
 	accidentalThreeQuartersFlat|
 	accidentalThreeQuartersSharp|
 	articulationAccent|
+	articulationAccentExtended|
+	articulationAccentReversed|
 	articulationAlternationEighth|
 	articulationAlternationOneHundredTwentyEighth|
 	articulationAlternationSixteenth|
@@ -50,6 +52,7 @@
 	articulationHarmonicNatural|
 	articulationInvertedArch|
 	articulationMarcato|
+	articulationMezzoStaccato|
 	articulationMordentExtendedLower|
 	articulationMordentExtendedLowerFlat|
 	articulationMordentExtendedLowerSharp|
@@ -66,6 +69,7 @@
 	articulationPizzicatoLeftHand|
 	articulationRisingCurvedLineBefore|
 	articulationRisingStraightLineBefore|
+	articulationStaccatissimo|
 	articulationStaccato|
 	articulationSwell|
 	articulationTenuto|
@@ -120,6 +124,7 @@
 	chordSymbolCircle|
 	chordSymbolCircleSlashed|
 	chordSymbolPlus|
+	chordSymbolSevenItalic|
 	chordSymbolTriangle|
 	chordSymbolTriangleSlashed|
 	clefAlto|
@@ -152,6 +157,7 @@
 	directionMetronomeMarkingEquals|
 	directionMusicParenthesis|
 	directionMusicPrefix|
+	directionMusicSuffix|
 	directionMusicSymbolComma|
 	directionParallelMovement|
 	directionPosition01|
@@ -170,6 +176,9 @@
 	directionPositionHalf|
 	directionPositionShiftBegin|
 	directionPositionShiftEnd|
+	directionPrintBracketClose|
+	directionPrintBracketOpen|
+	directionPrintPageTurn|
 	directionPrintPaginationIndicator|
 	directionPush|
 	directionRightHand|
@@ -399,7 +408,7 @@
 	ipaVoicedLabiodentalNasal|
 	ipaVoicedLabiodentalTapOrFlap|
 	ipaVoicedPalatalApproximant|
-	ipaVociedPalatalFricative|
+	ipaVoicedPalatalFricative|
 	ipaVoicedPalatalImplosive|
 	ipaVoicedPalatalLateralApproximant|
 	ipaVoicedPalatalNasal|
@@ -441,15 +450,10 @@
 	lineContinuationBegin|
 	lineContinuationEnd|
 	lineHorizontal|
+	lineStaffReceive|
+	lineStaffSend|
 	noteAppoggiaturaShort|
 	noteAugmentationDot|
-	noteBeamedA|
-	noteBeamedB|
-	noteBeamedC|
-	noteBeamedD|
-	noteBeamedE|
-	noteBeamedF|
-	noteBeamedG|
 	noteCoincidence|
 	noteDoubleWholeA|
 	noteDoubleWholeB|
@@ -458,6 +462,13 @@
 	noteDoubleWholeE|
 	noteDoubleWholeF|
 	noteDoubleWholeG|
+	noteDurationlessA|
+	noteDurationlessB|
+	noteDurationlessC|
+	noteDurationlessD|
+	noteDurationlessE|
+	noteDurationlessF|
+	noteDurationlessG|
 	noteEighthA|
 	noteEighthB|
 	noteEighthC|
@@ -518,6 +529,10 @@
 	noteSixtyFourthE|
 	noteSixtyFourthF|
 	noteSixtyFourthG|
+	noteSizeLarger|
+	noteSizeLargerMultiple|
+	noteSizeSmaller|
+	noteSizeSmallerMultiple|
 	noteStemEighth|
 	noteStemHalf|
 	noteStemQuarter|
@@ -531,11 +546,18 @@
 	noteThirtySecondE|
 	noteThirtySecondF|
 	noteThirtySecondG|
-	noteToneClusterAll
+	noteToneClusterAll|
 	noteToneClusterFlat|
 	noteToneClusterNatural|
 	noteToneClusterSharp|
 	noteToneClusterUnspecified|
+	noteTwoHundredFiftySixthA|
+	noteTwoHundredFiftySixthB|
+	noteTwoHundredFiftySixthC|
+	noteTwoHundredFiftySixthD|
+	noteTwoHundredFiftySixthE|
+	noteTwoHundredFiftySixthF|
+	noteTwoHundredFiftySixthG|
 	noteWholeA|
 	noteWholeB|
 	noteWholeC|
@@ -558,7 +580,7 @@
 	partLeftHandLong|
 	partLeftHandIntervalsDownward
 	partLeftHandShort|
-	partPedals|
+	partPedal|
 	partRightHandLong|
 	partRightHandIntervalsUpward
 	partRightHandShort|
@@ -609,9 +631,11 @@
 	restSixteenth|
 	restSixtyFourth|
 	restThirtySecond|
+	restTwoHundredFiftySixth|
 	restWhole|
 	slurAppoggiatura|
 	slurBegin|
+	slurConverging|
 	slurCrossPart|
 	slurCrossPartBegin|
 	slurCrossPartContinue|
@@ -635,16 +659,35 @@
 	text8|	
 	text9|	
 	textA|
+	textAccentAcute|
+	textAccentBreve|
+	textAccentCedilla|
+	textAccentCircle|
+	textAccentCircumflex|
+	textAccentDiaeresis|
+	textAccentEng|
+	textAccentGrave|
+	textAccentMacron|
+	textAccentSlash|
+	textAccentTilde|
 	textAccidentalOnly|
 	textAe|
 	textAmpersand|
 	textApostrophe|
 	textAsterisk|
+	textAsteriskOld|
 	textAt|
 	textB|
 	textBackslash|
 	textBar|
+	textBoldfaceEnd|
+	textBoldfacePassage|
+	textBoldfaceSymbol|
+	textBoldfaceWord|
+	textBrailleSymbolIndicator|
+	textBullet|
 	textC|
+	textCapitalizeEnd|
 	textCapitalizeLetter|
 	textCapitalizeWord|
 	textCaret|
@@ -765,8 +808,8 @@
 	textContractionOf|
 	textContractionOne|
 	textContractionOng|
-	textContractionOught|
 	textContractionOu|
+	textContractionOught|
 	textContractionOund|
 	textContractionOunt|
 	textContractionOurselves|
@@ -780,6 +823,9 @@
 	textContractionQuick|
 	textContractionQuite|
 	textContractionRather|
+	textContractionReceive|
+	textContractionReceiving|
+	textContractionRejoice|
 	textContractionRejoicing|
 	textContractionRight|
 	textContractionSaid|
@@ -832,48 +878,65 @@
 	textContractionYour|
 	textContractionYourself|
 	textContractionYourselves|
+	textCopyright|
 	textCurvedBracketClose|
 	textCurvedBracketOpen|
 	textD|
+	textDagger|
+	textDaggerDouble|
 	textDecimalPoint|
+	textDegree|
 	textDitto|
 	textDivision|
 	textDollar|
 	textDoubleQuotationMark|
 	textDoubleQuotationMarkClose|
 	textDoubleQuotationMarkOpen|
-	textDoubleQuotationMarkUEBClose|
-	textDoubleQuotationMarkUEBOpen|
+	textDoubleQuotationMarkOldClose|
+	textDoubleQuotationMarkOldOpen|
 	textE|
 	textEmDash|
-	textEmDashUEB|
+	textEmDashOld|
 	textEnDash|
-	textEnDashUEB|
+	textEnDashOld|
 	textEndTastoSolo|
 	textEquals|
 	textEuro|
 	textExclamationPoint|
+	textExclamationPointInverted|
 	textF|
+	textFeet|
+	textFemale|
 	textFigureSlashed|
+	textFranc|
 	textG|
 	textGreaterThan|
-	textGraveAccent|
 	textH|
 	textHyphen|
 	textI|
+	textInches|
+	textItalicEnd|
+	textItalicPassage|
+	textItalicSymbol|
+	textItalicWord|
 	textJ|
 	textK|
 	textL|
+	textLeadingDots|
 	textLessThan|
 	textLowercase|
 	textM|
+	textMale|
+	textMinus|
 	textMultiplication|
 	textN|
+	textNaira|
 	textNumberSign|
 	textO|
 	textOctothorpe|
 	textOe|
 	textP|
+	textParagraph|
 	textParenthesis|
 	textParenthesisClose|
 	textParenthesisOpen|
@@ -881,37 +944,57 @@
 	textPeriod|
 	textPlus|
 	textPointingSymbol|
+	textPoundSterling|
+	textPrime|
 	textPunctuationPrefix|
 	textQ|
 	textQuestionMark|
+	textQuestionMarkInverted|
 	textR|
 	textRecitingToneTextBegin|
 	textRecitingToneTextEnd|
+	textRegistered|
 	textRepeat|
 	textRepeatTwice|
 	textS|
+	textScriptEnd|
+	textScriptPassage|
+	textScriptSymbol|
+	textScriptWord|
 	textSeconds|
+	textSection|
 	textSemicolon|
 	textSingleQuotationMarkClose|
 	textSingleQuotationMarkOpen|
-	textSingleQuotationMarkUEBClose|
-	textSingleQuotationMarkUEBOpen|
+	textSingleQuotationMarkOldClose|
+	textSingleQuotationMarkOldOpen|
 	textSlash|
-	textSlashUEB|
+	textSlashOld|
 	textSquareBracketClose|
 	textSquareBracketOpen|
+	textSubscript|
+	textSuperscript|
 	textT|
 	textTilde|
+	textTrademark|
+	textTranscriberNoteBegin|
+	textTranscriberNoteEnd|
 	textU|
+	textUnderlineEnd|
+	textUnderlinePassage|
+	textUnderlineSymbol|
+	textUnderlineWord|
 	textUnderscore|
 	textV|
 	textW|
 	textX|
 	textY|
+	textYen|
 	textZ|
 	tie|
 	tieAccumulating|
 	tieMultiple|
+	tieMultipleSuccessive|
 	timeSignatureBottom0|
 	timeSignatureBottom1|
 	timeSignatureBottom2|
