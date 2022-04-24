@@ -56,17 +56,23 @@ var controlModules = [
         pathname: 'controls/en/classic-midi.xml',
         locale: ''
     },
-    {
-        id: 3,
-        name: 'IPA',
-        pathname: 'controls/en/ipa.xml',
-        locale: ''
-    },
+    // {
+    //     id: 3,
+    //     name: 'IPA',
+    //     pathname: 'controls/en/ipa.xml',
+    //     locale: ''
+    // },
     {
         id: 4,
         name: 'Classic',
         pathname: 'controls/tr/classic.xml',
         locale: 'tr'
+    },
+    {
+        id: 5,
+        name: 'Full',
+        pathname: 'controls/en/full.xml',
+        locale: ''
     }
 ];
 var selectedControlModule = controlModules[0];
