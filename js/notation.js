@@ -477,9 +477,10 @@ class cellFontModule {
         }
     }
     addCellToScore(x, y, charName, val) {
-        var c = this.cells.find(e => e.char==charName);
+        var c = this.cells.find(e => e.char.toLowerCase()==charName.toLowerCase().replace(/\s+/g, ''));
         if (c) {
             c.codes.forEach((code,i) => setScore((x*1)+i, y, code));
+            cursor.x = cursor.x + c.codes.length;
         } else {
             setScore(x, y, val);
         }
