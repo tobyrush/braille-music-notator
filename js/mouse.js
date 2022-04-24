@@ -12,7 +12,7 @@ function doNotationMouseDown(e) {
 
         //y = y + kTitleAreaHeight+4;
 
-        if ((!optionsDialogOpen && !fileDialogOpen) || x < kDialogWidth) {
+        if ((!optionsDialogOpen && !fileDialogOpen) || x < ((window.innerWidth-8)-kDialogWidth)) {
 
             startDragX = Math.floor((x+hScrollOffset)/gridWidth)+hScrollUnits;
             startDragY = Math.floor((y+vScrollOffset)/gridHeight)+vScrollUnits;
