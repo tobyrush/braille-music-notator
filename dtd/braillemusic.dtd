@@ -24,6 +24,8 @@
 	accidentalThreeQuartersFlat|
 	accidentalThreeQuartersSharp|
 	articulationAccent|
+	articulationAccentExtended|
+	articulationAccentReversed|
 	articulationAlternationEighth|
 	articulationAlternationOneHundredTwentyEighth|
 	articulationAlternationSixteenth|
@@ -50,6 +52,7 @@
 	articulationHarmonicNatural|
 	articulationInvertedArch|
 	articulationMarcato|
+	articulationMezzoStaccato|
 	articulationMordentExtendedLower|
 	articulationMordentExtendedLowerFlat|
 	articulationMordentExtendedLowerSharp|
@@ -66,6 +69,7 @@
 	articulationPizzicatoLeftHand|
 	articulationRisingCurvedLineBefore|
 	articulationRisingStraightLineBefore|
+	articulationStaccatissimo|
 	articulationStaccato|
 	articulationSwell|
 	articulationTenuto|
@@ -120,6 +124,7 @@
 	chordSymbolCircle|
 	chordSymbolCircleSlashed|
 	chordSymbolPlus|
+	chordSymbolSevenItalic|
 	chordSymbolTriangle|
 	chordSymbolTriangleSlashed|
 	clefAlto|
@@ -403,7 +408,7 @@
 	ipaVoicedLabiodentalNasal|
 	ipaVoicedLabiodentalTapOrFlap|
 	ipaVoicedPalatalApproximant|
-	ipaVociedPalatalFricative|
+	ipaVoicedPalatalFricative|
 	ipaVoicedPalatalImplosive|
 	ipaVoicedPalatalLateralApproximant|
 	ipaVoicedPalatalNasal|
@@ -575,7 +580,7 @@
 	partLeftHandLong|
 	partLeftHandIntervalsDownward
 	partLeftHandShort|
-	partPedals|
+	partPedal|
 	partRightHandLong|
 	partRightHandIntervalsUpward
 	partRightHandShort|
