@@ -1,5 +1,5 @@
-<!-- Braille Music Notator Score 0.9 DTD -->
-<!ELEMENT score-braille (filename,page,score)>
+<!-- Braille Music Score 0.9 DTD -->
+<!ELEMENT score-braille (filename,settings,page,score)>
 <!ELEMENT filename (#PCDATA)>
 <!ELEMENT settings (settingentry*)>
 <!ELEMENT settingentry (#PCDATA)>
@@ -304,9 +304,9 @@
 	ipaNonIPASymbol|
 	ipaNonSyllabicDiacritic|
 	ipaPalatalizedDiacritic|
+	ipaPalatoalveolarClick|
 	ipaPause|
 	ipaPharyngealizedDiacritic|
-	ipaPostalveolarClick|
 	ipaRaisedDiacritic|
 	ipaRetractedDiacritic|
 	ipaRetractedTongueRootDiacritic|
@@ -689,6 +689,7 @@
 	textC|
 	textCapitalizeEnd|
 	textCapitalizeLetter|
+	textCapitalizePassage|
 	textCapitalizeWord|
 	textCaret|
 	textCent|

@@ -90,6 +90,7 @@
                     <li><a href="#unicodebraillecharacters">Unicode Braille Characters</a></li>
                 </ul>
             <li><a href="#braillemusicviewer">Braille Music Viewer</a></li>
+            <li><a href="#braillemusicfiletype">Braille Music Viewer</a></li>
             <li><a href="#aboutthedeveloper">About the Developer</a></li>
             <li><a href="#reference">Reference</a></li>
         </ul>
@@ -193,7 +194,7 @@
         <p>Any existing score will be discarded when a new file is opened; Braille Music Notator will display a warning before doing so, allowing you to save your previous work before opening the new file.</p>
         <p>Files can also be opened by dragging them from the File Manager (Windows) or Finder (Mac OS) directly into the notation area.</p>
         <a name="savefile"><h4>Save File</h4></a>
-        <p>Choosing Save File will save the current score to a file on your computer's hard disk. You will be given the option of naming the file before saving. The file type produced (.brm) is designed to work specifically with Braille Music Notator; opening this file with other programs or sending it to a braille  embosser will yield unexpected results and is not recommended. The Save File command can be issued using the Control-S keyboard shortcut.</p>
+        <p>Choosing Save File will save the current score to a file on your computer's hard disk. You will be given the option of naming the file before saving. The file type produced (.brm) is a special file type designed for Braille Music Notator (see <a href="#braillemusicfileformat">Braille Music File Format</a>); opening this file with other programs or sending it to a braille embosser will yield unexpected results and is not recommended. The Save File command can be issued using the Control-S keyboard shortcut.</p>
         <p>Different web browsers implement the Save File command in different ways (see <a href="#savingandexporting">Saving and Exporting</a>).</p>
         <a name="exportfile"><h4>Export File</h4></a>
         <p>Choosing Export File will export the current score to a file on your computer's hard disk. You will be given the option of naming the file before exporting. The score is translated into Braille ASCII (see <a href="#brailleascii">Braille ASCII</a>) and the file type produced (.brf) is designed to work with braille embossers and other braille technology. This type of file can be opened again in Braille Music Notator, but will require the program to reparse the braille symbols and may yield unexpected results; it is recommended that you save your score using Save File for future editing in Braille Music Notator, and use Export File only for sending the score to embossers or other programs. The Export File command can be issued using the Control-E keyboard shortcut.</p>
@@ -407,6 +408,10 @@
             <td>Rotate Through Control Arrangements</td>
           </tr>
           <tr>
+            <td>\</td>
+            <td>Add Character By Name</td>
+          </tr>
+          <tr>
             <td>Up Arrow</td>
             <td>Delete Row</td>
           </tr>
@@ -439,6 +444,10 @@
 
         <a name="braillemusicviewer"><h3>Braille Music Viewer</h3></a>
         <p>The functionality of Braille Music Notator is available in a read-only format for inclusion on web pages who wish to include interactive excerpts of scores in braille music format. Visit the <a href="http://tobyrush.com/braillemusic/viewer/index.html">Braille Music Viewer page</a> for information on how to include braille music in your own web pages.</p>
+        
+        <a name="braillemusicfiletype"><h3>Braille Music File Type</h3></a>
+        <p>Selecting Save File from the File Tab in Braille Music Notator allows you to save your score as a Braille Music file, which uses the extension &quot;.brm&quot;. Unlike the standard braille file format (.brf), a Braille Music file retains the contextual musical definitions of braille symbols used in the score.</p>
+        <p>While this file type was developed for use with Braille Music Notator, the file type definition available for other developers to use, and is designed to potentially be compatible with MusicXML. For more information about the Braille Music File Type, see the <a href="braillemusicfiletype.html">Braille Music File Type</a> page.</p>
 
         <a name="development"><h3>Development</h3></a>
         <p>Braille Music Notator is open source software. If you would like to contribute to the development of Braille Music Notator, visit the <a href="http://github.com/tobyrush/braillemusicnotator/">code respository</a>. Recent development versions of the software are available there for download.</p>

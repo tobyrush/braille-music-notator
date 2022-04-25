@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Braille Music Notator by Toby W. Rush</title>
+<link href="../css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://tobyrush.com/braillemusic/notator/dev/viewer/viewer.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58111924-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body onload="initializeBMViewers('https://tobyrush.com/braillemusic/notator/dev/cellfonts/en/classic.xml')">
+<h1>Braille Music Notator</h1>
+<h2>version 0.9.3b · 17 September 2019</h2>
+<h2>Toby W. Rush<br />
+  Associate Professor of Music Theory and Technology<br />
+  University of Dayton</h2>
+<div class="linkarea"><a href="https://tobyrush.com/braillemusic/notator/notator.html" id="notatorlink">Click here to open Braille Music Notator</a></div>
+<h1>Braille Music File Type</h1>
+<div class="userguide">
+<p>Because braille characters are often used in different contexts to represent different music symbols, and because standard braille files (.brf) do not store this additional context, Braille Music Notator uses a special file format to save documents for future viewing and editing.</p>
+<p>This file format, which uses the .brm extension, is an XML-based format, and is available for other developers to use or accommodate. A human-readable description of the file format is below, and <a href="https://tobyrush.com/braillemusic/dtd/braillemusic.dtd">an XML DTD file</a> is available for download or reference.</p>
+
+<h3>Sample File</h3>
+<p>By way of description, here is a simple example of a file containing a D major scale.</p>
+<pre>
+&lt;!DOCTYPE score-braille PUBLIC &quot;-//TobyRush//DTD Braille Music Notator Score 0.9//EN&quot; &quot;https://tobyrush.com/braillemusic/notator/dtd/braillemusic.dtd&quot;&gt;
+&lt;score-braille&gt;
+  &lt;filename&gt;D major.brm&lt;/filename&gt;
+  &lt;settings&gt;
+    &lt;settingentry app=&quot;braillemusicnotator&quot;>translate=1|smalldots=0|brailledisplay=0|scoresize=60|pagebreaks=1|wordwrap=1|octavesymbols=1|keysignatures=1|spelldownward=1&lt;/settingentry&gt;
+  &lt;/settings&gt;
+  &lt;page&gt;
+    &lt;width&gt;40&lt;/width&gt;
+    &lt;height&gt;25&lt;/height&gt;
+  &lt;/page&gt;
+  &lt;score&gt;
+    &lt;symbol row=&quot;0&quot; col=&quot;5&quot; char=&quot;keySignatureSharp&quot;/&gt;
+    &lt;symbol row=&quot;0&quot; col=&quot;6&quot; char=&quot;keySignatureSharp&quot;/&gt;
+    &lt;symbol row=&quot;0&quot; col=&quot;7&quot; char=&quot;timeSignaturePrefix&quot;/&gt;
+    &lt;symbol row=&quot;0&quot; col=&quot;8&quot; char=&quot;timeSignatureTop4&quot;/&gt;
+    &lt;symbol row=&quot;0&quot; col=&quot;9&quot; char=&quot;timeSignatureBottom4&quot;/&gt;
+    &lt;symbol row=&quot;1&quot; col=&quot;0&quot; char=&quot;text1&quot;/&gt;
+    &lt;symbol row=&quot;1&quot; col=&quot;2&quot; char=&quot;octave4&quot;/&gt;
+    &lt;symbol row=&quot;1&quot; col=&quot;3&quot; char=&quot;noteQuarterD&quot;/&gt;
+    &lt;symbol row=&quot;1&quot; col=&quot;4&quot; char=&quot;noteQuarterE&quot;/&gt;
+    &lt;symbol row=&quot;1&quot; col=&quot;5&quot; char=&quot;noteQuarterF&quot;/&gt;
+    &lt;symbol row=&quot;1&quot; col=&quot;6&quot; char=&quot;noteQuarterG&quot;/&gt;
+    &lt;symbol row=&quot;1&quot; col=&quot;8&quot; char=&quot;noteQuarterA&quot;/&gt;
+    &lt;symbol row=&quot;1&quot; col=&quot;9&quot; char=&quot;noteQuarterB&quot;/&gt;
+    &lt;symbol row=&quot;1&quot; col=&quot;10&quot; char=&quot;noteQuarterC&quot;/&gt;
+    &lt;symbol row=&quot;1&quot; col=&quot;11&quot; char=&quot;noteQuarterD&quot;/&gt;
+    &lt;symbol row=&quot;1&quot; col=&quot;12&quot; char=&quot;barlineFinal&quot;/&gt;
+  &lt;/score&gt;
+&lt;/score-braille&gt;
+</pre>
+
+<h3>Description</h3>
+<p>Each line of the above file is explained below:</p>
+<pre>&lt;!DOCTYPE score-braille PUBLIC &quot;-//TobyRush//DTD Braille Music Notator Score 0.9//EN&quot; &quot;https://tobyrush.com/braillemusic/notator/dtd/braillemusic.dtd&quot;&gt;</pre>
+<p>The first line describes the file format, and is used by XML parsers to determine if the file is correctly formatted.</p>
+<pre>&lt;score-braille&gt;</pre>
+<p>The root element of the file must be the <code>&lt;score-braille&gt;</code> tag. Any data placed outside of this tag will not be considered part of the braille music file.</p>
+<p>The <code>&lt;score-braille&gt;</code> tag can have four child tags: <code>&lt;filename&gt;</code>, <code>&lt;settings&gt;</code>, <code>&lt;page&gt;</code>, and <code>&lt;score&gt;</code>.</p>
+<pre>&lt;filename&gt;D major.brm&lt;/filename&gt;</pre>
+<p>The first of these tags, <code>&lt;filename&gt;</code>, contains the filename of the file.</p>
+<pre>
+&lt;settings&gt;
+  &lt;settingentry app=&quot;braillemusicnotator&quot;>translate=1|smalldots=0|brailledisplay=0|scoresize=60|pagebreaks=1|wordwrap=1|octavesymbols=1|keysignatures=1|spelldownward=1&lt;/settingentry&gt;
+&lt;/settings&gt;
+</pre>
+<p>The <code>&lt;settings&gt;</code> can contain one or more <code>&lt;settingentry&gt;</code> tags, each of which contains settings for a particular utility. The string of characters in this example store various options used by Braille Music Notator.</p>
+<pre>
+&lt;page&gt;
+  &lt;width&gt;40&lt;/width&gt;
+  &lt;height&gt;25&lt;/height&gt;
+&lt;/page&gt;
+</pre>
+<p>The <code>&lt;page&gt;</code> tag contains two tags, <code>&lt;width&gt;</code> and <code>&lt;height&gt;</code>, which specify the page size of the document in braille cells.</p>
+<pre>
+&lt;score&gt;
+  &lt;symbol row=&quot;0&quot; col=&quot;5&quot; char=&quot;keySignatureSharp&quot;/&gt;
+  &lt;symbol row=&quot;0&quot; col=&quot;6&quot; char=&quot;keySignatureSharp&quot;/&gt;
+  &lt;symbol row=&quot;0&quot; col=&quot;7&quot; char=&quot;timeSignaturePrefix&quot;/&gt;
+  &lt;symbol row=&quot;0&quot; col=&quot;8&quot; char=&quot;timeSignatureTop4&quot;/&gt;
+  &lt;symbol row=&quot;0&quot; col=&quot;9&quot; char=&quot;timeSignatureBottom4&quot;/&gt;
+  &lt;symbol row=&quot;1&quot; col=&quot;0&quot; char=&quot;text1&quot;/&gt;
+  &lt;symbol row=&quot;1&quot; col=&quot;2&quot; char=&quot;octave4&quot;/&gt;
+  &lt;symbol row=&quot;1&quot; col=&quot;3&quot; char=&quot;noteQuarterD&quot;/&gt;
+  &lt;symbol row=&quot;1&quot; col=&quot;4&quot; char=&quot;noteQuarterE&quot;/&gt;
+  &lt;symbol row=&quot;1&quot; col=&quot;5&quot; char=&quot;noteQuarterF&quot;/&gt;
+  &lt;symbol row=&quot;1&quot; col=&quot;6&quot; char=&quot;noteQuarterG&quot;/&gt;
+  &lt;symbol row=&quot;1&quot; col=&quot;8&quot; char=&quot;noteQuarterA&quot;/&gt;
+  &lt;symbol row=&quot;1&quot; col=&quot;9&quot; char=&quot;noteQuarterB&quot;/&gt;
+  &lt;symbol row=&quot;1&quot; col=&quot;10&quot; char=&quot;noteQuarterC&quot;/&gt;
+  &lt;symbol row=&quot;1&quot; col=&quot;11&quot; char=&quot;noteQuarterD&quot;/&gt;
+  &lt;symbol row=&quot;1&quot; col=&quot;12&quot; char=&quot;barlineFinal&quot;/&gt;
+&lt;/score&gt;
+</pre>
+<p>The <code>&lt;score&gt;</code> tag contains the contents of the braille score, where braille music characters, which may consist of one or more braille cells, are represented by <code>&lt;symbol&gt;</code> tags. Each symbol tag has three parameters:</p>
+<ul>
+  <li><code>row</code>: the row number where the braille music character is placed. The top row of the score is row 0, and rows are numbered as though pages are arranged vertically: if the page height is 25 cells, row 25 is the top row of the second page, row 50 is the top row of the third page, and so on.</li>
+  <li><code>column</code>: the column number where the braille music character begins. If a music symbol spans multiple cells, placement should account for this; for example, if a down-bow symbol is placed in column 6, the next symbol should be placed in column 8 to account for the two cells used for the down-bow symbol.</li>
+  <li><code>char</code>: the music symbol to be placed. This must be a value from the predefined list of characters shown below, modeled from the 2015 revision of the Music Braille Code published by the Braille Authority of North America. The values are case-sensitive.</li>
+</ul>
+
+<h3>Symbol List</h3>
+<p>The list of symbol names is shown below, and can be downloaded as a <a href="symbollist/symbollist.brm">BRM file</a> (for use in Braille Music Notator), a <a href="symbollist/symbollist.brf">BRF file</a> (for use with notetakers or embossers), or a <a href="symbollist/symbollist.txt">plain text file</a>.</p>
+
+<object type="application/braillemusic" data="symbollist/symbollist.brm" width="1000" height="400">
+  <param name="scoreSize" value="30">
+  <param name="scrollable" value="true">
+  <param name="scoreWidth" value="60">
+  <param name="scoreHeight" value="1010">
+</object>
+
+</div>
+</body>
+</html>

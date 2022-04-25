@@ -265,7 +265,7 @@ function downloadBRMFile() {
 		if (!shiftKeyDown) {
 			currentFileName = getFileName;
 		}
-		var docType = document.implementation.createDocumentType("score-braille", "-//TobyRush//DTD Braille Music Notator Score 0.9//EN", "https://tobyrush.com/braillemusic/notator/dtd/braillemusic.dtd");
+		var docType = document.implementation.createDocumentType("score-braille", "-//TobyRush//DTD Braille Music Score 0.9//EN", "https://tobyrush.com/braillemusic/notator/dtd/braillemusic.dtd");
 		var doc = document.implementation.createDocument("","", docType);
 		var rootElement = doc.createElement("score-braille");
 		

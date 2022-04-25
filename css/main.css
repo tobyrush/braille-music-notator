@@ -502,3 +502,21 @@ h3 {
     color: white;
     text-decoration: underline;
 }
+
+.longlist {
+    column-count: 5;
+    font-size: 1vw;
+}
+
+pre {
+    overflow: scroll;
+    padding: 0.5vw;
+    border: solid 1px black;
+    background-color: lightcyan;
+}
+
+code {
+    
+}
+
+
