@@ -75,12 +75,17 @@
 	articulationTenuto|
 	articulationThumbLeftHand|
 	articulationTremoloEighth|
+	articulationTremoloEighthMultiple|
 	articulationTremoloHigh|
 	articulationTremoloLow|
 	articulationTremoloOneHundredTwentyEighth|
+	articulationTremoloOneHundredTwentyEighthMultiple|
 	articulationTremoloSixteenth|
+	articulationTremoloSixteenthMultiple|
 	articulationTremoloSixtyFourth|
+	articulationTremoloSixtyFourthMultiple|
 	articulationTremoloThirtySecond|
+	articulationTremoloThirtySecondMultiple|
 	articulationTrill|
 	articulationTurn|
 	articulationTurnBothNotesFlat|

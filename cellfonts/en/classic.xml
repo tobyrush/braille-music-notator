@@ -100,6 +100,14 @@
         <graphic type="text" color="#bfa295" align="right" size="50" left="165" top="70" content="&#xe1d2;" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="50" content="&#xe220;" />
     </cell>
+    <cell name="eighth note alternating tremolo" char="articulationAlternationEighth">
+        <code value="1246" />
+        <code value="1166" />
+        <graphic type="background" color="#7f462c" cells="2" />
+        <graphic type="text" color="#bfa295" align="right" size="50" left="65" top="70" content="&#xe1d2;" />
+        <graphic type="text" color="#bfa295" align="right" size="50" left="165" top="70" content="&#xe1d2;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="50" content="&#xe220;" />
+    </cell>
     <cell name="one hundred twenty eighth note alternating tremolo" char="articulationAlternationOneHundredTwentyEighth">
         <code value="1246" />
         <code value="1244" />
@@ -126,7 +134,7 @@
     </cell>
     <cell name="thirty second note alternating tremolo" char="articulationAlternationThirtySecond">
         <code value="1246" />
-        <code value="1134" />
+        <code value="1149" />
         <graphic type="background" color="#7f462c" cells="2" />
         <graphic type="text" color="#bfa295" align="right" size="50" left="65" top="70" content="&#xe1d2;" />
         <graphic type="text" color="#bfa295" align="right" size="50" left="165" top="70" content="&#xe1d2;" />
@@ -471,6 +479,16 @@
         <graphic type="text" color="#bfa295" align="right" size="50" left="100" top="70" content="&#xe1d3;" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="50" content="&#xe220;" />
     </cell>
+    <cell name="multiple eighth note tremolos" char="articulationTremoloEighthMultiple">
+        <code value="794" />
+        <code value="1166" />
+        <code value="1166" />
+        <graphic type="background" color="#7f462c" cells="3" />
+        <graphic type="text" color="#bfa295" align="right" size="50" left="100" top="70" content="&#xe1d3;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="50" content="&#xe220;"/>
+        <graphic type="text" color="#bfa295" align="right" size="50" left="200" top="70" content="&#xe1d3;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="200" top="50" content="&#xe220;"/>
+    </cell>
     <cell name="high tremolo" char="articulationTremoloHigh">
         <code value="437" />
         <code value="147" />
@@ -492,12 +510,32 @@
         <graphic type="text" color="#bfa295" align="right" size="50" left="100" top="80" content="&#xe1d3;" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="60" content="&#xe224;" />
     </cell>
+    <cell name="multiple one hundred twenty eighth note tremolos" char="articulationTremoloOneHundredTwentyEighthMultiple">
+        <code value="794" />
+        <code value="1244" />
+        <code value="1244" />
+        <graphic type="background" color="#7f462c" cells="3" />
+        <graphic type="text" color="#bfa295" align="right" size="50" left="100" top="80" content="&#xe1d3;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="60" content="&#xe224;" />
+        <graphic type="text" color="#bfa295" align="right" size="50" left="200" top="80" content="&#xe1d3;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="200" top="60" content="&#xe224;" />
+    </cell>
     <cell name="sixteenth note tremolo" char="articulationTremoloSixteenth">
         <code value="794" />
         <code value="876" />
         <graphic type="background" color="#7f462c" cells="2" />
         <graphic type="text" color="#bfa295" align="right" size="50" left="100" top="70" content="&#xe1d3;" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="50" content="&#xe221;" />
+    </cell>
+    <cell name="multiple sixteenth note tremolos" char="articulationTremoloSixteenthMultiple">
+        <code value="794" />
+        <code value="876" />
+        <code value="876" />
+        <graphic type="background" color="#7f462c" cells="3" />
+        <graphic type="text" color="#bfa295" align="right" size="50" left="100" top="70" content="&#xe1d3;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="50" content="&#xe221;" />
+        <graphic type="text" color="#bfa295" align="right" size="50" left="200" top="70" content="&#xe1d3;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="200" top="50" content="&#xe221;" />
     </cell>
     <cell name="sixty fourth note tremolo" char="articulationTremoloSixtyFourth">
         <code value="794" />
@@ -506,12 +544,32 @@
         <graphic type="text" color="#bfa295" align="right" size="50" left="100" top="80" content="&#xe1d3;" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="60" content="&#xe223;" />
     </cell>
+    <cell name="multiple sixty fourth note tremolos" char="articulationTremoloSixtyFourthMultiple">
+        <code value="794" />
+        <code value="946" />
+        <code value="946" />
+        <graphic type="background" color="#7f462c" cells="3" />
+        <graphic type="text" color="#bfa295" align="right" size="50" left="100" top="80" content="&#xe1d3;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="60" content="&#xe223;" />
+        <graphic type="text" color="#bfa295" align="right" size="50" left="200" top="80" content="&#xe1d3;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="200" top="60" content="&#xe223;" />
+    </cell>
     <cell name="thirty second note tremolo" char="articulationTremoloThirtySecond">
         <code value="794" />
-        <code value="1134" />
+        <code value="1149" />
         <graphic type="background" color="#7f462c" cells="2" />
         <graphic type="text" color="#bfa295" align="right" size="50" left="100" top="70" content="&#xe1d3;" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="50" content="&#xe222;" />
+    </cell>
+    <cell name="multiple thirty second note tremolos" char="articulationTremoloThirtySecondMultiple">
+        <code value="794" />
+        <code value="1149" />
+        <code value="1149" />
+        <graphic type="background" color="#7f462c" cells="3" />
+        <graphic type="text" color="#bfa295" align="right" size="50" left="100" top="70" content="&#xe1d3;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="50" content="&#xe222;" />
+        <graphic type="text" color="#bfa295" align="right" size="50" left="200" top="70" content="&#xe1d3;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="200" top="50" content="&#xe222;" />
     </cell>
     <cell name="trill" char="articulationTrill">
         <code value="154" />
