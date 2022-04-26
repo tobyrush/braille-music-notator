@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Barlow:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+body {
+	font-family: 'Barlow', sans-serif;
+}
+
+h1 {
+	font-family: "Barlow Condensed", sans-serif;
+	font-weight: 500;
+}
+
+h2 {
+	font-family: "Barlow Condensed", sans-serif;
+	font-weight: 100;
+}
+
+p {
+	padding-left: 2vw;
+	width: 70vw;
+}
+
+#banner {
+	position: absolute;
+	display: block;
+	background-color: steelblue;
+	color: white;
+	height: 4vh;
+	left: 0px;
+	top: 0px;
+	width: 99vw;
+	padding: 0.5vh 0.5vw;
+	font-size: 3vh;
+	font-weight: 400;
+	text-align: center;
+}
+
+#navigation {
+	position: absolute;
+	top: 5vh;
+	left: 0px;
+	height: 95vh;
+	margin: 0px;
+	width: 20vw;
+	border: none;
+}
+
+#main {
+	position: absolute;
+	top: 5vh;
+	left: 20vw;
+	padding-left: 2vw;
+	width: 78vw;
+}
+
+.example {
+	text-align: center;
+	margin-top: 6vh;
+}
+
+.example object {
+	
+}
+
+.example img {
+	
+}
+
+.example figcaption {
+	margin-top: 1.5vh;
+	font-weight: 500;
+}
+
+score-braille {
+	display: none;
+}
+
+#contents {
+	font-family: "Barlow Condensed", sans-serif;
+}
+
+#contents ul {
+	
+}
+
+#contents li {
+	
+}
+
+table {
+	margin-left: 3vw;
+	margin-right: 3vw;
+}
+
+td {
+	background-color: #eee;
+	padding: 0.4em;
+}
+
+#contents details {
+	margin-left: 1em;
+}
+
+#contents summary {
+	
+}
+
+#contents div {
+	margin-left: 2em;
+}
