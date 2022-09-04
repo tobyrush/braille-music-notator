@@ -3129,49 +3129,52 @@
          <character code="953" />
          <character code="355" />
       </control>
-      <control top="34" left="322" width="15" height="15" label="single barline">
+      <control top="34" left="322" width="15" height="15" label="begin irregular rhythm repeat">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
+         <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="30" left="50" content="IRR" />
+         <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="65" left="50" content="RPT" />
+         <character code="242" />
+         <character code="355" />
+      </control>
+      <control top="34" left="338" width="15" height="15" label="single barline">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#fff" font="Bravura" align="center" size="60" left="50" top="80" content="&#xe030;" />
          <character code="76" />
       </control>
-      <control top="34" left="338" width="15" height="15" label="dotted barline">
+      <control top="34" left="354" width="15" height="15" label="dotted barline">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#fff" font="Bravura" align="center" size="60" left="50" top="80" content="&#xe037;" />
          <character code="175" />
       </control>
-      <control top="34" left="354" width="15" height="15" label="double barline">
+      <control top="34" left="370" width="15" height="15" label="double barline">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#fff" font="Bravura" align="center" size="60" left="50" top="80" content="&#xe031;" />
          <character code="260" />
          <character code="175" />
          <character code="139" />
       </control>
-      <control top="34" left="370" width="15" height="15" label="final barline">
+      <control top="34" left="386" width="15" height="15" label="final barline">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#fff" font="Bravura" align="center" size="60" left="50" top="80" content="&#xe032;" />
          <character code="260" />
          <character code="175" />
       </control>
-      <control top="34" left="386" width="15" height="15" label="metronome marking equals sign">
+      <control top="34" left="402" width="15" height="15" label="metronome marking equals sign">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="30" left="50" content="M.M." />
          <graphic type="text" color="#FFF" size="70" align="center" baseline="middle" top="65" left="50" content="=" />
          <character code="455" />
       </control>
-      <control top="34" left="402" width="15" height="15" label="parallel movement">
+      <control top="34" left="418" width="15" height="15" label="parallel movement">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="30" left="50" content="PAR" />
          <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="65" left="50" content="MVMT" />
          <character code="145" />
       </control>
-      <control top="34" left="418" width="15" height="15" label="sequence">
+      <control top="34" left="434" width="15" height="15" label="sequence">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="50" left="50" content="SEQ" />
          <character code="245" />
-      </control>
-      <control top="34" left="434" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
-         <character code="" />
       </control>
       <control top="34" left="450" width="15" height="15" label="">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
