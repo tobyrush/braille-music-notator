@@ -6,9 +6,11 @@ var brailleDots = [0,46,16,60,43,41,47,4,55,62,33,44,32,36,40,12,52,2,6,18,50,34
 
 var brailleUnicode=[240,286,256,300,283,281,287,244,295,302,273,284,272,276,280,252,292,242,246,258,290,274,262,294,278,260,289,288,275,303,268,297,248,241,243,249,265,257,251,267,259,250,266,245,247,253,269,261,255,271,263,254,270,277,279,298,285,301,293,282,291,299,264,296] // starts at 32
 
-function initializeBMViewers(fontURL = "https://tobyrush.com/braillemusic/notator/cellfonts/en/classic.xml") {
+function initializeBMViewers(fontURL = "https://tobyrush.com/braillemusic/notator/cellfonts/en/classic.xml", convertASCIIBraille = true) {
 	var u;
-	convertASCIIBraille();
+	if (convertASCIIBraille) {
+		convertASCIIBraille();
+	}
 	if (fontURL.match(/\:\/\//g).length) {
 		u = new URL(fontURL,document.location);
 	} else {
@@ -29,15 +31,24 @@ function continueInitialization(request) {
 		var fontXML = request.target.responseXML;
 		var notationArea,currentViewer, viewers=[];
 	
-		window.addEventListener("resize",initializeBMViewers,false);
+		// window.addEventListener("resize",initializeBMViewers,false);
 	
 		var objectElements = document.getElementsByTagName("object");
+		var c;
 		for (var i=0; i<objectElements.length; i++) {
 			if (objectElements[i].getAttribute("type") == 'application/braillemusic') {
 				objectElements[i].appendChild(document.createElement("canvas"));
+				// c = objectElements[i].querySelector('canvas');
+				// if (objectElements[i].hasAttribute('width')) {
+				// 	c.setAttribute('width',objectElements[i].getAttribute('width'));
+				// }
+				// if (objectElements[i].hasAttribute('height')) {
+				// 	c.setAttribute('height',objectElements[i].getAttribute('height'));
+				// }
 				currentViewer = new bmviewer(objectElements[i],fontXML,readParams(objectElements[i]));
 				viewers.push(currentViewer);
 				currentViewer.loadScore();
+				currentViewer.doNotationResize(null);
 			}
 		}
 	} else {
@@ -71,16 +82,18 @@ class bmviewer {
 	updateSizes() {
 		if (this.object.width) {
 			this.canvas.width = this.object.width;
+			this.notationWidth = this.canvas.width;
 		} else {
 			this.canvas.style.width = "100%";
+			this.notationWidth = this.canvas.clientWidth;
 		}
 		if (this.object.height) {
 			this.canvas.height = this.object.height;
+			this.notationHeight = this.canvas.height;
 		} else {
 			this.canvas.style.height = "100%";
+			this.notationHeight = this.canvas.clientHeight;
 		}
-		this.notationWidth = this.canvas.clientWidth;
-		this.notationHeight = this.canvas.clientHeight;
 		this.notationCellWidth = this.notationWidth/this.gridWidth;
 		this.notationCellHeight = this.notationHeight/this.gridHeight;
 	}
