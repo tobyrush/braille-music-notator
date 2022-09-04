@@ -5002,138 +5002,138 @@
       <control keycode="Space" top="0" left="0" width="0" height="0" label="Space">
          <character code="0" />
       </control>
-      <control top="2" left="2" width="15" height="15" label="capitalize letter">
+      <control keycode="Backslash" top="2" left="2" width="15" height="15" label="capitalize letter">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" color="#000" size="30" align="center" baseline="middle" top="30" left="50" content="CAP" />
          <graphic type="text" color="#000" size="30" align="center" baseline="middle" top="65" left="50" content="LTR" />
          <character code="544" />
       </control>
-      <control top="2" left="18" width="15" height="15" label="A">
+      <control keycode="KeyA" top="2" left="18" width="15" height="15" label="A">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="A" />
          <character code="565" />
       </control>
-      <control top="2" left="34" width="15" height="15" label="B">
+      <control keycode="KeyB" top="2" left="34" width="15" height="15" label="B">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="B" />
          <character code="566" />
       </control>
-      <control top="2" left="50" width="15" height="15" label="C">
+      <control keycode="KeyC" top="2" left="50" width="15" height="15" label="C">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="C" />
          <character code="567" />
       </control>
-      <control top="2" left="66" width="15" height="15" label="D">
+      <control keycode="KeyD" top="2" left="66" width="15" height="15" label="D">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="D" />
          <character code="568" />
       </control>
-      <control top="2" left="82" width="15" height="15" label="E">
+      <control keycode="KeyE" top="2" left="82" width="15" height="15" label="E">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="E" />
          <character code="569" />
       </control>
-      <control top="2" left="98" width="15" height="15" label="F">
+      <control keycode="KeyF" top="2" left="98" width="15" height="15" label="F">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="F" />
          <character code="570" />
       </control>
-      <control top="2" left="114" width="15" height="15" label="G">
+      <control keycode="KeyG" top="2" left="114" width="15" height="15" label="G">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="G" />
          <character code="571" />
       </control>
-      <control top="2" left="130" width="15" height="15" label="H">
+      <control keycode="KeyH" top="2" left="130" width="15" height="15" label="H">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="H" />
          <character code="572" />
       </control>
-      <control top="2" left="146" width="15" height="15" label="I">
+      <control keycode="KeyI" top="2" left="146" width="15" height="15" label="I">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="I" />
          <character code="573" />
       </control>
-      <control top="2" left="162" width="15" height="15" label="J">
+      <control keycode="KeyJ" top="2" left="162" width="15" height="15" label="J">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="J" />
          <character code="574" />
       </control>
-      <control top="2" left="178" width="15" height="15" label="K">
+      <control keycode="KeyK" top="2" left="178" width="15" height="15" label="K">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="K" />
          <character code="575" />
       </control>
-      <control top="2" left="194" width="15" height="15" label="L">
+      <control keycode="KeyL" top="2" left="194" width="15" height="15" label="L">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="L" />
          <character code="576" />
       </control>
-      <control top="2" left="210" width="15" height="15" label="M">
+      <control keycode="KeyM" top="2" left="210" width="15" height="15" label="M">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="M" />
          <character code="577" />
       </control>
-      <control top="2" left="226" width="15" height="15" label="N">
+      <control keycode="KeyN" top="2" left="226" width="15" height="15" label="N">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="N" />
          <character code="578" />
       </control>
-      <control top="2" left="242" width="15" height="15" label="O">
+      <control keycode="KeyO" top="2" left="242" width="15" height="15" label="O">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="O" />
          <character code="579" />
       </control>
-      <control top="2" left="258" width="15" height="15" label="P">
+      <control keycode="KeyP" top="2" left="258" width="15" height="15" label="P">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="P" />
          <character code="580" />
       </control>
-      <control top="2" left="274" width="15" height="15" label="Q">
+      <control keycode="KeyQ" top="2" left="274" width="15" height="15" label="Q">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="Q" />
          <character code="581" />
       </control>
-      <control top="2" left="290" width="15" height="15" label="R">
+      <control keycode="KeyR" top="2" left="290" width="15" height="15" label="R">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="R" />
          <character code="582" />
       </control>
-      <control top="2" left="306" width="15" height="15" label="S">
+      <control keycode="KeyS" top="2" left="306" width="15" height="15" label="S">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="S" />
          <character code="583" />
       </control>
-      <control top="2" left="322" width="15" height="15" label="T">
+      <control keycode="KeyT" top="2" left="322" width="15" height="15" label="T">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="T" />
          <character code="584" />
       </control>
-      <control top="2" left="338" width="15" height="15" label="U">
+      <control keycode="KeyU" top="2" left="338" width="15" height="15" label="U">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="U" />
          <character code="585" />
       </control>
-      <control top="2" left="354" width="15" height="15" label="V">
+      <control keycode="KeyV" top="2" left="354" width="15" height="15" label="V">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="V" />
          <character code="586" />
       </control>
-      <control top="2" left="370" width="15" height="15" label="W">
+      <control keycode="KeyW" top="2" left="370" width="15" height="15" label="W">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="W" />
          <character code="587" />
       </control>
-      <control top="2" left="386" width="15" height="15" label="X">
+      <control keycode="KeyX" top="2" left="386" width="15" height="15" label="X">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="X" />
          <character code="588" />
       </control>
-      <control top="2" left="402" width="15" height="15" label="Y">
+      <control keycode="KeyY" top="2" left="402" width="15" height="15" label="Y">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="Y" />
          <character code="589" />
       </control>
-      <control top="2" left="418" width="15" height="15" label="Z">
+      <control keycode="KeyZ" top="2" left="418" width="15" height="15" label="Z">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="Z" />
          <character code="590" />
@@ -5187,52 +5187,52 @@
          <graphic type="text" color="#000" size="30" align="center" baseline="middle" top="65" left="50" content="CASE" />
          <character code="459" />
       </control>
-      <control top="18" left="66" width="15" height="15" label="zero">
+      <control keycode="Digit0" top="18" left="66" width="15" height="15" label="zero">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="0" />
          <character code="674" />
       </control>
-      <control top="18" left="82" width="15" height="15" label="one">
+      <control keycode="Digit1" top="18" left="82" width="15" height="15" label="one">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="1" />
          <character code="665" />
       </control>
-      <control top="18" left="98" width="15" height="15" label="two">
+      <control keycode="Digit2" top="18" left="98" width="15" height="15" label="two">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="2" />
          <character code="666" />
       </control>
-      <control top="18" left="114" width="15" height="15" label="three">
+      <control keycode="Digit3" top="18" left="114" width="15" height="15" label="three">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="3" />
          <character code="667" />
       </control>
-      <control top="18" left="130" width="15" height="15" label="four">
+      <control keycode="Digit4" top="18" left="130" width="15" height="15" label="four">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="4" />
          <character code="668" />
       </control>
-      <control top="18" left="146" width="15" height="15" label="five">
+      <control keycode="Digit5" top="18" left="146" width="15" height="15" label="five">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="5" />
          <character code="669" />
       </control>
-      <control top="18" left="162" width="15" height="15" label="six">
+      <control keycode="Digit6" top="18" left="162" width="15" height="15" label="six">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="6" />
          <character code="670" />
       </control>
-      <control top="18" left="178" width="15" height="15" label="seven">
+      <control keycode="Digit7" top="18" left="178" width="15" height="15" label="seven">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="7" />
          <character code="671" />
       </control>
-      <control top="18" left="194" width="15" height="15" label="eight">
+      <control keycode="Digit8" top="18" left="194" width="15" height="15" label="eight">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="8" />
          <character code="672" />
       </control>
-      <control top="18" left="210" width="15" height="15" label="nine">
+      <control keycode="Digit9" top="18" left="210" width="15" height="15" label="nine">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="9" />
          <character code="673" />
@@ -5348,17 +5348,17 @@
          <character code="" />
       </control>
       
-      <control top="34" left="2" width="15" height="15" label="period">
+      <control keycode="Period" top="34" left="2" width="15" height="15" label="period">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="." />
          <character code="552" />
       </control>
-      <control top="34" left="18" width="15" height="15" label="comma">
+      <control keycode="Comma" top="34" left="18" width="15" height="15" label="comma">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="," />
          <character code="549" />
       </control>
-      <control top="34" left="34" width="15" height="15" label="semicolon">
+      <control keycode="Semicolon" top="34" left="34" width="15" height="15" label="semicolon">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content=";" />
          <character code="550" />
@@ -5368,12 +5368,12 @@
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content=":" />
          <character code="551" />
       </control>
-      <control top="34" left="66" width="15" height="15" label="apostrophe">
+      <control keycode="Quote" top="34" left="66" width="15" height="15" label="apostrophe">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="'" />
          <character code="539" />
       </control>
-      <control top="34" left="82" width="15" height="15" label="question mark">
+      <control keycode="Slash" top="34" left="82" width="15" height="15" label="question mark">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="?" />
          <character code="556" />
@@ -5397,7 +5397,7 @@
          <character code="659" />
          <character code="554" />
       </control>
-      <control top="34" left="146" width="15" height="15" label="hyphen">
+      <control keycode="Minus" top="34" left="146" width="15" height="15" label="hyphen">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="-" />
          <character code="545" />
@@ -5444,13 +5444,13 @@
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="(&#x2026;)" />
          <character code="555" />
       </control>
-      <control top="34" left="274" width="15" height="15" label="open parenthesis">
+      <control keycode="BracketLeft" top="34" left="274" width="15" height="15" label="open parenthesis">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="(" />
          <character code="534" />
          <character code="960" />
       </control>
-      <control top="34" left="290" width="15" height="15" label="close parenthesis">
+      <control keycode="BracketRight" top="34" left="290" width="15" height="15" label="close parenthesis">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content=")" />
          <character code="534" />
@@ -5609,7 +5609,7 @@
          <character code="564" />
          <character code="960" />
       </control>
-      <control top="50" left="226" width="15" height="15" label="equals">
+      <control keycode="Equal" top="50" left="226" width="15" height="15" label="equals">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="=" />
          <character code="534" />
@@ -5621,7 +5621,7 @@
          <character code="564" />
          <character code="862" />
       </control>
-      <control top="50" left="258" width="15" height="15" label="number sign">
+      <control keycode="Backquote" top="50" left="258" width="15" height="15" label="number sign">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" color="#000" size="30" align="center" baseline="middle" top="30" left="50" content="NUM" />
          <graphic type="text" color="#000" size="30" align="center" baseline="middle" top="65" left="50" content="SIGN" />
