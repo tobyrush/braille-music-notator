@@ -4249,8 +4249,8 @@
         <code value="242" />
         <code value="355" />
         <graphic type="background" color="#000" cells="2" />
-        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="17" left="35" top="50" content="IRREG." rotateCCW="true" />
-        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="17" left="65" top="50" content="REPEAT." rotateCCW="true" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="100" top="35" content="IRREG." />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="100" top="65" content="REPEAT" />
     </cell>
     <cell name="measure repeat" char="repeatMeasure">
         <code value="155" />
