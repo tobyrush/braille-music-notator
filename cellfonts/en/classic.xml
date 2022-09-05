@@ -1200,12 +1200,6 @@
         <graphic type="background" color="#000" />
         <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="50" left="50" top="50" content="," />
     </cell>
-    <cell name="parallel movement" char="directionParallelMovement">
-        <code value="145" />
-        <graphic type="background" color="#000" />
-        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="17" left="35" top="50" content="PARALLEL" rotateCCW="true" />
-        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="17" left="65" top="50" content="MVMT" rotateCCW="true" />
-    </cell>
     <cell name="first position" char="directionPosition01">
         <code value="362" />
         <code value="362" />
