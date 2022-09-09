@@ -3817,6 +3817,11 @@
         <graphic type="text" color="#fff" align="right" size="45" left="80" top="80" content="&#xe1e1;" />
         <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="G" />
     </cell>
+    <cell name="note variant indicator" char="noteVariant">
+        <code value="1253" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="25" left="50" top="50" content="VAR" rotateCCW="true" />
+    </cell>
     <cell name="A whole note" char="noteWholeA">
         <code value="33" />
         <graphic type="background" color="#f00" />
