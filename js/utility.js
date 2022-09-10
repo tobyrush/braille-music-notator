@@ -92,6 +92,7 @@ function clearSelection() {
 		}
 	}
 	suspendUndo = false;
+	scrollToCursor();
 }
 
 function copySelection(e) {

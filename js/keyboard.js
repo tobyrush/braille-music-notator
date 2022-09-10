@@ -119,6 +119,8 @@ function interpretKeyCode(e) {
 				cursor.y=0;
 				cursor.width=scoreWidth();
 				cursor.height=scoreHeight();
+                cursor.pinnedLeft = false;
+                cursor.pinnedTop = false;
 				break;
             case 66: // B - toggle braille translation
 				currentCellFont.translateBraille = !currentCellFont.translateBraille;
