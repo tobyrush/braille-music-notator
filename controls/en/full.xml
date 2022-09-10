@@ -1179,9 +1179,10 @@
          <character code="453" />
          <character code="966" />
       </control>
-      <control top="82" left="418" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
-         <character code="" />
+      <control top="82" left="418" width="15" height="15" label="note variant indicator">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#f00" />
+         <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="50" left="50" content="VAR" />
+         <character code="1253" />
       </control>
       <control top="82" left="434" width="15" height="15" label="">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
@@ -3165,16 +3166,14 @@
          <graphic type="text" color="#FFF" size="70" align="center" baseline="middle" top="65" left="50" content="=" />
          <character code="455" />
       </control>
-      <control top="34" left="418" width="15" height="15" label="parallel movement">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
-         <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="30" left="50" content="PAR" />
-         <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="65" left="50" content="MVMT" />
-         <character code="145" />
-      </control>
-      <control top="34" left="434" width="15" height="15" label="sequence">
+      <control top="34" left="418" width="15" height="15" label="sequence">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="50" left="50" content="SEQ" />
          <character code="245" />
+      </control>
+      <control top="34" left="434" width="15" height="15" label="">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
+         <character code="" />
       </control>
       <control top="34" left="450" width="15" height="15" label="">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
