@@ -107,3 +107,11 @@ td {
 #contents div {
 	margin-left: 2em;
 }
+
+.stacked {
+	display: inline-flex;
+	flex-direction: column;
+	font-size: 70%;
+	vertical-align: middle;
+	padding: 0.2em;
+}
