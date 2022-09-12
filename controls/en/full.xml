@@ -3005,7 +3005,7 @@
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
          <graphic type="text" color="#000" font="Bravura" align="center" size="60" left="50" top="65" content="&#xe871;" />
          <character code="452" />
-         <character code="849" />
+         <character code="239" />
       </control>
       <control top="34" left="34" width="15" height="15" label="plus chord symbol">
          <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>

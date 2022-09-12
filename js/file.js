@@ -413,7 +413,7 @@ function parseData(fileData,includeText = true) {
 	
 	fileData = fileData.replace(/[\^][<][1]/g, String.fromCharCode(194,660,349)); // read as larger notes
 	fileData = fileData.replace(/[,][<][1]/g, String.fromCharCode(244,660,349)); // read as smaller notes
-	fileData = fileData.replace(/["][\s]*[\n]/g, convertBrailleMusicHyphen); // braille music hyphen
+	fileData = fileData.replace(/["][\s]*[\n\r]/g, convertBrailleMusicHyphen); // braille music hyphen
 	fileData = fileData.replace(/([<][1])/g, String.fromCharCode(660,349)); // braille music comma
     fileData = fileData.replace(/[,][']/g, String.fromCharCode(344,339)); // music prefix
 	fileData = fileData.replace(/[defghijDEFGHIJnopqrstNOPQRSTyzYZ&=(!)][']*([abklABKL1][cC]?[abklABKL1]?)/g, convertFingerings); // fingering

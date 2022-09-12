@@ -946,7 +946,7 @@
     </cell>
     <cell name="slashed circle" char="chordSymbolCircleSlashed">
         <code value="452" />
-        <code value="849" />
+        <code value="239" />
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" color="#000" align="center" size="50" left="100" top="50" content="&#xe871;" />
     </cell>
