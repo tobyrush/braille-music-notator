@@ -28,7 +28,7 @@ var dropzone = false, fileLoading = false;
 var undoStack = [];
 var suspendUndo = false;
 var undoCursor = -1;
-var metaKeyDown = false, shiftKeyDown = false;
+var metaKeyDown = false, shiftKeyDown = false, optionKeyDown = false;
 var pasted = false;
 var fileDialogOpen = false, optionsDialogOpen = false, helpDialogOpen = false;
 var dialogTop,dialogButtonLeft,dialogButtonRight,dialogTop,dialogButtonHeight,dialogButtonWidth,dialogButtonTop = [];

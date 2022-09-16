@@ -69,7 +69,7 @@ function doOpenFile() {
 }
 
 function doSaveFile() {
-    downloadBRMFile(false);
+    downloadBRMFile();
 }
 
 function doExportFile() {
@@ -312,55 +312,165 @@ function downloadBRMFile() {
 	}
 }
 
-function downloadFile(reduceASCII) {
+function downloadFile() {
 	var getFileName;
-    var ext = reduceASCII ? '.brf' : '.brm';
-    if (shiftKeyDown || (getFileName = window.prompt('Save file as:', removeExtension(currentFileName)+ext))) {
+    var ext = optionKeyDown ? '.dxb' : '.brf';
+	if (shiftKeyDown || (getFileName = window.prompt('Save file as:', removeExtension(currentFileName)+ext))) {
         if (!shiftKeyDown) {
             currentFileName = getFileName;
         }
         var fileString="";
         var rightMargin=scoreWidth();
-        if (reduceASCII && showPageBreaks) {
+        if (showPageBreaks) {
             rightMargin=pageWidth-1;
         }
         for (var row=0; row<score.length; row+=1) {
             if ((typeof score[row]!=='undefined') && (score[row]!==null)) {
                 for (var col=0; col<=Math.min(score[row].length,rightMargin); col+=1) {
                     if ((typeof score[row][col]!=='undefined') && (score[row][col]>0)) {
-                        if (reduceASCII) {
-                            fileString=fileString+String.fromCharCode(score[row][col] % 100);
-                        } else {
-                            fileString=fileString+String.fromCharCode(score[row][col]);
-                        }
+                        fileString=fileString+String.fromCharCode(score[row][col] % 100);
                     } else {
                         fileString=fileString+" ";
                     }
                 }
                 fileString=fileString+String.fromCharCode(13)+String.fromCharCode(10);
-                if (reduceASCII && showPageBreaks && ((row+1) % pageHeight) === 0) {
+                if (showPageBreaks && ((row+1) % pageHeight) === 0) {
                     fileString=fileString+String.fromCharCode(12);
                 }
             } else {
                 fileString=fileString+String.fromCharCode(13)+String.fromCharCode(10);
-                if (reduceASCII && showPageBreaks && ((row+1) % pageHeight) === 0) {
+                if (showPageBreaks && ((row+1) % pageHeight) === 0) {
                     fileString=fileString+String.fromCharCode(12);
                 }
             }
         }
 
-        var file=document.createElement('a');
-
-        file.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileString));
-        file.setAttribute('download', currentFileName);
-        file.setAttribute('target', '_blank');
-
-        var clickEvent = new MouseEvent("click", {"view": window, "bubbles": true, "cancelable": false});
-        file.dispatchEvent(clickEvent);
+        if (optionKeyDown) {
+			writeDXBFile(fileString);
+		} else {
+			var file=document.createElement('a');
+	
+        	file.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileString));
+        	file.setAttribute('download', currentFileName);
+        	file.setAttribute('target', '_blank');
+	
+        	var clickEvent = new MouseEvent("click", {"view": window, "bubbles": true, "cancelable": false});
+        	file.dispatchEvent(clickEvent);
+		}
     }
 
 
 }
+
+function writeDXBFile(fileData) {
+	let b = [255,68,83,73,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,1,0,8,0,0,0,0,0,0,-1,-1,0,0,0,1,0,0,0,1,4,179,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,4,0,2,0,1,0,1,0,2,0,6,0,6,34,0,0,0,0,99,0,4,0,0,-1,-1,0,0,0,1,0,4,0,0,-1,-1,0,0,0,0,0,25,0,0,0,40,0,0,0,0,0,0,49,49,95,119,0,0,0,0,0,0,54,0,65,0,0,0,0,0,0,0,0,0,0,0,4,0,0,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+	let a = [0,36,0,0,1,56,0,0,0,0,0,1,0,25,0,2,0,3,0,4,0,5,0,29,0,31,0,6,0,7,0,8,0,9,0,10,0,11,0,12,0,13,0,27,0,14,0,15,0,16,0,19,0,17,0,20,0,28,0,24,0,26,0,18,0,30,0,32,0,34,0,35,0,33,0,21,0,23,0,22,97,99,114,111,110,121,109,0,98,111,120,0,98,111,120,45,104,49,46,0,98,114,108,100,105,115,112,108,97,121,46,0,98,114,108,105,110,108,105,110,101,0,99,111,109,112,100,105,115,112,108,97,121,46,0,99,111,109,112,105,110,108,105,110,101,0,100,117,116,99,104,0,102,105,110,110,105,115,104,0,102,114,101,110,99,104,0,103,101,114,109,97,110,0,104,49,46,0,104,50,46,0,104,51,46,0,105,116,97,108,105,97,110,0,108,97,116,105,110,0,108,105,115,116,46,0,109,97,111,114,105,0,110,111,116,101,46,0,111,117,116,108,105,110,101,46,0,112,97,114,97,46,0,112,97,114,97,46,99,111,110,116,105,110,117,101,46,0,112,111,101,109,46,0,112,111,101,109,46,50,108,101,118,101,108,46,0,112,111,114,116,117,103,117,101,115,101,0,114,101,102,46,112,103,46,110,111,0,114,101,102,46,112,103,46,110,111,45,105,110,45,109,97,116,104,0,115,112,97,110,105,115,104,0,115,119,97,104,105,108,105,0,115,119,101,100,105,115,104,0,84,79,67,58,108,101,102,116,0,84,79,67,58,114,105,103,104,116,0,84,79,67,58,116,105,116,108,101,0,116,112,46,97,117,116,104,111,114,46,0,116,112,46,103,101,110,101,114,97,108,46,0,116,112,46,116,105,116,108,101,46,0,0,72,0,0,3,108,0,0,28,105,31,0,0,28,105,110,100,49,31,28,107,112,115,31,28,102,114,59,102,126,55,31,28,100,126,55,31,28,108,31,0,28,105,110,100,49,31,28,102,114,59,102,126,103,31,28,100,126,103,31,28,108,31,28,107,112,101,31,0,28,115,99,49,58,48,31,28,99,122,31,0,28,116,120,31,28,115,99,49,58,48,58,48,31,0,28,99,122,31,0,28,116,120,31,0,28,115,99,49,58,48,31,28,112,116,121,115,49,31,28,99,98,31,28,119,98,45,99,98,31,0,28,119,98,31,28,112,116,121,101,31,28,116,120,31,28,115,99,49,58,48,58,48,31,0,28,99,98,105,31,0,28,116,120,105,31,0,28,108,110,103,126,102,114,31,0,28,108,110,103,31,0,28,108,110,103,126,100,101,31,0,28,108,110,103,31,0,28,108,31,28,107,112,115,31,28,115,99,49,58,48,31,28,114,109,54,31,28,104,100,115,31,0,28,104,100,101,31,28,114,109,48,31,28,115,107,49,31,28,107,112,101,50,58,50,31,0,28,108,31,28,107,112,115,31,28,115,99,49,58,48,31,28,105,110,100,53,31,0,28,105,110,100,49,31,28,107,112,101,50,58,50,31,0,28,108,31,28,107,112,115,31,28,115,99,49,58,48,31,28,105,110,100,53,31,0,28,105,110,100,49,31,28,107,112,101,50,58,50,31,0,28,108,110,103,126,105,116,31,0,28,108,110,103,31,0,28,108,110,103,126,108,97,31,0,28,108,110,103,31,0,28,115,99,49,58,48,31,28,104,105,49,58,51,58,48,58,50,58,50,31,28,107,112,115,31,28,107,105,49,31,0,28,107,105,48,31,28,107,112,101,31,28,104,105,31,28,115,99,49,58,48,58,48,31,0,28,105,110,100,53,31,28,116,97,98,55,31,0,28,105,110,100,49,31,0,28,115,99,49,58,48,31,28,104,105,49,58,53,58,48,58,50,58,50,31,28,107,112,115,31,28,107,105,49,31,0,28,107,105,48,31,28,107,112,101,31,28,104,105,31,28,115,99,49,58,48,58,48,31,0,28,112,31,0,28,108,31,0,28,115,99,49,58,48,31,28,104,105,49,58,51,58,48,58,50,58,50,31,28,107,112,115,31,28,107,105,49,31,0,28,107,105,48,31,28,107,112,101,31,28,104,105,31,28,115,99,49,58,48,58,48,31,0,28,108,110,103,126,101,115,31,0,28,108,110,103,31,0,28,108,31,0,28,108,31,0,28,115,99,49,58,48,31,28,104,105,49,58,52,58,48,58,50,58,48,31,28,107,112,115,31,28,107,105,49,31,0,28,107,105,48,31,28,107,112,101,31,28,104,105,31,28,115,99,49,58,48,58,48,31,0,28,115,99,49,58,48,31,28,104,100,115,31,0,28,104,100,101,31,0,28,115,99,49,58,48,31,28,104,100,115,31,0,28,104,100,101,31,0,28,115,99,49,58,48,31,28,104,100,115,31,0,28,104,100,101,31,0,28,108,101,97,31,0,28,108,31,0,28,108,31,28,107,112,115,31,28,114,109,54,31,28,104,100,115,31,0,28,104,100,101,31,28,114,109,48,31,28,115,107,49,31,28,107,112,101,50,58,50,31,0,28,116,99,101,31,28,108,101,97,31,0,28,116,99,115,31,28,108,31,0,28,108,110,103,126,109,105,31,0,28,108,110,103,31,0,28,108,110,103,126,112,116,31,0,28,108,110,103,31,0,28,108,110,103,126,110,108,31,0,28,108,110,103,31,0,28,108,110,103,126,115,119,31,0,28,108,110,103,31,0,28,108,110,103,126,102,105,31,0,28,108,110,103,31,0,28,108,110,103,126,115,118,31,0,28,108,110,103,31,0,67,111,110,116,101,110,116,115,0,44,51,116,53,116,115,0,67,104,97,112,116,101,114,0,44,42,97,112,116,93,0,80,97,103,101,0,44,112,97,103,101,0,0];
+	
+	let val, d = [];
+	for (let i=0; i<fileData.length; i++) {
+	  val = fileData.charCodeAt(i);
+	  switch (val) {
+		case 13:
+		  d.push(28);
+		  d.push(60);
+		  d.push(31);
+		  if (fileData.charCodeAt(i+1) == 10) {
+			i++;
+		  }
+		  break;
+		case 10:
+		  d.push(28);
+		  d.push(60);
+		  d.push(31);
+		  break;
+		default:
+		  d.push(val);
+	  }
+	}
+	let l = d.length;
+	
+	b[30] = (l >> 8) & 255;
+	b[31] = l & 255;
+	b[34] = (l >> 8) & 255;
+	b[35] = l & 255;
+	l += 1510;
+	b[102] = (l >> 8) & 255;
+	b[103] = l & 255;
+		l++;
+	b[112] = (l >> 8) & 255;
+	b[113] = l & 255;
+	b[157] = (l >> 8) & 255;
+	b[158] = l & 255;
+	
+	let bindata = new Uint8Array(b.concat(d,a));
+	
+	var saveByteArray = (function () {
+		var a = document.createElement("a");
+		document.body.appendChild(a);
+		a.style = "display: none";
+		return function (data, name) {
+			var blob = new Blob(data, {type: "octet/stream"}),
+				url = window.URL.createObjectURL(blob);
+			a.href = url;
+			a.download = name;
+			a.click();
+			window.URL.revokeObjectURL(url);
+		};
+	}());
+	
+	saveByteArray([bindata], currentFileName);
+  }
+
+
+// function oldDownloadFile(reduceASCII) {
+// 	var getFileName;
+// 	var ext = reduceASCII ? '.brf' : '.brm';
+// 	if (shiftKeyDown || (getFileName = window.prompt('Save file as:', removeExtension(currentFileName)+ext))) {
+// 		if (!shiftKeyDown) {
+// 			currentFileName = getFileName;
+// 		}
+// 		var fileString="";
+// 		var rightMargin=scoreWidth();
+// 		if (reduceASCII && showPageBreaks) {
+// 			rightMargin=pageWidth-1;
+// 		}
+// 		for (var row=0; row<score.length; row+=1) {
+// 			if ((typeof score[row]!=='undefined') && (score[row]!==null)) {
+// 				for (var col=0; col<=Math.min(score[row].length,rightMargin); col+=1) {
+// 					if ((typeof score[row][col]!=='undefined') && (score[row][col]>0)) {
+// 						if (reduceASCII) {
+// 							fileString=fileString+String.fromCharCode(score[row][col] % 100);
+// 						} else {
+// 							fileString=fileString+String.fromCharCode(score[row][col]);
+// 						}
+// 					} else {
+// 						fileString=fileString+" ";
+// 					}
+// 				}
+// 				fileString=fileString+String.fromCharCode(13)+String.fromCharCode(10);
+// 				if (reduceASCII && showPageBreaks && ((row+1) % pageHeight) === 0) {
+// 					fileString=fileString+String.fromCharCode(12);
+// 				}
+// 			} else {
+// 				fileString=fileString+String.fromCharCode(13)+String.fromCharCode(10);
+// 				if (reduceASCII && showPageBreaks && ((row+1) % pageHeight) === 0) {
+// 					fileString=fileString+String.fromCharCode(12);
+// 				}
+// 			}
+// 		}
+// 
+// 		var file=document.createElement('a');
+// 
+// 		file.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileString));
+// 		file.setAttribute('download', currentFileName);
+// 		file.setAttribute('target', '_blank');
+// 
+// 		var clickEvent = new MouseEvent("click", {"view": window, "bubbles": true, "cancelable": false});
+// 		file.dispatchEvent(clickEvent);
+// 	}
+// 
+// 
+// }
 
 function parseData(fileData,includeText = true) {
 	
@@ -413,7 +523,7 @@ function parseData(fileData,includeText = true) {
 	
 	fileData = fileData.replace(/[\^][<][1]/g, String.fromCharCode(194,660,349)); // read as larger notes
 	fileData = fileData.replace(/[,][<][1]/g, String.fromCharCode(244,660,349)); // read as smaller notes
-	fileData = fileData.replace(/["][\s]*[\n]/g, convertBrailleMusicHyphen); // braille music hyphen
+	fileData = fileData.replace(/["][\s]*[\n\r]/g, convertBrailleMusicHyphen); // braille music hyphen
 	fileData = fileData.replace(/([<][1])/g, String.fromCharCode(660,349)); // braille music comma
     fileData = fileData.replace(/[,][']/g, String.fromCharCode(344,339)); // music prefix
 	fileData = fileData.replace(/[defghijDEFGHIJnopqrstNOPQRSTyzYZ&=(!)][']*([abklABKL1][cC]?[abklABKL1]?)/g, convertFingerings); // fingering

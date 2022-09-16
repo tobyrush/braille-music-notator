@@ -29,6 +29,11 @@ function doKeyUp(e) {
 			metaKeyDown = false;
 			passThrough = true;
 			break;
+        case "AltLeft":
+        case "AltRight":
+            optionKeyDown = false;
+            passThrough = true;
+            break;
 		default:
 			passThrough = true;
 	}
@@ -343,9 +348,10 @@ function interpretKeyCode(e) {
                 passThrough = true;
                 dontScroll = true;
                 break;
-//            case "AltLeft":
-//            case "AltRight:"
-//                break;
+           case "AltLeft":
+           case "AltRight":
+                optionKeyDown = true;
+                break;
             case "Enter":
                 if (shiftKeyDown) {
                     placeCursor(firstCharPosInRow(y),y+1,1,1,"");
