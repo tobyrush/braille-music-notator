@@ -447,7 +447,7 @@
     </cell>
     <cell name="left hand pizzicato" char="articulationPizzicatoLeftHand">
         <code value="395" />
-        <code value="278" />
+        <code value="1262" />
         <graphic type="background" color="#7f462c" cells="2" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="30" left="100" top="30" font="serif" style="italic" content="pizz." />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="70" left="100" top="70" content="&#xe633;" />
@@ -499,6 +499,51 @@
         <graphic type="background" color="#7f462c" cells="2" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="60" left="100" top="60" content="&#xe624;" />
     </cell>
+    <cell name="eighth note tremolo" char="articulationTremoloContinueEighth">
+        <code value="794" />
+        <code value="1166" />
+        <code value="1166" />
+        <graphic type="background" color="#7f462c" cells="3" />
+        <graphic type="text" color="#bfa295" align="right" size="50" left="100" top="70" content="&#xe1d3;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="50" content="&#xe220;" />
+        <graphic type="line" startX="150" startY="50" endX="250" endY="50" lineWidth="2" color="#fff"/>
+    </cell>
+    <cell name="one hundred twenty eighth note tremolo" char="articulationTremoloContinueOneHundredTwentyEighth">
+        <code value="794" />
+        <code value="839" />
+        <code value="839" />
+        <graphic type="background" color="#7f462c" cells="3" />
+        <graphic type="text" color="#bfa295" align="right" size="50" left="100" top="80" content="&#xe1d3;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="60" content="&#xe224;" />
+        <graphic type="line" startX="150" startY="50" endX="250" endY="50" lineWidth="2" color="#fff"/>
+    </cell>
+    <cell name="sixteenth note tremolo" char="articulationTremoloContinueSixteenth">
+        <code value="794" />
+        <code value="876" />
+        <code value="876" />
+        <graphic type="background" color="#7f462c" cells="3" />
+        <graphic type="text" color="#bfa295" align="right" size="50" left="100" top="70" content="&#xe1d3;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="50" content="&#xe221;" />
+        <graphic type="line" startX="150" startY="50" endX="250" endY="50" lineWidth="2" color="#fff"/>
+    </cell>
+    <cell name="sixty fourth note tremolo" char="articulationTremoloContinueSixtyFourth">
+        <code value="794" />
+        <code value="875" />
+        <code value="875" />
+        <graphic type="background" color="#7f462c" cells="3" />
+        <graphic type="text" color="#bfa295" align="right" size="50" left="100" top="80" content="&#xe1d3;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="60" content="&#xe223;" />
+        <graphic type="line" startX="150" startY="50" endX="250" endY="50" lineWidth="2" color="#fff"/>
+    </cell>
+    <cell name="thirty second note tremolo" char="articulationTremoloContinueThirtySecond">
+        <code value="794" />
+        <code value="1149" />
+        <code value="1149" />
+        <graphic type="background" color="#7f462c" cells="3" />
+        <graphic type="text" color="#bfa295" align="right" size="50" left="100" top="70" content="&#xe1d3;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="50" content="&#xe222;" />
+        <graphic type="line" startX="150" startY="50" endX="250" endY="50" lineWidth="2" color="#fff"/>
+    </cell>
     <cell name="eighth note tremolo" char="articulationTremoloEighth">
         <code value="794" />
         <code value="1166" />
@@ -522,7 +567,7 @@
     </cell>
     <cell name="one hundred twenty eighth note tremolo" char="articulationTremoloOneHundredTwentyEighth">
         <code value="794" />
-        <code value="1244" />
+        <code value="839" />
         <graphic type="background" color="#7f462c" cells="2" />
         <graphic type="text" color="#bfa295" align="right" size="50" left="100" top="80" content="&#xe1d3;" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="60" content="&#xe224;" />
@@ -536,14 +581,14 @@
     </cell>
     <cell name="sixty fourth note tremolo" char="articulationTremoloSixtyFourth">
         <code value="794" />
-        <code value="946" />
+        <code value="875" />
         <graphic type="background" color="#7f462c" cells="2" />
         <graphic type="text" color="#bfa295" align="right" size="50" left="100" top="80" content="&#xe1d3;" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="60" content="&#xe223;" />
     </cell>
     <cell name="thirty second note tremolo" char="articulationTremoloThirtySecond">
         <code value="794" />
-        <code value="1134" />
+        <code value="1149" />
         <graphic type="background" color="#7f462c" cells="2" />
         <graphic type="text" color="#bfa295" align="right" size="50" left="100" top="70" content="&#xe1d3;" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="50" content="&#xe222;" />
@@ -946,7 +991,7 @@
     </cell>
     <cell name="slashed circle" char="chordSymbolCircleSlashed">
         <code value="452" />
-        <code value="849" />
+        <code value="239" />
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" color="#000" align="center" size="50" left="100" top="50" content="&#xe871;" />
     </cell>
@@ -1200,6 +1245,11 @@
         <graphic type="background" color="#000" />
         <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="50" left="50" top="50" content="," />
     </cell>
+    <cell name="position sign" char="directionPosition">
+        <code value="362" />
+        <graphic type="background" color="#000" cells="1" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="top" size="25" left="30" top="50" content="POS" rotateCCW="true" />
+    </cell>
     <cell name="first position" char="directionPosition01">
         <code value="362" />
         <code value="362" />
@@ -1412,6 +1462,76 @@
         <graphic type="background" color="#000" cells="2" />
         <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="top" size="16.6" left="57.5" top="50" content="STRING" rotateCCW="true" />
         <graphic type="text" font="sans-serif" color="#fff" align="right" baseline="middle" size="60" style="bold" left="142.5" top="50" content="7" />
+    </cell>
+    <cell name="first string" char="directionStringBegin1">
+        <code value="237" />
+        <code value="465" />
+        <code value="465" />
+        <graphic type="background" color="#000" cells="3" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="top" size="16.6" left="57.5" top="50" content="STRING" rotateCCW="true" />
+        <graphic type="text" font="sans-serif" color="#fff" align="right" baseline="middle" size="60" style="bold" left="142.5" top="50" content="1" />
+        <graphic type="line" color="#FFF" lineWidth="3" startX="150" startY="50" endX="250" endY="50" />
+        <graphic type="line" color="#FFF" lineWidth="3" startX="250" startY="50" endX="250" endY="60" />
+    </cell>
+    <cell name="second string" char="directionStringBegin2">
+        <code value="237" />
+        <code value="466" />
+        <code value="466" />
+        <graphic type="background" color="#000" cells="3" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="top" size="16.6" left="57.5" top="50" content="STRING" rotateCCW="true" />
+        <graphic type="text" font="sans-serif" color="#fff" align="right" baseline="middle" size="60" style="bold" left="142.5" top="50" content="2" />
+        <graphic type="line" color="#FFF" lineWidth="3" startX="150" startY="50" endX="250" endY="50" />
+        <graphic type="line" color="#FFF" lineWidth="3" startX="250" startY="50" endX="250" endY="60" />
+    </cell>
+    <cell name="third string" char="directionStringBegin3">
+        <code value="237" />
+        <code value="476" />
+        <code value="476" />
+        <graphic type="background" color="#000" cells="3" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="top" size="16.6" left="57.5" top="50" content="STRING" rotateCCW="true" />
+        <graphic type="text" font="sans-serif" color="#fff" align="right" baseline="middle" size="60" style="bold" left="142.5" top="50" content="3" />
+        <graphic type="line" color="#FFF" lineWidth="3" startX="150" startY="50" endX="250" endY="50" />
+        <graphic type="line" color="#FFF" lineWidth="3" startX="250" startY="50" endX="250" endY="60" />
+    </cell>
+    <cell name="fourth string" char="directionStringBegin4">
+        <code value="237" />
+        <code value="449" />
+        <code value="449" />
+        <graphic type="background" color="#000" cells="3" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="top" size="16.6" left="57.5" top="50" content="STRING" rotateCCW="true" />
+        <graphic type="text" font="sans-serif" color="#fff" align="right" baseline="middle" size="60" style="bold" left="142.5" top="50" content="4" />
+        <graphic type="line" color="#FFF" lineWidth="3" startX="150" startY="50" endX="250" endY="50" />
+        <graphic type="line" color="#FFF" lineWidth="3" startX="250" startY="50" endX="250" endY="60" />
+    </cell>
+    <cell name="fifth string" char="directionStringBegin5">
+        <code value="237" />
+        <code value="475" />
+        <code value="475" />
+        <graphic type="background" color="#000" cells="3" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="top" size="16.6" left="57.5" top="50" content="STRING" rotateCCW="true" />
+        <graphic type="text" font="sans-serif" color="#fff" align="right" baseline="middle" size="60" style="bold" left="142.5" top="50" content="5" />
+        <graphic type="line" color="#FFF" lineWidth="3" startX="150" startY="50" endX="250" endY="50" />
+        <graphic type="line" color="#FFF" lineWidth="3" startX="250" startY="50" endX="250" endY="60" />
+    </cell>
+    <cell name="sixth string" char="directionStringBegin6">
+        <code value="237" />
+        <code value="450" />
+        <code value="450" />
+        <graphic type="background" color="#000" cells="3" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="top" size="16.6" left="57.5" top="50" content="STRING" rotateCCW="true" />
+        <graphic type="text" font="sans-serif" color="#fff" align="right" baseline="middle" size="60" style="bold" left="142.5" top="50" content="6" />
+        <graphic type="line" color="#FFF" lineWidth="3" startX="150" startY="50" endX="250" endY="50" />
+        <graphic type="line" color="#FFF" lineWidth="3" startX="250" startY="50" endX="250" endY="60" />
+    </cell>
+    <cell name="seventh string" char="directionStringBegin7">
+        <code value="237" />
+        <code value="144" />
+        <code value="144" />
+        <graphic type="background" color="#000" cells="3" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="top" size="16.6" left="57.5" top="50" content="STRING" rotateCCW="true" />
+        <graphic type="text" font="sans-serif" color="#fff" align="right" baseline="middle" size="60" style="bold" left="142.5" top="50" content="7" />
+        <graphic type="line" color="#FFF" lineWidth="3" startX="150" startY="50" endX="250" endY="50" />
+        <graphic type="line" color="#FFF" lineWidth="3" startX="250" startY="50" endX="250" endY="60" />
     </cell>
     <cell name="strum" char="directionStrum">
         <code value="247" />
@@ -1710,6 +1830,18 @@
         <code value="767" />
         <graphic type="background" color="#7f462c" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="50" top="30" content="&#xe577;" />
+    </cell>
+    <cell name="fingering continue" char="fingeringContinue">
+        <code value="1539" />
+        <graphic type="background" color="#7f462c" />
+        <graphic type="text" color="#bfa295" align="center" baseline="middle" size="80" left="30" top="60" content="&#xea51;" />
+        <graphic type="line" startX="50" startY="50" endX="80" endY="50" lineWidth="2" color="#fff"/>
+    </cell>
+    <cell name="fingering end continuation" char="fingeringEndContinuation">
+        <code value="1544" />
+        <graphic type="background" color="#7f462c" />
+        <graphic type="text" color="#bfa295" align="center" baseline="middle" size="80" left="70" top="60" content="&#xea51;" />
+        <graphic type="line" startX="20" startY="50" endX="50" endY="50" lineWidth="2" color="#fff"/>
     </cell>
     <cell name="omit first fingering" char="fingeringOmitFirst">
         <code value="844" />
@@ -3006,17 +3138,33 @@
         <graphic type="text" color="#fff" align="center" size="80" left="55" top="50" content="&#xe262;" />
     </cell>
     <cell name="begin continuation line" char="lineContinuationBegin">
-        <code value="345" />
-        <code value="345" />
+        <code value="339" />
+        <code value="339" />
         <graphic type="background" color="#ff0" cells="2" />
         <graphic type="line" startX="50" startY="65" endX="150" endY="65" lineWidth="2" color="#000"/>
         <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="100" top="40" font="sans-serif" content="BEGIN" />
     </cell>
     <cell name="end continuation line" char="lineContinuationEnd">
         <code value="162" />
+        <code value="339" />
+        <graphic type="background" color="#ff0" cells="2" />
+        <graphic type="line" startX="50" startY="65" endX="150" endY="65" lineWidth="2" color="#000"/>
+        <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="100" top="40" font="sans-serif" content="END" />
+    </cell>
+    <cell name="begin second continuation line" char="lineContinuationSecondBegin">
+        <code value="345" />
         <code value="345" />
         <graphic type="background" color="#ff0" cells="2" />
         <graphic type="line" startX="50" startY="65" endX="150" endY="65" lineWidth="2" color="#000"/>
+        <graphic type="line" startX="50" startY="75" endX="150" endY="75" lineWidth="2" color="#000"/>
+        <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="100" top="40" font="sans-serif" content="BEGIN" />
+    </cell>
+    <cell name="end second continuation line" char="lineContinuationSecondEnd">
+        <code value="162" />
+        <code value="345" />
+        <graphic type="background" color="#ff0" cells="2" />
+        <graphic type="line" startX="50" startY="65" endX="150" endY="65" lineWidth="2" color="#000"/>
+        <graphic type="line" startX="50" startY="75" endX="150" endY="75" lineWidth="2" color="#000"/>
         <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="100" top="40" font="sans-serif" content="END" />
     </cell>
     <cell name="horizontal line" char="lineHorizontal">
@@ -4512,6 +4660,11 @@
         <code value="565" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="A" />
+    </cell>
+    <cell name="text abbreviation mark" char="textAbbreviationMark">
+        <code value="1339" />
+        <graphic type="background" color="#000" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="50" left="50" top="50" content="." />
     </cell>
     <cell name="text acute accent symbol" word-modifier="1" char="textAccentAcute">
         <code value="594" />
