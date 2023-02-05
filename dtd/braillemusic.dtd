@@ -80,6 +80,11 @@
 	articulationSwell|
 	articulationTenuto|
 	articulationThumbLeftHand|
+	articulationTremoloContinueEighth|
+	articulationTremoloContinueOneHundredTwentyEighth|
+	articulationTremoloContinueSixteenth|
+	articulationTremoloContinueSixtyFourth|
+	articulationTremoloContinueThirtySecond|
 	articulationTremoloEighth|
 	articulationTremoloHigh|
 	articulationTremoloLow|
@@ -201,6 +206,13 @@
 	directionString5|
 	directionString6|
 	directionString7|
+	directionStringBegin1|
+	directionStringBegin2|
+	directionStringBegin3|
+	directionStringBegin4|
+	directionStringBegin5|
+	directionStringBegin6|
+	directionStringBegin7|
 	directionStrum|
 	directionSuppressRegistration|
 	directionTerminator|
@@ -245,6 +257,8 @@
 	fingering4|
 	fingering5|
 	fingeringChangeFingers|
+	fingeringContinue|
+	fingeringEndContinuation|
 	fingeringOmitFirst|
 	fingeringOmitSecond|
 	intervalComma|
@@ -460,6 +474,8 @@
 	keySignatureSharp|
 	lineContinuationBegin|
 	lineContinuationEnd|
+	lineContinuationSecondBegin|
+	lineContinuationSecondEnd|
 	lineHorizontal|
 	lineStaffReceive|
 	lineStaffSend|
@@ -676,6 +692,7 @@
 	text8|	
 	text9|	
 	textA|
+	textAbbreviationMark|
 	textAccentAcute|
 	textAccentBreve|
 	textAccentCedilla|

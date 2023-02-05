@@ -545,25 +545,47 @@
          <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="50" left="60" top="100" content="&#xe200;" />
          <character code="150" />
       </control>
-      <control top="34" left="434" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
-         <character code="" />
+      <control top="34" left="434" width="15" height="15" label="treble clef">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#0f0" />
+         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="50" left="50" top="75" content="&#xe014;&#xe014;" />
+         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="50" left="50" top="62.8" content="&#xe050;" />
+         <character code="662" />
+         <character code="447" />
+         <character code="376" />
       </control>
-      <control top="34" left="450" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
-         <character code="" />
+      <control top="34" left="450" width="15" height="15" label="alto clef">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#0f0" />
+         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="50" left="50" top="75" content="&#xe014;&#xe014;" />
+         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="50" left="50" top="50.6" content="&#xe05b;" />
+         <character code="662" />
+         <character code="643" />
+         <character code="376" />
       </control>
-      <control top="34" left="466" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
-         <character code="" />
+      <control top="34" left="466" width="15" height="15" label="tenor clef">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#0f0" />
+         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="50" left="50" top="75" content="&#xe014;&#xe014;" />
+         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="50" left="50" top="38.4" content="&#xe05b;" />
+         <character code="662" />
+         <character code="643" />
+         <character code="634" />
+         <character code="376" />
       </control>
-      <control top="34" left="482" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
-         <character code="" />
+      <control top="34" left="482" width="15" height="15" label="bass clef">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#0f0" />
+         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="50" left="50" top="75" content="&#xe014;&#xe014;" />
+         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="50" left="50" top="38.4" content="&#xe061;" />
+         <character code="662" />
+         <character code="635" />
+         <character code="376" />
       </control>
-      <control top="34" left="498" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
-         <character code="" />
+      <control top="34" left="498" width="15" height="15" label="french violin clef">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#0f0" />
+         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="40" left="50" top="65" content="&#xe014;&#xe014;" />
+         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="40" left="50" top="65" content="&#xe050;" />
+         <character code="662" />
+         <character code="447" />
+         <character code="464" />
+         <character code="376" />
       </control>
       
       <control top="50" left="2" width="15" height="15" label="C quarter note">
@@ -761,25 +783,50 @@
          <graphic type="text" color="#fff" font="Bravura" align="center" size="60" left="50" top="50" content="&#xe4f1;" />
          <character code="377" />
       </control>
-      <control top="50" left="434" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
-         <character code="" />
+      <control top="50" left="434" width="15" height="15" label="baritone clef">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#0f0" />
+         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="50" left="50" top="75" content="&#xe014;&#xe014;" />
+         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="50" left="50" top="50.6" content="&#xe061;" />
+         <character code="662" />
+         <character code="635" />
+         <character code="895" />
+         <character code="376" />
       </control>
-      <control top="50" left="450" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
-         <character code="" />
+      <control top="50" left="450" width="15" height="15" label="treble clef octave up">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#0f0" />
+         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="40" left="50" top="75" content="&#xe014;&#xe014;" />
+         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="40" left="50" top="62.8" content="&#xe053;" />
+         <character code="662" />
+         <character code="447" />
+         <character code="376" />
+         <character code="635" />
+         <character code="272" />
       </control>
-      <control top="50" left="466" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
-         <character code="" />
+      <control top="50" left="466" width="15" height="15" label="treble clef octave down">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#0f0" />
+         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="40" left="50" top="65" content="&#xe014;&#xe014;" />
+         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="40" left="50" top="52.8" content="&#xe052;" />
+         <character code="662" />
+         <character code="447" />
+         <character code="376" />
+         <character code="635" />
+         <character code="656" />
       </control>
-      <control top="50" left="482" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
-         <character code="" />
+      <control top="50" left="482" width="15" height="15" label="treble clef left hand">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#0f0" />
+         <graphic type="text" color="#000" size="23" align="center" baseline="middle" top="25" left="50" content="L.H." />
+         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="30" left="50" top="70" content="&#xe050;" />
+         <character code="662" />
+         <character code="447" />
+         <character code="846" />
       </control>
-      <control top="50" left="498" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
-         <character code="" />
+      <control top="50" left="498" width="15" height="15" label="bass clef right hand">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#0f0" />
+         <graphic type="text" color="#000" size="23" align="center" baseline="middle" top="25" left="50" content="R.H." />
+         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe061;" />
+         <character code="662" />
+         <character code="635" />
+         <character code="846" />
       </control>
       
       <control top="66" left="2" width="15" height="15" label="C eighth note">
@@ -1280,7 +1327,7 @@
          <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="30" left="50" content="PIZZ" />
          <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="65" left="50" content="L.H." />
          <character code="395" />
-         <character code="278" />
+         <character code="1262" />
       </control>
       <control top="2" left="178" width="15" height="15" label="artificial harmonic">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#7f462c" />
@@ -1408,9 +1455,14 @@
          <character code="764" />
          <character code="365" />
       </control>
-      <control top="2" left="466" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
-         <character code="" />
+      <control top="2" left="466" width="15" height="15" label="short line between adjacent notes">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#7f462c" />
+         <graphic type="text" color="#fff" font="Bravura" align="center" baseline="middle" size="40" left="30" top="70" content="&#xe1d5;" />
+         <graphic type="text" color="#fff" font="Bravura" align="center" baseline="middle" size="40" left="70" top="60" content="&#xe1d5;" />
+         <graphic type="line" startX="45" startY="70" endX="55" endY="60" lineWidth="4" color="#fff"/>
+         <character code="1234" />
+         <character code="67" />
+         <character code="149" />
       </control>
       <control top="2" left="482" width="15" height="15" label="">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
@@ -1648,13 +1700,17 @@
          <character code="362" />
          <character code="149" />
       </control>
-      <control top="18" left="450" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
-         <character code="" />
+      <control top="18" left="450" width="15" height="15" label="fingering continue">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#7f462c" />
+         <graphic type="text" color="#bfa295" font="Bravura" align="center" baseline="middle" size="80" left="30" top="60" content="&#xea51;" />
+         <graphic type="line" startX="50" startY="50" endX="90" endY="50" lineWidth="2" color="#fff"/>
+         <character code="1539" />
       </control>
-      <control top="18" left="466" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
-         <character code="" />
+      <control top="18" left="466" width="15" height="15" label="fingering end continuation">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#7f462c" />
+         <graphic type="text" color="#bfa295" font="Bravura" align="center" baseline="middle" size="80" left="70" top="60" content="&#xea51;" />
+         <graphic type="line" startX="10" startY="50" endX="50" endY="50" lineWidth="2" color="#fff"/>
+         <character code="1544" />
       </control>
       <control top="18" left="482" width="15" height="15" label="">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
@@ -1784,7 +1840,7 @@
          <graphic type="text" color="#bfa295" font="Bravura" align="center" size="70" left="80" top="75" content="&#xe1d2;" />
          <graphic type="text" color="#fff" font="Bravura" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe222;" />
          <character code="1246" />
-         <character code="1134" />
+         <character code="1149" />
       </control>
       <control top="34" left="242" width="15" height="15" label="sixty-fourth note alternation">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#7f462c" />
@@ -1821,87 +1877,80 @@
          <graphic type="text" color="#bfa295" font="Bravura" align="right" size="50" left="50" top="80" content="&#xe1d3;" />
          <graphic type="text" color="#fff" font="Bravura" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe222;" />
          <character code="794" />
-         <character code="1134" />
+         <character code="1149" />
       </control>
       <control top="34" left="322" width="15" height="15" label="sixty-fourth note tremolo">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#7f462c" />
          <graphic type="text" color="#bfa295" font="Bravura" align="right" size="50" left="50" top="80" content="&#xe1d3;" />
          <graphic type="text" color="#fff" font="Bravura" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe223;" />
          <character code="794" />
-         <character code="946" />
+         <character code="875" />
       </control>
       <control top="34" left="338" width="15" height="15" label="one-hundred-twenty-eighth note tremolo">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#7f462c" />
          <graphic type="text" color="#bfa295" font="Bravura" align="right" size="50" left="50" top="80" content="&#xe1d3;" />
          <graphic type="text" color="#fff" font="Bravura" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe224;" />
          <character code="794" />
-         <character code="1244" />
+         <character code="839" />
       </control>
-      <control top="34" left="354" width="15" height="15" label="high tremolo">
+      <control top="34" left="354" width="15" height="15" label="start eighth note tremolos">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#7f462c" />
+         <graphic type="text" color="#bfa295" font="Bravura" align="right" size="50" left="35" top="80" content="&#xe1d3;" />
+         <graphic type="text" color="#fff" font="Bravura" align="center" baseline="middle" size="50" left="35" top="60" content="&#xe220;" />
+         <graphic type="line" startX="50" startY="50" endX="90" endY="50" lineWidth="2" color="#fff"/>
+         <character code="794" />
+         <character code="1166" />
+         <character code="1166" />
+      </control>
+      <control top="34" left="370" width="15" height="15" label="start sixteenth note tremolos">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#7f462c" />
+         <graphic type="text" color="#bfa295" font="Bravura" align="right" size="50" left="35" top="80" content="&#xe1d3;" />
+         <graphic type="text" color="#fff" font="Bravura" align="center" baseline="middle" size="50" left="35" top="60" content="&#xe221;" />
+         <graphic type="line" startX="50" startY="50" endX="90" endY="50" lineWidth="2" color="#fff"/>
+         <character code="794" />
+         <character code="876" />
+         <character code="876" />
+      </control>
+      <control top="34" left="386" width="15" height="15" label="start thirty-second note tremolos">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#7f462c" />
+         <graphic type="text" color="#bfa295" font="Bravura" align="right" size="50" left="35" top="80" content="&#xe1d3;" />
+         <graphic type="text" color="#fff" font="Bravura" align="center" baseline="middle" size="50" left="35" top="60" content="&#xe222;" />
+         <graphic type="line" startX="50" startY="50" endX="90" endY="50" lineWidth="2" color="#fff"/>
+         <character code="794" />
+         <character code="1149" />
+         <character code="1149" />
+      </control>
+      <control top="34" left="402" width="15" height="15" label="start sixty-fourth note tremolos">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#7f462c" />
+         <graphic type="text" color="#bfa295" font="Bravura" align="right" size="50" left="35" top="80" content="&#xe1d3;" />
+         <graphic type="text" color="#fff" font="Bravura" align="center" baseline="middle" size="50" left="35" top="60" content="&#xe223;" />
+         <graphic type="line" startX="50" startY="50" endX="90" endY="50" lineWidth="2" color="#fff"/>
+         <character code="794" />
+         <character code="875" />
+         <character code="875" />
+      </control>
+      <control top="34" left="418" width="15" height="15" label="start one-hundred-twenty-eighth note tremolos">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#7f462c" />
+         <graphic type="text" color="#bfa295" font="Bravura" align="right" size="50" left="35" top="80" content="&#xe1d3;" />
+         <graphic type="text" color="#fff" font="Bravura" align="center" baseline="middle" size="50" left="35" top="60" content="&#xe224;" />
+         <graphic type="line" startX="50" startY="50" endX="90" endY="50" lineWidth="2" color="#fff"/>
+         <character code="794" />
+         <character code="839" />
+         <character code="839" />
+      </control>
+      <control top="34" left="434" width="15" height="15" label="high tremolo">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#7f462c" />
          <graphic type="text" color="#fff" font="Bravura" align="center" baseline="middle" size="40" left="50" top="60" content="&#xe1d5;" />
          <graphic type="text" color="#fff" font="Bravura" align="center" baseline="middle" size="40" left="50" top="80" content="&#xe614;" />
          <character code="437" />
          <character code="147" />
       </control>
-      <control top="34" left="370" width="15" height="15" label="low tremolo">
+      <control top="34" left="450" width="15" height="15" label="low tremolo">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#7f462c" />
          <graphic type="text" color="#fff" font="Bravura" align="center" baseline="middle" size="40" left="50" top="70" content="&#xe1d5;" />
          <graphic type="text" color="#fff" font="Bravura" align="center" baseline="middle" size="40" left="50" top="27" content="&#xe614;" />
          <character code="460" />
          <character code="147" />
-      </control>
-      <control top="34" left="386" width="15" height="15" label="downward arpeggio">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#7f462c" />
-         <graphic type="text" color="#fff" font="Bravura" align="center" size="50" left="55" top="35" content="&#xe0a4;" />
-         <graphic type="text" color="#fff" font="Bravura" align="center" size="50" left="55" top="50" content="&#xe0a4;" />
-         <graphic type="text" color="#fff" font="Bravura" align="center" size="50" left="55" top="65" content="&#xe0a4;" />
-         <graphic type="text" color="#fff" font="Bravura" align="center" baseline="middle" size="40" left="45" top="35" rotateCW="true" content="&#xeaaa;&#xeaaa;&#xeaae;" />
-         <character code="362" />
-         <character code="275" />
-         <character code="275" />
-      </control>
-      <control top="34" left="402" width="15" height="15" label="cross-staff downward arpeggio">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#7f462c" />
-         <graphic type="text" color="#bfa295" font="Bravura" align="center" size="25" left="50" top="40" content="&#xe01a;&#xe01a;&#xe01a;" />
-         <graphic type="text" color="#bfa295" font="Bravura" align="center" size="25" left="50" top="80" content="&#xe01a;&#xe01a;&#xe01a;" />
-         <graphic type="text" color="#fff" font="Bravura" align="center" size="25" left="55" top="24" content="&#xe0a4;" />
-         <graphic type="text" color="#fff" font="Bravura" align="center" size="25" left="55" top="33" content="&#xe0a4;" />
-         <graphic type="text" color="#fff" font="Bravura" align="center" size="25" left="55" top="40" content="&#xe0a4;" />
-         <graphic type="text" color="#fff" font="Bravura" align="center" size="25" left="55" top="58" content="&#xe0a4;" />
-         <graphic type="text" color="#fff" font="Bravura" align="center" size="25" left="55" top="71" content="&#xe0a4;" />
-         <graphic type="text" color="#fff" baseline="middle" font="Bravura" align="center" size="40" left="42" top="35" rotateCW="true" content="&#xeaaa;&#xeaaa;&#xeaaa;&#xeaaa;&#xeaae;" />
-         <character code="1234" />
-         <character code="362" />
-         <character code="275" />
-         <character code="275" />
-      </control>
-      <control top="34" left="418" width="15" height="15" label="upward arpeggio">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#7f462c" />
-         <graphic type="text" color="#fff" font="Bravura" align="center" size="50" left="55" top="35" content="&#xe0a4;" />
-         <graphic type="text" color="#fff" font="Bravura" align="center" size="50" left="55" top="50" content="&#xe0a4;" />
-         <graphic type="text" color="#fff" font="Bravura" align="center" size="50" left="55" top="65" content="&#xe0a4;" />
-         <graphic type="text" color="#fff" font="Bravura" baseline="middle" align="center" size="40" left="45" top="35" rotateCCW="true" content="&#xeaa9;&#xeaa9;&#xeaad;" />
-         <character code="362" />
-         <character code="275" />
-      </control>
-      <control top="34" left="434" width="15" height="15" label="cross-staff upward arpeggio">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#7f462c" />
-         <graphic type="text" color="#bfa295" font="Bravura" align="center" size="25" left="50" top="40" content="&#xe01a;&#xe01a;&#xe01a;" />
-         <graphic type="text" color="#bfa295" font="Bravura" align="center" size="25" left="50" top="80" content="&#xe01a;&#xe01a;&#xe01a;" />
-         <graphic type="text" color="#fff" font="Bravura" align="center" size="25" left="55" top="24" content="&#xe0a4;" />
-         <graphic type="text" color="#fff" font="Bravura" align="center" size="25" left="55" top="33" content="&#xe0a4;" />
-         <graphic type="text" color="#fff" font="Bravura" align="center" size="25" left="55" top="40" content="&#xe0a4;" />
-         <graphic type="text" color="#fff" font="Bravura" align="center" size="25" left="55" top="58" content="&#xe0a4;" />
-         <graphic type="text" color="#fff" font="Bravura" align="center" size="25" left="55" top="71" content="&#xe0a4;" />
-         <graphic type="text" color="#fff" baseline="middle" font="Bravura" align="center" size="40" left="48" top="35" rotateCCW="true" content="&#xeaa9;&#xeaa9;&#xeaa9;&#xeaa9;&#xeaad;" />
-         <character code="1234" />
-         <character code="362" />
-         <character code="275" />
-      </control>
-      <control top="34" left="450" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
-         <character code="" />
       </control>
       <control top="34" left="466" width="15" height="15" label="">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
@@ -2119,29 +2168,45 @@
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ff0" />
          <graphic type="line" startX="20" startY="60" endX="80" endY="60" lineWidth="3" color="#000"/>
          <graphic type="text" color="#000" align="center" baseline="middle" size="30" left="50" top="25" font="sans-serif" content="BEG" />
-         <character code="345" />
-         <character code="345" />
+         <character code="339" />
+         <character code="339" />
       </control>
       <control top="50" left="370" width="15" height="15" label="continuation line end">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ff0" />
          <graphic type="line" startX="20" startY="60" endX="80" endY="60" lineWidth="3" color="#000"/>
          <graphic type="text" color="#000" align="center" baseline="middle" size="30" left="50" top="25" font="sans-serif" content="END" />
          <character code="162" />
+         <character code="339" />
+      </control>
+      <control top="50" left="386" width="15" height="15" label="second continuation line begin">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ff0" />
+         <graphic type="line" startX="20" startY="60" endX="80" endY="60" lineWidth="3" color="#000"/>
+         <graphic type="line" startX="20" startY="70" endX="80" endY="70" lineWidth="3" color="#000"/>
+         <graphic type="text" color="#000" align="center" baseline="middle" size="30" left="50" top="25" font="sans-serif" content="BEG" />
+         <character code="345" />
          <character code="345" />
       </control>
-      <control top="50" left="386" width="15" height="15" label="horizontal line">
+      <control top="50" left="402" width="15" height="15" label="second continuation line end">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ff0" />
+         <graphic type="line" startX="20" startY="60" endX="80" endY="60" lineWidth="3" color="#000"/>
+         <graphic type="line" startX="20" startY="70" endX="80" endY="70" lineWidth="3" color="#000"/>
+         <graphic type="text" color="#000" align="center" baseline="middle" size="30" left="50" top="25" font="sans-serif" content="END" />
+         <character code="162" />
+         <character code="345" />
+      </control>
+      <control top="50" left="418" width="15" height="15" label="horizontal line">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ff0" />
          <graphic type="line" startX="20" startY="60" endX="80" endY="60" lineWidth="3" color="#000"/>
          <character code="451" />
       </control>
-      <control top="50" left="402" width="15" height="15" label="send cross-staff line">
+      <control top="50" left="434" width="15" height="15" label="send cross-staff line">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ff0" />
          <graphic type="text" color="#000" size="30" align="center" baseline="middle" top="30" left="50" content="SEND" />
          <graphic type="text" color="#000" size="30" align="center" baseline="middle" top="65" left="50" content="LINE" />
          <character code="1164" />
          <character code="976" />
       </control>
-      <control top="50" left="418" width="15" height="15" label="receive cross-staff line">
+      <control top="50" left="450" width="15" height="15" label="receive cross-staff line">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ff0" />
          <graphic type="text" color="#000" size="30" align="center" baseline="middle" top="30" left="50" content="RCV" />
          <graphic type="text" color="#000" size="30" align="center" baseline="middle" top="65" left="50" content="LINE" />
@@ -2149,19 +2214,11 @@
          <character code="1164" />
          <character code="976" />
       </control>
-      <control top="50" left="434" width="15" height="15" label="glissando">
+      <control top="50" left="466" width="15" height="15" label="glissando">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ff0" />
          <graphic type="text" color="#000" align="center" font="Bravura" baseline="middle" size="50" left="50" top="75" content="&#xe585;" />
          <character code="764" />
          <character code="365" />
-      </control>
-      <control top="50" left="450" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
-         <character code="" />
-      </control>
-      <control top="50" left="466" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
-         <character code="" />
       </control>
       <control top="50" left="482" width="15" height="15" label="">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
@@ -2366,13 +2423,28 @@
          <graphic type="text" color="#fff" font="Bravura" align="center" baseline="middle" size="80" left="50" top="30" content="&#xe577;" />
          <character code="767" />
       </control>
-      <control top="66" left="434" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
-         <character code="" />
+      <control top="66" left="434" width="15" height="15" label="upward arpeggio">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#7f462c" />
+         <graphic type="text" color="#fff" font="Bravura" align="center" size="50" left="55" top="35" content="&#xe0a4;" />
+         <graphic type="text" color="#fff" font="Bravura" align="center" size="50" left="55" top="50" content="&#xe0a4;" />
+         <graphic type="text" color="#fff" font="Bravura" align="center" size="50" left="55" top="65" content="&#xe0a4;" />
+         <graphic type="text" color="#fff" font="Bravura" baseline="middle" align="center" size="40" left="45" top="35" rotateCCW="true" content="&#xeaa9;&#xeaa9;&#xeaad;" />
+         <character code="362" />
+         <character code="275" />
       </control>
-      <control top="66" left="450" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
-         <character code="" />
+      <control top="66" left="450" width="15" height="15" label="cross-staff upward arpeggio">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#7f462c" />
+         <graphic type="text" color="#bfa295" font="Bravura" align="center" size="25" left="50" top="40" content="&#xe01a;&#xe01a;&#xe01a;" />
+         <graphic type="text" color="#bfa295" font="Bravura" align="center" size="25" left="50" top="80" content="&#xe01a;&#xe01a;&#xe01a;" />
+         <graphic type="text" color="#fff" font="Bravura" align="center" size="25" left="55" top="24" content="&#xe0a4;" />
+         <graphic type="text" color="#fff" font="Bravura" align="center" size="25" left="55" top="33" content="&#xe0a4;" />
+         <graphic type="text" color="#fff" font="Bravura" align="center" size="25" left="55" top="40" content="&#xe0a4;" />
+         <graphic type="text" color="#fff" font="Bravura" align="center" size="25" left="55" top="58" content="&#xe0a4;" />
+         <graphic type="text" color="#fff" font="Bravura" align="center" size="25" left="55" top="71" content="&#xe0a4;" />
+         <graphic type="text" color="#fff" baseline="middle" font="Bravura" align="center" size="40" left="48" top="35" rotateCCW="true" content="&#xeaa9;&#xeaa9;&#xeaa9;&#xeaa9;&#xeaad;" />
+         <character code="1234" />
+         <character code="362" />
+         <character code="275" />
       </control>
       <control top="66" left="466" width="15" height="15" label="">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
@@ -2598,17 +2670,30 @@
            <graphic type="arc" x="20" y="80" radius="40" start="4.71" end="6.28" ccw="false" lineWidth="3" color="#fff"/>
          <character code="1439" />
       </control>
-      <control top="82" left="434" width="15" height="15" label="short line between adjacent notes">
+      <control top="82" left="434" width="15" height="15" label="downward arpeggio">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#7f462c" />
-         <graphic type="text" color="#fff" font="Bravura" align="center" baseline="middle" size="40" left="30" top="70" content="&#xe1d5;" />
-         <graphic type="text" color="#fff" font="Bravura" align="center" baseline="middle" size="40" left="70" top="60" content="&#xe1d5;" />
-         <graphic type="line" startX="45" startY="70" endX="55" endY="60" lineWidth="4" color="#fff"/>
-         <character code="1234" />
-         <character code="67" />
-         <character code="149" />
+         <graphic type="text" color="#fff" font="Bravura" align="center" size="50" left="55" top="35" content="&#xe0a4;" />
+         <graphic type="text" color="#fff" font="Bravura" align="center" size="50" left="55" top="50" content="&#xe0a4;" />
+         <graphic type="text" color="#fff" font="Bravura" align="center" size="50" left="55" top="65" content="&#xe0a4;" />
+         <graphic type="text" color="#fff" font="Bravura" align="center" baseline="middle" size="40" left="45" top="35" rotateCW="true" content="&#xeaaa;&#xeaaa;&#xeaae;" />
+         <character code="362" />
+         <character code="275" />
+         <character code="275" />
       </control>
-      <control top="82" left="450" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
+      <control top="82" left="450" width="15" height="15" label="cross-staff downward arpeggio">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#7f462c" />
+         <graphic type="text" color="#bfa295" font="Bravura" align="center" size="25" left="50" top="40" content="&#xe01a;&#xe01a;&#xe01a;" />
+         <graphic type="text" color="#bfa295" font="Bravura" align="center" size="25" left="50" top="80" content="&#xe01a;&#xe01a;&#xe01a;" />
+         <graphic type="text" color="#fff" font="Bravura" align="center" size="25" left="55" top="24" content="&#xe0a4;" />
+         <graphic type="text" color="#fff" font="Bravura" align="center" size="25" left="55" top="33" content="&#xe0a4;" />
+         <graphic type="text" color="#fff" font="Bravura" align="center" size="25" left="55" top="40" content="&#xe0a4;" />
+         <graphic type="text" color="#fff" font="Bravura" align="center" size="25" left="55" top="58" content="&#xe0a4;" />
+         <graphic type="text" color="#fff" font="Bravura" align="center" size="25" left="55" top="71" content="&#xe0a4;" />
+         <graphic type="text" color="#fff" baseline="middle" font="Bravura" align="center" size="40" left="42" top="35" rotateCW="true" content="&#xeaaa;&#xeaaa;&#xeaaa;&#xeaaa;&#xeaae;" />
+         <character code="1234" />
+         <character code="362" />
+         <character code="275" />
+         <character code="275" />
       </control>
       <control top="82" left="466" width="15" height="15" label="">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
@@ -3216,7 +3301,12 @@
          <graphic type="text" color="#FFF" size="25" align="center" baseline="middle" top="50" left="50" content="STRUM" />
          <character code="247" />
       </control>
-      <control top="50" left="66" width="15" height="15" label="half position">
+      <control top="50" left="66" width="15" height="15" label="position symbol">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
+         <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="50" left="50" content="POS" />
+         <character code="362" />
+      </control>
+      <control top="50" left="82" width="15" height="15" label="half position">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="30" left="50" content="HALF" />
          <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="65" left="50" content="POS" />
@@ -3224,7 +3314,7 @@
          <character code="362" />
          <character code="347" />
       </control>
-      <control top="50" left="82" width="15" height="15" label="begin position shift">
+      <control top="50" left="98" width="15" height="15" label="begin position shift">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="30" left="50" content="BEG" />
          <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="65" left="50" content="SHFT" />
@@ -3232,7 +3322,7 @@
          <character code="365" />
          <character code="539" />
       </control>
-      <control top="50" left="98" width="15" height="15" label="end position shift">
+      <control top="50" left="114" width="15" height="15" label="end position shift">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="30" left="50" content="END" />
          <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="65" left="50" content="SHFT" />
@@ -3240,49 +3330,49 @@
          <character code="764" />
          <character code="365" />
       </control>
-      <control top="50" left="114" width="15" height="15" label="position one">
+      <control top="50" left="130" width="15" height="15" label="position one">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="POS" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="1" />
          <character code="362" />
          <character code="362" />
       </control>
-      <control top="50" left="130" width="15" height="15" label="position two">
+      <control top="50" left="146" width="15" height="15" label="position two">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="POS" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="2" />
          <character code="362" />
          <character code="347" />
       </control>
-      <control top="50" left="146" width="15" height="15" label="position three">
+      <control top="50" left="162" width="15" height="15" label="position three">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="POS" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="3" />
          <character code="362" />
          <character code="443" />
       </control>
-      <control top="50" left="162" width="15" height="15" label="position four">
+      <control top="50" left="178" width="15" height="15" label="position four">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="POS" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="4" />
          <character code="362" />
          <character code="1035" />
       </control>
-      <control top="50" left="178" width="15" height="15" label="position five">
+      <control top="50" left="194" width="15" height="15" label="position five">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="POS" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="5" />
          <character code="362" />
          <character code="357" />
       </control>
-      <control top="50" left="194" width="15" height="15" label="position six">
+      <control top="50" left="210" width="15" height="15" label="position six">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="POS" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="6" />
          <character code="362" />
          <character code="348" />
       </control>
-      <control top="50" left="210" width="15" height="15" label="position seven">
+      <control top="50" left="226" width="15" height="15" label="position seven">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="POS" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="7" />
@@ -3290,14 +3380,14 @@
          <character code="362" />
          <character code="451" />
       </control>
-      <control top="50" left="226" width="15" height="15" label="position eight">
+      <control top="50" left="242" width="15" height="15" label="position eight">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="POS" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="8" />
          <character code="362" />
          <character code="445" />
       </control>
-      <control top="50" left="242" width="15" height="15" label="position nine">
+      <control top="50" left="258" width="15" height="15" label="position nine">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="POS" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="9" />
@@ -3305,7 +3395,7 @@
          <character code="445" />
          <character code="347" />
       </control>
-      <control top="50" left="258" width="15" height="15" label="position ten">
+      <control top="50" left="274" width="15" height="15" label="position ten">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="POS" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="10" />
@@ -3313,7 +3403,7 @@
          <character code="445" />
          <character code="443" />
       </control>
-      <control top="50" left="274" width="15" height="15" label="position eleven">
+      <control top="50" left="290" width="15" height="15" label="position eleven">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="POS" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="11" />
@@ -3321,7 +3411,7 @@
          <character code="445" />
          <character code="1035" />
       </control>
-      <control top="50" left="290" width="15" height="15" label="position twelve">
+      <control top="50" left="306" width="15" height="15" label="position twelve">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="POS" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="12" />
@@ -3329,7 +3419,7 @@
          <character code="445" />
          <character code="357" />
       </control>
-      <control top="50" left="306" width="15" height="15" label="position thirteen">
+      <control top="50" left="322" width="15" height="15" label="position thirteen">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="POS" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="13" />
@@ -3337,58 +3427,54 @@
          <character code="445" />
          <character code="348" />
       </control>
-      <control top="50" left="322" width="15" height="15" label="string one">
+      <control top="50" left="338" width="15" height="15" label="string one">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="STR" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="1" />
          <character code="237" />
          <character code="465" />
       </control>
-      <control top="50" left="338" width="15" height="15" label="string two">
+      <control top="50" left="354" width="15" height="15" label="string two">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="STR" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="2" />
          <character code="237" />
          <character code="466" />
       </control>
-      <control top="50" left="354" width="15" height="15" label="string three">
+      <control top="50" left="370" width="15" height="15" label="string three">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="STR" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="3" />
          <character code="237" />
          <character code="476" />
       </control>
-      <control top="50" left="370" width="15" height="15" label="string four">
+      <control top="50" left="386" width="15" height="15" label="string four">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="STR" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="4" />
          <character code="237" />
          <character code="449" />
       </control>
-      <control top="50" left="386" width="15" height="15" label="string five">
+      <control top="50" left="402" width="15" height="15" label="string five">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="STR" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="5" />
          <character code="237" />
          <character code="475" />
       </control>
-      <control top="50" left="402" width="15" height="15" label="string six">
+      <control top="50" left="418" width="15" height="15" label="string six">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="STR" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="6" />
          <character code="237" />
          <character code="450" />
       </control>
-      <control top="50" left="418" width="15" height="15" label="string seven">
+      <control top="50" left="434" width="15" height="15" label="string seven">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="STR" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="7" />
          <character code="237" />
          <character code="144" />
-      </control>
-      <control top="50" left="434" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
-         <character code="" />
       </control>
       <control top="50" left="450" width="15" height="15" label="">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
@@ -3417,173 +3503,190 @@
          <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="50" left="50" content="RH" />
          <character code="1376" />
       </control>
-      <control top="66" left="34" width="15" height="15" label="draw">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
-           <graphic type="text" color="#fff" font="Bravura" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe8cb;" />
-         <character code="460" />
-         <character code="66" />
-      </control>
-      <control top="66" left="50" width="15" height="15" label="push">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
-           <graphic type="text" color="#fff" font="Bravura" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe8cc;" />
-         <character code="460" />
-         <character code="639" />
-      </control>
-      <control top="66" left="66" width="15" height="15" label="suppress registration">
+      <control top="66" left="34" width="15" height="15" label="suppress registration">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="30" left="50" content="REM" />
          <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="65" left="50" content="REG" />
          <character code="457" />
       </control>
-      <control top="66" left="82" width="15" height="15" label="row one">
+      <control top="66" left="50" width="15" height="15" label="row one">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="ROW" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="1" />
          <character code="964" />
       </control>
-      <control top="66" left="98" width="15" height="15" label="row two">
+      <control top="66" left="66" width="15" height="15" label="row two">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="ROW" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="2" />
          <character code="994" />
       </control>
-      <control top="66" left="114" width="15" height="15" label="row three">
+      <control top="66" left="82" width="15" height="15" label="row three">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="ROW" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="3" />
          <character code="1395" />
       </control>
-      <control top="66" left="130" width="15" height="15" label="row four">
+      <control top="66" left="98" width="15" height="15" label="row four">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="ROW" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="4" />
          <character code="1334" />
       </control>
-      <control top="66" left="146" width="15" height="15" label="row five">
+      <control top="66" left="114" width="15" height="15" label="row five">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="ROW" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="5" />
          <character code="1346" />
       </control>
-      <control top="66" left="162" width="15" height="15" label="row six">
+      <control top="66" left="130" width="15" height="15" label="row six">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="22" align="center" top="10" left="50" baseline="top" content="ROW" />
          <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="50" baseline="alphabetic" content="6" />
          <character code="1359" />
       </control>
-      <control top="66" left="178" width="15" height="15" label="braille music comma">
+      <control top="66" left="146" width="15" height="15" label="braille music comma">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="25" align="center" baseline="middle" top="30" left="50" content="MUSIC" />
          <graphic type="text" color="#FFF" size="25" align="center" baseline="middle" top="65" left="50" content="COMMA" />
          <character code="660" />
          <character code="349" />
       </control>
-      <control top="66" left="194" width="15" height="15" label="braille music hyphen">
+      <control top="66" left="162" width="15" height="15" label="braille music hyphen">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="25" align="center" baseline="middle" top="30" left="50" content="MUSIC" />
          <graphic type="text" color="#FFF" size="25" align="center" baseline="middle" top="65" left="50" content="HYPHN" />
          <character code="234" />
       </control>
-      <control top="66" left="210" width="15" height="15" label="music prefix">
+      <control top="66" left="178" width="15" height="15" label="music prefix">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="30" left="50" content="MUS" />
          <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="65" left="50" content="PFX" />
          <character code="344" />
          <character code="339" />
       </control>
-      <control top="66" left="226" width="15" height="15" label="music suffix">
+      <control top="66" left="194" width="15" height="15" label="music suffix">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="30" left="50" content="MUS" />
          <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="65" left="50" content="SFX" />
          <character code="559" />
          <character code="850" />
       </control>
-      <control top="66" left="242" width="15" height="15" label="music parenthesis">
+      <control top="66" left="210" width="15" height="15" label="music parenthesis">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="50" left="50" content="(&#x2026;)" />
          <character code="744" />
          <character code="739" />
       </control>
-      <control top="66" left="258" width="15" height="15" label="music symbol comma">
+      <control top="66" left="226" width="15" height="15" label="music symbol comma">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="," />
          <character code="444" />
       </control>
-      <control top="66" left="274" width="15" height="15" label="music asterisk">
+      <control top="66" left="242" width="15" height="15" label="music asterisk">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="50" left="50" content="*" />
          <character code="762" />
          <character code="1153" />
          <character code="1157" />
       </control>
-      <control top="66" left="290" width="15" height="15" label="terminator">
+      <control top="66" left="258" width="15" height="15" label="terminator">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="30" align="center" baseline="middle" top="50" left="50" content="TERM" />
          <character code="239" />
       </control>
-      <control top="66" left="306" width="15" height="15" label="print bracket open">
+      <control top="66" left="274" width="15" height="15" label="print bracket open">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="40" left="50" content="[" />
          <character code="934" />
          <character code="1339" />
       </control>
-      <control top="66" left="322" width="15" height="15" label="print bracket close">
+      <control top="66" left="290" width="15" height="15" label="print bracket close">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
          <graphic type="text" color="#FFF" size="50" align="center" baseline="middle" top="40" left="50" content="]" />
          <character code="1344" />
          <character code="949" />
       </control>
-      <control top="66" left="338" width="15" height="15" label="text prefix">
+      <control top="66" left="306" width="15" height="15" label="text prefix">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="true" color="#000"/>
          <graphic type="text" color="#fff" size="30" align="center" baseline="middle" top="30" left="50" content="TEXT" />
          <graphic type="text" color="#fff" size="30" align="center" baseline="middle" top="65" left="50" content="PFX" />
          <character code="62" />
       </control>
-      <control top="66" left="354" width="15" height="15" label="treble clef">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#0f0" />
-         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="50" left="50" top="75" content="&#xe014;&#xe014;" />
-         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="50" left="50" top="62.8" content="&#xe050;" />
-         <character code="662" />
-         <character code="447" />
-         <character code="376" />
+      <control top="66" left="322" width="15" height="15" label="text abbreviation mark">
+         <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="false" color="#000"/>
+         <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="50" left="50" top="50" content="." />
+         <character code="1339" />
       </control>
-      <control top="66" left="370" width="15" height="15" label="alto clef">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#0f0" />
-         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="50" left="50" top="75" content="&#xe014;&#xe014;" />
-         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="50" left="50" top="50.6" content="&#xe05b;" />
-         <character code="662" />
-         <character code="643" />
-         <character code="376" />
+      <control top="66" left="338" width="15" height="15" label="begin string one">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
+         <graphic type="text" color="#FFF" size="22" align="center" top="10" left="35" baseline="top" content="STR" />
+         <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="35" baseline="alphabetic" content="1" />
+         <graphic type="line" color="#FFF" lineWidth="3" startX="50" startY="60" endX="75" endY="60" />
+         <graphic type="line" color="#FFF" lineWidth="3" startX="75" startY="60" endX="75" endY="70" />
+         <character code="237" />
+         <character code="465" />
+         <character code="465" />
       </control>
-      <control top="66" left="386" width="15" height="15" label="tenor clef">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#0f0" />
-         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="50" left="50" top="75" content="&#xe014;&#xe014;" />
-         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="50" left="50" top="38.4" content="&#xe05b;" />
-         <character code="662" />
-         <character code="643" />
-         <character code="634" />
-         <character code="376" />
+      <control top="66" left="354" width="15" height="15" label="begin string two">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
+         <graphic type="text" color="#FFF" size="22" align="center" top="10" left="35" baseline="top" content="STR" />
+         <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="35" baseline="alphabetic" content="2" />
+         <graphic type="line" color="#FFF" lineWidth="3" startX="50" startY="60" endX="75" endY="60" />
+         <graphic type="line" color="#FFF" lineWidth="3" startX="75" startY="60" endX="75" endY="70" />
+         <character code="237" />
+         <character code="466" />
+         <character code="466" />
       </control>
-      <control top="66" left="402" width="15" height="15" label="bass clef">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#0f0" />
-         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="50" left="50" top="75" content="&#xe014;&#xe014;" />
-         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="50" left="50" top="38.4" content="&#xe061;" />
-         <character code="662" />
-         <character code="635" />
-         <character code="376" />
+      <control top="66" left="370" width="15" height="15" label="begin string three">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
+         <graphic type="text" color="#FFF" size="22" align="center" top="10" left="35" baseline="top" content="STR" />
+         <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="35" baseline="alphabetic" content="3" />
+         <graphic type="line" color="#FFF" lineWidth="3" startX="50" startY="60" endX="75" endY="60" />
+         <graphic type="line" color="#FFF" lineWidth="3" startX="75" startY="60" endX="75" endY="70" />
+         <character code="237" />
+         <character code="476" />
+         <character code="476" />
       </control>
-      <control top="66" left="418" width="15" height="15" label="french violin clef">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#0f0" />
-         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="40" left="50" top="65" content="&#xe014;&#xe014;" />
-         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="40" left="50" top="65" content="&#xe050;" />
-         <character code="662" />
-         <character code="447" />
-         <character code="464" />
-         <character code="376" />
+      <control top="66" left="386" width="15" height="15" label="begin string four">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
+         <graphic type="text" color="#FFF" size="22" align="center" top="10" left="35" baseline="top" content="STR" />
+         <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="35" baseline="alphabetic" content="4" />
+         <graphic type="line" color="#FFF" lineWidth="3" startX="50" startY="60" endX="75" endY="60" />
+         <graphic type="line" color="#FFF" lineWidth="3" startX="75" startY="60" endX="75" endY="70" />
+         <character code="237" />
+         <character code="449" />
+         <character code="449" />
       </control>
-      <control top="66" left="434" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
-         <character code="" />
+      <control top="66" left="402" width="15" height="15" label="begin string five">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
+         <graphic type="text" color="#FFF" size="22" align="center" top="10" left="35" baseline="top" content="STR" />
+         <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="35" baseline="alphabetic" content="5" />
+         <graphic type="line" color="#FFF" lineWidth="3" startX="50" startY="60" endX="75" endY="60" />
+         <graphic type="line" color="#FFF" lineWidth="3" startX="75" startY="60" endX="75" endY="70" />
+         <character code="237" />
+         <character code="475" />
+         <character code="475" />
+      </control>
+      <control top="66" left="418" width="15" height="15" label="begin string six">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
+         <graphic type="text" color="#FFF" size="22" align="center" top="10" left="35" baseline="top" content="STR" />
+         <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="35" baseline="alphabetic" content="6" />
+         <graphic type="line" color="#FFF" lineWidth="3" startX="50" startY="60" endX="75" endY="60" />
+         <graphic type="line" color="#FFF" lineWidth="3" startX="75" startY="60" endX="75" endY="70" />
+         <character code="237" />
+         <character code="450" />
+         <character code="450" />
+      </control>
+      <control top="66" left="434" width="15" height="15" label="begin string seven">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
+         <graphic type="text" color="#FFF" size="22" align="center" top="10" left="35" baseline="top" content="STR" />
+         <graphic type="text" color="#FFF" size="55" style="bold" align="center" top="80" left="35" baseline="alphabetic" content="7" />
+         <graphic type="line" color="#FFF" lineWidth="3" startX="50" startY="60" endX="75" endY="60" />
+         <graphic type="line" color="#FFF" lineWidth="3" startX="75" startY="60" endX="75" endY="70" />
+         <character code="237" />
+         <character code="144" />
+         <character code="144" />
       </control>
       <control top="66" left="450" width="15" height="15" label="">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
@@ -3743,50 +3846,26 @@
          <graphic type="line" color="#000" lineWidth="2" startX="40" startY="45" endX="60" endY="45" />
          <character code="1375" />
       </control>
-      <control top="82" left="354" width="15" height="15" label="baritone clef">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#0f0" />
-         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="50" left="50" top="75" content="&#xe014;&#xe014;" />
-         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="50" left="50" top="50.6" content="&#xe061;" />
-         <character code="662" />
-         <character code="635" />
-         <character code="895" />
-         <character code="376" />
+      <control top="82" left="354" width="15" height="15" label="draw">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
+           <graphic type="text" color="#fff" font="Bravura" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe8cb;" />
+         <character code="460" />
+         <character code="66" />
       </control>
-      <control top="82" left="370" width="15" height="15" label="treble clef octave up">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#0f0" />
-         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="40" left="50" top="75" content="&#xe014;&#xe014;" />
-         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="40" left="50" top="62.8" content="&#xe053;" />
-         <character code="662" />
-         <character code="447" />
-         <character code="376" />
-         <character code="635" />
-         <character code="272" />
+      <control top="82" left="370" width="15" height="15" label="push">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
+           <graphic type="text" color="#fff" font="Bravura" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe8cc;" />
+         <character code="460" />
+         <character code="639" />
       </control>
-      <control top="82" left="386" width="15" height="15" label="treble clef octave down">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#0f0" />
-         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="40" left="50" top="65" content="&#xe014;&#xe014;" />
-         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="40" left="50" top="52.8" content="&#xe052;" />
-         <character code="662" />
-         <character code="447" />
-         <character code="376" />
-         <character code="635" />
-         <character code="656" />
+      <control top="82" left="386" width="15" height="15" label="">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
       </control>
-      <control top="82" left="402" width="15" height="15" label="treble clef left hand">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#0f0" />
-         <graphic type="text" color="#000" size="23" align="center" baseline="middle" top="25" left="50" content="L.H." />
-         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="30" left="50" top="70" content="&#xe050;" />
-         <character code="662" />
-         <character code="447" />
-         <character code="846" />
+      <control top="82" left="402" width="15" height="15" label="">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
       </control>
-      <control top="82" left="418" width="15" height="15" label="bass clef right hand">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#0f0" />
-         <graphic type="text" color="#000" size="23" align="center" baseline="middle" top="25" left="50" content="R.H." />
-         <graphic type="text" color="#000" font="Bravura" align="center" baseline="middle" size="50" left="50" top="60" content="&#xe061;" />
-         <character code="662" />
-         <character code="635" />
-         <character code="846" />
+      <control top="82" left="418" width="15" height="15" label="">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
       </control>
       <control top="82" left="434" width="15" height="15" label="">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
