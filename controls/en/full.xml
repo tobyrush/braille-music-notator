@@ -3816,7 +3816,7 @@
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ebddb7" />
          <graphic type="text" color="#000" size="25" align="center" baseline="middle" top="30" left="50" content="CROSS" />
          <graphic type="text" color="#000" size="25" align="center" baseline="middle" top="65" left="50" content="BHND" />
-         <character code="639" />
+         <character code="144" />
          <character code="1275" />
       </control>
       <control top="82" left="274" width="15" height="15" label="pedal diagram prefix">
@@ -5219,25 +5219,35 @@
          <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="Z" />
          <character code="590" />
       </control>
-      <control top="2" left="434" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="true" color="#ccc"/>
-         <character code="" />
+      <control top="2" left="434" width="15" height="15" label="underline 0">
+         <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
+         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="0" />
+         <graphic type="line" startX="30" startY="80" endX="70" endY="80" lineWidth="2" color="#000" />
+         <character code="1584" />
       </control>
-      <control top="2" left="450" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="true" color="#ccc"/>
-         <character code="" />
+      <control top="2" left="450" width="15" height="15" label="underline 1">
+         <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
+         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="1" />
+         <graphic type="line" startX="30" startY="80" endX="70" endY="80" lineWidth="2" color="#000" />
+         <character code="1575" />
       </control>
-      <control top="2" left="466" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="true" color="#ccc"/>
-         <character code="" />
+      <control top="2" left="466" width="15" height="15" label="underline 2">
+         <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
+         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="2" />
+         <graphic type="line" startX="30" startY="80" endX="70" endY="80" lineWidth="2" color="#000" />
+         <character code="1576" />
       </control>
-      <control top="2" left="482" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="true" color="#ccc"/>
-         <character code="" />
+      <control top="2" left="482" width="15" height="15" label="underline 3">
+         <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
+         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="3" />
+         <graphic type="line" startX="30" startY="80" endX="70" endY="80" lineWidth="2" color="#000" />
+         <character code="1577" />
       </control>
-      <control top="2" left="498" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="true" color="#ccc"/>
-         <character code="" />
+      <control top="2" left="498" width="15" height="15" label="underline 4">
+         <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
+         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="4" />
+         <graphic type="line" startX="30" startY="80" endX="70" endY="80" lineWidth="2" color="#000" />
+         <character code="1578" />
       </control>
       
       <control top="18" left="2" width="15" height="15" label="capitalize word">
@@ -5408,25 +5418,35 @@
          <character code="594" />
          <character code="993" />
       </control>
-      <control top="18" left="434" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="true" color="#ccc"/>
-         <character code="" />
+      <control top="18" left="434" width="15" height="15" label="underline 5">
+         <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
+         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="5" />
+         <graphic type="line" startX="30" startY="80" endX="70" endY="80" lineWidth="2" color="#000" />
+         <character code="1579" />
       </control>
-      <control top="18" left="450" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="true" color="#ccc"/>
-         <character code="" />
+      <control top="18" left="450" width="15" height="15" label="underline 6">
+         <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
+         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="6" />
+         <graphic type="line" startX="30" startY="80" endX="70" endY="80" lineWidth="2" color="#000" />
+         <character code="1580" />
       </control>
-      <control top="18" left="466" width="15" height="15" label="">
-        <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="true" color="#ccc"/>
-         <character code="" />
+      <control top="18" left="466" width="15" height="15" label="underline 7">
+         <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
+         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="7" />
+         <graphic type="line" startX="30" startY="80" endX="70" endY="80" lineWidth="2" color="#000" />
+         <character code="1581" />
       </control>
-      <control top="18" left="482" width="15" height="15" label="">
-        <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="true" color="#ccc"/>
-         <character code="" />
+      <control top="18" left="482" width="15" height="15" label="underline 8">
+         <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
+         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="8" />
+         <graphic type="line" startX="30" startY="80" endX="70" endY="80" lineWidth="2" color="#000" />
+         <character code="1582" />
       </control>
-      <control top="18" left="498" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="true" color="#ccc"/>
-         <character code="" />
+      <control top="18" left="498" width="15" height="15" label="underline 9">
+         <graphic type="rect" top="3" left="3" width="94" height="94" fill="true" stroke="true" color="#fff" strokeColor="#000" lineWidth="3"/>
+         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="9" />
+         <graphic type="line" startX="30" startY="80" endX="70" endY="80" lineWidth="2" color="#000" />
+         <character code="1583" />
       </control>
       
       <control keycode="Period" top="34" left="2" width="15" height="15" label="period">

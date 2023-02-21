@@ -4170,7 +4170,7 @@
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="17" left="65" top="50" content="FEET" rotateCCW="true" />
     </cell>
     <cell name="cross foot behind" char="pedalCrossBehind">
-        <code value="639" />
+        <code value="144" />
         <code value="1275" />
         <graphic type="background" color="#ebddb7" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="CROSS" />
@@ -6591,6 +6591,66 @@
         <code value="585" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="U" />
+    </cell>
+    <cell name="text 0" char="textUnderline0">
+        <code value="1584" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="0" />
+        <graphic type="line" startX="30" startY="80" endX="70" endY="80" lineWidth="2" color="#000" />
+    </cell>
+    <cell name="text 1" char="textUnderline1">
+        <code value="1575" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="1" />
+        <graphic type="line" startX="30" startY="80" endX="70" endY="80" lineWidth="2" color="#000" />
+    </cell>
+    <cell name="text 2" char="textUnderline2">
+        <code value="1576" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="2" />
+        <graphic type="line" startX="30" startY="80" endX="70" endY="80" lineWidth="2" color="#000" />
+    </cell>
+    <cell name="text 3" char="textUnderline3">
+        <code value="1577" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="3" />
+        <graphic type="line" startX="30" startY="80" endX="70" endY="80" lineWidth="2" color="#000" />
+    </cell>
+    <cell name="text 4" char="textUnderline4">
+        <code value="1578" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="4" />
+        <graphic type="line" startX="30" startY="80" endX="70" endY="80" lineWidth="2" color="#000" />
+    </cell>
+    <cell name="text 5" char="textUnderline5">
+        <code value="1579" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="5" />
+        <graphic type="line" startX="30" startY="80" endX="70" endY="80" lineWidth="2" color="#000" />
+    </cell>
+    <cell name="text 6" char="textUnderline6">
+        <code value="1580" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="6" />
+        <graphic type="line" startX="30" startY="80" endX="70" endY="80" lineWidth="2" color="#000" />
+    </cell>
+    <cell name="text 7" char="textUnderline7">
+        <code value="1581" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="7" />
+        <graphic type="line" startX="30" startY="80" endX="70" endY="80" lineWidth="2" color="#000" />
+    </cell>
+    <cell name="text 8" char="textUnderline8">
+        <code value="1582" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="8" />
+        <graphic type="line" startX="30" startY="80" endX="70" endY="80" lineWidth="2" color="#000" />
+    </cell>
+    <cell name="text 9" char="textUnderline9">
+        <code value="1583" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="9" />
+        <graphic type="line" startX="30" startY="80" endX="70" endY="80" lineWidth="2" color="#000" />
     </cell>
     <cell name="end underline" word-modifier="1" char="textUnderlineEnd">
         <code value="595" />
