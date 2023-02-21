@@ -4,23 +4,23 @@
 
 function drawTitle() {
 
-	var titleWidth = notationArea.clientWidth;
-	var titleHeight = kTitleAreaHeight;
+    var titleWidth = notationArea.clientWidth;
+    var titleHeight = kTitleAreaHeight;
 
-	var thu = titleHeight/100; // title height unit
+    var thu = titleHeight/100; // title height unit
 
-	ctx.resetTransform();
+    ctx.resetTransform();
     ctx.translate(0.5,0.5);
 
-	ctx.fillStyle="#000";
-	ctx.textAlign="left";
-	ctx.textBaseline="top";
-	ctx.font = "bold "+(thu*74)+"px sans-serif";
-	var t=kProgramTitle;
-	ctx.fillText(t,0,0);
-	var twid=ctx.measureText(t).width;
-	ctx.font = "100 "+(thu*74)+"px sans-serif";
-	ctx.fillText(formFill(kVersionAndAuthor,[versionString]),twid*1.03,0);
+    ctx.fillStyle="#000";
+    ctx.textAlign="left";
+    ctx.textBaseline="top";
+    ctx.font = "bold "+(thu*74)+"px sans-serif";
+    var t=kProgramTitle;
+    ctx.fillText(t,0,0);
+    var twid=ctx.measureText(t).width;
+    ctx.font = "100 "+(thu*74)+"px sans-serif";
+    ctx.fillText(formFill(kVersionAndAuthor,[versionString]),twid*1.03,0);
 
     updateButtons();
 
@@ -71,8 +71,8 @@ function updateButtons() {
 }
 
 function initializeNotation() {
- 	notationArea.width = window.innerWidth-8;
-	
+     notationArea.width = window.innerWidth-8;
+    
     initializeCellFont();
 }
 
@@ -98,7 +98,7 @@ function loadCellFont(request) {
 }
 
 function drawNotation() {
-	var col, rightMargin;
+    var col, rightMargin;
     
     if (fileDialogOpen || optionsDialogOpen) {
         notationArea.width = window.innerWidth-300;
@@ -106,61 +106,61 @@ function drawNotation() {
         notationArea.width = window.innerWidth-8;
     }
 
-	var notationWidth = notationArea.clientWidth;
-	var notationHeight = notationArea.clientHeight-(kTitleAreaHeight+4);
+    var notationWidth = notationArea.clientWidth;
+    var notationHeight = notationArea.clientHeight-(kTitleAreaHeight+4);
 
     drawTitle();
 
-	notationCellWidth = notationWidth/gridWidth;
-	notationCellHeight = notationHeight/gridHeight;
-	
-	ctx.resetTransform();
+    notationCellWidth = notationWidth/gridWidth;
+    notationCellHeight = notationHeight/gridHeight;
+    
+    ctx.resetTransform();
     ctx.translate(0.5,kTitleAreaHeight+0.5);
 
-	setScrollVars();
-	
-	// add shading for right margin
-	if (showPageBreaks) {
-		rightMargin = (gridWidth*(pageWidth-hScrollUnits))-hScrollOffset;
-		ctx.fillStyle="#bbb";
-		if (rightMargin<notationWidth) {
-			ctx.fillRect(rightMargin,0,notationWidth+hScroll,notationHeight);
-		}
-	}
-	
-	// draw page numbers
-	var i, row=vScrollUnits;
+    setScrollVars();
+    
+    // add shading for right margin
     if (showPageBreaks) {
-		ctx.fillStyle="#fff";
-		ctx.textAlign="left";
-		ctx.textBaseline="top";
-		ctx.font="normal "+gh(0.75)+"px sans-serif";
-		for (i=gridHeight-vScrollOffset; i<notationHeight; i+=gridHeight) {
-			if ((row===0) || ((row) % pageHeight === 0)) {
-				ctx.fillText("PAGE "+(((row)/pageHeight)+1),rightMargin+gw(0.25),i-gh(0.9));
-			}
-			row+=1;
-		}
-	}
-		
-	// draw grid
-	ctx.beginPath();
-	for (i=gridHeight-vScrollOffset; i<notationHeight; i+=gridHeight) {
-		ctx.moveTo(0,i);
-		ctx.lineTo(notationWidth,i);
-		row+=1;
-	}
-	col=hScrollUnits;
-	for (i=gridWidth-hScrollOffset; i<notationWidth; i+=gridWidth) {
-		ctx.moveTo(i,0);
-		ctx.lineTo(i,notationHeight);
-		col+=1;
-	}
-	ctx.strokeStyle="#ddf";
-	ctx.stroke();
-	ctx.closePath();
-	
-	ctx.save();
+        rightMargin = (gridWidth*(pageWidth-hScrollUnits))-hScrollOffset;
+        ctx.fillStyle="#bbb";
+        if (rightMargin<notationWidth) {
+            ctx.fillRect(rightMargin,0,notationWidth+hScroll,notationHeight);
+        }
+    }
+    
+    // draw page numbers
+    var i, row=vScrollUnits;
+    if (showPageBreaks) {
+        ctx.fillStyle="#fff";
+        ctx.textAlign="left";
+        ctx.textBaseline="top";
+        ctx.font="normal "+gh(0.75)+"px sans-serif";
+        for (i=gridHeight-vScrollOffset; i<notationHeight; i+=gridHeight) {
+            if ((row===0) || ((row) % pageHeight === 0)) {
+                ctx.fillText("PAGE "+(((row)/pageHeight)+1),rightMargin+gw(0.25),i-gh(0.9));
+            }
+            row+=1;
+        }
+    }
+        
+    // draw grid
+    ctx.beginPath();
+    for (i=gridHeight-vScrollOffset; i<notationHeight; i+=gridHeight) {
+        ctx.moveTo(0,i);
+        ctx.lineTo(notationWidth,i);
+        row+=1;
+    }
+    col=hScrollUnits;
+    for (i=gridWidth-hScrollOffset; i<notationWidth; i+=gridWidth) {
+        ctx.moveTo(i,0);
+        ctx.lineTo(i,notationHeight);
+        col+=1;
+    }
+    ctx.strokeStyle="#ddf";
+    ctx.stroke();
+    ctx.closePath();
+    
+    ctx.save();
     ctx.beginPath();
     ctx.moveTo(0,0);
     ctx.lineTo(notationWidth,0);
@@ -172,91 +172,91 @@ function drawNotation() {
     // draw braille symbols
 
     for (var y in score) {
-		if ((y>vScrollUnits-1) && (y<vScrollUnits+(notationCellHeight+1)) && arrayHasOwnIndex(score,y)) {
-			currentCellFont.drawScoreLine(
-				(gridWidth*(0-hScrollUnits))-hScrollOffset,
-				(gridHeight*(y-vScrollUnits))-vScrollOffset,
-				score[y],
-				hScrollUnits-7,
-				hScrollUnits+notationCellWidth+1
-			);
-		}
-	}
+        if ((y>vScrollUnits-1) && (y<vScrollUnits+(notationCellHeight+1)) && arrayHasOwnIndex(score,y)) {
+            currentCellFont.drawScoreLine(
+                (gridWidth*(0-hScrollUnits))-hScrollOffset,
+                (gridHeight*(y-vScrollUnits))-vScrollOffset,
+                score[y],
+                hScrollUnits-7,
+                hScrollUnits+notationCellWidth+1
+            );
+        }
+    }
 
-	// draw cursor
-	// note: cursor coordinates are absolute now, not relative coordinates in viewable area
-	ctx.globalAlpha=0.2;
-	ctx.fillStyle="#000";
-	ctx.fillRect(gridWidth*(cursor.x-hScrollUnits)-hScrollOffset,gridHeight*(cursor.y-vScrollUnits)-vScrollOffset,gridWidth*cursor.width,gridHeight*cursor.height);
-	ctx.globalAlpha=1;
+    // draw cursor
+    // note: cursor coordinates are absolute now, not relative coordinates in viewable area
+    ctx.globalAlpha=0.2;
+    ctx.fillStyle="#000";
+    ctx.fillRect(gridWidth*(cursor.x-hScrollUnits)-hScrollOffset,gridHeight*(cursor.y-vScrollUnits)-vScrollOffset,gridWidth*cursor.width,gridHeight*cursor.height);
+    ctx.globalAlpha=1;
 
     ctx.restore(); // release clipping area
-	
-	// draw page breaks
-	if (showPageBreaks) {
-		row=vScrollUnits;
-		ctx.fillStyle="#bbb";
-		for (i=gridHeight-vScrollOffset; i<notationHeight; i+=gridHeight) {
-			if ((row>0) && ((row+1) % pageHeight === 0)) {
-				ctx.fillRect(0,i-1,rightMargin,3);
-			}
-			row+=1;
-		}
-	}
-	
-	// draw grid numbers
-	// we're using row+1 and col+1 here because even though row and col are 0-based, we want the UI to be 1-based
-	ctx.fillStyle="#ddf";
-	ctx.textAlign="right";
-	ctx.textBaseline="top";
-	ctx.font="normal "+gh(0.166)+"px sans-serif";
-	row=vScrollUnits;
-	for (i=gridHeight-vScrollOffset; i<=notationHeight+gridHeight; i+=gridHeight) {
-		if ((row>0) && ((row+1) % 10 === 0)) {
-			ctx.fillText(row+1,gridWidth-gw(0.1),i-gridHeight+gw(0.1));
-		}
-		row+=1;
-	}
-	col=hScrollUnits;
-	for (i=gridWidth-hScrollOffset; i<=notationWidth+gridWidth; i+=gridWidth) {
-		if ((col>0) && ((col+1) % 10 === 0)) {
-			ctx.fillText(col+1,i-gw(0.1),gw(0.1));
-		}
-		col+=1;
-	}
-	
-	// draw debug info
-	if (devMode) {
-	
-		ctx.fillStyle="#F00";
-		ctx.textAlign="left";
-		ctx.textBaseline="top";
-		ctx.font="normal "+gh(0.25)+"px sans-serif";
-		ctx.fillText(getScore(cursor.x,cursor.y),4,4);
+    
+    // draw page breaks
+    if (showPageBreaks) {
+        row=vScrollUnits;
+        ctx.fillStyle="#bbb";
+        for (i=gridHeight-vScrollOffset; i<notationHeight; i+=gridHeight) {
+            if ((row>0) && ((row+1) % pageHeight === 0)) {
+                ctx.fillRect(0,i-1,rightMargin,3);
+            }
+            row+=1;
+        }
+    }
+    
+    // draw grid numbers
+    // we're using row+1 and col+1 here because even though row and col are 0-based, we want the UI to be 1-based
+    ctx.fillStyle="#ddf";
+    ctx.textAlign="right";
+    ctx.textBaseline="top";
+    ctx.font="normal "+gh(0.166)+"px sans-serif";
+    row=vScrollUnits;
+    for (i=gridHeight-vScrollOffset; i<=notationHeight+gridHeight; i+=gridHeight) {
+        if ((row>0) && ((row+1) % 10 === 0)) {
+            ctx.fillText(row+1,gridWidth-gw(0.1),i-gridHeight+gw(0.1));
+        }
+        row+=1;
+    }
+    col=hScrollUnits;
+    for (i=gridWidth-hScrollOffset; i<=notationWidth+gridWidth; i+=gridWidth) {
+        if ((col>0) && ((col+1) % 10 === 0)) {
+            ctx.fillText(col+1,i-gw(0.1),gw(0.1));
+        }
+        col+=1;
+    }
+    
+    // draw debug info
+    if (devMode) {
+    
+        ctx.fillStyle="#F00";
+        ctx.textAlign="left";
+        ctx.textBaseline="top";
+        ctx.font="normal "+gh(0.25)+"px sans-serif";
+        ctx.fillText(getScore(cursor.x,cursor.y),4,4);
         //ctx.fillText("vScroll: " + vScroll + "; vScrollUnits: " + vScrollUnits + "; vScrollOffset: " + vScrollOffset + "; notationCellHeight: " + notationCellHeight,4,4);
-		
-	}
-	
-	// draw dropzone/file loading indicator
-	if (dropzone) {
-		ctx.globalAlpha=0.9;
-		ctx.fillStyle="#FFF";
-		ctx.fillRect(0,0,notationWidth,notationHeight);
-		ctx.globalAlpha=1;
-		ctx.textAlign="center";
-		ctx.textBaseline="middle";
-		ctx.font="bold 36px sans-serif";
-		ctx.fillStyle="#00F";
-        ctx.fillText(kDropFileZoneMessage,notationWidth/2,notationHeight/2);
-	} else if (fileLoading) {
+        
+    }
+    
+    // draw dropzone/file loading indicator
+    if (dropzone) {
         ctx.globalAlpha=0.9;
-		ctx.fillStyle="#FFF";
-		ctx.fillRect(0,0,notationWidth,notationHeight);
-		ctx.globalAlpha=1;
-		ctx.textAlign="center";
-		ctx.textBaseline="middle";
-		ctx.font="bold 36px sans-serif";
-		ctx.fillStyle="#00F";
+        ctx.fillStyle="#FFF";
+        ctx.fillRect(0,0,notationWidth,notationHeight);
+        ctx.globalAlpha=1;
+        ctx.textAlign="center";
+        ctx.textBaseline="middle";
+        ctx.font="bold 36px sans-serif";
+        ctx.fillStyle="#00F";
+        ctx.fillText(kDropFileZoneMessage,notationWidth/2,notationHeight/2);
+    } else if (fileLoading) {
+        ctx.globalAlpha=0.9;
+        ctx.fillStyle="#FFF";
+        ctx.fillRect(0,0,notationWidth,notationHeight);
+        ctx.globalAlpha=1;
+        ctx.textAlign="center";
+        ctx.textBaseline="middle";
+        ctx.font="bold 36px sans-serif";
+        ctx.fillStyle="#00F";
         ctx.fillText(kFileLoadingMessage,notationWidth/2,(notationHeight/2)-40);
         ctx.font="bold 18px sans-serif";
         ctx.fillText(kFileLoadingCreditMessage,notationWidth/2,notationHeight/2+10);
@@ -265,78 +265,78 @@ function drawNotation() {
         ctx.font="bold 14px sans-serif";
         ctx.fillText(kFileLoadingURL,notationWidth/2,(notationHeight/2+70));
     }
-		
+        
 
-	// draw border
-	ctx.beginPath();
-	ctx.moveTo(0,0);
-	ctx.lineTo(notationWidth-1,0);
-	ctx.lineTo(notationWidth-1,notationHeight-1);
-	ctx.lineTo(0,notationHeight-1);
-	ctx.lineTo(0,0);
-	ctx.lineWidth=1;
-	ctx.strokeStyle="#000";
-	ctx.stroke();
-	ctx.closePath();
-	
+    // draw border
+    ctx.beginPath();
+    ctx.moveTo(0,0);
+    ctx.lineTo(notationWidth-1,0);
+    ctx.lineTo(notationWidth-1,notationHeight-1);
+    ctx.lineTo(0,notationHeight-1);
+    ctx.lineTo(0,0);
+    ctx.lineWidth=1;
+    ctx.strokeStyle="#000";
+    ctx.stroke();
+    ctx.closePath();
+    
 }
 
 function setScrollVars() {
-	hScrollOffset = hScroll % gridWidth;
-	vScrollOffset = vScroll % gridHeight;
-	hScrollUnits = Math.floor(hScroll/gridWidth);
-	vScrollUnits = Math.floor(vScroll/gridHeight);
+    hScrollOffset = hScroll % gridWidth;
+    vScrollOffset = vScroll % gridHeight;
+    hScrollUnits = Math.floor(hScroll/gridWidth);
+    vScrollUnits = Math.floor(vScroll/gridHeight);
 }
 
 function setCellHeight(val,redraw=true) {
-	gridHeight=val;
-	gridWidth=(val*2)/3;
+    gridHeight=val;
+    gridWidth=(val*2)/3;
     setNodeValue(document.querySelector("#scoreSizeFieldValue"),gridHeight);
-	if (redraw) {
+    if (redraw) {
         drawNotation();
     }
 }
 
 function setPageSize(w,h,redraw=true) {
-	pageWidth=w;
-	pageHeight=h;
+    pageWidth=w;
+    pageHeight=h;
     setNodeValue(document.querySelector("#pageSizeFieldWidthValue"),pageWidth);
     setNodeValue(document.querySelector("#pageSizeFieldHeightValue"),pageHeight);
-	if (redraw) {
+    if (redraw) {
         drawNotation();
     }
 }
 
 function rotateChar(x,y) {
-	if (!cellIsEmpty(x,y)) {
-		if (getScore(x,y) > 900) {
-			setScore(x,y,(getScore(x,y)*1) % 100);
-		} else {
-			setScore(x,y,(getScore(x,y)*1)+100);
-		}
-	}
+    if (!cellIsEmpty(x,y)) {
+        if (getScore(x,y) > 900) {
+            setScore(x,y,(getScore(x,y)*1) % 100);
+        } else {
+            setScore(x,y,(getScore(x,y)*1)+100);
+        }
+    }
 }
 
 function convertToText(x,y) {
-	if (!cellIsEmpty(x,y)) {
-		var val = getScore(x,y);
+    if (!cellIsEmpty(x,y)) {
+        var val = getScore(x,y);
         if ((val > 0) && (val < 500) && (val != 32)) {
-			setScore(x,y,(val % 100)+500);
-		}
-	}
+            setScore(x,y,(val % 100)+500);
+        }
+    }
 }
 
 function scrollCanvas(x,y) {
-	hScroll += (x*gridWidth);
-	if (hScroll<0) {
-		hScroll=0;
-	}
-	
-	vScroll += (y*gridHeight);
-	if (vScroll<0) {
-		vScroll=0;
-	}
-	drawNotation();
+    hScroll += (x*gridWidth);
+    if (hScroll<0) {
+        hScroll=0;
+    }
+    
+    vScroll += (y*gridHeight);
+    if (vScroll<0) {
+        vScroll=0;
+    }
+    drawNotation();
 }
 
 function placeCursor(x,y,w,h,readerText) {
@@ -358,30 +358,30 @@ function placeCursor(x,y,w,h,readerText) {
 }
 
 function scrollToCursor() {
-	var activeX = cursor.x;
-	if (cursor.pinnedLeft) { activeX += (cursor.width-1); }                                
-	if (activeX<=hScrollUnits) {
-		hScroll=Math.max(0,(activeX*gridWidth)-gw(0.5));
-	} else if (activeX>=(hScrollUnits+notationCellWidth)) {
-		hScroll=((activeX)*gridWidth)-((notationCellWidth*gridWidth)-(gw(1.5)));
-	}
-	var activeY = cursor.y;
-	if (cursor.pinnedTop) { activeY += (cursor.height-1); }
-	if (activeY<=vScrollUnits) {
-		vScroll=Math.max(0,(activeY*gridHeight)-gh(0.5));
-	} else if (activeY>=(vScrollUnits+notationCellHeight)) {
-		vScroll=((activeY)*gridHeight)-((notationCellHeight*gridHeight)-(gh(1.5)));
-	}
+    var activeX = cursor.x;
+    if (cursor.pinnedLeft) { activeX += (cursor.width-1); }                                
+    if (activeX<=hScrollUnits) {
+        hScroll=Math.max(0,(activeX*gridWidth)-gw(0.5));
+    } else if (activeX>=(hScrollUnits+notationCellWidth)) {
+        hScroll=((activeX)*gridWidth)-((notationCellWidth*gridWidth)-(gw(1.5)));
+    }
+    var activeY = cursor.y;
+    if (cursor.pinnedTop) { activeY += (cursor.height-1); }
+    if (activeY<=vScrollUnits) {
+        vScroll=Math.max(0,(activeY*gridHeight)-gh(0.5));
+    } else if (activeY>=(vScrollUnits+notationCellHeight)) {
+        vScroll=((activeY)*gridHeight)-((notationCellHeight*gridHeight)-(gh(1.5)));
+    }
 }
 
 function insertRowAtCursor() {
-	saveToUndo();
-	score.splice(cursor.y,0,[]);
+    saveToUndo();
+    score.splice(cursor.y,0,[]);
 }
 
 function deleteRowAtCursor() {
-	saveToUndo();
-	score.splice(cursor.y,1);
+    saveToUndo();
+    score.splice(cursor.y,1);
 }
 
 class cellFontModule {
@@ -404,6 +404,8 @@ class cellFontModule {
         for (let node of root.children) {
             this.cells.push(new cell(node,this));
         }
+        
+        this.cells.sort((a,b) => { return b.codes.length - a.codes.length})
     }
     getXMLFromScoreLine(scoreLine, row, doc) {
         var c = scoreLine;
@@ -524,6 +526,15 @@ class cellFontModule {
         ctx.fill();
 
     }
+    parseLowASCII(s) {
+        let ps = s;
+        this.cells.forEach(cell => {
+            if (cell.length()>1 && !cell.name.startsWith('ipa') && !cell.name.startsWith('text')) {
+                ps = ps.replaceAll(cell.getLowASCIIString(), cell.getString());
+            }
+        });
+        return ps;
+    }
     findSymbol(chars, newWord) {
         // finds best match for the array
         // courtesy of JS genius benvc at https://stackoverflow.com/a/54873442/1754243
@@ -581,5 +592,15 @@ class cell {
             graphic.draw(ctx,gw,gw*1.5);
         });
         ctx.restore();
+    }
+    getString() {
+        return String.fromCharCode(...this.codes);
+    }
+    getLowASCIIString() {
+        return String.fromCharCode(...this.codes.map(x => x % 100));
+        // let s = '';
+        // this.codes.map(x => x % 100).forEach(c => {
+        //     s += String.fromCharCode(c);
+        // });
     }
 }
