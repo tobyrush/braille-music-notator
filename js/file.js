@@ -562,6 +562,8 @@ function parseData(fileData,includeText = true) {
         fileData = convertTitlesToText(fileData);
         fileData = convertStrangeSequencesToText(fileData);
     }
+	
+	fileData = currentCellFont.parseLowASCII(fileData);
 
 	return fileData;
 	

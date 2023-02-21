@@ -404,6 +404,8 @@ class cellFontModule {
         for (let node of root.children) {
             this.cells.push(new cell(node,this));
         }
+        
+        this.cells.sort((a,b) => { return b.codes.length - a.codes.length})
     }
     getXMLFromScoreLine(scoreLine, row, doc) {
         var c = scoreLine;
@@ -524,6 +526,15 @@ class cellFontModule {
         ctx.fill();
 
     }
+    parseLowASCII(s) {
+        let ps = s;
+        this.cells.forEach(cell => {
+            if (cell.length()>1 && !cell.name.startsWith('ipa') && !cell.name.startsWith('text')) {
+                ps = ps.replaceAll(cell.getLowASCIIString(), cell.getString());
+            }
+        });
+        return ps;
+    }
     findSymbol(chars, newWord) {
         // finds best match for the array
         // courtesy of JS genius benvc at https://stackoverflow.com/a/54873442/1754243
@@ -581,5 +592,15 @@ class cell {
             graphic.draw(ctx,gw,gw*1.5);
         });
         ctx.restore();
+    }
+    getString() {
+        return String.fromCharCode(...this.codes);
+    }
+    getLowASCIIString() {
+        return String.fromCharCode(...this.codes.map(x => x % 100));
+        // let s = '';
+        // this.codes.map(x => x % 100).forEach(c => {
+        //     s += String.fromCharCode(c);
+        // });
     }
 }
