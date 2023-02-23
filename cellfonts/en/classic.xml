@@ -4205,6 +4205,13 @@
         <graphic type="text" color="#000" align="center" baseline="middle" size="40" left="150" top="50" content="&#xe1d5;" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="60" left="150" top="85" content="&#xe7f9;" />
     </cell>
+    <cell name="damp" char="pedalDampMultiple">
+        <code value="1142" />
+        <code value="1267" />
+        <code value="1267" />
+        <graphic type="background" color="#ebddb7" cells="3" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="70" left="150" top="60" content="&#xe7f9; &#xe7f9;" />
+    </cell>
     <cell name="high pedal position" char="pedalDiagramPositionHigh">
         <code value="1366" />
         <graphic type="background" color="#ebddb7" />
