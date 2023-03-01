@@ -1,32 +1,32 @@
 <cellFontModule name="Classic" font="Bravura" style="normal" align="left" baseline="alphabetic">
     <cell name="accidental above or below note" char="accidentalAboveOrBelow">
         <code value="344" />
-        <graphic type="background" color="#f80"/>
+        <graphic type="background" color="#f80" />
         <graphic type="text" color="#000" align="center" size="30" left="50" top="30" content="&#xe262;" />
         <graphic type="text" color="#000" align="center" size="35" left="50" top="55" content="&#xe1d6;" />
     </cell>
     <cell name="double flat" char="accidentalDoubleFlat">
         <code value="60" />
         <code value="60" />
-        <graphic type="background" color="#f80" cells="2"/>
+        <graphic type="background" color="#f80" cells="2" />
         <graphic type="text" color="#000" align="center" size="80" left="105" top="60" content="&#xe264;" />
     </cell>
     <cell name="double flat" char="accidentalDoubleFlatOld">
         <code value="60" />
         <code value="360" />
-        <graphic type="background" color="#f80" cells="2"/>
+        <graphic type="background" color="#f80" cells="2" />
         <graphic type="text" color="#000" align="center" size="80" left="105" top="60" content="&#xe264;" />
     </cell>
     <cell name="double sharp" char="accidentalDoubleSharp">
         <code value="37" />
         <code value="37" />
-        <graphic type="background" color="#f80" cells="2"/>
+        <graphic type="background" color="#f80" cells="2" />
         <graphic type="text" color="#000" align="center" size="80" left="105" top="50" content="&#xe263;" />
     </cell>
     <cell name="double sharp" char="accidentalDoubleSharpOld">
         <code value="37" />
         <code value="337" />
-        <graphic type="background" color="#f80" cells="2"/>
+        <graphic type="background" color="#f80" cells="2" />
         <graphic type="text" color="#000" align="center" size="80" left="105" top="50" content="&#xe263;" />
     </cell>
     <cell name="five commas sharp" char="accidentalFiveCommasSharp">
@@ -216,22 +216,22 @@
     <cell name="ascending curve following note" char="articulationCurveAscendingFollowing">
         <code value="1365" />
         <graphic type="background" color="#7f462c" />
-        <graphic type="arc" x="20" y="20" radius="40" start="0" end="1.57" ccw="false" lineWidth="3" color="#fff"/>
+        <graphic type="arc" x="20" y="20" radius="40" start="0" end="1.57" ccw="false" lineWidth="3" color="#fff" />
     </cell>
     <cell name="ascending curve preceding note" char="articulationCurveAscendingPreceding">
         <code value="1144" />
         <graphic type="background" color="#7f462c" />
-        <graphic type="arc" x="80" y="80" radius="40" start="3.14" end="4.71" ccw="false" lineWidth="3" color="#fff"/>
+        <graphic type="arc" x="80" y="80" radius="40" start="3.14" end="4.71" ccw="false" lineWidth="3" color="#fff" />
     </cell>
     <cell name="descending curve following note" char="articulationCurveDescendingFollowing">
         <code value="1439" />
         <graphic type="background" color="#7f462c" />
-        <graphic type="arc" x="20" y="80" radius="40" start="4.71" end="6.28" ccw="false" lineWidth="3" color="#fff"/>
+        <graphic type="arc" x="20" y="80" radius="40" start="4.71" end="6.28" ccw="false" lineWidth="3" color="#fff" />
     </cell>
     <cell name="descending curve preceding note" char="articulationCurveDescendingPreceding">
         <code value="1264" />
         <graphic type="background" color="#7f462c" />
-        <graphic type="arc" x="80" y="20" radius="40" start="1.57" end="3.14" ccw="false" lineWidth="3" color="#fff"/>
+        <graphic type="arc" x="80" y="20" radius="40" start="1.57" end="3.14" ccw="false" lineWidth="3" color="#fff" />
     </cell>
     <cell name="down bow" char="articulationDownBow">
         <code value="760" />
@@ -324,7 +324,7 @@
         <graphic type="background" color="#7f462c" cells="3" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="70" content="&#xe1d5;" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="200" top="60" content="&#xe1d5;" />
-        <graphic type="line" startX="125" startY="70" endX="175" endY="60" lineWidth="4" color="#fff"/>
+        <graphic type="line" startX="125" startY="70" endX="175" endY="60" lineWidth="4" color="#fff" />
     </cell>
     <cell name="marcato" char="articulationMarcato">
         <code value="159" />
@@ -506,7 +506,7 @@
         <graphic type="background" color="#7f462c" cells="3" />
         <graphic type="text" color="#bfa295" align="right" size="50" left="100" top="70" content="&#xe1d3;" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="50" content="&#xe220;" />
-        <graphic type="line" startX="150" startY="50" endX="250" endY="50" lineWidth="2" color="#fff"/>
+        <graphic type="line" startX="150" startY="50" endX="250" endY="50" lineWidth="2" color="#fff" />
     </cell>
     <cell name="one hundred twenty eighth note tremolo" char="articulationTremoloContinueOneHundredTwentyEighth">
         <code value="794" />
@@ -515,7 +515,7 @@
         <graphic type="background" color="#7f462c" cells="3" />
         <graphic type="text" color="#bfa295" align="right" size="50" left="100" top="80" content="&#xe1d3;" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="60" content="&#xe224;" />
-        <graphic type="line" startX="150" startY="50" endX="250" endY="50" lineWidth="2" color="#fff"/>
+        <graphic type="line" startX="150" startY="50" endX="250" endY="50" lineWidth="2" color="#fff" />
     </cell>
     <cell name="sixteenth note tremolo" char="articulationTremoloContinueSixteenth">
         <code value="794" />
@@ -524,7 +524,7 @@
         <graphic type="background" color="#7f462c" cells="3" />
         <graphic type="text" color="#bfa295" align="right" size="50" left="100" top="70" content="&#xe1d3;" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="50" content="&#xe221;" />
-        <graphic type="line" startX="150" startY="50" endX="250" endY="50" lineWidth="2" color="#fff"/>
+        <graphic type="line" startX="150" startY="50" endX="250" endY="50" lineWidth="2" color="#fff" />
     </cell>
     <cell name="sixty fourth note tremolo" char="articulationTremoloContinueSixtyFourth">
         <code value="794" />
@@ -533,7 +533,7 @@
         <graphic type="background" color="#7f462c" cells="3" />
         <graphic type="text" color="#bfa295" align="right" size="50" left="100" top="80" content="&#xe1d3;" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="60" content="&#xe223;" />
-        <graphic type="line" startX="150" startY="50" endX="250" endY="50" lineWidth="2" color="#fff"/>
+        <graphic type="line" startX="150" startY="50" endX="250" endY="50" lineWidth="2" color="#fff" />
     </cell>
     <cell name="thirty second note tremolo" char="articulationTremoloContinueThirtySecond">
         <code value="794" />
@@ -542,7 +542,7 @@
         <graphic type="background" color="#7f462c" cells="3" />
         <graphic type="text" color="#bfa295" align="right" size="50" left="100" top="70" content="&#xe1d3;" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="50" left="100" top="50" content="&#xe222;" />
-        <graphic type="line" startX="150" startY="50" endX="250" endY="50" lineWidth="2" color="#fff"/>
+        <graphic type="line" startX="150" startY="50" endX="250" endY="50" lineWidth="2" color="#fff" />
     </cell>
     <cell name="eighth note tremolo" char="articulationTremoloEighth">
         <code value="794" />
@@ -601,7 +601,7 @@
     <cell name="trill with flatted note" char="articulationTrillFlat">
         <code value="60" />
         <code value="154" />
-        <graphic type="background" color="#7f462c" cells="2"/>
+        <graphic type="background" color="#7f462c" cells="2" />
         <graphic type="text" color="#fff" align="center" size="50" left="100" top="40" content="&#xe260;" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="60" left="100" top="80" content="&#xe566;" />
     </cell>
@@ -609,27 +609,27 @@
         <code value="154" />
         <code value="1439" />
         <code value="1439" />
-        <graphic type="background" color="#7f462c" cells="3"/>
+        <graphic type="background" color="#7f462c" cells="3" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="150" top="60" content="&#xe566;&#xe59d;&#xe59d;&#xe59d;&#xe59d;&#xe59e;" />
     </cell>
     <cell name="trill" char="articulationTrillLongEnd">
         <code value="1162" />
         <code value="1439" />
-        <graphic type="background" color="#7f462c" cells="2"/>
+        <graphic type="background" color="#7f462c" cells="2" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="60" left="100" top="40" content="&#xe566;&#xe59d;&#xe59d;&#xe59e;" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="30" left="100" top="80" content="END" />
     </cell>
     <cell name="trill with natural note" char="articulationTrillNatural">
         <code value="42" />
         <code value="154" />
-        <graphic type="background" color="#7f462c" cells="2"/>
+        <graphic type="background" color="#7f462c" cells="2" />
         <graphic type="text" color="#fff" align="center" size="50" left="100" top="35" content="&#xe261;" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="60" left="100" top="80" content="&#xe566;" />
     </cell>
     <cell name="trill with sharped note" char="articulationTrillSharp">
         <code value="37" />
         <code value="154" />
-        <graphic type="background" color="#7f462c" cells="2"/>
+        <graphic type="background" color="#7f462c" cells="2" />
         <graphic type="text" color="#fff" align="center" size="50" left="100" top="35" content="&#xe262;" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="60" left="100" top="80" content="&#xe566;" />
     </cell>
@@ -844,18 +844,18 @@
         <code value="959" />
         <code value="949" />
         <graphic type="background" color="#000" cells="2" />
-        <graphic type="line" startX="50" startY="60" endX="150" endY="60" lineWidth="2" color="#fff"/>
-        <graphic type="line" startX="50" startY="60" endX="50" endY="80" lineWidth="2" color="#fff"/>
-        <graphic type="line" startX="150" startY="60" endX="150" endY="80" lineWidth="2" color="#fff"/>
+        <graphic type="line" startX="50" startY="60" endX="150" endY="60" lineWidth="2" color="#fff" />
+        <graphic type="line" startX="50" startY="60" endX="50" endY="80" lineWidth="2" color="#fff" />
+        <graphic type="line" startX="150" startY="60" endX="150" endY="80" lineWidth="2" color="#fff" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="20" left="100" top="40" font="sans-serif" content="BEGIN" />
     </cell>
     <cell name="end bracket above" char="bracketAboveEnd">
         <code value="934" />
         <code value="950" />
         <graphic type="background" color="#000" cells="2" />
-        <graphic type="line" startX="50" startY="60" endX="150" endY="60" lineWidth="2" color="#fff"/>
-        <graphic type="line" startX="50" startY="60" endX="50" endY="80" lineWidth="2" color="#fff"/>
-        <graphic type="line" startX="150" startY="60" endX="150" endY="80" lineWidth="2" color="#fff"/>
+        <graphic type="line" startX="50" startY="60" endX="150" endY="60" lineWidth="2" color="#fff" />
+        <graphic type="line" startX="50" startY="60" endX="50" endY="80" lineWidth="2" color="#fff" />
+        <graphic type="line" startX="150" startY="60" endX="150" endY="80" lineWidth="2" color="#fff" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="20" left="100" top="40" font="sans-serif" content="END" />
     </cell>
     <cell name="begin secondary bracket above" char="bracketAboveSecondaryBegin">
@@ -863,12 +863,12 @@
         <code value="959" />
         <code value="949" />
         <graphic type="background" color="#000" cells="3" />
-        <graphic type="line" startX="100" startY="50" endX="200" endY="50" lineWidth="2" color="#fff"/>
-        <graphic type="line" startX="100" startY="50" endX="100" endY="65" lineWidth="2" color="#fff"/>
-        <graphic type="line" startX="200" startY="50" endX="200" endY="65" lineWidth="2" color="#fff"/>
-        <graphic type="line" startX="80" startY="70" endX="220" endY="70" lineWidth="2" color="#999"/>
-        <graphic type="line" startX="80" startY="70" endX="80" endY="80" lineWidth="2" color="#999"/>
-        <graphic type="line" startX="220" startY="70" endX="220" endY="80" lineWidth="2" color="#999"/>
+        <graphic type="line" startX="100" startY="50" endX="200" endY="50" lineWidth="2" color="#fff" />
+        <graphic type="line" startX="100" startY="50" endX="100" endY="65" lineWidth="2" color="#fff" />
+        <graphic type="line" startX="200" startY="50" endX="200" endY="65" lineWidth="2" color="#fff" />
+        <graphic type="line" startX="80" startY="70" endX="220" endY="70" lineWidth="2" color="#999" />
+        <graphic type="line" startX="80" startY="70" endX="80" endY="80" lineWidth="2" color="#999" />
+        <graphic type="line" startX="220" startY="70" endX="220" endY="80" lineWidth="2" color="#999" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="20" left="150" top="30" font="sans-serif" content="BEGIN" />
     </cell>
     <cell name="end secondary bracket above" char="bracketAboveSecondaryEnd">
@@ -876,12 +876,12 @@
         <code value="950" />
         <code value="950" />
         <graphic type="background" color="#000" cells="3" />
-        <graphic type="line" startX="100" startY="50" endX="200" endY="50" lineWidth="2" color="#fff"/>
-        <graphic type="line" startX="100" startY="50" endX="100" endY="65" lineWidth="2" color="#fff"/>
-        <graphic type="line" startX="200" startY="50" endX="200" endY="65" lineWidth="2" color="#fff"/>
-        <graphic type="line" startX="80" startY="70" endX="220" endY="70" lineWidth="2" color="#999"/>
-        <graphic type="line" startX="80" startY="70" endX="80" endY="80" lineWidth="2" color="#999"/>
-        <graphic type="line" startX="220" startY="70" endX="220" endY="80" lineWidth="2" color="#999"/>
+        <graphic type="line" startX="100" startY="50" endX="200" endY="50" lineWidth="2" color="#fff" />
+        <graphic type="line" startX="100" startY="50" endX="100" endY="65" lineWidth="2" color="#fff" />
+        <graphic type="line" startX="200" startY="50" endX="200" endY="65" lineWidth="2" color="#fff" />
+        <graphic type="line" startX="80" startY="70" endX="220" endY="70" lineWidth="2" color="#999" />
+        <graphic type="line" startX="80" startY="70" endX="80" endY="80" lineWidth="2" color="#999" />
+        <graphic type="line" startX="220" startY="70" endX="220" endY="80" lineWidth="2" color="#999" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="20" left="150" top="30" font="sans-serif" content="END" />
     </cell>
     <cell name="begin dotted bracket above" char="bracketAboveDottedBegin">
@@ -889,9 +889,9 @@
         <code value="949" />
         <code value="949" />
         <graphic type="background" color="#000" cells="3" />
-        <graphic type="line" startX="80" startY="60" endX="220" endY="60" lineWidth="2" dashPattern="3,3" color="#fff"/>
-        <graphic type="line" startX="80" startY="60" endX="80" endY="80" lineWidth="2" dashPattern="3,3" color="#fff"/>
-        <graphic type="line" startX="220" startY="60" endX="220" endY="80" lineWidth="2" dashPattern="3,3" color="#fff"/>
+        <graphic type="line" startX="80" startY="60" endX="220" endY="60" lineWidth="2" dashPattern="3,3" color="#fff" />
+        <graphic type="line" startX="80" startY="60" endX="80" endY="80" lineWidth="2" dashPattern="3,3" color="#fff" />
+        <graphic type="line" startX="220" startY="60" endX="220" endY="80" lineWidth="2" dashPattern="3,3" color="#fff" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="20" left="150" top="40" font="sans-serif" content="BEGIN" />
     </cell>
     <cell name="end dotted bracket above" char="bracketAboveDottedEnd">
@@ -899,35 +899,35 @@
         <code value="934" />
         <code value="950" />
         <graphic type="background" color="#000" cells="3" />
-        <graphic type="line" startX="80" startY="60" endX="220" endY="60" lineWidth="2" dashPattern="3,3" color="#fff"/>
-        <graphic type="line" startX="80" startY="60" endX="80" endY="80" lineWidth="2" dashPattern="3,3" color="#fff"/>
-        <graphic type="line" startX="220" startY="60" endX="220" endY="80" lineWidth="2" dashPattern="3,3" color="#fff"/>
+        <graphic type="line" startX="80" startY="60" endX="220" endY="60" lineWidth="2" dashPattern="3,3" color="#fff" />
+        <graphic type="line" startX="80" startY="60" endX="80" endY="80" lineWidth="2" dashPattern="3,3" color="#fff" />
+        <graphic type="line" startX="220" startY="60" endX="220" endY="80" lineWidth="2" dashPattern="3,3" color="#fff" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="20" left="150" top="40" font="sans-serif" content="END" />
     </cell>
     <cell name="end open bracket above" char="bracketAboveOpenEnd">
         <code value="934" />
         <code value="939" />
         <graphic type="background" color="#000" cells="2" />
-        <graphic type="line" startX="50" startY="60" endX="150" endY="60" lineWidth="2" color="#fff"/>
-        <graphic type="line" startX="50" startY="60" endX="50" endY="80" lineWidth="2" color="#fff"/>
+        <graphic type="line" startX="50" startY="60" endX="150" endY="60" lineWidth="2" color="#fff" />
+        <graphic type="line" startX="50" startY="60" endX="50" endY="80" lineWidth="2" color="#fff" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="20" left="100" top="40" font="sans-serif" content="END" />
     </cell>
     <cell name="begin bracket below" char="bracketBelowBegin">
         <code value="959" />
         <code value="939" />
         <graphic type="background" color="#000" cells="2" />
-        <graphic type="line" startX="50" startY="80" endX="150" endY="80" lineWidth="1" color="#fff"/>
-        <graphic type="line" startX="50" startY="60" endX="50" endY="80" lineWidth="1" color="#fff"/>
-        <graphic type="line" startX="150" startY="60" endX="150" endY="80" lineWidth="1" color="#fff"/>
+        <graphic type="line" startX="50" startY="80" endX="150" endY="80" lineWidth="1" color="#fff" />
+        <graphic type="line" startX="50" startY="60" endX="50" endY="80" lineWidth="1" color="#fff" />
+        <graphic type="line" startX="150" startY="60" endX="150" endY="80" lineWidth="1" color="#fff" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="20" left="100" top="40" font="sans-serif" content="BEGIN" />
     </cell>
     <cell name="end bracket below" char="bracketBelowEnd">
         <code value="944" />
         <code value="950" />
         <graphic type="background" color="#000" cells="2" />
-        <graphic type="line" startX="50" startY="80" endX="150" endY="80" lineWidth="1" color="#fff"/>
-        <graphic type="line" startX="50" startY="60" endX="50" endY="80" lineWidth="1" color="#fff"/>
-        <graphic type="line" startX="150" startY="60" endX="150" endY="80" lineWidth="1" color="#fff"/>
+        <graphic type="line" startX="50" startY="80" endX="150" endY="80" lineWidth="1" color="#fff" />
+        <graphic type="line" startX="50" startY="60" endX="50" endY="80" lineWidth="1" color="#fff" />
+        <graphic type="line" startX="150" startY="60" endX="150" endY="80" lineWidth="1" color="#fff" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="20" left="100" top="40" font="sans-serif" content="END" />
     </cell>
     <cell name="begin secondary bracket below" char="bracketBelowSecondaryBegin">
@@ -935,12 +935,12 @@
         <code value="959" />
         <code value="939" />
         <graphic type="background" color="#000" cells="3" />
-        <graphic type="line" startX="100" startY="80" endX="200" endY="80" lineWidth="1" color="#fff"/>
-        <graphic type="line" startX="100" startY="80" endX="100" endY="65" lineWidth="1" color="#fff"/>
-        <graphic type="line" startX="200" startY="80" endX="200" endY="65" lineWidth="1" color="#fff"/>
-        <graphic type="line" startX="80" startY="60" endX="220" endY="60" lineWidth="1" color="#999"/>
-        <graphic type="line" startX="80" startY="60" endX="80" endY="50" lineWidth="1" color="#999"/>
-        <graphic type="line" startX="220" startY="60" endX="220" endY="50" lineWidth="1" color="#999"/>
+        <graphic type="line" startX="100" startY="80" endX="200" endY="80" lineWidth="1" color="#fff" />
+        <graphic type="line" startX="100" startY="80" endX="100" endY="65" lineWidth="1" color="#fff" />
+        <graphic type="line" startX="200" startY="80" endX="200" endY="65" lineWidth="1" color="#fff" />
+        <graphic type="line" startX="80" startY="60" endX="220" endY="60" lineWidth="1" color="#999" />
+        <graphic type="line" startX="80" startY="60" endX="80" endY="50" lineWidth="1" color="#999" />
+        <graphic type="line" startX="220" startY="60" endX="220" endY="50" lineWidth="1" color="#999" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="20" left="150" top="30" font="sans-serif" content="BEGIN" />
     </cell>
     <cell name="end secondary bracket below" char="bracketBelowSecondaryEnd">
@@ -948,12 +948,12 @@
         <code value="950" />
         <code value="950" />
         <graphic type="background" color="#000" cells="3" />
-        <graphic type="line" startX="100" startY="80" endX="200" endY="80" lineWidth="1" color="#fff"/>
-        <graphic type="line" startX="100" startY="80" endX="100" endY="65" lineWidth="1" color="#fff"/>
-        <graphic type="line" startX="200" startY="80" endX="200" endY="65" lineWidth="1" color="#fff"/>
-        <graphic type="line" startX="80" startY="60" endX="220" endY="60" lineWidth="1" color="#999"/>
-        <graphic type="line" startX="80" startY="60" endX="80" endY="50" lineWidth="1" color="#999"/>
-        <graphic type="line" startX="220" startY="60" endX="220" endY="50" lineWidth="1" color="#999"/>
+        <graphic type="line" startX="100" startY="80" endX="200" endY="80" lineWidth="1" color="#fff" />
+        <graphic type="line" startX="100" startY="80" endX="100" endY="65" lineWidth="1" color="#fff" />
+        <graphic type="line" startX="200" startY="80" endX="200" endY="65" lineWidth="1" color="#fff" />
+        <graphic type="line" startX="80" startY="60" endX="220" endY="60" lineWidth="1" color="#999" />
+        <graphic type="line" startX="80" startY="60" endX="80" endY="50" lineWidth="1" color="#999" />
+        <graphic type="line" startX="220" startY="60" endX="220" endY="50" lineWidth="1" color="#999" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="20" left="150" top="30" font="sans-serif" content="END" />
     </cell>
     <cell name="begin dotted bracket below" char="bracketBelowDottedBegin">
@@ -961,9 +961,9 @@
         <code value="939" />
         <code value="939" />
         <graphic type="background" color="#000" cells="3" />
-        <graphic type="line" startX="80" startY="80" endX="220" endY="80" lineWidth="1" dashPattern="3,3" color="#fff"/>
-        <graphic type="line" startX="80" startY="60" endX="80" endY="80" lineWidth="1" dashPattern="3,3" color="#fff"/>
-        <graphic type="line" startX="220" startY="60" endX="220" endY="80" lineWidth="1" dashPattern="3,3" color="#fff"/>
+        <graphic type="line" startX="80" startY="80" endX="220" endY="80" lineWidth="1" dashPattern="3,3" color="#fff" />
+        <graphic type="line" startX="80" startY="60" endX="80" endY="80" lineWidth="1" dashPattern="3,3" color="#fff" />
+        <graphic type="line" startX="220" startY="60" endX="220" endY="80" lineWidth="1" dashPattern="3,3" color="#fff" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="20" left="150" top="40" font="sans-serif" content="BEGIN" />
     </cell>
     <cell name="end dotted bracket below" char="bracketBelowDottedEnd">
@@ -971,17 +971,17 @@
         <code value="944" />
         <code value="950" />
         <graphic type="background" color="#000" cells="3" />
-        <graphic type="line" startX="80" startY="80" endX="220" endY="80" lineWidth="1" dashPattern="3,3" color="#fff"/>
-        <graphic type="line" startX="80" startY="60" endX="80" endY="80" lineWidth="1" dashPattern="3,3" color="#fff"/>
-        <graphic type="line" startX="220" startY="60" endX="220" endY="80" lineWidth="1" dashPattern="3,3" color="#fff"/>
+        <graphic type="line" startX="80" startY="80" endX="220" endY="80" lineWidth="1" dashPattern="3,3" color="#fff" />
+        <graphic type="line" startX="80" startY="60" endX="80" endY="80" lineWidth="1" dashPattern="3,3" color="#fff" />
+        <graphic type="line" startX="220" startY="60" endX="220" endY="80" lineWidth="1" dashPattern="3,3" color="#fff" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="20" left="150" top="40" font="sans-serif" content="END" />
     </cell>
     <cell name="end open bracket below" char="bracketBelowOpenEnd">
         <code value="944" />
         <code value="949" />
         <graphic type="background" color="#000" cells="2" />
-        <graphic type="line" startX="50" startY="80" endX="150" endY="80" lineWidth="1" color="#fff"/>
-        <graphic type="line" startX="50" startY="60" endX="50" endY="80" lineWidth="1" color="#fff"/>
+        <graphic type="line" startX="50" startY="80" endX="150" endY="80" lineWidth="1" color="#fff" />
+        <graphic type="line" startX="50" startY="60" endX="50" endY="80" lineWidth="1" color="#fff" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="20" left="100" top="40" font="sans-serif" content="END" />
     </cell>
     <cell name="circle" char="chordSymbolCircle">
@@ -1120,9 +1120,9 @@
     <cell name="bracket barre" char="directionBarreBracket">
         <code value="864" />
         <graphic type="background" color="#000" />
-        <graphic type="line" startX="40" startY="20" endX="60" endY="20" lineWidth="3" color="#fff"/>
-        <graphic type="line" startX="40" startY="20" endX="40" endY="80" lineWidth="3" color="#fff"/>
-        <graphic type="line" startX="40" startY="80" endX="60" endY="80" lineWidth="3" color="#fff"/>
+        <graphic type="line" startX="40" startY="20" endX="60" endY="20" lineWidth="3" color="#fff" />
+        <graphic type="line" startX="40" startY="20" endX="40" endY="80" lineWidth="3" color="#fff" />
+        <graphic type="line" startX="40" startY="80" endX="60" endY="80" lineWidth="3" color="#fff" />
     </cell>
     <cell name="full barre" char="directionBarreFull">
         <code value="1295" />
@@ -1565,8 +1565,8 @@
         <code value="567" />
         <code value="239" />
         <graphic type="background" color="#0ff" cells="3" />
-        <graphic type="line" startX="250" startY="55" endX="50" endY="65" lineWidth="2" color="#000"/>
-        <graphic type="line" startX="50" startY="65" endX="250" endY="75" lineWidth="2" color="#000"/>
+        <graphic type="line" startX="250" startY="55" endX="50" endY="65" lineWidth="2" color="#000" />
+        <graphic type="line" startX="50" startY="65" endX="250" endY="75" lineWidth="2" color="#000" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="150" top="40" font="sans-serif" content="BEGIN" />
         <graphic type="text" color="#888" align="center" baseline="middle" size="40" left="265" top="80" content="&#xe113;" />
     </cell>
@@ -1574,8 +1574,8 @@
         <code value="162" />
         <code value="567" />
         <graphic type="background" color="#0ff" cells="2" />
-        <graphic type="line" startX="150" startY="55" endX="50" endY="65" lineWidth="2" color="#000"/>
-        <graphic type="line" startX="50" startY="65" endX="150" endY="75" lineWidth="2" color="#000"/>
+        <graphic type="line" startX="150" startY="55" endX="50" endY="65" lineWidth="2" color="#000" />
+        <graphic type="line" startX="50" startY="65" endX="150" endY="75" lineWidth="2" color="#000" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="100" top="40" font="sans-serif" content="BEGIN" />
     </cell>
     <cell name="end crescendo long" char="dynamicCrescendoEndLong">
@@ -1583,8 +1583,8 @@
         <code value="551" />
         <code value="239" />
         <graphic type="background" color="#0ff" cells="3" />
-        <graphic type="line" startX="250" startY="55" endX="50" endY="65" lineWidth="2" color="#000"/>
-        <graphic type="line" startX="50" startY="65" endX="250" endY="75" lineWidth="2" color="#000"/>
+        <graphic type="line" startX="250" startY="55" endX="50" endY="65" lineWidth="2" color="#000" />
+        <graphic type="line" startX="50" startY="65" endX="250" endY="75" lineWidth="2" color="#000" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="150" top="40" font="sans-serif" content="END" />
         <graphic type="text" color="#888" align="center" baseline="middle" size="40" left="265" top="80" content="&#xe113;" />
     </cell>
@@ -1592,8 +1592,8 @@
         <code value="162" />
         <code value="551" />
         <graphic type="background" color="#0ff" cells="2" />
-        <graphic type="line" startX="150" startY="55" endX="50" endY="65" lineWidth="2" color="#000"/>
-        <graphic type="line" startX="50" startY="65" endX="150" endY="75" lineWidth="2" color="#000"/>
+        <graphic type="line" startX="150" startY="55" endX="50" endY="65" lineWidth="2" color="#000" />
+        <graphic type="line" startX="50" startY="65" endX="150" endY="75" lineWidth="2" color="#000" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="100" top="40" font="sans-serif" content="END" />
     </cell>
     <cell name="begin diminuendo long" char="dynamicDiminuendoBeginLong">
@@ -1601,8 +1601,8 @@
         <code value="568" />
         <code value="239" />
         <graphic type="background" color="#0ff" cells="3" />
-        <graphic type="line" startX="50" startY="55" endX="250" endY="65" lineWidth="2" color="#000"/>
-        <graphic type="line" startX="250" startY="65" endX="50" endY="75" lineWidth="2" color="#000"/>
+        <graphic type="line" startX="50" startY="55" endX="250" endY="65" lineWidth="2" color="#000" />
+        <graphic type="line" startX="250" startY="65" endX="50" endY="75" lineWidth="2" color="#000" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="150" top="40" font="sans-serif" content="BEGIN" />
         <graphic type="text" color="#888" align="center" baseline="middle" size="40" left="265" top="80" content="&#xe113;" />
     </cell>
@@ -1610,8 +1610,8 @@
         <code value="162" />
         <code value="568" />
         <graphic type="background" color="#0ff" cells="2" />
-        <graphic type="line" startX="50" startY="55" endX="150" endY="65" lineWidth="2" color="#000"/>
-        <graphic type="line" startX="150" startY="65" endX="50" endY="75" lineWidth="2" color="#000"/>
+        <graphic type="line" startX="50" startY="55" endX="150" endY="65" lineWidth="2" color="#000" />
+        <graphic type="line" startX="150" startY="65" endX="50" endY="75" lineWidth="2" color="#000" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="100" top="40" font="sans-serif" content="BEGIN" />
     </cell>
     <cell name="end diminuendo long" char="dynamicDiminuendoEndLong">
@@ -1619,8 +1619,8 @@
         <code value="552" />
         <code value="239" />
         <graphic type="background" color="#0ff" cells="3" />
-        <graphic type="line" startX="50" startY="55" endX="250" endY="65" lineWidth="2" color="#000"/>
-        <graphic type="line" startX="250" startY="65" endX="50" endY="75" lineWidth="2" color="#000"/>
+        <graphic type="line" startX="50" startY="55" endX="250" endY="65" lineWidth="2" color="#000" />
+        <graphic type="line" startX="250" startY="65" endX="50" endY="75" lineWidth="2" color="#000" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="150" top="40" font="sans-serif" content="END" />
         <graphic type="text" color="#888" align="center" baseline="middle" size="40" left="265" top="80" content="&#xe113;" />
     </cell>
@@ -1628,8 +1628,8 @@
         <code value="162" />
         <code value="552" />
         <graphic type="background" color="#0ff" cells="2" />
-        <graphic type="line" startX="50" startY="55" endX="150" endY="65" lineWidth="2" color="#000"/>
-        <graphic type="line" startX="150" startY="65" endX="50" endY="75" lineWidth="2" color="#000"/>
+        <graphic type="line" startX="50" startY="55" endX="150" endY="65" lineWidth="2" color="#000" />
+        <graphic type="line" startX="150" startY="65" endX="50" endY="75" lineWidth="2" color="#000" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="100" top="40" font="sans-serif" content="END" />
     </cell>
     <cell name="forte long" char="dynamicForteLong">
@@ -1751,6 +1751,16 @@
         <graphic type="background" color="#0ff" cells="5" />
         <graphic type="text" color="#000" align="center" baseline="middle" font="serif" style="italic" size="50" left="250" top="50" content="dim." />
     </cell>
+    <cell name="three syllable elision" char="elisionThreeSyllables">
+        <code value="1476" />
+        <graphic type="background" color="#ff0" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="3 SYL" rotateCCW="true" />
+    </cell>
+    <cell name="two syllable elision" char="elisionTwoSyllables">
+        <code value="1466" />
+        <graphic type="background" color="#ff0" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="25" left="50" top="50" content="2 SYL" rotateCCW="true" />
+    </cell>
     <cell name="figure zero" char="figure0">
         <code value="248" />
         <graphic type="background" color="#ff0" />
@@ -1835,13 +1845,13 @@
         <code value="1539" />
         <graphic type="background" color="#7f462c" />
         <graphic type="text" color="#bfa295" align="center" baseline="middle" size="80" left="30" top="60" content="&#xea51;" />
-        <graphic type="line" startX="50" startY="50" endX="80" endY="50" lineWidth="2" color="#fff"/>
+        <graphic type="line" startX="50" startY="50" endX="80" endY="50" lineWidth="2" color="#fff" />
     </cell>
     <cell name="fingering end continuation" char="fingeringEndContinuation">
         <code value="1544" />
         <graphic type="background" color="#7f462c" />
         <graphic type="text" color="#bfa295" align="center" baseline="middle" size="80" left="70" top="60" content="&#xea51;" />
-        <graphic type="line" startX="20" startY="50" endX="50" endY="50" lineWidth="2" color="#fff"/>
+        <graphic type="line" startX="20" startY="50" endX="50" endY="50" lineWidth="2" color="#fff" />
     </cell>
     <cell name="omit first fingering" char="fingeringOmitFirst">
         <code value="844" />
@@ -2023,7 +2033,7 @@
     <cell name="ipa downstep" char="ipaDownstep">
         <code value="1095" />
         <code value="1033" />
-        <graphic type="background" color="#fff" cells="2"/>
+        <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x2193;" />
     </cell>
     <cell name="ipa ejective diacritic" char="ipaEjectiveDiacritic">
@@ -2100,13 +2110,13 @@
     <cell name="ipa global fall" char="ipaGlobalFall">
         <code value="1095" />
         <code value="1048" />
-        <graphic type="background" color="#fff" cells="2"/>
+        <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x2198;" />
     </cell>
     <cell name="ipa global rise" char="ipaGlobalRise">
         <code value="1095" />
         <code value="1068" />
-        <graphic type="background" color="#fff" cells="2"/>
+        <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x2197;" />
     </cell>
     <cell name="ipa half-long suprasegmental" char="ipaHalfLongSuprasegmental">
@@ -2345,7 +2355,7 @@
     <cell name="ipa rewrite arrow" char="ipaRewriteArrow">
         <code value="1095" />
         <code value="1079" />
-        <graphic type="background" color="#fff" cells="2"/>
+        <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x2192;" />
     </cell>
     <cell name="ipa rhoticity diacritic" char="ipaRhoticityDiacritic">
@@ -2399,25 +2409,25 @@
     <cell name="ipa rounded back open vowel" char="ipaRoundedBackOpenVowel">
         <code value="1054" />
         <code value="1042" />
-        <graphic type="background" color="#fff" cells="2"/>
+        <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0252;" />
     </cell>
     <cell name="ipa rounded central close-mid vowel" char="ipaRoundedCentralCloseMidVowel">
         <code value="1048" />
         <code value="1079" />
-        <graphic type="background" color="#fff" cells="2"/>
+        <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0275;" />
     </cell>
     <cell name="ipa rounded central close vowel" char="ipaRoundedCentralCloseVowel">
         <code value="1048" />
         <code value="1085" />
-        <graphic type="background" color="#fff" cells="2"/>
+        <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0289;" />
     </cell>
     <cell name="ipa rounded central open-mid vowel" char="ipaRoundedCentralOpenMidVowel">
         <code value="1056" />
         <code value="1062" />
-        <graphic type="background" color="#fff" cells="2"/>
+        <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x025e;" />
     </cell>
     <cell name="ipa rounded front close-mid vowel" char="ipaRoundedFrontCloseMidVowel">
@@ -2438,7 +2448,7 @@
     <cell name="ipa rounded front open vowel" char="ipaRoundedFrontOpenVowel">
         <code value="1057" />
         <code value="1091" />
-        <graphic type="background" color="#fff" cells="2"/>
+        <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0276;" />
     </cell>
     <cell name="ipa rounded near-back near-close vowel" char="ipaRoundedNearBackNearCloseVowel">
@@ -2503,13 +2513,13 @@
     <cell name="ipa unrounded central close-mid vowel" char="ipaUnroundedCentralCloseMidVowel">
         <code value="1054" />
         <code value="1069" />
-        <graphic type="background" color="#fff" cells="2"/>
+        <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0258;" />
     </cell>
     <cell name="ipa unrounded central close vowel" char="ipaUnroundedCentralCloseVowel">
         <code value="1048" />
         <code value="1073" />
-        <graphic type="background" color="#fff" cells="2"/>
+        <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x0268;" />
     </cell>
     <cell name="ipa unrounded central open-mid vowel" char="ipaUnroundedCentralOpenMidVowel">
@@ -2727,7 +2737,7 @@
     <cell name="ipa upset" char="ipaUpset">
         <code value="1095" />
         <code value="1036" />
-        <graphic type="background" color="#fff" cells="2"/>
+        <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#c00" align="center" baseline="middle" size="50" left="100" top="50" content="&#x2191;" />
     </cell>
     <cell name="ipa velarized diacritic" char="ipaVelarizedDiacritic">
@@ -3141,36 +3151,36 @@
         <code value="339" />
         <code value="339" />
         <graphic type="background" color="#ff0" cells="2" />
-        <graphic type="line" startX="50" startY="65" endX="150" endY="65" lineWidth="2" color="#000"/>
+        <graphic type="line" startX="50" startY="65" endX="150" endY="65" lineWidth="2" color="#000" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="100" top="40" font="sans-serif" content="BEGIN" />
     </cell>
     <cell name="end continuation line" char="lineContinuationEnd">
         <code value="162" />
         <code value="339" />
         <graphic type="background" color="#ff0" cells="2" />
-        <graphic type="line" startX="50" startY="65" endX="150" endY="65" lineWidth="2" color="#000"/>
+        <graphic type="line" startX="50" startY="65" endX="150" endY="65" lineWidth="2" color="#000" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="100" top="40" font="sans-serif" content="END" />
     </cell>
     <cell name="begin second continuation line" char="lineContinuationSecondBegin">
         <code value="345" />
         <code value="345" />
         <graphic type="background" color="#ff0" cells="2" />
-        <graphic type="line" startX="50" startY="65" endX="150" endY="65" lineWidth="2" color="#000"/>
-        <graphic type="line" startX="50" startY="75" endX="150" endY="75" lineWidth="2" color="#000"/>
+        <graphic type="line" startX="50" startY="65" endX="150" endY="65" lineWidth="2" color="#000" />
+        <graphic type="line" startX="50" startY="75" endX="150" endY="75" lineWidth="2" color="#000" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="100" top="40" font="sans-serif" content="BEGIN" />
     </cell>
     <cell name="end second continuation line" char="lineContinuationSecondEnd">
         <code value="162" />
         <code value="345" />
         <graphic type="background" color="#ff0" cells="2" />
-        <graphic type="line" startX="50" startY="65" endX="150" endY="65" lineWidth="2" color="#000"/>
-        <graphic type="line" startX="50" startY="75" endX="150" endY="75" lineWidth="2" color="#000"/>
+        <graphic type="line" startX="50" startY="65" endX="150" endY="65" lineWidth="2" color="#000" />
+        <graphic type="line" startX="50" startY="75" endX="150" endY="75" lineWidth="2" color="#000" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="100" top="40" font="sans-serif" content="END" />
     </cell>
     <cell name="horizontal line" char="lineHorizontal">
         <code value="451" />
         <graphic type="background" color="#ff0" />
-        <graphic type="line" startX="20" startY="50" endX="80" endY="50"  lineWidth="2" color="#000"/>
+        <graphic type="line" startX="20" startY="50" endX="80" endY="50" lineWidth="2" color="#000" />
     </cell>
     <cell name="receive line from staff" char="lineStaffReceive">
         <code value="1146" />
@@ -3187,11 +3197,11 @@
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="SEND" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="LINE" />
     </cell>
-    
+
     <cell name="long appoggiatura" char="noteAppoggiaturaLong">
         <code value="834" />
         <code value="153" />
-        <graphic type="background" color="#f00" cells="2"/>
+        <graphic type="background" color="#f00" cells="2" />
         <graphic type="text" color="#fff" align="center" size="47" left="100" top="55" content="&#xe562;" />
     </cell>
     <cell name="short appoggiatura" char="noteAppoggiaturaShort">
@@ -3207,56 +3217,56 @@
     <cell name="note coincidence indicator" char="noteCoincidence">
         <code value="959" />
         <code value="950" />
-        <graphic type="background" color="#f00" cells="2"/>
+        <graphic type="background" color="#f00" cells="2" />
         <graphic type="text" color="#fff" align="center" size="40" left="100" top="50" content="&#xe1d3;" />
         <graphic type="text" color="#fff" align="center" size="40" left="100" top="50" content="&#xe1d4;" />
     </cell>
     <cell name="A double whole note" char="noteDoubleWholeA">
         <code value="33" />
         <code value="75" />
-        <graphic type="background" color="#f00" cells="2"/>
+        <graphic type="background" color="#f00" cells="2" />
         <graphic type="text" color="#fff" align="right" size="50" left="130" top="80" content="&#xe1d0;" />
         <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="A" />
     </cell>
     <cell name="B double whole note" char="noteDoubleWholeB">
         <code value="41" />
         <code value="75" />
-        <graphic type="background" color="#f00" cells="2"/>
+        <graphic type="background" color="#f00" cells="2" />
         <graphic type="text" color="#fff" align="right" size="50" left="130" top="80" content="&#xe1d0;" />
         <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="B" />
     </cell>
     <cell name="C double whole note" char="noteDoubleWholeC">
         <code value="89" />
         <code value="75" />
-        <graphic type="background" color="#f00" cells="2"/>
+        <graphic type="background" color="#f00" cells="2" />
         <graphic type="text" color="#fff" align="right" size="50" left="130" top="80" content="&#xe1d0;" />
         <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="C" />
     </cell>
     <cell name="D double whole note" char="noteDoubleWholeD">
         <code value="90" />
         <code value="75" />
-        <graphic type="background" color="#f00" cells="2"/>
+        <graphic type="background" color="#f00" cells="2" />
         <graphic type="text" color="#fff" align="right" size="50" left="130" top="80" content="&#xe1d0;" />
         <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="D" />
     </cell>
     <cell name="E double whole note" char="noteDoubleWholeE">
         <code value="38" />
         <code value="75" />
-        <graphic type="background" color="#f00" cells="2"/>
+        <graphic type="background" color="#f00" cells="2" />
         <graphic type="text" color="#fff" align="right" size="50" left="130" top="80" content="&#xe1d0;" />
         <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="E" />
     </cell>
     <cell name="F double whole note" char="noteDoubleWholeF">
         <code value="61" />
         <code value="75" />
-        <graphic type="background" color="#f00" cells="2"/>
+        <graphic type="background" color="#f00" cells="2" />
         <graphic type="text" color="#fff" align="right" size="50" left="130" top="80" content="&#xe1d0;" />
         <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="F" />
     </cell>
     <cell name="G double whole note" char="noteDoubleWholeG">
         <code value="40" />
         <code value="75" />
-        <graphic type="background" color="#f00" cells="2"/>
+        <graphic type="background" color="#f00" cells="2" />
         <graphic type="text" color="#fff" align="right" size="50" left="130" top="80" content="&#xe1d0;" />
         <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="G" />
     </cell>
@@ -3472,7 +3482,7 @@
         <graphic type="background" color="#7f462c" cells="2" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="60" left="120" top="80" content="&#xe210;" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="60" left="129" top="20" content="&#xe240;" />
-        <graphic type="line" startX="50" startY="30" endX="90" endY="70" lineWidth="2" color="#bfa295"/>
+        <graphic type="line" startX="50" startY="30" endX="90" endY="70" lineWidth="2" color="#bfa295" />
     </cell>
     <cell name="diamond notehead" char="noteheadDiamond">
         <code value="353" />
@@ -3879,7 +3889,7 @@
         <graphic type="background" color="#f00" cells="3" />
         <graphic type="text" color="#fff" size="40" left="150" top="50" content="&#xe1d5;" />
         <graphic type="text" color="#fff" size="40" left="150" top="80" content="&#xe1d5;" />
-        <graphic type="rect" left="149" top="50" width="20" height="30" fill="true" color="#fff"/>
+        <graphic type="rect" left="149" top="50" width="20" height="30" fill="true" color="#fff" />
         <graphic type="text" color="#fff" size="60" left="115" top="65" content="&#xe262;" />
     </cell>
     <cell name="flat tone cluster" char="noteToneClusterFlat">
@@ -3889,7 +3899,7 @@
         <graphic type="background" color="#f00" cells="3" />
         <graphic type="text" color="#fff" size="40" left="150" top="50" content="&#xe1d5;" />
         <graphic type="text" color="#fff" size="40" left="150" top="80" content="&#xe1d5;" />
-        <graphic type="rect" left="149" top="50" width="20" height="30" fill="true" color="#fff"/>
+        <graphic type="rect" left="149" top="50" width="20" height="30" fill="true" color="#fff" />
         <graphic type="text" color="#fff" size="60" left="115" top="65" content="&#xe260;" />
     </cell>
     <cell name="natural tone cluster" char="noteToneClusterNatural">
@@ -3899,7 +3909,7 @@
         <graphic type="background" color="#f00" cells="3" />
         <graphic type="text" color="#fff" size="40" left="150" top="50" content="&#xe1d5;" />
         <graphic type="text" color="#fff" size="40" left="150" top="80" content="&#xe1d5;" />
-        <graphic type="rect" left="149" top="50" width="20" height="30" fill="true" color="#fff"/>
+        <graphic type="rect" left="149" top="50" width="20" height="30" fill="true" color="#fff" />
         <graphic type="text" color="#fff" size="60" left="115" top="65" content="&#xe261;" />
     </cell>
     <cell name="all notes tone cluster" char="noteToneClusterAll">
@@ -3910,7 +3920,7 @@
         <graphic type="background" color="#f00" cells="4" />
         <graphic type="text" color="#fff" size="40" left="200" top="50" content="&#xe1d5;" />
         <graphic type="text" color="#fff" size="40" left="200" top="80" content="&#xe1d5;" />
-        <graphic type="rect" left="199" top="50" width="20" height="30" fill="true" color="#fff"/>
+        <graphic type="rect" left="199" top="50" width="20" height="30" fill="true" color="#fff" />
         <graphic type="text" color="#fff" size="60" left="165" top="65" content="&#xe262;" />
         <graphic type="text" color="#fff" size="60" left="135" top="65" content="&#xe260;" />
     </cell>
@@ -3921,7 +3931,7 @@
         <graphic type="background" color="#f00" cells="3" />
         <graphic type="text" color="#fff" size="40" left="150" top="50" content="&#xe1d5;" />
         <graphic type="text" color="#fff" size="40" left="150" top="80" content="&#xe1d5;" />
-        <graphic type="rect" left="149" top="50" width="20" height="30" fill="true" color="#fff"/>
+        <graphic type="rect" left="149" top="50" width="20" height="30" fill="true" color="#fff" />
     </cell>
     <cell name="A two-hundred-fifty-sixth note" char="noteTwoHundredFiftySixthA">
         <code value="233" />
@@ -4373,24 +4383,24 @@
         <code value="935" />
         <code value="949" />
         <graphic type="background" color="#000" cells="2" />
-        <graphic type="line" startX="166" startY="33" endX="33" endY="33" lineWidth="3" color="#fff"/>
-        <graphic type="line" startX="33" startY="33" endX="33" endY="66" lineWidth="3" color="#fff"/>
+        <graphic type="line" startX="166" startY="33" endX="33" endY="33" lineWidth="3" color="#fff" />
+        <graphic type="line" startX="33" startY="33" endX="33" endY="66" lineWidth="3" color="#fff" />
         <graphic type="text" color="#fff" align="center" baseline="middle" font="sans-serif" size="25" left="65" top="50" content="1." />
     </cell>
     <cell name="second ending" char="repeatEndingSecond">
         <code value="935" />
         <code value="950" />
         <graphic type="background" color="#000" cells="2" />
-        <graphic type="line" startX="166" startY="33" endX="33" endY="33" lineWidth="3" color="#fff"/>
-        <graphic type="line" startX="33" startY="33" endX="33" endY="66" lineWidth="3" color="#fff"/>
+        <graphic type="line" startX="166" startY="33" endX="33" endY="33" lineWidth="3" color="#fff" />
+        <graphic type="line" startX="33" startY="33" endX="33" endY="66" lineWidth="3" color="#fff" />
         <graphic type="text" color="#fff" align="center" baseline="middle" font="sans-serif" size="25" left="65" top="50" content="2." />
     </cell>
     <cell name="third ending" char="repeatEndingThird">
         <code value="935" />
         <code value="951" />
         <graphic type="background" color="#000" cells="2" />
-        <graphic type="line" startX="166" startY="33" endX="33" endY="33" lineWidth="3" color="#fff"/>
-        <graphic type="line" startX="33" startY="33" endX="33" endY="66" lineWidth="3" color="#fff"/>
+        <graphic type="line" startX="166" startY="33" endX="33" endY="33" lineWidth="3" color="#fff" />
+        <graphic type="line" startX="33" startY="33" endX="33" endY="66" lineWidth="3" color="#fff" />
         <graphic type="text" color="#fff" align="center" baseline="middle" font="sans-serif" size="25" left="65" top="50" content="3." />
     </cell>
     <cell name="end repeated section" char="repeatEndRepeatedSection">
@@ -4482,14 +4492,14 @@
         <code value="259" />
         <code value="67" />
         <graphic type="background" color="#ff0" cells="2" />
-         <graphic type="text" color="#888" size="65" font="Bravura" align="center" top="60" left="65" baseline="middle" content="&#xe560;" />
-        <graphic type="arc" x="100" y="55" radius="20" start="0.79" end="2.36" ccw="false" lineWidth="2" color="#000"/>
+        <graphic type="text" color="#888" size="65" font="Bravura" align="center" top="60" left="65" baseline="middle" content="&#xe560;" />
+        <graphic type="arc" x="100" y="55" radius="20" start="0.79" end="2.36" ccw="false" lineWidth="2" color="#000" />
     </cell>
     <cell name="begin bracket slur" char="slurBegin">
         <code value="359" />
         <code value="366" />
         <graphic type="background" color="#ff0" cells="2" />
-        <graphic type="slur" startX="30" startY="50" controlX="50" controlY="20" endX="170" endY="20" color="#000"/>
+        <graphic type="slur" startX="30" startY="50" controlX="50" controlY="20" endX="170" endY="20" color="#000" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="120" top="50" font="sans-serif" content="BEGIN" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="120" top="75" font="sans-serif" content="SLUR" />
     </cell>
@@ -4497,8 +4507,8 @@
         <code value="1144" />
         <code value="367" />
         <graphic type="background" color="#ff0" cells="2" />
-        <graphic type="arc" x="70" y="55" radius="25" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000"/>
-        <graphic type="arc" x="130" y="55" radius="25" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000"/>
+        <graphic type="arc" x="70" y="55" radius="25" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000" />
+        <graphic type="arc" x="130" y="55" radius="25" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000" />
         <graphic type="text" color="#000" align="center" size="40" left="100" top="48" content="&#xe1d6;" />
     </cell>
     <cell name="part-to-part slur" char="slurCrossPart">
@@ -4512,7 +4522,7 @@
         <graphic type="text" color="#000" size="40" left="150" top="50" content="&#xe1d6;" />
         <graphic type="path" coords="115,75;150,80;150,85;115,80" color="#000" strokeColor="#000" />
         <graphic type="text" color="#000" size="40" left="35" top="50" content="&#xe1d5;" />
-        <graphic type="arc" x="110" y="70" radius="45" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000"/>
+        <graphic type="arc" x="110" y="70" radius="45" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000" />
     </cell>
     <cell name="begin part-to-part slur" char="slurCrossPartBegin">
         <code value="1195" />
@@ -4526,7 +4536,7 @@
         <graphic type="text" color="#000" size="40" left="250" top="50" content="&#xe1d6;" />
         <graphic type="path" coords="215,75;250,80;250,85;215,80" color="#000" strokeColor="#000" />
         <graphic type="text" color="#000" size="40" left="135" top="50" content="&#xe1d5;" />
-        <graphic type="arc" x="210" y="70" radius="45" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000"/>
+        <graphic type="arc" x="210" y="70" radius="45" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="17" left="70" top="50" font="sans-serif" content="BEGIN" />
     </cell>
     <cell name="continue part-to-part slur" char="slurCrossPartContinue">
@@ -4541,14 +4551,14 @@
         <graphic type="text" color="#000" size="40" left="250" top="50" content="&#xe1d6;" />
         <graphic type="path" coords="215,75;250,80;250,85;215,80" color="#000" strokeColor="#000" />
         <graphic type="text" color="#000" size="40" left="135" top="50" content="&#xe1d5;" />
-        <graphic type="arc" x="210" y="70" radius="45" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000"/>
+        <graphic type="arc" x="210" y="70" radius="45" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="17" left="70" top="50" font="sans-serif" content="CONT" />
     </cell>
     <cell name="end bracket slur" char="slurEnd">
         <code value="394" />
         <code value="350" />
         <graphic type="background" color="#ff0" cells="2" />
-        <graphic type="slur" startX="170" startY="50" controlX="150" controlY="20" endX="30" endY="20" color="#000"/>
+        <graphic type="slur" startX="170" startY="50" controlX="150" controlY="20" endX="30" endY="20" color="#000" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="80" top="50" font="sans-serif" content="END" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="80" top="75" font="sans-serif" content="SLUR" />
     </cell>
@@ -4556,8 +4566,8 @@
         <code value="364" />
         <code value="350" />
         <graphic type="background" color="#ff0" cells="2" />
-        <graphic type="arc" x="72" y="45" radius="25" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000"/>
-        <graphic type="arc" x="128" y="45" radius="25" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000"/>
+        <graphic type="arc" x="72" y="45" radius="25" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000" />
+        <graphic type="arc" x="128" y="45" radius="25" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="17" left="100" top="50" font="sans-serif" content="HALF" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="17" left="100" top="70" font="sans-serif" content="PHRASE" />
     </cell>
@@ -4565,21 +4575,21 @@
         <code value="67" />
         <code value="67" />
         <graphic type="background" color="#ff0" cells="2" />
-        <graphic type="arc" x="100" y="60" radius="35" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000"/>
+        <graphic type="arc" x="100" y="60" radius="35" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="20" left="100" top="60" font="sans-serif" content="LONG SLUR" />
     </cell>
     <cell name="modified slur" char="slurModified">
         <code value="1195" />
         <code value="67" />
         <graphic type="background" color="#ff0" cells="2" />
-        <graphic type="arc" x="100" y="60" radius="25" start="3.93" end="5.50" ccw="false" dashPattern="3,3" lineWidth="2" color="#000"/>
+        <graphic type="arc" x="100" y="60" radius="25" start="3.93" end="5.50" ccw="false" dashPattern="3,3" lineWidth="2" color="#000" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="17" left="100" top="70" font="sans-serif" content="MOD. SLUR" />
     </cell>
     <cell name="slur to nothing" char="slurOpenAfter">
         <code value="359" />
         <code value="367" />
         <graphic type="background" color="#ff0" cells="2" />
-        <graphic type="arc" x="100" y="60" radius="35" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000"/>
+        <graphic type="arc" x="100" y="60" radius="35" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000" />
         <graphic type="text" color="#000" size="40" left="50" top="45" content="&#xe1d6;" />
         <graphic type="text" color="#000" size="40" left="135" top="55" content="&#xe4e5;" />
     </cell>
@@ -4588,14 +4598,14 @@
         <code value="359" />
         <code value="367" />
         <graphic type="background" color="#ff0" cells="3" />
-        <graphic type="arc" x="150" y="60" radius="35" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000"/>
+        <graphic type="arc" x="150" y="60" radius="35" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000" />
         <graphic type="text" color="#000" size="40" left="185" top="45" content="&#xe1d6;" />
         <graphic type="text" color="#000" size="40" left="100" top="55" content="&#xe4e5;" />
     </cell>
     <cell name="short slur" char="slurShort">
         <code value="67" />
         <graphic type="background" color="#ff0" />
-        <graphic type="arc" x="50" y="60" radius="25" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000"/>
+        <graphic type="arc" x="50" y="60" radius="25" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="17" left="50" top="70" font="sans-serif" content="SLUR" />
     </cell>
     <cell name="receive slur from staff" char="slurStaffReceive">
@@ -4768,7 +4778,7 @@
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="&amp;" />
     </cell>
-    <cell name="text apostrophe symbol"  char="textApostrophe">
+    <cell name="text apostrophe symbol" char="textApostrophe">
         <code value="539" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="'" />
@@ -6063,7 +6073,7 @@
     </cell>
     <cell name="text open double quotation mark symbol" word-modifier="1" char="textDoubleQuotationMarkOldOpen">
         <code value="456" />
-        <graphic type="background" color="#fff"/>
+        <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#999" align="center" baseline="middle" size="50" left="50" top="50" content='&#x201c;' />
     </cell>
     <cell name="text close double quotation mark symbol" word-modifier="1" char="textDoubleQuotationMarkClose">
@@ -6175,10 +6185,168 @@
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content="&#x20A3;" />
     </cell>
+    <cell name="text french a with circumflex" char="textFrenchACircumflex">
+        <code value="1442" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00C2;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#0055a4" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#ef4135" />
+    </cell>
+    <cell name="text french a e ligature" char="textFrenchAE">
+        <code value="1462" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00C6;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#0055a4" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#ef4135" />
+    </cell>
+    <cell name="text french a with grave accent" char="textFrenchAGrave">
+        <code value="740" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00C0;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#0055a4" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#ef4135" />
+    </cell>
+    <cell name="text french c with cedilla" char="textFrenchCCedilla">
+        <code value="738" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00C7;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#0055a4" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#ef4135" />
+    </cell>
+    <cell name="text french e with acute accent" char="textFrenchEAcute">
+        <code value="761" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00C9;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#0055a4" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#ef4135" />
+    </cell>
+    <cell name="text french e with circumflex" char="textFrenchECircumflex">
+        <code value="1460" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00CA;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#0055a4" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#ef4135" />
+    </cell>
+    <cell name="text french e with diaeresis" char="textFrenchEDiaeresis">
+        <code value="1436" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00CB;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#0055a4" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#ef4135" />
+    </cell>
+    <cell name="text french e with grave accent" char="textFrenchEGrave">
+        <code value="733" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00C8;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#0055a4" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#ef4135" />
+    </cell>
+    <cell name="text french i with circumflex" char="textFrenchICircumflex">
+        <code value="1437" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00CE;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#0055a4" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#ef4135" />
+    </cell>
+    <cell name="text french i with diaeresis" char="textFrenchIDiaeresis">
+        <code value="1493" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00CF;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#0055a4" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#ef4135" />
+    </cell>
+    <cell name="text french i with grave accent" char="textFrenchIGrave">
+        <code value="1447" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00CC;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#0055a4" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#ef4135" />
+    </cell>
+    <cell name="text french o with circumflex" char="textFrenchOCircumflex">
+        <code value="1463" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00D4;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#0055a4" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#ef4135" />
+    </cell>
+    <cell name="text french o with diaeresis" char="textFrenchODiaeresis">
+        <code value="991" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00D6;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#0055a4" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#ef4135" />
+    </cell>
+    <cell name="text french o e ligature" char="textFrenchOE">
+        <code value="1491" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x0152;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#0055a4" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#ef4135" />
+    </cell>
+    <cell name="text french o with grave accent" char="textFrenchOGrave">
+        <code value="843" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00D2;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#0055a4" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#ef4135" />
+    </cell>
+    <cell name="text french u with circumflex" char="textFrenchUCircumflex">
+        <code value="1458" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00DB;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#0055a4" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#ef4135" />
+    </cell>
+    <cell name="text french u with diaeresis" char="textFrenchUDiaeresis">
+        <code value="1492" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00DC;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#0055a4" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#ef4135" />
+    </cell>
+    <cell name="text french u with grave accent" char="textFrenchUGrave">
+        <code value="741" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00D9;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#0055a4" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#ef4135" />
+    </cell>
     <cell name="text g" char="textG">
         <code value="571" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="G" />
+    </cell>
+    <cell name="text german a with diaeresis" char="textGermanADiaeresis">
+        <code value="1362" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00C4;" />
+        <graphic type="rect" left="35" top="75" width="30" height="5.333" fill="true" color="#000000" />
+        <graphic type="rect" left="35" top="80.333" width="30" height="5.333" fill="true" color="#ff0000" />
+        <graphic type="rect" left="35" top="85.666" width="30" height="5.333" fill="true" color="#ffcc00" />
+    </cell>
+    <cell name="text german eszett" char="textGermanEszett">
+        <code value="833" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00df;" />
+        <graphic type="rect" left="35" top="75" width="30" height="5.333" fill="true" color="#000000" />
+        <graphic type="rect" left="35" top="80.333" width="30" height="5.333" fill="true" color="#ff0000" />
+        <graphic type="rect" left="35" top="85.666" width="30" height="5.333" fill="true" color="#ffcc00" />
+    </cell>
+    <cell name="text german o with diaeresis" char="textGermanODiaeresis">
+        <code value="891" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00D6;" />
+        <graphic type="rect" left="35" top="75" width="30" height="5.333" fill="true" color="#000000" />
+        <graphic type="rect" left="35" top="80.333" width="30" height="5.333" fill="true" color="#ff0000" />
+        <graphic type="rect" left="35" top="85.666" width="30" height="5.333" fill="true" color="#ffcc00" />
+    </cell>
+    <cell name="text german u with diaeresis" char="textGermanUDiaeresis">
+        <code value="892" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00DC;" />
+        <graphic type="rect" left="35" top="75" width="30" height="5.333" fill="true" color="#000000" />
+        <graphic type="rect" left="35" top="80.333" width="30" height="5.333" fill="true" color="#ff0000" />
+        <graphic type="rect" left="35" top="85.666" width="30" height="5.333" fill="true" color="#ffcc00" />
     </cell>
     <cell name="text greater than symbol" word-modifier="1" char="textGreaterThan">
         <code value="564" />
@@ -6206,6 +6374,62 @@
         <code value="855" />
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='"' />
+    </cell>
+    <cell name="text italian a with grave accent" char="textItalianAGrave">
+        <code value="840" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00C0;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#008c45" />
+        <graphic type="rect" left="45" top="75" width="10" height="16" fill="true" color="#f4f5f0" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#cd212a" />
+    </cell>
+    <cell name="text italian e with acute accent" char="textItalianEAcute">
+        <code value="861" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00C9;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#008c45" />
+        <graphic type="rect" left="45" top="75" width="10" height="16" fill="true" color="#f4f5f0" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#cd212a" />
+    </cell>
+    <cell name="text italian e with grave accent" char="textItalianEGrave">
+        <code value="933" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00C8;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#008c45" />
+        <graphic type="rect" left="45" top="75" width="10" height="16" fill="true" color="#f4f5f0" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#cd212a" />
+    </cell>
+    <cell name="text italian i with grave accent" char="textItalianIGrave">
+        <code value="947" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00CC;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#008c45" />
+        <graphic type="rect" left="45" top="75" width="10" height="16" fill="true" color="#f4f5f0" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#cd212a" />
+    </cell>
+    <cell name="text italian o with acute accent" char="textItalianOAcute">
+        <code value="1143" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00D3;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#008c45" />
+        <graphic type="rect" left="45" top="75" width="10" height="16" fill="true" color="#f4f5f0" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#cd212a" />
+    </cell>
+    <cell name="text italian o with grave accent" char="textItalianOGrave">
+        <code value="943" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00D2;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#008c45" />
+        <graphic type="rect" left="45" top="75" width="10" height="16" fill="true" color="#f4f5f0" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#cd212a" />
+    </cell>
+    <cell name="text italian u with grave accent" char="textItalianUGrave">
+        <code value="841" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00D9;" />
+        <graphic type="rect" left="35" top="75" width="10" height="16" fill="true" color="#008c45" />
+        <graphic type="rect" left="45" top="75" width="10" height="16" fill="true" color="#f4f5f0" />
+        <graphic type="rect" left="55" top="75" width="10" height="16" fill="true" color="#cd212a" />
     </cell>
     <cell name="end italics" word-modifier="1" char="textItalicEnd">
         <code value="746" />
@@ -6423,7 +6647,7 @@
     </cell>
     <cell name="end reciting tone text" char="textRecitingToneTextEnd">
         <code value="548" />
-        <code value="534" />
+        <code value="849" />
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="END" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="RECIT TONE" />
@@ -6450,6 +6674,33 @@
         <code value="583" />
         <graphic type="background" color="#fff" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="50" content="S" />
+    </cell>
+    <cell name="text scandinavian a with diaeresis" char="textScandinavianADiaeresis">
+        <code value="1562" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00C4;" />
+        <graphic type="rect" left="35" top="75" width="9.5" height="6" fill="true" color="#ccc" />
+        <graphic type="rect" left="35" top="85" width="9.5" height="6" fill="true" color="#ccc" />
+        <graphic type="rect" left="48.6" top="75" width="16.4" height="6" fill="true" color="#ccc" />
+        <graphic type="rect" left="48.6" top="85" width="16.4" height="6" fill="true" color="#ccc" />
+    </cell>
+    <cell name="text scandinavian a with ring" char="textScandinavianARing">
+        <code value="842" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00C5;" />
+        <graphic type="rect" left="35" top="75" width="9.5" height="6" fill="true" color="#ccc" />
+        <graphic type="rect" left="35" top="85" width="9.5" height="6" fill="true" color="#ccc" />
+        <graphic type="rect" left="48.6" top="75" width="16.4" height="6" fill="true" color="#ccc" />
+        <graphic type="rect" left="48.6" top="85" width="16.4" height="6" fill="true" color="#ccc" />
+    </cell>
+    <cell name="text scandinavian o with slash" char="textScandinavianOSlash">
+        <code value="1191" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00D8;" />
+        <graphic type="rect" left="35" top="75" width="9.5" height="6" fill="true" color="#ccc" />
+        <graphic type="rect" left="35" top="85" width="9.5" height="6" fill="true" color="#ccc" />
+        <graphic type="rect" left="48.6" top="75" width="16.4" height="6" fill="true" color="#ccc" />
+        <graphic type="rect" left="48.6" top="85" width="16.4" height="6" fill="true" color="#ccc" />
     </cell>
     <cell name="end script" word-modifier="1" char="textScriptEnd">
         <code value="564" />
@@ -6529,6 +6780,62 @@
         <code value="847" />
         <graphic type="background" color="#fff" cells="2" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="100" top="50" content='/' />
+    </cell>
+    <cell name="text spanish a with acute accent" char="textSpanishAAcute">
+        <code value="1140" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00C1;" />
+        <graphic type="rect" left="35" top="75" width="30" height="4" fill="true" color="#ad1519" />
+        <graphic type="rect" left="35" top="79" width="30" height="8" fill="true" color="#fabd00" />
+        <graphic type="rect" left="35" top="83" width="30" height="4" fill="true" color="#ad1519" />
+    </cell>
+    <cell name="text spanish e with acute accent" char="textSpanishEAcute">
+        <code value="1133" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00C9;" />
+        <graphic type="rect" left="35" top="75" width="30" height="4" fill="true" color="#ad1519" />
+        <graphic type="rect" left="35" top="79" width="30" height="8" fill="true" color="#fabd00" />
+        <graphic type="rect" left="35" top="83" width="30" height="4" fill="true" color="#ad1519" />
+    </cell>
+    <cell name="text spanish i with acute accent" char="textSpanishIAcute">
+        <code value="1147" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00CD;" />
+        <graphic type="rect" left="35" top="75" width="30" height="4" fill="true" color="#ad1519" />
+        <graphic type="rect" left="35" top="79" width="30" height="8" fill="true" color="#fabd00" />
+        <graphic type="rect" left="35" top="83" width="30" height="4" fill="true" color="#ad1519" />
+    </cell>
+    <cell name="text spanish n with tilde" char="textSpanishNTilde">
+        <code value="1393" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00D1;" />
+        <graphic type="rect" left="35" top="75" width="30" height="4" fill="true" color="#ad1519" />
+        <graphic type="rect" left="35" top="79" width="30" height="8" fill="true" color="#fabd00" />
+        <graphic type="rect" left="35" top="83" width="30" height="4" fill="true" color="#ad1519" />
+    </cell>
+    <cell name="text spanish o with acute accent" char="textSpanishOAcute">
+        <code value="1243" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00D3;" />
+        <graphic type="rect" left="35" top="75" width="30" height="4" fill="true" color="#ad1519" />
+        <graphic type="rect" left="35" top="79" width="30" height="8" fill="true" color="#fabd00" />
+        <graphic type="rect" left="35" top="83" width="30" height="4" fill="true" color="#ad1519" />
+    </cell>
+    <cell name="text spanish u with acute accent" char="textSpanishUAcute">
+        <code value="1141" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00DA;" />
+        <graphic type="rect" left="35" top="75" width="30" height="4" fill="true" color="#ad1519" />
+        <graphic type="rect" left="35" top="79" width="30" height="8" fill="true" color="#fabd00" />
+        <graphic type="rect" left="35" top="83" width="30" height="4" fill="true" color="#ad1519" />
+    </cell>
+    <cell name="text spanish u with diaeresis" char="textSpanishUDiaeresis">
+        <code value="1392" />
+        <graphic type="background" color="#fff" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="50" left="50" top="45" content="&#x00DC;" />
+        <graphic type="rect" left="35" top="75" width="30" height="4" fill="true" color="#ad1519" />
+        <graphic type="rect" left="35" top="79" width="30" height="8" fill="true" color="#fabd00" />
+        <graphic type="rect" left="35" top="83" width="30" height="4" fill="true" color="#ad1519" />
     </cell>
     <cell name="text close square bracket symbol" word-modifier="1" char="textSquareBracketClose">
         <code value="746" />
@@ -6728,7 +7035,7 @@
         <code value="364" />
         <code value="367" />
         <graphic type="background" color="#ff0" cells="2" />
-        <graphic type="arc" x="100" y="90" radius="50" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000"/>
+        <graphic type="arc" x="100" y="90" radius="50" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="25" left="100" top="70" font="sans-serif" content="TIE" />
     </cell>
     <cell name="accumulating tie" char="tieAccumulating">
@@ -6743,9 +7050,9 @@
         <graphic type="text" color="#000" size="40" left="130" top="73" content="&#xe1d5;" />
         <graphic type="path" coords="47.5,37.5;109,15;109,20;47.5,42.5" color="#000" fill="true" strokeColor="#000" />
         <graphic type="path" coords="47.5,44.5;109,22;109,27;47.5,49.5" color="#000" fill="true" strokeColor="#000" />
-        <graphic type="arc" x="115" y="50" radius="9" start="0.78" end="2.36" ccw="false" lineWidth="2" color="#000"/>
-        <graphic type="arc" x="104" y="52" radius="20" start="0.78" end="2.36" ccw="false" lineWidth="2" color="#000"/>
-        <graphic type="arc" x="90" y="58" radius="32" start="0.78" end="2.36" ccw="false" lineWidth="2" color="#000"/>
+        <graphic type="arc" x="115" y="50" radius="9" start="0.78" end="2.36" ccw="false" lineWidth="2" color="#000" />
+        <graphic type="arc" x="104" y="52" radius="20" start="0.78" end="2.36" ccw="false" lineWidth="2" color="#000" />
+        <graphic type="arc" x="90" y="58" radius="32" start="0.78" end="2.36" ccw="false" lineWidth="2" color="#000" />
     </cell>
     <cell name="multiple note tie" char="tieMultiple">
         <code value="246" />
@@ -6753,8 +7060,8 @@
         <graphic type="background" color="#ff0" cells="2" />
         <graphic type="text" color="#000" align="right" size="50" left="80" top="62" content="&#xe1d5;" />
         <graphic type="text" color="#000" align="right" size="50" left="80" top="75" content="&#xe1d5;" />
-        <graphic type="arc" x="125" y="75" radius="30" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000"/>
-        <graphic type="arc" x="125" y="55" radius="30" start="0.78" end="2.36" ccw="false" lineWidth="2" color="#000"/>
+        <graphic type="arc" x="125" y="75" radius="30" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000" />
+        <graphic type="arc" x="125" y="55" radius="30" start="0.78" end="2.36" ccw="false" lineWidth="2" color="#000" />
     </cell>
     <cell name="multiple note tie" char="tieMultipleSuccessive">
         <code value="246" />
@@ -6763,12 +7070,12 @@
         <graphic type="background" color="#ff0" cells="3" />
         <graphic type="text" color="#000" align="right" size="50" left="60" top="62" content="&#xe1d5;" />
         <graphic type="text" color="#000" align="right" size="50" left="60" top="75" content="&#xe1d5;" />
-        <graphic type="arc" x="105" y="75" radius="30" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000"/>
-        <graphic type="arc" x="105" y="55" radius="30" start="0.78" end="2.36" ccw="false" lineWidth="2" color="#000"/>
+        <graphic type="arc" x="105" y="75" radius="30" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000" />
+        <graphic type="arc" x="105" y="55" radius="30" start="0.78" end="2.36" ccw="false" lineWidth="2" color="#000" />
         <graphic type="text" color="#000" align="right" size="50" left="170" top="62" content="&#xe1d5;" />
         <graphic type="text" color="#000" align="right" size="50" left="170" top="75" content="&#xe1d5;" />
-        <graphic type="arc" x="215" y="75" radius="30" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000"/>
-        <graphic type="arc" x="215" y="55" radius="30" start="0.78" end="2.36" ccw="false" lineWidth="2" color="#000"/>
+        <graphic type="arc" x="215" y="75" radius="30" start="3.93" end="5.50" ccw="false" lineWidth="2" color="#000" />
+        <graphic type="arc" x="215" y="55" radius="30" start="0.78" end="2.36" ccw="false" lineWidth="2" color="#000" />
     </cell>
     <cell name="time signature bottom zero" char="timeSignatureBottom0">
         <code value="48" />

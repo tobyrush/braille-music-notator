@@ -241,6 +241,8 @@
 	dynamicTextCrescendo|
 	dynamicTextDecrescendo|
 	dynamicTextDiminuendo|
+	elisionThreeSyllables|
+	elisionTwoSyllables|
 	figure0|
 	figure1|
 	figure2|
@@ -945,11 +947,40 @@
 	textFemale|
 	textFigureSlashed|
 	textFranc|
+	textFrenchACircumflex|
+	textFrenchAE|
+	textFrenchAGrave|
+	textFrenchCCedilla|
+	textFrenchEAcute|
+	textFrenchECircumflex|
+	textFrenchEDiaeresis|
+	textFrenchEGrave|
+	textFrenchICircumflex|
+	textFrenchIDiaeresis|
+	textFrenchIGrave|
+	textFrenchOCircumflex|
+	textFrenchODiaeresis|
+	textFrenchOGrave|
+	textFrenchOE|
+	textFrenchUCircumflex|
+	textFrenchUDiaeresis|
+	textFrenchUGrave|
 	textG|
+	textGermanADiaeresis|
+	textGermanEszett|
+	textGermanODiaeresis|
+	textGermanUDiaeresis|
 	textGreaterThan|
 	textH|
 	textHyphen|
 	textI|
+	textItalianAGrave|
+	textItalianEAcute|
+	textItalianEGrave|
+	textItalianIGrave|
+	textItalianOAcute|
+	textItalianOGrave|
+	textItalianUGrave|
 	textInches|
 	textItalicEnd|
 	textItalicPassage|
@@ -993,6 +1024,9 @@
 	textRepeat|
 	textRepeatTwice|
 	textS|
+	textScandinavianADiaeresis|
+	textScandinavianARing|
+	textScandinavianOSlash|
 	textScriptEnd|
 	textScriptPassage|
 	textScriptSymbol|
@@ -1006,6 +1040,13 @@
 	textSingleQuotationMarkOldOpen|
 	textSlash|
 	textSlashOld|
+	textSpanishAAcute|
+	textSpanishEAcute|
+	textSpanishIAcute|
+	textSpanishNTilde|
+	textSpanishOAcute|
+	textSpanishUAcute|
+	textSpanishUDiaeresis|
 	textSquareBracketClose|
 	textSquareBracketOpen|
 	textSubscript|
