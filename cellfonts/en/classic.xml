@@ -1191,6 +1191,13 @@
         <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="top" size="16.6" left="7.5" top="50" content="ROW" rotateCCW="true" />
         <graphic type="text" font="sans-serif" color="#fff" align="right" baseline="middle" size="60" style="bold" left="92.5" top="50" content="6" />
     </cell>
+    <cell name="change staves" char="directionChangeStaves">
+        <code value="951" />
+        <code value="1176" />
+        <graphic type="background" color="#000" cells="2" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="100" top="35" content="CHANGE" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="100" top="65" content="STAVES" />
+    </cell>
     <cell name="draw" char="directionDraw">
         <code value="460" />
         <code value="66" />
