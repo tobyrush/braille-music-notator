@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 540 455" style="enable-background:new 0 0 540 455;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:0.657;}
+	.st1{font-family:'Bravura';}
+	.st2{font-size:16.4px;}
+	.st3{fill:none;stroke:#000000;stroke-width:0.534;}
+	.st4{fill:none;stroke:#000000;stroke-width:0.491;}
+	.st5{fill:none;stroke:#000000;stroke-width:2.05;}
+</style>
+<font horiz-adv-x="1000">
+<!-- Bravura is a registered trademark of Steinberg Media Technologies GmbH in the European Union and other territories. -->
+<!-- Copyright: Copyright 2023 Adobe System Incorporated. All rights reserved. -->
+<font-face font-family="Bravura" units-per-em="1000" underline-position="-100" underline-thickness="50"/>
+<missing-glyph horiz-adv-x="297"/>
+<glyph unicode="&#xE050;" horiz-adv-x="671" d="M376,415C374,427 376,428 382,434C490,535 572,662 572,815C572,902 548,988 507,1048C492,1070 466,1098 455,1098C441,1098 410,1072 390,1050C316,968 292,843 292,739C292,681 299,616 306,575C308,563 309,561 297,551C153,432 0,289 0,87C0,-87 119,-252 364,-252C387,-252 413,-250 433,-246C444,-244 446,-243 448,-255C460,-322 475,-409 475,-456C475,-604 375,-622 316,-622C262,-622 236,-606 236,-593C236,-586 245,-583 268,-576C299,-567 335,-540 335,-482C335,-427 300,-380 239,-380C172,-380 132,-433 132,-495C132,-560 171,-658 322,-658C389,-658 519,-628 519,-458C519,-401 501,-306 490,-244C488,-232 489,-233 503,-227C604,-187 671,-102 671,11C671,139 577,252 430,252C404,252 404,252 401,270M470,943C503,943 530,916 530,861C530,750 435,660 356,591C349,585 345,586 343,599C339,625 337,659 337,691C337,847 409,943 470,943M361,262C364,243 364,244 346,238C258,208 201,129 201,44C201,-46 248,-110 316,-133C324,-136 336,-139 343,-139C351,-139 355,-134 355,-128C355,-121 347,-118 340,-115C298,-97 268,-54 268,-8C268,49 307,92 368,109C384,113 386,112 388,101l50,-298C440,-208 439,-208 424,-211C408,-214 388,-216 368,-216C193,-216 80,-119 80,20C80,79 90,158 173,252C233,319 279,356 326,394C336,402 338,401 340,390M430,103C428,115 429,118 441,117C522,110 589,42 589,-46C589,-109 551,-160 495,-188C483,-194 481,-194 479,-182z"/>
+<glyph unicode="&#xE062;" horiz-adv-x="684" d="M252,262C78,262 0,135 0,39C0,-41 42,-110 123,-110C186,-110 229,-66 229,-4C229,60 182,100 133,100C106,100 96,93 83,93C70,93 67,101 67,111C67,151 127,224 229,224C335,224 381,120 381,-37C381,-316 243,-472 10,-605C1,-610 -5,-615 -5,-623C-5,-629 -1,-635 8,-635C13,-635 19,-633 25,-630C271,-510 531,-332 531,-28C531,146 425,262 252,262M629,180C598,180 574,156 574,125C574,94 598,70 629,70C660,70 684,94 684,125C684,156 660,180 629,180M630,-71C599,-71 576,-94 576,-125C576,-156 599,-179 630,-179C661,-179 684,-156 684,-125C684,-94 661,-71 630,-71z"/>
+<glyph unicode="&#xE083;" horiz-adv-x="421" d="M213,248C212,248 211,248 209,248l-7,1C201,249 199,249 198,249C112,249 26,192 26,139C26,106 45,62 107,58l5,0C156,58 178,90 178,123l0,8C175,168 150,170 145,172C140,174 125,172 125,186l0,4C127,207 158,215 167,215C252,215 260,162 260,138l0,-7C260,57 201,28 138,25C128,24 114,19 114,8C114,-4 131,-4 139,-4C254,-4 263,-82 263,-95C263,-201 209,-213 187,-213C183,-213 179,-212 178,-212C170,-211 151,-211 150,-196l0,5C150,-169 172,-154 173,-125C173,-83 144,-53 101,-53C97,-53 94,-53 90,-54C73,-57 54,-67 42,-80C25,-95 20,-119 20,-141C22,-219 93,-249 191,-251l9,0C299,-251 401,-200 401,-112l0,7C399,-76 392,-57 373,-35C367,-27 359,-20 349,-14l-21,12l-33,9C290,8 287,8 285,12C284,14 284,15 284,17C284,21 285,25 288,26C299,29 310,30 319,35C359,54 380,80 380,126C380,218 255,245 213,248z"/>
+<glyph unicode="&#xE084;" horiz-adv-x="470" d="M362,-74l0,214C362,148 361,157 350,157C341,157 336,155 330,148l-95,-115C231,28 226,22 226,10l0,-84l-135,0C171,-6 331,221 334,233l1,3C335,245 328,251 320,251C311,251 270,249 252,249C234,249 189,251 181,251C172,251 158,248 158,232C158,108 60,-31 30,-73l-6,-8C24,-81 24,-82 24,-82l-1,-1C21,-88 20,-92 20,-95C20,-105 28,-112 40,-112l186,0l0,-63C226,-202 204,-210 186,-210C170,-210 163,-219 163,-229C163,-239 167,-250 182,-250l213,0C405,-250 415,-243 415,-229C415,-215 403,-209 393,-209C383,-209 362,-203 362,-171l0,59l73,0C445,-112 450,-105 450,-93C450,-81 446,-74 435,-74z"/>
+<glyph unicode="&#xE0A3;" horiz-adv-x="295" d="M97,-125C262,-125 295,9 295,42C295,93 254,125 196,125C47,125 0,10 0,-42C0,-95 42,-125 97,-125M75,-87C54,-87 42,-76 35,-64C32,-58 29,-51 29,-44C29,5 174,84 221,84C240,84 251,75 258,63C261,57 264,51 264,44C264,1 123,-87 75,-87z"/>
+<glyph unicode="&#xE0A4;" horiz-adv-x="295" d="M97,-125C186,-125 295,-43 295,42C295,93 255,125 198,125C88,125 0,44 0,-42C0,-94 43,-125 97,-125z"/>
+<glyph unicode="&#xE1E7;" horiz-adv-x="100" d="M100,0C100,28 78,50 50,50C22,50 0,28 0,0C0,-28 22,-50 50,-50C78,-50 100,-28 100,0z"/>
+<glyph unicode="&#xE241;" horiz-adv-x="306" d="M240,760C254,718 261,668 261,623C261,564 236,480 221,446C184,362 134,281 0,236l0,-235C0,-9 8,-14 16,-14C25,-14 38,-8 40,8C57,103 131,190 182,269C245,368 306,487 306,612C306,690 286,761 278,793C275,804 269,808 262,808C247,808 230,789 240,760z"/>
+<glyph unicode="&#xE260;" horiz-adv-x="226" d="M12,-170C15,-174 18,-175 21,-175C24,-175 27,-173 27,-173C57,-156 81,-129 106,-112C195,-50 226,11 226,57C226,114 182,150 136,153C119,153 95,145 81,136C75,131 64,122 59,122C57,122 56,122 54,123C47,126 43,133 43,140C44,162 50,402 50,422C50,433 41,439 31,439C17,439 1,429 0,411C0,411 4,-160 12,-170M47,-81C47,-81 44,-21 44,19C44,35 45,47 46,51C53,71 93,100 116,100C145,100 157,67 157,42C157,-12 111,-66 68,-93C64,-95 61,-96 58,-96C49,-96 47,-86 47,-81z"/>
+<glyph unicode="&#xE261;" horiz-adv-x="168" d="M141,181C139,181 138,180 137,180C137,180 73,157 47,157C41,157 37,158 37,162l0,167C37,336 31,341 25,341l-13,0C5,341 0,336 0,329l0,-515C0,-192 3,-195 9,-195l2,1C12,-194 14,-194 15,-193C29,-187 85,-163 114,-163C124,-163 131,-166 131,-174l0,-149C131,-330 136,-335 143,-335l13,0C162,-335 168,-330 168,-323l0,502C168,184 164,187 160,187C159,187 157,187 156,186M37,39C37,53 98,79 122,79C128,79 131,78 131,74l0,-103C131,-47 74,-70 49,-70C42,-70 37,-68 37,-64z"/>
+<glyph unicode="&#xE262;" horiz-adv-x="249" d="M237,118C244,121 249,129 249,135l0,71C249,211 246,214 242,214C240,214 239,214 237,213C237,213 217,205 212,204C205,204 198,209 198,217l0,122C198,345 192,350 184,350C174,350 168,345 168,339l0,-130C167,199 164,186 155,180C143,173 109,159 92,155C83,155 80,167 80,175l0,120C80,301 73,306 66,306C56,306 50,301 50,295l0,-135C50,146 44,136 38,133C32,130 12,122 12,122C5,120 0,112 0,106l0,-71C0,29 3,26 9,26l2,1C12,27 27,33 35,37l1,1C44,38 50,28 50,20l0,-99C50,-90 45,-99 39,-102C33,-104 12,-113 12,-113C5,-115 0,-123 0,-129l0,-71C0,-206 3,-209 9,-209l2,1C12,-208 26,-202 35,-199C36,-198 37,-198 38,-198C45,-198 50,-209 50,-214l0,-123C50,-343 56,-348 63,-348C73,-348 80,-343 80,-337l0,139C80,-185 85,-178 90,-176l61,25C151,-151 152,-151 152,-151l2,1C163,-150 168,-162 168,-168l0,-125C168,-299 174,-304 181,-304C192,-304 198,-299 198,-293l0,142C198,-143 202,-131 209,-128C216,-125 237,-117 237,-117C244,-114 249,-106 249,-100l0,71C249,-24 246,-21 242,-21C240,-21 239,-21 237,-22l-26,-10C205,-32 198,-26 198,-14l0,93C198,86 203,105 211,108M168,-45C162,-65 115,-85 92,-85C86,-85 81,-83 80,-80C78,-76 77,-54 77,-30C77,1 78,36 80,44C82,61 128,82 153,82C160,82 166,80 168,76C170,71 172,46 172,19C172,-8 170,-36 168,-45z"/>
+<glyph unicode="&#xE4E5;" horiz-adv-x="270" d="M78,-38C94,-58 108,-77 121,-98C123,-102 127,-110 127,-112C127,-113 127,-115 126,-116C124,-120 120,-121 115,-121C111,-121 103,-119 99,-118C98,-118 96,-118 95,-118l-8,3C35,-115 1,-162 1,-211C1,-261 44,-310 117,-366C125,-372 135,-375 143,-375C150,-375 157,-373 158,-369C159,-366 160,-364 160,-362C160,-353 152,-345 144,-338C131,-338 120,-311 118,-302C115,-294 114,-285 114,-276C114,-235 135,-203 177,-203C206,-203 239,-214 256,-220l1,-1C261,-222 263,-222 265,-222C268,-222 270,-221 270,-218C270,-206 244,-173 233,-161C195,-115 164,-78 164,-22C164,-21 164,-20 164,-19l1,7C165,-11 165,-10 165,-9C169,49 205,97 231,138C234,143 235,148 235,153C235,163 231,172 231,172C231,172 83,348 66,365C61,370 54,373 48,373C38,373 28,366 28,352C28,347 29,342 32,336C36,325 93,274 93,202C93,165 78,122 33,75C23,65 19,54 19,46C19,32 29,22 29,22z"/>
+<glyph unicode="&#xE4E6;" horiz-adv-x="250" d="M134,107C134,144 104,174 67,174C30,174 0,144 0,107C0,86 12,68 27,56C43,45 62,39 81,39C95,39 109,42 120,46C134,50 143,54 156,61C158,62 160,62 161,62C165,62 166,58 166,53C166,50 166,46 165,42C162,27 90,-172 72,-238C72,-250 95,-251 101,-251C112,-251 126,-249 136,-241C139,-239 237,112 237,112C241,130 246,146 247,151C247,161 237,166 235,167C233,167 230,167 224,163C217,157 167,97 134,97z"/>
+<glyph unicode="&#xE4E7;" horiz-adv-x="320" d="M208,111C208,149 178,179 140,179C103,179 72,149 72,111C72,70 114,43 152,43C179,43 207,52 230,65C233,66 235,67 237,67C240,67 242,65 242,60C242,44 191,-105 184,-120C176,-139 149,-151 135,-151C136,-147 136,-144 136,-141C136,-103 105,-73 68,-73C30,-73 0,-103 0,-141C0,-182 42,-209 80,-209C106,-209 132,-200 155,-188C157,-188 159,-190 159,-194l-1,-1C158,-196 158,-196 158,-196l-95,-283C63,-479 63,-480 63,-480l-1,-1C62,-490 71,-500 93,-500C122,-500 127,-488 131,-477l116,381C273,-11 292,56 292,56C292,56 317,144 319,157C319,159 320,160 320,161C320,167 312,171 310,172C305,172 302,170 299,168C292,162 242,102 208,101z"/>
+</font>
+
+	<g id="Music">
+	<line class="st0" x1="80.3" y1="37.5" x2="80.3" y2="136.9"/>
+	<text transform="matrix(1 0 0 1 84.733 49.754)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 84.733 85.117)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 84.733 124.579)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 100.108 45.654)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 100.108 93.317)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 100.108 132.779)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 110.7 49.754)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 111.042 41.554)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 110.7 93.317)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 111.042 85.117)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 110.7 132.779)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 111.042 124.579)" class="st1 st2"></text>
+	<line class="st0" x1="155.8" y1="37.5" x2="155.8" y2="97.4"/>
+	<line class="st0" x1="155.8" y1="120.5" x2="155.8" y2="136.9"/>
+	<line class="st0" x1="254.2" y1="37.5" x2="254.2" y2="97.4"/>
+	<line class="st0" x1="254.2" y1="120.5" x2="254.2" y2="136.9"/>
+	<line class="st0" x1="357.4" y1="37.5" x2="357.4" y2="97.4"/>
+	<line class="st0" x1="357.4" y1="120.5" x2="357.4" y2="136.9"/>
+	<line class="st0" x1="463.7" y1="37.5" x2="463.7" y2="97.4"/>
+	<line class="st0" x1="463.7" y1="120.5" x2="463.7" y2="136.9"/>
+	<line class="st3" x1="79.9" y1="37.5" x2="464" y2="37.5"/>
+	<line class="st3" x1="79.9" y1="41.6" x2="464" y2="41.6"/>
+	<line class="st3" x1="79.9" y1="45.7" x2="464" y2="45.7"/>
+	<line class="st3" x1="79.9" y1="49.8" x2="464" y2="49.8"/>
+	<line class="st3" x1="79.9" y1="53.9" x2="464" y2="53.9"/>
+	<line class="st3" x1="79.9" y1="81" x2="464" y2="81"/>
+	<line class="st3" x1="79.9" y1="85.1" x2="464" y2="85.1"/>
+	<line class="st3" x1="79.9" y1="89.2" x2="464" y2="89.2"/>
+	<line class="st3" x1="79.9" y1="93.3" x2="464" y2="93.3"/>
+	<line class="st3" x1="79.9" y1="97.4" x2="464" y2="97.4"/>
+	<line class="st3" x1="79.9" y1="120.5" x2="464" y2="120.5"/>
+	<line class="st3" x1="79.9" y1="124.6" x2="464" y2="124.6"/>
+	<line class="st3" x1="79.9" y1="128.7" x2="464" y2="128.7"/>
+	<line class="st3" x1="79.9" y1="132.8" x2="464" y2="132.8"/>
+	<line class="st3" x1="79.9" y1="136.9" x2="464" y2="136.9"/>
+	<path d="M77.9,37.5C67.9,53.9,83,59.3,74,67.5h0.7c8.4-6.2-2.7-17.7,3.3-28.8L77.9,37.5z"/>
+	<path d="M77.9,97.4C67.9,81,83,75.7,74,67.5h0.7c8.4,6.2-2.7,17.5,3.3,28.7L77.9,97.4z"/>
+	<text transform="matrix(1 0 0 1 125.904 51.804)" class="st1 st2"></text>
+	<line class="st4" x1="130.5" y1="51.1" x2="130.5" y2="38.5"/>
+	<text transform="matrix(1 0 0 1 140.767 51.804)" class="st1 st2"></text>
+	<line class="st4" x1="145.4" y1="51.1" x2="145.4" y2="38.5"/>
+	<path d="M130.2,37.5h15.4v2.1h-15.4V37.5z"/>
+	<text transform="matrix(1 0 0 1 125.904 81.017)" class="st1 st2"></text>
+	<line class="st4" x1="126.2" y1="81.7" x2="126.2" y2="94.3"/>
+	<text transform="matrix(1 0 0 1 133.25 78.967)" class="st1 st2"></text>
+	<line class="st4" x1="133.5" y1="79.7" x2="133.5" y2="95"/>
+	<text transform="matrix(1 0 0 1 140.767 81.017)" class="st1 st2"></text>
+	<line class="st4" x1="141" y1="81.7" x2="141" y2="95.7"/>
+	<text transform="matrix(1 0 0 1 148.113 83.067)" class="st1 st2"></text>
+	<line class="st4" x1="148.4" y1="83.8" x2="148.4" y2="96.4"/>
+	<path d="M125.9,93.3l22.7,2v2.1l-22.7-2.1V93.3z"/>
+	<path d="M125.9,90.2l22.7,2.1v2.1l-22.7-2.1V90.2z"/>
+	<text transform="matrix(1 0 0 1 135.642 128.679)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 161.608 43.604)" class="st1 st2"></text>
+	<line class="st4" x1="166.2" y1="42.9" x2="166.2" y2="30.3"/>
+	<text transform="matrix(1 0 0 1 176.471 43.604)" class="st1 st2"></text>
+	<line class="st4" x1="181.1" y1="42.9" x2="181.1" y2="30.3"/>
+	<path d="M166,29.3h15.4v2.1H166V29.3z"/>
+	<text transform="matrix(1 0 0 1 191.163 41.554)" class="st1 st2"></text>
+	<line class="st4" x1="195.8" y1="40.9" x2="195.8" y2="28.2"/>
+	<text transform="matrix(1 0 0 1 206.025 39.504)" class="st1 st2"></text>
+	<line class="st4" x1="210.6" y1="38.8" x2="210.6" y2="26.2"/>
+	<path d="M195.5,27.2l15.4-2.1v2.1l-15.4,2V27.2z"/>
+	<line class="st4" x1="225.3" y1="36.8" x2="225.3" y2="25.8"/>
+	<text transform="matrix(1 0 0 1 220.717 37.454)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 168.271 51.804)" class="st1 st2"></text>
+	<line class="st4" x1="161.9" y1="52.5" x2="161.9" y2="63.4"/>
+	<text transform="matrix(1 0 0 1 161.608 51.804)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 206.025 64.104)" class="st1 st2"></text>
+	<line class="st4" x1="206.3" y1="50.4" x2="206.3" y2="64.1"/>
+	<text transform="matrix(1 0 0 1 206.025 49.754)" class="st1 st2"></text>
+	<line class="st4" x1="221" y1="52.5" x2="221" y2="63.4"/>
+	<text transform="matrix(1 0 0 1 220.717 51.804)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 161.608 81.017)" class="st1 st2"></text>
+	<line class="st4" x1="161.9" y1="81.7" x2="161.9" y2="96.4"/>
+	<text transform="matrix(1 0 0 1 168.954 83.067)" class="st1 st2"></text>
+	<line class="st4" x1="169.2" y1="83.8" x2="169.2" y2="97.1"/>
+	<text transform="matrix(1 0 0 1 176.471 81.017)" class="st1 st2"></text>
+	<line class="st4" x1="176.7" y1="81.7" x2="176.7" y2="97.8"/>
+	<text transform="matrix(1 0 0 1 183.817 85.117)" class="st1 st2"></text>
+	<line class="st4" x1="184.1" y1="85.8" x2="184.1" y2="98.4"/>
+	<path d="M161.6,95.4l22.7,2.1v2.1l-22.7-2.1V95.4z"/>
+	<path d="M161.6,92.3l22.7,2.1v2l-22.7-2V92.3z"/>
+	<text transform="matrix(1 0 0 1 191.163 78.967)" class="st1 st2"></text>
+	<line class="st4" x1="191.4" y1="79.7" x2="191.4" y2="94.3"/>
+	<text transform="matrix(1 0 0 1 198.508 81.017)" class="st1 st2"></text>
+	<line class="st4" x1="198.8" y1="81.7" x2="198.8" y2="95"/>
+	<text transform="matrix(1 0 0 1 206.025 78.967)" class="st1 st2"></text>
+	<line class="st4" x1="206.3" y1="79.7" x2="206.3" y2="95.7"/>
+	<text transform="matrix(1 0 0 1 213.371 83.067)" class="st1 st2"></text>
+	<line class="st4" x1="213.6" y1="83.8" x2="213.6" y2="96.4"/>
+	<path d="M191.2,93.3l22.7,2v2.1l-22.7-2.1V93.3z"/>
+	<path d="M191.2,90.2l22.7,2.1v2.1l-22.7-2.1V90.2z"/>
+	<text transform="matrix(1 0 0 1 220.717 81.017)" class="st1 st2"></text>
+	<line class="st4" x1="221" y1="81.7" x2="221" y2="96.4"/>
+	<text transform="matrix(1 0 0 1 228.063 83.067)" class="st1 st2"></text>
+	<line class="st4" x1="228.3" y1="83.8" x2="228.3" y2="96.4"/>
+	<text transform="matrix(1 0 0 1 235.579 81.017)" class="st1 st2"></text>
+	<line class="st4" x1="235.8" y1="81.7" x2="235.8" y2="96.4"/>
+	<text transform="matrix(1 0 0 1 246.513 78.967)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 242.413 78.967)" class="st1 st2"></text>
+	<line class="st4" x1="246.8" y1="79.7" x2="246.8" y2="96.4"/>
+	<path d="M220.7,95.4H247v2.1h-26.3V95.4z"/>
+	<path d="M220.7,92.3H247v2.1h-26.3V92.3z"/>
+	<text transform="matrix(1 0 0 1 161.608 138.929)" class="st1 st2"></text>
+	<line class="st4" x1="166.2" y1="138.2" x2="166.2" y2="113.3"/>
+	<text transform="matrix(1 0 0 1 176.471 124.579)" class="st1 st2"></text>
+	<line class="st4" x1="181.1" y1="123.9" x2="181.1" y2="111.3"/>
+	<path d="M166,112.3l15.4-2.1v2.1l-15.4,2.1V112.3z"/>
+	<text transform="matrix(1 0 0 1 191.163 124.579)" class="st1 st2"></text>
+	<line class="st4" x1="191.4" y1="125.3" x2="191.4" y2="137.9"/>
+	<text transform="matrix(1 0 0 1 206.025 124.579)" class="st1 st2"></text>
+	<line class="st4" x1="206.3" y1="125.3" x2="206.3" y2="137.9"/>
+	<path d="M191.2,136.9h15.4v2.1h-15.4V136.9z"/>
+	<text transform="matrix(1 0 0 1 220.717 124.579)" class="st1 st2"></text>
+	<line class="st4" x1="221" y1="125.3" x2="221" y2="140"/>
+	<text transform="matrix(1 0 0 1 235.579 128.679)" class="st1 st2"></text>
+	<line class="st4" x1="235.8" y1="129.4" x2="235.8" y2="142"/>
+	<path d="M220.7,138.9l15.4,2.1v2.1l-15.4-2.1V138.9z"/>
+	<line class="st4" x1="266.3" y1="42.9" x2="266.3" y2="32"/>
+	<text transform="matrix(1 0 0 1 261.717 43.604)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 297.592 51.804)" class="st1 st2"></text>
+	<line class="st4" x1="302.2" y1="51.1" x2="302.2" y2="38.5"/>
+	<text transform="matrix(1 0 0 1 312.454 51.804)" class="st1 st2"></text>
+	<line class="st4" x1="317" y1="51.1" x2="317" y2="38.5"/>
+	<path d="M301.9,37.5h15.4v2.1h-15.4V37.5z"/>
+	<text transform="matrix(1 0 0 1 327.317 43.604)" class="st1 st2"></text>
+	<line class="st4" x1="331.9" y1="42.9" x2="331.9" y2="30.3"/>
+	<text transform="matrix(1 0 0 1 342.179 43.604)" class="st1 st2"></text>
+	<line class="st4" x1="346.8" y1="42.9" x2="346.8" y2="30.3"/>
+	<path d="M331.7,29.3H347v2.1h-15.4V29.3z"/>
+	<line class="st4" x1="262" y1="50.4" x2="262" y2="61.4"/>
+	<text transform="matrix(1 0 0 1 261.717 49.754)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 297.592 66.154)" class="st1 st2"></text>
+	<line class="st4" x1="297.8" y1="52.5" x2="297.8" y2="66.2"/>
+	<text transform="matrix(1 0 0 1 297.592 51.804)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 312.454 57.954)" class="st1 st2"></text>
+	<line class="st4" x1="327.6" y1="52.5" x2="327.6" y2="63.4"/>
+	<text transform="matrix(1 0 0 1 327.317 51.804)" class="st1 st2"></text>
+	<line class="st0" x1="260" y1="76.9" x2="268.2" y2="76.9"/>
+	<text transform="matrix(1 0 0 1 261.717 76.917)" class="st1 st2"></text>
+	<line class="st4" x1="262" y1="77.6" x2="262" y2="94.3"/>
+	<text transform="matrix(1 0 0 1 275.383 78.967)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 270.258 78.967)" class="st1 st2"></text>
+	<line class="st4" x1="275.6" y1="79.7" x2="275.6" y2="95.3"/>
+	<text transform="matrix(1 0 0 1 282.729 81.017)" class="st1 st2"></text>
+	<line class="st4" x1="283" y1="81.7" x2="283" y2="95.9"/>
+	<text transform="matrix(1 0 0 1 290.246 83.067)" class="st1 st2"></text>
+	<line class="st4" x1="290.5" y1="83.8" x2="290.5" y2="96.4"/>
+	<path d="M261.7,93.3l29,2v2.1l-29-2.1V93.3z"/>
+	<path d="M261.7,90.2l29,2.1v2.1l-29-2.1V90.2z"/>
+	<text transform="matrix(1 0 0 1 297.592 81.017)" class="st1 st2"></text>
+	<line class="st4" x1="297.8" y1="81.7" x2="297.8" y2="94.3"/>
+	<text transform="matrix(1 0 0 1 305.108 78.967)" class="st1 st2"></text>
+	<line class="st4" x1="305.4" y1="79.7" x2="305.4" y2="95"/>
+	<text transform="matrix(1 0 0 1 312.454 81.017)" class="st1 st2"></text>
+	<line class="st4" x1="312.7" y1="81.7" x2="312.7" y2="95.7"/>
+	<text transform="matrix(1 0 0 1 319.971 83.067)" class="st1 st2"></text>
+	<line class="st4" x1="320.2" y1="83.8" x2="320.2" y2="96.4"/>
+	<path d="M297.6,93.3l22.9,2v2.1l-22.9-2.1V93.3z"/>
+	<path d="M297.6,90.2l22.9,2.1v2.1l-22.9-2.1V90.2z"/>
+	<text transform="matrix(1 0 0 1 327.317 81.017)" class="st1 st2"></text>
+	<line class="st4" x1="327.6" y1="81.7" x2="327.6" y2="96.4"/>
+	<text transform="matrix(1 0 0 1 334.833 83.067)" class="st1 st2"></text>
+	<line class="st4" x1="335.1" y1="83.8" x2="335.1" y2="97.1"/>
+	<text transform="matrix(1 0 0 1 342.179 81.017)" class="st1 st2"></text>
+	<line class="st4" x1="342.4" y1="81.7" x2="342.4" y2="97.8"/>
+	<text transform="matrix(1 0 0 1 349.696 85.117)" class="st1 st2"></text>
+	<line class="st4" x1="349.9" y1="85.8" x2="349.9" y2="98.4"/>
+	<path d="M327.3,95.4l22.9,2.1v2.1l-22.9-2.1V95.4z"/>
+	<path d="M327.3,92.3l22.9,2.1v2l-22.9-2V92.3z"/>
+	<line class="st4" x1="262" y1="127.3" x2="262" y2="141"/>
+	<text transform="matrix(1 0 0 1 261.717 126.629)" class="st1 st2"></text>
+	<line class="st4" x1="297.8" y1="125.3" x2="297.8" y2="138.9"/>
+	<text transform="matrix(1 0 0 1 297.592 124.579)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 327.317 138.929)" class="st1 st2"></text>
+	<line class="st4" x1="331.9" y1="138.2" x2="331.9" y2="113.3"/>
+	<text transform="matrix(1 0 0 1 342.179 124.579)" class="st1 st2"></text>
+	<line class="st4" x1="346.8" y1="123.9" x2="346.8" y2="111.3"/>
+	<path d="M331.7,112.3l15.4-2.1v2.1l-15.4,2.1V112.3z"/>
+	<text transform="matrix(1 0 0 1 363.192 41.554)" class="st1 st2"></text>
+	<line class="st4" x1="367.8" y1="40.9" x2="367.8" y2="28.2"/>
+	<text transform="matrix(1 0 0 1 378.225 39.504)" class="st1 st2"></text>
+	<line class="st4" x1="382.8" y1="38.8" x2="382.8" y2="26.2"/>
+	<path d="M367.5,27.2l15.5-2.1v2.1l-15.5,2V27.2z"/>
+	<line class="st4" x1="397.8" y1="36.8" x2="397.8" y2="25.8"/>
+	<text transform="matrix(1 0 0 1 393.258 37.454)" class="st1 st2"></text>
+	<line class="st4" x1="433" y1="42.9" x2="433" y2="32"/>
+	<text transform="matrix(1 0 0 1 428.45 43.604)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 363.192 51.804)" class="st1 st2"></text>
+	<line class="st4" x1="363.4" y1="52.5" x2="363.4" y2="65.1"/>
+	<text transform="matrix(1 0 0 1 378.225 49.754)" class="st1 st2"></text>
+	<line class="st4" x1="378.5" y1="50.4" x2="378.5" y2="63.1"/>
+	<path d="M363.2,64.1l15.5-2v2l-15.5,2.1V64.1z"/>
+	<line class="st4" x1="393.5" y1="52.5" x2="393.5" y2="63.4"/>
+	<text transform="matrix(1 0 0 1 393.258 51.804)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 428.45 49.754)" class="st1 st2"></text>
+	<line class="st4" x1="428.7" y1="50.4" x2="428.7" y2="66.1"/>
+	<text transform="matrix(1 0 0 1 440.75 51.804)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 435.283 51.804)" class="st1 st2"></text>
+	<line class="st4" x1="441" y1="52.5" x2="441" y2="65.1"/>
+	<text transform="matrix(1 0 0 1 448.267 49.754)" class="st1 st2"></text>
+	<line class="st4" x1="448.5" y1="50.4" x2="448.5" y2="64.6"/>
+	<text transform="matrix(1 0 0 1 455.783 47.704)" class="st1 st2"></text>
+	<line class="st4" x1="456" y1="48.4" x2="456" y2="64"/>
+	<path d="M428.5,65l27.8-2v2l-27.8,2.1V65z"/>
+	<path d="M428.5,62l27.8-2v2l-27.8,2V62z"/>
+	<text transform="matrix(1 0 0 1 363.192 78.967)" class="st1 st2"></text>
+	<line class="st4" x1="363.4" y1="79.7" x2="363.4" y2="94.3"/>
+	<text transform="matrix(1 0 0 1 370.708 81.017)" class="st1 st2"></text>
+	<line class="st4" x1="371" y1="81.7" x2="371" y2="95"/>
+	<text transform="matrix(1 0 0 1 378.225 78.967)" class="st1 st2"></text>
+	<line class="st4" x1="378.5" y1="79.7" x2="378.5" y2="95.7"/>
+	<text transform="matrix(1 0 0 1 385.742 83.067)" class="st1 st2"></text>
+	<line class="st4" x1="386" y1="83.8" x2="386" y2="96.4"/>
+	<path d="M363.2,93.3l23,2v2.1l-23-2.1V93.3z"/>
+	<path d="M363.2,90.2l23,2.1v2.1l-23-2.1V90.2z"/>
+	<text transform="matrix(1 0 0 1 393.258 81.017)" class="st1 st2"></text>
+	<line class="st4" x1="393.5" y1="81.7" x2="393.5" y2="96.4"/>
+	<text transform="matrix(1 0 0 1 400.775 83.067)" class="st1 st2"></text>
+	<line class="st4" x1="401" y1="83.8" x2="401" y2="96.4"/>
+	<text transform="matrix(1 0 0 1 408.292 81.017)" class="st1 st2"></text>
+	<line class="st4" x1="408.5" y1="81.7" x2="408.5" y2="96.4"/>
+	<text transform="matrix(1 0 0 1 419.396 78.967)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 415.296 78.967)" class="st1 st2"></text>
+	<line class="st4" x1="419.6" y1="79.7" x2="419.6" y2="96.4"/>
+	<path d="M393.3,95.4h26.6v2.1h-26.6V95.4z"/>
+	<path d="M393.3,92.3h26.6v2.1h-26.6V92.3z"/>
+	<line class="st4" x1="428.7" y1="77.6" x2="428.7" y2="91.3"/>
+	<line class="st0" x1="426.7" y1="76.9" x2="434.9" y2="76.9"/>
+	<text transform="matrix(1 0 0 1 428.45 76.917)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 363.192 124.579)" class="st1 st2"></text>
+	<line class="st4" x1="363.4" y1="125.3" x2="363.4" y2="137.9"/>
+	<text transform="matrix(1 0 0 1 378.225 124.579)" class="st1 st2"></text>
+	<line class="st4" x1="378.5" y1="125.3" x2="378.5" y2="137.9"/>
+	<path d="M363.2,136.9h15.5v2.1h-15.5V136.9z"/>
+	<text transform="matrix(1 0 0 1 393.258 124.579)" class="st1 st2"></text>
+	<line class="st4" x1="393.5" y1="125.3" x2="393.5" y2="140"/>
+	<text transform="matrix(1 0 0 1 408.292 128.679)" class="st1 st2"></text>
+	<line class="st4" x1="408.5" y1="129.4" x2="408.5" y2="142"/>
+	<path d="M393.3,138.9l15.5,2.1v2.1l-15.5-2.1V138.9z"/>
+	<text transform="matrix(1 0 0 1 428.45 126.629)" class="st1 st2"></text>
+	<line class="st4" x1="428.7" y1="127.3" x2="428.7" y2="142"/>
+	<text transform="matrix(1 0 0 1 448.267 130.729)" class="st1 st2"></text>
+	<line class="st4" x1="448.5" y1="131.4" x2="448.5" y2="144.1"/>
+	<path d="M428.5,141l20.3,2.1v2l-20.3-2V141z"/>
+	<path d="M331.1,54.7c6,3.1,23.6,3.1,29.6,0l-0.2-0.4c-5.8,2.6-23.4,2.6-29.2,0L331.1,54.7z"/>
+	<line class="st0" x1="80.3" y1="181" x2="80.3" y2="280.4"/>
+	<text transform="matrix(1 0 0 1 84.733 193.254)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 84.733 228.617)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 84.733 268.079)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 100.108 189.154)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 100.108 236.817)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 100.108 276.279)" class="st1 st2"></text>
+	<line class="st0" x1="307.1" y1="181" x2="307.1" y2="240.9"/>
+	<line class="st0" x1="307.1" y1="264" x2="307.1" y2="280.4"/>
+	<line class="st0" x1="463.7" y1="181" x2="463.7" y2="240.9"/>
+	<line class="st0" x1="463.7" y1="264" x2="463.7" y2="280.4"/>
+	<line class="st3" x1="79.9" y1="181" x2="464" y2="181"/>
+	<line class="st3" x1="79.9" y1="185.1" x2="464" y2="185.1"/>
+	<line class="st3" x1="79.9" y1="189.2" x2="464" y2="189.2"/>
+	<line class="st3" x1="79.9" y1="193.3" x2="464" y2="193.3"/>
+	<line class="st3" x1="79.9" y1="197.4" x2="464" y2="197.4"/>
+	<line class="st3" x1="79.9" y1="224.5" x2="464" y2="224.5"/>
+	<line class="st3" x1="79.9" y1="228.6" x2="464" y2="228.6"/>
+	<line class="st3" x1="79.9" y1="232.7" x2="464" y2="232.7"/>
+	<line class="st3" x1="79.9" y1="236.8" x2="464" y2="236.8"/>
+	<line class="st3" x1="79.9" y1="240.9" x2="464" y2="240.9"/>
+	<line class="st3" x1="79.9" y1="264" x2="464" y2="264"/>
+	<line class="st3" x1="79.9" y1="268.1" x2="464" y2="268.1"/>
+	<line class="st3" x1="79.9" y1="272.2" x2="464" y2="272.2"/>
+	<line class="st3" x1="79.9" y1="276.3" x2="464" y2="276.3"/>
+	<line class="st3" x1="79.9" y1="280.4" x2="464" y2="280.4"/>
+	<path d="M77.9,181c-10,16.4,5.1,21.9-3.9,30.1h0.7c8.4-6.2-2.7-17.7,3.3-28.8L77.9,181z"/>
+	<path d="M77.9,240.9c-10-16.4,5.1-21.7-3.9-29.9h0.7c8.4,6.2-2.7,17.5,3.3,28.7L77.9,240.9z"/>
+	<text transform="matrix(1 0 0 1 120.438 187.104)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 113.775 189.154)" class="st1 st2"></text>
+	<line class="st4" x1="118.4" y1="188.5" x2="118.4" y2="175.8"/>
+	<text transform="matrix(1 0 0 1 162.121 189.154)" class="st1 st2"></text>
+	<line class="st4" x1="166.7" y1="188.5" x2="166.7" y2="175.8"/>
+	<path d="M118.1,174.8H167v2.1h-48.8V174.8z"/>
+	<path d="M163.4,177.9h3.6v2.1h-3.6V177.9z"/>
+	<text transform="matrix(1 0 0 1 178.179 189.154)" class="st1 st2"></text>
+	<line class="st4" x1="182.8" y1="188.5" x2="182.8" y2="175.8"/>
+	<text transform="matrix(1 0 0 1 210.296 191.204)" class="st1 st2"></text>
+	<line class="st4" x1="214.9" y1="190.5" x2="214.9" y2="177.9"/>
+	<path d="M182.5,174.8l32.6,2.1v2.1l-32.6-2.1V174.8z"/>
+	<text transform="matrix(1 0 0 1 242.413 189.154)" class="st1 st2"></text>
+	<line class="st4" x1="247" y1="188.5" x2="247" y2="173.8"/>
+	<text transform="matrix(1 0 0 1 274.7 185.054)" class="st1 st2"></text>
+	<line class="st4" x1="279.3" y1="184.4" x2="279.3" y2="171.7"/>
+	<path d="M246.8,172.8l32.8-2.1v2.1l-32.8,2.1V172.8z"/>
+	<line class="st4" x1="114" y1="193.9" x2="114" y2="204.9"/>
+	<text transform="matrix(1 0 0 1 113.775 193.254)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 178.179 193.254)" class="st1 st2"></text>
+	<line class="st4" x1="178.4" y1="193.9" x2="178.4" y2="206.6"/>
+	<text transform="matrix(1 0 0 1 210.296 195.304)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 204.829 195.304)" class="st1 st2"></text>
+	<line class="st4" x1="210.5" y1="196" x2="210.5" y2="208.6"/>
+	<path d="M178.2,205.6l32.6,2.1v2.1l-32.6-2.1V205.6z"/>
+	<text transform="matrix(1 0 0 1 242.413 193.254)" class="st1 st2"></text>
+	<line class="st4" x1="242.7" y1="193.9" x2="242.7" y2="206.6"/>
+	<text transform="matrix(1 0 0 1 274.7 191.204)" class="st1 st2"></text>
+	<line class="st4" x1="274.9" y1="191.9" x2="274.9" y2="204.5"/>
+	<path d="M242.4,205.6l32.8-2.1v2.1l-32.8,2.1V205.6z"/>
+	<line class="st0" x1="112.1" y1="220.4" x2="120.3" y2="220.4"/>
+	<text transform="matrix(1 0 0 1 113.775 218.367)" class="st1 st2"></text>
+	<line class="st4" x1="114" y1="219.1" x2="114" y2="231.7"/>
+	<line class="st0" x1="128.1" y1="220.4" x2="136.3" y2="220.4"/>
+	<line class="st0" x1="128.1" y1="216.3" x2="136.3" y2="216.3"/>
+	<text transform="matrix(1 0 0 1 129.833 216.317)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 124.708 216.317)" class="st1 st2"></text>
+	<line class="st4" x1="130.1" y1="217" x2="130.1" y2="232.4"/>
+	<line class="st0" x1="144.2" y1="220.4" x2="152.4" y2="220.4"/>
+	<text transform="matrix(1 0 0 1 145.892 218.367)" class="st1 st2"></text>
+	<line class="st4" x1="146.1" y1="219.1" x2="146.1" y2="233.1"/>
+	<line class="st0" x1="160.4" y1="220.4" x2="168.6" y2="220.4"/>
+	<text transform="matrix(1 0 0 1 162.121 220.417)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 156.654 220.417)" class="st1 st2"></text>
+	<line class="st4" x1="162.4" y1="221.1" x2="162.4" y2="233.7"/>
+	<path d="M113.8,230.7l48.8,2v2.1l-48.8-2.1V230.7z"/>
+	<path d="M113.8,227.6l48.8,2.1v2.1l-48.8-2.1V227.6z"/>
+	<line class="st0" x1="176.5" y1="220.4" x2="184.7" y2="220.4"/>
+	<text transform="matrix(1 0 0 1 178.179 218.367)" class="st1 st2"></text>
+	<line class="st4" x1="178.4" y1="219.1" x2="178.4" y2="233.7"/>
+	<line class="st0" x1="192.5" y1="220.4" x2="200.7" y2="220.4"/>
+	<text transform="matrix(1 0 0 1 194.238 220.417)" class="st1 st2"></text>
+	<line class="st4" x1="194.5" y1="221.1" x2="194.5" y2="233.7"/>
+	<line class="st0" x1="208.6" y1="220.4" x2="216.8" y2="220.4"/>
+	<text transform="matrix(1 0 0 1 210.296 218.367)" class="st1 st2"></text>
+	<line class="st4" x1="210.5" y1="219.1" x2="210.5" y2="233.7"/>
+	<line class="st0" x1="224.6" y1="220.4" x2="232.8" y2="220.4"/>
+	<text transform="matrix(1 0 0 1 226.354 220.417)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 222.254 220.417)" class="st1 st2"></text>
+	<line class="st4" x1="226.6" y1="221.1" x2="226.6" y2="233.7"/>
+	<path d="M178.2,232.7h48.7v2.1h-48.7V232.7z"/>
+	<path d="M178.2,229.6h48.7v2.1h-48.7V229.6z"/>
+	<text transform="matrix(1 0 0 1 242.413 222.467)" class="st1 st2"></text>
+	<line class="st4" x1="242.7" y1="223.2" x2="242.7" y2="235.8"/>
+	<line class="st0" x1="256.9" y1="220.4" x2="265.1" y2="220.4"/>
+	<text transform="matrix(1 0 0 1 258.642 220.417)" class="st1 st2"></text>
+	<line class="st4" x1="258.9" y1="221.1" x2="258.9" y2="236.5"/>
+	<text transform="matrix(1 0 0 1 274.7 222.467)" class="st1 st2"></text>
+	<line class="st4" x1="274.9" y1="223.2" x2="274.9" y2="237.2"/>
+	<text transform="matrix(1 0 0 1 290.758 224.517)" class="st1 st2"></text>
+	<line class="st4" x1="291" y1="225.2" x2="291" y2="237.8"/>
+	<path d="M242.4,234.8l48.8,2.1v2.1l-48.8-2.1V234.8z"/>
+	<path d="M242.4,231.7l48.8,2.1v2.1l-48.8-2.1V231.7z"/>
+	<text transform="matrix(1 0 0 1 113.775 280.379)" class="st1 st2"></text>
+	<line class="st4" x1="118.4" y1="279.7" x2="118.4" y2="254.8"/>
+	<text transform="matrix(1 0 0 1 145.892 266.029)" class="st1 st2"></text>
+	<line class="st4" x1="150.5" y1="265.3" x2="150.5" y2="252.7"/>
+	<path d="M118.1,253.7l32.6-2.1v2.1l-32.6,2.1V253.7z"/>
+	<text transform="matrix(1 0 0 1 178.179 266.029)" class="st1 st2"></text>
+	<line class="st4" x1="178.4" y1="266.7" x2="178.4" y2="279.4"/>
+	<text transform="matrix(1 0 0 1 210.296 266.029)" class="st1 st2"></text>
+	<line class="st4" x1="210.5" y1="266.7" x2="210.5" y2="279.4"/>
+	<path d="M178.2,278.3h32.6v2h-32.6V278.3z"/>
+	<text transform="matrix(1 0 0 1 242.413 266.029)" class="st1 st2"></text>
+	<line class="st4" x1="242.7" y1="266.7" x2="242.7" y2="279.4"/>
+	<text transform="matrix(1 0 0 1 274.7 268.079)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 270.6 268.079)" class="st1 st2"></text>
+	<line class="st4" x1="274.9" y1="268.8" x2="274.9" y2="281.4"/>
+	<path d="M242.4,278.3l32.8,2v2l-32.8-2V278.3z"/>
+	<line class="st4" x1="317.6" y1="186.4" x2="317.6" y2="175.5"/>
+	<text transform="matrix(1 0 0 1 312.967 187.104)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 362.338 189.154)" class="st1 st2"></text>
+	<line class="st4" x1="366.9" y1="188.5" x2="366.9" y2="175.8"/>
+	<text transform="matrix(1 0 0 1 386.938 189.154)" class="st1 st2"></text>
+	<line class="st4" x1="391.5" y1="188.5" x2="391.5" y2="175.8"/>
+	<path d="M366.7,174.8h25.1v2.1h-25.1V174.8z"/>
+	<text transform="matrix(1 0 0 1 412.05 191.204)" class="st1 st2"></text>
+	<line class="st4" x1="416.6" y1="190.5" x2="416.6" y2="177.9"/>
+	<text transform="matrix(1 0 0 1 438.017 191.204)" class="st1 st2"></text>
+	<line class="st4" x1="442.6" y1="190.5" x2="442.6" y2="177.9"/>
+	<path d="M416.4,176.9h26.5v2.1h-26.5V176.9z"/>
+	<text transform="matrix(1 0 0 1 317.238 189.154)" class="st1 st2"></text>
+	<line class="st4" x1="317.5" y1="189.8" x2="317.5" y2="208.6"/>
+	<text transform="matrix(1 0 0 1 337.567 197.354)" class="st1 st2"></text>
+	<line class="st4" x1="337.8" y1="198" x2="337.8" y2="210.7"/>
+	<path d="M317.2,207.6l20.8,2.1v2l-20.8-2V207.6z"/>
+	<text transform="matrix(1 0 0 1 362.338 197.354)" class="st1 st2"></text>
+	<line class="st4" x1="362.6" y1="198" x2="362.6" y2="212.7"/>
+	<text transform="matrix(1 0 0 1 374.638 195.304)" class="st1 st2"></text>
+	<line class="st4" x1="374.9" y1="196" x2="374.9" y2="212.7"/>
+	<text transform="matrix(1 0 0 1 386.938 197.354)" class="st1 st2"></text>
+	<line class="st4" x1="387.2" y1="198" x2="387.2" y2="212.7"/>
+	<text transform="matrix(1 0 0 1 399.238 199.404)" class="st1 st2"></text>
+	<line class="st4" x1="399.5" y1="200.1" x2="399.5" y2="212.7"/>
+	<path d="M362.3,211.7h37.4v2.1h-37.4V211.7z"/>
+	<path d="M362.3,208.6h37.4v2.1h-37.4V208.6z"/>
+	<line class="st0" x1="410.3" y1="201.5" x2="418.5" y2="201.5"/>
+	<text transform="matrix(1 0 0 1 412.05 201.454)" class="st1 st2"></text>
+	<line class="st4" x1="412.3" y1="202.1" x2="412.3" y2="214.8"/>
+	<text transform="matrix(1 0 0 1 425.717 197.354)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 420.592 197.354)" class="st1 st2"></text>
+	<line class="st4" x1="426" y1="198" x2="426" y2="214.8"/>
+	<text transform="matrix(1 0 0 1 438.017 199.404)" class="st1 st2"></text>
+	<line class="st4" x1="438.3" y1="200.1" x2="438.3" y2="214.8"/>
+	<line class="st0" x1="449" y1="201.5" x2="457.1" y2="201.5"/>
+	<text transform="matrix(1 0 0 1 450.658 201.454)" class="st1 st2"></text>
+	<line class="st4" x1="450.9" y1="202.1" x2="450.9" y2="214.8"/>
+	<path d="M412,213.8h39.1v2.1H412V213.8z"/>
+	<path d="M412,210.7h39.1v2.1H412V210.7z"/>
+	<text transform="matrix(1 0 0 1 312.967 226.567)" class="st1 st2"></text>
+	<line class="st4" x1="313.2" y1="227.3" x2="313.2" y2="239.9"/>
+	<text transform="matrix(1 0 0 1 325.267 222.467)" class="st1 st2"></text>
+	<line class="st4" x1="325.5" y1="223.2" x2="325.5" y2="239.9"/>
+	<text transform="matrix(1 0 0 1 337.567 224.517)" class="st1 st2"></text>
+	<line class="st4" x1="337.8" y1="225.2" x2="337.8" y2="239.9"/>
+	<text transform="matrix(1 0 0 1 350.038 226.567)" class="st1 st2"></text>
+	<line class="st4" x1="350.3" y1="227.3" x2="350.3" y2="239.9"/>
+	<path d="M313,238.9h37.6v2.1H313V238.9z"/>
+	<path d="M313,235.8h37.6v2H313V235.8z"/>
+	<text transform="matrix(1 0 0 1 362.338 228.617)" class="st1 st2"></text>
+	<line class="st4" x1="362.6" y1="229.3" x2="362.6" y2="241.9"/>
+	<text transform="matrix(1 0 0 1 386.938 226.567)" class="st1 st2"></text>
+	<line class="st4" x1="387.2" y1="227.3" x2="387.2" y2="239.9"/>
+	<path d="M362.3,240.9l25.1-2.1v2.1l-25.1,2V240.9z"/>
+	<line class="st4" x1="412.3" y1="225.2" x2="412.3" y2="238.9"/>
+	<text transform="matrix(1 0 0 1 412.05 224.517)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 312.967 270.129)" class="st1 st2"></text>
+	<line class="st4" x1="313.2" y1="270.8" x2="313.2" y2="285.5"/>
+	<text transform="matrix(1 0 0 1 337.567 274.229)" class="st1 st2"></text>
+	<line class="st4" x1="337.8" y1="274.9" x2="337.8" y2="287.6"/>
+	<path d="M313,284.5l25.1,2v2.1l-25.1-2.1V284.5z"/>
+	<text transform="matrix(1 0 0 1 362.338 272.179)" class="st1 st2"></text>
+	<line class="st4" x1="362.6" y1="272.9" x2="362.6" y2="285.5"/>
+	<text transform="matrix(1 0 0 1 386.938 270.129)" class="st1 st2"></text>
+	<line class="st4" x1="387.2" y1="270.8" x2="387.2" y2="283.5"/>
+	<path d="M362.3,284.5l25.1-2.1v2.1l-25.1,2V284.5z"/>
+	<text transform="matrix(1 0 0 1 412.05 268.079)" class="st1 st2"></text>
+	<line class="st4" x1="412.3" y1="268.8" x2="412.3" y2="281.4"/>
+	<text transform="matrix(1 0 0 1 438.017 268.079)" class="st1 st2"></text>
+	<line class="st4" x1="438.3" y1="268.8" x2="438.3" y2="281.4"/>
+	<path d="M412,280.4h26.5v2H412V280.4z"/>
+	<path d="M341.3,200.6c3.6,3.1,14.7,3.1,18.3,0l-0.3-0.3c-3.3,2.5-14.4,2.5-17.7,0L341.3,200.6z"/>
+	<line class="st0" x1="80.3" y1="324.6" x2="80.3" y2="424"/>
+	<text transform="matrix(1 0 0 1 84.733 336.925)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 84.733 372.287)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 84.733 411.75)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 100.108 332.825)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 100.108 380.487)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 100.108 419.95)" class="st1 st2"></text>
+	<line class="st0" x1="231.3" y1="324.6" x2="231.3" y2="384.6"/>
+	<line class="st0" x1="231.3" y1="407.6" x2="231.3" y2="424"/>
+	<line class="st0" x1="357.5" y1="324.6" x2="357.5" y2="384.6"/>
+	<line class="st0" x1="357.5" y1="407.6" x2="357.5" y2="424"/>
+	<line class="st5" x1="463" y1="324.6" x2="463" y2="384.6"/>
+	<line class="st0" x1="460" y1="324.6" x2="460" y2="384.6"/>
+	<line class="st5" x1="463" y1="407.6" x2="463" y2="424"/>
+	<line class="st0" x1="460" y1="407.6" x2="460" y2="424"/>
+	<line class="st3" x1="79.9" y1="324.6" x2="464" y2="324.6"/>
+	<line class="st3" x1="79.9" y1="328.7" x2="464" y2="328.7"/>
+	<line class="st3" x1="79.9" y1="332.8" x2="464" y2="332.8"/>
+	<line class="st3" x1="79.9" y1="336.9" x2="464" y2="336.9"/>
+	<line class="st3" x1="79.9" y1="341" x2="464" y2="341"/>
+	<line class="st3" x1="79.9" y1="368.2" x2="464" y2="368.2"/>
+	<line class="st3" x1="79.9" y1="372.3" x2="464" y2="372.3"/>
+	<line class="st3" x1="79.9" y1="376.4" x2="464" y2="376.4"/>
+	<line class="st3" x1="79.9" y1="380.5" x2="464" y2="380.5"/>
+	<line class="st3" x1="79.9" y1="384.6" x2="464" y2="384.6"/>
+	<line class="st3" x1="79.9" y1="407.6" x2="464" y2="407.6"/>
+	<line class="st3" x1="79.9" y1="411.8" x2="464" y2="411.8"/>
+	<line class="st3" x1="79.9" y1="415.9" x2="464" y2="415.9"/>
+	<line class="st3" x1="79.9" y1="420" x2="464" y2="420"/>
+	<line class="st3" x1="79.9" y1="424" x2="464" y2="424"/>
+	<path d="M77.9,324.6c-10,16.4,5.1,21.9-3.9,30.1h0.7c8.4-6.2-2.7-17.7,3.3-28.8L77.9,324.6z"/>
+	<path d="M77.9,384.6c-10-16.4,5.1-21.7-3.9-29.9h0.7c8.4,6.2-2.7,17.5,3.3,28.7L77.9,384.6z"/>
+	<text transform="matrix(1 0 0 1 116.167 336.925)" class="st1 st2"></text>
+	<line class="st4" x1="120.8" y1="336.2" x2="120.8" y2="323.6"/>
+	<text transform="matrix(1 0 0 1 136.667 336.925)" class="st1 st2"></text>
+	<line class="st4" x1="141.3" y1="336.2" x2="141.3" y2="323.6"/>
+	<path d="M120.5,322.6h21v2h-21V322.6z"/>
+	<line class="st4" x1="159.5" y1="328" x2="159.5" y2="317.1"/>
+	<text transform="matrix(1 0 0 1 154.946 328.725)" class="st1 st2"></text>
+	<line class="st4" x1="196.1" y1="330.1" x2="196.1" y2="319.2"/>
+	<text transform="matrix(1 0 0 1 191.504 330.775)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 116.167 343.075)" class="st1 st2"></text>
+	<line class="st4" x1="116.4" y1="343.8" x2="116.4" y2="356.4"/>
+	<text transform="matrix(1 0 0 1 125.392 338.975)" class="st1 st2"></text>
+	<line class="st4" x1="125.6" y1="339.7" x2="125.6" y2="356.4"/>
+	<text transform="matrix(1 0 0 1 136.667 341.025)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 132.567 341.025)" class="st1 st2"></text>
+	<line class="st4" x1="136.9" y1="341.7" x2="136.9" y2="356.4"/>
+	<text transform="matrix(1 0 0 1 145.892 343.075)" class="st1 st2"></text>
+	<line class="st4" x1="146.1" y1="343.8" x2="146.1" y2="356.4"/>
+	<path d="M116.2,355.4h30.2v2h-30.2V355.4z"/>
+	<path d="M116.2,352.3h30.2v2.1h-30.2V352.3z"/>
+	<text transform="matrix(1 0 0 1 154.946 341.025)" class="st1 st2"></text>
+	<line class="st4" x1="155.2" y1="341.7" x2="155.2" y2="354.4"/>
+	<text transform="matrix(1 0 0 1 164.171 336.925)" class="st1 st2"></text>
+	<line class="st4" x1="164.4" y1="337.6" x2="164.4" y2="354.4"/>
+	<text transform="matrix(1 0 0 1 173.225 338.975)" class="st1 st2"></text>
+	<line class="st4" x1="173.5" y1="339.7" x2="173.5" y2="354.4"/>
+	<text transform="matrix(1 0 0 1 182.45 341.025)" class="st1 st2"></text>
+	<line class="st4" x1="182.7" y1="341.7" x2="182.7" y2="354.4"/>
+	<path d="M154.9,353.3h28v2h-28V353.3z"/>
+	<path d="M154.9,350.2h28v2h-28V350.2z"/>
+	<text transform="matrix(1 0 0 1 191.504 338.975)" class="st1 st2"></text>
+	<line class="st4" x1="191.8" y1="339.7" x2="191.8" y2="354.4"/>
+	<text transform="matrix(1 0 0 1 200.729 336.925)" class="st1 st2"></text>
+	<line class="st4" x1="201" y1="337.6" x2="201" y2="354.4"/>
+	<text transform="matrix(1 0 0 1 209.783 338.975)" class="st1 st2"></text>
+	<line class="st4" x1="210" y1="339.7" x2="210" y2="354.4"/>
+	<text transform="matrix(1 0 0 1 221.742 341.025)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 216.617 341.025)" class="st1 st2"></text>
+	<line class="st4" x1="222" y1="341.7" x2="222" y2="354.4"/>
+	<path d="M191.5,353.3h30.7v2h-30.7V353.3z"/>
+	<path d="M191.5,350.2h30.7v2h-30.7V350.2z"/>
+	<line class="st4" x1="116.4" y1="366.8" x2="116.4" y2="380.5"/>
+	<text transform="matrix(1 0 0 1 116.167 366.137)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 112.067 366.137)" class="st1 st2"></text>
+	<line class="st4" x1="155.2" y1="366.8" x2="155.2" y2="380.5"/>
+	<text transform="matrix(1 0 0 1 154.946 366.137)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 149.821 366.137)" class="st1 st2"></text>
+	<line class="st4" x1="191.8" y1="368.9" x2="191.8" y2="382.5"/>
+	<text transform="matrix(1 0 0 1 191.504 368.188)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 116.167 426.1)" class="st1 st2"></text>
+	<line class="st4" x1="120.8" y1="425.4" x2="120.8" y2="400.5"/>
+	<text transform="matrix(1 0 0 1 136.667 411.75)" class="st1 st2"></text>
+	<line class="st4" x1="141.3" y1="411.1" x2="141.3" y2="398.4"/>
+	<path d="M120.5,399.5l21-2.1v2.1l-21,2V399.5z"/>
+	<text transform="matrix(1 0 0 1 154.946 411.75)" class="st1 st2"></text>
+	<line class="st4" x1="155.2" y1="412.4" x2="155.2" y2="425.1"/>
+	<text transform="matrix(1 0 0 1 173.225 411.75)" class="st1 st2"></text>
+	<line class="st4" x1="173.5" y1="412.4" x2="173.5" y2="425.1"/>
+	<path d="M154.9,424h18.8v2.1h-18.8V424z"/>
+	<text transform="matrix(1 0 0 1 191.504 411.75)" class="st1 st2"></text>
+	<line class="st4" x1="191.8" y1="412.4" x2="191.8" y2="425.1"/>
+	<text transform="matrix(1 0 0 1 209.783 411.75)" class="st1 st2"></text>
+	<line class="st4" x1="210" y1="412.4" x2="210" y2="425.1"/>
+	<path d="M191.5,424h18.8v2.1h-18.8V424z"/>
+	<text transform="matrix(1 0 0 1 243.779 326.675)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 237.117 328.725)" class="st1 st2"></text>
+	<line class="st4" x1="241.7" y1="328" x2="241.7" y2="315.4"/>
+	<text transform="matrix(1 0 0 1 267.354 328.725)" class="st1 st2"></text>
+	<line class="st4" x1="271.9" y1="328" x2="271.9" y2="315.4"/>
+	<path d="M241.5,314.4h30.7v2h-30.7V314.4z"/>
+	<path d="M268.6,317.5h3.6v2h-3.6V317.5z"/>
+	<text transform="matrix(1 0 0 1 276.921 330.775)" class="st1 st2"></text>
+	<line class="st4" x1="281.5" y1="330.1" x2="281.5" y2="313.4"/>
+	<text transform="matrix(1 0 0 1 296.225 324.625)" class="st1 st2"></text>
+	<line class="st4" x1="300.8" y1="323.9" x2="300.8" y2="311.3"/>
+	<path d="M281.3,312.3l19.8-2.1v2.1l-19.8,2V312.3z"/>
+	<text transform="matrix(1 0 0 1 316.042 324.625)" class="st1 st2"></text>
+	<line class="st4" x1="320.6" y1="323.9" x2="320.6" y2="311.3"/>
+	<text transform="matrix(1 0 0 1 337.396 326.675)" class="st1 st2"></text>
+	<line class="st4" x1="342" y1="326" x2="342" y2="313.4"/>
+	<path d="M320.4,310.3l21.8,2.1v2l-21.8-2V310.3z"/>
+	<text transform="matrix(1 0 0 1 237.117 343.075)" class="st1 st2"></text>
+	<line class="st4" x1="237.4" y1="343.8" x2="237.4" y2="356.4"/>
+	<text transform="matrix(1 0 0 1 248.05 341.025)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 243.95 341.025)" class="st1 st2"></text>
+	<line class="st4" x1="248.3" y1="341.7" x2="248.3" y2="355.7"/>
+	<text transform="matrix(1 0 0 1 257.617 338.975)" class="st1 st2"></text>
+	<line class="st4" x1="257.9" y1="339.7" x2="257.9" y2="355"/>
+	<text transform="matrix(1 0 0 1 267.354 336.925)" class="st1 st2"></text>
+	<line class="st4" x1="267.6" y1="337.6" x2="267.6" y2="354.4"/>
+	<path d="M237.1,355.4l30.7-2v2l-30.7,2V355.4z"/>
+	<path d="M237.1,352.3l30.7-2v2l-30.7,2.1V352.3z"/>
+	<line class="st4" x1="277.2" y1="335.6" x2="277.2" y2="346.5"/>
+	<text transform="matrix(1 0 0 1 276.921 334.875)" class="st1 st2"></text>
+	<line class="st4" x1="316.3" y1="337.6" x2="316.3" y2="348.5"/>
+	<text transform="matrix(1 0 0 1 316.042 336.925)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 237.117 376.387)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 248.05 378.438)" class="st1 st2"></text>
+	<line class="st4" x1="248.3" y1="379.1" x2="248.3" y2="391.8"/>
+	<text transform="matrix(1 0 0 1 257.617 376.387)" class="st1 st2"></text>
+	<line class="st4" x1="257.9" y1="377.1" x2="257.9" y2="390.7"/>
+	<text transform="matrix(1 0 0 1 267.354 374.337)" class="st1 st2"></text>
+	<line class="st4" x1="267.6" y1="375" x2="267.6" y2="389.7"/>
+	<path d="M248.1,390.7l19.8-2v2l-19.8,2V390.7z"/>
+	<path d="M248.1,387.7l19.8-2v2l-19.8,2.1V387.7z"/>
+	<text transform="matrix(1 0 0 1 276.921 372.287)" class="st1 st2"></text>
+	<line class="st4" x1="277.2" y1="373" x2="277.2" y2="385.6"/>
+	<text transform="matrix(1 0 0 1 286.488 370.237)" class="st1 st2"></text>
+	<line class="st4" x1="286.7" y1="370.9" x2="286.7" y2="384.9"/>
+	<text transform="matrix(1 0 0 1 296.225 368.188)" class="st1 st2"></text>
+	<line class="st4" x1="296.5" y1="368.9" x2="296.5" y2="384.2"/>
+	<text transform="matrix(1 0 0 1 305.792 366.137)" class="st1 st2"></text>
+	<line class="st4" x1="306" y1="366.8" x2="306" y2="383.6"/>
+	<path d="M276.9,384.6l29.4-2.1v2.1l-29.4,2V384.6z"/>
+	<path d="M276.9,381.5l29.4-2v2l-29.4,2.1V381.5z"/>
+	<line class="st0" x1="314.3" y1="364.1" x2="322.5" y2="364.1"/>
+	<text transform="matrix(1 0 0 1 316.042 364.087)" class="st1 st2"></text>
+	<line class="st4" x1="316.3" y1="364.8" x2="316.3" y2="377.4"/>
+	<line class="st0" x1="324.9" y1="364.1" x2="333.1" y2="364.1"/>
+	<text transform="matrix(1 0 0 1 326.633 362.037)" class="st1 st2"></text>
+	<line class="st4" x1="326.9" y1="362.7" x2="326.9" y2="378.1"/>
+	<line class="st0" x1="335.7" y1="364.1" x2="343.9" y2="364.1"/>
+	<text transform="matrix(1 0 0 1 337.396 364.087)" class="st1 st2"></text>
+	<line class="st4" x1="337.6" y1="364.8" x2="337.6" y2="378.8"/>
+	<text transform="matrix(1 0 0 1 347.646 366.137)" class="st1 st2"></text>
+	<line class="st4" x1="347.9" y1="366.8" x2="347.9" y2="379.5"/>
+	<path d="M316,376.4l32.1,2.1v2l-32.1-2V376.4z"/>
+	<path d="M316,373.3l32.1,2v2l-32.1-2V373.3z"/>
+	<text transform="matrix(1 0 0 1 237.117 419.95)" class="st1 st2"></text>
+	<line class="st4" x1="237.4" y1="420.6" x2="237.4" y2="433.3"/>
+	<text transform="matrix(1 0 0 1 257.617 405.6)" class="st1 st2"></text>
+	<line class="st4" x1="257.9" y1="406.3" x2="257.9" y2="431.2"/>
+	<path d="M237.1,432.2l21-2v2l-21,2V432.2z"/>
+	<text transform="matrix(1 0 0 1 276.921 407.65)" class="st1 st2"></text>
+	<line class="st4" x1="277.2" y1="408.3" x2="277.2" y2="423"/>
+	<text transform="matrix(1 0 0 1 296.225 411.75)" class="st1 st2"></text>
+	<line class="st4" x1="296.5" y1="412.4" x2="296.5" y2="425.1"/>
+	<path d="M276.9,422l19.8,2v2.1l-19.8-2.1V422z"/>
+	<line class="st4" x1="320.6" y1="417.2" x2="320.6" y2="403.5"/>
+	<text transform="matrix(1 0 0 1 316.042 417.9)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 370.025 322.575)" class="st1 st2"></text>
+	<line class="st4" x1="368" y1="323.9" x2="368" y2="313"/>
+	<text transform="matrix(1 0 0 1 363.363 324.625)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 363.363 338.975)" class="st1 st2"></text>
+	<line class="st4" x1="363.6" y1="339.7" x2="363.6" y2="354.4"/>
+	<text transform="matrix(1 0 0 1 372.246 336.925)" class="st1 st2"></text>
+	<line class="st4" x1="372.5" y1="337.6" x2="372.5" y2="354.4"/>
+	<text transform="matrix(1 0 0 1 381.3 338.975)" class="st1 st2"></text>
+	<line class="st4" x1="381.5" y1="339.7" x2="381.5" y2="354.4"/>
+	<text transform="matrix(1 0 0 1 390.183 341.025)" class="st1 st2"></text>
+	<line class="st4" x1="390.4" y1="341.7" x2="390.4" y2="354.4"/>
+	<path d="M363.4,353.3h27.3v2h-27.3V353.3z"/>
+	<path d="M363.4,350.2h27.3v2h-27.3V350.2z"/>
+	<text transform="matrix(1 0 0 1 399.067 338.975)" class="st1 st2"></text>
+	<line class="st4" x1="399.3" y1="339.7" x2="399.3" y2="352.3"/>
+	<text transform="matrix(1 0 0 1 408.633 332.825)" class="st1 st2"></text>
+	<line class="st4" x1="408.9" y1="333.5" x2="408.9" y2="352.3"/>
+	<text transform="matrix(1 0 0 1 418.883 334.875)" class="st1 st2"></text>
+	<line class="st4" x1="419.1" y1="335.6" x2="419.1" y2="352.3"/>
+	<text transform="matrix(1 0 0 1 428.45 336.925)" class="st1 st2"></text>
+	<line class="st4" x1="428.7" y1="337.6" x2="428.7" y2="352.3"/>
+	<path d="M399.1,351.3h29.9v2.1h-29.9V351.3z"/>
+	<path d="M399.1,348.2h29.9v2h-29.9V348.2z"/>
+	<line class="st4" x1="438.4" y1="335.6" x2="438.4" y2="346.5"/>
+	<text transform="matrix(1 0 0 1 438.188 334.875)" class="st1 st2"></text>
+	<text transform="matrix(1 0 0 1 363.363 368.188)" class="st1 st2"></text>
+	<line class="st4" x1="363.6" y1="368.9" x2="363.6" y2="381.5"/>
+	<text transform="matrix(1 0 0 1 372.246 366.137)" class="st1 st2"></text>
+	<line class="st4" x1="372.5" y1="366.8" x2="372.5" y2="382.2"/>
+	<text transform="matrix(1 0 0 1 381.3 368.188)" class="st1 st2"></text>
+	<line class="st4" x1="381.5" y1="368.9" x2="381.5" y2="382.9"/>
+	<text transform="matrix(1 0 0 1 390.183 370.237)" class="st1 st2"></text>
+	<line class="st4" x1="390.4" y1="370.9" x2="390.4" y2="383.6"/>
+	<path d="M363.4,380.5l27.3,2v2.1l-27.3-2.1V380.5z"/>
+	<path d="M363.4,377.4l27.3,2.1v2l-27.3-2V377.4z"/>
+	<text transform="matrix(1 0 0 1 399.067 368.188)" class="st1 st2"></text>
+	<line class="st4" x1="399.3" y1="368.9" x2="399.3" y2="381.5"/>
+	<line class="st0" x1="406.9" y1="364.1" x2="415.1" y2="364.1"/>
+	<text transform="matrix(1 0 0 1 408.633 362.037)" class="st1 st2"></text>
+	<line class="st4" x1="408.9" y1="362.7" x2="408.9" y2="380.8"/>
+	<line class="st0" x1="417.2" y1="364.1" x2="425.4" y2="364.1"/>
+	<text transform="matrix(1 0 0 1 418.883 364.087)" class="st1 st2"></text>
+	<line class="st4" x1="419.1" y1="364.8" x2="419.1" y2="380.1"/>
+	<text transform="matrix(1 0 0 1 428.45 366.137)" class="st1 st2"></text>
+	<line class="st4" x1="428.7" y1="366.8" x2="428.7" y2="379.5"/>
+	<path d="M399.1,380.5l29.9-2v2l-29.9,2V380.5z"/>
+	<path d="M399.1,377.4l29.9-2v2l-29.9,2.1V377.4z"/>
+	<line class="st4" x1="438.4" y1="364.8" x2="438.4" y2="378.4"/>
+	<line class="st0" x1="436.5" y1="364.1" x2="444.7" y2="364.1"/>
+	<text transform="matrix(1 0 0 1 438.188 364.087)" class="st1 st2"></text>
+	<line class="st4" x1="363.6" y1="412.4" x2="363.6" y2="426.1"/>
+	<text transform="matrix(1 0 0 1 363.363 411.75)" class="st1 st2"></text>
+	<line class="st4" x1="403.7" y1="425.4" x2="403.7" y2="411.8"/>
+	<text transform="matrix(1 0 0 1 399.067 426.1)" class="st1 st2"></text>
+</g>
+</svg>
