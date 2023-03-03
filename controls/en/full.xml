@@ -3869,8 +3869,12 @@
          <character code="460" />
          <character code="639" />
       </control>
-      <control top="82" left="402" width="15" height="15" label="">
-         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
+      <control top="82" left="402" width="15" height="15" label="change staves">
+         <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#000" />
+         <graphic type="text" color="#fff" size="25" align="center" baseline="middle" top="30" left="50" content="CHNG" />
+         <graphic type="text" color="#fff" size="25" align="center" baseline="middle" top="65" left="50" content="STAVE" />
+         <character code="951" />
+         <character code="1176" />
       </control>
       <control top="82" left="418" width="15" height="15" label="">
          <graphic type="rect" top="0" left="0" width="100" height="100" fill="true" stroke="false" color="#ccc" />
