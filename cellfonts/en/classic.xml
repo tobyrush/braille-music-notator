@@ -86,6 +86,13 @@
         <graphic type="background" color="#7f462c" cells="2" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="100" top="60" content="&#xe4a0;" />
     </cell>
+    <cell name="alternate accent symbol" char="articulationAccentAlternate">
+        <code value="346" />
+        <code value="1145" />
+        <graphic type="background" color="#7f462c" cells="2" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="100" top="60" content="&#xe4a0;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="40" left="175" top="40" content="*" />
+    </cell>
     <cell name="extended accent" char="articulationAccentExtended">
         <code value="794" />
         <code value="356" />
@@ -332,11 +339,25 @@
         <graphic type="background" color="#7f462c" cells="2" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="100" top="60" content="&#xe4ac;" />
     </cell>
+    <cell name="alternate marcato symbol" char="articulationMarcatoAlternate">
+        <code value="159" />
+        <code value="1145" />
+        <graphic type="background" color="#7f462c" cells="2" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="100" top="60" content="&#xe4ac;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="40" left="175" top="40" content="*" />
+    </cell>
     <cell name="mezzo staccato" char="articulationMezzoStaccato">
         <code value="1234" />
         <code value="356" />
         <graphic type="background" color="#7f462c" cells="2" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="60" left="100" top="60" content="&#xe4b2;" />
+    </cell>
+    <cell name="alternate mezzo staccato symbol" char="articulationMezzoStaccatoAlternate">
+        <code value="1234" />
+        <code value="1145" />
+        <graphic type="background" color="#7f462c" cells="2" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="60" left="100" top="60" content="&#xe4b2;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="40" left="175" top="40" content="*" />
     </cell>
     <cell name="extended lower mordent" char="articulationMordentExtendedLower">
         <code value="159" />
@@ -345,6 +366,15 @@
         <graphic type="background" color="#7f462c" cells="3" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="65" left="150" top="60" content="&#xe56e;" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="65" left="150" top="60" content="&#xe59f;" />
+    </cell>
+    <cell name="alternate extended lower mordent symbol" char="articulationMordentExtendedLowerAlternate">
+        <code value="159" />
+        <code value="1251" />
+        <code value="176" />
+        <graphic type="background" color="#7f462c" cells="3" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="65" left="150" top="60" content="&#xe56e;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="65" left="150" top="60" content="&#xe59f;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="40" left="275" top="40" content="*" />
     </cell>
     <cell name="extended lower mordent flatted" char="articulationMordentExtendedLowerFlat">
         <code value="60" />
@@ -372,6 +402,13 @@
         <graphic type="background" color="#7f462c" cells="2" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="65" left="100" top="60" content="&#xe56e;" />
     </cell>
+    <cell name="alternate extended upper mordent symbol" char="articulationMordentExtendedUpperAlternate">
+        <code value="159" />
+        <code value="1251" />
+        <graphic type="background" color="#7f462c" cells="2" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="65" left="100" top="60" content="&#xe56e;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="40" left="175" top="40" content="*" />
+    </cell>
     <cell name="extended upper mordent flatted" char="articulationMordentExtendedUpperFlat">
         <code value="60" />
         <code value="159" />
@@ -394,6 +431,14 @@
         <code value="176" />
         <graphic type="background" color="#7f462c" cells="3" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="65" left="150" top="60" content="&#xe56d;" />
+    </cell>
+    <cell name="alternate lower mordent symbol" char="articulationMordentLowerAlternate">
+        <code value="1234" />
+        <code value="1251" />
+        <code value="176" />
+        <graphic type="background" color="#7f462c" cells="3" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="65" left="150" top="60" content="&#xe56d;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="40" left="275" top="40" content="*" />
     </cell>
     <cell name="lower mordent flatted" char="articulationMordentLowerFlat">
         <code value="60" />
@@ -418,6 +463,13 @@
         <code value="154" />
         <graphic type="background" color="#7f462c" cells="2" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="65" left="100" top="60" content="&#xe56c;" />
+    </cell>
+    <cell name="alternate upper mordent symbol" char="articulationMordentUpperAlternate">
+        <code value="1234" />
+        <code value="1251" />
+        <graphic type="background" color="#7f462c" cells="2" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="65" left="100" top="60" content="&#xe56c;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="40" left="175" top="40" content="*" />
     </cell>
     <cell name="upper mordent flatted" char="articulationMordentUpperFlat">
         <code value="60" />
@@ -475,10 +527,23 @@
         <graphic type="background" color="#7f462c" cells="2" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="60" left="100" top="60" content="&#xe4a6;" />
     </cell>
+    <cell name="alternate staccatissimo symbol" char="articulationStaccatissimoAlternate">
+        <code value="144" />
+        <code value="1145" />
+        <graphic type="background" color="#7f462c" cells="2" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="60" left="100" top="60" content="&#xe4a6;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="40" left="175" top="40" content="*" />
+    </cell>
     <cell name="staccato" char="articulationStaccato">
         <code value="356" />
         <graphic type="background" color="#7f462c" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="60" left="50" top="60" content="&#xe4a2;" />
+    </cell>
+    <cell name="alternate staccato symbol" char="articulationStaccatoAlternate">
+        <code value="945" />
+        <graphic type="background" color="#7f462c" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="60" left="50" top="60" content="&#xe4a2;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="40" left="75" top="40" content="*" />
     </cell>
     <cell name="swell" char="articulationSwell">
         <code value="442" />
@@ -492,6 +557,13 @@
         <code value="156" />
         <graphic type="background" color="#7f462c" cells="2" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="100" top="60" content="&#xe4a4;" />
+    </cell>
+    <cell name="alternate tenuto symbol" char="articulationTenutoAlternate">
+        <code value="395" />
+        <code value="1145" />
+        <graphic type="background" color="#7f462c" cells="2" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="100" top="60" content="&#xe4a4;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="40" left="175" top="40" content="*" />
     </cell>
     <cell name="left hand thumb" char="articulationThumbLeftHand">
         <code value="342" />
@@ -598,6 +670,12 @@
         <graphic type="background" color="#7f462c" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="55" top="60" content="&#xe566;" />
     </cell>
+    <cell name="alternate trill symbol" char="articulationTrillAlternate">
+        <code value="1151" />
+        <graphic type="background" color="#7f462c" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="80" left="55" top="60" content="&#xe566;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="40" left="75" top="40" content="*" />
+    </cell>
     <cell name="trill with flatted note" char="articulationTrillFlat">
         <code value="60" />
         <code value="154" />
@@ -639,6 +717,15 @@
         <graphic type="text" color="#bfa295" align="right" size="40" left="45" top="70" content="&#xe1d2;" />
         <graphic type="text" color="#bfa295" align="right" size="40" left="85" top="70" content="&#xe1d2;" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="70" left="50" top="50" content="&#xe567;" />
+    </cell>
+    <cell name="alternate turn between notes symbol" char="articulationTurnAlternate">
+        <code value="159" />
+        <code value="1247" />
+        <graphic type="background" color="#7f462c" cells="2" />
+        <graphic type="text" color="#bfa295" align="right" size="40" left="95" top="70" content="&#xe1d2;" />
+        <graphic type="text" color="#bfa295" align="right" size="40" left="135" top="70" content="&#xe1d2;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="70" left="100" top="50" content="&#xe567;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="40" left="175" top="40" content="*" />
     </cell>
     <cell name="turn with both notes flatted" char="articulationTurnBothNotesFlat">
         <code value="60" />
@@ -768,6 +855,14 @@
         <graphic type="background" color="#7f462c" cells="2" />
         <graphic type="text" color="#bfa295" align="center" size="60" left="100" top="70" content="&#xe1d2;" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="70" left="100" top="40" content="&#xe567;" />
+    </cell>
+    <cell name="alternate turn on single note symbol" char="articulationTurnSingleAlternate">
+        <code value="395" />
+        <code value="1247" />
+        <graphic type="background" color="#7f462c" cells="2" />
+        <graphic type="text" color="#bfa295" align="center" size="60" left="100" top="70" content="&#xe1d2;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="70" left="100" top="40" content="&#xe567;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="40" left="175" top="40" content="*" />
     </cell>
     <cell name="inverted turn on single note" char="articulationTurnSingleInverted">
         <code value="144" />
@@ -1197,6 +1292,12 @@
         <graphic type="background" color="#000" cells="2" />
         <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="100" top="35" content="CHANGE" />
         <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="20" left="100" top="65" content="STAVES" />
+    </cell>
+    <cell name="cross part unison" char="directionCrossPartUnison">
+        <code value="1676" />
+        <graphic type="background" color="#000" />
+        <graphic type="text" color="#fff" align="center" size="40" left="50" top="50" content="&#xe1d3;" />
+        <graphic type="text" color="#fff" align="center" size="40" left="50" top="50" content="&#xe1d4;" />
     </cell>
     <cell name="draw" char="directionDraw">
         <code value="460" />
@@ -3204,17 +3305,29 @@
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="SEND" />
         <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="LINE" />
     </cell>
-
     <cell name="long appoggiatura" char="noteAppoggiaturaLong">
         <code value="834" />
         <code value="153" />
         <graphic type="background" color="#f00" cells="2" />
         <graphic type="text" color="#fff" align="center" size="47" left="100" top="55" content="&#xe562;" />
     </cell>
+    <cell name="alternate long appoggiatura alternate" char="noteAppoggiaturaLongAlternate">
+        <code value="144" />
+        <code value="1247" />
+        <graphic type="background" color="#f00" cells="2" />
+        <graphic type="text" color="#fff" align="center" size="47" left="100" top="55" content="&#xe562;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="40" left="175" top="40" content="*" />
+    </cell>
     <cell name="short appoggiatura" char="noteAppoggiaturaShort">
         <code value="153" />
         <graphic type="background" color="#f00" />
         <graphic type="text" color="#fff" align="center" size="47" left="50" top="55" content="&#xe560;" />
+    </cell>
+    <cell name="alternate short appoggiatura symbol" char="noteAppoggiaturaShortAlternate">
+        <code value="1247" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="center" size="47" left="50" top="55" content="&#xe560;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="40" left="75" top="40" content="*" />
     </cell>
     <cell name="augmentation dot" char="noteAugmentationDot">
         <code value="39" />
@@ -3847,6 +3960,76 @@
         <graphic type="path" coords="75,80;110,85;110,90;75,85" color="#faa" strokeColor="#faa" />
         <graphic type="text" color="#fff" size="40" left="46" top="50" content="&#xe1d2;" />
     </cell>
+    <cell name="subnote A" char="noteSubnoteA">
+        <code value="1457" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="50" left="50" top="50" content="A" />
+    </cell>
+    <cell name="subnote B" char="noteSubnoteB">
+        <code value="1448" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="50" left="50" top="50" content="B" />
+    </cell>
+    <cell name="subnote C" char="noteSubnoteC">
+        <code value="1452" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="50" left="50" top="50" content="C" />
+    </cell>
+    <cell name="subnote D" char="noteSubnoteD">
+        <code value="1453" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="50" left="50" top="50" content="D" />
+    </cell>
+    <cell name="subnote E" char="noteSubnoteE">
+        <code value="1454" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="50" left="50" top="50" content="E" />
+    </cell>
+    <cell name="subnote F" char="noteSubnoteF">
+        <code value="1455" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="50" left="50" top="50" content="F" />
+    </cell>
+    <cell name="subnote G" char="noteSubnoteG">
+        <code value="1456" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="50" left="50" top="50" content="G" />
+    </cell>
+    <cell name="substitute eighth notes" char="noteSubstituteEighth">
+        <code value="737" />
+        <code value="1166" />
+        <graphic type="background" color="#f00" cells="2" />
+        <graphic type="text" color="#fff" size="40" left="135" top="70" content="&#xe1d7;" />
+        <graphic type="text" color="#fff" size="30" left="25" top="60" font="sans-serif" content="SUB" />
+    </cell>
+    <cell name="substitute one-hundred-twenty-eighth notes" char="noteSubstituteOneHundredTwentyEighth">
+        <code value="737" />
+        <code value="1244" />
+        <graphic type="background" color="#f00" cells="2" />
+        <graphic type="text" color="#fff" size="40" left="135" top="70" content="&#xe1df;" />
+        <graphic type="text" color="#fff" size="30" left="25" top="60" font="sans-serif" content="SUB" />
+    </cell>
+    <cell name="substitute sixteenth notes" char="noteSubstituteSixteenth">
+        <code value="737" />
+        <code value="876" />
+        <graphic type="background" color="#f00" cells="2" />
+        <graphic type="text" color="#fff" size="40" left="135" top="70" content="&#xe1d9;" />
+        <graphic type="text" color="#fff" size="30" left="25" top="60" font="sans-serif" content="SUB" />
+    </cell>
+    <cell name="substitute sixty-fourth notes" char="noteSubstituteSixtyFourth">
+        <code value="737" />
+        <code value="946" />
+        <graphic type="background" color="#f00" cells="2" />
+        <graphic type="text" color="#fff" size="40" left="135" top="70" content="&#xe1dd;" />
+        <graphic type="text" color="#fff" size="30" left="25" top="60" font="sans-serif" content="SUB" />
+    </cell>
+    <cell name="substitute thirty-second notes" char="noteSubstituteThirtySecond">
+        <code value="737" />
+        <code value="1149" />
+        <graphic type="background" color="#f00" cells="2" />
+        <graphic type="text" color="#fff" size="40" left="135" top="70" content="&#xe1db;" />
+        <graphic type="text" color="#fff" size="30" left="25" top="60" font="sans-serif" content="SUB" />
+    </cell>
     <cell name="A thirty-second note" char="noteThirtySecondA">
         <code value="183" />
         <graphic type="background" color="#f00" />
@@ -4308,6 +4491,13 @@
         <graphic type="text" color="#000" align="center" baseline="middle" size="40" left="50" top="75" content="&#xe1d5;" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="30" left="50" top="30" content="&#xe665;" />
     </cell>
+    <cell name="senza pedal" char="pedalSenza">
+        <code value="1364" />
+        <code value="1662" />
+        <graphic type="background" color="#ebddb7" cells="2" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="35" content="SENZA" />
+        <graphic type="text" font="sans-serif" color="#000" align="center" baseline="middle" size="20" left="100" top="65" content="PEDAL" />
+    </cell>
     <cell name="pedal up" char="pedalUp">
         <code value="1142" />
         <code value="1167" />
@@ -4427,6 +4617,12 @@
         <code value="155" />
         <graphic type="background" color="#000" />
         <graphic type="text" color="#fff" align="center" size="60" left="50" top="50" content="&#xe500;" />
+    </cell>
+    <cell name="alternate measure repeat symbol" char="repeatMeasureAlternate">
+        <code value="1343" />
+        <graphic type="background" color="#000" />
+        <graphic type="text" color="#fff" align="center" size="60" left="50" top="50" content="&#xe500;" />
+        <graphic type="text" color="#fff" align="center" baseline="middle" size="40" left="75" top="40" content="*" />
     </cell>
     <cell name="number of measures to repeat" char="repeatNumberOfMeasures">
         <code value="335" />
@@ -7233,6 +7429,12 @@
         <code value="295" />
         <graphic type="background" color="#ff0" />
         <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="40" top="100" content="&#xe1fe;" />
+    </cell>
+    <cell name="alternate tuplet prefix symbol" char="tupletPrefixAlternate">
+        <code value="435" />
+        <graphic type="background" color="#ff0" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="50" left="40" top="100" content="&#xe1fe;" />
+        <graphic type="text" color="#000" align="center" baseline="middle" size="40" left="75" top="40" content="*" />
     </cell>
     <cell name="tuplet suffix" char="tupletSuffix">
         <code value="439" />

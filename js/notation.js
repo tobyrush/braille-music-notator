@@ -309,7 +309,7 @@ function setPageSize(w,h,redraw=true) {
 
 function rotateChar(x,y) {
     if (!cellIsEmpty(x,y)) {
-        if (getScore(x,y) > 900) {
+        if (getScore(x,y) > 1700) {
             setScore(x,y,(getScore(x,y)*1) % 100);
         } else {
             setScore(x,y,(getScore(x,y)*1)+100);
