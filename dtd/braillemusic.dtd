@@ -25,6 +25,7 @@
 	accidentalThreeQuartersFlat|
 	accidentalThreeQuartersSharp|
 	articulationAccent|
+	articulationAccentAlternate|
 	articulationAccentExtended|
 	articulationAccentReversed|
 	articulationAlternationEighth|
@@ -58,17 +59,23 @@
 	articulationInvertedArch|
 	articulationLineBetweenNotes|
 	articulationMarcato|
+	articulationMarcatoAlternate|
 	articulationMezzoStaccato|
+	articulationMezzoStaccatoAlternate|
 	articulationMordentExtendedLower|
+	articulationMordentExtendedLowerAlternate|
 	articulationMordentExtendedLowerFlat|
 	articulationMordentExtendedLowerSharp|
 	articulationMordentExtendedUpper|
+	articulationMordentExtendedUpperAlternate|
 	articulationMordentExtendedUpperFlat|
 	articulationMordentExtendedUpperSharp|
 	articulationMordentLower|
+	articulationMordentLowerAlternate|
 	articulationMordentLowerFlat|
 	articulationMordentLowerSharp|
 	articulationMordentUpper|
+	articulationMordentUpperAlternate|
 	articulationMordentUpperFlat|
 	articulationMordentUpperSharp|
 	articulationPizzicato|
@@ -76,9 +83,12 @@
 	articulationRisingCurvedLineBefore|
 	articulationRisingStraightLineBefore|
 	articulationStaccatissimo|
+	articulationStaccatissimoAlternate|
 	articulationStaccato|
+	articulationStaccatoAlternate|
 	articulationSwell|
 	articulationTenuto|
+	articulationTenutoAlternate|
 	articulationThumbLeftHand|
 	articulationTremoloContinueEighth|
 	articulationTremoloContinueOneHundredTwentyEighth|
@@ -93,12 +103,14 @@
 	articulationTremoloSixtyFourth|
 	articulationTremoloThirtySecond|
 	articulationTrill|
+	articulationTrillAlternate|
 	articulationTrillFlat|
 	articulationTrillLongBegin|
 	articulationTrillLongEnd|
 	articulationTrillNatural|
 	articulationTrillSharp|
 	articulationTurn|
+	articulationTurnAlternate|
 	articulationTurnBothNotesFlat|
 	articulationTurnBothNotesSharp|
 	articulationTurnInverted|
@@ -113,6 +125,7 @@
 	articulationTurnLowerNoteFlat|
 	articulationTurnLowerNoteSharp|
 	articulationTurnSingle|
+	articulationTurnSingleAlternate|
 	articulationTurnSingleInverted|
 	articulationTurnUpperNoteFlat|
 	articulationTurnUpperNoteFlatLowerNoteSharp|
@@ -167,6 +180,7 @@
 	directionButtonRow5|
 	directionButtonRow6|
 	directionChangeStaves|
+	directionCrossPartUnison|
 	directionDraw|
 	directionEditorialMark|
 	directionGlissando|
@@ -483,7 +497,9 @@
 	lineStaffReceive|
 	lineStaffSend|
 	noteAppoggiaturaLong|
+	noteAppoggiaturaLongAlternate|
 	noteAppoggiaturaShort|
+	noteAppoggiaturaShortAlternate|
 	noteAugmentationDot|
 	noteCoincidence|
 	noteDoubleWholeA|
@@ -574,6 +590,18 @@
 	noteStemSixteenth|
 	noteStemThirtySecond|
 	noteStemWhole|
+	noteSubnoteA|
+	noteSubnoteB|
+	noteSubnoteC|
+	noteSubnoteD|
+	noteSubnoteE|
+	noteSubnoteF|
+	noteSubnoteG|
+	noteSubstituteEighth|
+	noteSubstituteOneHundredTwentyEighth|
+	noteSubstituteSixteenth|
+	noteSubstituteSixtyFourth|
+	noteSubstituteThirtySecond|
 	noteThirtySecondA|
 	noteThirtySecondB|
 	noteThirtySecondC|
@@ -641,6 +669,7 @@
 	pedalLetVibrate|
 	pedalRightHeel|
 	pedalRightToe|
+	pedalSenza|
 	pedalUp|
 	pedalUpAfterStrike|
 	pedalUpDown|
@@ -657,6 +686,7 @@
 	repeatEndingThird|
 	repeatEndRepeatedSection|
 	repeatMeasure|
+	repeatMeasureAlternate|
 	repeatNumberOfMeasures|
 	restDoubleWhole|
 	restEighth|
@@ -1099,6 +1129,7 @@
 	timeSignatureTop9|
 	triplet|
 	tupletPrefix|
+	tupletPrefixAlternate|
 	tupletSuffix|
 	untranslated) 
 		#REQUIRED>
