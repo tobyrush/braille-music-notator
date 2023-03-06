@@ -96,6 +96,10 @@ td {
 	padding: 0.4em;
 }
 
+td.braillelabel {
+	vertical-align: top;
+}
+
 #contents details {
 	margin-left: 1em;
 }
