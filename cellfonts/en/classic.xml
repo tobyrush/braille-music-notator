@@ -1668,6 +1668,69 @@
         <graphic type="background" color="#000" />
         <graphic type="text" font="sans-serif" color="#fff" align="center" baseline="middle" size="50" left="50" top="50" content="&#x270e;" />
     </cell>
+    <cell name="dots 1" char="dots1"><code value="9965" /></cell>
+    <cell name="dots 12" char="dots12"><code value="9966" /></cell>
+    <cell name="dots 123" char="dots123"><code value="9976" /></cell>
+    <cell name="dots 1234" char="dots1234"><code value="9980" /></cell>
+    <cell name="dots 12345" char="dots12345"><code value="9981" /></cell>
+    <cell name="dots 123456" char="dots123456"><code value="9961" /></cell>
+    <cell name="dots 12346" char="dots12346"><code value="9938" /></cell>
+    <cell name="dots 1235" char="dots1235"><code value="9982" /></cell>
+    <cell name="dots 12356" char="dots12356"><code value="9940" /></cell>
+    <cell name="dots 1236" char="dots1236"><code value="9986" /></cell>
+    <cell name="dots 124" char="dots124"><code value="9970" /></cell>
+    <cell name="dots 1245" char="dots1245"><code value="9971" /></cell>
+    <cell name="dots 12456" char="dots12456"><code value="9993" /></cell>
+    <cell name="dots 1246" char="dots1246"><code value="9936" /></cell>
+    <cell name="dots 125" char="dots125"><code value="9972" /></cell>
+    <cell name="dots 1256" char="dots1256"><code value="9992" /></cell>
+    <cell name="dots 126" char="dots126"><code value="9960" /></cell>
+    <cell name="dots 13" char="dots13"><code value="9975" /></cell>
+    <cell name="dots 134" char="dots134"><code value="9977" /></cell>
+    <cell name="dots 1345" char="dots1345"><code value="9978" /></cell>
+    <cell name="dots 13456" char="dots13456"><code value="9989" /></cell>
+    <cell name="dots 1346" char="dots1346"><code value="9988" /></cell>
+    <cell name="dots 135" char="dots135"><code value="9979" /></cell>
+    <cell name="dots 1356" char="dots1356"><code value="9990" /></cell>
+    <cell name="dots 136" char="dots136"><code value="9985" /></cell>
+    <cell name="dots 14" char="dots14"><code value="9967" /></cell>
+    <cell name="dots 145" char="dots145"><code value="9968" /></cell>
+    <cell name="dots 1456" char="dots1456"><code value="9963" /></cell>
+    <cell name="dots 146" char="dots146"><code value="9937" /></cell>
+    <cell name="dots 15" char="dots15"><code value="9969" /></cell>
+    <cell name="dots 156" char="dots156"><code value="9958" /></cell>
+    <cell name="dots 16" char="dots16"><code value="9942" /></cell>
+    <cell name="dots 2" char="dots2"><code value="9949" /></cell>
+    <cell name="dots 23" char="dots23"><code value="9950" /></cell>
+    <cell name="dots 234" char="dots234"><code value="9983" /></cell>
+    <cell name="dots 2345" char="dots2345"><code value="9984" /></cell>
+    <cell name="dots 23456" char="dots23456"><code value="9941" /></cell>
+    <cell name="dots 2346" char="dots2346"><code value="9933" /></cell>
+    <cell name="dots 235" char="dots235"><code value="9954" /></cell>
+    <cell name="dots 2356" char="dots2356"><code value="9955" /></cell>
+    <cell name="dots 236" char="dots236"><code value="9956" /></cell>
+    <cell name="dots 24" char="dots24"><code value="9973" /></cell>
+    <cell name="dots 245" char="dots245"><code value="9974" /></cell>
+    <cell name="dots 2456" char="dots2456"><code value="9987" /></cell>
+    <cell name="dots 246" char="dots246"><code value="9991" /></cell>
+    <cell name="dots 25" char="dots25"><code value="9951" /></cell>
+    <cell name="dots 256" char="dots256"><code value="9952" /></cell>
+    <cell name="dots 26" char="dots26"><code value="9953" /></cell>
+    <cell name="dots 3" char="dots3"><code value="9939" /></cell>
+    <cell name="dots 34" char="dots34"><code value="9947" /></cell>
+    <cell name="dots 345" char="dots345"><code value="9962" /></cell>
+    <cell name="dots 3456" char="dots3456"><code value="9935" /></cell>
+    <cell name="dots 346" char="dots346"><code value="9943" /></cell>
+    <cell name="dots 35" char="dots35"><code value="9957" /></cell>
+    <cell name="dots 356" char="dots356"><code value="9948" /></cell>
+    <cell name="dots 36" char="dots36"><code value="9945" /></cell>
+    <cell name="dots 4" char="dots4"><code value="9964" /></cell>
+    <cell name="dots 45" char="dots45"><code value="9994" /></cell>
+    <cell name="dots 456" char="dots456"><code value="9995" /></cell>
+    <cell name="dots 46" char="dots46"><code value="9946" /></cell>
+    <cell name="dots 5" char="dots5"><code value="9934" /></cell>
+    <cell name="dots 56" char="dots56"><code value="9959" /></cell>
+    <cell name="dots 6" char="dots6"><code value="9944" /></cell>
     <cell name="begin crescendo long" char="dynamicCrescendoBeginLong">
         <code value="162" />
         <code value="567" />
