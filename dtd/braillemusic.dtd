@@ -1,4 +1,4 @@
-<!-- Braille Music Score 0.9 DTD -->
+<!-- Braille Music Score 1.0 DTD -->
 <!ELEMENT score-braille (filename,settings,page,score)>
 <!ELEMENT filename (#PCDATA)>
 <!ELEMENT settings (settingentry*)>
@@ -1068,6 +1068,7 @@
 	textH|
 	textHyphen|
 	textI|
+	textInches|
 	textItalianAGrave|
 	textItalianEAcute|
 	textItalianEGrave|
@@ -1075,7 +1076,6 @@
 	textItalianOAcute|
 	textItalianOGrave|
 	textItalianUGrave|
-	textInches|
 	textItalicEnd|
 	textItalicPassage|
 	textItalicSymbol|
