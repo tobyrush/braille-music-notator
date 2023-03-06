@@ -456,7 +456,7 @@ class cellFontModule {
             var currentX = x+(gw*Math.max(startCell,0));
             while (c.length) {
                 var sym = this.findSymbol(c,newWord);
-                if (this.translateBraille && sym.length) {
+                if (this.translateBraille && sym.length && sym[0].hasIcon) {
                     sym[0].draw(currentX,y,ctx,gw);
                     c=c.slice(sym[0].length());
                     currentX += gw * sym[0].length();
@@ -581,6 +581,7 @@ class cell {
                 this.graphics.push(new graphic(node,this.root));
             }
         }
+        this.hasIcon = (this.graphics.length>1);
     }
     length() {
         return this.codes.length;

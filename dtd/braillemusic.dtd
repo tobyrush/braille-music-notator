@@ -233,6 +233,69 @@
 	directionTerminator|
 	directionTextPrefix|
 	directionTranscriberAddition|
+	dots1|
+	dots12|
+	dots123|
+	dots1234|
+	dots12345|
+	dots123456|
+	dots12346|
+	dots1235|
+	dots12356|
+	dots1236|
+	dots124|
+	dots1245|
+	dots12456|
+	dots1246|
+	dots125|
+	dots1256|
+	dots126|
+	dots13|
+	dots134|
+	dots1345|
+	dots13456|
+	dots1346|
+	dots135|
+	dots1356|
+	dots136|
+	dots14|
+	dots145|
+	dots1456|
+	dots146|
+	dots15|
+	dots156|
+	dots16|
+	dots2|
+	dots23|
+	dots234|
+	dots2345|
+	dots23456|
+	dots2346|
+	dots235|
+	dots2356|
+	dots236|
+	dots24|
+	dots245|
+	dots2456|
+	dots246|
+	dots25|
+	dots256|
+	dots26|
+	dots3|
+	dots34|
+	dots345|
+	dots3456|
+	dots346|
+	dots35|
+	dots356|
+	dots36|
+	dots4|
+	dots45|
+	dots456|
+	dots46|
+	dots5|
+	dots56|
+	dots6|
 	dynamicCrescendoBeginLong|
 	dynamicCrescendoBeginShort|
 	dynamicCrescendoEndLong|
