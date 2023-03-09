@@ -748,6 +748,7 @@
 	repeatEndingSecond|
 	repeatEndingThird|
 	repeatEndRepeatedSection|
+	repeatIrregularRhythm|
 	repeatMeasure|
 	repeatMeasureAlternate|
 	repeatNumberOfMeasures|
@@ -1152,6 +1153,16 @@
 	textTranscriberNoteBegin|
 	textTranscriberNoteEnd|
 	textU|
+	textUnderline0|
+	textUnderline1|
+	textUnderline2|
+	textUnderline3|
+	textUnderline4|
+	textUnderline5|
+	textUnderline6|
+	textUnderline7|
+	textUnderline8|
+	textUnderline9|
 	textUnderlineEnd|
 	textUnderlinePassage|
 	textUnderlineSymbol|

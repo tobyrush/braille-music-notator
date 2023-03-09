@@ -18,21 +18,18 @@
 </head>
 
 <body onload="initializeBMViewers('https://tobyrush.com/braillemusic/notator/dev/cellfonts/en/classic.xml')">
-<h1>Braille Music Notator</h1>
-<h2>version 0.9.4b · 7 March 2023</h2>
+<h1>Braille Music (BRM) File Type</h1>
 <h2>Toby W. Rush<br />
-  Associate Professor of Music Theory and Technology<br />
-  University of Dayton</h2>
-<div class="linkarea"><a href="https://tobyrush.com/braillemusic/notator/notator.html" id="notatorlink">Click here to open Braille Music Notator</a></div>
-<h1>Braille Music File Type</h1>
+Associate Professor of Music Theory and Technology<br />
+University of Dayton</h2>
 <div class="userguide">
-<p>Because braille characters are often used in different contexts to represent different music symbols, and because standard braille files (.brf) do not store this additional context, Braille Music Notator uses a special file format to save documents for future viewing and editing.</p>
+<p>Because braille characters are often used in different contexts to represent different music symbols, and because standard braille files (.brf) do not store this additional context, <a href="../index.html">Braille Music Notator</a> uses a special file format to save documents for future viewing and editing.</p>
 <p>This file format, which uses the .brm extension, is an XML-based format, and is available for other developers to use or accommodate. A human-readable description of the file format is below, and <a href="https://tobyrush.com/braillemusic/dtd/braillemusic.dtd">an XML DTD file</a> is available for download or reference.</p>
 
 <h3>Sample File</h3>
 <p>By way of description, here is a simple example of a file containing a D major scale.</p>
 <pre>
-&lt;!DOCTYPE score-braille PUBLIC &quot;-//TobyRush//DTD Braille Music Notator Score 0.9//EN&quot; &quot;https://tobyrush.com/braillemusic/notator/dtd/braillemusic.dtd&quot;&gt;
+&lt;!DOCTYPE score-braille PUBLIC &quot;-//TobyRush//DTD Braille Music Notator Score 1.0//EN&quot; &quot;https://tobyrush.com/braillemusic/notator/dtd/braillemusic.dtd&quot;&gt;
 &lt;score-braille&gt;
   &lt;filename&gt;D major.brm&lt;/filename&gt;
   &lt;settings&gt;
@@ -65,7 +62,7 @@
 
 <h3>Description</h3>
 <p>Each line of the above file is explained below:</p>
-<pre>&lt;!DOCTYPE score-braille PUBLIC &quot;-//TobyRush//DTD Braille Music Notator Score 0.9//EN&quot; &quot;https://tobyrush.com/braillemusic/notator/dtd/braillemusic.dtd&quot;&gt;</pre>
+<pre>&lt;!DOCTYPE score-braille PUBLIC &quot;-//TobyRush//DTD Braille Music Notator Score 1.0//EN&quot; &quot;https://tobyrush.com/braillemusic/notator/dtd/braillemusic.dtd&quot;&gt;</pre>
 <p>The first line describes the file format, and is used by XML parsers to determine if the file is correctly formatted.</p>
 <pre>&lt;score-braille&gt;</pre>
 <p>The root element of the file must be the <code>&lt;score-braille&gt;</code> tag. Any data placed outside of this tag will not be considered part of the braille music file.</p>
@@ -121,6 +118,8 @@
   <param name="scoreWidth" value="60">
   <param name="scoreHeight" value="1010">
 </object>
+
+<p>For a complete vocabulary for use with the <code>&lt;symbol&gt;</code> tag, along with braille characters which each code point represents and a reference for that character, see the <a href="vocabulary.html">Vocabulary page</a>.</p> 
 
 </div>
 </body>
