@@ -1,466 +1,619 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Braille Music Notator by Toby W. Rush</title>
-<link href="../css/main.css" rel="stylesheet" type="text/css" />
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Braille Music Notator by Toby W. Rush</title>
+  <link href="../css/main.css" rel="stylesheet" type="text/css" />
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-58111924-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+    ga('create', 'UA-58111924-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 </head>
 
 <body>
-    <h1><a href="../index.html">Braille Music Notator</a></h1>
-    <h2>version 0.9.4b · 7 March 2023</h2>
-    <h2>Toby W. Rush<br />
-      Associate Professor of Music Theory and Technology<br />
-      University of Dayton</h2>
-    <h1>User Guide</h1>
-    <div class="userguide">
-        <h3>Table of Contents</h3>
-        <ul>
-            <li><a href="#philosophyandpurpose">Philosophy and Purpose of Braille Music Notator</a></li>
-            <li><a href="#softwarerequirements">Software Requirements</a></li>
-            <li><a href="#startingtheutility">Starting the Utility</a></li>
-            <li><a href="#thenotationarea">The Notation Area</a></li>
-                <ul>
-                    <li><a href="#movingthecursor">Moving the Cursor</a></li>
-                    <li><a href="#scrollingthenotationarea">Scrolling the Notation Area</a></li>
-                    <li><a href="#selectingmultiplecells">Selecting Multiple Cells</a></li>
-                    <li><a href="#pageboundaries">Page Breaks</a></li>
-                    <li><a href="#magnification">Magnification</a></li>
-                </ul>
-            <li><a href="#thecontrolarea">The Control Area</a></li>
-                <ul>
-                    <li><a href="#otherkeyboards">Other Keyboards</a></li>
-                    <li><a href="#contextualhelp">Contextual Help</a></li>
-                    <li><a href="#resizingthecontrolarea">Resizing the Control Area</a></li>
-                </ul>
-            <li><a href="#enteringandeditingthescore">Entering and Editing the Score</a></li>
-                <ul>
-                    <li><a href="#removingcharacters">Removing Characters</a></li>
-                    <li><a href="#insertingcharacters">Inserting Characters</a></li>
-                    <li><a href="#undoandredo">Undo and Redo</a></li>
-                    <li><a href="#cutcopyandpaste">Cut, Copy and Paste</a></li>
-                    <li><a href="#howcharactersaredisplayed">How Characters are Displayed</a></li>
-                </ul>
-            <li><a href="#filecommands">File Commands</a></li>
-                <ul>
-                    <li><a href="#newfile">New File</a></li>
-                    <li><a href="#openfile">Open File</a></li>
-                    <li><a href="#savefile">Save File</a></li>
-                    <li><a href="#exportfile">Export File</a></li>
-                    <li><a href="#parseimportedfiles">Parse Imported Files</a></li>
-                    <li><a href="#savingandexporting">Saving and Exporting</a></li>
-                    <li><a href="#autosave">Autosave</a></li>
-                </ul>
-            <li><a href="#options">Options</a></li>
-                <ul>
-                    <li><a href="#showtranslatedbraille">Show Translated Braille</a></li>
-                    <li><a href="#showsmalldots">Show Small Dots</a></li>
-                    <li><a href="#scoresize">Score Size</a></li>
-                    <li><a href="#showpageboundaries">Show Page Breaks</a></li>
-                    <li><a href="#pagesize">Page Size</a></li>
-                </ul>
-            <li><a href="#screenreadercompatibility">Screen Reader Compatibility</a>
-                <ul>
-                    <li><a href="#usingrefreshablebrailledisplay">Using a Refreshable Braille Display</a></li>
-                </ul>
-            </li>
-            <li><a href="#usingbraillemusicnotatoroffline">Using Braille Music Notator Offline</a></li>
-            <li><a href="#usingthekeyboard">Using the Keyboard</a></li>
-                <ul>
-                    <li><a href="#keyboardscoreentry">Keyboard Score Entry</a></li>
-                    <li><a href="#keyboardeditingcommands">Keyboard Editing Commands</a></li>
-                    <li><a href="#keyboardshortcuts">Keyboard Shortcuts</a></li>
-                </ul>
-            <li><a href="#workingwithbraille">Working with Braille</a></li>
-                <ul>
-                    <li><a href="#aboutbraille">About Braille</a></li>
-                    <li><a href="#brailleascii">Braille ASCII</a></li>
-                    <li><a href="#braillemusiccharacters">Braille Music Characters</a></li>
-                    <li><a href="#literarybraille">Literary Braille</a></li>
-                    <li><a href="#unicodebraillecharacters">Unicode Braille Characters</a></li>
-                </ul>
-            <li><a href="#braillemusicviewer">Braille Music Viewer</a></li>
-            <li><a href="#braillemusicfiletype">Braille Music Viewer</a></li>
-            <li><a href="#aboutthedeveloper">About the Developer</a></li>
-            <li><a href="#reference">Reference</a></li>
-        </ul>
+  <h1><a href="../index.html">Braille Music Notator</a></h1>
+  <h2>version 0.9.4b · 7 March 2023</h2>
+  <h2>Toby W. Rush<br />
+    Associate Professor of Music Theory and Technology<br />
+    University of Dayton</h2>
+  <h1>User Guide</h1>
+  <div class="userguide">
+    <p>Visit <a href="">my blog</a> for a list of new features in v0.9.4b!</p>
 
-        <a name="philosophyandpurpose" id="philosophyandpurpose"><h3>Philosophy and Purpose</h3></a>
-        <p>Braille Music Notator is designed to provide an intuitive interface for creating and editing scores using braille music notation. Braille Music Notator does not translate music to or from traditional music notation, though it does allow editing of scores created in other translation utilities.</p>
-        <p>The philosophy behind Braille Music Notator is that the most efficient and elegant braille scores result when the engraver is familiar with braille music notation, and when he or she can manipulate the specific details of the braille score instead of depending wholly on an automatic translation program to do so.</p>
-        <p>Additionally, Braille Music Notator allows sighted music teachers to more effectively teach students who have visual impairments by helping the teacher gain fluency in braille music notation.</p>
-        <p>Fortunately, the basic tenets of braille music notation are not difficult to learn; the most daunting task is the memorization of the braille symbols. Braille Music Notator removes this difficulty by displaying the symbols as familiar musical symbols on screen.</p>
+    <h3>Table of Contents</h3>
+    <ul>
+      <li><a href="#philosophyandpurpose">Philosophy and Purpose of Braille Music Notator</a></li>
+      <li><a href="#softwarerequirements">Software Requirements</a></li>
+      <li><a href="#startingtheutility">Starting the Utility</a></li>
+      <li><a href="#thenotationarea">The Notation Area</a></li>
+      <ul>
+        <li><a href="#movingthecursor">Moving the Cursor</a></li>
+        <li><a href="#scrollingthenotationarea">Scrolling the Notation Area</a></li>
+        <li><a href="#selectingmultiplecells">Selecting Multiple Cells</a></li>
+        <li><a href="#pageboundaries">Page Breaks</a></li>
+        <li><a href="#magnification">Magnification</a></li>
+      </ul>
+      <li><a href="#thecontrolarea">The Control Area</a></li>
+      <ul>
+        <li><a href="#otherkeyboards">Other Keyboards</a></li>
+        <li><a href="#contextualhelp">Contextual Help</a></li>
+        <li><a href="#resizingthecontrolarea">Resizing the Control Area</a></li>
+        <li><a href="#othercontrollayouts">Other Control Layouts</a></li>
+      </ul>
+      <li><a href="#enteringandeditingthescore">Entering and Editing the Score</a></li>
+      <ul>
+        <li><a href="#removingcharacters">Removing Characters</a></li>
+        <li><a href="#insertingcharacters">Inserting Characters</a></li>
+        <li><a href="#undoandredo">Undo and Redo</a></li>
+        <li><a href="#cutcopyandpaste">Cut, Copy and Paste</a></li>
+        <li><a href="#howcharactersaredisplayed">How Characters are Displayed</a></li>
+      </ul>
+      <li><a href="#filecommands">File Commands</a></li>
+      <ul>
+        <li><a href="#newfile">New File</a></li>
+        <li><a href="#openfile">Open File</a></li>
+        <li><a href="#savefile">Save File</a></li>
+        <li><a href="#exportfile">Export File</a></li>
+        <li><a href="#parseimportedfiles">Parse Imported Files</a></li>
+        <li><a href="#savingandexporting">Saving and Exporting</a></li>
+        <li><a href="#autosave">Autosave</a></li>
+      </ul>
+      <li><a href="#options">Options</a></li>
+      <ul>
+        <li><a href="#showtranslatedbraille">Show Translated Braille</a></li>
+        <li><a href="#showsmalldots">Show Small Dots</a></li>
+        <li><a href="#usebrailledisplay">Use Braille Display</a></li>
+        <li><a href="#scoresize">Score Size</a></li>
+        <li><a href="#showpageboundaries">Show Page Breaks</a></li>
+        <li><a href="#pagesize">Page Size</a></li>
+        <li><a href="#usewordwrap">Use Word Wrap</a></li>
+        <li><a href="#controls">Controls</a></li>
+        <li><a href="#insertoctavesymbols">Insert Octave Symbols</a></li>
+        <li><a href="#observekeysignatures">Observe Key Signatures</a></li>
+        <li><a href="#spellchordsdownward">Spell Chords Downward</a></li>
+      </ul>
+      <li><a href="#midinoteentry">MIDI Note Entry</a>
+      <ul>
+        <li><a href="#midicompatiblebrowsers">MIDI Compatible Browsers</a></li>
+        <li><a href="#enteringnoteswithmidi">Entering Notes with MIDI</a></li>
+        <li><a href="#enteringrestswithmidi">Entering Rests with MIDI</a></li>
+      </ul>
+      <li><a href="#screenreadercompatibility">Screen Reader Compatibility</a></li>
+      <ul>
+        <li><a href="#usingrefreshablebrailledisplay">Using a Refreshable Braille Display</a></li>
+      </ul>
+      <li><a href="#usingbraillemusicnotatoroffline">Using Braille Music Notator Offline</a></li>
+      <li><a href="#usingthekeyboard">Using the Keyboard</a></li>
+      <ul>
+        <li><a href="#keyboardscoreentry">Keyboard Score Entry</a></li>
+        <li><a href="#keyboardeditingcommands">Keyboard Editing Commands</a></li>
+        <li><a href="#keyboardshortcuts">Keyboard Shortcuts</a></li>
+      </ul>
+      <li><a href="#workingwithbraille">Working with Braille</a></li>
+      <ul>
+        <li><a href="#aboutbraille">About Braille</a></li>
+        <li><a href="#brailleascii">Braille ASCII</a></li>
+        <li><a href="#braillemusiccharacters">Braille Music Characters</a></li>
+        <li><a href="#literarybraille">Literary Braille</a></li>
+        <li><a href="#unicodebraillecharacters">Unicode Braille Characters</a></li>
+      </ul>
+      <li><a href="#braillemusicviewer">Braille Music Viewer</a></li>
+      <li><a href="#braillemusicfiletype">Braille Music File Type</a></li>
+      <li><a href="#development">Development</a></li>
+      <li><a href="#aboutthedeveloper">About the Developer</a></li>
+      <li><a href="#reference">Reference</a></li>
+    </ul>
 
-        <a name="softwarerequirements"><h3>Software Requirements</h3></a>
-        <p>Braille Music Notator has been tested successfully on the most current versions of Safari, Chrome, Firefox, and Opera, on both MacOS and Windows. The utility is also available on mobile devices such as iPads with some limitations in functionality.</p>
-        <p>Braille Music Notator is compatible with screen-reading software according to WAI-ARIA standards, and has been tested with VoiceOver on MacOS and JAWS on Windows. (Windows' built-in screen reader, Narrator, is not supported at this time.)</p>
-        <p>Braille Music Notator supports note entry with a MIDI keyboard, but requires a compatible web browser. For more information, see <a href="#midicompatiblebrowsers">MIDI Compatible Browsers</a>.</p>
+    <a name="philosophyandpurpose" id="philosophyandpurpose">
+      <h3>Philosophy and Purpose</h3>
+    </a>
+    <p>Braille Music Notator is designed to provide an intuitive interface for creating and editing scores using braille music notation. Braille Music Notator does not translate music to or from traditional music notation, though it does allow editing of scores created in other translation utilities.</p>
+    <p>The philosophy behind Braille Music Notator is that the most efficient and elegant braille scores result when the engraver is familiar with braille music notation, and when he or she can manipulate the specific details of the braille score instead of depending wholly on an automatic translation program to do so.</p>
+    <p>Additionally, Braille Music Notator allows sighted music teachers to more effectively teach students who have visual impairments by helping the teacher gain fluency in braille music notation.</p>
+    <p>Fortunately, the basic tenets of braille music notation are not difficult to learn; the most daunting task is the memorization of the braille symbols. Braille Music Notator removes this difficulty by displaying the symbols as familiar musical symbols on screen.</p>
 
-        <a name="startingtheutility"><h3>Starting the Utility</h3></a>
-        <p>To begin using Braille Music Notator, open the program in your web browser. Braille Music Notator is a web application, meaning it operates from within your web browser; no software download is necessary. (To use Braille Music Notator without an internet connection, see Using <a href="#usingbraillemusicnotatoroffline">Braille Music Notator Offline</a>.)</p>
-        <p>The Braille Music Notator window is divided into two large sections: the notation area and the control area.</p>
+    <a name="softwarerequirements">
+      <h3>Software Requirements</h3>
+    </a>
+    <p>Braille Music Notator has been tested successfully on the most current versions of Safari, Chrome, Firefox, and Opera, on both MacOS and Windows. The utility is also available on mobile devices such as iPads with some limitations in functionality.</p>
+    <p>Braille Music Notator is compatible with screen-reading software according to WAI-ARIA standards, and has been tested with VoiceOver on MacOS and JAWS on Windows. (Windows' built-in screen reader, Narrator, is not supported at this time.)</p>
+    <p>Braille Music Notator supports note entry with a MIDI keyboard, but requires a compatible web browser. For more information, see <a href="#midicompatiblebrowsers">MIDI Compatible Browsers</a>.</p>
 
-        <a name="thenotationarea"><h3>The Notation Area</h3></a>
-        <p><i>For a visual introduction to using Braille Music Notator, visit the <a href="videos.html">Video Tutorials</a> page.</i></p>
-        <p>The notation area is the top part of the window, and it displays the currently open score. The notation area consists of a grid; each cell of this grid can hold a single braille character, or can be empty. Every tenth row and column is numbered along the left and top of the window, respectively. When Braille Music Notator is opened for the first time, the score is blank.</p>
-        <p>One of the cells is shaded slightly; this cell is the cursor. It indicates where the next character will be placed. When a character is added to the score (by clicking or typing), the cursor advances to the left, ready to place the next character.</p>
-        <a name="movingthecursor"><h4>Moving the Cursor</h4></a>
-        <p>The cursor can be moved using the arrow keys on the keyboard or by clicking on a new cell with the mouse.</p>
-        <a name="scrollingthenotationarea"><h4>Scrolling the Notation Area</h4></a>
-        <p>When the cursor is moved beyond the boundaries of the notation area with the arrow keys, the notation area scrolls to keep the cursor in view. The score is infinitely large in height and width. The notation area can also be scrolled using the scrollwheel functions of your mouse or trackpad; see your computer's user manual for more information about these functions.</p>
-        <a name="selectingmultiplecells"><h4>Selecting Multiple Cells</h4></a>
-        <p>Multiple contiguous cells can be selected at once in the score window. To select multiple cells with the mouse, click and drag over the cells in the notation window. Alternately, click once to place the cursor at one corner of the area you wish to select, then hold the Shift key and click the cursor at the opposite corner of the area you wish to select. This method allows the selection of areas which are larger than what is currently displayed in the notation area.</p>
-        <p>To select multiple cells with the arrow keys, hold the Shift key down while using the arrow keys. To return to a single cell selection, click on a single cell with the mouse or type an arrow key without holding the Shift key.</p>
-        <p>The Control-A shortcut will automatically select all characters in the score. (See <a href="#keyboardshortcuts">Keyboard Shortcuts</a>.)</p>
-        <a name="pageboundaries"><h4>Page Breaks</h4></a>
-        <p>When Show Page Breaks is enabled (see <a href="#options">Options</a>), cells to the right of the currently set page width are shaded, and a horizontal page divider is shown separating each page. Page numbers are displayed in the right margin at the top of each page. Characters can be entered in the margin area, but will not be included in exported files or appear on embossed pages.</p>
-        <a name="magnification"><h4>Magnification</h4></a>
-        <p>Cell size in the notation area grid can be made smaller, allowing more cells to be viewed at once, or larger, increasing the size and visibility of each cell. To adjust the magnification, adjust the Score Size value in the Options Tab (see <a href="#options">Options</a>), or the keyboard shortcuts: Control-Equals increases magnification and Control-Hyphen decreases magnification (see <a href="#keyboardshortcuts">Keyboard Shortcuts</a>).</p>
+    <a name="startingtheutility">
+      <h3>Starting the Utility</h3>
+    </a>
+    <p>To begin using Braille Music Notator, open the program in your web browser. Braille Music Notator is a web application, meaning it operates from within your web browser; no software download is necessary. (To use Braille Music Notator without an internet connection, see Using <a href="#usingbraillemusicnotatoroffline">Braille Music Notator Offline</a>.)</p>
+    <p>The Braille Music Notator window is divided into two large sections: the notation area and the control area.</p>
 
-        <a name="thecontrolarea"><h3>The Control Area</h3></a>
-        <p><i>For a visual introduction to using Braille Music Notator, visit the <a href="videos.html">Video Tutorials</a> page.</i></p>
-        <p>The control area appears at the bottom of the window, and includes a keyboard diagram showing braille music symbols assigned to each key. Symbols can be entered into the score by clicking on the keyboard diagram or by typing the corresponding key on the computer keyboard.</p>
-        <p>Keys are identified with the braille musical symbol they generate. The actual name of the key is displayed in a faded color in the lower left-hand corner of the key. Colors are used to identify types of symbols. Gray key icons indicate unused keys, which do not affect the score.</p>
-        <a name="otherkeyboards"><h4>Other Keyboards</h4></a>
-        <p>More keyboards, each containing more symbols, are available by clicking the buttons on the left side of the control area. The numbered keyboards contain musical symbols, each of which correspond to one or more braille characters. The final keyboard, marked &quot;Aa,&quot; contains letters and numbers for typing literary braille.</p>
-        <p>Pressing the tab key rotates through the available keyboards. Holding shift while pressing the tab key rotates through the keyboards in reverse.</p>
-        <a name="contextualhelp"><h4>Contextual Help</h4></a>
-        <p>Moving the mouse over any key displays the type of symbol represented, a short description, and in many cases an example of that symbol's use.</p>
-        <a name="resizingthecontrolarea"><h4>Resizing the Control Area</h4></a>
-        <p>The control area can be resized by clicking and dragging the top edge of the control area. Resizing the control area also resizes the notation area, but does not alter the score in any way.</p>
+    <a name="thenotationarea">
+      <h3>The Notation Area</h3>
+    </a>
+    <p><i>For a visual introduction to using Braille Music Notator, visit the <a href="videos.html">Video Tutorials</a> page.</i></p>
+    <p>The notation area is the top part of the window, and it displays the currently open score. The notation area consists of a grid; each cell of this grid can hold a single braille character, or can be empty. Every tenth row and column is numbered along the left and top of the window, respectively. When Braille Music Notator is opened for the first time, the score is blank.</p>
+    <p>One of the cells is shaded slightly; this cell is the cursor. It indicates where the next character will be placed. When a character is added to the score (by clicking or typing), the cursor advances to the left, ready to place the next character.</p>
+    <a name="movingthecursor">
+      <h4>Moving the Cursor</h4>
+    </a>
+    <p>The cursor can be moved using the arrow keys on the keyboard or by clicking on a new cell with the mouse.</p>
+    <a name="scrollingthenotationarea">
+      <h4>Scrolling the Notation Area</h4>
+    </a>
+    <p>When the cursor is moved beyond the boundaries of the notation area with the arrow keys, the notation area scrolls to keep the cursor in view. The score is infinitely large in height and width. The notation area can also be scrolled using the scrollwheel functions of your mouse or trackpad; see your computer's user manual for more information about these functions.</p>
+    <a name="selectingmultiplecells">
+      <h4>Selecting Multiple Cells</h4>
+    </a>
+    <p>Multiple contiguous cells can be selected at once in the score window. To select multiple cells with the mouse, click and drag over the cells in the notation window. Alternately, click once to place the cursor at one corner of the area you wish to select, then hold the Shift key and click the cursor at the opposite corner of the area you wish to select. This method allows the selection of areas which are larger than what is currently displayed in the notation area.</p>
+    <p>To select multiple cells with the arrow keys, hold the Shift key down while using the arrow keys. To return to a single cell selection, click on a single cell with the mouse or type an arrow key without holding the Shift key.</p>
+    <p>The Control-A shortcut will automatically select all characters in the score. (See <a href="#keyboardshortcuts">Keyboard Shortcuts</a>.)</p>
+    <a name="pageboundaries">
+      <h4>Page Breaks</h4>
+    </a>
+    <p>When Show Page Breaks is enabled (see <a href="#options">Options</a>), cells to the right of the currently set page width are shaded, and a horizontal page divider is shown separating each page. Page numbers are displayed in the right margin at the top of each page. Characters can be entered in the margin area, but will not be included in exported files or appear on embossed pages.</p>
+    <a name="magnification">
+      <h4>Magnification</h4>
+    </a>
+    <p>Cell size in the notation area grid can be made smaller, allowing more cells to be viewed at once, or larger, increasing the size and visibility of each cell. To adjust the magnification, adjust the Score Size value in the Options Tab (see <a href="#options">Options</a>), or the keyboard shortcuts: Control-Equals increases magnification and Control-Hyphen decreases magnification (see <a href="#keyboardshortcuts">Keyboard Shortcuts</a>).</p>
 
-        <a name="enteringandeditingthescore"><h3>Entering and Editing the Score</h3></a>
-        <p><i>For a visual introduction to using Braille Music Notator, visit the <a href="videos.html">Video Tutorials</a> page.</i></p>
-        <p>To begin creating a score, simply open Braille Music Notator, place the cursor where you wish to begin, and click in the control area or type to enter musical symbols. To relocate the cursor, you can click on the new position with the mouse, or you can use the following keys:</p>
-        <ul>
-            <li><strong>arrow keys:</strong> move cursor one cell in the indicated direction</li>
-            <li><strong>return:</strong> move the cursor to the beginning of the next line</li>
-            <li><strong>shift-return:</strong> move the cursor to the cell below the leftmost character on the current line</li>
-            <li><strong>home:</strong> move the cursor to the top left corner of the score</li>
-        </ul>
-        <a name="removingcharacters"><h4>Removing Characters</h4></a>
-        <p>Characters can be removed from the score using the following methods:</p>
-        <ul>
-            <li><strong>backspace:</strong> if a single character is selected, the backspace key will remove that character. If a single empty cell is selected, the backspace key will move one space to the left and remove the character in that cell. If multiple cells are selected, the backspace key will remove the characters in those cells.</li>
-            <li><strong>delete:</strong> the delete key removes the highlighted characters and scrolls the remaining characters on that line to the left.</li>
-            <li><strong>Cut (Control-X):</strong> the Cut command removes any highlighted characters and places them on the clipboard to be pasted elsewhere (see <a href="#cutcopyandpaste">Cut, Copy and Paste</a>).</li>
-            <li><strong>Delete Current Row (Control-Up Arrow):</strong> the Delete Current Row command removes all characters on the current row, and moves all lower rows up one row.</li>
-            <li><strong>New File (Control-N):</strong> the New File command removes all characters from the score (see <a href="#filecommands">File Commands</a>).</li>
-        </ul>
-        <a name="insertingcharacters"><h4>Inserting Characters</h4></a>
-        <p>If the cursor is placed on an existing character, any new character placed into the score will overwrite the existing character. To insert a character into the score, hold the Shift key while typing the character or clicking on the keyboard chart. All characters in that row to the right of the cursor will be moved to the right, allowing the new character to be inserted.</p>
-        <p>To insert a blank row into the score, use the keyboard shortcut Control-Down Arrow. The current rows and all rows below it will be moved down one row.</p>
-        <a name="undoandredo"><h4>Undo and Redo</h4></a>
-        <p>To undo the most recent change to the score, use the keyboard shortcut Control-Z (Undo). Repeating this command will continue backward through earlier edits to the score.</p>
-        <p>After using Undo, changes can be reapplied to the score with the keyboard shortcut Control-Y (Redo). Repeating this command will continue forward through subsequent edits to the score.</p>
-        <a name="cutcopyandpaste"><h4>Cut, Copy and Paste</h4></a>
-        <p>Braille Music Notator supports the same behaviors for copying and pasting data found in most word processors, as described below:</p>
-        <ul>
-            <li><strong>Cut (Control-X):</strong> the Cut command removes any highlighted characters and places them on the clipboard to be pasted elsewhere with the Paste command.</li>
-            <li><strong>Copy (Control-C):</strong> the Copy command places a copy of the highlighted characters on the clipboard, leaving the score unchanged.</li>
-            <li><strong>Paste (Control-V):</strong> the Paste command places the contents of the clipboard into the score at the location of the cursor, overwriting any characters in the pasted area.</li>
-        </ul>
-        <p>Clipboard data is stored in a format specific to Braille Music Notator; characters copied to the clipboard from the score and pasted into other programs will appear to be random, but can be pasted back into Braille Music Notator. To export characters in a format that can be used in other braille programs, see <a href="#exportfile">Export File</a>. Characters copied from other sources and pasted into the Braille Music Notator window will be added the score as follows:</p>
-        <ul>
-            <li>If a music symbol keyboard is selected, characters will be pasted as basic music symbols (see <a href="#braillemusiccharacters">Braille Music Characters</a>). Because specific braille symbols can have different musical meanings depending on context, Braille Music Notator will analyze the content and attempt to select the correct musical symbols automatically (See <a href="#parseimportedfiles">Parse Imported Files</a>).</li>
-            <li>If the literary braille keyboard is selected, characters will be pasted as literary braille (see <a href="#literarybraille">Literary Braille</a>).</li>
-        </ul>
-        <p>If the clipboard contains Unicode braille characters, the characters will be automatically translated into Braille ASCII and pasted as indicated above (see <a href="#unicodebraillecharacters">Unicode Braille Characters</a>).</p>
-        <a name="howcharactersaredisplayed"><h4>How Characters are Displayed</h4></a>
-        <p>When Braille Music Notator is opened, characters are automatically shown using icons which describe the musical value of each braille character. If the score contains a braille character which does not have a musical meaning understood by Braille Music Notator, the braille character itself (comprised of one to six dots) is displayed.</p>
-        <p>To force Braille Music Notator to display all characters in their standard braille form, deselect "Show Translated Braille" (see <a href="#options">Options</a>). Alternately, the keyboard shortcut Control-B can be used to switch between translated and untranslated braille.</p>
-        <p>When braille characters are shown, unused dots in the braille character are indicated by a smaller dot. To hide these smaller dots, deselect "Show Small Dots" (see <a href="#options">Options</a>) or use the keyboard shortcut Control-D to switch between the settings.</p>
-        <p>A single braille character can have multiple musical meanings. To rotate through the possible meanings of one or more braille symbols, select the symbols and use the keyboard shortcut Control-R. Continuing to use the keyboard shortcut will eventually &quot;wrap around&quot; to the original meaning (see <a href="#braillemusiccharacters">Braille Music Characters</a>).</p>
-        <p>To force Braille Music Notator to interpret one or more selected characters as text, use the keyboard shortcut Control-T. (This is the equivalent of using Control-R to rotate each character to its first text value.) To force Braille Music Notator to interpret one or more selected characters as music, use the keyboard shortcut Shift-Control-T.</p>
-        <a name="filecommands" id="filecommands">
+    <a name="thecontrolarea">
+      <h3>The Control Area</h3>
+    </a>
+    <p><i>For a visual introduction to using Braille Music Notator, visit the <a href="videos.html">Video Tutorials</a> page.</i></p>
+    <p>The control area appears at the bottom of the window, and includes a keyboard diagram showing braille music symbols assigned to each key. Symbols can be entered into the score by clicking on the keyboard diagram or by typing the corresponding key on the computer keyboard.</p>
+    <p>Keys are identified with the braille musical symbol they generate. The actual name of the key is displayed in a faded color in the lower left-hand corner of the key. Colors are used to identify types of symbols. Gray key icons indicate unused keys, which do not affect the score.</p>
+    <a name="otherkeyboards">
+      <h4>Other Keyboards</h4>
+    </a>
+    <p>More keyboards, each containing more symbols, are available by clicking the buttons on the left side of the control area. The numbered keyboards contain musical symbols, each of which correspond to one or more braille characters. The final keyboard, marked &quot;Aa,&quot; contains letters and numbers for typing literary braille.</p>
+    <p>Pressing the tab key rotates through the available keyboards. Holding shift while pressing the tab key rotates through the keyboards in reverse.</p>
+    <a name="contextualhelp">
+      <h4>Contextual Help</h4>
+    </a>
+    <p>Moving the mouse over any key displays the type of symbol represented, a short description, and in many cases an example of that symbol's use.</p>
+    <a name="resizingthecontrolarea">
+      <h4>Resizing the Control Area</h4>
+    </a>
+    <p>The control area can be resized by clicking and dragging the top edge of the control area. Resizing the control area also resizes the notation area, but does not alter the score in any way.</p>
+    <a name="othercontrollayouts">
+      <h4>Other Control Layouts</h4>
+    </a>
+    <p>Other arrangements for the control area are available to serve different needs (see <a href="#options">Options</a>).</p>
 
-        <h3>File Commands</h3></a>
-        <p><i>For a visual introduction to working with files in Braille Music Notator, visit the <a href="videos.html">Video Tutorials</a> page.</i></p>
-        <p>Scores created in Braille Music Notator can be saved to your local hard disk so they may be opened and edited later. Files can also be exported to send to a braille embosser or other device. Commands for working with files are found by clicking the &quot;File&quot; button in the upper right hand corner of the Braille Music Notator window, which brings up the File Tab. The File Tab is dismissed by clicking the File Button again. File commands can also be issued without opening the File Tab by using the associated keyboard shortcuts (see <a href="#keyboardshortcuts">Keyboard Shortcuts</a>).</p>
-        <a name="newfile"><h4>New File</h4></a>
-        <p>The New File command discards the current score, leaving a blank notation area in which to begin a new score. The existing score is not saved; a warning appears when using this command before the old data is discarded. The New File command can be issued using the Control-N keyboard shortcut.</p>
-        <a name="openfile"><h4>Open File</h4></a>
-        <p>Open file allows you to view or edit a score which was previously saved to your computer. When Open File is selected, Braille Music Notator presents a file dialog, allowing you to select a file from your computer's hard drive. The selected file is displayed in the notation area and can be viewed and edited. The Open File command can be issued using the Control-O keyboard shortcut.</p>
-        <p>Any existing score will be discarded when a new file is opened; Braille Music Notator will display a warning before doing so, allowing you to save your previous work before opening the new file.</p>
-        <p>Files can also be opened by dragging them from the File Manager (Windows) or Finder (Mac OS) directly into the notation area.</p>
-        <a name="savefile"><h4>Save File</h4></a>
-        <p>Choosing Save File will save the current score to a file on your computer's hard disk. You will be given the option of naming the file before saving. The file type produced (.brm) is a special file type designed for Braille Music Notator (see <a href="#braillemusicfileformat">Braille Music File Format</a>); opening this file with other programs or sending it to a braille embosser will yield unexpected results and is not recommended. The Save File command can be issued using the Control-S keyboard shortcut.</p>
-        <p>Different web browsers implement the Save File command in different ways (see <a href="#savingandexporting">Saving and Exporting</a>).</p>
-        <a name="exportfile"><h4>Export File</h4></a>
-        <p>Choosing Export File will export the current score to a file on your computer's hard disk. You will be given the option of naming the file before exporting. The score is translated into Braille ASCII (see <a href="#brailleascii">Braille ASCII</a>) and the file type produced (.brf) is designed to work with braille embossers and other braille technology. This type of file can be opened again in Braille Music Notator, but will require the program to reparse the braille symbols and may yield unexpected results; it is recommended that you save your score using Save File for future editing in Braille Music Notator, and use Export File only for sending the score to embossers or other programs. The Export File command can be issued using the Control-E keyboard shortcut.</p>
-        <p>If &quot;Show Page Breaks&quot; is selected (see <a href="#options">Options</a>), exported files will not include any characters located beyond the right margin of the score.</p>
-        <p>Different web browsers implement the Export File command in different ways (see <a href="#savingandexporting">Saving and Exporting</a>).</p>
-        <a name="parseimportedfiles"><h4>Parse Imported Files</h4></a>
-        <p>In braille music notation, certain braille characters can have multiple meanings depending the context in which they are used. By default, when Braille Music Notator opens a file created in another utility, it attempts to interpret braille characters contextually in order to display the correct icon in the score. This same translation is done when information copied from other programs and pasted into the notation area using the Paste command (Control-V). This functionality can be disabled by deselecting the Parse Imported Files checkbox in the File Tab. The Parse Imported Files setting can be enabled and disabled using the Control-H keyboard shortcut.</p>
-        <p>In some cases, Braille Music Notator is unable to ascertain the meaning of certain braille characters through their context. If, after opening a braille notation file, you see unexpected symbols, select them and use the Control-R keyboard shortcut to cycle through other possible meanings of the character (see <a href="#braillemusiccharacters">Braille Music Characters</a>).</p>
-        <a name="savingandexporting"><h4>Saving and Exporting</h4></a>
-        <p>Due to the variance in security techniques among different browsers, Save File and Export File might work differently, and may require an extra step:</p>
-        <ul>
-            <li>In some browsers, the file will automatically be downloaded into your web browser's downloads folder.</li>
-            <li>In other browsers, the file will appear in a new window or tab as a collection of strange characters. In this case, select &quot;Save As&quot; from your web browser's File menu, and then choose a location to save the score.</li>
-            </ul>
-        <p>In addition, saved and exported files may be given generic filenames and extensions by your web browser. It may be beneficial to rename the files after they are saved to disk. Exported files should be given a file extension of &quot;.brf&quot;  or &quot;.txt&quot; to work with certain braille software or hardware. </p>
-        <a name="autosave"><h4>Autosave</h4></a>
-        <p>Braille Music Notator automatically stores the current score in your web browser's &quot;cookie&quot; file, a small, secured storage space on your computer accessible only to the web page which created it. This file is read automatically when Braille Music Notator is opened.</p>
-        <p>While users are urged to save their work often (see <a href="#savingandexporting">Saving and Exporting</a>), the autosave feature will automatically restore your current score if Braille Music Notator is closed inadvertantly, either by closing the browser window, navigating to a different page, or experiencing an error which causes your web browser to quit.</p>
-        <p>Because the autosave feature is automatic, when opening Braille Music Notator, the notation area may display the score you were previously working on. If you wish to work on a different score, either open a different file (see <a href="#openfile">Open File</a>) or create a new, empty score (see <a href="#newfile">New File</a>).</p>
-        <p>In addition to saving the score in its current form, Braille Music Notator stores a limited number of previous states of your score, allowing you to use Undo command (see <a href="#undoandredo">Undo and Redo</a>) after reopening Braille Music Notator with a restored score.</p>
+    <a name="enteringandeditingthescore">
+      <h3>Entering and Editing the Score</h3>
+    </a>
+    <p><i>For a visual introduction to using Braille Music Notator, visit the <a href="videos.html">Video Tutorials</a> page.</i></p>
+    <p>To begin creating a score, simply open Braille Music Notator, place the cursor where you wish to begin, and click in the control area or type to enter musical symbols. To relocate the cursor, you can click on the new position with the mouse, or you can use the following keys:</p>
+    <ul>
+      <li><strong>arrow keys:</strong> move cursor one cell in the indicated direction</li>
+      <li><strong>return:</strong> move the cursor to the beginning of the next line</li>
+      <li><strong>shift-return:</strong> move the cursor to the cell below the leftmost character on the current line</li>
+      <li><strong>home:</strong> move the cursor to the top left corner of the score</li>
+    </ul>
+    <a name="removingcharacters">
+      <h4>Removing Characters</h4>
+    </a>
+    <p>Characters can be removed from the score using the following methods:</p>
+    <ul>
+      <li><strong>backspace:</strong> if a single character is selected, the backspace key will remove that character. If a single empty cell is selected, the backspace key will move one space to the left and remove the character in that cell. If multiple cells are selected, the backspace key will remove the characters in those cells.</li>
+      <li><strong>delete:</strong> the delete key removes the highlighted characters and scrolls the remaining characters on that line to the left.</li>
+      <li><strong>Cut (Control-X):</strong> the Cut command removes any highlighted characters and places them on the clipboard to be pasted elsewhere (see <a href="#cutcopyandpaste">Cut, Copy and Paste</a>).</li>
+      <li><strong>Delete Current Row (Control-Up Arrow):</strong> the Delete Current Row command removes all characters on the current row, and moves all lower rows up one row.</li>
+      <li><strong>New File (Control-N):</strong> the New File command removes all characters from the score (see <a href="#filecommands">File Commands</a>).</li>
+    </ul>
+    <a name="insertingcharacters">
+      <h4>Inserting Characters</h4>
+    </a>
+    <p>If the cursor is placed on an existing character, any new character placed into the score will overwrite the existing character. To insert a character into the score, hold the Shift key while typing the character or clicking on the keyboard chart. All characters in that row to the right of the cursor will be moved to the right, allowing the new character to be inserted.</p>
+    <p>To insert a blank row into the score, use the keyboard shortcut Control-Down Arrow. The current rows and all rows below it will be moved down one row.</p>
+    <p>Characters can be added to the score using their unique name as specified in the <a href="../brm/vocabulary.html">Braille Music File Vocabulary</a> by using the keyboard shortcut Control-Backslash, typing the unique name, and clicking &quot;OK&quot; or pressing Return.</p>
+    <a name="undoandredo">
+      <h4>Undo and Redo</h4>
+    </a>
+    <p>To undo the most recent change to the score, use the keyboard shortcut Control-Z (Undo). Repeating this command will continue backward through earlier edits to the score.</p>
+    <p>After using Undo, changes can be reapplied to the score with the keyboard shortcut Control-Y (Redo). Repeating this command will continue forward through subsequent edits to the score.</p>
+    <a name="cutcopyandpaste">
+      <h4>Cut, Copy and Paste</h4>
+    </a>
+    <p>Braille Music Notator supports the same behaviors for copying and pasting data found in most word processors, as described below:</p>
+    <ul>
+      <li><strong>Cut (Control-X):</strong> the Cut command removes any highlighted characters and places them on the clipboard to be pasted elsewhere with the Paste command.</li>
+      <li><strong>Copy (Control-C):</strong> the Copy command places a copy of the highlighted characters on the clipboard, leaving the score unchanged.</li>
+      <li><strong>Paste (Control-V):</strong> the Paste command places the contents of the clipboard into the score at the location of the cursor, overwriting any characters in the pasted area.</li>
+    </ul>
+    <p>Clipboard data is stored in a format specific to Braille Music Notator; characters copied to the clipboard from the score and pasted into other programs will appear to be random, but can be pasted back into Braille Music Notator. To export characters in a format that can be used in other braille programs, see <a href="#exportfile">Export File</a>. Characters copied from other sources and pasted into the Braille Music Notator window will be added the score as follows:</p>
+    <ul>
+      <li>If a music symbol keyboard is selected, characters will be pasted as basic music symbols (see <a href="#braillemusiccharacters">Braille Music Characters</a>). Because specific braille symbols can have different musical meanings depending on context, Braille Music Notator will analyze the content and attempt to select the correct musical symbols automatically (See <a href="#parseimportedfiles">Parse Imported Files</a>).</li>
+      <li>If the literary braille keyboard is selected, characters will be pasted as literary braille (see <a href="#literarybraille">Literary Braille</a>).</li>
+    </ul>
+    <p>If the clipboard contains Unicode braille characters, the characters will be automatically translated into Braille ASCII and pasted as indicated above (see <a href="#unicodebraillecharacters">Unicode Braille Characters</a>).</p>
+    <a name="howcharactersaredisplayed">
+      <h4>How Characters are Displayed</h4>
+    </a>
+    <p>When Braille Music Notator is opened, characters are automatically shown using icons which describe the musical value of each braille character. If the score contains a braille character which does not have a musical meaning understood by Braille Music Notator, the braille character itself (comprised of one to six dots) is displayed.</p>
+    <p>To force Braille Music Notator to display all characters in their standard braille form, deselect "Show Translated Braille" (see <a href="#options">Options</a>). Alternately, the keyboard shortcut Control-B can be used to switch between translated and untranslated braille.</p>
+    <p>When braille characters are shown, unused dots in the braille character are indicated by a smaller dot. To hide these smaller dots, deselect "Show Small Dots" (see <a href="#options">Options</a>) or use the keyboard shortcut Control-D to switch between the settings.</p>
+    <p>A single braille character can have multiple musical meanings. To rotate through the possible meanings of one or more braille symbols, select the symbols and use the keyboard shortcut Control-R. Continuing to use the keyboard shortcut will eventually &quot;wrap around&quot; to the original meaning (see <a href="#braillemusiccharacters">Braille Music Characters</a>).</p>
+    <p>To force Braille Music Notator to interpret one or more selected characters as text, use the keyboard shortcut Control-T. (This is the equivalent of using Control-R to rotate each character to its first text value.) To force Braille Music Notator to interpret one or more selected characters as music, use the keyboard shortcut Shift-Control-T.</p>
+    <a name="filecommands" id="filecommands">
 
-        <a name="options"><h3>Options</h3></a>
-        <p>To view the Options tab, click the Options button in the upper right-hand corner of the Braille Music Notator window. To close the Options tab, click the Options button again.</p>
-        <a name="showtranslatedbraille"><h4>Show Translated Braille</h4></a>
-        <p>By default, Braille Music Notator replaces braille characters with the musical symbols they represent. This automatic translation can be disabled and enabled by selecting Show Translated Braille in the Options tab. This setting can also be toggled with the Control-B keyboard shortcut.</p>
-        <a name="showsmalldots"><h4>Show Small Dots</h4></a>
-        <p>When braille characters are displayed, empty dot positions are indicated by a small dot in the braille character. This setting can be disabled and enabled by selecting Show Small Dots in the Options tab. This setting can also be toggled with the Control-D keyboard shortcut.</p>
-        <a name="scoresize"><h4>Score Size</h4></a>
-        <p>Magnification of the notation area can be changed using the Score Size setting in the Options tab. The value shown is the height of a single cell in pixels; the default value is 60. Clicking the arrows will increase or decrease this value by 10. The lowest available value is 10; there is no upper limit. Magnification can also be reduced by 10 with the Control-Hyphen keyboard shortcut, and increased by 10 with the Control-Equals keyboard shortcut. This setting has no effect on embossed scores; it simply controls the view of the score in the notation area.</p>
-        <a name="showpageboundaries"><h4>Show Page Breaks</h4></a>
-        <p>By default, the notation area displays a horizontal gray line to show where page breaks will occur, and a gray area on the right to illustrate page width. These visual cues can be disabled and enabled using the Show Page Breaks setting in the Options tab. Page height and width can be changed using the Page Size settings in the Options tab (see <a href="#pagesize">Page Size</a>).</p>
-        <p>When Show Page Breaks is enabled, exported files will include a page break character after each page, and will not include any characters to the right of the page width boundary (see <a href="#exportfile">Export File</a>). Saved files are not affected by the Show Page Breaks setting.</p>
-        <a name="pagesize"><h4>Page Size</h4></a>
-        <p>The size of the page as shown by the page boundary markers (see Show Page Breaks) can be changed using the Page Size settings, labeled &quot;Width&quot; and &quot;Height,&quot; in the Options tab. Width and height are shown in cells. Clicking the arrows next to the appropriate value will change that value by one. Additionally, page height can be increased using the Control-K keyboard shortcut and decreased using the Control-I keyboard shortcut, and page width can be increased with the Control-L keyboard shortcut and decreased with the Control-J keyboard shortcut.</p>
-        <a name="usewordwrap"><h4>Use Word Wrap</h4></a>
-        <p>When Use Word Wrap and selected and Show Page Breaks is enabled, once the cursor reaches the end of the line, the cursor and current group of symbols will be automatically moved to the next line. (In literary braille, this grouping corresponds to the current word; in music braille, this grouping corresponds to the current measure.) Octave symbols will be placed automatically in accordance with braille music conventions.</p>
-        <a name="controls"><h4>Controls</h4></a>
-        <p>The controls area in Braille Music Notator can be set to different arrangements. The default arrangement, "Classic,"  includes a general variety of braille music symbols used in most scores. Other available arrangements are available in the Controls menu. To select a different arrangement, choose the arrangement from the Controls menu; the controls area will update immediately. The score and notation area are not affected.</p>
-        <p>At this time, two arrangements are available: "Classic," the default controls arrangement, and "MIDI," an arrangement designed for use with MIDI keyboard entry (See <a href="#midinoteentry">MIDI Note Entry</a>).</p>
-        <a name="insertoctavesymbols"><h4>Insert Octave Symbols</h4></a>
-        <p>When a MIDI-capable controls arrangement is selected (see <a href="#midinoteentry">MIDI Note Entry</a>), the Insert Octave Symbols option controls whether or not Braille Music Notator will automatically add octave symbols to entered notes according to braille music conventions. If Insert Octave Symbols is not selected, octave symbols must be entered manually.</p>
-        <a name="observekeysignatures"><h4>Observe Key Signatures</h4></a>
-        <p>When a MIDI-capable controls arrangement is selected (see <a href="#midinoteentry">MIDI Note Entry</a>), the Observe Key Signatures option controls whether or not Braille Music Notator will automatically show or hide accidentals based on the most recent indicated key signature. If Observe Key Signatures is not selected, sharps and flats will always be included for chromatic notes entered via MIDI.</p>
+      <h3>File Commands</h3>
+    </a>
+    <p><i>For a visual introduction to working with files in Braille Music Notator, visit the <a href="videos.html">Video Tutorials</a> page.</i></p>
+    <p>Scores created in Braille Music Notator can be saved to your local hard disk so they may be opened and edited later. Files can also be exported to send to a braille embosser or other device. Commands for working with files are found by clicking the &quot;File&quot; button in the upper right hand corner of the Braille Music Notator window, which brings up the File Tab. The File Tab is dismissed by clicking the File Button again. File commands can also be issued without opening the File Tab by using the associated keyboard shortcuts (see <a href="#keyboardshortcuts">Keyboard Shortcuts</a>).</p>
+    <a name="newfile">
+      <h4>New File</h4>
+    </a>
+    <p>The New File command discards the current score, leaving a blank notation area in which to begin a new score. The existing score is not saved; a warning appears when using this command before the old data is discarded. The New File command can be issued using the Control-N keyboard shortcut.</p>
+    <a name="openfile">
+      <h4>Open File</h4>
+    </a>
+    <p>Open file allows you to view or edit a score which was previously saved to your computer. When Open File is selected, Braille Music Notator presents a file dialog, allowing you to select a file from your computer's hard drive. The selected file is displayed in the notation area and can be viewed and edited. The Open File command can be issued using the Control-O keyboard shortcut.</p>
+    <p>Any existing score will be discarded when a new file is opened; Braille Music Notator will display a warning before doing so, allowing you to save your previous work before opening the new file.</p>
+    <p>Files can also be opened by dragging them from the File Manager (Windows) or Finder (Mac OS) directly into the notation area.</p>
+    <a name="savefile">
+      <h4>Save File</h4>
+    </a>
+    <p>Choosing Save File will save the current score to a file on your computer's hard disk. You will be given the option of naming the file before saving. The file type produced (.brm) is a special file type designed for Braille Music Notator (see <a href="#braillemusicfileformat">Braille Music File Format</a>); opening this file with other programs or sending it to a braille embosser will yield unexpected results and is not recommended. The Save File command can be issued using the Control-S keyboard shortcut.</p>
+    <p>Different web browsers implement the Save File command in different ways (see <a href="#savingandexporting">Saving and Exporting</a>).</p>
+    <a name="exportfile">
+      <h4>Export File</h4>
+    </a>
+    <p>Choosing Export File will export the current score to a file on your computer's hard disk. You will be given the option of naming the file before exporting. The score is translated into Braille ASCII (see <a href="#brailleascii">Braille ASCII</a>) and the file type produced (.brf) is designed to work with braille embossers and other braille technology. This type of file can be opened again in Braille Music Notator, but will require the program to reparse the braille symbols and may yield unexpected results; it is recommended that you save your score using Save File for future editing in Braille Music Notator, and use Export File only for sending the score to embossers or other programs. The Export File command can be issued using the Control-E keyboard shortcut.</p>
+    <p>If &quot;Show Page Breaks&quot; is selected (see <a href="#options">Options</a>), exported files will not include any characters located beyond the right margin of the score.</p>
+    <p>Different web browsers implement the Export File command in different ways (see <a href="#savingandexporting">Saving and Exporting</a>).</p>
+    <a name="parseimportedfiles">
+      <h4>Parse Imported Files</h4>
+    </a>
+    <p>In braille music notation, certain braille characters can have multiple meanings depending the context in which they are used. By default, when Braille Music Notator opens a file created in another utility, it attempts to interpret braille characters contextually in order to display the correct icon in the score. This same translation is done when information copied from other programs and pasted into the notation area using the Paste command (Control-V). This functionality can be disabled by deselecting the Parse Imported Files checkbox in the File Tab. The Parse Imported Files setting can be enabled and disabled using the Control-H keyboard shortcut.</p>
+    <p>In some cases, Braille Music Notator is unable to ascertain the meaning of certain braille characters through their context. If, after opening a braille notation file, you see unexpected symbols, select them and use the Control-R keyboard shortcut to cycle through other possible meanings of the character (see <a href="#braillemusiccharacters">Braille Music Characters</a>).</p>
+    <a name="savingandexporting">
+      <h4>Saving and Exporting</h4>
+    </a>
+    <p>Due to the variance in security techniques among different browsers, Save File and Export File might work differently, and may require an extra step:</p>
+    <ul>
+      <li>In some browsers, the file will automatically be downloaded into your web browser's downloads folder.</li>
+      <li>In other browsers, the file will appear in a new window or tab as a collection of strange characters. In this case, select &quot;Save As&quot; from your web browser's File menu, and then choose a location to save the score.</li>
+    </ul>
+    <p>In addition, saved and exported files may be given generic filenames and extensions by your web browser. It may be beneficial to rename the files after they are saved to disk. Exported files should be given a file extension of &quot;.brf&quot; or &quot;.txt&quot; to work with certain braille software or hardware. </p>
+    <a name="autosave">
+      <h4>Autosave</h4>
+    </a>
+    <p>Braille Music Notator automatically stores the current score in your web browser's &quot;cookie&quot; file, a small, secured storage space on your computer accessible only to the web page which created it. This file is read automatically when Braille Music Notator is opened.</p>
+    <p>While users are urged to save their work often (see <a href="#savingandexporting">Saving and Exporting</a>), the autosave feature will automatically restore your current score if Braille Music Notator is closed inadvertantly, either by closing the browser window, navigating to a different page, or experiencing an error which causes your web browser to quit.</p>
+    <p>Because the autosave feature is automatic, when opening Braille Music Notator, the notation area may display the score you were previously working on. If you wish to work on a different score, either open a different file (see <a href="#openfile">Open File</a>) or create a new, empty score (see <a href="#newfile">New File</a>).</p>
+    <p>In addition to saving the score in its current form, Braille Music Notator stores a limited number of previous states of your score, allowing you to use Undo command (see <a href="#undoandredo">Undo and Redo</a>) after reopening Braille Music Notator with a restored score.</p>
 
-        <a name="midinoteentry"><h3>MIDI Note Entry</h3></a>
-        <p><i>For a visual demonstration of MIDI Note Entry in Braille Music Notator, visit the <a href="videos.html">Video Tutorials</a> page.</i></p>
-        <p>Notes can be entered into Braille Music Notator using a MIDI keyboard (or any other MIDI-capable instrument) connected to the computer. To use a MIDI keyboard with Braille Music Notator, connect the keyboard to your computer; consult your MIDI keyboard user manual for detailed instructions. Ensure that the MIDI keyboard is recognized by your computer's operating system using Audio/MIDI Setup on MacOS or MIDI Mapper on Windows. Lastly, ensure that a MIDI-capable controls arrangement is selected from the Controls menu in the Options tab (see <a href="#controls">Controls</a>).</p>
-        <a name="midicompatiblebrowsers"><h4>MIDI-Compatible Browsers</h4></a>
-        <p>To use MIDI note entry, Braille Music Notator must be open in a browser which can access the Web MIDI API. Currently, Chrome, Edge and Opera support MIDI. Firefox can be made to support MIDI by installing the <a href="https://github.com/jazz-soft/web-midi">Web MIDI API extension</a>. Safari does not support MIDI, and there are currently no extensions which allow it to do so.</p>
-        <a name="enteringnoteswithmidi"><h4>Entering Notes with MIDI</h4></a>
-        <p>To enter notes using MIDI, press and hold one or more notes on the MIDI keyboard. Before releasing the note or notes, click the appropriate note length in the control area or press the corresponding key on the computer keyboard. The symbol matching note length and pitch will be entered into the score, along with any necessary octave symbol (see <a href="#insertoctavesymbols">Insert Octave Symbols</a>) and accidentals (see <a href="#observekeysignatures">Observe Key Signatures</a>). Repeated notes of the same pitch can be added by pressing the note length key while continuing to hold down the note or notes on the MIDI keyboard.</p>
-        <a name="enteringrestswithmidi"><h4>Entering Rests with MIDI</h4></a>
-        <p>To enter a rest using a MIDI-capable controls arrangement, press the corresponding note duration key without holding down a note on the MIDI keyboard.</p>
+    <a name="options">
+      <h3>Options</h3>
+    </a>
+    <p>To view the Options tab, click the Options button in the upper right-hand corner of the Braille Music Notator window. To close the Options tab, click the Options button again.</p>
+    <a name="showtranslatedbraille">
+      <h4>Show Translated Braille</h4>
+    </a>
+    <p>By default, Braille Music Notator replaces braille characters with the musical symbols they represent. This automatic translation can be disabled and enabled by selecting Show Translated Braille in the Options tab. This setting can also be toggled with the Control-B keyboard shortcut.</p>
+    <a name="showsmalldots">
+      <h4>Show Small Dots</h4>
+    </a>
+    <p>When braille characters are displayed, empty dot positions are indicated by a small dot in the braille character. This setting can be disabled and enabled by selecting Show Small Dots in the Options tab. This setting can also be toggled with the Control-D keyboard shortcut.</p>
+    <a name="usebrailledisplay">
+      <h4>Use Braille Display</h4>
+    </a>
+    <p>If you have a refreshable braille display connected to your computer, Braille Music Notator can display the line containing the cursor on the braille display. This setting can be disabled and enabled by selecting Use Braille Display in the Options tab. This setting can also be toggled with the Control-U keyboard shortcut.</p>
+    <a name="scoresize">
+      <h4>Score Size</h4>
+    </a>
+    <p>Magnification of the notation area can be changed using the Score Size setting in the Options tab. The value shown is the height of a single cell in pixels; the default value is 60. Clicking the arrows will increase or decrease this value by 10. The lowest available value is 10; there is no upper limit. Magnification can also be reduced by 10 with the Control-Hyphen keyboard shortcut, and increased by 10 with the Control-Equals keyboard shortcut. This setting has no effect on embossed scores; it simply controls the view of the score in the notation area.</p>
+    <a name="showpageboundaries">
+      <h4>Show Page Breaks</h4>
+    </a>
+    <p>By default, the notation area displays a horizontal gray line to show where page breaks will occur, and a gray area on the right to illustrate page width. These visual cues can be disabled and enabled using the Show Page Breaks setting in the Options tab. Page height and width can be changed using the Page Size settings in the Options tab (see <a href="#pagesize">Page Size</a>).</p>
+    <p>When Show Page Breaks is enabled, exported files will include a page break character after each page, and will not include any characters to the right of the page width boundary (see <a href="#exportfile">Export File</a>). Saved files are not affected by the Show Page Breaks setting.</p>
+    <a name="pagesize">
+      <h4>Page Size</h4>
+    </a>
+    <p>The size of the page as shown by the page boundary markers (see Show Page Breaks) can be changed using the Page Size settings, labeled &quot;Width&quot; and &quot;Height,&quot; in the Options tab. Width and height are shown in cells. Clicking the arrows next to the appropriate value will change that value by one. Additionally, page height can be increased using the Control-K keyboard shortcut and decreased using the Control-I keyboard shortcut, and page width can be increased with the Control-L keyboard shortcut and decreased with the Control-J keyboard shortcut.</p>
+    <a name="usewordwrap">
+      <h4>Use Word Wrap</h4>
+    </a>
+    <p>When Use Word Wrap and selected and Show Page Breaks is enabled, once the cursor reaches the end of the line, the cursor and current group of symbols will be automatically moved to the next line. (In literary braille, this grouping corresponds to the current word; in music braille, this grouping corresponds to the current measure.) Octave symbols will be placed automatically in accordance with braille music conventions.</p>
+    <a name="controls">
+      <h4>Controls</h4>
+    </a>
+    <p>The controls area in Braille Music Notator can be set to different arrangements. The default arrangement, &quot;Classic,&quot; includes a general variety of braille music symbols used in most scores. Other available arrangements are available in the Controls menu. To select a different arrangement, choose the arrangement from the Controls menu; the controls area will update immediately. The score and notation area are not affected. You can rotate through the different control areas using the Control-Backtick keyboard shortcut.</p>
+    <p>At this time, three arrangements are available: &quot;Classic,&quot; the default controls arrangement, &quot;MIDI,&quot; an arrangement designed for use with MIDI keyboard entry (See <a href="#midinoteentry">MIDI Note Entry</a>), and &quot;Full,&quot; which displays grids containing nearly all available symbols used in the program.</p>
+    <a name="insertoctavesymbols">
+      <h4>Insert Octave Symbols</h4>
+    </a>
+    <p>When a MIDI-capable controls arrangement is selected (see <a href="#midinoteentry">MIDI Note Entry</a>), the Insert Octave Symbols option controls whether or not Braille Music Notator will automatically add octave symbols to entered notes according to braille music conventions. If Insert Octave Symbols is not selected, octave symbols must be entered manually. This setting can be toggled with the Command-8 keyboard shortcut.</p>
+    <a name="observekeysignatures">
+      <h4>Observe Key Signatures</h4>
+    </a>
+    <p>When a MIDI-capable controls arrangement is selected (see <a href="#midinoteentry">MIDI Note Entry</a>), the Observe Key Signatures option controls whether or not Braille Music Notator will automatically show or hide accidentals based on the most recent indicated key signature. If Observe Key Signatures is not selected, sharps and flats will always be included for chromatic notes entered via MIDI. This setting can be toggled with the Command-9 keyboard shortcut.</p>
+    <a name="spellchordsdownward">
+      <h4>Spell Chords Downward</h4>
+    </a>
+    <p>When a MIDI-capable controls arrangement is selected (see <a href="#midinoteentry">MIDI Note Entry</a>), the Spell Chords Downward option controls whether Braille Music Notator will spell chords by describing intervals from the top note (downward) or from the bottom note (upward). If Spell Chords Downward is selected, chords will be notated with a note sign for the top note and interval signs for the remaining notes. This setting can be toggled with the Command-0 keyboard shortcut.</p>
 
-        <a name="screenreadercompatibility"><h3>Screen Reader Compatibility</h3></a>
-        <p>While Braille Music Notator was designed with the intention of making braille music more accessible for sighted users, all aspects of the utility are available using screen reading software. Braille Music Notator adheres to WAI-ARIA standards for web applications, and has been tested with VoiceOver on MacOS and JAWS on Windows. Other screen readers which adhere to WAI-ARIA standards should be compatible. Windows' built-in screen reader, Narrator, is not supported at this time.</p>
-        <p>When screen reading software is enabled and the browser window containing Braille Music Notator is active, the screen reading software will respond to each keypress or mouse click with three items in the following order:</p>
-        <ol>
-            <li>If the keypress made a change to the score or exceuted a command, a description of what happened will be announced (for example, &quot;Cleared cell at line 4, character 3,&quot; or &quot;Magnification Increased by 10.&quot;). If a new character was added, the name of the character will be announced.</li>
-            <li>The current location of the cursor in the format &quot;Line X, Character Y.&quot; Note that the first row and column are numbered as 0, so the cell in the top left corner of the score is line 0, character 0.</li>
-            <li>The name of the character in the cursor's current position. If the currently selected cell is blank, the screen reader announces the word &quot;empty.&quot;</li>
-        </ol>
-        <a name="usingrefreshablebrailledisplay"><h4>Using a Refreshable Braille Display</h4></a>
-        <p>Instead of providing descriptive text, Braille Music Notator can be set to output the full line of braille at the cursor's current position, which provides functionality with refreshable braille displays. To toggle output between using descriptive text and braille characters, use the keyboard shortcut Control-U.</p>
+    <a name="midinoteentry">
+      <h3>MIDI Note Entry</h3>
+    </a>
+    <p><i>For a visual demonstration of MIDI Note Entry in Braille Music Notator, visit the <a href="videos.html">Video Tutorials</a> page.</i></p>
+    <p>Notes can be entered into Braille Music Notator using a MIDI keyboard (or any other MIDI-capable instrument) connected to the computer. To use a MIDI keyboard with Braille Music Notator, connect the keyboard to your computer; consult your MIDI keyboard user manual for detailed instructions. Ensure that the MIDI keyboard is recognized by your computer's operating system using Audio/MIDI Setup on MacOS or MIDI Mapper on Windows. Lastly, ensure that a MIDI-capable controls arrangement is selected from the Controls menu in the Options tab (see <a href="#controls">Controls</a>).</p>
+    <a name="midicompatiblebrowsers">
+      <h4>MIDI-Compatible Browsers</h4>
+    </a>
+    <p>To use MIDI note entry, Braille Music Notator must be open in a browser which can access the Web MIDI API. Currently, Chrome, Edge and Opera support MIDI. Firefox can be made to support MIDI by installing the <a href="https://github.com/jazz-soft/web-midi">Web MIDI API extension</a>. Safari does not support MIDI, and there are currently no extensions which allow it to do so.</p>
+    <a name="enteringnoteswithmidi">
+      <h4>Entering Notes with MIDI</h4>
+    </a>
+    <p>To enter notes using MIDI, press and hold one or more notes on the MIDI keyboard. Before releasing the note or notes, click the appropriate note length in the control area or press the corresponding key on the computer keyboard. The symbol matching note length and pitch will be entered into the score, along with any necessary octave symbol (see <a href="#insertoctavesymbols">Insert Octave Symbols</a>) and accidentals (see <a href="#observekeysignatures">Observe Key Signatures</a>). Repeated notes of the same pitch can be added by pressing the note length key while continuing to hold down the note or notes on the MIDI keyboard.</p>
+    <a name="enteringrestswithmidi">
+      <h4>Entering Rests with MIDI</h4>
+    </a>
+    <p>To enter a rest using a MIDI-capable controls arrangement, press the corresponding note duration key without holding down a note on the MIDI keyboard.</p>
 
-        <a name="usingbraillemusicnotatoroffline"><h3>Using Braille Music Notator Offline</h3></a>
-        <p>Braille Music Notator is a web application, and is designed to be used with an active internet connection. It can, however, be downloaded to your computer's hard drive and used without an internet connection. To use Braille Music Notator offline:</p>
-        <ol>
-            <li>Install and launch web server software on your computer. The directions for this vary depending upon the operating system. <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">This site</a> gives one method for accomplishing this.</li>
-            <li>Download the <a href="../archive/bmn.zip">current archived version of Braille Music Notator</a>. If necessary, decompress the archive file using a &quot;unzip&quot; utility.</li>
-            <li>Place the decompressed archive in your web server's documents folder, and point your browser to <a href="http://127.0.0.1/notator/">http://127.0.0.1/notator/</a>.</li>
-        </ol>
-        <p>Unfortunately, MIDI Note Entry, which requires a secured browser connection, will not work when using Braille Music Notator on a local server.</p>
-        <p>Note also that the online version of Braille Music Notator receives periodic updates, which add features and fix errors. These updates will not be reflected in archived versions. To update an archived version, delete the Braille Music Notator archive on your computer and repeat the steps above.</p>
+    <a name="screenreadercompatibility">
+      <h3>Screen Reader Compatibility</h3>
+    </a>
+    <p>While Braille Music Notator was designed with the intention of making braille music more accessible for sighted users, all aspects of the utility are available using screen reading software. Braille Music Notator adheres to WAI-ARIA standards for web applications, and has been tested with VoiceOver on MacOS and JAWS on Windows. Other screen readers which adhere to WAI-ARIA standards should be compatible. Windows' built-in screen reader, Narrator, is not supported at this time.</p>
+    <p>When screen reading software is enabled and the browser window containing Braille Music Notator is active, the screen reading software will respond to each keypress or mouse click with three items in the following order:</p>
+    <ol>
+      <li>If the keypress made a change to the score or exceuted a command, a description of what happened will be announced (for example, &quot;Cleared cell at line 4, character 3,&quot; or &quot;Magnification Increased by 10.&quot;). If a new character was added, the name of the character will be announced.</li>
+      <li>The current location of the cursor in the format &quot;Line X, Character Y.&quot; Note that the first row and column are numbered as 0, so the cell in the top left corner of the score is line 0, character 0.</li>
+      <li>The name of the character in the cursor's current position. If the currently selected cell is blank, the screen reader announces the word &quot;empty.&quot;</li>
+    </ol>
+    <a name="usingrefreshablebrailledisplay">
+      <h4>Using a Refreshable Braille Display</h4>
+    </a>
+    <p>Instead of providing descriptive text, Braille Music Notator can be set to output the full line of braille at the cursor's current position, which provides functionality with refreshable braille displays. To toggle output between using descriptive text and braille characters, use the keyboard shortcut Control-U.</p>
 
-        <a name="usingthekeyboard"><h3>Using the Keyboard</h3></a>
-        <p>All features in Braille Music Notator are accessible using the computer keyboard, allowing for quicker editing and accessibility to those unable to use the graphic interface.</p>
-        <a name="keyboardscoreentry"><h4>Keyboard Score Entry</h4></a>
-        <p>Pressing a key on the keyboard without any modifier keys (such as shift, control, etc.) adds a musical symbol to the score according to the current keyboard setting within Braille Music Notator. Both controls arrangements have multiple keyboard layouts. Pressing the tab key will move to the next keyboard layout, and pressing shift-tab will move to the previous keyboard layout. Keyboard layouts will &quot;wrap around&quot; from the last to the first and vice versa.</p>
-        <p>Pressing the shift key while adding a character will insert the character at the current position, moving any remaining characters on that line one cell to the right.</p>
-        <p>For a textual representation of the keyboards, see the <a href="keyboardentry.html">Keyboard Entry Chart</a>.</p>
-        <a name="keyboardeditingcommands"><h4>Keyboard Editing Commands</h4></a>
-        <p>The following keys can be used to move the cursor or change the selection in the notation area:</p>
-        <ul>
-            <li><strong>arrow keys:</strong> move cursor one cell in the indicated direction</li>
-            <li><strong>shift-arrow keys:</strong> extend the current selection in the indicated direction</li>
-            <li><strong>return:</strong> move the cursor to the beginning of the next line</li>
-            <li><strong>shift-return:</strong> move the cursor to the cell below the leftmost character on the current line</li>
-            <li><strong>home:</strong> move the cursor to the top left corner of the score</li>
-            <li><strong>backspace:</strong> if a single character is selected, the backspace key will remove that character. If a single empty cell is selected, the backspace key will move one space to the left and remove the character in that cell. If multiple cells are selected, the backspace key will remove the characters in those cells.</li>
-            <li><strong>delete:</strong> the delete key removes the highlighted characters and scrolls the remaining characters on that line to the left.</li>
-        </ul>
-        <a name="keyboardshortcuts"><h4>Keyboard Shortcuts</h4></a>
-        <p>Commands in Braille Music Notator can be executed with keyboard shortcuts. Using a shortcut requires pressing a particular key while holding a modifier key. Due to the differences between web browsers, which modifier key to use will vary. In most cases, the Control key will work for most shortcuts. In some cases, Control key shortcuts are used by the web browser for other functions; in these cases, the Command key on Mac OS or the Windows key in Windows will work instead.</p>
-        <p>Keyboard Shortcuts are listed in the following table:</p>
-        <table width="100%" border="1">
-          <tr>
-            <td>8</td>
-            <td>Toggle Insert Octave Symbols (MIDI Entry only)</td>
-          </tr>
-          <tr>
-            <td>9</td>
-            <td>Toggle Observe Key Signatures (MIDI Entry only)</td>
-          </tr>
-          <tr>
-            <td>0</td>
-            <td>Toggle Spell Chords Downward (MIDI Entry only)</td>
-          </tr>
-          <tr>
-            <td>A</td>
-            <td>Select All</td>
-          </tr>
-          <tr>
-            <td>B</td>
-            <td>Toggle Braille Translation</td>
-          </tr>
-          <tr>
-            <td>C</td>
-            <td>Copy</td>
-          </tr>
-          <tr>
-            <td>D</td>
-            <td>Toggle Small Dots</td>
-          </tr>
-          <tr>
-            <td>E</td>
-            <td>Export File</td>
-          </tr>
-          <tr>
-            <td>H</td>
-            <td>Toggle Parse Imported Files</td>
-          </tr>
-          <tr>
-            <td>I</td>
-            <td>Decrease Page Height by 1</td>
-          </tr>
-          <tr>
-            <td>J</td>
-            <td>Decrease Page Width by 1</td>
-          </tr>
-          <tr>
-            <td>K</td>
-            <td>Increase Page Height by 1</td>
-          </tr>
-          <tr>
-            <td>L</td>
-            <td>Increase Page Width by 1</td>
-          </tr>
-          <tr>
-            <td>N</td>
-            <td>New Document</td>
-          </tr>
-          <tr>
-            <td>O</td>
-            <td>Open Document</td>
-          </tr>
-          <tr>
-            <td>P</td>
-            <td>Toggle Page Breaks</td>
-          </tr>
-          <tr>
-            <td>R</td>
-            <td>Cycle Through Symbol Meanings</td>
-          </tr>
-          <tr>
-            <td>S</td>
-            <td>Save File</td>
-          </tr>
-          <tr>
-            <td>T</td>
-            <td>Convert Selected Characters to Text<br>(with Shift key: Convert Selected Characters to Music)</td>
-          </tr>
-          <tr>
-            <td>U</td>
-            <td>Toggle between screen reader and refreshable braille display modes</td>
-          </tr>
-          <tr>
-            <td>V</td>
-            <td>Paste</td>
-          </tr>
-          <tr>
-            <td>X</td>
-            <td>Cut</td>
-          </tr>
-          <tr>
-            <td>Y</td>
-            <td>Redo</td>
-          </tr>
-          <tr>
-            <td>Z</td>
-            <td>Undo</td>
-          </tr>
-          <tr>
-            <td>=</td>
-            <td>Increase Magnification by 10</td>
-          </tr>
-          <tr>
-            <td>-</td>
-            <td>Decrease Magnification by 10</td>
-          </tr>
-          <tr>
-            <td>,</td>
-            <td>Toggle Use Word Wrap</td>
-          </tr>
-          <tr>
-            <td>?</td>
-            <td>Help</td>
-          </tr>
-          <tr>
-            <td>`</td>
-            <td>Rotate Through Control Arrangements</td>
-          </tr>
-          <tr>
-            <td>\</td>
-            <td>Add Character By Name</td>
-          </tr>
-          <tr>
-            <td>Up Arrow</td>
-            <td>Delete Row</td>
-          </tr>
-          <tr>
-            <td>Down Arrow</td>
-            <td>Insert Row</td>
-          </tr>
-        </table>
+    <a name="usingbraillemusicnotatoroffline">
+      <h3>Using Braille Music Notator Offline</h3>
+    </a>
+    <p>Braille Music Notator is a web application, and is designed to be used with an active internet connection. It can, however, be downloaded to your computer's hard drive and used without an internet connection. To use Braille Music Notator offline:</p>
+    <ol>
+      <li>Install and launch web server software on your computer. The directions for this vary depending upon the operating system. <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">This site</a> gives one method for accomplishing this.</li>
+      <li>Download the <a href="../archive/bmn.zip">current archived version of Braille Music Notator</a>. If necessary, decompress the archive file using a &quot;unzip&quot; utility.</li>
+      <li>Place the decompressed archive in your web server's documents folder, and point your browser to <a href="http://127.0.0.1/notator/">http://127.0.0.1/notator/</a>.</li>
+    </ol>
+    <p>Unfortunately, MIDI Note Entry, which requires a secured browser connection, will not work when using Braille Music Notator on a local server.</p>
+    <p>Note also that the online version of Braille Music Notator receives periodic updates, which add features and fix errors. These updates will not be reflected in archived versions. To update an archived version, delete the Braille Music Notator archive on your computer and repeat the steps above.</p>
 
-        <a name="workingwithbraille"><h3>Working with Braille</h3></a>
-        <p>One of the primary goals of Braille Music Notator is to allow sighted users to create braille music scores without requiring fluency in braille. However, a basic understanding of braille and how it is used in computer files is very helpful.</p>
-        <a name="aboutbraille"><h4>About Braille</h4></a>
-        <p>Braille is a system of recording information using raised dots, developed in 1824 by French educator Louis Braille. While braille is traditionally rendered by embossing heavier-weight paper, the system can be used with any materials. Braille characters (sometimes called cells) are created by arranging dots in a small 2x3 grid. Variants of the system have been developed for many different languages. English braille consists of two standardized subsystems: Grade 1, which uses a simple correlation of braille characters to letters, numbers and punctuation; and Grade 2, which features a large number of contractions and abbreviations to conserve space.</p>
-        <p>While braille shares many one-to-one correlations with the Latin alphabet, there are some important differences between the systems, even when using Grade 1 braille. For example, while the Latin alphabet uses different symbols for upper- and lowercase letters, braille instead uses a prefix character to indicate that the next character should be capitalized. Additional differences occur with punctuation.</p>
-        <p>Braille documents are generally created using a braille embosser; early embossers worked as typewriters, while modern embossers connect to computers. Braille can also be dynamically generated using a refreshable braille display, which can be connected to a computer as an output device. Braille readers often use notetakers, devices analagous to laptop computers but which feature a refreshable braille display instead of a screen, and which sometimes use a braille keypad in lieu of a traditional keyboard. </p>
-        <a name="brailleascii"><h4>Braille ASCII</h4></a>
-        <p>The standard method for storing English braille documents digitally is braille ASCII. Like traditional ASCII, braille ASCII encodes each character with a numeric code from 1 to 127. Many of these characters — specifically, the letters A–Z — mirror their traditional ASCII counterparts. Because of this, when braille ASCII is translated as regular ASCII, the meaning of the text can often be inferred, even when Grade 2 contractions are used.</p>
-        <p>Because modern embossers connect to computers using a text-based printer interface — much like an older dot-matrix printer — they operate by receiving a text file from the computer. This encoding for this text file should be braille ASCII. Sending a traditional ASCII file will generate braille characters, but due to the differences between braille ASCII and traditional ASCII the result will not be legible braille.</p>
-        <p>The standard format for saving braille documents on a computer is identical to a standard text file, but uses the extension &quot;.brf&quot; to indicate that the contents are encoded using braille ASCII.</p>
-        <a name="braillemusiccharacters"><h4>Braille Music Characters</h4></a>
-        <p>Braille music notation was first developed by Louis Braille himself, who was a talented organist. The system uses the same characters as literary braille, but assigns different meanings to them for use in a musical context. Because of the number of different musical symbols, a single braille character might be given a number of different meanings depending on context. Some musical symbols are encoded using sequences of two or three braille characters.</p>
-        <p>Braille Music Notator uses a system of storing symbols that preserves the musical meaning of a given braille character, but which allows the user to cycle through these meanings if necessary. To change to a different musical symbol for a particular braille character, place the cursor on the character in the notation area and use the Control-R keyboard shortcut. Repeat to cycle through all the meanings of the braille character.</p>
-        <p>Saving the file (see <a href="#savefile">Save File</a>) preserves all musical meanings for the braille characters in the score. Exporting the file (see <a href="#exportfile">Export File</a>) creates a braille ASCII file which is suitable for sending to a braille embosser but which does not preserve musical meanings.</p>
-        <p>If a standard braille ASCII file (such as one exported from Braille Music Notator, or created by another braille music utility) is imported into Braille Music Notator, the utility will attempt to determine the appropriate meanings of each character based on its context (see <a href="#parseimportedfiles">Parse Imported Files</a>). These meanings will be preserved in saved files. In cases where Braille Music Notator is unable to correctly determine the proper meaning, the Control-R keyboard shortcut can be used to cycle through possible interpretations for each character.</p>
-        <a name="literarybraille"><h4>Literary Braille</h4></a>
-        <p>To enter literary braille characters in Braille Music Notator, select the literary braille keyboard by clicking the &quot;Aa&quot; button in the control area. When this keyboard is selected, any characters pasted into the notation area from the clipboard (using the Control-V keyboard shortcut) is interpreted as literary braille.</p>
-        <p>Braille Music Notator is not intended for extensive textual input; to add large blocks of text, it is easier to copy text from a program or utility designed for this purpose, select the literary braille keyboard in the control area, and paste it into the notation area.</p>
-        <a name="unicodebraillecharacters"><h4>Unicode Braille Characters</h4></a>
-        <p>Braille characters are represented in the Unicode specification as character codes U+2800 to U+28FF. These are intended  for displaying images of the braille characters as graphics on screen or in print, and are generally not used in the embossing process. They are sometimes used in materials about braille written for sighted users. When these characters are copied to the clipboard (from a PDF file about braille music, for example) and pasted into Braille Music Notator, they are automatically translated into braille ASCII and parsed contextually (see <a href="#parseimportedfiles">Parse Imported Files</a>).</p>
+    <a name="usingthekeyboard">
+      <h3>Using the Keyboard</h3>
+    </a>
+    <p>All features in Braille Music Notator are accessible using the computer keyboard, allowing for quicker editing and accessibility to those unable to use the graphic interface.</p>
+    <a name="keyboardscoreentry">
+      <h4>Keyboard Score Entry</h4>
+    </a>
+    <p>Pressing a key on the keyboard without any modifier keys (such as shift, control, etc.) adds a musical symbol to the score according to the current keyboard setting within Braille Music Notator. Both controls arrangements have multiple keyboard layouts. Pressing the tab key will move to the next keyboard layout, and pressing shift-tab will move to the previous keyboard layout. Keyboard layouts will &quot;wrap around&quot; from the last to the first and vice versa.</p>
+    <p>Pressing the shift key while adding a character will insert the character at the current position, moving any remaining characters on that line one cell to the right.</p>
+    <p>For a textual representation of the keyboards, see the <a href="keyboardentry.html">Keyboard Entry Chart</a>.</p>
+    <a name="keyboardeditingcommands">
+      <h4>Keyboard Editing Commands</h4>
+    </a>
+    <p>The following keys can be used to move the cursor or change the selection in the notation area:</p>
+    <ul>
+      <li><strong>arrow keys:</strong> move cursor one cell in the indicated direction</li>
+      <li><strong>shift-arrow keys:</strong> extend the current selection in the indicated direction</li>
+      <li><strong>return:</strong> move the cursor to the beginning of the next line</li>
+      <li><strong>shift-return:</strong> move the cursor to the cell below the leftmost character on the current line</li>
+      <li><strong>home:</strong> move the cursor to the top left corner of the score</li>
+      <li><strong>backspace:</strong> if a single character is selected, the backspace key will remove that character. If a single empty cell is selected, the backspace key will move one space to the left and remove the character in that cell. If multiple cells are selected, the backspace key will remove the characters in those cells.</li>
+      <li><strong>delete:</strong> the delete key removes the highlighted characters and scrolls the remaining characters on that line to the left.</li>
+    </ul>
+    <a name="keyboardshortcuts">
+      <h4>Keyboard Shortcuts</h4>
+    </a>
+    <p>Commands in Braille Music Notator can be executed with keyboard shortcuts. Using a shortcut requires pressing a particular key while holding a modifier key. Due to the differences between web browsers, which modifier key to use will vary. In most cases, the Control key will work for most shortcuts. In some cases, Control key shortcuts are used by the web browser for other functions; in these cases, the Command key on Mac OS or the Windows key in Windows will work instead.</p>
+    <p>Keyboard Shortcuts are listed in the following table:</p>
+    <table width="100%" border="1">
+      <tr>
+        <td>8</td>
+        <td>Toggle Insert Octave Symbols (MIDI Entry only)</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>Toggle Observe Key Signatures (MIDI Entry only)</td>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>Toggle Spell Chords Downward (MIDI Entry only)</td>
+      </tr>
+      <tr>
+        <td>A</td>
+        <td>Select All</td>
+      </tr>
+      <tr>
+        <td>B</td>
+        <td>Toggle Braille Translation</td>
+      </tr>
+      <tr>
+        <td>C</td>
+        <td>Copy</td>
+      </tr>
+      <tr>
+        <td>D</td>
+        <td>Toggle Small Dots</td>
+      </tr>
+      <tr>
+        <td>E</td>
+        <td>Export File</td>
+      </tr>
+      <tr>
+        <td>H</td>
+        <td>Toggle Parse Imported Files</td>
+      </tr>
+      <tr>
+        <td>I</td>
+        <td>Decrease Page Height by 1</td>
+      </tr>
+      <tr>
+        <td>J</td>
+        <td>Decrease Page Width by 1</td>
+      </tr>
+      <tr>
+        <td>K</td>
+        <td>Increase Page Height by 1</td>
+      </tr>
+      <tr>
+        <td>L</td>
+        <td>Increase Page Width by 1</td>
+      </tr>
+      <tr>
+        <td>N</td>
+        <td>New Document</td>
+      </tr>
+      <tr>
+        <td>O</td>
+        <td>Open Document</td>
+      </tr>
+      <tr>
+        <td>P</td>
+        <td>Toggle Page Breaks</td>
+      </tr>
+      <tr>
+        <td>R</td>
+        <td>Cycle Through Symbol Meanings</td>
+      </tr>
+      <tr>
+        <td>S</td>
+        <td>Save File</td>
+      </tr>
+      <tr>
+        <td>T</td>
+        <td>Convert Selected Characters to Text<br>(with Shift key: Convert Selected Characters to Music)</td>
+      </tr>
+      <tr>
+        <td>U</td>
+        <td>Toggle between screen reader and refreshable braille display modes</td>
+      </tr>
+      <tr>
+        <td>V</td>
+        <td>Paste</td>
+      </tr>
+      <tr>
+        <td>X</td>
+        <td>Cut</td>
+      </tr>
+      <tr>
+        <td>Y</td>
+        <td>Redo</td>
+      </tr>
+      <tr>
+        <td>Z</td>
+        <td>Undo</td>
+      </tr>
+      <tr>
+        <td>=</td>
+        <td>Increase Magnification by 10</td>
+      </tr>
+      <tr>
+        <td>-</td>
+        <td>Decrease Magnification by 10</td>
+      </tr>
+      <tr>
+        <td>,</td>
+        <td>Toggle Use Word Wrap</td>
+      </tr>
+      <tr>
+        <td>?</td>
+        <td>Help</td>
+      </tr>
+      <tr>
+        <td>`</td>
+        <td>Rotate Through Control Arrangements</td>
+      </tr>
+      <tr>
+        <td>\</td>
+        <td>Add Character By Name</td>
+      </tr>
+      <tr>
+        <td>Up Arrow</td>
+        <td>Delete Row</td>
+      </tr>
+      <tr>
+        <td>Down Arrow</td>
+        <td>Insert Row</td>
+      </tr>
+    </table>
 
-        <a name="braillemusicviewer"><h3>Braille Music Viewer</h3></a>
-        <p>The functionality of Braille Music Notator is available in a read-only format for inclusion on web pages who wish to include interactive excerpts of scores in braille music format. Visit the <a href="http://tobyrush.com/braillemusic/viewer/index.html">Braille Music Viewer page</a> for information on how to include braille music in your own web pages.</p>
-        
-        <a name="braillemusicfiletype"><h3>Braille Music File Type</h3></a>
-        <p>Selecting Save File from the File Tab in Braille Music Notator allows you to save your score as a Braille Music file, which uses the extension &quot;.brm&quot;. Unlike the standard braille file format (.brf), a Braille Music file retains the contextual musical definitions of braille symbols used in the score.</p>
-        <p>While this file type was developed for use with Braille Music Notator, the file type definition available for other developers to use, and is designed to potentially be compatible with MusicXML. For more information about the Braille Music File Type, see the <a href="../brm/index.html">Braille Music File Type</a> page.</p>
+    <a name="workingwithbraille">
+      <h3>Working with Braille</h3>
+    </a>
+    <p>One of the primary goals of Braille Music Notator is to allow sighted users to create braille music scores without requiring fluency in braille. However, a basic understanding of braille and how it is used in computer files is very helpful.</p>
+    <a name="aboutbraille">
+      <h4>About Braille</h4>
+    </a>
+    <p>Braille is a system of recording information using raised dots, developed in 1824 by French educator Louis Braille. While braille is traditionally rendered by embossing heavier-weight paper, the system can be used with any materials. Braille characters (sometimes called cells) are created by arranging dots in a small 2x3 grid. Variants of the system have been developed for many different languages. English braille consists of two standardized subsystems: Grade 1, which uses a simple correlation of braille characters to letters, numbers and punctuation; and Grade 2, which features a large number of contractions and abbreviations to conserve space.</p>
+    <p>While braille shares many one-to-one correlations with the Latin alphabet, there are some important differences between the systems, even when using Grade 1 braille. For example, while the Latin alphabet uses different symbols for upper- and lowercase letters, braille instead uses a prefix character to indicate that the next character should be capitalized. Additional differences occur with punctuation.</p>
+    <p>Braille documents are generally created using a braille embosser; early embossers worked as typewriters, while modern embossers connect to computers. Braille can also be dynamically generated using a refreshable braille display, which can be connected to a computer as an output device. Braille readers often use notetakers, devices analagous to laptop computers but which feature a refreshable braille display instead of a screen, and which sometimes use a braille keypad in lieu of a traditional keyboard. </p>
+    <a name="brailleascii">
+      <h4>Braille ASCII</h4>
+    </a>
+    <p>The standard method for storing English braille documents digitally is braille ASCII. Like traditional ASCII, braille ASCII encodes each character with a numeric code from 1 to 127. Many of these characters — specifically, the letters A–Z — mirror their traditional ASCII counterparts. Because of this, when braille ASCII is translated as regular ASCII, the meaning of the text can often be inferred, even when Grade 2 contractions are used.</p>
+    <p>Because modern embossers connect to computers using a text-based printer interface — much like an older dot-matrix printer — they operate by receiving a text file from the computer. This encoding for this text file should be braille ASCII. Sending a traditional ASCII file will generate braille characters, but due to the differences between braille ASCII and traditional ASCII the result will not be legible braille.</p>
+    <p>The standard format for saving braille documents on a computer is identical to a standard text file, but uses the extension &quot;.brf&quot; to indicate that the contents are encoded using braille ASCII.</p>
+    <a name="braillemusiccharacters">
+      <h4>Braille Music Characters</h4>
+    </a>
+    <p>Braille music notation was first developed by Louis Braille himself, who was a talented organist. The system uses the same characters as literary braille, but assigns different meanings to them for use in a musical context. Because of the number of different musical symbols, a single braille character might be given a number of different meanings depending on context. Some musical symbols are encoded using sequences of two or three braille characters.</p>
+    <p>Braille Music Notator uses a system of storing symbols that preserves the musical meaning of a given braille character, but which allows the user to cycle through these meanings if necessary. To change to a different musical symbol for a particular braille character, place the cursor on the character in the notation area and use the Control-R keyboard shortcut. Repeat to cycle through all the meanings of the braille character.</p>
+    <p>Saving the file (see <a href="#savefile">Save File</a>) preserves all musical meanings for the braille characters in the score. Exporting the file (see <a href="#exportfile">Export File</a>) creates a braille ASCII file which is suitable for sending to a braille embosser but which does not preserve musical meanings.</p>
+    <p>If a standard braille ASCII file (such as one exported from Braille Music Notator, or created by another braille music utility) is imported into Braille Music Notator, the utility will attempt to determine the appropriate meanings of each character based on its context (see <a href="#parseimportedfiles">Parse Imported Files</a>). These meanings will be preserved in saved files. In cases where Braille Music Notator is unable to correctly determine the proper meaning, the Control-R keyboard shortcut can be used to cycle through possible interpretations for each character.</p>
+    <a name="literarybraille">
+      <h4>Literary Braille</h4>
+    </a>
+    <p>To enter literary braille characters in Braille Music Notator, select the literary braille keyboard by clicking the &quot;Aa&quot; button in the control area. When this keyboard is selected, any characters pasted into the notation area from the clipboard (using the Control-V keyboard shortcut) is interpreted as literary braille.</p>
+    <p>Braille Music Notator is not intended for extensive textual input; to add large blocks of text, it is easier to copy text from a program or utility designed for this purpose, select the literary braille keyboard in the control area, and paste it into the notation area.</p>
+    <a name="unicodebraillecharacters">
+      <h4>Unicode Braille Characters</h4>
+    </a>
+    <p>Braille characters are represented in the Unicode specification as character codes U+2800 to U+28FF. These are intended for displaying images of the braille characters as graphics on screen or in print, and are generally not used in the embossing process. They are sometimes used in materials about braille written for sighted users. When these characters are copied to the clipboard (from a PDF file about braille music, for example) and pasted into Braille Music Notator, they are automatically translated into braille ASCII and parsed contextually (see <a href="#parseimportedfiles">Parse Imported Files</a>).</p>
 
-        <a name="development"><h3>Development</h3></a>
-        <p>Braille Music Notator is open source software. If you would like to contribute to the development of Braille Music Notator, visit the <a href="http://github.com/tobyrush/braillemusicnotator/">code respository</a>. Recent development versions of the software are available there for download.</p>
+    <a name="braillemusicviewer">
+      <h3>Braille Music Viewer</h3>
+    </a>
+    <p>The functionality of Braille Music Notator is available in a read-only format for inclusion on web pages who wish to include interactive excerpts of scores in braille music format. Visit the <a href="http://tobyrush.com/braillemusic/viewer/index.html">Braille Music Viewer page</a> for information on how to include braille music in your own web pages.</p>
 
-        <a name="aboutthedeveloper"><h3>About the Developer</h3></a>
-        <p>Braille Music Notator is designed and maintained by Dr. Toby W. Rush, associate professor of music theory and technology at the <a href="http://go.udayton.edu/music">University of Dayton</a> in <a href="http://en.wikipedia.org/wiki/Dayton,_Ohio">Dayton, Ohio</a>. For more information about Dr. Rush, including his popular theory reference <a href="http://tobyrush.com/theorypages/index.html">Music Theory for Musicians and Normal People</a>, visit <a href="http://tobyrush.com">tobyrush.com</a>.</p>
-        <p>Dr. Rush would like to thank Ryan Betts and Kaiti Shelton for their invaluable assistance with this project.</p>
-        <p>Any and all feedback about this project is welcome: contact Dr. Rush by email <a href="mailto:toby@tobyrush.com">here</a>.</p>
+    <a name="braillemusicfiletype">
+      <h3>Braille Music File Type</h3>
+    </a>
+    <p>Selecting Save File from the File Tab in Braille Music Notator allows you to save your score as a Braille Music file, which uses the extension &quot;.brm&quot;. Unlike the standard braille file format (.brf), a Braille Music file retains the contextual musical definitions of braille symbols used in the score.</p>
+    <p>While this file type was developed for use with Braille Music Notator, the file type definition is available for other developers to use, and is designed to potentially be compatible with MusicXML. For more information about the Braille Music File Type, see the <a href="../brm/index.html">Braille Music File Type</a> page.</p>
 
-<a name="reference"><h3>Reference</h3></a>
-<h4>Keyboard Entry Charts</h4>
-<p>Alternate versions of the keyboard diagrams in the control area of Braille Music Notator are available from the <a href="keyboardentry.html">Keyboard Entry</a> page.</p>
-<p>&nbsp;</p>
-</div>
+    <a name="development">
+      <h3>Development</h3>
+    </a>
+    <p>Braille Music Notator is open source software. If you would like to contribute to the development of Braille Music Notator, visit the <a href="http://github.com/tobyrush/braillemusicnotator/">code respository</a>. Recent development versions of the software are available there for download.</p>
+
+    <a name="aboutthedeveloper">
+      <h3>About the Developer</h3>
+    </a>
+    <p>Braille Music Notator is designed and maintained by Dr. Toby W. Rush, associate professor of music theory and technology at the <a href="http://go.udayton.edu/music">University of Dayton</a> in <a href="http://en.wikipedia.org/wiki/Dayton,_Ohio">Dayton, Ohio</a>. For more information about Dr. Rush, including his popular theory reference <a href="http://tobyrush.com/theorypages/index.html">Music Theory for Musicians and Normal People</a>, visit <a href="http://tobyrush.com">tobyrush.com</a>.</p>
+    <p>Dr. Rush would like to thank Ryan Betts and Kaiti Shelton for their invaluable assistance with this project.</p>
+    <p>Any and all feedback about this project is welcome: contact Dr. Rush by email <a href="mailto:toby@tobyrush.com">here</a>.</p>
+
+    <a name="reference">
+      <h3>Reference</h3>
+    </a>
+    <h4>Keyboard Entry Charts</h4>
+    <p>Alternate versions of the keyboard diagrams in the control area of Braille Music Notator are available from the <a href="keyboardentry.html">Keyboard Entry</a> page.</p>
+    <p>&nbsp;</p>
+  </div>
 </body>
+
 </html>
