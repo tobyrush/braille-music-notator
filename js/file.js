@@ -88,13 +88,14 @@ function doFileLoad(e) {
 function checkFileType(fileData) {
     var parser = new DOMParser();
     var doc = parser.parseFromString(fileData, "application/xml");
-    if (doc.getElementsByTagName("score-partwise").length || doc.getElementsByTagName("score-timewise").length) {
-        // musicXML file detected
-        dropzone = false;
-        sendToBrailleMUSE(fileData);
-        fileLoading = true;
-        drawNotation();
-	} else if (doc.getElementsByTagName("score-braille").length) {
+    // if (doc.getElementsByTagName("score-partwise").length || doc.getElementsByTagName("score-timewise").length) {
+    //     // musicXML file detected
+    //     dropzone = false;
+    //     sendToBrailleMUSE(fileData);
+    //     fileLoading = true;
+    //     drawNotation();
+	// } else if (doc.getElementsByTagName("score-braille").length) {
+	if (doc.getElementsByTagName("score-braille").length) {
 		openBRMFile(fileData);
     } else {
         importData(fileData);

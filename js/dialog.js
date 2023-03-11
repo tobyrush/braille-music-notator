@@ -46,10 +46,10 @@ function showFileDialog() {
             class: 'dialogButtonDescription'
         }));
 
-        var importFileText = fileDialog.appendChild(document.createTag('div',kImportFileText,{
-            class: 'dialogText',
-            id: 'importFileText',
-        }));
+        // var importFileText = fileDialog.appendChild(document.createTag('div',kImportFileText,{
+        //     class: 'dialogText',
+        //     id: 'importFileText',
+        // }));
 
         var saveFileButton = fileDialog.appendChild(document.createTag('div','',{
             class: 'dialogButton',
