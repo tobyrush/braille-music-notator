@@ -1,14 +1,11 @@
 // Braille Music Viewer by Toby W. Rush. For information and usage, visit <http://tobyrush.com/braillemusic/viewer/>.
 /* global document, window, navigator: true */
 
-var versionString = "0.9.4b";
+var versionString = "0.9.3b";
 var brailleDots = [0,46,16,60,43,41,47,4,55,62,33,44,32,36,40,12,52,2,6,18,50,34,22,54,38,20,49,48,35,63,28,57,8,1,3,9,25,17,11,27,19,10,26,5,7,13,29,21,15,31,23,14,30,37,39,58,45,61,53,42,51,59,24,56];
-
-var brailleUnicode=[240,286,256,300,283,281,287,244,295,302,273,284,272,276,280,252,292,242,246,258,290,274,262,294,278,260,289,288,275,303,268,297,248,241,243,249,265,257,251,267,259,250,266,245,247,253,269,261,255,271,263,254,270,277,279,298,285,301,293,282,291,299,264,296] // starts at 32
 
 function initializeBMViewers(fontURL = "https://tobyrush.com/braillemusic/notator/cellfonts/en/classic.xml") {
 	var u;
-	convertASCIIBraille();
 	if (fontURL.match(/\:\/\//g).length) {
 		u = new URL(fontURL,document.location);
 	} else {
@@ -57,39 +54,19 @@ class bmviewer {
 		this.canvas.addEventListener("mousedown",this.doNotationMouseDown,false);
 		this.canvas.addEventListener("mousemove",this.doNotationMouseMove,false);
 		this.canvas.addEventListener("mousewheel",this.doNotationMouseWheel,false);
-		this.canvas.addEventListener("mouseenter",this.doNotationMouseEnter,false);
-		this.canvas.addEventListener("mouseleave",this.doNotationMouseLeave,false);
 		this.canvas.addEventListener("DOMMouseScroll",this.doNotationMouseWheel,false); // because Firefox doesn't do mousewheel
-		this.object.ownerDocument.defaultView.addEventListener("resize",this.doNotationResize.bind(this),false);
 		this.ctx = this.canvas.getContext('2d');
 		this.mouseIsOverTranslationToggle = false;
 		this.score = [[]];
 		this.hScroll = 0;
 		this.vScroll = 0;
 		this.readParams(params);
-		this.updateSizes();
-	}
-	
-	updateSizes() {
-		if (this.object.width) {
-			this.canvas.width = this.object.width;
-		} else {
-			this.canvas.style.width = "100%";
-		}
-		if (this.object.height) {
-			this.canvas.height = this.object.height;
-		} else {
-			this.canvas.style.height = "100%";
-		}
+		this.canvas.style.width = "100%";
+		this.canvas.style.height = "100%";
 		this.notationWidth = this.canvas.clientWidth;
 		this.notationHeight = this.canvas.clientHeight;
 		this.notationCellWidth = this.notationWidth/this.gridWidth;
 		this.notationCellHeight = this.notationHeight/this.gridHeight;
-	}
-	
-	doNotationResize(e) {
-		this.updateSizes();
-		this.drawNotation();
 	}
 	
 	doNotationMouseWheel(e) {
@@ -112,14 +89,6 @@ class bmviewer {
 
 			v.vScroll = Math.max(0,v.vScroll + deltaY);
 			v.hScroll = Math.max(0,v.hScroll + deltaX);
-			
-			if (v.scoreWidth) {
-				v.hScroll = Math.min((v.scoreWidth*v.gridWidth)-v.notationWidth,v.hScroll);
-			}
-
-			if (v.scoreHeight) {
-				v.vScroll = Math.min((v.scoreHeight*v.gridHeight)-v.notationHeight,v.vScroll);
-			}
 
 			e.preventDefault();
 
@@ -136,13 +105,11 @@ class bmviewer {
 		var localX = e.clientX-rect.left;
 		var localY = e.clientY-rect.top;
 		var v = this.wrapper;
-		
-		v.showTranslationButton = true;
 
-		if (v.notationWidth>40) {
-			v.mouseIsOverTranslationToggle = (localX>=v.notationWidth-30 && localX<=v.notationWidth-10 && localY>=v.notationHeight-30 && localY<=v.notationHeight-10);
+		if (localX>=v.notationWidth-50 && localX<=v.notationWidth-10 && localY>=v.notationHeight-30 && localY<=v.notationHeight-10) {
+			v.mouseIsOverTranslationToggle = true;
 		} else {
-			v.mouseIsOverTranslationToggle = (localX>=(v.notationWidth/2)-10 && (v.notationWidth/2)+10 && localY>=v.notationHeight-30 && localY<=v.notationHeight-10);
+			v.mouseIsOverTranslationToggle = false;
 		}
 
 		v.drawNotation();
@@ -153,28 +120,11 @@ class bmviewer {
 		var localX = e.clientX-rect.left;
 		var localY = e.clientY-rect.top;
 		var v = this.wrapper;
-		
-		if (v.notationWidth>40) {
-			if (localX>=v.notationWidth-30 && localX<=v.notationWidth-10 && localY>=v.notationHeight-30 && localY<=v.notationHeight-10) {
-				v.translateBraille = !v.translateBraille;
-			}
-		} else {
-			if (localX>=(v.notationWidth/2)-10 && (v.notationWidth/2)+10 && localY>=v.notationHeight-30 && localY<=v.notationHeight-10) {
-				v.translateBraille = !v.translateBraille;
-			}
+
+		if (localX>=v.notationWidth-50 && localX<=v.notationWidth-10 && localY>=v.notationHeight-30 && localY<=v.notationHeight-10) {
+			v.translateBraille = !v.translateBraille;
 		}
-		
 		v.drawNotation();
-	}
-	
-	doNotationMouseEnter(e) {
-		this.wrapper.showTranslationButton = true;
-		this.wrapper.drawNotation();
-	}
-	
-	doNotationMouseLeave(e) {
-		this.wrapper.showTranslationButton = false;
-		this.wrapper.drawNotation();
 	}
 	
 	readParams(p) {
@@ -197,16 +147,13 @@ class bmviewer {
 			alertNode.setAttribute("id","bmviewer");
 			alertNode.setAttribute("aria-details",objectID);
 			alertNode.style.position = "absolute";
-			alertNode.style.left = "-999999px";
+			alertNode.style.left = "-999999";
 			this.object.parentElement.insertBefore(alertNode,this.object);
 			this.brailleDisplayElement = alertNode;
 		}
 		
 		this.scrollable = p.scrollable;
-		this.scoreWidth = p.scoreWidth;
-		this.scoreHeight = p.scoreHeight;
-		
-		this.showSmallDots = p.drawSmallDots;
+		this.drawSmallDots = p.drawSmallDots;
 		var h = 60;
 		if (p.scoreSize) {
 			h=p.scoreSize*1;
@@ -219,7 +166,7 @@ class bmviewer {
 		var d = "";
 		if (this.score.length) {
 			for (var y=0; y<this.score.length; y++) {
-				if (this.score[y] && this.score[y].length) {
+				if (this.score[y].length) {
 					for (var x=0; x<this.score[y].length; x++) {
 						d = d + encodeForHTML(String.fromCharCode(this.getScore(x,y) % 100));
 					}
@@ -362,52 +309,37 @@ class bmviewer {
 		}
 		
 		// drawTranslationToggle
-		
-		if (t.showTranslationButton) {
-			let c = nw-20;
-			if (t.translateBraille) {
-				ctx.fillStyle = '#fff';
-				ctx.strokeStyle = (t.mouseIsOverTranslationToggle ? '#000' : '#888');
-				if (nw>40) {
-					roundRect(ctx,nw-30,nh-30,20,20,4,true,true);
-				} else {
-					roundRect(ctx,(nw/2)-10,nh-30,20,20,4,true,true);
-					c = nw/2;
-				}
-				ctx.fillStyle = (t.mouseIsOverTranslationToggle ? '#000' : '#888');
-				ctx.beginPath();
-				ctx.arc(c-2.5,nh-25,1.5,0,2*Math.PI,false);
-				ctx.fill();
-				ctx.closePath();
-				ctx.beginPath();
-				ctx.arc(c+2.5,nh-25,1.5,0,2*Math.PI,false);
-				ctx.fill();
-				ctx.closePath();
-				ctx.beginPath();
-				ctx.arc(c+2.5,nh-20,1.5,0,2*Math.PI,false);
-				ctx.fill();
-				ctx.closePath();
-				ctx.beginPath();
-				ctx.arc(c+2.5,nh-15,1.5,0,2*Math.PI,false);
-				ctx.fill();
-				ctx.closePath();
-			} else {
-				ctx.fillStyle = (t.mouseIsOverTranslationToggle ? '#f00' : '#f88');
-				ctx.strokeStyle = '#fff';
-				if (nw>40) {
-					roundRect(ctx,nw-30,nh-30,20,20,4,true,false);
-				} else {
-					roundRect(ctx,(nw/2)-10,nh-30,20,20,4,true,false);
-					c = nw/2;
-				}
-				ctx.fillStyle = '#fff';
-				ctx.font="normal 14px Bravura";
-				ctx.textAlign="center";
-				ctx.textBaseline="alphabetic";
-				ctx.fillText("\ue1d7",c,nh-16);
-			}
-			
+		var translationButtonColor = "#999";
+		if (t.mouseIsOverTranslationToggle) {
+			translationButtonColor = "#000";
 		}
+		ctx.strokeStyle=translationButtonColor;
+		if (t.translateBraille) { ctx.fillStyle="#F00"; } else { ctx.fillStyle="#FFF"; }
+		roundLeftRect(t.ctx,nw-50,nh-30,20,20,4,true,true);
+		if (t.translateBraille) { ctx.fillStyle="#FFF"; } else { ctx.fillStyle=translationButtonColor; }
+		ctx.font="normal 14px Bravura";
+		ctx.textAlign="center";
+		ctx.textBaseline="middle";
+		ctx.fillText("\ue1d5",nw-40,nh-16);
+		if (t.translateBraille) { ctx.fillStyle="#FFF"; } else { ctx.fillStyle="#000"; }
+		roundRightRect(t.ctx,nw-30,nh-30,20,20,4,true,true);
+		if (t.translateBraille) { ctx.fillStyle=translationButtonColor; } else { ctx.fillStyle="#FFF"; }
+		ctx.beginPath();
+		ctx.arc(nw-22.5,nh-25,1.5,0,2*Math.PI,false);
+		ctx.fill();
+		ctx.closePath();
+		ctx.beginPath();
+		ctx.arc(nw-17.5,nh-25,1.5,0,2*Math.PI,false);
+		ctx.fill();
+		ctx.closePath();
+		ctx.beginPath();
+		ctx.arc(nw-17.5,nh-20,1.5,0,2*Math.PI,false);
+		ctx.fill();
+		ctx.closePath();
+		ctx.beginPath();
+		ctx.arc(nw-17.5,nh-15,1.5,0,2*Math.PI,false);
+		ctx.fill();
+		ctx.closePath();
 		
 		// draw border
 		ctx.beginPath();
@@ -507,7 +439,7 @@ class cellFontModule {
 			var currentX = x+(gw*Math.max(startCell,0));
 			while (c.length) {
 				var sym = this.findSymbol(c,newWord);
-				if (this.myViewer.translateBraille && sym.length && sym[0].hasIcon) {
+				if (this.myViewer.translateBraille && sym.length) {
 					sym[0].draw(currentX,y,ctx,gw);
 					c=c.slice(sym[0].length());
 					currentX += gw * sym[0].length();
@@ -585,7 +517,7 @@ class cellFontModule {
 			if (chars.slice(0, len).equals(obj.codes.slice(0, len)) &&
 				(!obj.discrete ||
 				 (newWord &&
-				  (cellValIsEmpty(chars[len]) || obj.root.findSymbol(chars.slice(len,chars.length),false)[0].wordModifier)
+				  (cellValIsEmpty(chars[len]) || currentCellFont.findSymbol(chars.slice(len,chars.length),false)[0].wordModifier)
 				 )
 				)
 			   ) {
@@ -623,7 +555,6 @@ class cell {
 				this.graphics.push(new graphic(node,this.root));
 			}
 		}
-		this.hasIcon = (this.graphics.length>1);
 	}
 	length() {
 		return this.codes.length;
@@ -1161,13 +1092,17 @@ function readParams(o) {
 	return r;
 }
 
-function roundRect(ctx, x, y, width, height, radius=5, fill=false, stroke=true) {
+function roundLeftRect(ctx, x, y, width, height, radius, fill, stroke) {
+	 if (typeof stroke == "undefined" ) {
+		stroke = true;
+	}
+	if (typeof radius === "undefined") {
+		radius = 5;
+	}
 	ctx.beginPath();
 	ctx.moveTo(x + radius, y);
-	ctx.lineTo(x + width - radius, y);
-	ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
-	ctx.lineTo(x + width, y + height - radius);
-	ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+	ctx.lineTo(x + width, y);
+	ctx.lineTo(x + width, y + height);
 	ctx.lineTo(x + radius, y + height);
 	ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
 	ctx.lineTo(x, y + radius);
@@ -1181,26 +1116,30 @@ function roundRect(ctx, x, y, width, height, radius=5, fill=false, stroke=true) 
 	}
 }
 
-function convertASCIIBraille() {
-	if (document.querySelector('.braille')) {
-		var i,j,r,s,t = document.querySelectorAll('.braille');
-		for (i=0; i<t.length; i++) {
-			r = "";
-			s = t[i].textContent.split('');
-			for (j=0; j<s.length; j++) {
-				r = r + "&#10" + brailleUnicode[s[j].charCodeAt(0)-32] + ";";
-			}
-			t[i].innerHTML = r;
-		}
-		document.querySelector('.braille').classList.toggle("braille");
+function roundRightRect(ctx, x, y, width, height, radius, fill, stroke) {
+	if (typeof stroke == "undefined" ) {
+		stroke = true;
+	}
+	if (typeof radius === "undefined") {
+		radius = 5;
+	}
+	ctx.beginPath();
+	ctx.moveTo(x, y);
+	ctx.lineTo(x + width - radius, y);
+	ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+	ctx.lineTo(x + width, y + height - radius);
+	ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+	ctx.lineTo(x, y + height);
+	ctx.lineTo(x, y);
+	ctx.closePath();
+	if (stroke) {
+		ctx.stroke();
+	}
+	if (fill) {
+		ctx.fill();
 	}
 }
 
-function decodeHtml(html) {
-	var txt = document.createElement("textarea");
-	txt.innerHTML = html;
-	return txt.value;
-}
 Array.prototype.equals = function (array) {
 	// if the other array is a falsy value, return
 	if (!array)
