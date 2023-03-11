@@ -1305,8 +1305,8 @@
             <graphic type="text" color="#FFF" size="50" align="center" font="Bravura" top="60" left="48" content="&#xe048;" />
             <graphic type="text" color="#777" left="15" top="80" size="20" content="Y" />
             <help page="repeatSymbols" />
-            <character code="260" />
-            <character code="276" />
+            <character code="143" />
+            <character code="1176" />
         </control>
         <control keycode="KeyU" top="31" left="148" width="18" height="18" label="Begin marked section">
             <graphic type="roundRect" top="0" left="0" height="95" width="95" radius="20" fill="true" stroke="false" color="#000" />
