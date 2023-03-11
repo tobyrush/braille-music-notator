@@ -538,10 +538,12 @@ function updateEnabledFlags() {
             ms.removeAttribute('disabled');
             document.querySelector('#insertOctaveSymbolsCheckbox').removeAttribute('disabled');
             document.querySelector('#observeKeySignaturesCheckbox').removeAttribute('disabled');
+            document.querySelector('#spellChordsDownwardCheckbox').removeAttribute('disabled');
         } else {
             ms.setAttribute('disabled','disabled');
             document.querySelector('#insertOctaveSymbolsCheckbox').setAttribute('disabled','disabled');
             document.querySelector('#observeKeySignaturesCheckbox').setAttribute('disabled','disabled');
+            document.querySelector('#spellChordsDownwardCheckbox').setAttribute('disabled','disabled');
         }
     }
 }
