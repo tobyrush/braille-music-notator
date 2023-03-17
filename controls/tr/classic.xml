@@ -2460,7 +2460,7 @@
         <graphic type="note" left="15" top="42" height="13" note="noteQuarterUp" position="3" dots="1" />
         <graphic type="accidental" left="15" top="42" height="13" accidental="1" position="3" />
         <graphic type="text" color="#000" size="13" baseline="middle" top="52" left="25" font="Bravura" content="&#xeb62;" />
-        <graphic type="braille" left="31" top="38" height="20" cells="46,60,58,34,37,93,39" />
+        <graphic type="braille" left="31" top="38" height="20" cells="60,46,58,37,34,93,39" />
     </help>
     <help name="intervals" top="10" left="300" width="200" height="100">
         <graphic type="text" style="bold" color="#000" size="10" top="10" left="0" content="Interval Symbols" />
