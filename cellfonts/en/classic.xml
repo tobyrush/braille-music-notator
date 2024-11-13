@@ -3604,6 +3604,48 @@
         <graphic type="path" coords="200,57;400,52.5;400,47.5;200,52" color="#fff" strokeColor="#fff" />
         <graphic type="path" coords="200,67;400,52.5;400,47.5;200,62" color="#fff" strokeColor="#fff" />
     </cell>
+    <cell name="A five-hundred-twelfth note" char="noteFiveHundredTwelfthA">
+        <code value="291" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="40" left="80" top="80" content="&#xe1e3;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="A" />
+    </cell>
+    <cell name="B five-hundred-twelfth note" char="noteFiveHundredTwelfthB">
+        <code value="87" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="40" left="80" top="80" content="&#xe1e3;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="B" />
+    </cell>
+    <cell name="C five-hundred-twelfth note" char="noteFiveHundredTwelfthC">
+        <code value="263" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="40" left="80" top="80" content="&#xe1e3;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="C" />
+    </cell>
+    <cell name="D five-hundred-twelfth note" char="noteFiveHundredTwelfthD">
+        <code value="258" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="40" left="80" top="80" content="&#xe1e3;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="D" />
+    </cell>
+    <cell name="E five-hundred-twelfth note" char="noteFiveHundredTwelfthE">
+        <code value="236" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="40" left="80" top="80" content="&#xe1e3;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="E" />
+    </cell>
+    <cell name="F five-hundred-twelfth note" char="noteFiveHundredTwelfthF">
+        <code value="293" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="40" left="80" top="80" content="&#xe1e3;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="F" />
+    </cell>
+    <cell name="G five-hundred-twelfth note" char="noteFiveHundredTwelfthG">
+        <code value="292" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="40" left="80" top="80" content="&#xe1e3;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="G" />
+    </cell>
     <cell name="A half note" char="noteHalfA">
         <code value="83" />
         <graphic type="background" color="#f00" />
@@ -3747,6 +3789,90 @@
         <graphic type="text" color="#fff" align="center" baseline="middle" size="30" left="100" top="43" content="&#xe1f0;&#xe1f7; &#xe1f2;" />
         <graphic type="text" color="#fff" align="center" baseline="middle" size="30" left="100" top="57" content="&#xe1d6;  " />
     </cell>
+    <cell name="A longa note" char="noteLongaA">
+        <code value="483" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="20" content="&#xe95d;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="85" font="sans-serif" content="A" />
+    </cell>
+    <cell name="B longa note" char="noteLongaB">
+        <code value="484" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="20" content="&#xe95d;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="85" font="sans-serif" content="B" />
+    </cell>
+    <cell name="C longa note" char="noteLongaC">
+        <code value="478" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="20" content="&#xe95d;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="85" font="sans-serif" content="C" />
+    </cell>
+    <cell name="D longa note" char="noteLongaD">
+        <code value="479" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="20" content="&#xe95d;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="85" font="sans-serif" content="D" />
+    </cell>
+    <cell name="E longa note" char="noteLongaE">
+        <code value="480" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="20" content="&#xe95d;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="85" font="sans-serif" content="E" />
+    </cell>
+    <cell name="F longa note" char="noteLongaF">
+        <code value="481" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="20" content="&#xe95d;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="85" font="sans-serif" content="F" />
+    </cell>
+    <cell name="G longa note" char="noteLongaG">
+        <code value="482" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="20" content="&#xe95d;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="85" font="sans-serif" content="G" />
+    </cell>
+    <cell name="A maxima note" char="noteMaximaA">
+        <code value="333" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="20" content="&#xe95c;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="85" font="sans-serif" content="A" />
+    </cell>
+    <cell name="B maxima note" char="noteMaximaB">
+        <code value="341" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="20" content="&#xe95c;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="85" font="sans-serif" content="B" />
+    </cell>
+    <cell name="C maxima note" char="noteMaximaC">
+        <code value="389" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="20" content="&#xe95c;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="85" font="sans-serif" content="C" />
+    </cell>
+    <cell name="D maxima note" char="noteMaximaD">
+        <code value="390" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="20" content="&#xe95c;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="85" font="sans-serif" content="D" />
+    </cell>
+    <cell name="E maxima note" char="noteMaximaE">
+        <code value="338" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="20" content="&#xe95c;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="85" font="sans-serif" content="E" />
+    </cell>
+    <cell name="F maxima note" char="noteMaximaF">
+        <code value="361" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="20" content="&#xe95c;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="85" font="sans-serif" content="F" />
+    </cell>
+    <cell name="G maxima note" char="noteMaximaG">
+        <code value="340" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="50" left="80" top="20" content="&#xe95c;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="85" font="sans-serif" content="G" />
+    </cell>
     <cell name="A one-hundred-twenty-eighth note" char="noteOneHundredTwentyEighthA">
         <code value="373" />
         <graphic type="background" color="#f00" />
@@ -3787,6 +3913,48 @@
         <code value="372" />
         <graphic type="background" color="#f00" />
         <graphic type="text" color="#fff" align="right" size="50" left="80" top="80" content="&#xe1df;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="G" />
+    </cell>
+    <cell name="A one-thousand-twenty-fourth note" char="noteOneThousandTwentyFourthA">
+        <code value="383" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="37" left="80" top="80" content="&#xe1e5;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="A" />
+    </cell>
+    <cell name="B one-thousand-twenty-fourth note" char="noteOneThousandTwentyFourthB">
+        <code value="384" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="37" left="80" top="80" content="&#xe1e5;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="B" />
+    </cell>
+    <cell name="C one-thousand-twenty-fourth note" char="noteOneThousandTwentyFourthC">
+        <code value="378" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="37" left="80" top="80" content="&#xe1e5;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="C" />
+    </cell>
+    <cell name="D one-thousand-twenty-fourth note" char="noteOneThousandTwentyFourthD">
+        <code value="379" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="37" left="80" top="80" content="&#xe1e5;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="D" />
+    </cell>
+    <cell name="E one-thousand-twenty-fourth note" char="noteOneThousandTwentyFourthE">
+        <code value="380" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="37" left="80" top="80" content="&#xe1e5;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="E" />
+    </cell>
+    <cell name="F one-thousand-twenty-fourth note" char="noteOneThousandTwentyFourthF">
+        <code value="381" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="37" left="80" top="80" content="&#xe1e5;" />
+        <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="F" />
+    </cell>
+    <cell name="G one-thousand-twenty-fourth note" char="noteOneThousandTwentyFourthG">
+        <code value="382" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="right" size="37" left="80" top="80" content="&#xe1e5;" />
         <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="G" />
     </cell>
     <cell name="prefer larger note values" char="notePreferLargerValues">
@@ -4704,10 +4872,35 @@
         <graphic type="background" color="#f00" />
         <graphic type="text" color="#fff" align="center" size="60" left="50" top="50" content="&#xe4e6;" />
     </cell>
+    <cell name="five-hundred-twelfth rest" char="restFiveHundredTwelfth">
+        <code value="286" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="center" size="42" left="50" top="50" content="&#xe4ec;" />
+    </cell>
     <cell name="half rest" char="restHalf">
         <code value="85" />
         <graphic type="background" color="#f00" />
         <graphic type="text" color="#fff" align="center" size="60" left="50" top="50" content="&#xe4f5;" />
+    </cell>
+    <cell name="longa rest" char="restLonga">
+        <code value="77" />
+        <code value="477" />
+        <code value="477" />
+        <code value="477" />
+        <graphic type="background" color="#f00" cells="4"/>
+        <graphic type="text" color="#fff" align="center" size="60" left="200" top="50" content="&#xe4e1;" />
+    </cell>
+    <cell name="maxima rest" char="restMaxima">
+        <code value="77" />
+        <code value="477" />
+        <code value="477" />
+        <code value="477" />
+        <code value="477" />
+        <code value="477" />
+        <code value="477" />
+        <code value="477" />
+        <graphic type="background" color="#f00" cells="8"/>
+        <graphic type="text" color="#fff" align="center" size="60" left="400" top="50" content="&#xe4e0;" />
     </cell>
     <cell name="left multimeasure rest" char="restMultimeasureLeft">
         <code value="735" />
@@ -4723,6 +4916,11 @@
         <code value="188" />
         <graphic type="background" color="#f00" />
         <graphic type="text" color="#fff" align="center" size="50" left="50" top="50" content="&#xe4ea;" />
+    </cell>
+    <cell name="one-thousand-twenty-fourth rest" char="restOneThousandTwentyFourth">
+        <code value="285" />
+        <graphic type="background" color="#f00" />
+        <graphic type="text" color="#fff" align="center" size="35" left="50" top="50" content="&#xe4ed;" />
     </cell>
     <cell name="quarter rest" char="restQuarter">
         <code value="86" />
