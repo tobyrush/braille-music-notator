@@ -590,6 +590,13 @@
 	noteFeatheredConstant|
 	noteFeatheredEnd|
 	noteFeatheredRitardando|
+	noteFiveHundredTwelfthA|
+	noteFiveHundredTwelfthB|
+	noteFiveHundredTwelfthC|
+	noteFiveHundredTwelfthD|
+	noteFiveHundredTwelfthE|
+	noteFiveHundredTwelfthF|
+	noteFiveHundredTwelfthG|
 	noteHalfA|
 	noteHalfB|
 	noteHalfC|
@@ -612,6 +619,20 @@
 	noteInAccord|
 	noteInAccordMeasureDivision|
 	noteInAccordPartialMeasure|
+	noteLongaA|
+	noteLongaB|
+	noteLongaC|
+	noteLongaD|
+	noteLongaE|
+	noteLongaF|
+	noteLongaG|
+	noteMaximaA|
+	noteMaximaB|
+	noteMaximaC|
+	noteMaximaD|
+	noteMaximaE|
+	noteMaximaF|
+	noteMaximaG|
 	noteOneHundredTwentyEighthA|
 	noteOneHundredTwentyEighthB|
 	noteOneHundredTwentyEighthC|
@@ -619,6 +640,13 @@
 	noteOneHundredTwentyEighthE|
 	noteOneHundredTwentyEighthF|
 	noteOneHundredTwentyEighthG|
+	noteOneThousandTwentyFourthA|
+	noteOneThousandTwentyFourthB|
+	noteOneThousandTwentyFourthC|
+	noteOneThousandTwentyFourthD|
+	noteOneThousandTwentyFourthE|
+	noteOneThousandTwentyFourthF|
+	noteOneThousandTwentyFourthG|
 	notePreferLargerValues|
 	notePreferSmallerValues|
 	notePreferSmallestValues|
@@ -754,10 +782,14 @@
 	repeatNumberOfMeasures|
 	restDoubleWhole|
 	restEighth|
+	restFiveHundredTwelfth|
 	restHalf|
+	restLonga|
+	restMaxima|
 	restMultimeasureLeft|
 	restMultimeasureRight|
 	restOneHundredTwentyEighth|
+	restOneThousandTwentyFourth|
 	restQuarter|
 	restSixteenth|
 	restSixtyFourth|
