@@ -284,7 +284,7 @@ class MXNote {
 		}
 		if (this.rest) {
 			r.push(...{
-				'1024th':['restOneHundredTwentyFourth'],
+				'1024th':['restOneThousandTwentyFourth'],
 				'512th':['restFiveHundredTwelfth'],
 				'256th':['restTwoHundredFiftySixth'],
 				'128th':['restOneHundredTwentyEighth'],
@@ -301,25 +301,25 @@ class MXNote {
 			}[this.type]);
 		} else if (this.type == 'unpitched') {
 			r.push(...{ // change with stemless
-				'1024th':['restOneHundredTwentyFourth'],
-				'512th':['restFiveHundredTwelfth'],
-				'256th':['restTwoHundredFiftySixth'],
-				'128th':['restOneHundredTwentyEighth'],
-				'64th':['restSixtyFourth'],
-				'32nd':['restThirtySecond'],
-				'16th':['restSixteenth'],
-				'eighth':['restEighth'],
-				'quarter':['restQuarter'],
-				'half':['restHalf'],
-				'whole':['restWhole'],
-				'breve':['restDoubleWhole'],
-				'long':['restLong'],
-				'maxima':['restMaxima']
+				'1024th':['noteOneThousandTwentyFourthC'],
+				'512th':['noteFiveHundredTwelfthC'],
+				'256th':['noteTwoHundredFiftySixthC'],
+				'128th':['noteOneHundredTwentyEighthC'],
+				'64th':['noteSixtyFourthC'],
+				'32nd':['noteThirtySecondC'],
+				'16th':['noteSixteenthC'],
+				'eighth':['noteEighthC'],
+				'quarter':['noteQuarterC'],
+				'half':['noteHalfC'],
+				'whole':['noteWholeC'],
+				'breve':['noteDoubleWholeC'],
+				'long':['noteLongC'],
+				'maxima':['noteMaximaC']
 			}[this.type]);
 		} else {
 			let n = this.step;
 			r.push(...{
-				'1024th':['noteOneHundredTwentyFourth'+n],
+				'1024th':['noteOneThousandTwentyFourth'+n],
 				'512th':['noteFiveHundredTwelfth'+n],
 				'256th':['noteTwoHundredFiftySixth'+n],
 				'128th':['noteOneHundredTwentyEighth'+n],
@@ -332,7 +332,7 @@ class MXNote {
 				'whole':['noteWhole'+n],
 				'breve':['noteDoubleWhole'+n],
 				'long':['noteLong'+n],
-				'maxima':['noteMaxima']
+				'maxima':['noteMaxima'+n]
 			}[this.type]);
 		}
 		return r;
