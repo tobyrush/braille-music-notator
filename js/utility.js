@@ -622,3 +622,24 @@ function removeExtension(s) {
 function hideBanner() {
     document.querySelector("#newVersion").style.display = 'none';
 }
+
+function convertMusicXMLToPartwise(xmlDoc) {
+	fetch('js/timepart.xsl')
+	  .then(response => response.text())
+	  .then(xsltString => {
+		const xsltProcessor = new XSLTProcessor();
+		const xsltDoc = parser.parseFromString(xsltString, 'application/xml');
+		xsltProcessor.importStylesheet(xsltDoc);
+
+		// Transform XML
+		return xsltProcessor.transformToDocument(xmlDoc);
+	  });
+}
+
+function getXMLTagData(obj,tagName) {
+	if (obj.getElementsByTagName(tagName).length) {
+		return obj.getElementsByTagName(tagName)[0].innerHTML;
+	} else {
+		return null;
+	}
+}
