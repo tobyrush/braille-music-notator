@@ -93,13 +93,13 @@ function checkFileType(fileData) {
 	} else if (doc.getElementsByTagName("score-partwise").length) {
 		dropzone = false;
 		importMusicXML(doc);
-	//     fileLoading = true;
-	//     drawNotation();
+	    // fileLoading = true;
+	    drawNotation();
 	} else if (doc.getElementsByTagName("score-timewise").length) {
 		dropzone = false;
 		importMusicXML(convertMusicXMLToPartwise(doc));
-	//     fileLoading = true;
-	//     drawNotation();
+	    // fileLoading = true;
+	    drawNotation();
 	} else {
 		importData(fileData);
 	}

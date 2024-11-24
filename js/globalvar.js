@@ -245,26 +245,26 @@ function removeLastWordOfLine(y) {
     return word;
 }
 
-// function getCellContext(x,y) {
-//     // returns a string containing the character and the three cells before and after
-//     var r="";
-//     for (var i=(x-3); i<=(x+3); i++) {
-//         if (
-//             typeof score[y]==="undefined" ||
-//             score[y]===null ||
-//             typeof score[y][i]==="undefined" ||
-//             score[y][i]===null ||
-//             score[y][i]===0 ||
-//             score[y][i]==32
-//         ) {
-//             r=r+" ";
-//         } else {
-//             r=r+String.fromCharCode(score[y][i]);
-//         }
-//     }
-// 
-//     return r;
-// }
+function getCellContext(x,y) {
+    // returns a string containing the character and the three cells before and after
+    var r="";
+    for (var i=(x-3); i<=(x+3); i++) {
+        if (
+            typeof score[y]==="undefined" ||
+            score[y]===null ||
+            typeof score[y][i]==="undefined" ||
+            score[y][i]===null ||
+            score[y][i]===0 ||
+            score[y][i]==32
+        ) {
+            r=r+" ";
+        } else {
+            r=r+String.fromCharCode(score[y][i]);
+        }
+    }
+
+    return r;
+}
 
 function saveToUndo() {
 	if (!suspendUndo) {

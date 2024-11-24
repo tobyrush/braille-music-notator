@@ -47,23 +47,23 @@ function getScoreLine(row,lowASCII=true) {
 	return lineString;
 }
 
-// function characterName(val,x,y) {
-// 	
-// 	var context;
-//     if (x == -1) {
-//         context = "   "+String.fromCharCode(val)+"   ";
-//     } else {
-//         context = getCellContext(x,y);
-//     }
-//     var found = kCharNames.find(function(e) {
-//       return RegExp(e[0]).test(context);
-//     });
-//     if (typeof found==="undefined") {
-//         return getDotsDescription(val);
-//     } else {
-//         return found[1];
-//     }
-// }
+function characterName(val,x,y) {
+	
+	var context;
+    if (x == -1) {
+        context = "   "+String.fromCharCode(val)+"   ";
+    } else {
+        context = getCellContext(x,y);
+    }
+    var found = kCharNames.find(function(e) {
+      return RegExp(e[0]).test(context);
+    });
+    if (typeof found==="undefined") {
+        return getDotsDescription(val);
+    } else {
+        return found[1];
+    }
+}
 
 // function getDotsDescription(val) {
 //     var r = kDotsPrefix;
