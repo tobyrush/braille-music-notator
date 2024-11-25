@@ -31,8 +31,10 @@ function importMusicXML(xmlDoc) {
 	
 	// we're also going to ignore any <miscellaneous> information
 	
-	importObject.currentKey = null; // {fifths: null, mode: null};
-	importObject.currentMeter = null; // {beats: null, beatType: null};
+	// importObject.currentKey = null; // {fifths: null, mode: null};
+	importObject.firstKey = null;
+	// importObject.currentMeter = null; // {beats: null, beatType: null};
+	importObject.firstMeter = null;
 	importObject.currentDivisions = 1;
 	
 	importObject.header = header;
@@ -52,15 +54,29 @@ function importMusicXML(xmlDoc) {
 		partNode.children('measure').forEach( measureNode => {
 			let m = new MXMeasure(measureNode, importObject.currentDivisions);
 			importObject.currentDivisions = m.divisions;
-			if (importObject.currentKey) {
-				if (m.key && importObject.currentKey.fifths == m.key.fifths && importObject.currentKey.mode == m.key.mode) {
-					m.key = null;
+			if (!importObject.firstKey) {
+				if (m.key) {
+					importObject.firstKey = {fifths: m.key.fifths, mode: m.key.mode};
 				} else {
-					importObject.currentKey = m.key;
+					importObject.firstKey = {fifths: null, mode: null};
 				}
-			} else {
-				importObject.currentKey = m.key;
-				m.key = null;
+			}
+			// if (importObject.currentKey) {
+			// 	if (m.key && importObject.currentKey.fifths == m.key.fifths && importObject.currentKey.mode == m.key.mode) {
+			// 		m.key = null;
+			// 	} else {
+			// 		importObject.currentKey = m.key;
+			// 	}
+			// } else {
+			// 	importObject.currentKey = m.key;
+			// 	m.key = null;
+			// }
+			if (!importObject.firstMeter) {
+				if (m.meter) {
+					importObject.firstMeter = {beats: m.meter.beats, beatType: m.meter.beatType};
+				} else {
+					importObject.firstMeter = {beats: null, beatType: null};
+				}
 			}
 			partObject.measures.push(m);
 		});
@@ -68,7 +84,6 @@ function importMusicXML(xmlDoc) {
 	
 	// generate BRM file
 	// we're given pageWidth and pageHeight as global variables
-	let s = []; // list of characters as MXSymbols
 	
 	// generate title information
 	
@@ -79,20 +94,74 @@ function importMusicXML(xmlDoc) {
 		if (header.workNumber) {
 			t = t + ', ' + header.workNumber;
 		}
-		titleArea.setTextLine(t, 'center');
+		titleArea.setLiteraryTextLine(t, 'center');
 	}
 	if (header.movementTitle) {
 		t = header.movementTitle;
 		if (header.movementNumber) {
 			t = header.movementNumber + ': ' + t;
 		}
-		titleArea.setTextLine(t, 'center');
+		titleArea.setLiteraryTextLine(t, 'center');
 	}
 	
-	// write to score
-	titleArea.writeToScore(0,0);
-	// now cursor is (0,titleArea.height)
+	let timeKeyLine = new MXScoreArea(currentCellFont,pageWidth,0);
+	let c = [];
+	if (importObject.firstKey.fifths) {
+		// t = t + timeKeyLine.charStringToText(getKeyChars(importObject.firstKey));
+		c.push(...getKeyChars(importObject.firstKey));
+	}
+	if (importObject.firstMeter.beats) {
+		// t = t + timeKeyLine.charStringToText(getMeterChars(importObject.firstMeter));
+		c.push(...getMeterChars(importObject.firstMeter));
+	}
+	timeKeyLine.setTextLine(c, 'center');
 	
+	
+	// write to score
+	let currentY = 0;
+	titleArea.writeToScore(0,currentY);
+	currentY += titleArea.height+1;
+	timeKeyLine.writeToScore(0,currentY);
+	currentY += timeKeyLine.height+1;
+	
+}
+
+function getKeyChars(key) {
+	let r = [];
+	if (key) {
+		if (key.fifths>0) {
+			if (key.fifths>3) {
+				r.push('keySignaturePrefix');
+				r.push('keySignatureMultiplier'+key.fifths);
+				r.push('keySignatureSharp');
+			} else {
+				for (let i=1; i<=key.fifths; i++) {
+					r.push('keySignatureSharp');
+				}
+			}
+		} else if (key.fifths<0) {
+			if (key.fifths<-3) {
+				r.push('keySignaturePrefix');
+				r.push('keySignatureMultiplier'+key.fifths);
+				r.push('keySignatureFlat');
+			} else {
+				for (let i=-1; i>=key.fifths; i--) {
+					r.push('keySignatureFlat');
+				}
+			}
+		}
+	}
+	return r;
+}
+
+function getMeterChars(meter) {
+	let r=[];
+	if (meter) {
+		r.push('timeSignaturePrefix');
+		r.push('timeSignatureTop'+meter.beats);
+		r.push('timeSignatureBottom'+meter.beatType);
+	}
+	return r;
 }
 
 class MXScoreArea {
@@ -112,6 +181,23 @@ class MXScoreArea {
 		this.cells = [[]];
 	}
 	setTextLine(charString, alignment='left') {
+		// set characters on line where cursor is, then set cursor at beginning of following line
+		let row = this.getCodes(charString);
+		switch (alignment) {
+			case 'left':
+				this.setCodeString(0, this.cursor.y, row);
+				break;
+			case 'center':
+				this.setCodeString(Math.floor((this.width/2)-(row.length/2)), this.cursor.y, row);
+				break;
+			case 'right':
+				this.setCodeString(this.width-row.length, this.cursor.y, row);
+				break;
+		}
+		this.cursor.y++;
+		this.cursor.x = 0;
+	}
+	setLiteraryTextLine(charString, alignment='left') {
 		// set text on line where cursor is, wrapping if necessary, then set cursor at beginning of following line
 		let tr = new MXTextTranslator();
 		let rows = this.wrapCodeString(this.getCodes(tr.convert(charString)));
@@ -145,8 +231,13 @@ class MXScoreArea {
 			xx++;
 		});
 	}
-	
-	
+	charStringToText(charString) {
+		let r = [];
+		charString.forEach(char => {
+			r.push(...this.font.getCellByName(char).codes);
+		});
+		return String.fromCharCode(...r);
+	}
 	codeStringToText(codeString) {
 		let s = codeString.map(x => {
 			return (x<33 ? 32 : x);
@@ -211,32 +302,32 @@ class MXScoreArea {
 		}
 		this.codes[y][x] = code;
 	}
-	setCell(x,y,cell,setCursor=true) {
-		if (x>this.width) {
-			this.width = x;
-		}
-		if (y>this.height) {
-			this.height = y;
-		}
-		if (!(arrayHasOwnIndex(this.codes,y)) || this.codes[y]===null) {
-			this.codes[y] = [];
-			this.cells[y] = [];
-		}
-		this.cells[y][x] = cell.name;
-		cell.codes.forEach((code,index) => {
-			this.codes[y][x+index] = String(code);
-			this.cursor = {x: x+index+1, y: y};
-		});
-	}
-	lineFeed() {
-		cursor = {x:0, y:cursor.y+1};
-	}
-	deleteCell(x,y) {
-		if (!this.score[y] || !arrayHasOwnIndex(this.score,y)) {
-			this.score[y] = [];
-		}
-		delete this.score[y][x];
-	}
+	// setCell(x,y,cell,setCursor=true) {
+	// 	if (x>this.width) {
+	// 		this.width = x;
+	// 	}
+	// 	if (y>this.height) {
+	// 		this.height = y;
+	// 	}
+	// 	if (!(arrayHasOwnIndex(this.codes,y)) || this.codes[y]===null) {
+	// 		this.codes[y] = [];
+	// 		this.cells[y] = [];
+	// 	}
+	// 	this.cells[y][x] = cell.name;
+	// 	cell.codes.forEach((code,index) => {
+	// 		this.codes[y][x+index] = String(code);
+	// 		this.cursor = {x: x+index+1, y: y};
+	// 	});
+	// }
+	// lineFeed() {
+	// 	cursor = {x:0, y:cursor.y+1};
+	// }
+	// deleteCell(x,y) {
+	// 	if (!this.score[y] || !arrayHasOwnIndex(this.score,y)) {
+	// 		this.score[y] = [];
+	// 	}
+	// 	delete this.score[y][x];
+	// }
 }
 
 class MXTextTranslator {
@@ -338,70 +429,6 @@ class MXTextTranslator {
 		return s.toUpperCase() === s;
 	}
 }
-
-// class MXDocument {
-// 	constructor(xmlDoc) {
-// 		this.
-// 		
-// 		this.obj = {};
-// 		this.score = new MXNode(xmlDoc).child('score-partwise');
-// 		
-// 		this.header = {};
-// 		this.header.workTitle = this.score.child('work-title').data; // getXMLTagData(root, 'work-title');
-// 		this.header.workNumber = this.score.child('work-number').data; // getXMLTagData(root, 'work-number');
-// 		this.header.movementTitle = this.score.child('movement-title').data; // getXMLTagData(root, 'movement-title');
-// 		this.header.movementNumber = this.score.child('movement-number').data; // getXMLTagData(root, 'movement-number');
-// 		this.header.creators = {};
-// 		this.score.children('creator').forEach( c => {
-// 			this.header.creators[c.attr('type') ?? 'creator'] = c.data;
-// 		});
-// 		
-// 		this.header.rights = {};
-// 		this.score.children('rights').forEach( r => {
-// 			this.header.rights[r.attr('type') ?? 'rights'] = r.data;
-// 		});
-// 		
-// 		// we're going to ignore the <encoding> information
-// 		
-// 		this.header.source = this.score.child('source').data; // getXMLTagData(root, 'source');
-// 		
-// 		// we're also going to ignore any <miscellaneous> information
-// 		
-// 		this.currentKey = null; // {fifths: null, mode: null};
-// 		this.currentMeter = null; // {beats: null, beatType: null};
-// 		this.currentDivisions = 1;
-// 		
-// 		this.parts = [];
-// 		
-// 		this.score.child('part-list').children('score-part').forEach( scorePart => {
-// 			let part = {};
-// 			part.id = scorePart.attr('id');
-// 			part.partName = scorePart.child('part-name').data; // getXMLTagData(scorePart, 'part-name');
-// 			part.partAbbreviation = scorePart.child('part-abbreviation').data; // getXMLTagData(scorePart, 'part-abbreviation');
-// 			this.parts.push(part);
-// 		});
-// 		
-// 		this.score.children('part').forEach( partNode => {
-// 			let partObject = this.parts.find((e) => e.id == partNode.attr('id'));
-// 			partObject.measures = [];
-// 			partNode.children('measure').forEach( measureNode => {
-// 				let m = new MXMeasure(measureNode, this.currentDivisions);
-// 				this.currentDivisions = m.divisions;
-// 				if (this.currentKey) {
-// 					if (m.key && importObject.currentKey.fifths == m.key.fifths && this.currentKey.mode == m.key.mode) {
-// 						m.key = null;
-// 					} else {
-// 						this.currentKey = m.key;
-// 					}
-// 				} else {
-// 					this.currentKey = m.key;
-// 					m.key = null;
-// 				}
-// 				partObject.measures.push(m);
-// 			});
-// 		});
-// 	}
-// }
 
 class MXSymbol {
 	constructor(font, name, row=null, col=null) {
@@ -510,51 +537,51 @@ class MXMeasure {
 	getChars(showKeyAndMeter = true) {
 		let r = [];
 		if (showKeyAndMeter) {
-			r.push(...this.getKeyChars());
-			r.push(...this.getMeterChars());
+			r.push(...getKeyChars(this.key));
+			r.push(...getMeterChars(this.meter));
 		}
 		this.entries.forEach( e => {
 			r.push(...e.getEntryChars());
 		});
 		return r;
 	}
-	getKeyChars() {
-		let k = this.key;
-		let r = [];
-		if (k) {
-			if (k.fifths>0) {
-				if (k.fifths>3) {
-					r.push('keySignaturePrefix');
-					r.push('keySignatureMultiplier'+k.fifths);
-					r.push('keySignatureSharp');
-				} else {
-					for (let i=1; i<=k.fifths; i++) {
-						r.push('keySignatureSharp');
-					}
-				}
-			} else if (k.fifths<0) {
-				if (k.fifths<-3) {
-					r.push('keySignaturePrefix');
-					r.push('keySignatureMultiplier'+k.fifths);
-					r.push('keySignatureFlat');
-				} else {
-					for (let i=-1; i>=k.fifths; i--) {
-						r.push('keySignatureFlat');
-					}
-				}
-			}
-		}
-		return r;
-	}
-	getMeterChars() {
-		let r=[];
-		if (this.meter) {
-			r.push('timeSignaturePrefix');
-			r.push('timeSignatureTop'+this.meter.beats);
-			r.push('timeSignatureBottom'+this.meter.beatType);
-		}
-		return r;
-	}
+	// getKeyChars() {
+	// 	let k = this.key;
+	// 	let r = [];
+	// 	if (k) {
+	// 		if (k.fifths>0) {
+	// 			if (k.fifths>3) {
+	// 				r.push('keySignaturePrefix');
+	// 				r.push('keySignatureMultiplier'+k.fifths);
+	// 				r.push('keySignatureSharp');
+	// 			} else {
+	// 				for (let i=1; i<=k.fifths; i++) {
+	// 					r.push('keySignatureSharp');
+	// 				}
+	// 			}
+	// 		} else if (k.fifths<0) {
+	// 			if (k.fifths<-3) {
+	// 				r.push('keySignaturePrefix');
+	// 				r.push('keySignatureMultiplier'+k.fifths);
+	// 				r.push('keySignatureFlat');
+	// 			} else {
+	// 				for (let i=-1; i>=k.fifths; i--) {
+	// 					r.push('keySignatureFlat');
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// 	return r;
+	// }
+	// getMeterChars() {
+	// 	let r=[];
+	// 	if (this.meter) {
+	// 		r.push('timeSignaturePrefix');
+	// 		r.push('timeSignatureTop'+this.meter.beats);
+	// 		r.push('timeSignatureBottom'+this.meter.beatType);
+	// 	}
+	// 	return r;
+	// }
 }
 
 class MXEntry {
