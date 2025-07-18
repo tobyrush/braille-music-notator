@@ -3,7 +3,55 @@
 /* jshint -W020 */
 /* jshint -W100 */
 
+
+
 function importMusicXML(xmlDoc) {
+	
+	const kAccidentalChars = {
+		sharp: getChar(0xe262),
+		natural: getChar(0xe261),
+		flat: getChar(0xe260),
+		doublesharp: getChar(0xe263),
+		sharpsharp: getChar(0xe264),
+		flatflat: getChar(0xe264),
+		naturalsharp: getChar(0xe268),
+		naturalflat: getChar(0xe267),
+		quarterflat: getChar(0xe280),
+		quartersharp: getChar(0xe282),
+		threequartersflat: getChar(0xe281),
+		threequarterssharp: getChar(0xe283),
+		sharpdown: getChar(0xe275),
+		sharpup: getChar(0xe274),
+		naturaldown: getChar(0xe273),
+		naturalup: getChar(0xe272),
+		flatdown: getChar(0xe271),
+		flatup: getChar(0xe270),
+		doublesharpdown: getChar(0xe277),
+		doublesharpup: getChar(0xe276),
+		flatflatdown: getChar(0xe279),
+		flatflatup: getChar(0xe278),
+		arrowdown: getChar(0xe27b),
+		arrowup: getChar(0xe27a),
+		triplesharp: getChar(0xe265),
+		tripleflat: getChar(0xe266),
+		slashquartersharp: getChar(0xe446),
+		slashsharp: getChar(0xe447),
+		slashflat: getChar(0xe442),
+		doubleslashflat: getChar(0xe440),
+		sharp1: getChar(0xe450),
+		sharp2: getChar(0xe451),
+		sharp3: getChar(0xe452),
+		sharp5: getChar(0xe453),
+		flat1: getChar(0xe454),
+		flat2: getChar(0xe455),
+		flat3: getChar(0xe456),
+		flat4: getChar(0xe457),
+		sori: getChar(0xe461),
+		koron: getChar(0xe460),
+		other: getChar(0xe26f)
+	}
+	
+	let format = "bar-over-bar";
 	
 	// import file into importObject
 	
@@ -39,20 +87,32 @@ function importMusicXML(xmlDoc) {
 	
 	importObject.header = header;
 	importObject.parts = [];
+	importObject.measures = [];
 	
 	doc.child('part-list').children('score-part').forEach( scorePart => {
 		let part = {};
 		part.id = scorePart.attr('id');
-		part.partName = scorePart.child('part-name').data; // getXMLTagData(scorePart, 'part-name');
-		part.partAbbreviation = scorePart.child('part-abbreviation').data; // getXMLTagData(scorePart, 'part-abbreviation');
+		part.partName = parsePartName(scorePart.child('part-name'));
+		part.showPartName = scorePart.child('part-name').attr('print-object')=='yes';
+		part.partNameDisplay = parsePartName(scorePart.child('part-name-display'));
+		part.showPartNameDisplay = scorePart.child('part-name-display').attr('print-object')=='yes';
+		part.partAbbreviation = parsePartName(scorePart.child('part-abbreviation'));
+		part.showPartAbbreviation = scorePart.child('part-abbreviation').attr('print-object')=='yes';
+		part.partAbbreviationDisplay = parsePartName(scorePart.child('part-abbreviation'));
+		part.showPartAbbreviationDisplay = scorePart.child('part-abbreviation').attr('print-object')=='yes';
+		part.partBrailleAbbreviation = getBrailleInstrumentAbbreviation(part.partName);
 		importObject.parts.push(part);
 	});
 	
-	doc.children('part').forEach( partNode => {
+	importObject.numberOfParts = 0;
+	importObject.numberOfMeasures = 0;
+	doc.children('part').forEach( (partNode, partIndex) => {
+		if (importObject.numberOfParts < partIndex + 1) { importObject.numberOfParts = partIndex + 1 };
 		let partObject = importObject.parts.find((e) => e.id == partNode.attr('id'));
 		partObject.measures = [];
-		partNode.children('measure').forEach( measureNode => {
-			let m = new MXMeasure(measureNode, importObject.currentDivisions);
+		partNode.children('measure').forEach( (measureNode, measureIndex) => {
+			if (importObject.numberOfMeasures < measureIndex + 1) { importObject.numberOfMeasures = measureIndex + 1 };
+			let m = new MXMeasure(measureNode, measureIndex, partIndex, importObject.currentDivisions);
 			importObject.currentDivisions = m.divisions;
 			if (!importObject.firstKey) {
 				if (m.key) {
@@ -61,16 +121,6 @@ function importMusicXML(xmlDoc) {
 					importObject.firstKey = {fifths: null, mode: null};
 				}
 			}
-			// if (importObject.currentKey) {
-			// 	if (m.key && importObject.currentKey.fifths == m.key.fifths && importObject.currentKey.mode == m.key.mode) {
-			// 		m.key = null;
-			// 	} else {
-			// 		importObject.currentKey = m.key;
-			// 	}
-			// } else {
-			// 	importObject.currentKey = m.key;
-			// 	m.key = null;
-			// }
 			if (!importObject.firstMeter) {
 				if (m.meter) {
 					importObject.firstMeter = {beats: m.meter.beats, beatType: m.meter.beatType};
@@ -79,6 +129,7 @@ function importMusicXML(xmlDoc) {
 				}
 			}
 			partObject.measures.push(m);
+			importObject.measures.push(m);
 		});
 	});
 	
@@ -94,73 +145,165 @@ function importMusicXML(xmlDoc) {
 		if (header.workNumber) {
 			t = t + ', ' + header.workNumber;
 		}
-		titleArea.setLiteraryTextLine(t, 'center');
+		titleArea.setTextLine(t, 'center');
 	}
 	if (header.movementTitle) {
 		t = header.movementTitle;
 		if (header.movementNumber) {
 			t = header.movementNumber + ': ' + t;
 		}
-		titleArea.setLiteraryTextLine(t, 'center');
+		titleArea.setTextLine(t, 'center');
 	}
 	
+	let timeKeyLinePresent = false;
 	let timeKeyLine = new MXScoreArea(currentCellFont,pageWidth,0);
 	let c = [];
 	if (importObject.firstKey.fifths) {
-		// t = t + timeKeyLine.charStringToText(getKeyChars(importObject.firstKey));
-		c.push(...getKeyChars(importObject.firstKey));
+		c.push(...getKeyCharString(importObject.firstKey));
+		timeKeyLinePresent = true;
 	}
 	if (importObject.firstMeter.beats) {
-		// t = t + timeKeyLine.charStringToText(getMeterChars(importObject.firstMeter));
-		c.push(...getMeterChars(importObject.firstMeter));
+		c.push(...getMeterCharString(importObject.firstMeter));
+		timeKeyLinePresent = true;
 	}
-	timeKeyLine.setTextLine(c, 'center');
+	timeKeyLine.setCharStringLine(c, 'center');
 	
 	
 	// write to score
 	let currentY = 0;
 	titleArea.writeToScore(0,currentY);
-	currentY += titleArea.height+1;
+	currentY += titleArea.height-1;
 	timeKeyLine.writeToScore(0,currentY);
-	currentY += timeKeyLine.height+1;
+	currentY += timeKeyLine.height-1;
 	
+	let lyricArea = new MXScoreArea(currentCellFont, pageWidth, 0);
+	let musicArea = new MXScoreArea(currentCellFont, 1, 0);
+	let measureArea = new MXScoreArea(currentCellFont, 1, 0);
+	
+	if (format=="bar-over-bar") {
+		
+		let measures = [[]];
+		importObject.measures.forEach(m => {
+			if (!measures[m.measureIndex]) {
+				measures[m.measureIndex] = [];
+			}
+			measures[m.measureIndex][m.partIndex] = m;
+		});
+		
+		let mIndex = 0;
+		let showKeyAndMeter = !timeKeyLinePresent;
+		musicArea.setText(String(measures[mIndex][0].measureNumber), 0, 0, false, true); // add measure number to musicArea
+		measureArea.clearAndResize(1,0); // erase measureArea
+		while (mIndex < measures.length) { // while measure <= number of measures
+			measures[mIndex].sort((a,b) => { return a.partIndex - b.partIndex; });
+			measures[mIndex].forEach( p => { //     for each part P,
+				measureArea.setCharString(p.getCharString(showKeyAndMeter),0,p.partIndex); // set measure M, part P
+			});
+			showKeyAndMeter = true; // after the first bar of the piece, show key and meter if it changes
+			if (musicArea.width + measureArea.width + 1 <= pageWidth) {
+				musicArea.addArea(musicArea.width,0,measureArea); // add measureArea to musicArea
+				// add lyrics to lyricArea here
+				measureArea.clearAndResize(1, 0); // erase measureArea
+			} else {
+				lyricArea.writeToScore(0, currentY); // write lyricArea to score
+				currentY += lyricArea.height;
+				musicArea.writeToScore(0, currentY); // write musicArea to score
+				currentY += musicArea.height;
+				musicArea.clearAndResize(1, 0); // erase musicArea and lyricArea
+				lyricArea.clearAndResize(pageWidth, 0);
+				musicArea.setText(String(measures[mIndex][0].measureNumber), 0, 0, false, true); // add measure number to musicArea
+				musicArea.addArea(musicArea.width,0,measureArea); // add measureArea to musicArea
+				// add lyrics to lyricArea here
+				measureArea.clearAndResize(1, 0); // erase measureArea
+			}
+			mIndex++;
+		}
+		lyricArea.writeToScore(0, currentY); // write lyricArea to score
+		currentY += lyricArea.height;
+		musicArea.writeToScore(0, currentY); // write musicArea to score
+		currentY += musicArea.height;
+		
+	} else { // part-over-part
+		
+	}
 }
 
-function getKeyChars(key) {
-	let r = [];
+function getKeyCharString(key) {
+	let cs = [];
 	if (key) {
 		if (key.fifths>0) {
 			if (key.fifths>3) {
-				r.push('keySignaturePrefix');
-				r.push('keySignatureMultiplier'+key.fifths);
-				r.push('keySignatureSharp');
+				cs.push('keySignaturePrefix');
+				cs.push('keySignatureMultiplier'+key.fifths);
+				cs.push('keySignatureSharp');
 			} else {
 				for (let i=1; i<=key.fifths; i++) {
-					r.push('keySignatureSharp');
+					cs.push('keySignatureSharp');
 				}
 			}
 		} else if (key.fifths<0) {
 			if (key.fifths<-3) {
-				r.push('keySignaturePrefix');
-				r.push('keySignatureMultiplier'+key.fifths);
-				r.push('keySignatureFlat');
+				cs.push('keySignaturePrefix');
+				cs.push('keySignatureMultiplier'+key.fifths);
+				cs.push('keySignatureFlat');
 			} else {
 				for (let i=-1; i>=key.fifths; i--) {
-					r.push('keySignatureFlat');
+					cs.push('keySignatureFlat');
 				}
 			}
 		}
 	}
-	return r;
+	return cs;
 }
 
-function getMeterChars(meter) {
-	let r=[];
+function getMeterCharString(meter) {
+	let cs=[];
 	if (meter) {
-		r.push('timeSignaturePrefix');
-		r.push('timeSignatureTop'+meter.beats);
-		r.push('timeSignatureBottom'+meter.beatType);
+		cs.push('timeSignaturePrefix');
+		cs.push('timeSignatureTop'+meter.beats);
+		cs.push('timeSignatureBottom'+meter.beatType);
 	}
+	return cs;
+}
+
+function parsePartName(obj) { // pass a <part-name> or <part-name-display> element
+	let disp = false;
+	let cs = '';
+	obj.children().forEach(o => {
+		if (o.tagName == 'display-text') {
+			disp = true;
+			cs = cs + o.data;
+		} else if (o.tagName == 'accidental-test') {
+			disp = true;
+			cs = cs + kAccidentalChars[o.data];
+		}
+	});
+	if (disp == false) {
+		return obj.data;
+	}
+	return cs
+}
+
+function getBrailleInstrumentAbbreviation(partName) {
+	
+	let r = '';
+	[['piccolo','pc'], ['flute','fl'], ['oboe','o'], ['english horn','eh'], ['clarinet','cl'], ['bass clarinet','bcl'], ['bassoon','b'], ['contrabassoon','bb'],['horn','hn'], ['french horn','hn'], ['trumpet','tp'], ['trombone','tb'], ['tuba','tu'], ['kettledrums','dr'], ['kettle drums','dr'], ['timpani','dr'], ['cymbal','cym'], ['triangle','tri'], ['snare drum','sd'], ['bass drum','bdr'], ['harp','h'], ['piano','p'], ['violin','v'], ['viola','vl'], ['violoncello','vc'], ['cello','vc'], ['double bass','db'], ['string bass','db']].every(i => {
+		if (partName.toLowerCase().includes(i[0])) {
+			r = i[1];
+			return false;
+		} else {
+			return true;
+		}
+	});
+	[[' 10','10'],[' 11','11'],[' 12','12'],[' 13','13'],[' 14','14'],[' 15','15'],[' 1','1'],[' 2','2'],[' 3','3'],[' 4','4'],[' 5','5'],[' 6','6'],[' 7','7'],[' 8','8'],[' 9','9'],[' viii','8'],[' xiii','13'],[' iii','3'],[' vii','7'],[' xii','12'],[' xiv','14'],[' ii','2'],[' iv','4'],[' vi','6'],[' ix','9'],[' xi','11'],[' xv','15'],[' i','1'],[' v','5'],[' x','10']].every(i => {
+		if (partName.toLowerCase().includes(i[0])) {
+			r += i[1];
+			return false;
+		} else {
+			return true;
+		}
+	});
+	
 	return r;
 }
 
@@ -173,16 +316,40 @@ class MXScoreArea {
 		// charString = array of chars
 		// cellString = array of cells
 		// codeString = array of codes
+		// textString = array of individual unicode characters (text.split(''))
 		this.font = font;
+		this.clearAndResize(width, height);
+	}
+	addArea(x,y,newArea) {
+		let xi, yi;
+		for (yi = 0; yi <= newArea.height; yi++) {
+			for (xi = 0; xi <= newArea.width; xi++) {
+				this.setCode(x+xi, y+yi, newArea.getCode(xi,yi));
+			}
+		}
+		this.width = Math.max(this.width, x+xi);
+		this.height = Math.max(this.height, y+yi);
+	}
+	clearAndResize(width, height) {
+		this.codes = [[]];
+		this.cells = [[]];
 		this.width = width;
 		this.height = height;
 		this.cursor = {x: 0, y: 0};
-		this.codes = [[]];
-		this.cells = [[]];
 	}
-	setTextLine(charString, alignment='left') {
+	setCharString(charString, x, y) {
+		// set characters at x,y, then set cursor to following cell
+		let hs = this.charStringToCodeString(charString);
+		this.setCodeString(x, y, hs);
+		console.log("set "+JSON.stringify(charString)+" at "+x+", "+y);
+		this.cursor.x = x+hs.length;
+		this.cursor.y = y;
+		this.width = Math.max(this.width, x+hs.length);
+		this.height = Math.max(this.height, y);
+	}
+	setCharStringLine(charString, alignment='left') {
 		// set characters on line where cursor is, then set cursor at beginning of following line
-		let row = this.getCodes(charString);
+		let row = this.charStringToCodeString(charString);
 		switch (alignment) {
 			case 'left':
 				this.setCodeString(0, this.cursor.y, row);
@@ -194,13 +361,26 @@ class MXScoreArea {
 				this.setCodeString(this.width-row.length, this.cursor.y, row);
 				break;
 		}
+		console.log("set "+JSON.stringify(charString)+" on line "+this.cursor.y);
 		this.cursor.y++;
 		this.cursor.x = 0;
+		this.height = Math.max(this.height,this.cursor.y+1);
 	}
-	setLiteraryTextLine(charString, alignment='left') {
+	setText(charString, x, y, gradeTwo=false, suppressNumberSign=false) {
+		// set text at x,y and move cursor to end of text
+		let tr = new MXTextTranslator();
+		let hs = this.charStringToCodeString(tr.convert(charString, gradeTwo, suppressNumberSign));
+		this.setCodeString(x, y, hs);
+		console.log("set "+JSON.stringify(charString)+" at "+x+", "+y);
+		this.cursor.x = x+hs.length;
+		this.cursor.y = y;
+		this.width = Math.max(this.width, x+hs.length);
+		this.height = Math.max(this.height, y);
+	}
+	setTextLine(charString, alignment='left') {
 		// set text on line where cursor is, wrapping if necessary, then set cursor at beginning of following line
 		let tr = new MXTextTranslator();
-		let rows = this.wrapCodeString(this.getCodes(tr.convert(charString)));
+		let rows = this.wrapCodeString(this.charStringToCodeString(tr.convert(charString)));
 		rows.forEach(row => { // each row is a codeString
 			switch (alignment) {
 				case 'left':
@@ -213,9 +393,11 @@ class MXScoreArea {
 					this.setCodeString(this.width-row.length, this.cursor.y, row);
 					break;
 			}
+			console.log("set "+JSON.stringify(row)+" on line "+this.cursor.y);
 			this.cursor.y++;
 		});
 		this.cursor.x = 0;
+		this.height = Math.max(this.height,this.cursor.y+1);
 	}
 	writeToScore(x,y) {
 		for (let yy=0; yy<=this.height; yy++) {
@@ -232,17 +414,17 @@ class MXScoreArea {
 		});
 	}
 	charStringToText(charString) {
-		let r = [];
+		let cs = [];
 		charString.forEach(char => {
-			r.push(...this.font.getCellByName(char).codes);
+			cs.push(...this.font.getCellByName(char).codes);
 		});
-		return String.fromCharCode(...r);
+		return String.fromCharCode(...cs);
 	}
 	codeStringToText(codeString) {
-		let s = codeString.map(x => {
-			return (x<33 ? 32 : x);
+		let cs = codeString.map(c => {
+			return (c<33 ? 32 : c);
 		});
-		return String.fromCharCode(...s);
+		return String.fromCharCode(...cs);
 	}
 	textToCodeString(text) {
 		let cs = text.split('');
@@ -252,9 +434,9 @@ class MXScoreArea {
 	}
 	wrapCodeString(codeString, rowLength = this.width) {
 		let rows = [];
-		let cs = this.codeStringToText(codeString).split(' ');
+		let ts = this.codeStringToText(codeString).split(' ');
 		let currentRow = '';
-		cs.forEach(text => {
+		ts.forEach(text => {
 			if (currentRow.length>0) {
 				currentRow = currentRow + ' '; // if this isn't the first word on the line, add a space
 			}
@@ -268,18 +450,18 @@ class MXScoreArea {
 		rows.push(this.textToCodeString(currentRow));
 		return rows;
 	}
-	getCodes(charString) {
-		let r = [];
+	charStringToCodeString(charString) {
+		let cs = [];
 		charString.forEach(char => {
 			if (char) {
 				this.font.getCellByName(char).codes.forEach(code => {
-					r.push(code);
+					cs.push(code);
 				});
 			} else {
-				r.push(0);
+				cs.push(0);
 			}
 		});
-		return r;
+		return cs;
 	}
 	getCode(x,y) {
 		if ((x === null) || (y === null) ||
@@ -337,16 +519,18 @@ class MXTextTranslator {
 		this.suffixes = [['self','textContractionSelf']];
 		this.contractions = [['altogether','textContractionAltogether'], ['themselves','textContractionThemselves'], ['yourselves','textContractionYourselves'], ['knowledge','textContractionKnowledge'], ['according','textContractionAccording'], ['afternoon','textContractionAfternoon'], ['afterward','textContractionAfterward'], ['althought','textContractionAlthough'], ['character','textContractionCharacter'], ['declaring','textContractionDeclaring'], ['immediate','textContractionImmediate'], ['necessary','textContractionNecessary'], ['ourselves','textContractionOurselves'], ['receiving','textContractionReceiving'], ['rejoicing','textContractionRejoicing'], ['children','textContractionChildren'], ['question','textContractionQuestion'], ['together','textContractionTogether'], ['tomorrow','textContractionTomorrow'], ['yourself','textContractionYourself'], ['against','textContractionAgainst'], ['already','textContractionAlready'], ['because','textContractionBecause'], ['beneath','textContractionBeneath'], ['braille','textContractionBraille'], ['ceiling','textContractionCeiving'], ['declare','textContractionDeclare'], ['herself','textContractionHerself'], ['himself','textContractionHimself'], ['neither','textContractionNeither'], ['perhaps','textContractionPerhaps'], ['receive','textContractionReceive'], ['rejoice','textContractionRejoice'], ['through','textContractionThrough'], ['tonight','textContractionTonight'], ['enough','textContractionEnough'], ['people','textContractionPeople'], ['rather','textContractionRather'], ['across','textContractionAcross'], ['almost','textContractionAlmost'], ['always','textContractionAlways'], ['before','textContractionBefore'], ['behind','textContractionBehind'], ['beside','textContractionBeside'], ['betwen','textContractionBetween'], ['beyond','textContractionBeyond'], ['cannot','textContractionCannot'], ['either','textContractionEither'], ['father','textContractionFather'], ['friend','textContractionFriend'], ['itself','textContractionItself'], ['letter','textContractionLetter'], ['little','textContractionLittle'], ['mother','textContractionMother'], ['myself','textContractionMyself'], ['oclock','textContractionOClock'], ['should','textContractionShould'], ['spirit','textContractionSpirit'], ['child','textContractionChild'], ['every','textContractionEvery'], ['quite','textContractionQuite'], ['shall','textContractionShall'], ['still','textContractionStill'], ['which','textContractionWhich'], ['about','textContractionAbout'], ['above','textContractionAbove'], ['after','textContractionAfter'], ['again','textContractionAgain'], ['ation','textContractionAtion'], ['below','textContractionBelow'], ['blind','textContractionBlind'], ['ceive','textContractionCeive'], ['could','textContractionCould'], ['first','textContractionFirst'], ['great','textContractionGreat'], ['ought','textContractionOught'], ['quick','textContractionQuick'], ['right','textContractionRight'], ['their','textContractionTheir'], ['there','textContractionThere'], ['these','textContractionThese'], ['those','textContractionThose'], ['today','textContractionToday'], ['under','textContractionUnder'], ['where','textContractionWhere'], ['whose','textContractionWhose'], ['world','textContractionWorld'], ['would','textContractionWould'], ['young','textContractionYoung'], ['from','textContractionFrom'], ['have','textContractionHave'], ['just','textContractionJust'], ['like','textContractionLike'], ['more','textContractionMore'], ['that','textContractionThat'], ['this','textContractionThis'], ['very','textContractionVery'], ['were','textContractionWere'], ['will','textContractionWill'], ['ally','textContractionAlly'], ['also','textContractionAlso'], ['ance','textContractionAnce'], ['ence','textContractionEnce'], ['ever','textContractionEver'], ['good','textContractionGood'], ['here','textContractionHere'], ['know','textContractionKnow'], ['less','textContractionLess'], ['lord','textContractionLord'], ['many','textContractionMany'], ['ment','textContractionMent'], ['much','textContractionMuch'], ['must','textContractionMust'], ['name','textContractionName'], ['ness','textContractionNess'], ['ound','textContractionOund'], ['paid','textContractionPaid'], ['part','textContractionPart'], ['said','textContractionSaid'], ['sion','textContractionSion'], ['some','textContractionSome'], ['such','textContractionSuch'], ['time','textContractionTime'], ['tion','textContractionTion'], ['upon','textContractionUpon'], ['with','textContractionWith'], ['word','textContractionWord'], ['work','textContractionWork'], ['your','textContractionYour'], ['self','textContractionSelf'], ['but','textContractionBut'], ['can','textContractionCan'], ['his','textContractionHis'], ['not','textContractionNot'], ['out','textContractionOut'], ['was','textContractionWas'], ['you','textContractionYou'], ['and','textContractionAnd'], ['ble','textContractionBle'], ['day','textContractionDay'], ['for','textContractionFor'], ['ful','textContractionFul'], ['had','textContractionHad'], ['him','textContractionHim'], ['ing','textContractionIng'], ['its','textContractionIts'], ['ity','textContractionIty'], ['one','textContractionOne'], ['ong','textContractionOng'], ['out','textContractionOunt'], ['the','textContractionThe'], ['as','textContractionAs'], ['do','textContractionDo'], ['go','textContractionGo'], ['in','textContractionIn'], ['it','textContractionIt'], ['so','textContractionSo'], ['us','textContractionUs'], ['ar','textContractionAr'], ['bb','textContractionBb'], ['cc','textContractionCc'], ['ch','textContractionCh'], ['dd','textContractionDd'], ['ea','textContractionEa'], ['ed','textContractionEd'], ['en','textContractionEn'], ['er','textContractionEr'], ['ff','textContractionFf'], ['gg','textContractionGg'], ['gh','textContractionGh'], ['of','textContractionOf'], ['ou','textContractionOu'], ['ow','textContractionOw'], ['sh','textContractionSh'], ['st','textContractionSt'], ['th','textContractionTh'], ['wh','textContractionWh'], ['be','textContractionBe']]; // this is order from long to short
 	}
-	convert(text, gradeTwo=false) {
+	convert(text, gradeTwo=false, suppressNumberSign=false) {
 		let r = [];
 		let words = text.split(' ');
 		words.forEach( word => {
 			let w = word;
-			let numberSigned = false;
+			let supNumSign = suppressNumberSign;
 			// if w is a number, then add a number sign
 			if (this.isNumber(w)) {
-				r.push('textNumberSign');
-				numberSigned = true;
+				if (!suppressNumberSign) {
+					r.push('textNumberSign');
+					supNumSign = true;
+				}
 			} else if (this.isAllCaps(w)) {
 				r.push('textCapitalizeWord');
 				w = w.toLowerCase();
@@ -376,7 +560,7 @@ class MXTextTranslator {
 						r.push(wc.symbol);
 						w = w.substring(wc.charLength);
 					} else {
-						r.push(...this.convertChar(w.charAt(0),numberSigned));
+						r.push(...this.convertChar(w.charAt(0),supNumSign));
 						w = w.substring(1);
 					}
 				}
@@ -442,9 +626,12 @@ class MXSymbol {
 }
 
 class MXMeasure {
-	constructor(obj, divisions = 1) {
+	constructor(obj, measureIndex, partIndex, divisions = 1) {
 		this.obj = obj;
 		this.entries = [];
+		this.measureIndex = measureIndex;
+		this.partIndex = partIndex;
+		this.divisions = divisions;
 		this.parseAttributes();
 		this.parseEntries();
 	}
@@ -462,10 +649,10 @@ class MXMeasure {
 		if (this.obj.children('divisions').length) { // if this measure changes the divisions value
 			this.divisions = this.obj.child('divisions').data * 1;
 			// this.divisions = this.obj.getElementsByTagName('divisions')[0].innerHTML * 1;
-		} else {
-			this.divisions = divisions;
 		}
-		this.measureNumber = this.obj.child('number').data * 1;
+		this.measureNumber = this.obj.attr('number') * 1;
+		this.implicit = this.obj.attr('implicit');
+		
 	}
 	parseEntries() {
 		let currentChord = null;
@@ -532,56 +719,20 @@ class MXMeasure {
 					break;
 			}
 		});
+		currentChord.previousNote = previousNote;
 		this.entries.push(currentChord);
 	}
-	getChars(showKeyAndMeter = true) {
-		let r = [];
+	getCharString(showKeyAndMeter = true) {
+		let cs = [];
 		if (showKeyAndMeter) {
-			r.push(...getKeyChars(this.key));
-			r.push(...getMeterChars(this.meter));
+			cs.push(...getKeyCharString(this.key));
+			cs.push(...getMeterCharString(this.meter));
 		}
 		this.entries.forEach( e => {
-			r.push(...e.getEntryChars());
+			cs.push(...e.getEntryCharString());
 		});
-		return r;
+		return cs;
 	}
-	// getKeyChars() {
-	// 	let k = this.key;
-	// 	let r = [];
-	// 	if (k) {
-	// 		if (k.fifths>0) {
-	// 			if (k.fifths>3) {
-	// 				r.push('keySignaturePrefix');
-	// 				r.push('keySignatureMultiplier'+k.fifths);
-	// 				r.push('keySignatureSharp');
-	// 			} else {
-	// 				for (let i=1; i<=k.fifths; i++) {
-	// 					r.push('keySignatureSharp');
-	// 				}
-	// 			}
-	// 		} else if (k.fifths<0) {
-	// 			if (k.fifths<-3) {
-	// 				r.push('keySignaturePrefix');
-	// 				r.push('keySignatureMultiplier'+k.fifths);
-	// 				r.push('keySignatureFlat');
-	// 			} else {
-	// 				for (let i=-1; i>=k.fifths; i--) {
-	// 					r.push('keySignatureFlat');
-	// 				}
-	// 			}
-	// 		}
-	// 	}
-	// 	return r;
-	// }
-	// getMeterChars() {
-	// 	let r=[];
-	// 	if (this.meter) {
-	// 		r.push('timeSignaturePrefix');
-	// 		r.push('timeSignatureTop'+this.meter.beats);
-	// 		r.push('timeSignatureBottom'+this.meter.beatType);
-	// 	}
-	// 	return r;
-	// }
 }
 
 class MXEntry {
@@ -591,10 +742,10 @@ class MXEntry {
 		this.duration = duration;
 		this.previousNote = previousNote;
 	}
-	getEntryChars(spellDownward = true) {
+	getEntryCharString(spellDownward = true) {
 		switch (this.entryType) {
 			case 'chord':
-				return this.getChars(this.previousNote, spellDownward)
+				return this.getCharString(this.previousNote, spellDownward)
 		}
 	}
 }
@@ -621,20 +772,21 @@ class MXChord extends MXEntry {
 		}
 		return this.notes[0];
 	}
-	getChars(previousNote = null, spellDownward = true) { // if previousNote = null then show octave symbol
+	getCharString(previousNote = null, spellDownward = true) { // if previousNote = null then show octave symbol
 		if (this.notes.length>1) {
 			this.notes.sort((a,b) => { 
 				return spellDownward ? b.midiValue() - a.midiValue() : a.midiValue() - b.midiValue();
 			});
 		}
-		let r = [];
-		let includeOctave = (!previousNote || this.noteNeedsOctaveSign(previousNote,this.notes[0]));
-		r.push(...this.notes[0].getChars(includeOctave));
+		let cs = [];
+		let includeOctave = (this.notes[0].entryType=="note" && (!previousNote || this.noteNeedsOctaveSign(previousNote,this.notes[0])));
+		cs.push(...this.notes[0].getCharString(includeOctave));
 		let i = 1;
 		while (this.notes.length > i) {
-			r.push(...this.notes[i].getChordChars(this.notes[0],spellDownward));
+			cs.push(...this.notes[i].getChordCharString(this.notes[0],spellDownward));
+			i++;
 		}
-		return r;
+		return cs;
 	}
 	noteNeedsOctaveSign(baseNote,targetNote) {
 		return (((baseNote.octave == targetNote.octave) && Math.abs(targetNote.dpc()-baseNote.dpc())>5) ||
@@ -656,10 +808,14 @@ class MXNote {
 		this.dots = obj.children('dot').length;
 		this.accidental = obj.child('accidental').data;
 		this.type = obj.child('type').data;
+		this.entryType = 'note';
 		if (this.rest) {
-			this.type = (obj.child('rest').attr('measure') == 'yes') ? 'measure' : this.type;
+			this.entryType = 'rest';
+			if (obj.child('rest').attr('measure') == 'yes') {
+				this.type = 'measure';
+			}
 		} else if (obj.children('unpitched').length) {
-			this.type = 'unmeasured';
+			this.entryType = 'unpitched';
 		} else {
 			this.step = obj.child('step').data.toUpperCase();
 			this.alter = obj.child('alter').data * 1;
@@ -680,26 +836,23 @@ class MXNote {
 	dp(note = this) {
 		return (note.octave*7)+this.dpc(note.step);
 	} 
-	getChordChars(refNote, spellDownward) {
-		let r = [];
-		r.push(this.getAccidentalChars());
-		// let dpcVals = {'C':0, 'D':1, 'E':2, 'F':3, 'G':4, 'A':5, 'B':6}
-		// let base = (refNote.octave*7)+dpcVals[refNote.step];
-		// let target = (this.octave*7)+dpcVals[this.step];
-		let base = dp(refNote); //(refNote.octave*7)+this.dpc(refNote.step);
-		let target = dp(); // (this.octave*7)+this.dpc();
+	getChordCharString(refNote, spellDownward) {
+		let cs = [];
+		cs.push(...this.getAccidentalCharString());
+		let base = this.dp(refNote); //(refNote.octave*7)+this.dpc(refNote.step);
+		let target = this.dp(); // (this.octave*7)+this.dpc();
 		let diff = spellDownward ? (base-target) : (target-base);
 		let interval = (diff-1)%7; // interval value is offset by 2 (second = 0, third = 1, fourth = 2, etc.)
 		if (diff > 7) {
-			r.push(this.getOctaveChars());
+			cs.push(...this.getOctaveCharString());
 		}
-		r.push(['intervalSecond','intervalThird','intervalFourth','intervalFifth','intervalSixth','intervalSeventh'][interval]);
-		return r;
+		cs.push(['intervalSecond','intervalThird','intervalFourth','intervalFifth','intervalSixth','intervalSeventh'][interval]);
+		return cs;
 	}
-	getAccidentalChars() {
-		let r = [];
+	getAccidentalCharString() {
+		let cs = [];
 		if (this.accidental) {
-			r.push(...{
+			cs.push(...{
 				'':[],
 				'sharp':['accidentalSharp'],
 				'natural':['accidentalNatural'],
@@ -743,19 +896,19 @@ class MXNote {
 				'koron':['accidentalOneQuarterFlat']
 			}[this.accidental]);
 		}
-		return r;
+		return cs;
 	}
-	getOctaveChars() {
+	getOctaveCharString() {
 		return ['octave0','octave1','octave2','octave3','octave4','octave5','octave6','octave7','octave8'][this.octave+1];
 	}
-	getChars(includeOctave) {
-		let r = [];
-		r.push(...this.getAccidentalChars());
+	getCharString(includeOctave) {
+		let cs = [];
+		cs.push(...this.getAccidentalCharString());
 		if (includeOctave) {
-			r.push(this.getOctaveChars());
+			cs.push(this.getOctaveCharString());
 		}
 		if (this.rest) {
-			r.push(...{
+			cs.push(...{
 				'1024th':['restOneThousandTwentyFourth'],
 				'512th':['restFiveHundredTwelfth'],
 				'256th':['restTwoHundredFiftySixth'],
@@ -769,10 +922,11 @@ class MXNote {
 				'whole':['restWhole'],
 				'breve':['restDoubleWhole'],
 				'long':['restLonga'],
-				'maxima':['restMaxima']
+				'maxima':['restMaxima'],
+				'measure':['restWhole']
 			}[this.type]);
-		} else if (this.type == 'unpitched') {
-			r.push(...{ // change with stemless
+		} else if (this.entryType == 'unpitched') {
+			cs.push(...{ // change with stemless
 				'1024th':['noteOneThousandTwentyFourthC'],
 				'512th':['noteFiveHundredTwelfthC'],
 				'256th':['noteTwoHundredFiftySixthC'],
@@ -790,7 +944,7 @@ class MXNote {
 			}[this.type]);
 		} else {
 			let n = this.step;
-			r.push(...{
+			cs.push(...{
 				'1024th':['noteOneThousandTwentyFourth'+n],
 				'512th':['noteFiveHundredTwelfth'+n],
 				'256th':['noteTwoHundredFiftySixth'+n],
@@ -807,7 +961,7 @@ class MXNote {
 				'maxima':['noteMaxima'+n]
 			}[this.type]);
 		}
-		return r;
+		return cs;
 	}
 }
 
@@ -828,16 +982,25 @@ class MXNode {
 	}
 	children(s = null) {
 		let r = [];
-		if (s) {
-			[...this.el.getElementsByTagName(s)].forEach( e => {
-				r.push(new MXNode(e));
-			});
-		} else {
-			[...this.el.children].forEach( e => {
-				r.push(new MXNode(e));
-			});
+		if (this.el) {
+			if (s) {
+				[...this.el.getElementsByTagName(s)].forEach( e => {
+					r.push(new MXNode(e));
+				});
+			} else {
+				[...this.el.children].forEach( e => {
+					r.push(new MXNode(e));
+				});
+			}
 		}
 		return r;
+	}
+	hasChildren(s = null) {
+		if (s) {
+			return [...this.el.getElementsByTagName(s)].length > 0;
+		} else {
+			[...this.el.children].length > 0;
+		}
 	}
 	get data() {
 		if (this.el) {

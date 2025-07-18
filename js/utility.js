@@ -83,6 +83,10 @@ Array.prototype.clone = function() { // by "meouw" and "michael667" on http://st
     return arr;
 };
 
+function getChar(code) {
+	return String.fromCharCode(code);
+}
+
 function clearSelection() {
 	saveToUndo();
 	suspendUndo = true;
