@@ -8,6 +8,7 @@ var brailleUnicode=[240,286,256,300,283,281,287,244,295,302,273,284,272,276,280,
 
 function initializeBMViewers(fontURL = "https://tobyrush.com/braillemusic/notator/cellfonts/en/classic.xml") {
 	var u;
+	
 	convertASCIIBraille();
 	if (fontURL.match(/\:\/\//g).length) {
 		u = new URL(fontURL,document.location);
@@ -68,6 +69,9 @@ class bmviewer {
 		this.vScroll = 0;
 		this.readParams(params);
 		this.updateSizes();
+		this.doc.fonts.ready.then(() => {
+		  this.drawNotation();
+		});
 	}
 	
 	updateSizes() {
@@ -240,14 +244,50 @@ class bmviewer {
 		}
 	}
 	
+	// loadScore() {
+	// 	if (this.object.hasAttribute("data")) {
+	// 		var r = new XMLHttpRequest();
+	// 		var u = new URL(this.object.getAttribute("data"),document.location);
+	// 		var o = this;
+	// 		r.addEventListener("load", function() {
+	// 			o.parseScore(this.responseXML);
+	// 		});
+	// 		r.open("GET", u);
+	// 		r.send();
+	// 	} else {
+	// 		this.parseScore(this.object);
+	// 	}
+	// }
+	
 	loadScore() {
 		if (this.object.hasAttribute("data")) {
 			var r = new XMLHttpRequest();
-			var u = new URL(this.object.getAttribute("data"),document.location);
+			var u = new URL(this.object.getAttribute("data"), document.location);
 			var o = this;
-			r.addEventListener("load", function() {
-				o.parseScore(this.responseXML);
+			r.addEventListener("load", function () {
+				let xml = this.responseXML;
+				// Fallback if XML wasn't parsed due to MIME type
+				if (!xml && this.responseText) {
+					try {
+						const parser = new DOMParser();
+						xml = parser.parseFromString(this.responseText, "application/xml");
+						if (xml.documentElement.nodeName === "parsererror") {
+							console.error("Error parsing BRM as XML:", xml.documentElement.textContent);
+							xml = null;
+						}
+					} catch (e) {
+						console.error("Exception while parsing fallback BRM XML:", e);
+						xml = null;
+					}
+				}
+	
+				if (xml) {
+					o.parseScore(xml);
+				} else {
+					console.error("Could not load or parse BRM file:", u.href);
+				}
 			});
+	
 			r.open("GET", u);
 			r.send();
 		} else {
