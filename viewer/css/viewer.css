@@ -3,6 +3,6 @@
 	font-family: 'Bravura';
 	font-weight: normal;
 	font-style: normal;
-	src: url('../font/bravura/Bravura.eot');
-	src: url('../font/bravura/Bravura.eot?#iefix') format('embedded-opentype'), local('Bravura'), url('../font/bravura/Bravura.woff') format('woff'), url('../font/bravura/Bravura.otf') format('opentype');
+	src: url('https://tobyrush.com/braillemusic/viewer/font/bravura/Bravura.woff') format('woff'),
+	   url('https://tobyrush.com/braillemusic/viewer/font/bravura/Bravura.otf') format('opentype');
 }
