@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 540 123" style="enable-background:new 0 0 540 123;" xml:space="preserve">
+<style type="text/css">
+	.st0{font-family:'Bravura';}
+	.st1{font-size:16.4px;}
+	.st2{fill:none;stroke:#000000;stroke-width:2.05;}
+	.st3{fill:none;stroke:#000000;stroke-width:0.657;}
+	.st4{fill:none;stroke:#000000;stroke-width:0.534;}
+</style>
+<font horiz-adv-x="1000">
+<!-- Bravura is a registered trademark of Steinberg Media Technologies GmbH in the European Union and other territories. -->
+<!-- Copyright: Copyright 2023 Adobe System Incorporated. All rights reserved. -->
+<font-face font-family="Bravura" units-per-em="1000" underline-position="-100" underline-thickness="50"/>
+<missing-glyph horiz-adv-x="297"/>
+<glyph unicode="&#xE050;" horiz-adv-x="671" d="M376,415C374,427 376,428 382,434C490,535 572,662 572,815C572,902 548,988 507,1048C492,1070 466,1098 455,1098C441,1098 410,1072 390,1050C316,968 292,843 292,739C292,681 299,616 306,575C308,563 309,561 297,551C153,432 0,289 0,87C0,-87 119,-252 364,-252C387,-252 413,-250 433,-246C444,-244 446,-243 448,-255C460,-322 475,-409 475,-456C475,-604 375,-622 316,-622C262,-622 236,-606 236,-593C236,-586 245,-583 268,-576C299,-567 335,-540 335,-482C335,-427 300,-380 239,-380C172,-380 132,-433 132,-495C132,-560 171,-658 322,-658C389,-658 519,-628 519,-458C519,-401 501,-306 490,-244C488,-232 489,-233 503,-227C604,-187 671,-102 671,11C671,139 577,252 430,252C404,252 404,252 401,270M470,943C503,943 530,916 530,861C530,750 435,660 356,591C349,585 345,586 343,599C339,625 337,659 337,691C337,847 409,943 470,943M361,262C364,243 364,244 346,238C258,208 201,129 201,44C201,-46 248,-110 316,-133C324,-136 336,-139 343,-139C351,-139 355,-134 355,-128C355,-121 347,-118 340,-115C298,-97 268,-54 268,-8C268,49 307,92 368,109C384,113 386,112 388,101l50,-298C440,-208 439,-208 424,-211C408,-214 388,-216 368,-216C193,-216 80,-119 80,20C80,79 90,158 173,252C233,319 279,356 326,394C336,402 338,401 340,390M430,103C428,115 429,118 441,117C522,110 589,42 589,-46C589,-109 551,-160 495,-188C483,-194 481,-194 479,-182z"/>
+<glyph unicode="&#xE0A2;" horiz-adv-x="422" d="M216,125C83,125 0,70 0,2C0,-65 57,-125 206,-125C370,-125 422,-68 422,2C422,73 309,125 216,125M111,63C122,98 159,103 190,103C259,103 314,29 314,-31C314,-62 301,-90 268,-98C258,-101 247,-102 237,-102C201,-102 164,-78 143,-50C123,-27 108,7 108,39C108,47 109,55 111,63z"/>
+</font>
+
+	<g id="Music">
+	<text transform="matrix(1 0 0 1 248.904 61.842)" class="st0 st1"></text>
+	<line class="st2" x1="294.2" y1="49.5" x2="294.2" y2="65.9"/>
+	<line class="st3" x1="291.2" y1="49.5" x2="291.2" y2="65.9"/>
+	<line class="st4" x1="244.8" y1="49.5" x2="295.2" y2="49.5"/>
+	<line class="st4" x1="244.8" y1="53.6" x2="295.2" y2="53.6"/>
+	<line class="st4" x1="244.8" y1="57.7" x2="295.2" y2="57.7"/>
+	<line class="st4" x1="244.8" y1="61.8" x2="295.2" y2="61.8"/>
+	<line class="st4" x1="244.8" y1="65.9" x2="295.2" y2="65.9"/>
+	<text transform="matrix(1 0 0 1 267.013 55.692)" class="st0 st1"></text>
+	<text transform="matrix(1 0 0 1 267.013 61.842)" class="st0 st1"></text>
+	<text transform="matrix(1 0 0 1 267.013 65.942)" class="st0 st1"></text>
+	<line class="st3" x1="265.3" y1="70" x2="275.7" y2="70"/>
+	<text transform="matrix(1 0 0 1 267.013 70.042)" class="st0 st1"></text>
+</g>
+</svg>

@@ -46,43 +46,43 @@ function doNotationDrop(e) {
 	var file = files[0];
 	
 	if (scoreIsEmpty() || confirm(kUnsavedChangesDialogMessage)) {
-        currentFileName = removeExtension(file.name);
-        reader.readAsText(file);
-    }
+		currentFileName = removeExtension(file.name);
+		reader.readAsText(file);
+	}
 
   return false;
 }
 
 function doNewFile() {
-    if (scoreIsEmpty() || confirm(kUnsavedChangesDialogMessage)) {
-        clearDocument();
-        drawNotation();
-        resetCursorAndScroll();
-    }
+	if (scoreIsEmpty() || confirm(kUnsavedChangesDialogMessage)) {
+		clearDocument();
+		drawNotation();
+		resetCursorAndScroll();
+	}
 }
 
 function doOpenFile() {
-    if (scoreIsEmpty() || confirm(kUnsavedChangesDialogMessage)) {
-        fileUploader.click();
-        resetCursorAndScroll();
-    }
+	if (scoreIsEmpty() || confirm(kUnsavedChangesDialogMessage)) {
+		fileUploader.click();
+		resetCursorAndScroll();
+	}
 }
 
 function doSaveFile() {
-    downloadBRMFile();
+	downloadBRMFile();
 }
 
 function doExportFile() {
-    downloadFile(true);
+	downloadFile(true);
 }
 
 function doFileLoad(e) {
 	if (fileUploader.files.length) {
-        var file = fileUploader.files[0];
-        currentFileName = removeExtension(file.name);
-        reader.readAsText(file);
-        fileUploader.value="";
-    }
+		var file = fileUploader.files[0];
+		currentFileName = removeExtension(file.name);
+		reader.readAsText(file);
+		fileUploader.value="";
+	}
 }
 
 function checkFileType(fileData) {
@@ -97,9 +97,9 @@ function checkFileType(fileData) {
 	// } else if (doc.getElementsByTagName("score-braille").length) {
 	if (doc.getElementsByTagName("score-braille").length) {
 		openBRMFile(fileData);
-    } else {
-        importData(fileData);
-    }
+	} else {
+		importData(fileData);
+	}
 }
 
 function openBRMFile(fileData) {
@@ -255,7 +255,7 @@ function importData(fileData) {
 		suspendUndo = false;
 		cursor.x=0;
 		cursor.y=0;
-        fileLoading = false;
+		fileLoading = false;
 		drawNotation();
 	}
 }
@@ -315,50 +315,50 @@ function downloadBRMFile() {
 
 function downloadFile() {
 	var getFileName;
-    var ext = optionKeyDown ? '.dxb' : '.brf';
+	var ext = optionKeyDown ? '.dxb' : '.brf';
 	if (shiftKeyDown || (getFileName = window.prompt('Save file as:', removeExtension(currentFileName)+ext))) {
-        if (!shiftKeyDown) {
-            currentFileName = getFileName;
-        }
-        var fileString="";
-        var rightMargin=scoreWidth();
-        if (showPageBreaks) {
-            rightMargin=pageWidth-1;
-        }
-        for (var row=0; row<score.length; row+=1) {
-            if ((typeof score[row]!=='undefined') && (score[row]!==null)) {
-                for (var col=0; col<=Math.min(score[row].length,rightMargin); col+=1) {
-                    if ((typeof score[row][col]!=='undefined') && (score[row][col]>0)) {
-                        fileString=fileString+String.fromCharCode(score[row][col] % 100);
-                    } else {
-                        fileString=fileString+" ";
-                    }
-                }
-                fileString=fileString+String.fromCharCode(13)+String.fromCharCode(10);
-                if (showPageBreaks && ((row+1) % pageHeight) === 0) {
-                    fileString=fileString+String.fromCharCode(12);
-                }
-            } else {
-                fileString=fileString+String.fromCharCode(13)+String.fromCharCode(10);
-                if (showPageBreaks && ((row+1) % pageHeight) === 0) {
-                    fileString=fileString+String.fromCharCode(12);
-                }
-            }
-        }
+		if (!shiftKeyDown) {
+			currentFileName = getFileName;
+		}
+		var fileString="";
+		var rightMargin=scoreWidth();
+		if (showPageBreaks) {
+			rightMargin=pageWidth-1;
+		}
+		for (var row=0; row<score.length; row+=1) {
+			if ((typeof score[row]!=='undefined') && (score[row]!==null)) {
+				for (var col=0; col<=Math.min(score[row].length,rightMargin); col+=1) {
+					if ((typeof score[row][col]!=='undefined') && (score[row][col]>0)) {
+						fileString=fileString+String.fromCharCode(score[row][col] % 100);
+					} else {
+						fileString=fileString+" ";
+					}
+				}
+				fileString=fileString+String.fromCharCode(13)+String.fromCharCode(10);
+				if (showPageBreaks && ((row+1) % pageHeight) === 0) {
+					fileString=fileString+String.fromCharCode(12);
+				}
+			} else {
+				fileString=fileString+String.fromCharCode(13)+String.fromCharCode(10);
+				if (showPageBreaks && ((row+1) % pageHeight) === 0) {
+					fileString=fileString+String.fromCharCode(12);
+				}
+			}
+		}
 
-        if (optionKeyDown) {
+		if (optionKeyDown) {
 			writeDXBFile(fileString);
 		} else {
 			var file=document.createElement('a');
 	
-        	file.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileString));
-        	file.setAttribute('download', currentFileName);
-        	file.setAttribute('target', '_blank');
+			file.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileString));
+			file.setAttribute('download', currentFileName);
+			file.setAttribute('target', '_blank');
 	
-        	var clickEvent = new MouseEvent("click", {"view": window, "bubbles": true, "cancelable": false});
-        	file.dispatchEvent(clickEvent);
+			var clickEvent = new MouseEvent("click", {"view": window, "bubbles": true, "cancelable": false});
+			file.dispatchEvent(clickEvent);
 		}
-    }
+	}
 
 
 }
@@ -477,15 +477,15 @@ function parseData(fileData,includeText = true) {
 	
 	
 	fileData = fileData.replace(/[\r\n]+/g,String.fromCharCode(13));
-    fileData = fileData.replace(/\s+([%<*]{1,3}|#[d-g][%<*]|)(#[A-Ia-i]+[1-9]+|[._]C)/g, convertTimeAndKeySignature); // initial time and key signature line
+	fileData = fileData.replace(/\s+([%<*]{1,3}|#[d-g][%<*]|)(#[A-Ia-i]+[1-9]+|[._]C)/g, convertTimeAndKeySignature); // initial time and key signature line
 	fileData = fileData.replace(/[#][A-Ja-j][0-9]/g, convertTimeSignature); // isolated time signatures
-    fileData = fileData.replace(/CREDIT-DUMP/g, ""); // remove "credit dump" message
-    fileData = fileData.replace(/([dDnNyY?ɍɂȳȸ]'*)(7#|ȫȗ)([a-i,ʙ-ʢ,ȵ-Ⱦ]{1,3})/g, convertMetronomeMarking); // metronome marking
+	fileData = fileData.replace(/CREDIT-DUMP/g, ""); // remove "credit dump" message
+	fileData = fileData.replace(/([dDnNyY?ɍɂȳȸ]'*)(7#|ȫȗ)([a-i,ʙ-ʢ,ȵ-Ⱦ]{1,3})/g, convertMetronomeMarking); // metronome marking
 	if (includeText) {
-        fileData = fileData.replace(/\x0D\s*(#*[A-Ja-j]+) /g, convertMeasureNumbers); // measure numbers
-    }
+		fileData = fileData.replace(/\x0D\s*(#*[A-Ja-j]+) /g, convertMeasureNumbers); // measure numbers
+	}
 	fileData = fileData.replace(/[7]([A-Za-z "]+)[7]/g, convertParenthesizedText); // convert isolated parentheticals to text
-    fileData = fileData.replace(/[^¥¦§¨©ª«¬­®0-9](7)/g, convertMeasureRepeats); // measure repeat character
+	fileData = fileData.replace(/[^¥¦§¨©ª«¬­®0-9](7)/g, convertMeasureRepeats); // measure repeat character
 	fileData = fileData.replace(/>\/l/g, String.fromCharCode(662,647,676)); // treble clef
 	fileData = fileData.replace(/>\+l/g, String.fromCharCode(662,643,676)); // alto clef
 	fileData = fileData.replace(/>\+"l/g, String.fromCharCode(662,643,634,676)); // tenor clef
@@ -526,7 +526,7 @@ function parseData(fileData,includeText = true) {
 	fileData = fileData.replace(/[,][<][1]/g, String.fromCharCode(244,660,349)); // read as smaller notes
 	fileData = fileData.replace(/["][\s]*[\n\r]/g, convertBrailleMusicHyphen); // braille music hyphen
 	fileData = fileData.replace(/([<][1])/g, String.fromCharCode(660,349)); // braille music comma
-    fileData = fileData.replace(/[,][']/g, String.fromCharCode(344,339)); // music prefix
+	fileData = fileData.replace(/[,][']/g, String.fromCharCode(344,339)); // music prefix
 	fileData = fileData.replace(/[defghijDEFGHIJnopqrstNOPQRSTyzYZ&=(!)][']*([abklABKL1][cC]?[abklABKL1]?)/g, convertFingerings); // fingering
 	fileData = fileData.replace(/[5]{1,2}[defghijDEFGHIJnopqrstNOPQRSTyzYZ&=(!)*<%@^,._";]/g, convertGraceNotes); // grace notes
 	
@@ -557,12 +557,12 @@ function parseData(fileData,includeText = true) {
 	fileData = fileData.replace(/["][1]/g, String.fromCharCode(334,749)); // partial measure in-accord
 	fileData = fileData.replace(/[^A-Ja-j]([7])/g, convertRepeatSymbols); // convert any remaining repeat symbols
 
-    fileData = fileData.replace(/[>]([a-zA-Z]+)/g, convertPrefixedWord); // any text left flagged with the word prefix
+	fileData = fileData.replace(/[>]([a-zA-Z]+)/g, convertPrefixedWord); // any text left flagged with the word prefix
 	
-    if (includeText) {
-        fileData = convertTitlesToText(fileData);
-        fileData = convertStrangeSequencesToText(fileData);
-    }
+	if (includeText) {
+		fileData = convertTitlesToText(fileData);
+		fileData = convertStrangeSequencesToText(fileData);
+	}
 	
 	fileData = currentCellFont.parseLowASCII(fileData);
 
@@ -571,107 +571,107 @@ function parseData(fileData,includeText = true) {
 }
 
 function convertTitlesToText(fileData) {
-    var result = "";
-    var titlesDone = false;
-    fileData.split(String.fromCharCode(13)).forEach(function(row) {
-        if (!titlesDone && (
-            row.match(/^ +([ ]{1,3}|ë[ČčĎď][ ]|)(#[¥-®1-9]+[0-9]+|[Ã]Ǔ)/g) ||
-            row.match(/^[#]?[A-J]+ /g)
-        )) {
-            titlesDone = true;
-        }
-        if (titlesDone) {
-            result = result + row + String.fromCharCode(13);
-        } else {
-            result = result + convertImportedStringToText(row) + String.fromCharCode(13);
-        }
-    });
-    return result;
+	var result = "";
+	var titlesDone = false;
+	fileData.split(String.fromCharCode(13)).forEach(function(row) {
+		if (!titlesDone && (
+			row.match(/^ +([ ]{1,3}|ë[ČčĎď][ ]|)(#[¥-®1-9]+[0-9]+|[Ã]Ǔ)/g) ||
+			row.match(/^[#]?[A-J]+ /g)
+		)) {
+			titlesDone = true;
+		}
+		if (titlesDone) {
+			result = result + row + String.fromCharCode(13);
+		} else {
+			result = result + convertImportedStringToText(row) + String.fromCharCode(13);
+		}
+	});
+	return result;
 }
 
 function convertStrangeSequencesToText(fileData) {
-    var result = "";
-    fileData.split(String.fromCharCode(13)).forEach(function(row) {
-       row.split(" ").forEach(function(word) {
-          result = result + checkForMusicSanity(word) + " ";
-       });
-        result = result + String.fromCharCode(13);
-    });
-    return result;
+	var result = "";
+	fileData.split(String.fromCharCode(13)).forEach(function(row) {
+	   row.split(" ").forEach(function(word) {
+		  result = result + checkForMusicSanity(word) + " ";
+	   });
+		result = result + String.fromCharCode(13);
+	});
+	return result;
 }
 
 function checkForMusicSanity(s) {
-    if (
-        s.match(/#[^¥-­]/g) || // meter prefix not followed top meter number
-        s.match(/[^¥-­][0-9]+/g) // bottom meter numbers not preceeded by top meter numbers
-    ) {
-        return convertImportedStringToText(s);
-    } else {
-        return s;
-    }
+	if (
+		s.match(/#[^¥-­]/g) || // meter prefix not followed top meter number
+		s.match(/[^¥-­][0-9]+/g) // bottom meter numbers not preceeded by top meter numbers
+	) {
+		return convertImportedStringToText(s);
+	} else {
+		return s;
+	}
 }
 
 function parseIPA(fileData) {
-    // use ipaBrailleMap() to convert
-    var s = fileData.split("");
-    var i,n = "";
-    s.forEach(function(t) {
-        i = ipaBrailleMap[t.charCodeAt(0)];
-        if (i) {
-            i.forEach(function(u) {
-                n = n + String.fromCharCode(u);
-            });
-        } else {
-            n = n + t;
-        }
-    });
+	// use ipaBrailleMap() to convert
+	var s = fileData.split("");
+	var i,n = "";
+	s.forEach(function(t) {
+		i = ipaBrailleMap[t.charCodeAt(0)];
+		if (i) {
+			i.forEach(function(u) {
+				n = n + String.fromCharCode(u);
+			});
+		} else {
+			n = n + t;
+		}
+	});
 
-    return n;
+	return n;
 }
 
 function parseText(fileData) {
 
-    kCommonWords.forEach(function(a) {
-        fileData = fileData.replaceAll(a[0],a[1]);
-    });
+	kCommonWords.forEach(function(a) {
+		fileData = fileData.replaceAll(a[0],a[1]);
+	});
 	fileData = fileData.replace(/#[A-J]+4*[A-J]*/g, convertBrailleLettersToNumbers); // convert letters after pound sign to numbers
 	fileData = fileData.replace(/^([a-zA-Z*%:?\\257890/])(?=\s)/g, convertSingleLetterWordAbbreviation); // convert text abbreviations
 	fileData = fileData.replace(/[\s,]([a-zA-Z*%:?\\257890/])(?=\s)/g, convertSingleLetterWordAbbreviation); // convert text abbreviations
 	fileData = fileData.replace(/(\s|^)([-23460])[A-Za-z]/g, convertSingleLetterPrefixAbbreviation); // convert text abbreviations
-    fileData = fileData.replace(/(["^_.;@]{1,2}[A-Za-z!:,\/\\*&%?567890<>\-])/g, convertTextAbbreviation); // convert text abbreviations
+	fileData = fileData.replace(/(["^_.;@]{1,2}[A-Za-z!:,\/\\*&%?567890<>\-])/g, convertTextAbbreviation); // convert text abbreviations
 	fileData = fileData.replace(/(,[A-Za-z!:\\*?078])/g, convertTextAbbreviation); // convert text abbreviations
-    fileData = fileData.replace(/(,?8)[A-Za-z&=(!),*<%?:$\]\\\[234567890/>"^_]/g, convertOpenQuote); // convert open quotation mark
-    fileData = fileData.replace(/[A-Z />&=(!)+#*<%?:$\]\\\[.0-9](,?0)/g, convertCloseQuote); // convert close quotation mark
-    fileData = fileData.replace(/[A-Za-z/>&=(!)+#*<%?:$\[\\\]0-9";._@^]([1-79])(\s|$)/g, convertEndOfWordNumbers); // numbers inside words are contractions
-    fileData = fileData.replace(/([1-79])[A-Za-z/>&=(!)+#*<%?:$\[\\\]0-9";._@^]/g, convertMidWordNumbers); // numbers inside words are contractions
-    fileData = fileData.replace(/[A-Za-z/>&=(!)+#*<%?:$\[\\\]0-9";._@^]([1-79])/g, convertMidWordNumbers); // numbers inside words are contractions
-    fileData = fileData.replace(/,[/>+*<%?\-:$\]\\\[123456790]/g, convertCapitalizedContraction); // single-cell contractions preceded by the capital sign
-    return fileData;
+	fileData = fileData.replace(/(,?8)[A-Za-z&=(!),*<%?:$\]\\\[234567890/>"^_]/g, convertOpenQuote); // convert open quotation mark
+	fileData = fileData.replace(/[A-Z />&=(!)+#*<%?:$\]\\\[.0-9](,?0)/g, convertCloseQuote); // convert close quotation mark
+	fileData = fileData.replace(/[A-Za-z/>&=(!)+#*<%?:$\[\\\]0-9";._@^]([1-79])(\s|$)/g, convertEndOfWordNumbers); // numbers inside words are contractions
+	fileData = fileData.replace(/([1-79])[A-Za-z/>&=(!)+#*<%?:$\[\\\]0-9";._@^]/g, convertMidWordNumbers); // numbers inside words are contractions
+	fileData = fileData.replace(/[A-Za-z/>&=(!)+#*<%?:$\[\\\]0-9";._@^]([1-79])/g, convertMidWordNumbers); // numbers inside words are contractions
+	fileData = fileData.replace(/,[/>+*<%?\-:$\]\\\[123456790]/g, convertCapitalizedContraction); // single-cell contractions preceded by the capital sign
+	return fileData;
 }
 
 function convertOpenQuote(fullString,quote) {
-    var r=quote.replaceAll("8",String.fromCharCode(456));
-    r=r.replaceAll(",",String.fromCharCode(644));
-    return fullString.replaceAll(quote,r);
+	var r=quote.replaceAll("8",String.fromCharCode(456));
+	r=r.replaceAll(",",String.fromCharCode(644));
+	return fullString.replaceAll(quote,r);
 }
 
 function convertCloseQuote(fullString,quote) {
-    var r=quote.replaceAll("0",String.fromCharCode(548));
-    r=r.replaceAll(",",String.fromCharCode(644));
-    return fullString.replaceAll(quote,r);
+	var r=quote.replaceAll("0",String.fromCharCode(548));
+	r=r.replaceAll(",",String.fromCharCode(644));
+	return fullString.replaceAll(quote,r);
 }
 
 function convertCapitalizedContraction(fullString) {
-    var t = fullString.charCodeAt(1);
-    if (t == 45 || (t>47 && t<58)) {
-        return String.fromCharCode(544,t+600);
-    } else {
-        return String.fromCharCode(544,t+500);
-    }
+	var t = fullString.charCodeAt(1);
+	if (t == 45 || (t>47 && t<58)) {
+		return String.fromCharCode(544,t+600);
+	} else {
+		return String.fromCharCode(544,t+500);
+	}
 }
 
 function convertEndOfWordNumbers(fullString,nums) {
-    var newString = "";
+	var newString = "";
 	for (var i=0; i<nums.length; i++) {
 		newString = newString + String.fromCharCode(nums.charCodeAt(i)+500);
 	}
@@ -679,7 +679,7 @@ function convertEndOfWordNumbers(fullString,nums) {
 }
 
 function convertMidWordNumbers(fullString,nums) {
-    var newString = "";
+	var newString = "";
 	for (var i=0; i<nums.length; i++) {
 		newString = newString + String.fromCharCode(nums.charCodeAt(i)+600);
 	}
@@ -687,19 +687,19 @@ function convertMidWordNumbers(fullString,nums) {
 }
 
 function convertTextAbbreviation(fullString,str) {
-    return fullString.replaceAll(str,kTextAbbreviations.getPropertyOrValue(str.toLowerCase(),str));
+	return fullString.replaceAll(str,kTextAbbreviations.getPropertyOrValue(str.toLowerCase(),str));
 }
 
 function convertMeasureRepeats(fullString,str) {
-    return fullString.replaceAll(str,String.fromCharCode(155));
+	return fullString.replaceAll(str,String.fromCharCode(155));
 }
 
 function convertSingleLetterPrefixAbbreviation(fullString,z,str) {
-    return fullString.replaceAll(str,kPrefixAbbreviations.getPropertyOrValue(str.toLowerCase(),str));
+	return fullString.replaceAll(str,kPrefixAbbreviations.getPropertyOrValue(str.toLowerCase(),str));
 }
 
 function convertSingleLetterWordAbbreviation(fullString,str) {
-    return fullString.replaceAll(str,kWordAbbreviations.getPropertyOrValue(str.toLowerCase(),str));
+	return fullString.replaceAll(str,kWordAbbreviations.getPropertyOrValue(str.toLowerCase(),str));
 }
 
 function convertTrill(fullString,trill) {
@@ -780,11 +780,11 @@ function convertHandPrefix(str) {
 }
 
 function convertMeasureNumbers(str) {
-    var newStr = "";
-    var val;
-    for (var i=0; i<str.length; i++) {
-        val=str.charCodeAt(i);
-        if (val == 32) {
+	var newStr = "";
+	var val;
+	for (var i=0; i<str.length; i++) {
+		val=str.charCodeAt(i);
+		if (val == 32) {
 			newStr = newStr + " ";
 		} else if (val == 34) {
 			newStr = newStr + String.fromCharCode(234);
@@ -793,14 +793,14 @@ function convertMeasureNumbers(str) {
 		} else {
 			newStr = newStr + String.fromCharCode(val);
 		}
-    }
-    return newStr;
+	}
+	return newStr;
 }
 
 function convertImportedStringToText(str) { 
 	var newStr = "";
 	var val;
-    var pStr = parseText(str);
+	var pStr = parseText(str);
 	for (var i=0; i<pStr.length; i++) {
 		val=pStr.charCodeAt(i);
 		if ((val>96) && (val<123)) { // convert lower case to upper case
@@ -857,7 +857,7 @@ function convertTimeAndKeySignature(fullMatch, keySig, timeSig) {
 
 	var newKeySig = "";
 	var newTimeSig = "";
-    var i;
+	var i;
 	var val;
 	for (i=0; i<keySig.length; i++) {
 		val=keySig.charCodeAt(i);
@@ -891,7 +891,7 @@ function convertTimeAndKeySignature(fullMatch, keySig, timeSig) {
 				if (currentBeatUnit != 32) {
 					currentBeatUnit = 2;
 				}
-                break;
+				break;
 			case 51: // 3
 				currentBeatUnit = 32;
 				break;
@@ -958,16 +958,16 @@ function convertBrailleLettersToNumbers(str) {
 	var val, lval;
 	for (var i=0; i<str.length; i++) {
 		val=str.charCodeAt(i);
-        lval = val % 100;
-        if (lval>64 && lval<75) {
-            newStr = newStr + String.fromCharCode(lval + 600);
-        } else {
-            if (lval == 35) {
-                newStr = newStr + String.fromCharCode(535);
-            } else {
-                newStr = newStr + String.fromCharCode(val);
-            }
-        }
+		lval = val % 100;
+		if (lval>64 && lval<75) {
+			newStr = newStr + String.fromCharCode(lval + 600);
+		} else {
+			if (lval == 35) {
+				newStr = newStr + String.fromCharCode(535);
+			} else {
+				newStr = newStr + String.fromCharCode(val);
+			}
+		}
 	}
 	return newStr;
 }
@@ -988,77 +988,77 @@ function convertBrailleMusicHyphen(str) {
 
 function getImportParameters() {
 
-    var s = '<?xml version="1.0" encoding="UTF-8"?><param-braillemuse>' +
-        '<LangType>Eng</LangType>' +
-        '<ChordType>0</ChordType>' +
-        '<num_measure_per_line>2</num_measure_per_line>' +
-        '<NumMeasureLines></NumMeasureLines>' +
-        '<page_length>' + pageHeight + '</page_length>' +
-        '<page_width>' + pageWidth + '</page_width>' +
-        '<octave_mark>2</octave_mark>' +
-        '<BeamGroup>1</BeamGroup>' +
-        '<TypeMelody>5</TypeMelody>' +
-        '<PartialInAccord>100</PartialInAccord>' +
-        '<fifthPoint>3</fifthPoint>' +
-        '<accident_5th>1</accident_5th>' +
-        '<measure_repeat>1</measure_repeat>' +
-        '<measure_num>5</measure_num>' +
-        '<abre_staccato>4</abre_staccato>' +
-        '<slur_reconst>3</slur_reconst>' +
-        '<MoveDirectionToRight>0</MoveDirectionToRight>' +
-        '<rm_pedal>1</rm_pedal>' +
-        '<ornament>1</ornament>' +
-        '<expression_word>1</expression_word>' +
-        '<clef_mark>0</clef_mark>' +
-        '<multipart_selection>3</multipart_selection>' +
-        '<partnumber_selection>1</partnumber_selection>' +
-        '<print_header>0</print_header>' +
-        '<lyric_selection>0</lyric_selection>' +
-        '<harmony>0</harmony>' +
-        '<transcription_notes>0</transcription_notes>' +
-        '<select_part>0</select_part>' +
-        '<chord_order>0</chord_order>' +
-        '<titel_type>1</titel_type>' +
-        '</param-braillemuse>';
+	var s = '<?xml version="1.0" encoding="UTF-8"?><param-braillemuse>' +
+		'<LangType>Eng</LangType>' +
+		'<ChordType>0</ChordType>' +
+		'<num_measure_per_line>2</num_measure_per_line>' +
+		'<NumMeasureLines></NumMeasureLines>' +
+		'<page_length>' + pageHeight + '</page_length>' +
+		'<page_width>' + pageWidth + '</page_width>' +
+		'<octave_mark>2</octave_mark>' +
+		'<BeamGroup>1</BeamGroup>' +
+		'<TypeMelody>5</TypeMelody>' +
+		'<PartialInAccord>100</PartialInAccord>' +
+		'<fifthPoint>3</fifthPoint>' +
+		'<accident_5th>1</accident_5th>' +
+		'<measure_repeat>1</measure_repeat>' +
+		'<measure_num>5</measure_num>' +
+		'<abre_staccato>4</abre_staccato>' +
+		'<slur_reconst>3</slur_reconst>' +
+		'<MoveDirectionToRight>0</MoveDirectionToRight>' +
+		'<rm_pedal>1</rm_pedal>' +
+		'<ornament>1</ornament>' +
+		'<expression_word>1</expression_word>' +
+		'<clef_mark>0</clef_mark>' +
+		'<multipart_selection>3</multipart_selection>' +
+		'<partnumber_selection>1</partnumber_selection>' +
+		'<print_header>0</print_header>' +
+		'<lyric_selection>0</lyric_selection>' +
+		'<harmony>0</harmony>' +
+		'<transcription_notes>0</transcription_notes>' +
+		'<select_part>0</select_part>' +
+		'<chord_order>0</chord_order>' +
+		'<titel_type>1</titel_type>' +
+		'</param-braillemuse>';
 
-    return s;
+	return s;
 
 }
 
 function sendToBrailleMUSE(xmlFile) {
 
-    var formData = new FormData();
+	var formData = new FormData();
 
-    var content = '' + getImportParameters();
-    var blob3 = new Blob([content], { type: "text/xml"});
-    formData.append("upload_p", blob3);
+	var content = '' + getImportParameters();
+	var blob3 = new Blob([content], { type: "text/xml"});
+	formData.append("upload_p", blob3);
 
-    content = xmlFile;
-    var blob4 = new Blob([content], { type: "text/xml"});
-    formData.append("upload_m", blob4, currentFileName);
+	content = xmlFile;
+	var blob4 = new Blob([content], { type: "text/xml"});
+	formData.append("upload_m", blob4, currentFileName);
 
-    var request = new window.XMLHttpRequest();
-    request.open("POST","https://www.braillemuse.net/BrailleMUSE/servlet/BrailleMuseForToby_c2",true);
-    request.setRequestHeader("Accept", "application/json, text/javascript, */*; q=0.01");
-    request.setRequestHeader("Accept-Language","en-us");
-    request.onload = function() {
-        if (this.status >= 200 && this.status < 400) {
-            var fileData = hexToDec(this.response).split(String.fromCharCode(12))[2];
-            importData(fileData);
-        } else {
-            // server error
-        }
-    };
-    request.onerror = function() {
-        // connection error
-    };
-    request.send(formData);
+	var request = new window.XMLHttpRequest();
+	request.open("POST","https://www.braillemuse.net/BrailleMUSE/servlet/BrailleMuseForToby_c2",true);
+	request.setRequestHeader("Accept", "application/json, text/javascript, */*; q=0.01");
+	request.setRequestHeader("Accept-Language","en-us");
+	request.onload = function() {
+		if (this.status >= 200 && this.status < 400) {
+			var fileData = hexToDec(this.response).split(String.fromCharCode(12))[2];
+			importData(fileData);
+		} else {
+			// server error
+		}
+	};
+	request.onerror = function() {
+		// connection error
+	};
+	request.send(formData);
 }
 
 function hexToDec(val) {
-    var str = '';
-    for (var i = 0; i < val.length; i += 2) {
-        str += String.fromCharCode(parseInt(val.substr(i, 2), 16));
-    }
-    return str;
+	var str = '';
+	for (var i = 0; i < val.length; i += 2) {
+		str += String.fromCharCode(parseInt(val.substr(i, 2), 16));
+	}
+	return str;
 }
