@@ -494,7 +494,7 @@ function parseData(fileData,includeText = true) {
 	fileData = fileData.replace(/>\+"l/g, String.fromCharCode(662,643,634,676)); // tenor clef
 	fileData = fileData.replace(/>#l/g, String.fromCharCode(662,635,676)); // bass clef
 	fileData = fileData.replace(/\ȗ([ȵ-Ⱦ]+)/g, convertBrailleLettersToNumbers); // change letters after number sign to numbers
-	fileData = fileData.replace(/[\n]\s*[ȵ-Ⱦ]{1,3}/g, convertBrailleLettersToNumbers); // change small groups of letters at beginning of line to numbers
+	fileData = fileData.replace(/\x0D\s*[ȵ-Ⱦ]{1,3}/g, convertBrailleLettersToNumbers); // change small groups of letters at beginning of line to numbers
 	fileData = fileData.replace(/((\n|\r)+\[\s\*\*\*\*.+\*\*\*\*\s\])/g, ""); // remove textual form feed signals
 	fileData = fileData.replace(/[;][Bb]/g, String.fromCharCode(359,366)); // begin slur
 	fileData = fileData.replace(/[^][2]/g, String.fromCharCode(394,350)); // end slur
@@ -522,7 +522,7 @@ function parseData(fileData,includeText = true) {
 	fileData = fileData.replace(/[>][3]/g, String.fromCharCode(162,551)); // end cresc
 	fileData = fileData.replace(/[>][Dd]/g, String.fromCharCode(162,568)); // begin dim
 	fileData = fileData.replace(/[>][4]/g, String.fromCharCode(162,552)); // end dim
-	fileData = fileData.replace(/\s[7]/g, String.fromCharCode(0,155)); // repeat measure
+	fileData = fileData.replace(/\s[7]/g, String.fromCharCode(155)); // repeat measure
 	fileData = fileData.replace(/[;][Cc]/g, String.fromCharCode(259,67)); // grace note slur
 	
 	fileData = fileData.replace(/[\^][<][1]/g, String.fromCharCode(194,660,349)); // read as larger notes
@@ -957,21 +957,29 @@ function convertMultimeasureRest(fullMatch,numberPart) {
 }
 
 function convertBrailleLettersToNumbers(str) {
-	var newStr = "";
-	var val, lval;
-	for (var i=0; i<str.length; i++) {
-		val=str.charCodeAt(i);
-        lval = val % 100;
-        if (lval>64 && lval<75) {
-            newStr = newStr + String.fromCharCode(lval + 600);
-        } else {
-            if (lval == 35) {
-                newStr = newStr + String.fromCharCode(535);
-            } else {
-                newStr = newStr + String.fromCharCode(val);
-            }
-        }
+	let newStr = "";
+	let val, lval;
+	let afterNumberSign = false;
+
+	for (let i = 0; i < str.length; i++) {
+		val = str.charCodeAt(i);
+		lval = val % 100;
+
+		if (lval == 35) { // '#'
+			newStr += String.fromCharCode(535);
+			afterNumberSign = true;
+			continue;
+		}
+
+		if (afterNumberSign && lval > 64 && lval < 75) {
+			// A–J following a number sign → digits 1–0
+			newStr += String.fromCharCode(lval + 600);
+		} else {
+			newStr += String.fromCharCode(val);
+			afterNumberSign = false; // reset when a non-digit character appears
+		}
 	}
+
 	return newStr;
 }
 

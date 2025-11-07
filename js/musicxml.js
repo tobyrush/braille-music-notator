@@ -790,7 +790,7 @@ class MXChord extends MXEntry {
 	}
 	noteNeedsOctaveSign(baseNote,targetNote) {
 		return (((baseNote.octave == targetNote.octave) && Math.abs(targetNote.dpc()-baseNote.dpc())>5) ||
-	            ((baseNote.octave != targetNote.octave) && Math.abs(targetNote.dp()-baseNote.dp())>2));
+				((baseNote.octave != targetNote.octave) && Math.abs(targetNote.dp()-baseNote.dp())>2));
 	}
 }
 

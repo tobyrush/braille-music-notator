@@ -3611,7 +3611,7 @@
         <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="A" />
     </cell>
     <cell name="B five-hundred-twelfth note" char="noteFiveHundredTwelfthB">
-        <code value="87" />
+        <code value="287" />
         <graphic type="background" color="#f00" />
         <graphic type="text" color="#fff" align="right" size="40" left="80" top="80" content="&#xe1e3;" />
         <graphic type="text" color="#fff" size="30" left="15" top="33.3" font="sans-serif" content="B" />
