@@ -526,28 +526,28 @@ function parseData(fileData,includeText = true) {
 					}
 				}
 			}
-			updateScoreDisplay(fileData, rule.label);
+			// updateScoreDisplay(fileData, rule.label);
 		} else if (Array.isArray(rule.chars)) {
 			const replacementString = rule.chars.length
 				? String.fromCharCode(...rule.chars)
 				: "";
 			fileData = fileData.replace(rule.regex, replacementString);
-			updateScoreDisplay(fileData, rule.label);
+			// updateScoreDisplay(fileData, rule.label);
 		}
 	}
 	
 	if (currentBeatUnit > 2) {
 		fileData = fileData.replace(/[myzMYZ&=(!)]/g, convertLargeToSmall);
-		updateScoreDisplay(fileData, "whole notes");
+		// updateScoreDisplay(fileData, "whole notes");
 		fileData = fileData.replace(/\s([±]+)(?!\S)/g, convertSixteenthRestToWholeRest);
-		updateScoreDisplay(fileData, "if 16th rests are alone in a measure, switch it back to a whole rest");
+		// updateScoreDisplay(fileData, "if 16th rests are alone in a measure, switch it back to a whole rest");
 	}
 	
     if (includeText) {
         fileData = convertTitlesToText(fileData);
-		updateScoreDisplay(fileData, "titles");
+		// updateScoreDisplay(fileData, "titles");
         fileData = convertStrangeSequencesToText(fileData);
-		updateScoreDisplay(fileData, "strange sequences");
+		// updateScoreDisplay(fileData, "strange sequences");
     }
 	
 	fileData = fileData.replace(/Ȳ([^\n\r]*?)ț(?=\s|$)/g, '>$1ï'); // convert word prefix/terminator delimited text
