@@ -434,10 +434,11 @@ function parseData(fileData,includeText = true) {
 		
 		// music translation
 		{ regex: /\s*(?:([%<*]{1,3}|#[D-G][%<*])\s*)?((?:#[A-J][0-9])|[._]C)\b\s*$/gm, fn: convertTimeAndKeySignature, label: "initial time and key signature line" },
+		{ regex: /(?<=\s)(>)([^\x27\n\r]+)(')/g, fn: convertWordPrefixPair, label: "convert prefixed & terminated words" },
 		{ regex: /(?<=\s|^)(#[A-Ja-j][0-9])(?=\s|$)/g, fn: convertTimeSignature, label: "isolated time signatures" },
 		{ regex: /([dDnNyY?\u024D\u0242\u0233\u0238]'*)(7#|\u022B\u0217)([a-i,\u0299-\u02A2,\u0235-\u023E]{1,3})/g, fn: convertMetronomeMarking, label: "metronome marking" },
 		{ regex: /\x0D\s*(#*[A-Ja-j]+) /g, fn: convertMeasureNumbers, label: "measure numbers" },
-		{ regex: /[^¥¦§¨©ª«¬­®0-9](7)/g, fn: convertMeasureRepeats, label: "measure repeat character" },
+		{ regex: /(?<=[^¥¦§¨©ª«¬­®0-9])7/g, fn: () => String.fromCharCode(155), label: "measure repeat character (preserve preceding space)" },
 		{ regex: />\/l/g, chars: [662,647,676], label: "treble clef" },
 		{ regex: />\+l/g, chars: [662,643,676], label: "alto clef" },
 		{ regex: />\+"l/g, chars: [662,643,634,676], label: "tenor clef" },
@@ -468,7 +469,7 @@ function parseData(fileData,includeText = true) {
 		{ regex: /[>][3]/g, chars: [162,551], label: "end cresc" },
 		{ regex: /[>][Dd]/g, chars: [162,568], label: "begin dim" },
 		{ regex: /[>][4]/g, chars: [162,552], label: "end dim" },
-		{ regex: /\s[7]/g, chars: [155], label: "repeat measure" },
+		{ regex: /(?<=\s)7/g, fn: () => String.fromCharCode(155), label: "repeat measure (context-sensitive)" },
 		{ regex: /[;][Cc]/g, chars: [259,67], label: "grace note slur" },
 		{ regex: /[\^][<][1]/g, chars: [194,660,349], label: "read as larger notes" },
 		{ regex: /[,][<][1]/g, chars: [244,660,349], label: "read as smaller notes" },
@@ -476,7 +477,7 @@ function parseData(fileData,includeText = true) {
 		{ regex: /([<][1])/g, chars: [660,349], label: "braille music comma" },
 		{ regex: /[,][']/g, chars: [344,339], label: "music prefix" },
 		// { regex: /[defghijDEFGHIJnopqrstNOPQRSTyzYZ&=(!)][']*([abklABKL1][cC]?[abklABKL1]?)/g, fn: convertFingerings, label: "fingering" },
-		{ regex: /[5]{1,2}[defghijDEFGHIJnopqrstNOPQRSTyzYZ&=(!)*<%@^,._";]/g, fn: convertGraceNotes, label: "grace notes" },
+		{ regex: /5{1,2}(?=[defghijDEFGHIJnopqrstNOPQRSTyzYZ&=(!)*<%@^,._";])/g, fn: match => String.fromCharCode(153).repeat(match.length), label: "grace note" },
 		{ regex: /#([A-J,a-j]+)[mM]/g, fn: convertMultimeasureRest, label: "multimeasure rest" },
 		{ regex: /[\u00F4][\u0294][\u015D][@^_".;,]?([myzMYZ&=(!)*<%@^_".;,]+|[nopqrstuNOPQRSTU*<%@^_".;,]+|[vV?:$\]\\\[Ww*<%@^_".;,]+|[xdefghijXDEFGHIJ*<%@^_".;,]+)/g, fn: convertLargeToSmall, label: "observe value signs" },
 		{ regex: /[<][Kk]/g, chars: [260,175], label: "final barline" },
@@ -491,12 +492,14 @@ function parseData(fileData,includeText = true) {
 		{ regex: /[>][1]/g, chars: [362,149], label: "caesura" },
 		{ regex: /[<][']/g, chars: [760,639], label: "up bow" },
 		{ regex: /[<][Bb]/g, chars: [760,66], label: "downbow" },
-		{ regex: /[^#].([6])/g, fn: convertTrill, label: "trill" },
-		{ regex: /[^#].([8])/g, fn: convertStaccato, label: "staccato" },
+		{ regex: /(?<!#)6/g, fn: () => String.fromCharCode(154), label: "trill" },
+		{ regex: /(?<!#)8/g, fn: match => String.fromCharCode(356), label: "staccato" },
 		{ regex: /[\s]*([_\.][>][']?)/g, fn: convertHandPrefix, label: "right/left hand" },
 		{ regex: /[<][>]/g, chars: [860,762], label: "in-accord" },
 		{ regex: /[.][K]/g, chars: [646,375], label: "in-accord measure division" },
 		{ regex: /["][1]/g, chars: [334,749], label: "partial measure in-accord" },
+		{ regex: /'{3,}/g, fn: match => "ӗ".repeat(match.length), label: "leading dots" },
+		{ regex: /(?<=\s);2/g, fn: () => String.fromCharCode(559, 850), label: "music suffix" },
 		{ regex: /[^A-Ja-j]([7])/g, fn: convertRepeatSymbols, label: "convert any remaining repeat symbols" },
 		
 		// text translation
@@ -504,7 +507,6 @@ function parseData(fileData,includeText = true) {
 		{ regex: /((\n|\r)+\[\s\*\*\*\*.+\*\*\*\*\s\])/g, chars: [], label: "remove textual form feed signals" },
 		{ regex: /[7]([A-Za-z "]+)[7]/g, fn: convertParenthesizedText, label: "convert isolated parentheticals to text" },
 		{ regex: /CREDIT-DUMP/g, chars: [], label: "remove 'credit dump' message"},
-		{ regex: /(>)([^\x27\n\r]+)(')/g, fn: convertWordPrefixPair, label: "convert prefixed & terminated words" },
 		{ regex: /[>]([a-zA-Z]+)/g, fn: convertPrefixedWord, label: "any text left flagged with the word prefix" },
 	];
 	
@@ -526,28 +528,28 @@ function parseData(fileData,includeText = true) {
 					}
 				}
 			}
-			// updateScoreDisplay(fileData, rule.label);
+			updateScoreDisplay(fileData, rule.label);
 		} else if (Array.isArray(rule.chars)) {
 			const replacementString = rule.chars.length
 				? String.fromCharCode(...rule.chars)
 				: "";
 			fileData = fileData.replace(rule.regex, replacementString);
-			// updateScoreDisplay(fileData, rule.label);
+			updateScoreDisplay(fileData, rule.label);
 		}
 	}
 	
 	if (currentBeatUnit > 2) {
 		fileData = fileData.replace(/[myzMYZ&=(!)]/g, convertLargeToSmall);
-		// updateScoreDisplay(fileData, "whole notes");
-		fileData = fileData.replace(/\s([±]+)(?!\S)/g, convertSixteenthRestToWholeRest);
-		// updateScoreDisplay(fileData, "if 16th rests are alone in a measure, switch it back to a whole rest");
+		updateScoreDisplay(fileData, "whole notes");
+		fileData = fileData.replace(/\s±+(?!\S)/g, match => match.replace(/±/g, "M"));
+		updateScoreDisplay(fileData, "if 16th rests are alone in a measure, switch it back to a whole rest");
 	}
 	
     if (includeText) {
         fileData = convertTitlesToText(fileData);
-		// updateScoreDisplay(fileData, "titles");
+		updateScoreDisplay(fileData, "titles");
         fileData = convertStrangeSequencesToText(fileData);
-		// updateScoreDisplay(fileData, "strange sequences");
+		updateScoreDisplay(fileData, "strange sequences");
     }
 	
 	fileData = fileData.replace(/Ȳ([^\n\r]*?)ț(?=\s|$)/g, '>$1ï'); // convert word prefix/terminator delimited text
@@ -674,17 +676,17 @@ function convertCloseQuote(fullString,quote) {
     return fullString.replaceAll(quote,r);
 }
 
-function convertMeasureRepeats(fullString,str) {
-    return fullString.replaceAll(str,String.fromCharCode(155));
-}
+// function convertMeasureRepeats(fullString,str) {
+    // return fullString.replaceAll(str,String.fromCharCode(155));
+// }
 
-function convertTrill(fullString,trill) {
-	return fullString.replaceAll("6",String.fromCharCode(154));
-}
+// function convertTrill(fullString,trill) {
+	// return fullString.replaceAll("6",String.fromCharCode(154));
+// }
 
-function convertGraceNotes(str) {
-	return str.replaceAll("5",String.fromCharCode(153));
-}
+// function convertGraceNotes(str) {
+	// return str.replaceAll("5",String.fromCharCode(153));
+// }
 
 function convertRepeatSymbols(str) {
 	return str.replaceAll("7",String.fromCharCode(155));
@@ -700,9 +702,9 @@ function convertTuplet(fullString,numberPart) {
 	return newString;
 }
 
-function convertStaccato(fullString,staccato) {
-	return fullString.replaceAll("8",String.fromCharCode(356));
-}
+// function convertStaccato(fullString,staccato) {
+	// return fullString.replaceAll("8",String.fromCharCode(356));
+// }
 
 function convertIntervalSymbols(fullString, intervals) {
 	var newIntervals = "";
@@ -729,9 +731,9 @@ function convertLargeToSmall(str) {
 	return newStr;
 }
 
-function convertSixteenthRestToWholeRest(fullString, rest) {
-	return fullString.replaceAll("±","M");
-}
+// function convertSixteenthRestToWholeRest(fullString, rest) {
+	// return fullString.replaceAll("±","M");
+// }
 
 function convertPrefixedWord(fullString, word) {
 	return ">" + convertImportedStringToText(word);
