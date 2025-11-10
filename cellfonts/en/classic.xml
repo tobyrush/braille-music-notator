@@ -139,7 +139,7 @@
     </cell>
     <cell name="thirty second note alternating tremolo" char="articulationAlternationThirtySecond">
         <code value="1246" />
-        <code value="1134" />
+        <code value="1149" />
         <graphic type="background" color="#7f462c" cells="2" />
         <graphic type="text" color="#bfa295" align="right" size="50" left="65" top="70" content="&#xe1d2;" />
         <graphic type="text" color="#bfa295" align="right" size="50" left="165" top="70" content="&#xe1d2;" />
